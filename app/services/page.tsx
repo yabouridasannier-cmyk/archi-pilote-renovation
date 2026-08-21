@@ -4,7 +4,7 @@ import { ServicesGrid } from "../components/services-grid";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Nos services — Global Rénovation",
+  title: "Nos services — Archipilote",
   description:
     "Second œuvre tous corps d'état, cuisine sur-mesure, salle de bain étanche, béton ciré, isolation & DPE, gros œuvre & surélévation. Un seul interlocuteur à Paris et en Île-de-France.",
 };

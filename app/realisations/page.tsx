@@ -7,7 +7,7 @@ import { AVANT_APRES } from "../data";
 import { PHOTOS } from "../lib-photos";
 
 export const metadata: Metadata = {
-  title: "Nos réalisations — Global Rénovation",
+  title: "Nos réalisations — Archipilote",
   description:
     "Rénovations d'appartement à Paris et en Île-de-France : second œuvre, cuisines sur-mesure, salles de bain étanches, béton ciré.",
 };
@@ -19,7 +19,7 @@ export default function RealisationsPage() {
       <PageHeader
         eyebrow="Réalisations"
         segments={[{ text: "Nouvelle marque," }, { text: "premiers chantiers à venir.", serif: true, gradient: true }]}
-        lead="Global Rénovation démarre : les visuels ci-dessous illustrent le niveau de finition visé. Vos vrais chantiers viendront remplacer cette galerie, projet après projet."
+        lead="Archipilote démarre : les visuels ci-dessous illustrent le niveau de finition visé. Vos vrais chantiers viendront remplacer cette galerie, projet après projet."
       />
       <AvantApres
         titre="Le même séjour"

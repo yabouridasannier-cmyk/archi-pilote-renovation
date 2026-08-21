@@ -3,7 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { ContactContent } from "./contact-content";
 
 export const metadata: Metadata = {
-  title: "Contact & devis — Global Rénovation",
+  title: "Contact & devis — Archipilote",
   description:
     "Racontez-nous votre projet de rénovation d'appartement : visite technique et devis détaillé gratuits, réponse sous 48 h.",
 };

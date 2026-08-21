@@ -48,7 +48,7 @@ export function Nav() {
             <Link href="/" className="flex items-center gap-2.5 group text-ivoire">
               <LogoMark className="transition-transform duration-500 group-hover:scale-110" />
               <div className="leading-none">
-                <span className="display block text-[1.1rem] tracking-tight">Global Rénovation</span>
+                <span className="display block text-[1.1rem] tracking-tight">Archipilote</span>
                 <span className="font-mono text-[0.56rem] tracking-[0.24em] text-muted uppercase">Paris &amp; Île-de-France</span>
               </div>
             </Link>

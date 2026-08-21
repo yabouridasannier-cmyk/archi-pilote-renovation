@@ -18,7 +18,7 @@ const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"]
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Global Rénovation — Rénovation d'appartement à Paris & Île-de-France",
+  title: "Archipilote — Rénovation d'appartement à Paris & Île-de-France",
   description:
     "Second œuvre tous corps d'état, cuisine sur-mesure, salle de bain étanche, isolation DPE, gros œuvre. Un seul interlocuteur, devis détaillé sous 48h, estimation en ligne immédiate.",
   robots: { index: false, follow: false, nocache: true, noarchive: true, nosnippet: true, noimageindex: true },

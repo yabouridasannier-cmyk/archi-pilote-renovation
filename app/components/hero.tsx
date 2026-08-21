@@ -18,10 +18,32 @@ const SLIDES = [
 /** Diaporama hero — 4 visuels en fondu, cycle auto ~5s. */
 function HeroSlideshow() {
   const [i, setI] = useState(0);
+  const [ready, setReady] = useState(false);
+
+  // Précharge les 4 images en amont — sans ça, le navigateur télécharge
+  // chaque photo au moment du switch et ça produit un flash/coupure visible.
   useEffect(() => {
+    let cancelled = false;
+    Promise.all(
+      SLIDES.map(
+        (s) =>
+          new Promise<void>((resolve) => {
+            const img = new Image();
+            img.onload = () => resolve();
+            img.onerror = () => resolve();
+            img.src = s.src;
+          })
+      )
+    ).then(() => { if (!cancelled) setReady(true); });
+    return () => { cancelled = true; };
+  }, []);
+
+  useEffect(() => {
+    if (!ready) return;
     const t = setInterval(() => setI((v) => (v + 1) % SLIDES.length), 5000);
     return () => clearInterval(t);
-  }, []);
+  }, [ready]);
+
   return (
     <>
       <AnimatePresence>
@@ -31,8 +53,9 @@ function HeroSlideshow() {
           alt={SLIDES[i].alt}
           initial={{ opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1.14 }}
-          exit={{ opacity: 0 }}
+          exit={{ opacity: 0, scale: 1.14 }}
           transition={{ opacity: { duration: 1.2, ease: EASE }, scale: { duration: 5.6, ease: "linear" } }}
+          decoding="async"
           className={`absolute inset-0 size-full object-cover ${SLIDES[i].pos}`}
         />
       </AnimatePresence>

@@ -4,7 +4,7 @@ import { BlogGrid } from "./blog-grid";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Blog — Conseils rénovation | Global Rénovation",
+  title: "Blog — Conseils rénovation | Archipilote",
   description:
     "Prix au m², matériaux, isolation, DPE : nos guides pratiques pour comprendre et réussir votre projet de rénovation d'appartement.",
 };

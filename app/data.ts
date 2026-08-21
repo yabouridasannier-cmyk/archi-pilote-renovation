@@ -6,13 +6,13 @@
    ============================================================ */
 
 export const SITE = {
-  nom: "Global Rénovation",
+  nom: "Archipilote",
   baseline: "Rénovation d'appartement à Paris & Île-de-France",
   zone: "Paris & Île-de-France",
   tel: "+33 1 84 60 00 00", // illustratif
   telAffiche: "01 84 60 00 00",
   whatsapp: "https://wa.me/33184600000",
-  email: "contact@global-renovation.fr", // illustratif
+  email: "contact@archipilote.fr", // illustratif
   horaires: [
     { jours: "Lundi — Vendredi", heures: "08h30 – 19h00" },
     { jours: "Samedi", heures: "Sur rendez-vous" },
@@ -74,7 +74,7 @@ export const FAQ = [
   { question: "Pourquoi des joints époxy plutôt que des joints classiques ?", reponse: "Les joints ciment noircissent en quelques mois et se fissurent. Les joints époxy que nous posons systématiquement en salle de bain et cuisine sont étanches, ne noircissent pas, ne bougent pas, et durent 15 à 20 ans." },
   { question: "Sortez-vous les appartements classés DPE F ou G ?", reponse: "Oui, c'est l'une de nos expertises. Nous traitons les passoires énergétiques de bout en bout : audit DPE, isolation, VMC double flux, remplacement du chauffage, accompagnement MaPrimeRénov' et CEE. L'objectif est de gagner 2 à 3 classes DPE." },
   { question: "Quelles garanties offrez-vous sur les travaux ?", reponse: "Trois garanties légales sur tous nos chantiers : garantie décennale (10 ans), garantie biennale (2 ans sur les équipements), garantie de parfait achèvement (1 an). Plus une responsabilité civile professionnelle à jour, avec attestations fournies avant démarrage." },
-  { question: "Comment se déroule un projet avec Global Rénovation ?", reponse: "Cinq étapes : premier échange par téléphone ou WhatsApp, visite technique sous 5 jours, devis détaillé sous 48h, travaux coordonnés tous corps d'état avec compte-rendu hebdomadaire, puis livraison et SAV 12 mois." },
+  { question: "Comment se déroule un projet avec Archipilote ?", reponse: "Cinq étapes : premier échange par téléphone ou WhatsApp, visite technique sous 5 jours, devis détaillé sous 48h, travaux coordonnés tous corps d'état avec compte-rendu hebdomadaire, puis livraison et SAV 12 mois." },
 ];
 
 export const MARQUEE_ITEMS = ["Second œuvre", "Cuisine sur-mesure", "Salle de bain étanche", "Béton ciré", "Isolation & DPE", "Gros œuvre", "Surélévation", "Devis sous 48h"];
@@ -84,7 +84,7 @@ export const AVANT_APRES = [
   { id: "sejour", titre: "Le même séjour, complètement transformé", avantLabel: "Avant — appartement à rénover", apresLabel: "Après — séjour rénové", avant: "sejourAvant", apres: "sejourApres", texte: "Un séjour haussmannien retrouve son cachet : moulures restaurées, parquet point de Hongrie posé, luminosité recomposée." },
 ];
 
-/* Articles de blog — contenu ORIGINAL écrit pour Global Rénovation (thèmes inspirés du secteur) */
+/* Articles de blog — contenu ORIGINAL écrit pour Archipilote (thèmes inspirés du secteur) */
 export type Article = { slug: string; titre: string; date: string; excerpt: string; categorie: string; photo: string; corps: string[] };
 
 export const ARTICLES: Article[] = [

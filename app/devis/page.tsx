@@ -4,7 +4,7 @@ import { DevisEstimateur } from "../components/devis-estimateur";
 import { FaqSection } from "../components/faq-section";
 
 export const metadata: Metadata = {
-  title: "Estimer mon devis — Global Rénovation",
+  title: "Estimer mon devis — Archipilote",
   description:
     "Estimez le budget de votre rénovation d'appartement en 3 clics : type de projet, surface, postes spécifiques. Fourchette immédiate, devis détaillé sous 48 h après visite.",
 };

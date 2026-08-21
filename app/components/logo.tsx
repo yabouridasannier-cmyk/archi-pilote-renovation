@@ -1,4 +1,4 @@
-/** Marque Global Rénovation — monogramme chevron (parquet point de Hongrie). */
+/** Marque Archipilote — monogramme chevron (parquet point de Hongrie). */
 export function LogoMark({ size = 34, className = "" }: { size?: number; className?: string }) {
   return (
     <svg width={size} height={size} viewBox="0 0 40 40" fill="none" className={className} aria-hidden>

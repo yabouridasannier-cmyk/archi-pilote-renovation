@@ -32,7 +32,7 @@ export function Footer() {
                 <div className="flex items-center gap-3 mb-5 text-white">
                   <LogoMark size={44} />
                   <div className="leading-none">
-                    <span className="display block text-xl tracking-tight text-white">Global Rénovation</span>
+                    <span className="display block text-xl tracking-tight text-white">Archipilote</span>
                     <span className="font-mono text-[0.6rem] tracking-[0.28em] text-white/40 uppercase">Second œuvre &amp; gros œuvre</span>
                   </div>
                 </div>
@@ -72,13 +72,13 @@ export function Footer() {
 
             <div aria-hidden className="select-none pointer-events-none overflow-hidden -mb-2">
               <span className="display block text-[clamp(2.6rem,10vw,9rem)] leading-[0.85] text-white/[0.05] tracking-tight text-center whitespace-nowrap italic">
-                Global Rénovation
+                Archipilote
               </span>
             </div>
 
             <div className="hr-fade mb-6" />
             <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-[0.82rem] text-white/35">
-              <span>© 2026 Global Rénovation. Tous droits réservés.</span>
+              <span>© 2026 Archipilote. Tous droits réservés.</span>
               <span className="font-mono text-[0.7rem] tracking-widest uppercase">Maquette — Logipro Web</span>
             </div>
           </div>
