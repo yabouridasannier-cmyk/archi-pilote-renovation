@@ -1,0 +1,163 @@
+"use client";
+
+import { useMemo, useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "motion/react";
+import { GAMMES, PIECES_OPTIONS } from "../data";
+
+/**
+ * WOW — Estimateur de devis interactif.
+ * Gamme × surface × options → fourchette de prix live, basée sur les
+ * vraies fourchettes IDF 2026 (voir adn/style-guide.md).
+ */
+export function DevisEstimateur() {
+  const [gammeId, setGammeId] = useState("complete");
+  const [surface, setSurface] = useState(65);
+  const [pieces, setPieces] = useState<string[]>([]);
+
+  const gamme = GAMMES.find((g) => g.id === gammeId)!;
+
+  const { min, max } = useMemo(() => {
+    const base = { min: gamme.prixMin * surface, max: gamme.prixMax * surface };
+    const extra = PIECES_OPTIONS.filter((p) => pieces.includes(p.id)).reduce((s, p) => s + p.majoration, 0);
+    return { min: base.min + extra, max: base.max + extra };
+  }, [gamme, surface, pieces]);
+
+  const toggle = (id: string) => setPieces((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
+  const fmt = (n: number) => n.toLocaleString("fr-FR");
+
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,8fr)_minmax(0,4fr)] gap-6 items-start">
+      <div className="flex flex-col gap-6">
+        {/* Gamme */}
+        <div className="flex flex-col gap-3">
+          <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">1. Type de rénovation</span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {GAMMES.map((g) => {
+              const active = gammeId === g.id;
+              return (
+                <button
+                  key={g.id}
+                  onClick={() => setGammeId(g.id)}
+                  className={`relative text-left card-e rounded-2xl p-5 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer ${
+                    active ? "border-orange/70 bg-orange/[0.06] -translate-y-1" : "hover:-translate-y-1 hover:border-line-strong"
+                  }`}
+                >
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span className="display text-lg text-ivoire normal-case">{g.nom}</span>
+                    <span className={`font-mono text-[0.78rem] ${active ? "text-orange" : "text-muted"}`}>{g.prixMin}-{g.prixMax}&nbsp;€/m²</span>
+                  </div>
+                  <p className="serif-accent text-[0.98rem] text-orange/90 mt-1">{g.accroche}</p>
+                  <p className="text-muted text-[0.82rem] mt-1.5 leading-snug">{g.description}</p>
+                  <span className={`absolute top-4 right-4 size-4 rounded-full border-2 transition-all duration-300 ${active ? "border-orange bg-orange shadow-[0_0_0_4px_rgba(169,118,44,0.18)]" : "border-line-strong"}`} />
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Surface */}
+        <div className="card-e rounded-2xl p-6 flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">2. Surface du logement</span>
+            <span className="display text-2xl text-gradient normal-case">{surface}&nbsp;m²</span>
+          </div>
+          <input
+            type="range"
+            min={20}
+            max={200}
+            step={5}
+            value={surface}
+            onChange={(e) => setSurface(Number(e.target.value))}
+            className="w-full accent-[var(--c-orange)] h-2 cursor-pointer"
+          />
+          <div className="flex justify-between font-mono text-[0.68rem] text-muted">
+            <span>20 m²</span>
+            <span>200 m²</span>
+          </div>
+        </div>
+
+        {/* Options */}
+        <div className="card-e rounded-2xl p-6 md:p-7">
+          <div className="flex items-center justify-between mb-5">
+            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">3. Postes spécifiques à prévoir</span>
+            <span className="font-mono text-[0.62rem] tracking-[0.15em] uppercase text-muted">Optionnel</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            {PIECES_OPTIONS.map((p) => {
+              const on = pieces.includes(p.id);
+              return (
+                <button
+                  key={p.id}
+                  onClick={() => toggle(p.id)}
+                  className={`flex items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition-all duration-300 cursor-pointer ${
+                    on ? "border-orange/70 bg-orange/[0.08]" : "border-line hover:border-line-strong"
+                  }`}
+                >
+                  <span className="flex items-center gap-3">
+                    <span className={`size-5 rounded-md border-2 flex items-center justify-center transition-all ${on ? "border-orange bg-orange" : "border-line-strong"}`}>
+                      {on && <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>}
+                    </span>
+                    <span className="text-[0.92rem] text-ivoire">{p.nom}</span>
+                  </span>
+                  <span className="font-mono text-[0.8rem] text-muted tabular-nums">+{fmt(p.majoration)}&nbsp;€</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      {/* Ticket estimation */}
+      <div className="lg:sticky lg:top-28">
+        <div className="card-e rounded-2xl overflow-hidden">
+          <div className="herringbone-divider" />
+          <div className="p-6 md:p-7 flex flex-col gap-5">
+            <div className="flex items-center justify-between">
+              <span className="font-mono text-[0.66rem] tracking-[0.22em] uppercase text-muted">Estimation</span>
+              <span className="text-muted text-[0.7rem]">{gamme.nom} · {surface} m²</span>
+            </div>
+
+            <div className="flex flex-col gap-2 text-[0.92rem]">
+              <div className="devis-row !py-2"><span className="text-ivoire">Base ({gamme.prixMin}-{gamme.prixMax} €/m² × {surface} m²)</span><span className="devis-prix">{fmt(gamme.prixMin * surface)}–{fmt(gamme.prixMax * surface)} €</span></div>
+              <AnimatePresence initial={false}>
+                {PIECES_OPTIONS.filter((p) => pieces.includes(p.id)).map((p) => (
+                  <motion.div key={p.id} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className="devis-row !py-2 overflow-hidden">
+                    <span className="text-muted">{p.nom}</span><span className="devis-prix">+{fmt(p.majoration)} €</span>
+                  </motion.div>
+                ))}
+              </AnimatePresence>
+            </div>
+
+            <div className="hr-fade" />
+
+            <div className="flex flex-col gap-1">
+              <span className="text-muted text-[0.85rem]">Fourchette estimée</span>
+              <AnimatePresence mode="popLayout">
+                <motion.div
+                  key={`${min}-${max}`}
+                  initial={{ opacity: 0, y: 14, filter: "blur(6px)" }}
+                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  exit={{ opacity: 0, y: -14, filter: "blur(6px)" }}
+                  transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="display text-[clamp(1.9rem,4vw,2.6rem)] leading-tight text-gradient normal-case"
+                >
+                  {fmt(min)}&nbsp;–&nbsp;{fmt(max)}&nbsp;€
+                </motion.div>
+              </AnimatePresence>
+            </div>
+
+            <Link href="/contact" className="btn btn-primary w-full">
+              Recevoir mon devis détaillé
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+            </Link>
+            <p className="text-[0.74rem] text-muted leading-snug">
+              Estimation indicative basée sur nos fourchettes 2026. Le devis détaillé après visite
+              technique reste la seule référence fiable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

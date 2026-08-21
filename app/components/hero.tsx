@@ -1,0 +1,101 @@
+"use client";
+
+import { useRef } from "react";
+import Link from "next/link";
+import { motion, useScroll, useTransform } from "motion/react";
+import { WordReveal } from "./word-reveal";
+import { PHOTOS } from "../lib-photos";
+
+const EASE = [0.25, 0.1, 0.25, 1] as const;
+
+export function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], ["0px", "160px"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0px", "-60px"]);
+
+  return (
+    <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden flex flex-col grain">
+      <motion.div className="absolute inset-0" style={{ y, scale }}>
+        <img
+          src={PHOTOS.heroHaussmannien}
+          alt="Séjour haussmannien rénové, moulures et parquet point de Hongrie"
+          className="absolute inset-0 size-full object-cover object-[center_38%]"
+        />
+      </motion.div>
+      <div className="absolute inset-0 bg-[#20211d]/45" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#20211d]/60 via-transparent to-[#20211d]" />
+
+      <motion.div style={{ opacity: contentOpacity, y: contentY }} className="relative z-10 flex-1 flex items-center justify-center pt-20 pb-16">
+        <div className="container-site flex flex-col items-center text-center gap-7">
+          <motion.div
+            initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
+            animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+            transition={{ duration: 1, ease: EASE }}
+            className="glass-pill rounded-full pl-3 pr-4 py-2 flex items-center gap-2.5"
+          >
+            <span className="relative flex size-2">
+              <span className="absolute inline-flex size-full rounded-full bg-orange opacity-70 animate-ping" />
+              <span className="relative inline-flex size-2 rounded-full bg-orange" />
+            </span>
+            <span className="text-[0.82rem] text-white/85">Rénovation d&apos;appartement — Paris &amp; Île-de-France</span>
+          </motion.div>
+
+          <WordReveal
+            as="h1"
+            immediate
+            delay={0.25}
+            stagger={0.1}
+            segments={[
+              { text: "Le cachet d'hier," },
+              { text: "les standards de demain.", serif: true, gradient: true },
+            ]}
+            className="display text-[clamp(2.7rem,7.6vw,6.4rem)] leading-[1.02] tracking-[-0.01em] text-white text-balance max-w-6xl"
+          />
+
+          <motion.p
+            initial={{ opacity: 0, filter: "blur(10px)" }}
+            animate={{ opacity: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1, delay: 0.85, ease: EASE }}
+            className="max-w-xl text-lg md:text-xl leading-snug text-white/75 text-balance"
+          >
+            Second œuvre tous corps d&apos;état, cuisine sur-mesure, salle de bain étanche, isolation.{" "}
+            <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis détaillé sous 48&nbsp;h.
+          </motion.p>
+
+          <div className="flex flex-wrap justify-center gap-3 mt-2">
+            <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.05, ease: EASE }}>
+              <Link href="/devis" className="btn btn-primary">
+                Estimer mon devis
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="mt-px"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+              </Link>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.2, ease: EASE }}>
+              <Link href="/realisations" className="btn btn-ghost">Voir nos réalisations</Link>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-1 font-mono text-[0.68rem] tracking-[0.18em] uppercase text-white/45"
+          >
+            <span>Garantie décennale</span>
+            <span className="size-1 rounded-full bg-orange/60" />
+            <span>Devis sous 48 h</span>
+            <span className="size-1 rounded-full bg-orange/60" />
+            <span>Visite technique sous 5 jours</span>
+          </motion.div>
+        </div>
+      </motion.div>
+
+      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.6, duration: 1 }} className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2">
+        <span className="font-mono text-[0.6rem] tracking-[0.3em] uppercase text-white/40">Découvrir</span>
+        <motion.span animate={{ y: [0, 6, 0] }} transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut" }} className="block h-8 w-px bg-gradient-to-b from-orange to-transparent" />
+      </motion.div>
+    </section>
+  );
+}
