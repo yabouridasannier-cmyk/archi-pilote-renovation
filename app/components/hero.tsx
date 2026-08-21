@@ -1,29 +1,61 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
 import { WordReveal } from "./word-reveal";
 import { PHOTOS } from "../lib-photos";
 
 const EASE = [0.25, 0.1, 0.25, 1] as const;
 
+const SLIDES = [
+  { src: PHOTOS.heroHaussmannien, alt: "Chantier de rénovation en cours, structure et gros œuvre", pos: "object-[center_38%]" },
+  { src: PHOTOS.chantierIsolation, alt: "Cuisine en cours de rénovation, protections de chantier", pos: "object-center" },
+  { src: PHOTOS.detailParquet, alt: "Parquet point de Hongrie, détail de pose", pos: "object-center" },
+  { src: PHOTOS.sejourApres, alt: "Séjour rénové, résultat livré", pos: "object-center" },
+];
+
+/** Diaporama hero — 4 visuels en fondu, cycle auto ~5s. */
+function HeroSlideshow() {
+  const [i, setI] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setI((v) => (v + 1) % SLIDES.length), 5000);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <>
+      <AnimatePresence>
+        <motion.img
+          key={i}
+          src={SLIDES[i].src}
+          alt={SLIDES[i].alt}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1.14 }}
+          exit={{ opacity: 0 }}
+          transition={{ opacity: { duration: 1.2, ease: EASE }, scale: { duration: 5.6, ease: "linear" } }}
+          className={`absolute inset-0 size-full object-cover ${SLIDES[i].pos}`}
+        />
+      </AnimatePresence>
+      <div className="absolute bottom-24 sm:bottom-8 left-1/2 -translate-x-1/2 z-[1] flex gap-1.5">
+        {SLIDES.map((_, k) => (
+          <span key={k} className={`h-1 rounded-full transition-all duration-500 ${k === i ? "w-6 bg-orange" : "w-1.5 bg-white/40"}`} />
+        ))}
+      </div>
+    </>
+  );
+}
+
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
   const y = useTransform(scrollYProgress, [0, 1], ["0px", "160px"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.12]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.75], [1, 0]);
   const contentY = useTransform(scrollYProgress, [0, 1], ["0px", "-60px"]);
 
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden flex flex-col grain">
-      <motion.div className="absolute inset-0" style={{ y, scale }}>
-        <img
-          src={PHOTOS.heroHaussmannien}
-          alt="Chantier de rénovation en cours, structure et gros œuvre"
-          className="absolute inset-0 size-full object-cover object-[center_38%]"
-        />
+      <motion.div className="absolute inset-0 overflow-hidden" style={{ y }}>
+        <HeroSlideshow />
       </motion.div>
       <div className="absolute inset-0 bg-[#20211d]/45" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#20211d]/60 via-transparent to-[#20211d]" />
