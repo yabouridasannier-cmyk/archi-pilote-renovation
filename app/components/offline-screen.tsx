@@ -7,7 +7,7 @@ export function OfflineScreen() {
         <span className="text-[#20211d] opacity-90"><LogoMark size={56} /></span>
         <div className="flex flex-col gap-3">
           <h1 className="text-[#20211d] text-2xl md:text-3xl font-medium tracking-tight" style={{ fontFamily: "var(--font-dm-serif)" }}>Ce site n&apos;est plus disponible.</h1>
-          <p className="text-[#6c6a60] text-[0.95rem] leading-relaxed">Cette maquette n&apos;était accessible que pendant <span className="text-[#20211d] font-medium">24&nbsp;heures</span>, dans le cadre de la présentation du projet.</p>
+          <p className="text-[#6c6a60] text-[0.95rem] leading-relaxed">Cette maquette n&apos;était accessible que pendant <span className="text-[#20211d] font-medium">48&nbsp;heures</span>, dans le cadre de la présentation du projet. Accès prolongé sur demande.</p>
         </div>
         <span className="h-px w-24 bg-gradient-to-r from-transparent via-[#a9762c]/60 to-transparent" />
         <p className="font-mono text-[0.66rem] tracking-[0.28em] uppercase text-[#6c6a60]/60">Maquette — Logipro Web</p>

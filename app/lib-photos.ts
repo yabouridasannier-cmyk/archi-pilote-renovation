@@ -1,7 +1,7 @@
 /* Photos — Unsplash vérifiées 200 (curl, 20/08/2026). Nouvelle marque :
    aucune photo réelle de chantier disponible, tout est illustratif. */
 export const PHOTOS = {
-  heroHaussmannien: "https://images.unsplash.com/photo-1738168246881-40f35f8aba0a?q=80&w=1600&auto=format&fit=crop",
+  heroHaussmannien: "https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?q=80&w=1600&auto=format&fit=crop",
   sejourApres: "https://images.unsplash.com/photo-1724582586529-62622e50c0b3?q=80&w=1600&auto=format&fit=crop",
   sejourAvant: "https://images.unsplash.com/photo-1649083048770-82e8ffd80431?q=80&w=1600&auto=format&fit=crop",
   salonMinimal2: "https://images.unsplash.com/photo-1724582586458-a51791349977?q=80&w=1600&auto=format&fit=crop",

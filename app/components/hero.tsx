@@ -21,26 +21,29 @@ export function Hero() {
       <motion.div className="absolute inset-0" style={{ y, scale }}>
         <img
           src={PHOTOS.heroHaussmannien}
-          alt="Séjour haussmannien rénové, moulures et parquet point de Hongrie"
+          alt="Chantier de rénovation en cours, structure et gros œuvre"
           className="absolute inset-0 size-full object-cover object-[center_38%]"
         />
       </motion.div>
       <div className="absolute inset-0 bg-[#20211d]/45" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#20211d]/60 via-transparent to-[#20211d]" />
 
-      <motion.div style={{ opacity: contentOpacity, y: contentY }} className="relative z-10 flex-1 flex items-center justify-center pt-20 pb-16">
-        <div className="container-site flex flex-col items-center text-center gap-7">
+      <motion.div style={{ opacity: contentOpacity, y: contentY }} className="relative z-10 flex-1 flex items-center justify-center pt-16 pb-10 sm:pt-20 sm:pb-16">
+        <div className="container-site flex flex-col items-center text-center gap-4 sm:gap-7">
           <motion.div
             initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ duration: 1, ease: EASE }}
             className="glass-pill rounded-full pl-3 pr-4 py-2 flex items-center gap-2.5"
           >
-            <span className="relative flex size-2">
+            <span className="relative flex size-2 shrink-0">
               <span className="absolute inline-flex size-full rounded-full bg-orange opacity-70 animate-ping" />
               <span className="relative inline-flex size-2 rounded-full bg-orange" />
             </span>
-            <span className="text-[0.82rem] text-white/85">Rénovation d&apos;appartement — Paris &amp; Île-de-France</span>
+            <span className="text-[0.78rem] sm:text-[0.82rem] text-white/85 whitespace-nowrap">
+              <span className="sm:hidden">Rénovation — Île-de-France</span>
+              <span className="hidden sm:inline">Rénovation d&apos;appartement — Paris &amp; Île-de-France</span>
+            </span>
           </motion.div>
 
           <WordReveal
@@ -52,20 +55,25 @@ export function Hero() {
               { text: "Le cachet d'hier," },
               { text: "les standards de demain.", serif: true, gradient: true },
             ]}
-            className="display text-[clamp(2.7rem,7.6vw,6.4rem)] leading-[1.02] tracking-[-0.01em] text-white text-balance max-w-6xl"
+            className="display text-[clamp(2.5rem,7.6vw,6.4rem)] leading-[1.04] sm:leading-[1.02] tracking-[-0.01em] text-white text-balance max-w-6xl"
           />
 
           <motion.p
             initial={{ opacity: 0, filter: "blur(10px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 1, delay: 0.85, ease: EASE }}
-            className="max-w-xl text-lg md:text-xl leading-snug text-white/75 text-balance"
+            className="max-w-xl text-base sm:text-lg md:text-xl leading-snug text-white/75 text-balance"
           >
-            Second œuvre tous corps d&apos;état, cuisine sur-mesure, salle de bain étanche, isolation.{" "}
-            <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis détaillé sous 48&nbsp;h.
+            <span className="sm:hidden">
+              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis détaillé sous 48&nbsp;h.
+            </span>
+            <span className="hidden sm:inline">
+              Second œuvre tous corps d&apos;état, cuisine sur-mesure, salle de bain étanche, isolation.{" "}
+              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis détaillé sous 48&nbsp;h.
+            </span>
           </motion.p>
 
-          <div className="flex flex-wrap justify-center gap-3 mt-2">
+          <div className="flex flex-wrap justify-center gap-3 mt-1 sm:mt-2">
             <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.05, ease: EASE }}>
               <Link href="/devis" className="btn btn-primary">
                 Estimer mon devis
@@ -81,7 +89,7 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.5 }}
-            className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-1 font-mono text-[0.68rem] tracking-[0.18em] uppercase text-white/45"
+            className="hidden sm:flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-1 font-mono text-[0.68rem] tracking-[0.18em] uppercase text-white/45"
           >
             <span>Garantie décennale</span>
             <span className="size-1 rounded-full bg-orange/60" />
