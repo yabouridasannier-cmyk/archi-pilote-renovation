@@ -26,4 +26,13 @@ export const PHOTOS = {
   visiteTechnique: "https://images.unsplash.com/photo-1606676539940-12768ce0e762?q=80&w=1600&auto=format&fit=crop",
 
   detailMoulure: "https://images.unsplash.com/photo-1722942429838-8a51e60ca7b8?q=80&w=1600&auto=format&fit=crop",
+
+  cuisineIlot: "https://images.unsplash.com/photo-1502005097973-6a7082348e28?q=80&w=1600&auto=format&fit=crop",
+  salleBainBaignoire: "https://images.unsplash.com/photo-1507652313519-d4e9174996dd?q=80&w=1600&auto=format&fit=crop",
+  salleBainMiroir: "https://images.unsplash.com/photo-1661107259637-4e1c55462428?q=80&w=1600&auto=format&fit=crop",
+  salonCanape: "https://images.unsplash.com/photo-1724582586495-d050726cf354?q=80&w=1600&auto=format&fit=crop",
+  parquetDetail2: "https://images.unsplash.com/photo-1783791995743-cf144ee771f1?q=80&w=1600&auto=format&fit=crop",
+  chantierCuisineProtection: "https://images.unsplash.com/photo-1618832515490-e181c4794a45?q=80&w=1600&auto=format&fit=crop",
+  chantierEchelle: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=1600&auto=format&fit=crop",
+  cheminee2: "https://images.unsplash.com/photo-1722152257494-e26f08d5bb0d?q=80&w=1600&auto=format&fit=crop",
 } as const;

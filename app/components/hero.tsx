@@ -46,19 +46,28 @@ function HeroSlideshow() {
 
   return (
     <>
-      <AnimatePresence>
-        <motion.img
-          key={i}
-          src={SLIDES[i].src}
-          alt={SLIDES[i].alt}
-          initial={{ opacity: 0, scale: 1.06 }}
-          animate={{ opacity: 1, scale: 1.14 }}
-          exit={{ opacity: 0, scale: 1.14 }}
-          transition={{ opacity: { duration: 1.2, ease: EASE }, scale: { duration: 5.6, ease: "linear" } }}
-          decoding="async"
-          className={`absolute inset-0 size-full object-cover ${SLIDES[i].pos}`}
-        />
-      </AnimatePresence>
+      {/* Le zoom (Ken Burns) tourne en continu sur un calque persistant,
+          indépendant de la photo affichée — sinon chaque changement de
+          slide fait "sauter" le niveau de zoom au moment du fondu. */}
+      <motion.div
+        className="absolute inset-0"
+        animate={{ scale: [1, 1.09, 1] }}
+        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
+      >
+        <AnimatePresence>
+          <motion.img
+            key={i}
+            src={SLIDES[i].src}
+            alt={SLIDES[i].alt}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: EASE }}
+            decoding="async"
+            className={`absolute inset-0 size-full object-cover ${SLIDES[i].pos}`}
+          />
+        </AnimatePresence>
+      </motion.div>
       <div className="absolute bottom-24 sm:bottom-8 left-1/2 -translate-x-1/2 z-[1] flex gap-1.5">
         {SLIDES.map((_, k) => (
           <span key={k} className={`h-1 rounded-full transition-all duration-500 ${k === i ? "w-6 bg-orange" : "w-1.5 bg-white/40"}`} />
@@ -107,8 +116,8 @@ export function Hero() {
             delay={0.25}
             stagger={0.1}
             segments={[
-              { text: "Le cachet d'hier," },
-              { text: "les standards de demain.", serif: true, gradient: true },
+              { text: "Un chantier piloté," },
+              { text: "jusqu'à la remise des clés.", serif: true, gradient: true },
             ]}
             className="display text-[clamp(2.5rem,7.6vw,6.4rem)] leading-[1.04] sm:leading-[1.02] tracking-[-0.01em] text-white text-balance max-w-6xl"
           />

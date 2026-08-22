@@ -36,7 +36,7 @@ const BLOCKED_UA = [
   "dotbot",
 ];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const ua = (request.headers.get("user-agent") || "").toLowerCase();
   if (BLOCKED_UA.some((b) => ua.includes(b))) {
     return new NextResponse("Accès non autorisé.", { status: 403 });

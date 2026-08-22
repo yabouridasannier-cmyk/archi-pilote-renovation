@@ -112,7 +112,7 @@ html.lenis, html.lenis body { height: auto; }
 /* ---------- MOTIF SIGNATURE : parquet point de Hongrie (chevron) ----------
    Deux planches en V, motif du parquet haussmannien décliné en filigrane. */
 .herringbone-ghost {
-  position: absolute; pointer-events: none; user-select: none; opacity: 0.05;
+  position: absolute; pointer-events: none; user-select: none; opacity: 0.075;
   background-image:
     repeating-linear-gradient(45deg, var(--c-ivoire) 0 3px, transparent 3px 34px),
     repeating-linear-gradient(-45deg, var(--c-ivoire) 0 3px, transparent 3px 34px);

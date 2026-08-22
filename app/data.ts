@@ -45,12 +45,42 @@ export const PIECES_OPTIONS = [
 ];
 
 export const SERVICES = [
-  { marque: "I", slug: "second-oeuvre", titre: "Second œuvre tous corps d'état", accroche: "Un seul interlocuteur", texte: "Plomberie, électricité, plâtrerie, peinture, revêtements, menuiserie. Une équipe qui coordonne tous les corps de métier, du diagnostic à la réception.", photo: "chantierRenovation" },
-  { marque: "II", slug: "cuisine-sur-mesure", titre: "Cuisine sur-mesure", accroche: "Conception sur plan", texte: "Cuisine dessinée sur plan ou optimisation IKEA Metod avec façades sur-mesure. L'espace pensé pour l'usage réel, pas pour le catalogue.", photo: "cuisineSurMesure" },
-  { marque: "III", slug: "salle-de-bain", titre: "Salle de bain étanche", accroche: "Zéro noircissement", texte: "Joints époxy et nattes d'étanchéité posés systématiquement. Une étanchéité totale qui dure 15 à 20 ans — pas des joints ciment à refaire dans 3 ans.", photo: "salleBainBeton" },
-  { marque: "IV", slug: "beton-cire", titre: "Béton ciré", accroche: "Finition monobloc", texte: "Sols, murs, douches italiennes, plans de travail. Une matière contemporaine, sans joint, qui unifie l'espace.", photo: "betonCireDetail" },
-  { marque: "V", slug: "isolation-dpe", titre: "Isolation & DPE", accroche: "Sortir de la passoire énergétique", texte: "Audit DPE, isolation, VMC double flux, remplacement du chauffage, accompagnement MaPrimeRénov' et CEE. Objectif : gagner 2 à 3 classes DPE.", photo: "chantierIsolation" },
-  { marque: "VI", slug: "gros-oeuvre", titre: "Gros œuvre & surélévation", accroche: "Orchestré de A à Z", texte: "Mur porteur, surélévation, extension : pilotés avec nos partenaires architectes DPLG et ingénieurs structure. Toutes les démarches administratives prises en charge.", photo: "grosOeuvre" },
+  {
+    marque: "I", slug: "second-oeuvre", titre: "Second œuvre tous corps d'état", accroche: "Un seul interlocuteur",
+    texte: "Plomberie, électricité, plâtrerie, peinture, revêtements, menuiserie. Une équipe qui coordonne tous les corps de métier, du diagnostic à la réception.",
+    photo: "chantierRenovation",
+    details: ["Plomberie & électricité aux normes", "Plâtrerie, cloisons, doublages", "Peinture & revêtements muraux", "Menuiserie intérieure sur-mesure"],
+  },
+  {
+    marque: "II", slug: "cuisine-sur-mesure", titre: "Cuisine sur-mesure", accroche: "Conception sur plan",
+    texte: "Cuisine dessinée sur plan ou optimisation IKEA Metod avec façades sur-mesure. L'espace pensé pour l'usage réel, pas pour le catalogue.",
+    photo: "cuisineSurMesure",
+    details: ["Conception 3D sur plan", "Optimisation IKEA Metod + façades sur-mesure", "Plan de travail au choix (bois, béton ciré, quartz)", "Électroménager encastré coordonné"],
+  },
+  {
+    marque: "III", slug: "salle-de-bain", titre: "Salle de bain étanche", accroche: "Zéro noircissement",
+    texte: "Joints époxy et nattes d'étanchéité posés systématiquement. Une étanchéité totale qui dure 15 à 20 ans — pas des joints ciment à refaire dans 3 ans.",
+    photo: "salleBainBeton",
+    details: ["Joints époxy systématiques (15-20 ans)", "Nattes d'étanchéité sous carrelage", "Douche italienne ou baignoire", "Ventilation anti-humidité"],
+  },
+  {
+    marque: "IV", slug: "beton-cire", titre: "Béton ciré", accroche: "Finition monobloc",
+    texte: "Sols, murs, douches italiennes, plans de travail. Une matière contemporaine, sans joint, qui unifie l'espace.",
+    photo: "betonCireDetail",
+    details: ["Sols et murs sans joint", "Douches italiennes en béton ciré", "Plans de travail cuisine & salle de bain", "Finition mate ou satinée au choix"],
+  },
+  {
+    marque: "V", slug: "isolation-dpe", titre: "Isolation & DPE", accroche: "Sortir de la passoire énergétique",
+    texte: "Audit DPE, isolation, VMC double flux, remplacement du chauffage, accompagnement MaPrimeRénov' et CEE. Objectif : gagner 2 à 3 classes DPE.",
+    photo: "chantierIsolation",
+    details: ["Audit DPE complet", "Isolation murs, combles, sols", "VMC double flux", "Accompagnement MaPrimeRénov' & CEE"],
+  },
+  {
+    marque: "VI", slug: "gros-oeuvre", titre: "Gros œuvre & surélévation", accroche: "Orchestré de A à Z",
+    texte: "Mur porteur, surélévation, extension : pilotés avec nos partenaires architectes DPLG et ingénieurs structure. Toutes les démarches administratives prises en charge.",
+    photo: "grosOeuvre",
+    details: ["Ouverture de mur porteur", "Surélévation & extension", "Architectes DPLG partenaires", "Démarches administratives incluses"],
+  },
 ];
 
 export const PROCESS = [
@@ -129,14 +159,35 @@ export const ARTICLES: Article[] = [
   },
 ];
 
-/* Galerie réalisations — illustratives (nouvelle marque, pas de vrai chantier photographié) */
+/* Galerie réalisations — illustratives (nouvelle marque, pas de vrai chantier photographié).
+   Catégories inspirées de la structure d'un site de référence du secteur (Tout / Appartement /
+   Cuisine / Salle de bain / Séjour / Chantier en cours). */
+export type Categorie = "appartement" | "cuisine" | "sdb" | "sejour" | "chantier";
+export const GALERIE_CATEGORIES: { id: Categorie; label: string }[] = [
+  { id: "appartement", label: "Appartement" },
+  { id: "cuisine", label: "Cuisine" },
+  { id: "sdb", label: "Salle de bain" },
+  { id: "sejour", label: "Séjour" },
+  { id: "chantier", label: "Chantier en cours" },
+];
+
 export const GALERIE = [
-  { src: "sejourApres", label: "Séjour haussmannien rénové", cat: "Second œuvre", portrait: false },
-  { src: "cuisineSurMesure", label: "Cuisine sur-mesure, façades laquées", cat: "Cuisine", portrait: true },
-  { src: "salleBainBeton", label: "Salle de bain, béton ciré et joints époxy", cat: "Salle de bain", portrait: true },
-  { src: "detailParquet", label: "Parquet point de Hongrie restauré", cat: "Second œuvre", portrait: false },
-  { src: "chantierRenovation", label: "Chantier en cours, dépose des cloisons", cat: "Gros œuvre", portrait: false },
-  { src: "detailMoulure", label: "Moulures d'origine restaurées", cat: "Patrimoine", portrait: true },
-  { src: "betonCireDetail", label: "Douche italienne en béton ciré", cat: "Salle de bain", portrait: true },
-  { src: "chantierIsolation", label: "Isolation des combles avant doublage", cat: "Isolation & DPE", portrait: false },
+  { src: "sejourApres", label: "Séjour haussmannien rénové", cat: "sejour", portrait: false },
+  { src: "salonCanape", label: "Séjour, second œuvre terminé", cat: "sejour", portrait: true },
+  { src: "salonMinimal2", label: "Séjour épuré, luminosité recomposée", cat: "sejour", portrait: false },
+  { src: "cuisineSurMesure", label: "Cuisine sur-mesure, façades laquées", cat: "cuisine", portrait: true },
+  { src: "cuisineIlot", label: "Cuisine avec îlot central", cat: "cuisine", portrait: true },
+  { src: "cuisineDetail", label: "Cuisine, détail plan de travail", cat: "cuisine", portrait: true },
+  { src: "salleBainBeton", label: "Salle de bain, béton ciré et joints époxy", cat: "sdb", portrait: true },
+  { src: "betonCireDetail", label: "Douche italienne en béton ciré", cat: "sdb", portrait: true },
+  { src: "salleBainBaignoire", label: "Salle de bain, baignoire îlot", cat: "sdb", portrait: false },
+  { src: "salleBainMiroir", label: "Salle de bain, éclairage repensé", cat: "sdb", portrait: true },
+  { src: "detailParquet", label: "Parquet point de Hongrie restauré", cat: "appartement", portrait: false },
+  { src: "parquetDetail2", label: "Parquet ancien, ponçage et vitrification", cat: "appartement", portrait: false },
+  { src: "detailMoulure", label: "Moulures d'origine restaurées", cat: "appartement", portrait: true },
+  { src: "cheminee2", label: "Cheminée en marbre conservée", cat: "appartement", portrait: false },
+  { src: "chantierRenovation", label: "Chantier en cours, dépose des cloisons", cat: "chantier", portrait: false },
+  { src: "chantierCuisineProtection", label: "Cuisine en cours, protections de chantier", cat: "chantier", portrait: false },
+  { src: "chantierEchelle", label: "Second œuvre, travaux en hauteur", cat: "chantier", portrait: false },
+  { src: "chantierIsolation", label: "Isolation des combles avant doublage", cat: "chantier", portrait: false },
 ];

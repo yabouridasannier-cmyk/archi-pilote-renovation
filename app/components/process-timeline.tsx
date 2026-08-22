@@ -17,6 +17,7 @@ export function ProcessTimeline() {
 
   return (
     <section className="relative py-24 md:py-36 overflow-hidden">
+      <div aria-hidden className="herringbone-ghost absolute right-[-3rem] top-10 w-64 h-64 hidden md:block" />
       <div className="container-site flex flex-col gap-16 md:gap-24">
         <div className="flex flex-col items-center text-center gap-5">
           <Reveal variant="fade-blur"><span className="eyebrow">Comment ça se passe</span></Reveal>

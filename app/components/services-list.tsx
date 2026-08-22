@@ -15,6 +15,7 @@ export function ServicesList() {
 
   return (
     <section className="relative py-24 md:py-36 overflow-hidden bg-surface/40 border-y border-line">
+      <div aria-hidden className="herringbone-ghost absolute left-[-4rem] bottom-[-3rem] w-72 h-72 hidden md:block" />
       <div className="container-site relative flex flex-col gap-14">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="flex flex-col gap-5 max-w-2xl">

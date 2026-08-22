@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "../components/page-header";
 import { ServicesGrid } from "../components/services-grid";
+import { ServicesRoadmap } from "../components/services-roadmap";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
@@ -18,6 +19,7 @@ export default function ServicesPage() {
         lead="Du second œuvre au gros œuvre, nous coordonnons chaque poste avec les mêmes équipes et le même interlocuteur — du diagnostic à la réception."
       />
       <ServicesGrid />
+      <ServicesRoadmap />
       <CtaFinal />
     </main>
   );

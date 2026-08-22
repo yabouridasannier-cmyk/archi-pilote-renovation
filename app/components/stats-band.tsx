@@ -7,7 +7,8 @@ import { Reveal } from "./reveal";
 /** Bande de chiffres clés — counters animés au scroll. */
 export function StatsBand() {
   return (
-    <section className="relative py-16 md:py-20 border-y border-line bg-surface/40">
+    <section className="relative py-16 md:py-20 border-y border-line bg-surface/40 overflow-hidden">
+      <div aria-hidden className="herringbone-ghost absolute -right-10 -top-10 w-56 h-56 hidden md:block" />
       <div className="container-site">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
           {STATS.map((stat, i) => (

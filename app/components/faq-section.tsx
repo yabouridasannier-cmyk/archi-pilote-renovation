@@ -12,7 +12,8 @@ export function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="relative py-24 md:py-36">
+    <section className="relative py-24 md:py-36 overflow-hidden">
+      <div aria-hidden className="herringbone-ghost absolute left-1/2 -translate-x-1/2 -top-6 w-[28rem] h-40 hidden md:block" />
       <div className="container-site grid grid-cols-1 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-12 lg:gap-20 items-start">
         <div className="flex flex-col gap-5 lg:sticky lg:top-32">
           <Reveal variant="fade-blur">
