@@ -18,4 +18,4 @@
 
 export const SITE_OFFLINE = false;
 
-export const EXPIRES_AT = "2026-08-23T17:34:41Z"; // 48h après génération — jusqu'à nouvel ordre
+export const EXPIRES_AT = "2099-01-01T00:00:00Z"; // péremption désactivée sur demande — 23/08/2026
