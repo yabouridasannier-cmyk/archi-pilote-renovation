@@ -29,7 +29,7 @@ export function ServicesRoadmap() {
             className="display text-[clamp(2.2rem,5.5vw,4.3rem)] text-ivoire text-balance max-w-3xl"
           />
           <Reveal variant="slide-up" delay={0.15}>
-            <p className="lead max-w-2xl">Six domaines, un seul chantier. Chaque ligne ci-dessous peut être combinée dans votre projet — c'est vous qui composez, on coordonne.</p>
+            <p className="lead max-w-2xl">Six domaines, un seul chantier. Chaque ligne ci-dessous peut être combinée dans votre projet — c'est vous qui composez, on pilote.</p>
           </Reveal>
         </div>
 

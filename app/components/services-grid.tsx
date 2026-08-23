@@ -12,7 +12,7 @@ export function ServicesGrid() {
       <div className="container-site flex flex-col gap-14 md:gap-20">
         <div className="flex flex-col items-center text-center gap-5">
           <Reveal variant="fade-blur"><span className="eyebrow">Le détail des services</span></Reveal>
-          <WordReveal as="h2" segments={[{ text: "Six métiers," }, { text: "une seule équipe.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.5vw,4.3rem)] text-ivoire text-balance max-w-3xl" />
+          <WordReveal as="h2" segments={[{ text: "Six métiers," }, { text: "un seul pilote.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.5vw,4.3rem)] text-ivoire text-balance max-w-3xl" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

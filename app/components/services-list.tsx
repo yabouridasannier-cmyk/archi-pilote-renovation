@@ -20,7 +20,7 @@ export function ServicesList() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="flex flex-col gap-5 max-w-2xl">
             <Reveal variant="fade-blur"><span className="eyebrow">Nos services</span></Reveal>
-            <WordReveal as="h2" segments={[{ text: "Tous les corps de métier," }, { text: "un seul chantier.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.2vw,4.1rem)] text-ivoire text-balance" />
+            <WordReveal as="h2" segments={[{ text: "Nos travaux de rénovation," }, { text: "un seul pilote.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.2vw,4.1rem)] text-ivoire text-balance" />
           </div>
           <Reveal variant="slide-up" delay={0.2}>
             <Link href="/services" className="btn btn-ghost shrink-0">Le détail des services <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg></Link>

@@ -32,13 +32,13 @@ export function Footer() {
                 <div className="flex items-center gap-3 mb-5 text-white">
                   <LogoMark size={44} />
                   <div className="leading-none">
-                    <span className="display block text-xl tracking-tight text-white">Archipilote</span>
-                    <span className="font-mono text-[0.6rem] tracking-[0.28em] text-white/40 uppercase">Second œuvre &amp; gros œuvre</span>
+                    <span className="display block text-xl tracking-tight text-white">ARCHI PILOTE</span>
+                    <span className="font-mono text-[0.6rem] tracking-[0.28em] text-white/40 uppercase">Rénovation tous corps d&apos;état</span>
                   </div>
                 </div>
                 <p className="text-white/50 text-[0.95rem] leading-relaxed">
-                  Rénovation d&apos;appartement à Paris et en Île-de-France. Un seul interlocuteur,
-                  du diagnostic à la remise des clés.
+                  Pilotage de travaux de rénovation en Île-de-France. Un seul interlocuteur,
+                  du diagnostic à la réception.
                 </p>
               </div>
 
@@ -57,28 +57,35 @@ export function Footer() {
                   <a href={`mailto:${SITE.email}`} className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">{SITE.email}</a>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Devis</span>
-                  <Link href="/devis" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Estimateur en ligne</Link>
-                  <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="text-white/70 hover:text-[#25d366] transition-colors text-[0.95rem]">WhatsApp</a>
+                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Confiance</span>
+                  <Link href="/notre-modele" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Notre modèle</Link>
+                  <Link href="/garanties-assurances" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Garanties</Link>
+                  <Link href="/notre-methode" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Notre méthode</Link>
+                  <Link href="/ce-que-nous-ne-faisons-pas" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Ce que nous ne faisons pas</Link>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Garanties</span>
-                  <span className="text-white/50 text-[0.88rem]">Décennale — 10 ans</span>
-                  <span className="text-white/50 text-[0.88rem]">Biennale — 2 ans</span>
-                  <span className="text-white/50 text-[0.88rem]">Parfait achèvement</span>
+                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Budget</span>
+                  <Link href="/devis" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Estimateur en ligne</Link>
+                  <Link href="/bareme-prix-renovation" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Barème des coûts</Link>
+                  <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="text-white/70 hover:text-[#25d366] transition-colors text-[0.95rem]">WhatsApp</a>
                 </div>
               </div>
             </div>
 
             <div aria-hidden className="select-none pointer-events-none overflow-hidden -mb-2">
               <span className="display block text-[clamp(2.6rem,10vw,9rem)] leading-[0.85] text-white/[0.05] tracking-tight text-center whitespace-nowrap italic">
-                Archipilote
+                ARCHI PILOTE
               </span>
             </div>
 
             <div className="hr-fade mb-6" />
+            <p className="text-white/30 text-[0.76rem] leading-relaxed max-w-3xl mb-4">
+              {SITE.structure} ARCHI PILOTE n&apos;est pas une entreprise de travaux, n&apos;exécute aucun lot et ne facture aucun
+              travaux. Les travaux sont réalisés et facturés par des entreprises partenaires indépendantes, chacune
+              titulaire de ses propres assurances de responsabilité civile professionnelle et de garantie décennale.
+            </p>
             <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-[0.82rem] text-white/35">
-              <span>© 2026 Archipilote. Tous droits réservés.</span>
+              <span>© 2026 ARCHI PILOTE — <Link href="/mentions-legales" className="hover:text-orange transition-colors">Mentions légales</Link></span>
               <span className="font-mono text-[0.7rem] tracking-widest uppercase">Maquette — Logipro Web</span>
             </div>
           </div>

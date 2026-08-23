@@ -18,10 +18,29 @@ const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"]
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Archipilote — Rénovation d'appartement à Paris & Île-de-France",
+  title: "ARCHI PILOTE — Rénovation tous corps d'état en Île-de-France",
   description:
-    "Second œuvre tous corps d'état, cuisine sur-mesure, salle de bain étanche, isolation DPE, gros œuvre. Un seul interlocuteur, devis détaillé sous 48h, estimation en ligne immédiate.",
+    "Pilotage de travaux de rénovation en Île-de-France : gros œuvre, second œuvre, cuisine sur-mesure, salle de bain étanche, isolation DPE. Un seul interlocuteur, devis des entreprises sous 48h.",
+  // Blocage volontaire tant que le site reste en phase de maquette (demande explicite,
+  // 21/08/2026) : à lever avant toute mise en production réelle, sans quoi les 26 pages
+  // et le travail éditorial du dossier SEO restent invisibles pour Google et les IA.
   robots: { index: false, follow: false, nocache: true, noarchive: true, nosnippet: true, noimageindex: true },
+};
+
+export const JSONLD_ORGANIZATION = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  name: "ARCHI PILOTE",
+  alternateName: "IA RENOV",
+  description: "Pilotage de travaux de rénovation tous corps d'état en Île-de-France, priorité maison et pavillon.",
+  areaServed: ["Hauts-de-Seine", "Yvelines", "Essonne", "Val-d'Oise", "Seine-et-Marne", "Île-de-France"],
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "8 rue Gabriel Péri",
+    postalCode: "92250",
+    addressLocality: "La Garenne-Colombes",
+    addressCountry: "FR",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -38,6 +57,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           dangerouslySetInnerHTML={{
             __html: `try{var t=localStorage.getItem('gr-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}`,
           }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_ORGANIZATION) }}
         />
       </head>
       <body className="min-h-screen bg-carbone text-ivoire antialiased">

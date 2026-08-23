@@ -30,7 +30,7 @@ export function FaqSection() {
           <Reveal variant="slide-up" delay={0.15}>
             <p className="lead">
               Une autre question&nbsp;? Le plus simple reste d&apos;en parler de vive voix —
-              la visite technique et le devis sont gratuits.
+              la visite technique est gratuite et sans engagement.
             </p>
           </Reveal>
           <Reveal variant="slide-up" delay={0.25}>

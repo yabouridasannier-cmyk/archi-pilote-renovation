@@ -6,9 +6,11 @@ import { motion, AnimatePresence } from "motion/react";
 import { GAMMES, PIECES_OPTIONS } from "../data";
 
 /**
- * WOW — Estimateur de devis interactif.
- * Gamme × surface × options → fourchette de prix live, basée sur les
- * vraies fourchettes IDF 2026 (voir adn/style-guide.md).
+ * Estimateur de budget interactif.
+ * Gamme × surface × options → fourchette indicative live, basée sur les
+ * fourchettes observées sur les projets accompagnés en 2026 (voir adn/style-guide.md).
+ * Les options déjà comprises dans la gamme choisie sont désactivées pour ne
+ * jamais facturer deux fois le même poste (cf. audit — double comptage cuisine/sdb).
  */
 export function DevisEstimateur() {
   const [gammeId, setGammeId] = useState("complete");
@@ -16,12 +18,13 @@ export function DevisEstimateur() {
   const [pieces, setPieces] = useState<string[]>([]);
 
   const gamme = GAMMES.find((g) => g.id === gammeId)!;
+  const optionsDisponibles = PIECES_OPTIONS.filter((p) => !gamme.inclus.includes(p.id));
 
   const { min, max } = useMemo(() => {
     const base = { min: gamme.prixMin * surface, max: gamme.prixMax * surface };
-    const extra = PIECES_OPTIONS.filter((p) => pieces.includes(p.id)).reduce((s, p) => s + p.majoration, 0);
+    const extra = optionsDisponibles.filter((p) => pieces.includes(p.id)).reduce((s, p) => s + p.majoration, 0);
     return { min: base.min + extra, max: base.max + extra };
-  }, [gamme, surface, pieces]);
+  }, [gamme, surface, pieces, optionsDisponibles]);
 
   const toggle = (id: string) => setPieces((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
   const fmt = (n: number) => n.toLocaleString("fr-FR");
@@ -80,11 +83,16 @@ export function DevisEstimateur() {
         {/* Options */}
         <div className="card-e rounded-2xl p-6 md:p-7">
           <div className="flex items-center justify-between mb-5">
-            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">3. Postes spécifiques à prévoir</span>
+            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">3. Montées en gamme à prévoir</span>
             <span className="font-mono text-[0.62rem] tracking-[0.15em] uppercase text-muted">Optionnel</span>
           </div>
+          {gamme.inclus.length > 0 && (
+            <p className="text-muted text-[0.78rem] mb-4 -mt-1">
+              Cuisine et salle de bain neuves déjà comprises dans « {gamme.nom} » — les options ci-dessous ne s&apos;ajoutent que si vous montez en gamme sur ces postes.
+            </p>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-            {PIECES_OPTIONS.map((p) => {
+            {optionsDisponibles.map((p) => {
               const on = pieces.includes(p.id);
               return (
                 <button
@@ -121,7 +129,7 @@ export function DevisEstimateur() {
             <div className="flex flex-col gap-2 text-[0.92rem]">
               <div className="devis-row !py-2"><span className="text-ivoire">Base ({gamme.prixMin}-{gamme.prixMax} €/m² × {surface} m²)</span><span className="devis-prix">{fmt(gamme.prixMin * surface)}–{fmt(gamme.prixMax * surface)} €</span></div>
               <AnimatePresence initial={false}>
-                {PIECES_OPTIONS.filter((p) => pieces.includes(p.id)).map((p) => (
+                {optionsDisponibles.filter((p) => pieces.includes(p.id)).map((p) => (
                   <motion.div key={p.id} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className="devis-row !py-2 overflow-hidden">
                     <span className="text-muted">{p.nom}</span><span className="devis-prix">+{fmt(p.majoration)} €</span>
                   </motion.div>
@@ -148,12 +156,13 @@ export function DevisEstimateur() {
             </div>
 
             <Link href="/contact" className="btn btn-primary w-full">
-              Recevoir mon devis détaillé
+              Demander une visite technique
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </Link>
             <p className="text-[0.74rem] text-muted leading-snug">
-              Estimation indicative basée sur nos fourchettes 2026. Le devis détaillé après visite
-              technique reste la seule référence fiable.
+              Estimation indicative basée sur les fourchettes observées en 2026, hors autorisations, études
+              techniques et imprévus de structure. Les devis remis par les entreprises partenaires après
+              visite technique restent la seule référence.
             </p>
           </div>
         </div>

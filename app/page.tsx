@@ -5,7 +5,7 @@ import { ConceptSplit } from "./components/concept-split";
 import { AvantApres } from "./components/avant-apres";
 import { ServicesList } from "./components/services-list";
 import { ProcessTimeline } from "./components/process-timeline";
-import { AvisCarousel } from "./components/avis-carousel";
+import { EngagementsSection } from "./components/engagements-section";
 import { FaqSection } from "./components/faq-section";
 import { CtaFinal } from "./components/cta-final";
 import { MARQUEE_ITEMS, AVANT_APRES } from "./data";
@@ -31,7 +31,7 @@ export default function Home() {
       />
       <ServicesList />
       <ProcessTimeline />
-      <AvisCarousel />
+      <EngagementsSection />
       <FaqSection />
       <CtaFinal />
     </main>

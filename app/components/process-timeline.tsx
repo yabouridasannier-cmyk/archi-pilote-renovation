@@ -21,7 +21,7 @@ export function ProcessTimeline() {
       <div className="container-site flex flex-col gap-16 md:gap-24">
         <div className="flex flex-col items-center text-center gap-5">
           <Reveal variant="fade-blur"><span className="eyebrow">Comment ça se passe</span></Reveal>
-          <WordReveal as="h2" segments={[{ text: "Du premier appel" }, { text: "à la remise des clés.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.5vw,4.3rem)] text-ivoire text-balance max-w-4xl" />
+          <WordReveal as="h2" segments={[{ text: "Du premier appel" }, { text: "à la réception du chantier.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.5vw,4.3rem)] text-ivoire text-balance max-w-4xl" />
         </div>
 
         <div ref={ref} className="relative">

@@ -21,10 +21,10 @@ export function CtaFinal() {
       <div className="absolute inset-0 bg-gradient-to-b from-carbone via-carbone/70 to-carbone" />
 
       <div className="container-site relative z-10 flex flex-col items-center text-center gap-8">
-        <Reveal variant="fade-blur"><span className="eyebrow">Visite technique &amp; devis gratuits</span></Reveal>
+        <Reveal variant="fade-blur"><span className="eyebrow">Visite technique gratuite</span></Reveal>
         <WordReveal
           as="h2"
-          segments={[{ text: "Votre appartement mérite" }, { text: "un vrai chantier, pas un chantier vague.", serif: true, gradient: true }]}
+          segments={[{ text: "Votre maison mérite" }, { text: "un vrai chantier, pas un chantier vague.", serif: true, gradient: true }]}
           className="display text-[clamp(2.3rem,6vw,5rem)] text-ivoire text-balance max-w-5xl"
         />
         <Reveal variant="slide-up" delay={0.2}>
@@ -36,7 +36,7 @@ export function CtaFinal() {
         <Reveal variant="scale" delay={0.3}>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/devis" className="btn btn-primary !px-9 !py-4 text-base">
-              Estimer mon devis
+              Estimer mon budget
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </Link>
             <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="btn btn-ghost !px-9 !py-4 text-base">

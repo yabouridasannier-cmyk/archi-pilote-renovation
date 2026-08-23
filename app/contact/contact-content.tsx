@@ -112,7 +112,7 @@ export function ContactContent() {
 
         <div className="flex flex-col gap-5">
           <Reveal variant="slide-up" delay={0.1} className="relative rounded-3xl overflow-hidden card-e h-[15rem] group">
-            <img src={PHOTOS.sejourApres} alt="Séjour rénové par Archipilote" className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            <img src={PHOTOS.sejourApres} alt="Séjour rénové, chantier piloté par ARCHI PILOTE" className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-0 inset-x-0 p-6">
               <span className="text-white/90 text-lg font-medium">{SITE.zone}</span>
@@ -144,7 +144,7 @@ export function ContactContent() {
           <Reveal variant="slide-up" delay={0.4}>
             <div className="card-e rounded-3xl p-7 flex flex-col gap-3">
               <span className="eyebrow">Ce qui est toujours inclus</span>
-              {["Visite technique sous 5 jours", "Devis détaillé sous 48 h", "Attestation décennale fournie"].map((item) => (
+              {["Visite technique sous 5 jours", "Devis des entreprises sous 48 h", "Attestations décennales vérifiées"].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-ivoire/85 text-[0.95rem]">
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--c-orange)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="shrink-0"><path d="M20 6 9 17l-5-5" /></svg>
                   {item}

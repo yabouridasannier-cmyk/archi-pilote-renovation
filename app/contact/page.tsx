@@ -3,9 +3,9 @@ import { PageHeader } from "../components/page-header";
 import { ContactContent } from "./contact-content";
 
 export const metadata: Metadata = {
-  title: "Contact & devis — Archipilote",
+  title: "Contact — ARCHI PILOTE",
   description:
-    "Racontez-nous votre projet de rénovation d'appartement : visite technique et devis détaillé gratuits, réponse sous 48 h.",
+    "Racontez-nous votre projet de rénovation de maison : visite technique gratuite, devis des entreprises sous 48 h.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
           { text: "Parlons de votre projet," },
           { text: "concrètement.", serif: true, gradient: true },
         ]}
-        lead="Trois questions suffisent pour lancer votre projet. On vous rappelle, on vient voir sur place, et vous recevez un devis précis sous 48 h — gratuit, sans engagement."
+        lead="Trois questions suffisent pour lancer votre projet. On vous rappelle, on vient voir sur place, et vous recevez les devis des entreprises partenaires sous 48 h — visite gratuite, sans engagement."
       />
       <ContactContent />
     </main>

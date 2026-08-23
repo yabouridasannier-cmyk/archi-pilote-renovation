@@ -105,8 +105,8 @@ export function Hero() {
               <span className="relative inline-flex size-2 rounded-full bg-orange" />
             </span>
             <span className="text-[0.78rem] sm:text-[0.82rem] text-white/85 whitespace-nowrap">
-              <span className="sm:hidden">Rénovation — Île-de-France</span>
-              <span className="hidden sm:inline">Rénovation d&apos;appartement — Paris &amp; Île-de-France</span>
+              <span className="sm:hidden">Travaux de rénovation — Île-de-France</span>
+              <span className="hidden sm:inline">Travaux de rénovation tous corps d&apos;état — Île-de-France</span>
             </span>
           </motion.div>
 
@@ -116,8 +116,8 @@ export function Hero() {
             delay={0.25}
             stagger={0.1}
             segments={[
-              { text: "Un chantier piloté," },
-              { text: "jusqu'à la remise des clés.", serif: true, gradient: true },
+              { text: "Rénovation tous corps d'état," },
+              { text: "du gros œuvre aux finitions.", serif: true, gradient: true },
             ]}
             className="display text-[clamp(2.5rem,7.6vw,6.4rem)] leading-[1.04] sm:leading-[1.02] tracking-[-0.01em] text-white text-balance max-w-6xl"
           />
@@ -129,23 +129,23 @@ export function Hero() {
             className="max-w-xl text-base sm:text-lg md:text-xl leading-snug text-white/75 text-balance"
           >
             <span className="sm:hidden">
-              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis détaillé sous 48&nbsp;h.
+              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis des entreprises sous 48&nbsp;h.
             </span>
             <span className="hidden sm:inline">
               Second œuvre tous corps d&apos;état, cuisine sur-mesure, salle de bain étanche, isolation.{" "}
-              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis détaillé sous 48&nbsp;h.
+              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis des entreprises sous 48&nbsp;h.
             </span>
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-3 mt-1 sm:mt-2">
             <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.05, ease: EASE }}>
               <Link href="/devis" className="btn btn-primary">
-                Estimer mon devis
+                Estimer mon budget
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="mt-px"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.2, ease: EASE }}>
-              <Link href="/realisations" className="btn btn-ghost">Voir nos réalisations</Link>
+              <Link href="/realisations" className="btn btn-ghost">Voir nos chantiers</Link>
             </motion.div>
           </div>
 
@@ -155,9 +155,9 @@ export function Hero() {
             transition={{ duration: 1, delay: 1.5 }}
             className="hidden sm:flex flex-wrap justify-center items-center gap-x-6 gap-y-2 mt-1 font-mono text-[0.68rem] tracking-[0.18em] uppercase text-white/45"
           >
-            <span>Garantie décennale</span>
+            <span>Entreprises partenaires assurées</span>
             <span className="size-1 rounded-full bg-orange/60" />
-            <span>Devis sous 48 h</span>
+            <span>Devis entreprises sous 48 h</span>
             <span className="size-1 rounded-full bg-orange/60" />
             <span>Visite technique sous 5 jours</span>
           </motion.div>
