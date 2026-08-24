@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/electricite-plomberie-renovation"
       eyebrow="Second œuvre"
       segments={[{ text: "Électricité et plomberie :" }, { text: "refaire les réseaux avant de fermer.", serif: true, gradient: true }]}
       lead="Les réseaux cachés sont difficiles à corriger après doublages, carrelage et peinture. Ils doivent être documentés avant fermeture."

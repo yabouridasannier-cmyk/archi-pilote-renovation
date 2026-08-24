@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/extension-maison-ile-de-france"
       eyebrow="Gros œuvre"
       segments={[{ text: "Extension de maison :" }, { text: "cadrer avant de construire.", serif: true, gradient: true }]}
       lead="Une extension modifie surface, enveloppe, structure et parfois fiscalité ou autorisations. Le projet doit être cadré avant les devis."

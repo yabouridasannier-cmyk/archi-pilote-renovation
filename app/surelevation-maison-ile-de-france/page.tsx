@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/surelevation-maison-ile-de-france"
       eyebrow="Gros œuvre"
       segments={[{ text: "Surélévation de maison :" }, { text: "vérifier la structure avant le projet.", serif: true, gradient: true }]}
       lead="Une surélévation crée de la surface sans emprise supplémentaire, mais elle ajoute des charges et modifie le bâtiment entier."

@@ -20,6 +20,7 @@ export function SpecialtyPage({
   photo,
   photoAlt,
   faqExtra,
+  slug,
 }: {
   eyebrow: string;
   segments: Segment[];
@@ -28,7 +29,30 @@ export function SpecialtyPage({
   photo: keyof typeof PHOTOS;
   photoAlt: string;
   faqExtra?: { q: string; r: string }[];
+  /** Chemin de la page (ex. "/ouverture-mur-porteur") — génère Service + BreadcrumbList. */
+  slug?: string;
 }) {
+  const pageTitle = segments.map((s) => s.text).join(" ");
+  const jsonLd = slug && [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: pageTitle,
+      description: lead,
+      areaServed: ["Hauts-de-Seine", "Yvelines", "Essonne", "Val-d'Oise", "Seine-et-Marne", "Île-de-France"],
+      provider: { "@type": "ProfessionalService", name: "ARCHI PILOTE" },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://archipilote.fr/" },
+        { "@type": "ListItem", position: 2, name: eyebrow, item: "https://archipilote.fr/services" },
+        { "@type": "ListItem", position: 3, name: pageTitle, item: `https://archipilote.fr${slug}` },
+      ],
+    },
+  ];
+
   const FAQ_COMMUNE = [
     { q: "ARCHI PILOTE exécute-t-il ce lot ?", r: "Non. La marque structure et suit le projet ; l'entreprise partenaire spécialisée réalise et facture le lot, sous sa propre responsabilité." },
     { q: "Une visite technique est-elle nécessaire ?", r: "Oui, pour tout chiffrage sérieux : l'existant et l'accès changent fortement les hypothèses de chantier." },
@@ -39,6 +63,9 @@ export function SpecialtyPage({
 
   return (
     <main className="relative z-10 bg-carbone">
+      {jsonLd && jsonLd.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <PageHeader eyebrow={eyebrow} segments={segments} lead={lead} />
 
       <section className="relative pb-10">

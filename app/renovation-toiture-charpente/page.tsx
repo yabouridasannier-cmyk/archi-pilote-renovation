@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/renovation-toiture-charpente"
       eyebrow="Gros œuvre"
       segments={[{ text: "Toiture et charpente :" }, { text: "traiter l'enveloppe en priorité.", serif: true, gradient: true }]}
       lead="Une toiture défaillante ruine les finitions. Avant d'isoler ou de repeindre, il faut comprendre l'eau, l'air, la ventilation et la structure."

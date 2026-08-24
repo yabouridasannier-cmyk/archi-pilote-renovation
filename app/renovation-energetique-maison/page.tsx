@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/renovation-energetique-maison"
       eyebrow="Second œuvre"
       segments={[{ text: "Rénovation énergétique :" }, { text: "isolation, ventilation, chauffage dans le bon ordre.", serif: true, gradient: true }]}
       lead="Changer le chauffage avant de réduire les besoins peut conduire à un équipement mal dimensionné. L'enveloppe, l'air et les systèmes doivent être étudiés ensemble."

@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/ouverture-mur-porteur"
       eyebrow="Gros œuvre"
       segments={[{ text: "Ouverture de mur porteur :" }, { text: "étude, autorisations, travaux.", serif: true, gradient: true }]}
       lead="Modifier un mur porteur engage la structure. Étude, plans, phasage, entreprise assurée et réception doivent être préparés avant démolition."

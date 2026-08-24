@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/sols-finitions-renovation"
       eyebrow="Second œuvre"
       segments={[{ text: "Sols et finitions :" }, { text: "la qualité dépend d'abord des supports.", serif: true, gradient: true }]}
       lead="Parquet, carrelage, béton ciré ou peinture ne compensent pas un support instable, humide ou mal préparé."

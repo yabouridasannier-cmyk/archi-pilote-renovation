@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/renovation-cuisine-maison"
       eyebrow="Second œuvre"
       segments={[{ text: "Cuisine :" }, { text: "décider les réseaux avant les façades.", serif: true, gradient: true }]}
       lead="La cuisine combine ergonomie, électricité, plomberie, ventilation, menuiserie et électroménager. Les cotes finales arrivent après validation des supports."

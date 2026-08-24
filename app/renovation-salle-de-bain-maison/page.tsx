@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/renovation-salle-de-bain-maison"
       eyebrow="Second œuvre"
       segments={[{ text: "Salle de bain :" }, { text: "l'étanchéité avant le décor.", serif: true, gradient: true }]}
       lead="Une salle de bain durable dépend du support, de l'étanchéité, des pentes, de la ventilation et des réseaux plus que du style du carrelage."

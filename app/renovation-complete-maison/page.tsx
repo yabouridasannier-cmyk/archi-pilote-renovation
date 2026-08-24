@@ -9,6 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
+      slug="/renovation-complete-maison"
       eyebrow="Rénovation complète"
       segments={[{ text: "Rénovation complète de maison :" }, { text: "ordre des travaux et budget.", serif: true, gradient: true }]}
       lead="Une rénovation complète réussie se joue avant la peinture : structure, eau, air, réseaux et supports doivent être arbitrés dans cet ordre."
