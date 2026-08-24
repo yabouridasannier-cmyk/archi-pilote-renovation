@@ -3,7 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Ce que nous ne faisons pas — ARCHI PILOTE",
+  title: "Ce que nous ne faisons pas — ARCHI PILOTE RÉNOVATION",
   description: "La différence entre un pilote de travaux et une entreprise générale, dite clairement.",
 };
 

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
-  title: "Surélévation de maison en Île-de-France | ARCHI PILOTE",
+  title: "Surélévation de maison en Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Une surélévation crée de la surface sans emprise supplémentaire, mais elle ajoute des charges et modifie le bâtiment entier.",
 };
 

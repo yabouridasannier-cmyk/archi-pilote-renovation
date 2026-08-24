@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
-  title: "Rénovation de cuisine | ARCHI PILOTE",
+  title: "Rénovation de cuisine | ARCHI PILOTE RÉNOVATION",
   description: "La cuisine combine ergonomie, électricité, plomberie, ventilation, menuiserie et électroménager. Les cotes finales arrivent après validation des supports.",
 };
 

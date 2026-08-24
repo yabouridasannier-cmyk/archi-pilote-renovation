@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
-  title: "Ouverture de mur porteur | ARCHI PILOTE",
+  title: "Ouverture de mur porteur | ARCHI PILOTE RÉNOVATION",
   description: "Modifier un mur porteur engage la structure. Étude, plans, phasage, entreprise assurée et réception doivent être préparés avant démolition.",
 };
 

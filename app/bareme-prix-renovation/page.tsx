@@ -4,7 +4,7 @@ import { GAMMES, PIECES_OPTIONS } from "../data";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Barème public des coûts de rénovation — Île-de-France | ARCHI PILOTE",
+  title: "Barème public des coûts de rénovation — Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Fourchettes observées sur les projets accompagnés en Île-de-France, mise à jour trimestrielle. Indicatif, non contractuel.",
 };
 

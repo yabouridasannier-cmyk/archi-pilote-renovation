@@ -7,7 +7,7 @@ import { AVANT_APRES } from "../data";
 import { PHOTOS } from "../lib-photos";
 
 export const metadata: Metadata = {
-  title: "Nos chantiers de rénovation en Île-de-France — ARCHI PILOTE",
+  title: "Nos chantiers de rénovation en Île-de-France — ARCHI PILOTE RÉNOVATION",
   description:
     "Rénovations de maisons en Île-de-France : gros œuvre, second œuvre, cuisines sur-mesure, salles de bain étanches, béton ciré.",
 };
@@ -19,7 +19,7 @@ export default function RealisationsPage() {
       <PageHeader
         eyebrow="Réalisations"
         segments={[{ text: "Nouvelle marque," }, { text: "premiers chantiers à venir.", serif: true, gradient: true }]}
-        lead="ARCHI PILOTE démarre : les visuels ci-dessous illustrent le niveau de finition visé. Vos vrais chantiers viendront remplacer cette galerie, projet après projet."
+        lead="ARCHI PILOTE RÉNOVATION démarre : les visuels ci-dessous illustrent le niveau de finition visé. Vos vrais chantiers viendront remplacer cette galerie, projet après projet."
       />
       <AvantApres
         titre="Le même séjour"

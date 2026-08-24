@@ -4,7 +4,7 @@ import { BlogGrid } from "./blog-grid";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Blog — Conseils rénovation | ARCHI PILOTE",
+  title: "Blog — Conseils rénovation | ARCHI PILOTE RÉNOVATION",
   description:
     "Prix au m², matériaux, isolation, DPE : nos guides pratiques pour comprendre et réussir votre projet de rénovation de maison en Île-de-France.",
 };

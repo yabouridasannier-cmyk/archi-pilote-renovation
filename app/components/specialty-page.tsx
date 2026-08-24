@@ -9,7 +9,7 @@ type Section = { titre: string; texte: string };
 /**
  * Gabarit commun aux pages de spécialité (gros œuvre, second œuvre, ressources).
  * FAQ et maillage interne identiques sur toutes ces pages — cf. brief SEO :
- * "ARCHI PILOTE exécute-t-il ce lot ? Non, l'entreprise spécialisée réalise et
+ * "ARCHI PILOTE RÉNOVATION exécute-t-il ce lot ? Non, l'entreprise spécialisée réalise et
  * facture le lot" doit rester visible et cohérent partout, pas réécrit page à page.
  */
 export function SpecialtyPage({
@@ -40,21 +40,21 @@ export function SpecialtyPage({
       name: pageTitle,
       description: lead,
       areaServed: ["Hauts-de-Seine", "Yvelines", "Essonne", "Val-d'Oise", "Seine-et-Marne", "Île-de-France"],
-      provider: { "@type": "ProfessionalService", name: "ARCHI PILOTE" },
+      provider: { "@type": "ProfessionalService", name: "ARCHI PILOTE RÉNOVATION" },
     },
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://archipilote.fr/" },
-        { "@type": "ListItem", position: 2, name: eyebrow, item: "https://archipilote.fr/services" },
-        { "@type": "ListItem", position: 3, name: pageTitle, item: `https://archipilote.fr${slug}` },
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://archipiloterenovation.fr/" },
+        { "@type": "ListItem", position: 2, name: eyebrow, item: "https://archipiloterenovation.fr/services" },
+        { "@type": "ListItem", position: 3, name: pageTitle, item: `https://archipiloterenovation.fr${slug}` },
       ],
     },
   ];
 
   const FAQ_COMMUNE = [
-    { q: "ARCHI PILOTE exécute-t-il ce lot ?", r: "Non. La marque structure et suit le projet ; l'entreprise partenaire spécialisée réalise et facture le lot, sous sa propre responsabilité." },
+    { q: "ARCHI PILOTE RÉNOVATION exécute-t-il ce lot ?", r: "Non. La marque structure et suit le projet ; l'entreprise partenaire spécialisée réalise et facture le lot, sous sa propre responsabilité." },
     { q: "Une visite technique est-elle nécessaire ?", r: "Oui, pour tout chiffrage sérieux : l'existant et l'accès changent fortement les hypothèses de chantier." },
     { q: "Les prix affichés sont-ils garantis ?", r: "Non. Les fourchettes éventuellement publiées sont datées et indicatives ; le prix contractuel reste celui du devis remis par l'entreprise." },
     { q: "Intervenez-vous depuis La Garenne-Colombes ?", r: "Oui, avec une zone d'intervention plus large en Île-de-France selon la nature du projet." },

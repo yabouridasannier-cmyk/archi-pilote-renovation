@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
-  title: "Rénovation complète de maison en Île-de-France | ARCHI PILOTE",
+  title: "Rénovation complète de maison en Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Une rénovation complète réussie se joue avant la peinture : structure, eau, air, réseaux et supports doivent être arbitrés dans cet ordre.",
 };
 

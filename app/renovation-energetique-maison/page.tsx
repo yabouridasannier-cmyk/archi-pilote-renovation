@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
-  title: "Chauffage, isolation et ventilation | ARCHI PILOTE",
+  title: "Chauffage, isolation et ventilation | ARCHI PILOTE RÉNOVATION",
   description: "Changer le chauffage avant de réduire les besoins peut conduire à un équipement mal dimensionné. L'enveloppe, l'air et les systèmes doivent être étudiés ensemble.",
 };
 

@@ -4,7 +4,7 @@ import { CtaFinal } from "../../components/cta-final";
 import { PHOTOS } from "../../lib-photos";
 
 export const metadata: Metadata = {
-  title: "Pavillon des années 30, Hauts-de-Seine — Rénovation complète | ARCHI PILOTE",
+  title: "Pavillon des années 30, Hauts-de-Seine — Rénovation complète | ARCHI PILOTE RÉNOVATION",
   description: "Rénovation complète d'un pavillon de 118 m² avant emménagement : douze lots pilotés en 19 semaines, calendrier imposé par une date de fin de bail.",
 };
 

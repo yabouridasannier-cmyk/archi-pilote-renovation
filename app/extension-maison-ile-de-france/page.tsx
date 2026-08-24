@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
-  title: "Extension de maison en Île-de-France | ARCHI PILOTE",
+  title: "Extension de maison en Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Une extension modifie surface, enveloppe, structure et parfois fiscalité ou autorisations. Le projet doit être cadré avant les devis.",
 };
 

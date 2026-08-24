@@ -22,7 +22,7 @@ export function ConceptSplit() {
       <div ref={ref} className="container-site">
         <div className="flex flex-col lg:flex-row items-center gap-14 lg:gap-20">
           <div className="w-full lg:w-[45%] flex flex-col gap-5">
-            <Reveal variant="fade-blur"><span className="eyebrow">La méthode ARCHI PILOTE</span></Reveal>
+            <Reveal variant="fade-blur"><span className="eyebrow">La méthode ARCHI PILOTE RÉNOVATION</span></Reveal>
             <WordReveal
               as="h2"
               segments={[{ text: "Un pilote de projet," }, { text: "jamais un standard.", serif: true, gradient: true }]}
@@ -31,7 +31,7 @@ export function ConceptSplit() {
             <Reveal variant="slide-up" delay={0.15}>
               <p className="lead">
                 Une rénovation échoue rarement sur les travaux eux-mêmes —
-                elle échoue sur l&apos;enchaînement des lots. Chez ARCHI PILOTE, un seul pilote
+                elle échoue sur l&apos;enchaînement des lots. Chez ARCHI PILOTE RÉNOVATION, un seul pilote
                 suit votre chantier du diagnostic à la réception et tient l&apos;interface avec
                 les corps de métier. Vous n&apos;appelez jamais trois numéros différents.
               </p>

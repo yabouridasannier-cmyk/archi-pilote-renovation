@@ -32,7 +32,7 @@ export function Footer() {
                 <div className="flex items-center gap-3 mb-5 text-white">
                   <LogoMark size={44} />
                   <div className="leading-none">
-                    <span className="display block text-xl tracking-tight text-white">ARCHI PILOTE</span>
+                    <span className="display block text-xl tracking-tight text-white">ARCHI PILOTE RÉNOVATION</span>
                     <span className="font-mono text-[0.6rem] tracking-[0.28em] text-white/40 uppercase">Rénovation tous corps d&apos;état</span>
                   </div>
                 </div>
@@ -71,6 +71,7 @@ export function Footer() {
                   <Link href="/glossaire-renovation-maison" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Glossaire</Link>
                   <Link href="/aides-renovation-energetique" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Aides & subventions</Link>
                   <Link href="/avant-apres-renovation-maison" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Avant / après</Link>
+                  <Link href="/renovation-appartement" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Rénovation appartement</Link>
                 </div>
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Contact</span>
@@ -84,18 +85,18 @@ export function Footer() {
 
             <div aria-hidden className="select-none pointer-events-none overflow-hidden -mb-2">
               <span className="display block text-[clamp(2.6rem,10vw,9rem)] leading-[0.85] text-white/[0.05] tracking-tight text-center whitespace-nowrap italic">
-                ARCHI PILOTE
+                ARCHI PILOTE RÉNOVATION
               </span>
             </div>
 
             <div className="hr-fade mb-6" />
             <p className="text-white/30 text-[0.76rem] leading-relaxed max-w-3xl mb-4">
-              {SITE.structure} ARCHI PILOTE n&apos;est pas une entreprise de travaux, n&apos;exécute aucun lot et ne facture aucun
+              {SITE.structure} ARCHI PILOTE RÉNOVATION n&apos;est pas une entreprise de travaux, n&apos;exécute aucun lot et ne facture aucun
               travaux. Les travaux sont réalisés et facturés par des entreprises partenaires indépendantes, chacune
               titulaire de ses propres assurances de responsabilité civile professionnelle et de garantie décennale.
             </p>
             <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-[0.82rem] text-white/35">
-              <span>© 2026 ARCHI PILOTE — <Link href="/mentions-legales" className="hover:text-orange transition-colors">Mentions légales</Link></span>
+              <span>© 2026 ARCHI PILOTE RÉNOVATION — <Link href="/mentions-legales" className="hover:text-orange transition-colors">Mentions légales</Link></span>
               <span className="font-mono text-[0.7rem] tracking-widest uppercase">Maquette — Logipro Web</span>
             </div>
           </div>

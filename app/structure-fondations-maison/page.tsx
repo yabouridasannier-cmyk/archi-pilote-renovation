@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
-  title: "Structure et fondations | ARCHI PILOTE",
+  title: "Structure et fondations | ARCHI PILOTE RÉNOVATION",
   description: "Fissures, affaissement, planchers ou reprises de charge nécessitent un diagnostic adapté avant toute solution cosmétique.",
 };
 

@@ -4,7 +4,7 @@ import { DevisEstimateur } from "../components/devis-estimateur";
 import { FaqSection } from "../components/faq-section";
 
 export const metadata: Metadata = {
-  title: "Estimer mon budget — ARCHI PILOTE",
+  title: "Estimer mon budget — ARCHI PILOTE RÉNOVATION",
   description:
     "Estimez le budget de vos travaux de rénovation en 3 clics : type de projet, surface, montées en gamme. Fourchette immédiate, devis des entreprises sous 48 h après visite technique.",
 };

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = ARTICLES.find((a) => a.slug === slug);
   if (!article) return {};
-  return { title: `${article.titre} — ARCHI PILOTE`, description: article.excerpt };
+  return { title: `${article.titre} — ARCHI PILOTE RÉNOVATION`, description: article.excerpt };
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {

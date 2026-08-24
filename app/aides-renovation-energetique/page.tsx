@@ -3,7 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Guide des aides à la rénovation énergétique | ARCHI PILOTE",
+  title: "Guide des aides à la rénovation énergétique | ARCHI PILOTE RÉNOVATION",
   description: "Les dispositifs changent. Cette page renvoie vers les sources officielles et évite toute promesse d'éligibilité avant étude du dossier.",
 };
 

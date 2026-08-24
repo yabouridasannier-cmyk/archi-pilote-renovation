@@ -112,7 +112,7 @@ export function ContactContent() {
 
         <div className="flex flex-col gap-5">
           <Reveal variant="slide-up" delay={0.1} className="relative rounded-3xl overflow-hidden card-e h-[15rem] group">
-            <img src={PHOTOS.sejourApres} alt="Séjour rénové, chantier piloté par ARCHI PILOTE" className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            <img src={PHOTOS.sejourApres} alt="Séjour rénové, chantier piloté par ARCHI PILOTE RÉNOVATION" className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-0 inset-x-0 p-6">
               <span className="text-white/90 text-lg font-medium">{SITE.zone}</span>

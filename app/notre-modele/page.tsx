@@ -4,7 +4,7 @@ import { EngagementsSection } from "../components/engagements-section";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Matériaux achetés en direct, entreprises qui facturent directement — ARCHI PILOTE",
+  title: "Matériaux achetés en direct, entreprises qui facturent directement — ARCHI PILOTE RÉNOVATION",
   description: "Vous achetez vos matériaux sans marge. Chaque entreprise vous facture et porte sa décennale. Nous pilotons, nous ne vendons pas de travaux.",
 };
 
@@ -41,7 +41,7 @@ export default function NotreModelePage() {
               contracte directement avec vous, elle vous facture directement.
             </p>
             <p>
-              ARCHI PILOTE n&apos;exécute aucun lot et ne facture aucun travaux. Notre rôle est le pilotage et
+              ARCHI PILOTE RÉNOVATION n&apos;exécute aucun lot et ne facture aucun travaux. Notre rôle est le pilotage et
               l&apos;accompagnement : cadrer le projet, mettre en relation, tenir l&apos;interface, documenter.
             </p>
           </div>

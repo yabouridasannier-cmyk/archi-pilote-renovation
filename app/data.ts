@@ -1,5 +1,5 @@
 /* ============================================================
-   ARCHI PILOTE — Contenu central
+   ARCHI PILOTE RÉNOVATION — Contenu central
    Marque exploitée par IA RENOV (SASU), La Garenne-Colombes.
    Territoire : maison & pavillon en Île-de-France (92, 78, 91, 95, 77),
    gros œuvre en tête. Registre lexical strict : la marque pilote et
@@ -8,14 +8,14 @@
    ============================================================ */
 
 export const SITE = {
-  nom: "ARCHI PILOTE",
+  nom: "ARCHI PILOTE RÉNOVATION",
   baseline: "Rénovation tous corps d'état — Île-de-France",
   zone: "Île-de-France",
-  structure: "ARCHI PILOTE est une marque exploitée par IA RENOV (SASU), RCS 889 976 387 Nanterre, 8 rue Gabriel Péri, 92250 La Garenne-Colombes.",
-  tel: "+33 1 84 60 00 00", // à remplacer par le vrai numéro ARCHI PILOTE avant mise en ligne — distinct du numéro ARCHI RENOV
+  structure: "ARCHI PILOTE RÉNOVATION est une marque exploitée par IA RENOV (SASU), RCS 889 976 387 Nanterre, 8 rue Gabriel Péri, 92250 La Garenne-Colombes.",
+  tel: "+33 1 84 60 00 00", // à remplacer par le vrai numéro ARCHI PILOTE RÉNOVATION avant mise en ligne — distinct du numéro ARCHI RENOV
   telAffiche: "01 84 60 00 00",
   whatsapp: "https://wa.me/33184600000",
-  email: "contact@archipilote.fr", // illustratif, à confirmer
+  email: "contact@archipiloterenovation.fr", // illustratif, à confirmer
   horaires: [
     { jours: "Lundi — Vendredi", heures: "08h30 – 19h00" },
     { jours: "Samedi", heures: "Sur rendez-vous" },
@@ -113,8 +113,8 @@ export const FAQ = [
   { question: "Pourquoi des joints époxy plutôt que des joints classiques ?", reponse: "Les joints ciment noircissent en quelques mois et se fissurent. Les joints époxy, systématiquement prescrits en salle de bain et cuisine, sont étanches, ne noircissent pas et affichent, selon les fabricants, une durée de vie sans commune mesure avec celle des joints ciment." },
   { question: "Pilotez-vous la rénovation de maisons classées DPE F ou G ?", reponse: "Oui, c'est l'une de nos spécialités. Nous pilotons le traitement des passoires énergétiques de bout en bout : diagnostic, isolation, VMC double flux, remplacement du chauffage, accompagnement MaPrimeRénov' et CEE. L'objectif est de gagner 2 à 3 classes DPE." },
   { question: "Qui garantit les travaux, et pendant combien de temps ?", reponse: "Chaque entreprise partenaire porte les assurances correspondant aux activités qu'elle exécute : garantie décennale (10 ans), garantie biennale (2 ans sur les équipements), garantie de parfait achèvement (1 an). Les attestations sont vérifiées et remises avant tout démarrage de chantier." },
-  { question: "Qui signe les devis de travaux, et qui je paie ?", reponse: "Chaque entreprise partenaire remet et signe son propre devis. Vous contractez et payez directement avec elle. ARCHI PILOTE n'émet aucun devis de travaux et ne facture aucun chantier — notre rôle est le pilotage et l'accompagnement du projet." },
-  { question: "Comment se déroule un projet avec ARCHI PILOTE ?", reponse: "Cinq étapes : premier échange par téléphone ou WhatsApp, visite technique sous 5 jours, devis des entreprises sous 48h, chantier piloté avec point d'avancement hebdomadaire, puis réception et 12 mois de suivi." },
+  { question: "Qui signe les devis de travaux, et qui je paie ?", reponse: "Chaque entreprise partenaire remet et signe son propre devis. Vous contractez et payez directement avec elle. ARCHI PILOTE RÉNOVATION n'émet aucun devis de travaux et ne facture aucun chantier — notre rôle est le pilotage et l'accompagnement du projet." },
+  { question: "Comment se déroule un projet avec ARCHI PILOTE RÉNOVATION ?", reponse: "Cinq étapes : premier échange par téléphone ou WhatsApp, visite technique sous 5 jours, devis des entreprises sous 48h, chantier piloté avec point d'avancement hebdomadaire, puis réception et 12 mois de suivi." },
 ];
 
 export const MARQUEE_ITEMS = ["Second œuvre", "Cuisine sur-mesure", "Salle de bain étanche", "Béton ciré", "Isolation & DPE", "Gros œuvre", "Surélévation", "Devis entreprises sous 48h"];
@@ -126,7 +126,7 @@ export const AVANT_APRES = [
   { id: "sejour", titre: "Le même volume, un chantier piloté", avantLabel: "Avant — pavillon à rénover", apresLabel: "Après — séjour rénové", avant: "sejourAvant", apres: "sejourApres", texte: "Une pièce retrouve sa cohérence : cloisons reprises, réseaux refaits, sols et finitions posés dans le bon ordre. L'ordre est ce qui coûte le moins cher et ce qu'on rate le plus souvent." },
 ];
 
-/* Articles de blog — contenu ORIGINAL écrit pour ARCHI PILOTE, territoire maison/pavillon. */
+/* Articles de blog — contenu ORIGINAL écrit pour ARCHI PILOTE RÉNOVATION, territoire maison/pavillon. */
 export type Article = { slug: string; titre: string; date: string; excerpt: string; categorie: string; photo: string; corps: string[] };
 
 export const ARTICLES: Article[] = [

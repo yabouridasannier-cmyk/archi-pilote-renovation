@@ -3,7 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Architecte DPLG et bureau d'études structure — nos partenaires | ARCHI PILOTE",
+  title: "Architecte DPLG et bureau d'études structure — nos partenaires | ARCHI PILOTE RÉNOVATION",
   description: "Nos partenaires experts en Île-de-France : architecte DPLG et bureau d'études structure, mobilisés dès qu'un projet touche à la descente de charges.",
 };
 
@@ -18,7 +18,7 @@ export default function Page() {
       <PageHeader
         eyebrow="Nos partenaires"
         segments={[{ text: "Un architecte, un ingénieur," }, { text: "dès que la structure l'exige.", serif: true, gradient: true }]}
-        lead="ARCHI PILOTE ne se substitue jamais à ces expertises réglementées — nous mobilisons les bons partenaires au bon moment du projet."
+        lead="ARCHI PILOTE RÉNOVATION ne se substitue jamais à ces expertises réglementées — nous mobilisons les bons partenaires au bon moment du projet."
       />
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-5">
@@ -30,7 +30,7 @@ export default function Page() {
           ))}
           <p className="text-muted text-[0.85rem] leading-relaxed mt-2">
             Les entreprises d&apos;exécution sont choisies par lot, présentées au client, qui signe et contracte
-            directement avec elles. ARCHI PILOTE tient l&apos;interface entre tous ces intervenants.
+            directement avec elles. ARCHI PILOTE RÉNOVATION tient l&apos;interface entre tous ces intervenants.
           </p>
         </div>
       </section>

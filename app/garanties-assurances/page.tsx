@@ -3,7 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Garanties travaux : décennale, biennale, parfait achèvement — ARCHI PILOTE",
+  title: "Garanties travaux : décennale, biennale, parfait achèvement — ARCHI PILOTE RÉNOVATION",
   description: "Qui garantit quoi, pendant combien de temps, et comment vérifier une attestation d'assurance décennale avant le début des travaux.",
 };
 
@@ -39,7 +39,7 @@ export default function GarantiesPage() {
           <div className="flex flex-col gap-2">
             <h2 className="display text-2xl text-ivoire normal-case">Qui porte quoi</h2>
             <p>
-              ARCHI PILOTE ne porte aucune de ces garanties : nous n&apos;exécutons aucun lot. Chaque entreprise
+              ARCHI PILOTE RÉNOVATION ne porte aucune de ces garanties : nous n&apos;exécutons aucun lot. Chaque entreprise
               partenaire porte les assurances correspondant aux activités qu&apos;elle exécute chez vous, et reste
               votre interlocuteur direct en cas de malfaçon sur son lot.
             </p>

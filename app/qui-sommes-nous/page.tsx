@@ -4,7 +4,7 @@ import { CtaFinal } from "../components/cta-final";
 import { SITE } from "../data";
 
 export const metadata: Metadata = {
-  title: "ARCHI PILOTE, marque exploitée par IA RENOV (SASU)",
+  title: "ARCHI PILOTE RÉNOVATION, marque exploitée par IA RENOV (SASU)",
   description: "Une marque de pilotage de travaux de rénovation en Île-de-France, priorité maison et pavillon en couronne francilienne.",
 };
 
@@ -19,7 +19,7 @@ export default function QuiSommesNousPage() {
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-8 text-ivoire/85 text-[1.02rem] leading-relaxed">
           <p>
-            ARCHI PILOTE est une marque de pilotage de projets de rénovation, exploitée par IA RENOV (SASU). Nous
+            ARCHI PILOTE RÉNOVATION est une marque de pilotage de projets de rénovation, exploitée par IA RENOV (SASU). Nous
             accompagnons les propriétaires de maisons et de pavillons d&apos;Île-de-France sur les projets qui
             touchent à la structure : ouverture de mur porteur, extension, surélévation, toiture, comme sur les
             rénovations complètes et le second œuvre.

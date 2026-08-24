@@ -4,8 +4,8 @@ import { ProcessTimeline } from "../components/process-timeline";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
-  title: "Notre méthode de pilotage de travaux, étape par étape — ARCHI PILOTE",
-  description: "Premier échange, visite technique, devis des entreprises, chantier piloté, réception. Les cinq étapes d'un projet piloté par ARCHI PILOTE.",
+  title: "Notre méthode de pilotage de travaux, étape par étape — ARCHI PILOTE RÉNOVATION",
+  description: "Premier échange, visite technique, devis des entreprises, chantier piloté, réception. Les cinq étapes d'un projet piloté par ARCHI PILOTE RÉNOVATION.",
 };
 
 export default function NotreMethodePage() {
