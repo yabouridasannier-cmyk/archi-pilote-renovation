@@ -42,7 +42,7 @@ export function Footer() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12">
+              <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Navigation</span>
                   <Link href="/" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Accueil</Link>
@@ -51,10 +51,11 @@ export function Footer() {
                   <Link href="/blog" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Blog</Link>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Contact</span>
-                  <span className="text-white/70 text-[0.95rem]">{SITE.zone}</span>
-                  <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">{SITE.telAffiche}</a>
-                  <a href={`mailto:${SITE.email}`} className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">{SITE.email}</a>
+                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Gros œuvre</span>
+                  <Link href="/ouverture-mur-porteur" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Mur porteur</Link>
+                  <Link href="/extension-maison-ile-de-france" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Extension</Link>
+                  <Link href="/surelevation-maison-ile-de-france" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Surélévation</Link>
+                  <Link href="/renovation-toiture-charpente" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Toiture & charpente</Link>
                 </div>
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Confiance</span>
@@ -64,9 +65,17 @@ export function Footer() {
                   <Link href="/ce-que-nous-ne-faisons-pas" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Ce que nous ne faisons pas</Link>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Budget</span>
-                  <Link href="/devis" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Estimateur en ligne</Link>
+                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Ressources</span>
                   <Link href="/bareme-prix-renovation" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Barème des coûts</Link>
+                  <Link href="/glossaire-renovation-maison" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Glossaire</Link>
+                  <Link href="/aides-renovation-energetique" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Aides & subventions</Link>
+                  <Link href="/avant-apres-renovation-maison" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Avant / après</Link>
+                </div>
+                <div className="flex flex-col gap-3">
+                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Contact</span>
+                  <span className="text-white/70 text-[0.95rem]">{SITE.zone}</span>
+                  <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">{SITE.telAffiche}</a>
+                  <a href={`mailto:${SITE.email}`} className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">{SITE.email}</a>
                   <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="text-white/70 hover:text-[#25d366] transition-colors text-[0.95rem]">WhatsApp</a>
                 </div>
               </div>

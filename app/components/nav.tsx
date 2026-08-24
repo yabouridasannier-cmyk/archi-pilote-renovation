@@ -21,6 +21,15 @@ const REALISATIONS_LINKS = [
   { href: "/realisations", label: "Toutes nos réalisations" },
 ];
 
+const SERVICES_LINKS: Record<string, string> = {
+  "second-oeuvre": "/electricite-plomberie-renovation",
+  "cuisine-sur-mesure": "/renovation-cuisine-maison",
+  "salle-de-bain": "/renovation-salle-de-bain-maison",
+  "beton-cire": "/sols-finitions-renovation",
+  "isolation-dpe": "/renovation-energetique-maison",
+  "gros-oeuvre": "/renovation-complete-maison",
+};
+
 export function Nav() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
@@ -87,7 +96,7 @@ export function Nav() {
                       >
                         <div className="card-e rounded-2xl p-2 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)]">
                           {SERVICES.map((s) => (
-                            <Link key={s.slug} href={`/services#${s.slug}`} className="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-surface-2 transition-colors group">
+                            <Link key={s.slug} href={SERVICES_LINKS[s.slug] ?? `/services#${s.slug}`} className="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-surface-2 transition-colors group">
                               <span className="font-serif italic text-orange/80 text-[0.9rem] w-4 shrink-0">{s.marque}</span>
                               <span className="text-ivoire/90 text-[0.88rem] group-hover:text-orange transition-colors">{s.titre}</span>
                             </Link>

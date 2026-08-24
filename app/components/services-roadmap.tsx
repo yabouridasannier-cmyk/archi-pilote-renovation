@@ -1,8 +1,18 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { motion, useScroll, useTransform, AnimatePresence } from "motion/react";
 import { SERVICES } from "../data";
+
+const SERVICES_LINKS: Record<string, string> = {
+  "second-oeuvre": "/electricite-plomberie-renovation",
+  "cuisine-sur-mesure": "/renovation-cuisine-maison",
+  "salle-de-bain": "/renovation-salle-de-bain-maison",
+  "beton-cire": "/sols-finitions-renovation",
+  "isolation-dpe": "/renovation-energetique-maison",
+  "gros-oeuvre": "/renovation-complete-maison",
+};
 import { PHOTOS } from "../lib-photos";
 import { WordReveal } from "./word-reveal";
 import { Reveal } from "./reveal";
@@ -87,6 +97,12 @@ export function ServicesRoadmap() {
                             <div className="relative mt-4 rounded-xl overflow-hidden aspect-[16/8]">
                               <img src={PHOTOS[s.photo as keyof typeof PHOTOS]} alt={s.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
                             </div>
+                            {SERVICES_LINKS[s.slug] && (
+                              <Link href={SERVICES_LINKS[s.slug]} className={`inline-flex items-center gap-1.5 text-orange text-[0.86rem] font-medium mt-3 hover:underline ${left ? "md:justify-end md:w-full" : ""}`}>
+                                La page dédiée {s.titre.toLowerCase()}
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                              </Link>
+                            )}
                           </motion.div>
                         )}
                       </AnimatePresence>
