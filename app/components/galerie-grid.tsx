@@ -16,7 +16,7 @@ export function GalerieGrid() {
         <div className="flex flex-wrap justify-center gap-2.5 mb-10">
           <button
             onClick={() => setFiltre("tout")}
-            className={`rounded-full px-5 py-2.5 text-[0.88rem] font-medium border transition-all duration-300 cursor-pointer ${
+            className={`px-5 py-2.5 text-[0.88rem] font-medium border transition-all duration-300 cursor-pointer ${
               filtre === "tout" ? "border-orange bg-orange/15 text-orange" : "border-line-strong text-muted hover:text-ivoire hover:border-line-strong"
             }`}
           >
@@ -28,7 +28,7 @@ export function GalerieGrid() {
               <button
                 key={c.id}
                 onClick={() => setFiltre(c.id)}
-                className={`rounded-full px-5 py-2.5 text-[0.88rem] font-medium border transition-all duration-300 cursor-pointer ${
+                className={`px-5 py-2.5 text-[0.88rem] font-medium border transition-all duration-300 cursor-pointer ${
                   filtre === c.id ? "border-orange bg-orange/15 text-orange" : "border-line-strong text-muted hover:text-ivoire hover:border-line-strong"
                 }`}
               >
@@ -41,7 +41,7 @@ export function GalerieGrid() {
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5">
           {items.map((photo, i) => (
             <Reveal key={photo.src} variant="slide-up" delay={(i % 3) * 0.08}>
-              <figure className="group relative rounded-2xl overflow-hidden card-e break-inside-avoid">
+              <figure className="group relative rounded-none overflow-hidden card-e break-inside-avoid">
                 <img
                   src={PHOTOS[photo.src as keyof typeof PHOTOS]}
                   alt={photo.label}
@@ -53,7 +53,7 @@ export function GalerieGrid() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
                 <figcaption className="absolute bottom-0 inset-x-0 p-5 flex items-end justify-between gap-3">
                   <span className="text-white text-[0.95rem] font-medium leading-snug">{photo.label}</span>
-                  <span className="glass-pill rounded-full px-3 py-1 font-mono text-[0.6rem] tracking-[0.16em] uppercase text-white/85 shrink-0">
+                  <span className="glass-pill px-3 py-1 font-mono text-[0.6rem] tracking-[0.16em] uppercase text-white/85 shrink-0">
                     {GALERIE_CATEGORIES.find((c) => c.id === photo.cat)?.label ?? photo.cat}
                   </span>
                 </figcaption>

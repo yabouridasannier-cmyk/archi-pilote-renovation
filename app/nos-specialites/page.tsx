@@ -51,7 +51,7 @@ export default function Page() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {STRUCTURE.map((s) => (
-              <Link key={s.href} href={s.href} className="card-e rounded-2xl p-5 group hover:-translate-y-1 transition-transform duration-300">
+              <Link key={s.href} href={s.href} className="card-e rounded-none p-5 group hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="display text-[1.05rem] text-orange group-hover:text-ivoire transition-colors normal-case mb-1">→ {s.titre}</h3>
                 <p className="text-muted text-[0.85rem] leading-relaxed">{s.texte}</p>
               </Link>
@@ -91,7 +91,7 @@ export default function Page() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {SECOND_OEUVRE.map((s) => (
-              <Link key={s.href} href={s.href} className="card-e rounded-2xl p-5 group hover:-translate-y-1 transition-transform duration-300">
+              <Link key={s.href} href={s.href} className="card-e rounded-none p-5 group hover:-translate-y-1 transition-transform duration-300">
                 <h3 className="display text-[1.05rem] text-orange group-hover:text-ivoire transition-colors normal-case mb-1">→ {s.titre}</h3>
                 <p className="text-muted text-[0.85rem] leading-relaxed">{s.texte}</p>
               </Link>
@@ -102,7 +102,7 @@ export default function Page() {
 
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-[42rem] mx-auto">
-          <div className="card-e rounded-2xl p-7">
+          <div className="card-e rounded-none p-7">
             <h2 className="display text-xl text-ivoire normal-case mb-4">Ce que nous cherchons à éviter</h2>
             <ul className="flex flex-col gap-2.5">
               {A_EVITER.map((a) => (

@@ -60,7 +60,7 @@ export default function BaremePage() {
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-3xl mx-auto flex flex-col gap-4">
           {FAQ_BAREME.map((f) => (
-            <div key={f.q} className="card-e rounded-2xl p-6">
+            <div key={f.q} className="card-e rounded-none p-6">
               <h3 className="display text-[1.05rem] text-ivoire normal-case mb-1.5">{f.q}</h3>
               <p className="text-muted text-[0.92rem] leading-relaxed">{f.r}</p>
             </div>

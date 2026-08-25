@@ -28,7 +28,7 @@ export default function Page() {
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-6">
           {CATEGORIES.map((c) => (
-            <div key={c.titre} className="card-e rounded-2xl p-6 flex flex-col gap-2">
+            <div key={c.titre} className="card-e rounded-none p-6 flex flex-col gap-2">
               <h2 className="display text-[1.15rem] text-ivoire normal-case">{c.titre}</h2>
               <p className="text-muted text-[0.92rem] leading-relaxed">{c.texte}</p>
               <p className="font-mono text-[0.7rem] uppercase tracking-wider text-orange mt-1">Premiers cas documentés à venir</p>

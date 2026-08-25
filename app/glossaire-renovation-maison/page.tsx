@@ -31,7 +31,7 @@ export default function Page() {
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-4">
           {TERMES.map((t) => (
-            <div key={t.mot} className="card-e rounded-2xl p-6">
+            <div key={t.mot} className="card-e rounded-none p-6">
               <h3 className="display text-[1.05rem] text-orange normal-case mb-1.5">{t.mot}</h3>
               <p className="text-muted text-[0.9rem] leading-relaxed">{t.def}</p>
             </div>

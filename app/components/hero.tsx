@@ -98,7 +98,7 @@ export function Hero() {
             initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ duration: 1, ease: EASE }}
-            className="glass-pill rounded-full pl-3 pr-4 py-2 flex items-center gap-2.5"
+            className="glass-pill pl-3 pr-4 py-2 flex items-center gap-2.5"
           >
             <span className="relative flex size-2 shrink-0">
               <span className="absolute inline-flex size-full rounded-full bg-orange opacity-70 animate-ping" />
@@ -145,7 +145,7 @@ export function Hero() {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.2, ease: EASE }}>
-              <Link href="/realisations" className="btn btn-ghost">Voir nos chantiers</Link>
+              <Link href="/realisations" className="btn btn-ghost !text-white !border-white/90 hover:!bg-white hover:!text-orange-deep">Voir nos chantiers</Link>
             </motion.div>
           </div>
 

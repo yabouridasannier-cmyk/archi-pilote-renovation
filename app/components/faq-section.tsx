@@ -59,7 +59,7 @@ export function FaqSection() {
                       {item.question}
                     </span>
                     <span
-                      className={`relative size-9 rounded-full border shrink-0 flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+                      className={`relative size-9 border shrink-0 flex items-center justify-center transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
                         open ? "border-orange bg-orange/10 rotate-45" : "border-line-strong group-hover:border-orange/60"
                       }`}
                     >

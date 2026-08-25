@@ -25,7 +25,7 @@ export default function GarantiesPage() {
       <section className="relative pb-16 md:pb-24">
         <div className="container-site grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {GARANTIES.map((g) => (
-            <div key={g.titre} className="card-e rounded-2xl p-7 flex flex-col gap-2">
+            <div key={g.titre} className="card-e rounded-none p-7 flex flex-col gap-2">
               <span className="display text-2xl text-gradient normal-case">{g.duree}</span>
               <h3 className="display text-[1.15rem] text-ivoire normal-case">{g.titre}</h3>
               <p className="text-muted text-[0.9rem] leading-relaxed">{g.texte}</p>

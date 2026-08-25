@@ -42,7 +42,7 @@ export function DevisEstimateur() {
                 <button
                   key={g.id}
                   onClick={() => setGammeId(g.id)}
-                  className={`relative text-left card-e rounded-2xl p-5 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer ${
+                  className={`relative text-left card-e rounded-none p-5 transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] cursor-pointer ${
                     active ? "border-orange/70 bg-orange/[0.06] -translate-y-1" : "hover:-translate-y-1 hover:border-line-strong"
                   }`}
                 >
@@ -52,7 +52,7 @@ export function DevisEstimateur() {
                   </div>
                   <p className="serif-accent text-[0.98rem] text-orange/90 mt-1">{g.accroche}</p>
                   <p className="text-muted text-[0.82rem] mt-1.5 leading-snug">{g.description}</p>
-                  <span className={`absolute top-4 right-4 size-4 rounded-full border-2 transition-all duration-300 ${active ? "border-orange bg-orange shadow-[0_0_0_4px_rgba(169,118,44,0.18)]" : "border-line-strong"}`} />
+                  <span className={`absolute top-4 right-4 size-4 border-2 transition-all duration-300 ${active ? "border-orange bg-orange shadow-[0_0_0_4px_rgba(169,118,44,0.18)]" : "border-line-strong"}`} />
                 </button>
               );
             })}
@@ -60,7 +60,7 @@ export function DevisEstimateur() {
         </div>
 
         {/* Surface */}
-        <div className="card-e rounded-2xl p-6 flex flex-col gap-4">
+        <div className="card-e rounded-none p-6 flex flex-col gap-4">
           <div className="flex items-center justify-between">
             <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">2. Surface du logement</span>
             <span className="display text-2xl text-gradient normal-case">{surface}&nbsp;m²</span>
@@ -81,7 +81,7 @@ export function DevisEstimateur() {
         </div>
 
         {/* Options */}
-        <div className="card-e rounded-2xl p-6 md:p-7">
+        <div className="card-e rounded-none p-6 md:p-7">
           <div className="flex items-center justify-between mb-5">
             <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">3. Montées en gamme à prévoir</span>
             <span className="font-mono text-[0.62rem] tracking-[0.15em] uppercase text-muted">Optionnel</span>
@@ -98,12 +98,12 @@ export function DevisEstimateur() {
                 <button
                   key={p.id}
                   onClick={() => toggle(p.id)}
-                  className={`flex items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition-all duration-300 cursor-pointer ${
+                  className={`flex items-center justify-between gap-3 rounded-none border px-4 py-3 text-left transition-all duration-300 cursor-pointer ${
                     on ? "border-orange/70 bg-orange/[0.08]" : "border-line hover:border-line-strong"
                   }`}
                 >
                   <span className="flex items-center gap-3">
-                    <span className={`size-5 rounded-md border-2 flex items-center justify-center transition-all ${on ? "border-orange bg-orange" : "border-line-strong"}`}>
+                    <span className={`size-5 rounded-none border-2 flex items-center justify-center transition-all ${on ? "border-orange bg-orange" : "border-line-strong"}`}>
                       {on && <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>}
                     </span>
                     <span className="text-[0.92rem] text-ivoire">{p.nom}</span>
@@ -118,7 +118,7 @@ export function DevisEstimateur() {
 
       {/* Ticket estimation */}
       <div className="lg:sticky lg:top-28">
-        <div className="card-e rounded-2xl overflow-hidden">
+        <div className="card-e rounded-none overflow-hidden">
           <div className="herringbone-divider" />
           <div className="p-6 md:p-7 flex flex-col gap-5">
             <div className="flex items-center justify-between">

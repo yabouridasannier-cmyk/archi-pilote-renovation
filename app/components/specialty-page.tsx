@@ -70,7 +70,7 @@ export function SpecialtyPage({
 
       <section className="relative pb-10">
         <div className="container-site max-w-4xl mx-auto">
-          <div className="relative aspect-[16/8] rounded-3xl overflow-hidden card-e">
+          <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
             <img src={PHOTOS[photo]} alt={photoAlt} className="absolute inset-0 size-full object-cover" />
           </div>
         </div>
@@ -90,7 +90,7 @@ export function SpecialtyPage({
       <section className="relative pb-16 md:pb-24">
         <div className="container-site max-w-3xl mx-auto flex flex-col gap-4">
           {FAQ_COMMUNE.map((f) => (
-            <div key={f.q} className="card-e rounded-2xl p-6">
+            <div key={f.q} className="card-e rounded-none p-6">
               <h3 className="display text-[1.05rem] text-ivoire normal-case mb-1.5">{f.q}</h3>
               <p className="text-muted text-[0.92rem] leading-relaxed">{f.r}</p>
             </div>

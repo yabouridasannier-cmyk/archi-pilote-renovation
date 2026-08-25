@@ -72,7 +72,7 @@ export function LocalPage({
                   conditions du projet ; ces éléments sont vérifiés au cas par cas.
                 </p>
               </div>
-              <div className="card-e rounded-2xl p-6">
+              <div className="card-e rounded-none p-6">
                 <h3 className="display text-[1.05rem] text-ivoire normal-case mb-1.5">Preuve locale à ajouter dès qu&apos;elle existe</h3>
                 <p className="text-muted text-[0.9rem] leading-relaxed">
                   Dès le premier projet documenté à {ville} ou à proximité immédiate, un bloc « Projet dans le secteur »
@@ -85,7 +85,7 @@ export function LocalPage({
           <section className="relative pb-20 md:pb-28">
             <div className="container-site max-w-3xl mx-auto flex flex-col gap-4">
               {faq.map((f) => (
-                <div key={f.q} className="card-e rounded-2xl p-6">
+                <div key={f.q} className="card-e rounded-none p-6">
                   <h3 className="display text-[1.05rem] text-ivoire normal-case mb-1.5">{f.q}</h3>
                   <p className="text-muted text-[0.92rem] leading-relaxed">{f.r}</p>
                 </div>
@@ -96,7 +96,7 @@ export function LocalPage({
       ) : (
         <section className="relative pb-20 md:pb-28">
           <div className="container-site max-w-[42rem] mx-auto">
-            <div className="card-e rounded-2xl p-6">
+            <div className="card-e rounded-none p-6">
               <h3 className="display text-[1.05rem] text-ivoire normal-case mb-1.5">Comment une future page ville sera autorisée</h3>
               <p className="text-muted text-[0.9rem] leading-relaxed">{GATING_NOTE}</p>
             </div>

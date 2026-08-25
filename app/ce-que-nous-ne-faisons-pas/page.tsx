@@ -27,7 +27,7 @@ export default function CeQueNousNeFaisonsPasPage() {
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-5">
           {NE_FAIT_PAS.map((item) => (
-            <div key={item.titre} className="card-e rounded-2xl p-6 flex flex-col gap-1.5">
+            <div key={item.titre} className="card-e rounded-none p-6 flex flex-col gap-1.5">
               <h3 className="display text-[1.15rem] text-ivoire normal-case">{item.titre}</h3>
               <p className="text-muted text-[0.95rem] leading-relaxed">{item.texte}</p>
             </div>

@@ -41,7 +41,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       </header>
 
       <Reveal variant="scale" className="container-site mb-14 md:mb-20">
-        <div className="relative aspect-[16/8] rounded-3xl overflow-hidden card-e">
+        <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
           <img src={PHOTOS[article.photo as keyof typeof PHOTOS]} alt={article.titre} className="absolute inset-0 size-full object-cover" />
         </div>
       </Reveal>
@@ -68,7 +68,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             <span className="eyebrow text-center">À lire aussi</span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto w-full">
               {autres.map((a) => (
-                <Link key={a.slug} href={`/blog/${a.slug}`} className="group card-e rounded-2xl overflow-hidden flex flex-col">
+                <Link key={a.slug} href={`/blog/${a.slug}`} className="group card-e rounded-none overflow-hidden flex flex-col">
                   <div className="relative aspect-[16/9] overflow-hidden">
                     <img src={PHOTOS[a.photo as keyof typeof PHOTOS]} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>

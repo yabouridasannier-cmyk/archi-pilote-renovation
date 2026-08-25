@@ -38,7 +38,7 @@ export function ContactContent() {
   return (
     <section className="relative pb-28 md:pb-40">
       <div className="container-site grid grid-cols-1 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-6 lg:gap-8 items-start">
-        <Reveal variant="scale" className="card-e rounded-3xl p-7 md:p-10 overflow-hidden relative">
+        <Reveal variant="scale" className="card-e rounded-none p-7 md:p-10 overflow-hidden relative">
           {!done ? (
             <>
               <div className="flex items-center justify-between mb-8">
@@ -63,7 +63,7 @@ export function ContactContent() {
                       <h2 className="display text-2xl md:text-3xl text-ivoire">Quel est votre projet&nbsp;?</h2>
                       <div className="flex flex-wrap gap-2.5">
                         {PROJETS.map((p) => (
-                          <button key={p} onClick={() => setProjet(p)} className={`rounded-full px-5 py-3 text-[0.92rem] font-medium border transition-all duration-300 cursor-pointer ${projet === p ? "border-orange bg-orange/15 text-orange" : "border-line-strong text-ivoire hover:border-orange/60"}`}>
+                          <button key={p} onClick={() => setProjet(p)} className={`px-5 py-3 text-[0.92rem] font-medium border transition-all duration-300 cursor-pointer ${projet === p ? "border-orange bg-orange/15 text-orange" : "border-line-strong text-ivoire hover:border-orange/60"}`}>
                             {p}
                           </button>
                         ))}
@@ -100,7 +100,7 @@ export function ContactContent() {
             </>
           ) : (
             <motion.div initial={{ opacity: 0, scale: 0.9, filter: "blur(8px)" }} animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }} transition={{ type: "spring", stiffness: 120, damping: 16 }} className="flex flex-col items-center text-center gap-5 py-14">
-              <span className="size-16 rounded-full bg-orange/15 border border-orange/40 flex items-center justify-center">
+              <span className="size-16 bg-orange/15 border border-orange/40 flex items-center justify-center">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c-orange)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
               </span>
               <h2 className="display text-3xl text-ivoire">Demande envoyée&nbsp;!</h2>
@@ -111,7 +111,7 @@ export function ContactContent() {
         </Reveal>
 
         <div className="flex flex-col gap-5">
-          <Reveal variant="slide-up" delay={0.1} className="relative rounded-3xl overflow-hidden card-e h-[15rem] group">
+          <Reveal variant="slide-up" delay={0.1} className="relative rounded-none overflow-hidden card-e h-[15rem] group">
             <img src={PHOTOS.sejourApres} alt="Séjour rénové, chantier piloté par ARCHI PILOTE RÉNOVATION" className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-0 inset-x-0 p-6">
@@ -121,7 +121,7 @@ export function ContactContent() {
           </Reveal>
 
           <Reveal variant="slide-up" delay={0.2}>
-            <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="card-e rounded-3xl p-7 flex flex-col gap-2 group transition-transform duration-500 hover:-translate-y-1.5">
+            <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="card-e rounded-none p-7 flex flex-col gap-2 group transition-transform duration-500 hover:-translate-y-1.5">
               <span className="eyebrow">Par téléphone</span>
               <span className="display text-[1.35rem] text-ivoire group-hover:text-orange transition-colors normal-case">{SITE.telAffiche}</span>
               <span className="text-muted text-[0.85rem]">Du lundi au vendredi, 8h30 – 19h</span>
@@ -129,7 +129,7 @@ export function ContactContent() {
           </Reveal>
 
           <Reveal variant="slide-up" delay={0.3}>
-            <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="card-e rounded-3xl p-7 flex items-center justify-between gap-4 group transition-transform duration-500 hover:-translate-y-1.5">
+            <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="card-e rounded-none p-7 flex items-center justify-between gap-4 group transition-transform duration-500 hover:-translate-y-1.5">
               <div className="flex flex-col gap-1">
                 <span className="eyebrow">Le plus rapide</span>
                 <span className="display text-[1.2rem] text-ivoire group-hover:text-orange transition-colors normal-case">Écrire sur WhatsApp</span>
@@ -142,7 +142,7 @@ export function ContactContent() {
           </Reveal>
 
           <Reveal variant="slide-up" delay={0.4}>
-            <div className="card-e rounded-3xl p-7 flex flex-col gap-3">
+            <div className="card-e rounded-none p-7 flex flex-col gap-3">
               <span className="eyebrow">Ce qui est toujours inclus</span>
               {["Visite technique sous 5 jours", "Devis des entreprises sous 48 h", "Attestations décennales vérifiées"].map((item) => (
                 <div key={item} className="flex items-center gap-3 text-ivoire/85 text-[0.95rem]">

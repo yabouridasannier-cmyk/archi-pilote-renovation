@@ -19,7 +19,7 @@ export default function EtudeDeCasPage() {
 
       <section className="relative pb-6">
         <div className="container-site max-w-4xl mx-auto">
-          <div className="relative aspect-[16/9] rounded-3xl overflow-hidden card-e mb-4">
+          <div className="relative aspect-[16/9] rounded-none overflow-hidden card-e mb-4">
             <img src={PHOTOS.grosOeuvre} alt="Extension de maison en cours de gros œuvre" className="absolute inset-0 size-full object-cover" />
           </div>
           <p className="font-mono text-[0.68rem] tracking-[0.18em] uppercase text-muted text-center">Visuel d&apos;illustration — nouvelle marque, premiers chantiers à venir</p>
@@ -66,7 +66,7 @@ export default function EtudeDeCasPage() {
             </p>
           </div>
 
-          <dl className="card-e rounded-2xl p-6 grid grid-cols-2 gap-4 mt-2">
+          <dl className="card-e rounded-none p-6 grid grid-cols-2 gap-4 mt-2">
             <div><dt className="font-mono text-[0.66rem] uppercase tracking-wider text-muted">Surface créée</dt><dd className="text-ivoire">28 m²</dd></div>
             <div><dt className="font-mono text-[0.66rem] uppercase tracking-wider text-muted">Autorisation</dt><dd className="text-ivoire">Déclaration préalable</dd></div>
             <div><dt className="font-mono text-[0.66rem] uppercase tracking-wider text-muted">Durée de chantier</dt><dd className="text-ivoire">9 semaines</dd></div>

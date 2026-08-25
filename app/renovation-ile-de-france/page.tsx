@@ -28,7 +28,7 @@ export default function Page() {
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
           {DEPARTEMENTS.map((d) => (
-            <Link key={d.nom} href={d.href} className="card-e rounded-2xl p-6 flex flex-col gap-2 group hover:-translate-y-1 transition-transform duration-300">
+            <Link key={d.nom} href={d.href} className="card-e rounded-none p-6 flex flex-col gap-2 group hover:-translate-y-1 transition-transform duration-300">
               <h2 className="display text-[1.15rem] text-ivoire group-hover:text-orange transition-colors normal-case">{d.nom}</h2>
               <p className="text-muted text-[0.9rem] leading-relaxed">{d.texte}</p>
             </Link>

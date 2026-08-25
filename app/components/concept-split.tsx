@@ -59,17 +59,17 @@ export function ConceptSplit() {
           </div>
 
           <div className="w-full lg:w-[55%] relative h-[26rem] md:h-[34rem] xl:h-[38rem]">
-            <motion.div style={{ y: yBack }} className="absolute top-0 right-0 w-[72%] h-[84%] rounded-2xl overflow-hidden card-e">
+            <motion.div style={{ y: yBack }} className="absolute top-0 right-0 w-[72%] h-[84%] rounded-none overflow-hidden card-e">
               <img src={PHOTOS.chantierRenovation} alt="Chantier de rénovation en cours dans un pavillon francilien" className="size-full object-cover" loading="lazy" />
-              <span className="absolute top-3 right-3 glass-pill rounded-full px-3 py-1.5 text-[0.72rem] font-medium text-white/90">Chantier en cours</span>
+              <span className="absolute top-3 right-3 glass-pill px-3 py-1.5 text-[0.72rem] font-medium text-white/90">Chantier en cours</span>
             </motion.div>
-            <motion.div style={{ y: yFront }} className="absolute bottom-0 left-0 w-[52%] h-[58%] rounded-2xl overflow-hidden card-e z-10">
+            <motion.div style={{ y: yFront }} className="absolute bottom-0 left-0 w-[52%] h-[58%] rounded-none overflow-hidden card-e z-10">
               <img src={PHOTOS.detailParquet} alt="Détail de parquet point de Hongrie posé" className="size-full object-cover" loading="lazy" />
-              <span className="absolute bottom-3 left-3 glass-pill rounded-full px-3 py-1.5 text-[0.72rem] font-medium text-white/90">Parquet point de Hongrie</span>
+              <span className="absolute bottom-3 left-3 glass-pill px-3 py-1.5 text-[0.72rem] font-medium text-white/90">Parquet point de Hongrie</span>
             </motion.div>
 
             <Reveal variant="scale" delay={0.4} className="absolute -bottom-5 right-6 md:right-14 z-20">
-              <div className="card-e rounded-2xl px-5 py-4 flex items-center gap-4">
+              <div className="card-e rounded-none px-5 py-4 flex items-center gap-4">
                 <span className="display text-3xl text-gradient leading-none">48h</span>
                 <span className="text-[0.82rem] text-muted leading-tight">pour les devis<br />des entreprises</span>
               </div>

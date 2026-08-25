@@ -33,11 +33,11 @@ export function ThemeSwitcher() {
             animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
             exit={{ opacity: 0, y: 10, scale: 0.95, filter: "blur(6px)" }}
             transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="card-e rounded-2xl p-3 flex flex-col gap-1.5"
+            className="card-e rounded-none p-3 flex flex-col gap-1.5"
           >
             <span className="font-mono text-[0.6rem] tracking-[0.22em] uppercase text-muted px-2 pt-1">Ambiance</span>
             {THEMES.map((t) => (
-              <button key={t.id} onClick={() => apply(t.id)} className={`flex items-center gap-3 px-3 py-2 rounded-xl transition-colors ${theme === t.id ? "bg-surface-2" : "hover:bg-surface-2/60"}`}>
+              <button key={t.id} onClick={() => apply(t.id)} className={`flex items-center gap-3 px-3 py-2 rounded-none transition-colors ${theme === t.id ? "bg-surface-2" : "hover:bg-surface-2/60"}`}>
                 <span className="size-5 rounded-full border border-line-strong shrink-0" style={{ background: `linear-gradient(135deg, ${t.bg} 55%, ${t.dot} 55%)` }} />
                 <span className="text-sm text-ivoire">{t.label}</span>
                 {theme === t.id && <span className="size-1.5 rounded-full bg-orange ml-auto" />}

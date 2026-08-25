@@ -23,7 +23,7 @@ export default function Page() {
       <section className="relative pb-20 md:pb-28">
         <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-5">
           {PARTENAIRES.map((p) => (
-            <div key={p.role} className="card-e rounded-2xl p-7 flex flex-col gap-2">
+            <div key={p.role} className="card-e rounded-none p-7 flex flex-col gap-2">
               <h2 className="display text-[1.2rem] text-ivoire normal-case">{p.role}</h2>
               <p className="text-muted text-[0.95rem] leading-relaxed">{p.texte}</p>
             </div>

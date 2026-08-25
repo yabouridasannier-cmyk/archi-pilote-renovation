@@ -67,7 +67,7 @@ export function AvantApres({
   const comparateur = (
     <div
       ref={frameRef}
-      className="ba-handle relative w-full aspect-[16/11] md:aspect-[16/9] rounded-3xl overflow-hidden card-e select-none"
+      className="ba-handle relative w-full aspect-[16/11] md:aspect-[16/9] rounded-none overflow-hidden card-e select-none"
       onPointerDown={(e) => {
         (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
         setDragging(true);
@@ -89,10 +89,10 @@ export function AvantApres({
       </div>
 
       {/* Labels */}
-      <span className="absolute top-4 left-4 glass-pill rounded-full px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
+      <span className="absolute top-4 left-4 glass-pill px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
         {avantLabel}
       </span>
-      <span className="absolute top-4 right-4 glass-pill rounded-full px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
+      <span className="absolute top-4 right-4 glass-pill px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
         {apresLabel}
       </span>
 

@@ -18,7 +18,7 @@ export function ServicesGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {SERVICES.map((m, i) => (
             <Reveal key={m.slug} variant="slide-up" delay={i * 0.08} className="h-full">
-              <article id={m.slug} className="group relative card-e rounded-3xl overflow-hidden h-[22rem] md:h-[25rem] flex flex-col justify-end scroll-mt-32">
+              <article id={m.slug} className="group relative card-e rounded-none overflow-hidden h-[22rem] md:h-[25rem] flex flex-col justify-end scroll-mt-32">
                 <img src={PHOTOS[m.photo as keyof typeof PHOTOS]} alt={m.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent transition-opacity duration-500" />
                 <span aria-hidden className="absolute top-5 right-6 font-serif text-5xl md:text-6xl leading-none text-white/25 group-hover:text-orange/70 transition-colors duration-500" style={{ fontFamily: "var(--font-serif)" }}>{m.marque}</span>

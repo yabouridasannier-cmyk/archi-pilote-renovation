@@ -56,7 +56,7 @@ export function Nav() {
         <div
           className={`mx-auto transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
             scrolled
-              ? "mt-3 w-[min(100%-1.5rem,68rem)] rounded-full glass-pill shadow-[0_18px_50px_-24px_rgba(32,33,29,0.25)]"
+              ? "mt-3 w-[min(100%-1.5rem,68rem)] glass-pill shadow-[0_18px_50px_-24px_rgba(32,33,29,0.25)]"
               : "mt-0 w-full glass-pill !rounded-none border-x-0 border-t-0"
           }`}
         >
@@ -94,9 +94,9 @@ export function Nav() {
                         transition={{ duration: 0.22 }}
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[19rem]"
                       >
-                        <div className="card-e rounded-2xl p-2 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)]">
+                        <div className="card-e rounded-none p-2 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)]">
                           {SERVICES.map((s) => (
-                            <Link key={s.slug} href={SERVICES_LINKS[s.slug] ?? `/services#${s.slug}`} className="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-surface-2 transition-colors group">
+                            <Link key={s.slug} href={SERVICES_LINKS[s.slug] ?? `/services#${s.slug}`} className="flex items-center gap-3 rounded-none px-3 py-2.5 hover:bg-surface-2 transition-colors group">
                               <span className="font-serif italic text-orange/80 text-[0.9rem] w-4 shrink-0">{s.marque}</span>
                               <span className="text-ivoire/90 text-[0.88rem] group-hover:text-orange transition-colors">{s.titre}</span>
                             </Link>
@@ -113,9 +113,9 @@ export function Nav() {
                         transition={{ duration: 0.22 }}
                         className="absolute top-full left-1/2 -translate-x-1/2 pt-3 w-[20rem]"
                       >
-                        <div className="card-e rounded-2xl p-2 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)]">
+                        <div className="card-e rounded-none p-2 shadow-[0_24px_60px_-20px_rgba(0,0,0,0.5)]">
                           {REALISATIONS_LINKS.map((r) => (
-                            <Link key={r.href} href={r.href} className="flex items-center gap-3 rounded-xl px-3 py-2.5 hover:bg-surface-2 transition-colors group">
+                            <Link key={r.href} href={r.href} className="flex items-center gap-3 rounded-none px-3 py-2.5 hover:bg-surface-2 transition-colors group">
                               <span className="text-ivoire/90 text-[0.88rem] group-hover:text-orange transition-colors">{r.label}</span>
                             </Link>
                           ))}
@@ -128,7 +128,7 @@ export function Nav() {
             </nav>
 
             <div className="flex items-center gap-3">
-              <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="hidden xl:inline-flex font-mono text-[0.8rem] text-muted hover:text-ivoire transition-colors">
+              <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="hidden xl:inline-flex whitespace-nowrap font-mono text-[0.8rem] text-muted hover:text-ivoire transition-colors">
                 {SITE.telAffiche}
               </a>
               <Link href="/contact" className="btn btn-primary !hidden md:!inline-flex !py-2.5 !px-5 text-sm">
@@ -137,7 +137,7 @@ export function Nav() {
               <button
                 onClick={() => setOpen(!open)}
                 aria-label="Menu"
-                className="xl:hidden relative size-10 rounded-full glass-pill flex items-center justify-center"
+                className="xl:hidden relative size-10 glass-pill flex items-center justify-center"
               >
                 <div className="flex flex-col gap-1.5">
                   <span className={`block h-[1.5px] w-5 bg-ivoire transition-all duration-400 ${open ? "rotate-45 translate-y-[3.5px]" : ""}`} />
@@ -156,7 +156,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             exit={{ opacity: 0, y: -12, filter: "blur(8px)" }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed z-40 top-20 inset-x-3 rounded-2xl card-e p-6 xl:hidden max-h-[80vh] overflow-y-auto"
+            className="fixed z-40 top-20 inset-x-3 rounded-none card-e p-6 xl:hidden max-h-[80vh] overflow-y-auto"
           >
             <nav className="flex flex-col gap-1">
               {LINKS.map((link, i) => (

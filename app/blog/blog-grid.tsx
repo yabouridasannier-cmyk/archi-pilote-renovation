@@ -13,11 +13,11 @@ export function BlogGrid() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {ARTICLES.map((a, i) => (
             <Reveal key={a.slug} variant="slide-up" delay={(i % 3) * 0.08}>
-              <Link href={`/blog/${a.slug}`} className="group card-e rounded-2xl overflow-hidden flex flex-col h-full block">
+              <Link href={`/blog/${a.slug}`} className="group card-e rounded-none overflow-hidden flex flex-col h-full block">
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img src={PHOTOS[a.photo as keyof typeof PHOTOS]} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 glass-pill rounded-full px-3 py-1 font-mono text-[0.62rem] tracking-[0.14em] uppercase text-white/90">{a.categorie}</span>
+                  <span className="absolute top-3 left-3 glass-pill px-3 py-1 font-mono text-[0.62rem] tracking-[0.14em] uppercase text-white/90">{a.categorie}</span>
                 </div>
                 <div className="flex flex-col gap-2.5 p-6 flex-1">
                   <span className="font-mono text-[0.7rem] text-muted">{a.date}</span>
