@@ -69,7 +69,7 @@ export function Nav() {
               </div>
             </Link>
 
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden xl:flex items-center gap-1">
               {LINKS.map((link) => (
                 <div
                   key={link.href}
@@ -80,7 +80,7 @@ export function Nav() {
                   <Link
                     href={link.href}
                     data-active={pathname === link.href}
-                    className={`nav-link text-[0.9rem] font-medium px-2.5 py-2 inline-block ${pathname === link.href ? "text-ivoire" : "text-muted hover:text-ivoire"}`}
+                    className={`nav-link text-[0.9rem] font-medium px-2.5 py-2 inline-block whitespace-nowrap ${pathname === link.href ? "text-ivoire" : "text-muted hover:text-ivoire"}`}
                   >
                     {link.label}
                   </Link>
@@ -137,7 +137,7 @@ export function Nav() {
               <button
                 onClick={() => setOpen(!open)}
                 aria-label="Menu"
-                className="lg:hidden relative size-10 rounded-full glass-pill flex items-center justify-center"
+                className="xl:hidden relative size-10 rounded-full glass-pill flex items-center justify-center"
               >
                 <div className="flex flex-col gap-1.5">
                   <span className={`block h-[1.5px] w-5 bg-ivoire transition-all duration-400 ${open ? "rotate-45 translate-y-[3.5px]" : ""}`} />
@@ -156,7 +156,7 @@ export function Nav() {
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
             exit={{ opacity: 0, y: -12, filter: "blur(8px)" }}
             transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed z-40 top-20 inset-x-3 rounded-2xl card-e p-6 lg:hidden max-h-[80vh] overflow-y-auto"
+            className="fixed z-40 top-20 inset-x-3 rounded-2xl card-e p-6 xl:hidden max-h-[80vh] overflow-y-auto"
           >
             <nav className="flex flex-col gap-1">
               {LINKS.map((link, i) => (

@@ -22,7 +22,7 @@ type WordRevealProps = {
 const EASE = [0.25, 0.1, 0.25, 1] as const;
 
 /**
- * Titre révélé mot par mot — y:100% + blur -> net.
+ * Titre révélé mot par mot — translation verticale, sans flou.
  * Les segments peuvent être en serif italique et/ou en dégradé or->orange.
  */
 export function WordReveal({
@@ -60,10 +60,10 @@ export function WordReveal({
               .filter(Boolean)
               .join(" ")}
             variants={{
-              hidden: { opacity: 0, y: "60%", filter: "blur(10px)" },
-              visible: { opacity: 1, y: 0, filter: "blur(0px)" },
+              hidden: { opacity: 0, y: "60%" },
+              visible: { opacity: 1, y: 0 },
             }}
-            transition={{ duration: 0.9, ease: EASE }}
+            transition={{ duration: 0.7, ease: EASE }}
           >
             {word}
           </motion.span>
