@@ -92,7 +92,7 @@ export function Footer() {
 
             <div className="hr-fade mb-6" />
             <p className="text-white/30 text-[0.76rem] leading-relaxed max-w-3xl mb-4">
-              {SITE.structure} ARCHI PILOTE RÉNOVATION n&apos;est pas une entreprise de travaux, n&apos;exécute aucun lot et ne facture aucun
+              {SITE.structure}{" "}ARCHI PILOTE RÉNOVATION n&apos;est pas une entreprise de travaux, n&apos;exécute aucun lot et ne facture aucun
               travaux. Les travaux sont réalisés et facturés par des entreprises partenaires indépendantes, chacune
               titulaire de ses propres assurances de responsabilité civile professionnelle et de garantie décennale.
             </p>
