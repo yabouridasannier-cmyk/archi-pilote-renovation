@@ -131,7 +131,7 @@ export function Nav() {
               <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="hidden xl:inline-flex font-mono text-[0.8rem] text-muted hover:text-ivoire transition-colors">
                 {SITE.telAffiche}
               </a>
-              <Link href="/contact" className="btn btn-primary hidden md:inline-flex !py-2.5 !px-5 text-sm">
+              <Link href="/contact" className="btn btn-primary !hidden md:!inline-flex !py-2.5 !px-5 text-sm">
                 Étudier mon projet
               </Link>
               <button
