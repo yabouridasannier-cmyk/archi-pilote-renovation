@@ -42,7 +42,7 @@ export function Footer() {
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-10 md:gap-8">
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Navigation</span>
                   <Link href="/" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Accueil</Link>
@@ -78,7 +78,7 @@ export function Footer() {
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Contact</span>
                   <span className="text-white/70 text-[0.95rem]">{SITE.zone}</span>
                   <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">{SITE.telAffiche}</a>
-                  <a href={`mailto:${SITE.email}`} className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">{SITE.email}</a>
+                  <a href={`mailto:${SITE.email}`} className="text-white/70 hover:text-orange transition-colors text-[0.82rem] break-all">{SITE.email}</a>
                   <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="text-white/70 hover:text-[#25d366] transition-colors text-[0.95rem]">WhatsApp</a>
                 </div>
               </div>

@@ -20,7 +20,7 @@ export default function Page() {
         lead="Nouvelle marque : les visuels ci-dessous sont des illustrations, clairement signalées. Chaque vrai chantier comportera commune, contrainte technique, lots et durée observée."
       />
       <AvantApres
-        titre="Le même volume"
+        titre="L'ampleur d'une transformation"
         texte={sejour.texte}
         avant={PHOTOS[sejour.avant as keyof typeof PHOTOS]}
         apres={PHOTOS[sejour.apres as keyof typeof PHOTOS]}

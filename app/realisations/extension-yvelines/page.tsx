@@ -6,6 +6,7 @@ import { PHOTOS } from "../../lib-photos";
 export const metadata: Metadata = {
   title: "Extension de plain-pied, Yvelines — 28 m² gagnés | ARCHI PILOTE RÉNOVATION",
   description: "Extension de 28 m² sur un jardin en pente : emprise au sol contrainte par le PLU, vide sanitaire ventilé, raccordement de niveau avec le séjour existant.",
+  robots: { index: false, follow: true },
 };
 
 export default function EtudeDeCasPage() {

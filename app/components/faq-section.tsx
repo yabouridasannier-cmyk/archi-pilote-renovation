@@ -52,7 +52,7 @@ export function FaqSection() {
                     aria-expanded={open}
                   >
                     <span
-                      className={`text-[1.05rem] md:text-[1.15rem] font-medium transition-colors duration-300 ${
+                      className={`flex-1 min-w-0 text-[1.05rem] md:text-[1.15rem] font-medium transition-colors duration-300 ${
                         open ? "text-orange" : "text-ivoire group-hover:text-orange/80"
                       }`}
                     >

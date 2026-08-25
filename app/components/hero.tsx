@@ -119,7 +119,7 @@ export function Hero() {
               { text: "Rénovation tous corps d'état," },
               { text: "du gros œuvre aux finitions.", serif: true, gradient: true },
             ]}
-            className="display text-[clamp(2.5rem,7.6vw,6.4rem)] leading-[1.04] sm:leading-[1.02] tracking-[-0.01em] text-white text-balance max-w-6xl"
+            className="hero-title display text-[clamp(2.5rem,7.6vw,6.4rem)] leading-[1.04] sm:leading-[1.02] tracking-[-0.01em] text-white text-balance max-w-6xl"
           />
 
           <motion.p

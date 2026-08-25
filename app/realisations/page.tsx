@@ -22,7 +22,7 @@ export default function RealisationsPage() {
         lead="ARCHI PILOTE RÉNOVATION démarre : les visuels ci-dessous illustrent le niveau de finition visé. Vos vrais chantiers viendront remplacer cette galerie, projet après projet."
       />
       <AvantApres
-        titre="Le même séjour"
+        titre="L'ampleur d'une transformation"
         texte={sejour.texte}
         avant={PHOTOS[sejour.avant as keyof typeof PHOTOS]}
         apres={PHOTOS[sejour.apres as keyof typeof PHOTOS]}

@@ -123,7 +123,7 @@ export const MARQUEE_ITEMS = ["Second œuvre", "Cuisine sur-mesure", "Salle de b
    Territoire maison/pavillon : plus de vocabulaire "appartement" ni
    "haussmannien", qui appartient au territoire d'ARCHI RENOV. */
 export const AVANT_APRES = [
-  { id: "sejour", titre: "Le même volume, un chantier piloté", avantLabel: "Avant — pavillon à rénover", apresLabel: "Après — séjour rénové", avant: "sejourAvant", apres: "sejourApres", texte: "Une pièce retrouve sa cohérence : cloisons reprises, réseaux refaits, sols et finitions posés dans le bon ordre. L'ordre est ce qui coûte le moins cher et ce qu'on rate le plus souvent." },
+  { id: "sejour", titre: "L'ampleur d'une transformation", avantLabel: "Avant — illustration (autre bien)", apresLabel: "Après — illustration (autre bien)", avant: "sejourAvant", apres: "sejourApres", texte: "Deux intérieurs d'illustration, pas un même chantier : ils montrent l'ampleur qu'un projet piloté peut viser. Cloisons, réseaux, sols et finitions se décident dans le bon ordre — c'est ce qui coûte le moins cher et ce qu'on rate le plus souvent." },
 ];
 
 /* Articles de blog — contenu ORIGINAL écrit pour ARCHI PILOTE RÉNOVATION, territoire maison/pavillon. */
@@ -175,19 +175,21 @@ export const ARTICLES: Article[] = [
    photographié). Réduite à 6 visuels et légendée en langage de matière plutôt
    qu'en langage de projet, pour ne jamais affirmer une réalisation qui n'existe
    pas (cf. audit T3 §3.2). Catégorie "appartement" supprimée : hors territoire. */
-export type Categorie = "cuisine" | "sdb" | "sejour" | "chantier";
+export type Categorie = "cuisine" | "sdb" | "sejour" | "chambre";
 export const GALERIE_CATEGORIES: { id: Categorie; label: string }[] = [
   { id: "sejour", label: "Séjour" },
   { id: "cuisine", label: "Cuisine" },
   { id: "sdb", label: "Salle de bain" },
-  { id: "chantier", label: "Chantier en cours" },
+  { id: "chambre", label: "Chambre" },
 ];
 
+/* Catégorie "chantier" supprimée : elle n'était remplie que de banque d'images,
+   ce qui revient à prétendre montrer un chantier (interdit, dossier V3 §3.1). */
 export const GALERIE = [
   { src: "refSalonBalconRue", label: "Séjour rénové, niveau de finition visé", cat: "sejour", portrait: false },
   { src: "refCuisineSejour", label: "Cuisine ouverte, plan de travail marbré", cat: "cuisine", portrait: false },
   { src: "refSalleBainMarbreNoir", label: "Salle d'eau marbre, douche et double vasque", cat: "sdb", portrait: true },
   { src: "refSalleBainMarbreClair", label: "Salle de bain, baignoire et faïence marbrée", cat: "sdb", portrait: true },
-  { src: "chantierCuisineProtection", label: "Protections de chantier en site occupé", cat: "chantier", portrait: false },
-  { src: "chantierIsolation", label: "Isolation des combles avant doublage", cat: "chantier", portrait: false },
+  { src: "refChambreTeteLitVelours", label: "Chambre, tête de lit velours et appliques", cat: "chambre", portrait: true },
+  { src: "refChambreDoreeJaune", label: "Chambre aux tons dorés, niveau de finition visé", cat: "chambre", portrait: true },
 ] as const;

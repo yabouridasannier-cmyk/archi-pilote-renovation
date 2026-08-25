@@ -91,8 +91,8 @@ export function ContactContent() {
               </AnimatePresence>
 
               <div className="flex items-center justify-between mt-8">
-                <button onClick={() => go(Math.max(0, step - 1))} className={`btn btn-ghost !py-2.5 !px-5 text-sm ${step === 0 ? "invisible" : ""}`}>Retour</button>
-                <button onClick={() => (step === 2 ? setDone(true) : go(step + 1))} disabled={!canNext} className={`btn btn-primary !py-2.5 !px-6 text-sm ${!canNext ? "opacity-40 pointer-events-none" : ""}`}>
+                <button onClick={() => go(Math.max(0, step - 1))} className={`btn btn-ghost !py-2.5 !px-3.5 sm:!px-5 text-sm ${step === 0 ? "invisible" : ""}`}>Retour</button>
+                <button onClick={() => (step === 2 ? setDone(true) : go(step + 1))} disabled={!canNext} className={`btn btn-primary !py-2.5 !px-3.5 sm:!px-6 text-sm ${!canNext ? "opacity-40 pointer-events-none" : ""}`}>
                   {step === 2 ? "Envoyer ma demande" : "Continuer"}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </button>
@@ -112,7 +112,7 @@ export function ContactContent() {
 
         <div className="flex flex-col gap-5">
           <Reveal variant="slide-up" delay={0.1} className="relative rounded-none overflow-hidden card-e h-[15rem] group">
-            <img src={PHOTOS.sejourApres} alt="Séjour rénové, chantier piloté par ARCHI PILOTE RÉNOVATION" className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            <img src={PHOTOS.sejourApres} alt="Séjour lumineux au mobilier clair — visuel d'illustration" className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-0 inset-x-0 p-6">
               <span className="text-white/90 text-lg font-medium">{SITE.zone}</span>

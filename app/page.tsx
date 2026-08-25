@@ -22,7 +22,7 @@ export default function Home() {
       <StatsBand />
       <ConceptSplit />
       <AvantApres
-        titre="Le même séjour"
+        titre="L'ampleur d'une transformation"
         texte={sejour.texte}
         avant={PHOTOS[sejour.avant as keyof typeof PHOTOS]}
         apres={PHOTOS[sejour.apres as keyof typeof PHOTOS]}
