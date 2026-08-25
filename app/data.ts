@@ -12,10 +12,10 @@ export const SITE = {
   baseline: "Rénovation tous corps d'état — Île-de-France",
   zone: "Île-de-France",
   structure: "ARCHI PILOTE RÉNOVATION est une marque exploitée par IA RENOV (SASU), RCS 889 976 387 Nanterre, 8 rue Gabriel Péri, 92250 La Garenne-Colombes.",
-  tel: "+33 1 84 60 00 00", // à remplacer par le vrai numéro ARCHI PILOTE RÉNOVATION avant mise en ligne — distinct du numéro ARCHI RENOV
-  telAffiche: "01 84 60 00 00",
-  whatsapp: "https://wa.me/33184600000",
-  email: "contact@archipiloterenovation.fr", // illustratif, à confirmer
+  tel: "+33 6 52 79 80 89",
+  telAffiche: "06 52 79 80 89",
+  whatsapp: "https://wa.me/33652798089", // même numéro que le tel — à confirmer si un numéro WhatsApp distinct existe
+  email: "archipiloterenovation@gmail.com",
   horaires: [
     { jours: "Lundi — Vendredi", heures: "08h30 – 19h00" },
     { jours: "Samedi", heures: "Sur rendez-vous" },
