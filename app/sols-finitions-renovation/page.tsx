@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/sols-finitions-renovation" },
   title: "Sols et finitions | ARCHI PILOTE RÉNOVATION",
   description: "Parquet, carrelage, béton ciré ou peinture ne compensent pas un support instable, humide ou mal préparé.",
 };

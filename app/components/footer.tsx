@@ -60,7 +60,7 @@ export function Footer() {
                 </div>
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Confiance</span>
-                  <Link href="/notre-modele" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Notre modèle</Link>
+                  <Link href="/modele-economique-transparence" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Notre modèle</Link>
                   <Link href="/garanties-assurances" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Garanties</Link>
                   <Link href="/notre-methode" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Notre méthode</Link>
                   <Link href="/ce-que-nous-ne-faisons-pas" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Ce que nous ne faisons pas</Link>

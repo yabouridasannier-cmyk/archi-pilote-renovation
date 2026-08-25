@@ -3,6 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/garanties-assurances" },
   title: "Garanties travaux : décennale, biennale, parfait achèvement — ARCHI PILOTE RÉNOVATION",
   description: "Qui garantit quoi, pendant combien de temps, et comment vérifier une attestation d'assurance décennale avant le début des travaux.",
 };

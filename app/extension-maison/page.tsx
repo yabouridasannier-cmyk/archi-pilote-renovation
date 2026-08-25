@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/extension-maison" },
   title: "Extension de maison en Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Une extension modifie surface, enveloppe, structure et parfois fiscalité ou autorisations. Le projet doit être cadré avant les devis.",
 };
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
-      slug="/extension-maison-ile-de-france"
+      slug="/extension-maison"
       eyebrow="Gros œuvre"
       segments={[{ text: "Extension de maison :" }, { text: "cadrer avant de construire.", serif: true, gradient: true }]}
       lead="Une extension modifie surface, enveloppe, structure et parfois fiscalité ou autorisations. Le projet doit être cadré avant les devis."

@@ -3,6 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { ContactContent } from "./contact-content";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/contact" },
   title: "Contact — ARCHI PILOTE RÉNOVATION",
   description:
     "Racontez-nous votre projet de rénovation de maison : visite technique gratuite, devis des entreprises sous 48 h.",

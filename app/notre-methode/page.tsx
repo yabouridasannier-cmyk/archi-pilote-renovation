@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import { PageHeader } from "../components/page-header";
 import { ProcessTimeline } from "../components/process-timeline";
 import { CtaFinal } from "../components/cta-final";
+import { FaqSection } from "../components/faq-section";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/notre-methode" },
   title: "Notre méthode de pilotage de travaux, étape par étape — ARCHI PILOTE RÉNOVATION",
   description: "Premier échange, visite technique, devis des entreprises, chantier piloté, réception. Les cinq étapes d'un projet piloté par ARCHI PILOTE RÉNOVATION.",
 };
@@ -13,7 +15,7 @@ export default function NotreMethodePage() {
     <main className="relative z-10 bg-carbone">
       <PageHeader
         eyebrow="Notre méthode"
-        segments={[{ text: "Un pilote de projet," }, { text: "jamais un standard.", serif: true, gradient: true }]}
+        segments={[{ text: "Notre méthode de pilotage," }, { text: "étape par étape.", serif: true, gradient: true }]}
         lead="Une rénovation échoue rarement sur les travaux eux-mêmes — elle échoue sur l'enchaînement des lots. Un seul pilote suit votre chantier du diagnostic à la réception."
       />
       <ProcessTimeline />
@@ -38,6 +40,7 @@ export default function NotreMethodePage() {
         </div>
       </section>
 
+      <FaqSection />
       <CtaFinal />
     </main>
   );

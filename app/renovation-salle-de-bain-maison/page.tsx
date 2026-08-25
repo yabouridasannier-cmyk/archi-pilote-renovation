@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-salle-de-bain-maison" },
   title: "Rénovation de salle de bain | ARCHI PILOTE RÉNOVATION",
   description: "Une salle de bain durable dépend du support, de l'étanchéité, des pentes, de la ventilation et des réseaux plus que du style du carrelage.",
 };

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/electricite-plomberie-renovation" },
   title: "Électricité et plomberie en rénovation | ARCHI PILOTE RÉNOVATION",
   description: "Les réseaux cachés sont difficiles à corriger après doublages, carrelage et peinture. Ils doivent être documentés avant fermeture.",
 };

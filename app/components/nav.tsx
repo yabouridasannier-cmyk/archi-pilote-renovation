@@ -18,7 +18,7 @@ const LINKS = [
 const REALISATIONS_LINKS = [
   { href: "/realisations/pavillon-annees-30-hauts-de-seine/", label: "Pavillon des années 30, Hauts-de-Seine" },
   { href: "/realisations/extension-yvelines/", label: "Extension de plain-pied, Yvelines" },
-  { href: "/realisations", label: "Toutes nos réalisations" },
+  { href: "/realisations", label: "Notre niveau de finition" },
 ];
 
 const SERVICES_LINKS: Record<string, string> = {
@@ -26,8 +26,8 @@ const SERVICES_LINKS: Record<string, string> = {
   "cuisine-sur-mesure": "/renovation-cuisine-maison",
   "salle-de-bain": "/renovation-salle-de-bain-maison",
   "beton-cire": "/sols-finitions-renovation",
-  "isolation-dpe": "/renovation-energetique-maison",
-  "gros-oeuvre": "/renovation-complete-maison",
+  "isolation-dpe": "/renovation-energetique",
+  "gros-oeuvre": "/renovation-complete",
 };
 
 export function Nav() {

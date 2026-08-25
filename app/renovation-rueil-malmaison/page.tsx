@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { LocalPage } from "../components/local-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-rueil-malmaison" },
+  // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
+  robots: { index: false, follow: true },
   title: "Rénovation à Rueil-Malmaison : maison et rénovation complète | ARCHI PILOTE",
   description: "Projet de rénovation à Rueil-Malmaison : rénovation complète, structure, maison, appartement et lots techniques selon le bien. Étude et pilotage par ARCHI PILOTE RÉNOVATION.",
 };

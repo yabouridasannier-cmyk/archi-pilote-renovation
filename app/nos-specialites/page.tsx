@@ -4,14 +4,15 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/nos-specialites" },
   title: "Nos spécialités rénovation en Île-de-France | ARCHI PILOTE",
   description: "Maison, appartement, structure, extension, surélévation, énergie, salle de bain, cuisine et lots techniques : découvrez les spécialités pilotées par ARCHI PILOTE RÉNOVATION.",
 };
 
 const STRUCTURE = [
   { titre: "Ouverture de mur porteur", href: "/ouverture-mur-porteur", texte: "Comprendre la structure avant de démolir : sondages, étude adaptée, appuis, étaiement, exécution et finitions." },
-  { titre: "Extension de maison", href: "/extension-maison-ile-de-france", texte: "Vérifier urbanisme, structure, fondations, réseaux, raccords de toiture et interface avec l'existant avant de figer le budget." },
-  { titre: "Surélévation", href: "/surelevation-maison-ile-de-france", texte: "Étudier la capacité de l'existant, les contraintes de hauteur, les fondations, le poids ajouté et le phasage." },
+  { titre: "Extension de maison", href: "/extension-maison", texte: "Vérifier urbanisme, structure, fondations, réseaux, raccords de toiture et interface avec l'existant avant de figer le budget." },
+  { titre: "Surélévation", href: "/surelevation", texte: "Étudier la capacité de l'existant, les contraintes de hauteur, les fondations, le poids ajouté et le phasage." },
   { titre: "Toiture et charpente", href: "/renovation-toiture-charpente", texte: "Distinguer réparation, traitement, reprise localisée ou remplacement, en intégrant zinguerie, isolation et ventilation." },
 ];
 
@@ -19,7 +20,7 @@ const SECOND_OEUVRE = [
   { titre: "Salle de bain", href: "/renovation-salle-de-bain-maison", texte: "Étanchéité, ventilation, supports, pentes, réseaux, équipements et maintenance future." },
   { titre: "Cuisine", href: "/renovation-cuisine-maison", texte: "Implantation, évacuations, alimentation électrique, ventilation, commandes et intégration du sur-mesure." },
   { titre: "Électricité et plomberie", href: "/electricite-plomberie-renovation", texte: "Réseaux, tableau, circuits, attentes, alimentations, évacuations et documentation avant fermeture." },
-  { titre: "Rénovation énergétique", href: "/renovation-energetique-maison", texte: "Isolation, ventilation et chauffage arbitrés ensemble plutôt qu'en additionnant des équipements." },
+  { titre: "Rénovation énergétique", href: "/renovation-energetique", texte: "Isolation, ventilation et chauffage arbitrés ensemble plutôt qu'en additionnant des équipements." },
   { titre: "Sols et finitions", href: "/sols-finitions-renovation", texte: "Support, humidité, planéité, préparation et compatibilité des systèmes conditionnent le résultat final." },
 ];
 

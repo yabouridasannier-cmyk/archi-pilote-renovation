@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { LocalPage } from "../components/local-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-complexe-paris" },
+  // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
+  robots: { index: false, follow: true },
   title: "Rénovation complexe à Paris : copropriété, structure et réseaux | ARCHI PILOTE",
   description: "Rénovation complète, structure, maison, appartement et projets complexes en Paris. ARCHI PILOTE RÉNOVATION étudie les dossiers selon leur ampleur et leurs contraintes.",
 };

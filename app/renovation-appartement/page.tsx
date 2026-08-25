@@ -3,6 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-appartement" },
   title: "Rénovation appartement : contraintes et pilotage | ARCHI PILOTE RÉNOVATION",
   description: "Copropriété, réseaux, murs porteurs, finitions : structurez une rénovation d'appartement sans décisions contradictoires.",
 };

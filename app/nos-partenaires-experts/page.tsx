@@ -3,6 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/nos-partenaires-experts" },
   title: "Architecte DPLG et bureau d'études structure — nos partenaires | ARCHI PILOTE RÉNOVATION",
   description: "Nos partenaires experts en Île-de-France : architecte DPLG et bureau d'études structure, mobilisés dès qu'un projet touche à la descente de charges.",
 };

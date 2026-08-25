@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/gros-oeuvre-structure" },
   title: "Structure et fondations | ARCHI PILOTE RÉNOVATION",
   description: "Fissures, affaissement, planchers ou reprises de charge nécessitent un diagnostic adapté avant toute solution cosmétique.",
 };
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
-      slug="/structure-fondations-maison"
+      slug="/gros-oeuvre-structure"
       eyebrow="Gros œuvre"
       segments={[{ text: "Structure et fondations :" }, { text: "comprendre le bâtiment avant les finitions.", serif: true, gradient: true }]}
       lead="Fissures, affaissement, planchers ou reprises de charge nécessitent un diagnostic adapté avant toute solution cosmétique."

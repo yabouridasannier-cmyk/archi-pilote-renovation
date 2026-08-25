@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-toiture-charpente" },
   title: "Toiture et charpente | ARCHI PILOTE RÉNOVATION",
   description: "Une toiture défaillante ruine les finitions. Avant d'isoler ou de repeindre, il faut comprendre l'eau, l'air, la ventilation et la structure.",
 };

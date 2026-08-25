@@ -4,8 +4,9 @@ import { GAMMES, PIECES_OPTIONS } from "../data";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/bareme-prix-renovation" },
   title: "Barème public des coûts de rénovation — Île-de-France | ARCHI PILOTE RÉNOVATION",
-  description: "Fourchettes observées sur les projets accompagnés en Île-de-France, mise à jour trimestrielle. Indicatif, non contractuel.",
+  description: "Fourchettes de marché observées en Île-de-France (repères 2026), mise à jour trimestrielle. Indicatif, non contractuel.",
 };
 
 const FAQ_BAREME = [
@@ -20,7 +21,7 @@ export default function BaremePage() {
       <PageHeader
         eyebrow="Barème public des coûts"
         segments={[{ text: "Prix de rénovation" }, { text: "en Île-de-France, 2026.", serif: true, gradient: true }]}
-        lead="Fourchettes observées sur les projets accompagnés en Île-de-France, mise à jour trimestrielle. Indicatif et non contractuel — arrêté à août 2026."
+        lead="Fourchettes de marché observées en Île-de-France (repères 2026), mise à jour trimestrielle. Indicatif et non contractuel — arrêté à août 2026. Seuls les devis remis par les entreprises partenaires ont valeur d'engagement."
       />
 
       <section className="relative pb-16 md:pb-24">

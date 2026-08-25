@@ -7,7 +7,8 @@ import { AVANT_APRES } from "../data";
 import { PHOTOS } from "../lib-photos";
 
 export const metadata: Metadata = {
-  title: "Nos chantiers de rénovation en Île-de-France — ARCHI PILOTE RÉNOVATION",
+  alternates: { canonical: "/realisations" },
+  title: "Niveau de finition visé — galerie d'illustration | ARCHI PILOTE RÉNOVATION",
   description:
     "Rénovations de maisons en Île-de-France : gros œuvre, second œuvre, cuisines sur-mesure, salles de bain étanches, béton ciré.",
 };

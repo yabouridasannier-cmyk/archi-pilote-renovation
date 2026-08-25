@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/surelevation" },
   title: "Surélévation de maison en Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Une surélévation crée de la surface sans emprise supplémentaire, mais elle ajoute des charges et modifie le bâtiment entier.",
 };
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
-      slug="/surelevation-maison-ile-de-france"
+      slug="/surelevation"
       eyebrow="Gros œuvre"
       segments={[{ text: "Surélévation de maison :" }, { text: "vérifier la structure avant le projet.", serif: true, gradient: true }]}
       lead="Une surélévation crée de la surface sans emprise supplémentaire, mais elle ajoute des charges et modifie le bâtiment entier."

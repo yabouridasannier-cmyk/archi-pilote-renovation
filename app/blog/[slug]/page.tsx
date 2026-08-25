@@ -15,7 +15,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const article = ARTICLES.find((a) => a.slug === slug);
   if (!article) return {};
-  return { title: `${article.titre} — ARCHI PILOTE RÉNOVATION`, description: article.excerpt };
+  return {
+    title: `${article.titre} — ARCHI PILOTE RÉNOVATION`,
+    description: article.excerpt,
+    alternates: { canonical: `/blog/${article.slug}` },
+  };
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -25,8 +29,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
   const autres = ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 2);
 
+  const jsonLdBlogPosting = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: article.titre,
+    description: article.excerpt,
+    datePublished: article.dateISO,
+    dateModified: article.dateISO,
+    image: PHOTOS[article.photo as keyof typeof PHOTOS],
+    url: `https://archipiloterenovation.fr/blog/${article.slug}`,
+    author: { "@type": "Organization", name: "ARCHI PILOTE RÉNOVATION", "@id": "https://archipiloterenovation.fr/#organization" },
+    publisher: { "@id": "https://archipiloterenovation.fr/#organization" },
+  };
+
   return (
     <main className="relative z-10 bg-carbone">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBlogPosting) }} />
       <header className="relative pt-40 md:pt-48 pb-14 overflow-hidden">
         <div className="container-site relative flex flex-col items-center text-center gap-5">
           <Reveal variant="fade-blur">

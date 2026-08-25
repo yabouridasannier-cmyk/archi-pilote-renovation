@@ -4,6 +4,9 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-ile-de-france" },
+  // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
+  robots: { index: false, follow: true },
   title: "Rénovation en Île-de-France : maison, appartement, structure | ARCHI PILOTE",
   description: "ARCHI PILOTE RÉNOVATION étudie les projets de rénovation complète, structure, extension, surélévation et copropriété dans toute l'Île-de-France selon leur ampleur et leurs contraintes.",
 };

@@ -4,6 +4,7 @@ import { EngagementsSection } from "../components/engagements-section";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/modele-economique-transparence" },
   title: "Matériaux achetés en direct, entreprises qui facturent directement — ARCHI PILOTE RÉNOVATION",
   description: "Vous achetez vos matériaux sans marge. Chaque entreprise vous facture et porte sa décennale. Nous pilotons, nous ne vendons pas de travaux.",
 };

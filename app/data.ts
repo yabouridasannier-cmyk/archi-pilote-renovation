@@ -108,7 +108,7 @@ export const ENGAGEMENTS = [
 ];
 
 export const FAQ = [
-  { question: "Combien coûtent des travaux de rénovation en Île-de-France ?", reponse: "Comptez 250-450 €/m² pour un rafraîchissement, 600-900 €/m² pour une rénovation partielle, 1000-1500 €/m² pour une rénovation complète, 1500-2500 €/m² pour du haut de gamme. Ces fourchettes couvrent les travaux facturés par les entreprises partenaires. Notre estimateur en ligne donne une première fourchette adaptée à votre projet." },
+  { question: "Combien coûtent des travaux de rénovation en Île-de-France ?", reponse: "Comptez 250-450 €/m² pour un rafraîchissement, 600-900 €/m² pour une rénovation partielle, 1000-1500 €/m² pour une rénovation complète, 1500-2500 €/m² pour du haut de gamme. Fourchettes indicatives de marché observées en Île-de-France, arrêtées à août 2026 — le prix contractuel reste celui du devis remis par chaque entreprise partenaire. Notre estimateur en ligne donne une première fourchette adaptée à votre projet." },
   { question: "Combien de temps dure une rénovation complète de maison ?", reponse: "Pour une maison de 100 à 150 m² sans reprise de structure lourde, comptez généralement quatre à six mois de travaux, précédés d'un à trois mois de préparation. Dès qu'il y a extension, surélévation ou permis de construire, la phase administrative allonge le calendrier de plusieurs mois avant la première benne." },
   { question: "Pourquoi des joints époxy plutôt que des joints classiques ?", reponse: "Les joints ciment noircissent en quelques mois et se fissurent. Les joints époxy, systématiquement prescrits en salle de bain et cuisine, sont étanches, ne noircissent pas et affichent, selon les fabricants, une durée de vie sans commune mesure avec celle des joints ciment." },
   { question: "Pilotez-vous la rénovation de maisons classées DPE F ou G ?", reponse: "Oui, c'est l'une de nos spécialités. Nous pilotons le traitement des passoires énergétiques de bout en bout : diagnostic, isolation, VMC double flux, remplacement du chauffage, accompagnement MaPrimeRénov' et CEE. L'objectif est de gagner 2 à 3 classes DPE." },
@@ -127,13 +127,13 @@ export const AVANT_APRES = [
 ];
 
 /* Articles de blog — contenu ORIGINAL écrit pour ARCHI PILOTE RÉNOVATION, territoire maison/pavillon. */
-export type Article = { slug: string; titre: string; date: string; excerpt: string; categorie: string; photo: string; corps: string[] };
+export type Article = { slug: string; titre: string; date: string; dateISO: string; excerpt: string; categorie: string; photo: string; corps: string[] };
 
 export const ARTICLES: Article[] = [
   {
     slug: "prix-renovation-maison-2026",
     titre: "Combien coûtent des travaux de rénovation de maison en 2026 ?",
-    date: "18 août 2026",
+    date: "18 août 2026", dateISO: "2026-08-18",
     categorie: "Budget",
     excerpt: "Les fourchettes observées sur les projets accompagnés en Île-de-France, poste par poste, pour ne plus avancer à l'aveugle sur votre budget.",
     photo: "chantierRenovation",
@@ -146,7 +146,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "joints-epoxy-vs-ciment",
     titre: "Joints époxy ou joints classiques : pourquoi le choix compte",
-    date: "10 août 2026",
+    date: "10 août 2026", dateISO: "2026-08-10",
     categorie: "Matériaux",
     excerpt: "Les joints ciment noircissent en quelques mois. Voici pourquoi les entreprises partenaires ne posent plus que de l'époxy en salle de bain et cuisine.",
     photo: "salleBainBeton",
@@ -159,7 +159,7 @@ export const ARTICLES: Article[] = [
   {
     slug: "sortir-passoire-energetique",
     titre: "DPE F ou G : comment sortir de la passoire énergétique",
-    date: "2 août 2026",
+    date: "2 août 2026", dateISO: "2026-08-02",
     categorie: "Isolation & DPE",
     excerpt: "Diagnostic, isolation, chauffage, aides financières : la méthode pour gagner 2 à 3 classes DPE sans se perdre dans les démarches.",
     photo: "chantierIsolation",
@@ -186,10 +186,10 @@ export const GALERIE_CATEGORIES: { id: Categorie; label: string }[] = [
 /* Catégorie "chantier" supprimée : elle n'était remplie que de banque d'images,
    ce qui revient à prétendre montrer un chantier (interdit, dossier V3 §3.1). */
 export const GALERIE = [
-  { src: "refSalonBalconRue", label: "Séjour rénové, niveau de finition visé", cat: "sejour", portrait: false },
-  { src: "refCuisineSejour", label: "Cuisine ouverte, plan de travail marbré", cat: "cuisine", portrait: false },
-  { src: "refSalleBainMarbreNoir", label: "Salle d'eau marbre, douche et double vasque", cat: "sdb", portrait: true },
-  { src: "refSalleBainMarbreClair", label: "Salle de bain, baignoire et faïence marbrée", cat: "sdb", portrait: true },
-  { src: "refChambreTeteLitVelours", label: "Chambre, tête de lit velours et appliques", cat: "chambre", portrait: true },
-  { src: "refChambreDoreeJaune", label: "Chambre aux tons dorés, niveau de finition visé", cat: "chambre", portrait: true },
+  { src: "refSalonBalconRue", label: "Séjour rénové, niveau de finition visé · illustration", cat: "sejour", portrait: false },
+  { src: "refCuisineSejour", label: "Cuisine ouverte, plan de travail marbré · illustration", cat: "cuisine", portrait: false },
+  { src: "refSalleBainMarbreNoir", label: "Salle d'eau marbre, douche et double vasque · illustration", cat: "sdb", portrait: true },
+  { src: "refSalleBainMarbreClair", label: "Salle de bain, baignoire et faïence marbrée · illustration", cat: "sdb", portrait: true },
+  { src: "refChambreTeteLitVelours", label: "Chambre, tête de lit velours et appliques · illustration", cat: "chambre", portrait: true },
+  { src: "refChambreDoreeJaune", label: "Chambre aux tons dorés, niveau de finition visé · illustration", cat: "chambre", portrait: true },
 ] as const;

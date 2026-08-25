@@ -4,6 +4,7 @@ import { CtaFinal } from "../components/cta-final";
 import { SITE } from "../data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/parcours-expertise" },
   title: "ARCHI PILOTE RÉNOVATION, marque exploitée par IA RENOV (SASU)",
   description: "Une marque de pilotage de travaux de rénovation en Île-de-France, priorité maison et pavillon en couronne francilienne.",
 };

@@ -5,6 +5,7 @@ import { ServicesRoadmap } from "../components/services-roadmap";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/services" },
   title: "Travaux de rénovation : du gros œuvre au second œuvre — ARCHI PILOTE RÉNOVATION",
   description:
     "Ouverture de mur porteur, extension, surélévation, toiture, cuisine sur-mesure, salle de bain étanche, isolation & DPE. Tous les corps d'état pilotés sur un seul chantier, en Île-de-France.",

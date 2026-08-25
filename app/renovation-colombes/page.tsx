@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { LocalPage } from "../components/local-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-colombes" },
+  // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
+  robots: { index: false, follow: true },
   title: "Rénovation à Colombes : maison, extension et appartement | ARCHI PILOTE",
   description: "Projet de rénovation à Colombes : rénovation complète, structure, maison, appartement et lots techniques selon le bien. Étude et pilotage par ARCHI PILOTE RÉNOVATION.",
 };

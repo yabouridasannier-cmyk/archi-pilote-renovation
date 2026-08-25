@@ -10,8 +10,8 @@ const SERVICES_LINKS: Record<string, string> = {
   "cuisine-sur-mesure": "/renovation-cuisine-maison",
   "salle-de-bain": "/renovation-salle-de-bain-maison",
   "beton-cire": "/sols-finitions-renovation",
-  "isolation-dpe": "/renovation-energetique-maison",
-  "gros-oeuvre": "/renovation-complete-maison",
+  "isolation-dpe": "/renovation-energetique",
+  "gros-oeuvre": "/renovation-complete",
 };
 import { PHOTOS } from "../lib-photos";
 import { WordReveal } from "./word-reveal";

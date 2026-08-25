@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "motion/react";
+import { motion } from "motion/react";
 import { FAQ } from "../data";
 import { WordReveal } from "./word-reveal";
 import { Reveal } from "./reveal";
@@ -68,21 +68,19 @@ export function FaqSection() {
                       </svg>
                     </span>
                   </button>
-                  <AnimatePresence initial={false}>
-                    {open && (
-                      <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-                        className="overflow-hidden"
-                      >
-                        <p className="pb-6 pr-14 text-muted leading-relaxed text-[0.96rem]">
-                          {item.reponse}
-                        </p>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {/* Réponse toujours présente dans le HTML initial (recette V3 :
+                      contenu visible en HTML, rien d'essentiel caché derrière un clic) —
+                      l'animation ne fait que déplier/replier visuellement. */}
+                  <motion.div
+                    initial={false}
+                    animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <p className="pb-6 pr-14 text-muted leading-relaxed text-[0.96rem]">
+                      {item.reponse}
+                    </p>
+                  </motion.div>
                 </div>
               </Reveal>
             );

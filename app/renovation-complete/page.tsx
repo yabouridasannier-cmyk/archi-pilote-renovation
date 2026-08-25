@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SpecialtyPage } from "../components/specialty-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-complete" },
   title: "Rénovation complète de maison en Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Une rénovation complète réussie se joue avant la peinture : structure, eau, air, réseaux et supports doivent être arbitrés dans cet ordre.",
 };
@@ -9,7 +10,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <SpecialtyPage
-      slug="/renovation-complete-maison"
+      slug="/renovation-complete"
       eyebrow="Rénovation complète"
       segments={[{ text: "Rénovation complète de maison :" }, { text: "ordre des travaux et budget.", serif: true, gradient: true }]}
       lead="Une rénovation complète réussie se joue avant la peinture : structure, eau, air, réseaux et supports doivent être arbitrés dans cet ordre."

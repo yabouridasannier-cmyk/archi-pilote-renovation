@@ -39,7 +39,7 @@ export function ProcessTimeline() {
                     </Reveal>
                   </div>
                   <Reveal variant="slide-up" delay={0.1} className={`md:row-start-1 ${left ? "md:col-start-1 md:pr-14" : "md:col-start-3 md:pl-14"}`}>
-                    <article className={`group card-e rounded-none overflow-hidden flex ${left ? "md:flex-row-reverse" : "md:flex-row"} flex-col`}>
+                    <article className={`group card-e rounded-none overflow-hidden flex ${left ? "md:flex-row-reverse" : "md:flex-row"} flex-col-reverse`}>
                       <div className="relative md:w-[42%] aspect-[16/10] md:aspect-auto md:min-h-[13rem] overflow-hidden shrink-0">
                         <img src={PHOTOS_STEP[i]} alt={step.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
                         <span className="absolute top-3 left-3 display text-4xl italic text-white/80 leading-none [text-shadow:0_1px_8px_rgba(0,0,0,0.4)]">{step.numero}</span>

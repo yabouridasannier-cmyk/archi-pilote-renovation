@@ -3,6 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/glossaire-renovation-maison" },
   title: "Glossaire de la rénovation de maison | ARCHI PILOTE RÉNOVATION",
   description: "IPN, étude structure, doublage, ragréage, VMC, réception, réserve : des définitions courtes pour décoder vos devis.",
 };

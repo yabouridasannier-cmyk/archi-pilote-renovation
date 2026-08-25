@@ -1,79 +1,31 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { WordReveal } from "./word-reveal";
 import { PHOTOS } from "../lib-photos";
 
 const EASE = [0.25, 0.1, 0.25, 1] as const;
 
-const SLIDES = [
-  { src: PHOTOS.heroHaussmannien, alt: "Chantier de rénovation en cours, structure et gros œuvre", pos: "object-[center_38%]" },
-  { src: PHOTOS.chantierIsolation, alt: "Cuisine en cours de rénovation, protections de chantier", pos: "object-center" },
-  { src: PHOTOS.detailParquet, alt: "Parquet point de Hongrie, détail de pose", pos: "object-center" },
-  { src: PHOTOS.sejourApres, alt: "Séjour rénové, résultat livré", pos: "object-center" },
-];
-
-/** Diaporama hero — 4 visuels en fondu, cycle auto ~5s. */
-function HeroSlideshow() {
-  const [i, setI] = useState(0);
-  const [ready, setReady] = useState(false);
-
-  // Précharge les 4 images en amont — sans ça, le navigateur télécharge
-  // chaque photo au moment du switch et ça produit un flash/coupure visible.
-  useEffect(() => {
-    let cancelled = false;
-    Promise.all(
-      SLIDES.map(
-        (s) =>
-          new Promise<void>((resolve) => {
-            const img = new Image();
-            img.onload = () => resolve();
-            img.onerror = () => resolve();
-            img.src = s.src;
-          })
-      )
-    ).then(() => { if (!cancelled) setReady(true); });
-    return () => { cancelled = true; };
-  }, []);
-
-  useEffect(() => {
-    if (!ready) return;
-    const t = setInterval(() => setI((v) => (v + 1) % SLIDES.length), 5000);
-    return () => clearInterval(t);
-  }, [ready]);
-
+/* Image de fond unique — le diaporama 4 slides a été retiré (dossier V3 :
+   aucun carrousel, pas de bandeau décoratif multiple, poids mobile maîtrisé).
+   Décorative (le fond du H1), donc alt vide ; le Ken Burns léger reste. */
+function HeroBackdrop() {
   return (
-    <>
-      {/* Le zoom (Ken Burns) tourne en continu sur un calque persistant,
-          indépendant de la photo affichée — sinon chaque changement de
-          slide fait "sauter" le niveau de zoom au moment du fondu. */}
-      <motion.div
-        className="absolute inset-0"
-        animate={{ scale: [1, 1.09, 1] }}
-        transition={{ duration: 22, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <AnimatePresence>
-          <motion.img
-            key={i}
-            src={SLIDES[i].src}
-            alt={SLIDES[i].alt}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 1.2, ease: EASE }}
-            decoding="async"
-            className={`absolute inset-0 size-full object-cover ${SLIDES[i].pos}`}
-          />
-        </AnimatePresence>
-      </motion.div>
-      <div className="absolute bottom-24 sm:bottom-8 left-1/2 -translate-x-1/2 z-[1] flex gap-1.5">
-        {SLIDES.map((_, k) => (
-          <span key={k} className={`h-1 rounded-full transition-all duration-500 ${k === i ? "w-6 bg-orange" : "w-1.5 bg-white/40"}`} />
-        ))}
-      </div>
-    </>
+    <motion.div
+      className="absolute inset-0"
+      animate={{ scale: [1, 1.06, 1] }}
+      transition={{ duration: 26, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <img
+        src={PHOTOS.heroHaussmannien}
+        alt=""
+        aria-hidden
+        fetchPriority="high"
+        className="absolute inset-0 size-full object-cover object-[center_38%]"
+      />
+    </motion.div>
   );
 }
 
@@ -87,7 +39,7 @@ export function Hero() {
   return (
     <section ref={ref} className="relative h-[100svh] min-h-[640px] w-full overflow-hidden flex flex-col grain">
       <motion.div className="absolute inset-0 overflow-hidden" style={{ y }}>
-        <HeroSlideshow />
+        <HeroBackdrop />
       </motion.div>
       <div className="absolute inset-0 bg-[#20211d]/45" />
       <div className="absolute inset-0 bg-gradient-to-b from-[#20211d]/60 via-transparent to-[#20211d]" />
@@ -104,10 +56,7 @@ export function Hero() {
               <span className="absolute inline-flex size-full rounded-full bg-orange opacity-70 animate-ping" />
               <span className="relative inline-flex size-2 rounded-full bg-orange" />
             </span>
-            <span className="text-[0.78rem] sm:text-[0.82rem] text-white/85 whitespace-nowrap">
-              <span className="sm:hidden">Travaux de rénovation — Île-de-France</span>
-              <span className="hidden sm:inline">Travaux de rénovation tous corps d&apos;état — Île-de-France</span>
-            </span>
+            <span className="text-[0.78rem] sm:text-[0.82rem] text-white/85">Travaux de rénovation tous corps d&apos;état — Île-de-France</span>
           </motion.div>
 
           <WordReveal
@@ -128,13 +77,8 @@ export function Hero() {
             transition={{ duration: 1, delay: 0.85, ease: EASE }}
             className="max-w-xl text-base sm:text-lg md:text-xl leading-snug text-white/75 text-balance"
           >
-            <span className="sm:hidden">
-              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis des entreprises sous 48&nbsp;h.
-            </span>
-            <span className="hidden sm:inline">
-              Second œuvre tous corps d&apos;état, cuisine sur-mesure, salle de bain étanche, isolation.{" "}
-              <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis des entreprises sous 48&nbsp;h.
-            </span>
+            Second œuvre tous corps d&apos;état, cuisine sur-mesure, salle de bain étanche, isolation.{" "}
+            <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis des entreprises sous 48&nbsp;h.
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-3 mt-1 sm:mt-2">
@@ -145,7 +89,7 @@ export function Hero() {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.2, ease: EASE }}>
-              <Link href="/realisations" className="btn btn-ghost !text-white !border-white/90 hover:!bg-white hover:!text-orange-deep">Voir nos chantiers</Link>
+              <Link href="/realisations" className="btn btn-ghost !text-white !border-white/90 hover:!bg-white hover:!text-orange-deep">Notre niveau de finition</Link>
             </motion.div>
           </div>
 

@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { LocalPage } from "../components/local-page";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/renovation-seine-et-marne-77" },
+  // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
+  robots: { index: false, follow: true },
   title: "Rénovation de maison en Seine-et-Marne (77) | ARCHI PILOTE",
   description: "Rénovation complète, structure, maison, appartement et projets complexes en Seine-et-Marne. ARCHI PILOTE RÉNOVATION étudie les dossiers selon leur ampleur et leurs contraintes.",
 };

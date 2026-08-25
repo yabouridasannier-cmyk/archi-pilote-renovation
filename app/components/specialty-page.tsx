@@ -68,11 +68,28 @@ export function SpecialtyPage({
       ))}
       <PageHeader eyebrow={eyebrow} segments={segments} lead={lead} />
 
+      {slug && (
+        <nav aria-label="Fil d'Ariane" className="container-site max-w-4xl mx-auto -mt-6 mb-8">
+          <ol className="flex flex-wrap items-center gap-2 font-mono text-[0.68rem] tracking-[0.12em] uppercase text-muted">
+            <li><Link href="/" className="hover:text-orange transition-colors">Accueil</Link></li>
+            <li aria-hidden>›</li>
+            <li><Link href="/services" className="hover:text-orange transition-colors">{eyebrow}</Link></li>
+            <li aria-hidden>›</li>
+            <li className="text-ivoire/70">{pageTitle}</li>
+          </ol>
+        </nav>
+      )}
+
       <section className="relative pb-10">
         <div className="container-site max-w-4xl mx-auto">
-          <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
-            <img src={PHOTOS[photo]} alt={photoAlt} className="absolute inset-0 size-full object-cover" />
-          </div>
+          <figure>
+            <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
+              <img src={PHOTOS[photo]} alt={photoAlt} className="absolute inset-0 size-full object-cover" />
+            </div>
+            <figcaption className="mt-2 font-mono text-[0.66rem] tracking-[0.12em] uppercase text-muted">
+              {photoAlt} — Illustration, non contractuelle
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -102,7 +119,7 @@ export function SpecialtyPage({
         <div className="container-site max-w-3xl mx-auto flex flex-wrap gap-2.5 justify-center">
           {[
             { href: "/notre-methode", label: "Notre méthode" },
-            { href: "/notre-modele", label: "Notre modèle" },
+            { href: "/modele-economique-transparence", label: "Notre modèle" },
             { href: "/garanties-assurances", label: "Garanties et assurances" },
             { href: "/devis", label: "Estimer un budget" },
           ].map((l) => (

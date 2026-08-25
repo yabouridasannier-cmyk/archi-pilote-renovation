@@ -13,23 +13,39 @@ const dmSerif = DM_Serif_Display({ variable: "--font-dm-serif", subsets: ["latin
 const sora = Sora({ variable: "--font-sora", subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
 const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"], weight: ["400", "700"], display: "swap" });
 
-// Vérifié à chaque requête (pas au build) pour que la péremption
-// à 48h s'applique sans redéploiement.
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
+  metadataBase: new URL("https://archipiloterenovation.fr"),
   title: "ARCHI PILOTE RÉNOVATION — Rénovation tous corps d'état en Île-de-France",
   description:
     "Pilotage de travaux de rénovation en Île-de-France : gros œuvre, second œuvre, cuisine sur-mesure, salle de bain étanche, isolation DPE. Un seul interlocuteur, devis des entreprises sous 48h.",
+  alternates: { canonical: "/" },
   // Blocage levé le 25/08/2026 — le site est en phase de visibilité SEO réelle.
-  robots: { index: true, follow: true },
+  robots: {
+    index: true,
+    follow: true,
+    "max-image-preview": "large",
+    googleBot: { index: true, follow: true, "max-image-preview": "large" },
+  },
+  openGraph: {
+    type: "website",
+    locale: "fr_FR",
+    siteName: "ARCHI PILOTE RÉNOVATION",
+    url: "https://archipiloterenovation.fr",
+    title: "ARCHI PILOTE RÉNOVATION — Rénovation tous corps d'état en Île-de-France",
+    description:
+      "Pilotage de travaux de rénovation en Île-de-France. Un seul interlocuteur, des entreprises partenaires qui contractent directement avec vous.",
+  },
 };
 
 export const JSONLD_ORGANIZATION = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
+  "@id": "https://archipiloterenovation.fr/#organization",
   name: "ARCHI PILOTE RÉNOVATION",
-  alternateName: "IA RENOV",
+  legalName: "IA RENOV",
+  url: "https://archipiloterenovation.fr",
+  telephone: "+33652798089",
+  email: "archipiloterenovation@gmail.com",
   description: "Pilotage de travaux de rénovation tous corps d'état en Île-de-France, priorité maison et pavillon.",
   areaServed: ["Hauts-de-Seine", "Yvelines", "Essonne", "Val-d'Oise", "Seine-et-Marne", "Île-de-France"],
   address: {

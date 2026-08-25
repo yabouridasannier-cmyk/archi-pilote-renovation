@@ -3,6 +3,7 @@ import { PageHeader } from "../components/page-header";
 import { SITE } from "../data";
 
 export const metadata: Metadata = {
+  alternates: { canonical: "/mentions-legales" },
   title: "Mentions légales — ARCHI PILOTE RÉNOVATION",
   description: "Éditeur du site, hébergement, propriété intellectuelle et données personnelles.",
 };
