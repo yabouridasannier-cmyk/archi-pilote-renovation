@@ -21,10 +21,8 @@ export const metadata: Metadata = {
   title: "ARCHI PILOTE RÉNOVATION — Rénovation tous corps d'état en Île-de-France",
   description:
     "Pilotage de travaux de rénovation en Île-de-France : gros œuvre, second œuvre, cuisine sur-mesure, salle de bain étanche, isolation DPE. Un seul interlocuteur, devis des entreprises sous 48h.",
-  // Blocage volontaire tant que le site reste en phase de maquette (demande explicite,
-  // 21/08/2026) : à lever avant toute mise en production réelle, sans quoi les 26 pages
-  // et le travail éditorial du dossier SEO restent invisibles pour Google et les IA.
-  robots: { index: false, follow: false, nocache: true, noarchive: true, nosnippet: true, noimageindex: true },
+  // Blocage levé le 25/08/2026 — le site est en phase de visibilité SEO réelle.
+  robots: { index: true, follow: true },
 };
 
 export const JSONLD_ORGANIZATION = {

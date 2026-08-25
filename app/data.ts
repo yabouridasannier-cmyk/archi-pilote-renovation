@@ -184,10 +184,10 @@ export const GALERIE_CATEGORIES: { id: Categorie; label: string }[] = [
 ];
 
 export const GALERIE = [
-  { src: "salonCanape", label: "Séjour, second œuvre terminé", cat: "sejour", portrait: true },
-  { src: "cuisineIlot", label: "Cuisine, plan de travail et façades sur-mesure", cat: "cuisine", portrait: true },
-  { src: "salleBainBeton", label: "Étanchéité sous carrelage, salle d'eau", cat: "sdb", portrait: true },
-  { src: "betonCireDetail", label: "Douche italienne en béton ciré", cat: "sdb", portrait: true },
+  { src: "refSalonBalconRue", label: "Séjour rénové, niveau de finition visé", cat: "sejour", portrait: false },
+  { src: "refCuisineSejour", label: "Cuisine ouverte, plan de travail marbré", cat: "cuisine", portrait: false },
+  { src: "refSalleBainMarbreNoir", label: "Salle d'eau marbre, douche et double vasque", cat: "sdb", portrait: true },
+  { src: "refSalleBainMarbreClair", label: "Salle de bain, baignoire et faïence marbrée", cat: "sdb", portrait: true },
   { src: "chantierCuisineProtection", label: "Protections de chantier en site occupé", cat: "chantier", portrait: false },
   { src: "chantierIsolation", label: "Isolation des combles avant doublage", cat: "chantier", portrait: false },
 ] as const;

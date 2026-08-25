@@ -1,46 +1,10 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-// Maquette privée : on bloque techniquement les crawlers d'entraînement/
-// reproduction IA connus (au-delà de la simple demande polie du robots.txt),
-// pour limiter la reproductibilité du design par un tiers.
-// Volontairement RESTREINT aux bots IA/scraping nommés — on ne bloque pas
-// les UA génériques (headless browsers, scripts) pour ne pas casser les
-// aperçus de lien (WhatsApp, iMessage, Slack) ni les outils de vérification.
-const BLOCKED_UA = [
-  "gptbot",
-  "chatgpt-user",
-  "oai-searchbot",
-  "claudebot",
-  "claude-web",
-  "anthropic-ai",
-  "ccbot",
-  "google-extended",
-  "applebot-extended",
-  "bytespider",
-  "perplexitybot",
-  "perplexity-user",
-  "amazonbot",
-  "meta-externalagent",
-  "meta-externalfetcher",
-  "cohere-ai",
-  "diffbot",
-  "timpibot",
-  "youbot",
-  "imagesiftbot",
-  "omgilibot",
-  "omgili",
-  "semrushbot",
-  "ahrefsbot",
-  "mj12bot",
-  "dotbot",
-];
-
-export function proxy(request: NextRequest) {
-  const ua = (request.headers.get("user-agent") || "").toLowerCase();
-  if (BLOCKED_UA.some((b) => ua.includes(b))) {
-    return new NextResponse("Accès non autorisé.", { status: 403 });
-  }
+// Blocage de bots levé le 25/08/2026 — le site est en phase de visibilité SEO/IA,
+// on ne bloque plus aucun crawler (y compris OAI-SearchBot, précédemment bloqué
+// par erreur au même titre que GPTBot — cf. doctrine GEO du dossier SEO).
+export function proxy(_request: NextRequest) {
   return NextResponse.next();
 }
 

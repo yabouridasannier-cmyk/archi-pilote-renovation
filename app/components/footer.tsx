@@ -46,16 +46,17 @@ export function Footer() {
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Navigation</span>
                   <Link href="/" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Accueil</Link>
-                  <Link href="/services" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Nos services</Link>
+                  <Link href="/nos-specialites" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Nos spécialités</Link>
                   <Link href="/realisations" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Réalisations</Link>
                   <Link href="/blog" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Blog</Link>
                 </div>
                 <div className="flex flex-col gap-3">
-                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Gros œuvre</span>
-                  <Link href="/ouverture-mur-porteur" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Mur porteur</Link>
-                  <Link href="/extension-maison-ile-de-france" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Extension</Link>
-                  <Link href="/surelevation-maison-ile-de-france" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Surélévation</Link>
-                  <Link href="/renovation-toiture-charpente" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Toiture & charpente</Link>
+                  <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Île-de-France</span>
+                  <Link href="/renovation-ile-de-france" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Toute l&apos;Île-de-France</Link>
+                  <Link href="/renovation-hauts-de-seine-92" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Hauts-de-Seine (92)</Link>
+                  <Link href="/renovation-yvelines-78" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Yvelines (78)</Link>
+                  <Link href="/renovation-complexe-paris" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Paris</Link>
+                  <Link href="/renovation-la-garenne-colombes" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">La Garenne-Colombes</Link>
                 </div>
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Confiance</span>
@@ -97,7 +98,6 @@ export function Footer() {
             </p>
             <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-[0.82rem] text-white/35">
               <span>© 2026 ARCHI PILOTE RÉNOVATION — <Link href="/mentions-legales" className="hover:text-orange transition-colors">Mentions légales</Link></span>
-              <span className="font-mono text-[0.7rem] tracking-widest uppercase">Maquette — Logipro Web</span>
             </div>
           </div>
         </footer>

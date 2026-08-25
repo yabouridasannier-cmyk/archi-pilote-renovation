@@ -35,4 +35,15 @@ export const PHOTOS = {
   chantierCuisineProtection: "https://images.unsplash.com/photo-1618832515490-e181c4794a45?q=80&w=1600&auto=format&fit=crop",
   chantierEchelle: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?q=80&w=1600&auto=format&fit=crop",
   cheminee2: "https://images.unsplash.com/photo-1722152257494-e26f08d5bb0d?q=80&w=1600&auto=format&fit=crop",
+
+  /* Photos de référence — appartement réel (fourni par le client, 25/08/2026).
+     Illustration de niveau de finition, pas des chantiers ARCHI PILOTE RÉNOVATION. */
+  refChambreBalcon: "/photos/ref/refChambreBalcon.png",
+  refChambreTeteLitVelours: "/photos/ref/refChambreTeteLitVelours.jpeg",
+  refSalleBainMarbreNoir: "/photos/ref/refSalleBainMarbreNoir.jpeg",
+  refChambreArmoireBlanche: "/photos/ref/refChambreArmoireBlanche.jpeg",
+  refCuisineSejour: "/photos/ref/refCuisineSejour.jpeg",
+  refSalleBainMarbreClair: "/photos/ref/refSalleBainMarbreClair.jpeg",
+  refChambreDoreeJaune: "/photos/ref/refChambreDoreeJaune.jpeg",
+  refSalonBalconRue: "/photos/ref/refSalonBalconRue.jpeg",
 } as const;
