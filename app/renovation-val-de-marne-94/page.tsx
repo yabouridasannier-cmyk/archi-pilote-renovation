@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/renovation-val-de-marne-94" },
   // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
   robots: { index: false, follow: true },
-  title: "Rénovation dans le Val-de-Marne (94) | ARCHI PILOTE",
+  title: "Rénovation dans le Val-de-Marne (94) | ARCHI PILOTE RÉNOVATION",
   description: "Rénovation complète, structure, maison, appartement et projets complexes en Val-de-Marne. ARCHI PILOTE RÉNOVATION étudie les dossiers selon leur ampleur et leurs contraintes.",
 };
 

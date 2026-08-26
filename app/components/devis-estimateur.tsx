@@ -5,26 +5,40 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "motion/react";
 import { GAMMES, PIECES_OPTIONS } from "../data";
 
+/* États du bien — resserrent la fourchette de ±50 % à ±25-30 % (audit T3 §3.3) :
+   chaque état sélectionne la moitié basse, centrale ou haute de la gamme. */
+const ETATS = [
+  { id: "bon", nom: "Rafraîchi récemment", detail: "Réseaux et supports sains, surtout des finitions", plage: [0, 0.55] as const },
+  { id: "origine", nom: "D'origine, habitable", detail: "Jamais restructuré, réseaux anciens", plage: [0.25, 0.8] as const },
+  { id: "degrade", nom: "Dégradé ou à restructurer", detail: "Gros travaux probables, surprises à prévoir", plage: [0.45, 1] as const },
+] as const;
+
 /**
  * Estimateur de budget interactif.
- * Gamme × surface × options → fourchette indicative live, basée sur les
- * fourchettes observées sur les projets accompagnés en 2026 (voir adn/style-guide.md).
+ * Gamme × état du bien × surface × options → fourchette indicative live,
+ * basée sur des fourchettes de marché Île-de-France (repères 2026).
  * Les options déjà comprises dans la gamme choisie sont désactivées pour ne
  * jamais facturer deux fois le même poste (cf. audit — double comptage cuisine/sdb).
  */
 export function DevisEstimateur() {
   const [gammeId, setGammeId] = useState("complete");
+  const [etatId, setEtatId] = useState("origine");
   const [surface, setSurface] = useState(65);
   const [pieces, setPieces] = useState<string[]>([]);
 
   const gamme = GAMMES.find((g) => g.id === gammeId)!;
+  const etat = ETATS.find((e) => e.id === etatId)!;
   const optionsDisponibles = PIECES_OPTIONS.filter((p) => !gamme.inclus.includes(p.id));
 
+  const ecart = gamme.prixMax - gamme.prixMin;
+  const m2Min = Math.round(gamme.prixMin + ecart * etat.plage[0]);
+  const m2Max = Math.round(gamme.prixMin + ecart * etat.plage[1]);
+
   const { min, max } = useMemo(() => {
-    const base = { min: gamme.prixMin * surface, max: gamme.prixMax * surface };
+    const base = { min: m2Min * surface, max: m2Max * surface };
     const extra = optionsDisponibles.filter((p) => pieces.includes(p.id)).reduce((s, p) => s + p.majoration, 0);
     return { min: base.min + extra, max: base.max + extra };
-  }, [gamme, surface, pieces, optionsDisponibles]);
+  }, [m2Min, m2Max, surface, pieces, optionsDisponibles]);
 
   const toggle = (id: string) => setPieces((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
   const fmt = (n: number) => n.toLocaleString("fr-FR");
@@ -46,7 +60,7 @@ export function DevisEstimateur() {
                     active ? "border-orange/70 bg-orange/[0.06] -translate-y-1" : "hover:-translate-y-1 hover:border-line-strong"
                   }`}
                 >
-                  <div className="flex items-baseline justify-between gap-2">
+                  <div className="flex items-baseline justify-between gap-2 pr-7">
                     <span className="display text-lg text-ivoire normal-case">{g.nom}</span>
                     <span className={`font-mono text-[0.78rem] ${active ? "text-orange" : "text-muted"}`}>{g.prixMin}-{g.prixMax}&nbsp;€/m²</span>
                   </div>
@@ -59,10 +73,32 @@ export function DevisEstimateur() {
           </div>
         </div>
 
+        {/* État du bien — resserre la fourchette (T3 §3.3) */}
+        <div className="flex flex-col gap-3">
+          <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">2. État actuel du bien</span>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            {ETATS.map((e) => {
+              const on = etatId === e.id;
+              return (
+                <button
+                  key={e.id}
+                  onClick={() => setEtatId(e.id)}
+                  className={`text-left rounded-none border px-4 py-3 transition-all duration-300 cursor-pointer ${
+                    on ? "border-orange/70 bg-orange/[0.08]" : "border-line hover:border-line-strong"
+                  }`}
+                >
+                  <span className={`block text-[0.9rem] font-medium ${on ? "text-orange" : "text-ivoire"}`}>{e.nom}</span>
+                  <span className="block text-muted text-[0.76rem] mt-0.5 leading-snug">{e.detail}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         {/* Surface */}
         <div className="card-e rounded-none p-6 flex flex-col gap-4">
           <div className="flex items-center justify-between">
-            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">2. Surface du logement</span>
+            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">3. Surface du logement</span>
             <span className="display text-2xl text-gradient normal-case">{surface}&nbsp;m²</span>
           </div>
           <input
@@ -83,7 +119,7 @@ export function DevisEstimateur() {
         {/* Options */}
         <div className="card-e rounded-none p-6 md:p-7">
           <div className="flex items-center justify-between mb-5">
-            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">3. Montées en gamme à prévoir</span>
+            <span className="font-mono text-[0.68rem] tracking-[0.2em] uppercase text-muted">4. Montées en gamme à prévoir</span>
             <span className="font-mono text-[0.62rem] tracking-[0.15em] uppercase text-muted">Optionnel</span>
           </div>
           {gamme.inclus.length > 0 && (
@@ -127,7 +163,7 @@ export function DevisEstimateur() {
             </div>
 
             <div className="flex flex-col gap-2 text-[0.92rem]">
-              <div className="devis-row !py-2"><span className="text-ivoire">Base ({gamme.prixMin}-{gamme.prixMax} €/m² × {surface} m²)</span><span className="devis-prix">{fmt(gamme.prixMin * surface)}–{fmt(gamme.prixMax * surface)} €</span></div>
+              <div className="devis-row !py-2"><span className="text-ivoire">Base ({m2Min}-{m2Max} €/m² × {surface} m²)</span><span className="devis-prix">{fmt(m2Min * surface)}–{fmt(m2Max * surface)} €</span></div>
               <AnimatePresence initial={false}>
                 {optionsDisponibles.filter((p) => pieces.includes(p.id)).map((p) => (
                   <motion.div key={p.id} initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.3 }} className="devis-row !py-2 overflow-hidden">

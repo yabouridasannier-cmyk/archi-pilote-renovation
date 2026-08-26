@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PageHeader } from "./page-header";
 import { CtaFinal } from "./cta-final";
-import { PHOTOS } from "../lib-photos";
+import { PHOTOS, srcSetOf } from "../lib-photos";
 
 type Segment = { text: string; serif?: boolean; gradient?: boolean };
 type Section = { titre: string; texte: string };
@@ -84,7 +84,7 @@ export function SpecialtyPage({
         <div className="container-site max-w-4xl mx-auto">
           <figure>
             <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
-              <img src={PHOTOS[photo]} alt={photoAlt} className="absolute inset-0 size-full object-cover" />
+              <img src={PHOTOS[photo]} srcSet={srcSetOf(PHOTOS[photo])} sizes="(min-width: 1024px) 896px, 100vw" alt={photoAlt} loading="lazy" className="absolute inset-0 size-full object-cover" />
             </div>
             <figcaption className="mt-2 font-mono text-[0.66rem] tracking-[0.12em] uppercase text-muted">
               {photoAlt} — Illustration, non contractuelle

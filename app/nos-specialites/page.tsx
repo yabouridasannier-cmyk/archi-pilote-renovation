@@ -5,7 +5,7 @@ import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/nos-specialites" },
-  title: "Nos spécialités rénovation en Île-de-France | ARCHI PILOTE",
+  title: "Nos spécialités rénovation en Île-de-France | ARCHI PILOTE RÉNOVATION",
   description: "Maison, appartement, structure, extension, surélévation, énergie, salle de bain, cuisine et lots techniques : découvrez les spécialités pilotées par ARCHI PILOTE RÉNOVATION.",
 };
 

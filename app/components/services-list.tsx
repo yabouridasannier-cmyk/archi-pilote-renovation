@@ -20,7 +20,7 @@ export function ServicesList() {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="flex flex-col gap-5 max-w-2xl">
             <Reveal variant="fade-blur"><span className="eyebrow">Nos services</span></Reveal>
-            <WordReveal as="h2" segments={[{ text: "Nos travaux de rénovation," }, { text: "un seul pilote.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.2vw,4.1rem)] text-ivoire text-balance" />
+            <WordReveal as="h2" segments={[{ text: "Vos travaux de rénovation," }, { text: "un seul pilote.", serif: true, gradient: true }]} className="display text-[clamp(2.2rem,5.2vw,4.1rem)] text-ivoire text-balance" />
           </div>
           <Reveal variant="slide-up" delay={0.2}>
             <Link href="/services" className="btn btn-ghost shrink-0">Le détail des services <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg></Link>
@@ -42,6 +42,9 @@ export function ServicesList() {
                   <div className="flex flex-col gap-1 min-w-0">
                     <span className={`display text-[clamp(1.3rem,2.6vw,2rem)] leading-none transition-colors duration-300 ${active === i ? "text-ivoire" : "text-ivoire/65 group-hover:text-ivoire"}`}>{service.titre}</span>
                     <span className="text-muted text-[0.86rem] truncate">{service.accroche}</span>
+                    {/* Le panneau photo qui porte ce texte est masqué sous lg — on le rend
+                        ici pour que le mobile ait le même contenu que le desktop (V3). */}
+                    <span className="text-muted text-[0.84rem] leading-snug lg:hidden">{service.texte}</span>
                   </div>
                   <span className={`size-9 border flex items-center justify-center transition-all duration-500 ${active === i ? "border-orange bg-orange text-white" : "border-line-strong text-muted"}`}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg>

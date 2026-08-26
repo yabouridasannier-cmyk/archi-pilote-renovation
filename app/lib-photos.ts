@@ -47,3 +47,8 @@ export const PHOTOS = {
   refChambreDoreeJaune: "/photos/ref/refChambreDoreeJaune.jpeg",
   refSalonBalconRue: "/photos/ref/refSalonBalconRue.jpeg",
 } as const;
+
+/* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —
+   transposition Next.js du cahier images V3 §3.2 pour les visuels de banque. */
+export const srcSetOf = (url: string) =>
+  [480, 768, 1200, 1600].map((w) => `${url.replace(/w=1600/, `w=${w}`)} ${w}w`).join(", ");

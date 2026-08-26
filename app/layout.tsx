@@ -34,6 +34,7 @@ export const metadata: Metadata = {
     title: "ARCHI PILOTE RÉNOVATION — Rénovation tous corps d'état en Île-de-France",
     description:
       "Pilotage de travaux de rénovation en Île-de-France. Un seul interlocuteur, des entreprises partenaires qui contractent directement avec vous.",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Séjour rénové, niveau de finition visé — visuel d'illustration" }],
   },
 };
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { SITE } from "../data";
 import { Reveal } from "../components/reveal";
@@ -17,15 +17,38 @@ const PROJETS = [
   "Autre projet",
 ];
 
+/* Qualification en tranches fermées (jamais de champ libre pour le budget) —
+   chaque réponse change le traitement du lead, cf. dossier ads §2. */
+const BUDGETS = ["Moins de 10 000 €", "10 000 – 50 000 €", "50 000 – 100 000 €", "100 000 – 200 000 €", "Plus de 200 000 €", "Je ne sais pas encore"];
+const HORIZONS = ["Dans le mois", "Dans les 3 mois", "Dans les 6 mois", "Je me renseigne encore"];
+
 const EASE = [0.22, 1, 0.36, 1] as const;
+const N_STEPS = 4;
+
+function Chips({ items, value, onPick }: { items: string[]; value: string | null; onPick: (v: string) => void }) {
+  return (
+    <div className="flex flex-wrap gap-2.5">
+      {items.map((p) => (
+        <button key={p} onClick={() => onPick(p)} className={`px-5 py-3 text-[0.92rem] font-medium border transition-all duration-300 cursor-pointer ${value === p ? "border-orange bg-orange/15 text-orange" : "border-line-strong text-ivoire hover:border-orange/60"}`}>
+          {p}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export function ContactContent() {
   const [step, setStep] = useState(0);
   const [dir, setDir] = useState(1);
   const [projet, setProjet] = useState<string | null>(null);
+  const [budget, setBudget] = useState<string | null>(null);
+  const [horizon, setHorizon] = useState<string | null>(null);
   const [details, setDetails] = useState({ commune: "", description: "" });
   const [coords, setCoords] = useState({ nom: "", tel: "" });
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [done, setDone] = useState(false);
+  const startedAt = useRef(Date.now());
 
   const go = (next: number) => {
     setDir(next > step ? 1 : -1);
@@ -33,7 +56,37 @@ export function ContactContent() {
   };
 
   const canNext =
-    step === 0 ? projet !== null : step === 1 ? details.commune.length > 1 : coords.nom.length > 1 && coords.tel.length > 5;
+    step === 0 ? projet !== null
+    : step === 1 ? budget !== null && horizon !== null
+    : step === 2 ? details.commune.length > 1
+    : coords.nom.length > 1 && coords.tel.length > 5;
+
+  const submit = async () => {
+    setSending(true);
+    setError(null);
+    try {
+      const r = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          projet, budget, horizon,
+          commune: details.commune, description: details.description,
+          nom: coords.nom, tel: coords.tel,
+          website: "", startedAt: startedAt.current,
+        }),
+      });
+      const data = await r.json().catch(() => ({ ok: false }));
+      if (r.ok && data.ok) {
+        setDone(true);
+      } else {
+        setError(`Votre demande n'a pas pu être transmise. Appelez-nous directement au ${SITE.telAffiche} ou écrivez-nous sur WhatsApp.`);
+      }
+    } catch {
+      setError(`Votre demande n'a pas pu être transmise. Appelez-nous directement au ${SITE.telAffiche} ou écrivez-nous sur WhatsApp.`);
+    } finally {
+      setSending(false);
+    }
+  };
 
   return (
     <section className="relative pb-28 md:pb-40">
@@ -42,9 +95,9 @@ export function ContactContent() {
           {!done ? (
             <>
               <div className="flex items-center justify-between mb-8">
-                <span className="font-mono text-[0.66rem] tracking-[0.22em] uppercase text-muted">Étape {step + 1} / 3</span>
+                <span className="font-mono text-[0.66rem] tracking-[0.22em] uppercase text-muted">Étape {step + 1} / {N_STEPS}</span>
                 <div className="flex-1 max-w-[10rem] h-1 rounded-full bg-surface-2 ml-4 overflow-hidden">
-                  <motion.div animate={{ width: `${((step + 1) / 3) * 100}%` }} transition={{ duration: 0.6, ease: EASE }} className="h-full rounded-full bg-gradient-to-r from-ambre to-orange-deep" />
+                  <motion.div animate={{ width: `${((step + 1) / N_STEPS) * 100}%` }} transition={{ duration: 0.6, ease: EASE }} className="h-full rounded-full bg-gradient-to-r from-ambre to-orange-deep" />
                 </div>
               </div>
 
@@ -61,17 +114,25 @@ export function ContactContent() {
                   {step === 0 && (
                     <>
                       <h2 className="display text-2xl md:text-3xl text-ivoire">Quel est votre projet&nbsp;?</h2>
-                      <div className="flex flex-wrap gap-2.5">
-                        {PROJETS.map((p) => (
-                          <button key={p} onClick={() => setProjet(p)} className={`px-5 py-3 text-[0.92rem] font-medium border transition-all duration-300 cursor-pointer ${projet === p ? "border-orange bg-orange/15 text-orange" : "border-line-strong text-ivoire hover:border-orange/60"}`}>
-                            {p}
-                          </button>
-                        ))}
-                      </div>
+                      <Chips items={PROJETS} value={projet} onPick={setProjet} />
                     </>
                   )}
 
                   {step === 1 && (
+                    <>
+                      <h2 className="display text-2xl md:text-3xl text-ivoire">Budget et calendrier&nbsp;?</h2>
+                      <div className="flex flex-col gap-2">
+                        <span className="font-mono text-[0.66rem] tracking-[0.18em] uppercase text-muted">Budget envisagé</span>
+                        <Chips items={BUDGETS} value={budget} onPick={setBudget} />
+                      </div>
+                      <div className="flex flex-col gap-2">
+                        <span className="font-mono text-[0.66rem] tracking-[0.18em] uppercase text-muted">Vous pensez démarrer…</span>
+                        <Chips items={HORIZONS} value={horizon} onPick={setHorizon} />
+                      </div>
+                    </>
+                  )}
+
+                  {step === 2 && (
                     <>
                       <h2 className="display text-2xl md:text-3xl text-ivoire">Où, et en quelques mots&nbsp;?</h2>
                       <input className="field" placeholder="Commune du projet" value={details.commune} onChange={(e) => setDetails({ ...details, commune: e.target.value })} />
@@ -79,12 +140,13 @@ export function ContactContent() {
                     </>
                   )}
 
-                  {step === 2 && (
+                  {step === 3 && (
                     <>
                       <h2 className="display text-2xl md:text-3xl text-ivoire">Où peut-on vous joindre&nbsp;?</h2>
                       <input className="field" placeholder="Votre nom" value={coords.nom} onChange={(e) => setCoords({ ...coords, nom: e.target.value })} />
                       <input className="field" placeholder="Votre téléphone" type="tel" value={coords.tel} onChange={(e) => setCoords({ ...coords, tel: e.target.value })} />
-                      <p className="text-muted text-[0.82rem]">Maquette de démonstration — aucune donnée n&apos;est envoyée ni conservée.</p>
+                      <p className="text-muted text-[0.82rem]">Vos coordonnées servent uniquement à vous rappeler au sujet de ce projet.</p>
+                      {error && <p className="text-[0.88rem] leading-relaxed" style={{ color: "var(--c-orange-deep)" }}>{error}</p>}
                     </>
                   )}
                 </motion.div>
@@ -92,8 +154,12 @@ export function ContactContent() {
 
               <div className="flex items-center justify-between mt-8">
                 <button onClick={() => go(Math.max(0, step - 1))} className={`btn btn-ghost !py-2.5 !px-3.5 sm:!px-5 text-sm ${step === 0 ? "invisible" : ""}`}>Retour</button>
-                <button onClick={() => (step === 2 ? setDone(true) : go(step + 1))} disabled={!canNext} className={`btn btn-primary !py-2.5 !px-3.5 sm:!px-6 text-sm ${!canNext ? "opacity-40 pointer-events-none" : ""}`}>
-                  {step === 2 ? "Envoyer ma demande" : "Continuer"}
+                <button
+                  onClick={() => (step === N_STEPS - 1 ? submit() : go(step + 1))}
+                  disabled={!canNext || sending}
+                  className={`btn btn-primary !py-2.5 !px-3.5 sm:!px-6 text-sm ${!canNext || sending ? "opacity-40 pointer-events-none" : ""}`}
+                >
+                  {step === N_STEPS - 1 ? (sending ? "Envoi en cours…" : "Envoyer ma demande") : "Continuer"}
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
                 </button>
               </div>
@@ -104,8 +170,7 @@ export function ContactContent() {
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--c-orange)" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
               </span>
               <h2 className="display text-3xl text-ivoire">Demande envoyée&nbsp;!</h2>
-              <p className="lead max-w-sm">{coords.nom.split(" ")[0] || "Merci"}, un chargé de projet vous rappelle sous 48&nbsp;h pour organiser la visite technique.</p>
-              <p className="font-mono text-[0.64rem] tracking-[0.2em] uppercase text-muted">Maquette — aucune donnée réellement transmise</p>
+              <p className="lead max-w-sm">{coords.nom.split(" ")[0] || "Merci"}, un chargé de projet vous rappelle au sujet de votre projet à {details.commune || "votre commune"}.</p>
             </motion.div>
           )}
         </Reveal>
@@ -116,7 +181,7 @@ export function ContactContent() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             <div className="absolute bottom-0 inset-x-0 p-6">
               <span className="text-white/90 text-lg font-medium">{SITE.zone}</span>
-              <p className="text-white/60 text-[0.85rem]">Visite technique et devis gratuits</p>
+              <p className="text-white/60 text-[0.85rem]">Visite technique gratuite, devis des entreprises sous 48 h</p>
             </div>
           </Reveal>
 
@@ -135,7 +200,7 @@ export function ContactContent() {
                 <span className="display text-[1.2rem] text-ivoire group-hover:text-orange transition-colors normal-case">Écrire sur WhatsApp</span>
                 <span className="text-muted text-[0.85rem]">Photos du projet, réponse rapide</span>
               </div>
-              <span className="size-11 rounded-full glass-pill flex items-center justify-center text-ivoire group-hover:text-[#25d366] transition-colors shrink-0">
+              <span className="size-11 rounded-full bg-black/45 border border-white/25 flex items-center justify-center text-white group-hover:text-[#25d366] transition-colors shrink-0">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.9 4.44-9.9 9.9 0 1.75.46 3.45 1.33 4.95L2 22l5.3-1.39a9.87 9.87 0 0 0 4.74 1.21h.01c5.45 0 9.9-4.44 9.9-9.9 0-2.65-1.03-5.13-2.9-7A9.82 9.82 0 0 0 12.04 2Z" /></svg>
               </span>
             </a>

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/renovation-seine-saint-denis-93" },
   // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
   robots: { index: false, follow: true },
-  title: "Rénovation complexe en Seine-Saint-Denis (93) | ARCHI PILOTE",
+  title: "Rénovation complexe en Seine-Saint-Denis (93) | ARCHI PILOTE RÉNOVATION",
   description: "Rénovation complète, structure, maison, appartement et projets complexes en Seine-Saint-Denis. ARCHI PILOTE RÉNOVATION étudie les dossiers selon leur ampleur et leurs contraintes.",
 };
 

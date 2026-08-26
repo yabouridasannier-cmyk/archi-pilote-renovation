@@ -16,7 +16,7 @@ export default function DevisPage() {
       <PageHeader
         eyebrow="Estimateur de budget"
         segments={[{ text: "Votre budget," }, { text: "en trois clics.", serif: true, gradient: true }]}
-        lead="Une première fourchette immédiate, basée sur les fourchettes observées sur les projets accompagnés en 2026. Le chiffrage définitif reste celui des devis remis par les entreprises, après une visite technique gratuite."
+        lead="Une première fourchette immédiate, basée sur des fourchettes de marché Île-de-France, repères 2026. Le chiffrage définitif reste celui des devis remis par les entreprises, après une visite technique gratuite."
       />
       <section className="relative pb-24 md:pb-36">
         <div className="container-site">

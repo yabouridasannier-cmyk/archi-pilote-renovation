@@ -6,6 +6,8 @@ import { AVANT_APRES } from "../data";
 import { PHOTOS } from "../lib-photos";
 
 export const metadata: Metadata = {
+  // Page de comparaison en illustration uniquement — noindex tant qu'aucun vrai avant/apres n'existe (V3).
+  robots: { index: false, follow: true },
   alternates: { canonical: "/avant-apres-renovation-maison" },
   title: "Avant / après rénovation de maison | ARCHI PILOTE RÉNOVATION",
   description: "Chaque cas réel comporte commune, type de maison, contrainte, lots et durée observée. Aucun visuel d'illustration n'est présenté comme une réalisation.",

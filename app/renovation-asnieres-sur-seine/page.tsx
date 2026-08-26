@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/renovation-asnieres-sur-seine" },
   // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
   robots: { index: false, follow: true },
-  title: "Rénovation à Asnières-sur-Seine : appartement et maison | ARCHI PILOTE",
+  title: "Rénovation à Asnières-sur-Seine : appartement et maison | ARCHI PILOTE RÉNOVATION",
   description: "Projet de rénovation à Asnières-sur-Seine : rénovation complète, structure, maison, appartement et lots techniques selon le bien. Étude et pilotage par ARCHI PILOTE RÉNOVATION.",
 };
 

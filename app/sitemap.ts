@@ -22,7 +22,6 @@ const STATIC_PATHS = [
   "/bareme-prix-renovation",
   "/glossaire-renovation-maison",
   "/aides-renovation-energetique",
-  "/avant-apres-renovation-maison",
   "/renovation-appartement",
   "/second-oeuvre",
   "/renovation-maison-pavillon",

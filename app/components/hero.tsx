@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "motion/react";
 import { WordReveal } from "./word-reveal";
-import { PHOTOS } from "../lib-photos";
+import { PHOTOS, srcSetOf } from "../lib-photos";
 
 const EASE = [0.25, 0.1, 0.25, 1] as const;
 
@@ -20,6 +20,8 @@ function HeroBackdrop() {
     >
       <img
         src={PHOTOS.heroHaussmannien}
+        srcSet={srcSetOf(PHOTOS.heroHaussmannien)}
+        sizes="100vw"
         alt=""
         aria-hidden
         fetchPriority="high"
@@ -50,7 +52,7 @@ export function Hero() {
             initial={{ opacity: 0, filter: "blur(10px)", scale: 0.95 }}
             animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
             transition={{ duration: 1, ease: EASE }}
-            className="glass-pill pl-3 pr-4 py-2 flex items-center gap-2.5"
+            className="bg-black/45 border border-white/25 backdrop-blur-[6px] pl-3 pr-4 py-2 flex items-center gap-2.5"
           >
             <span className="relative flex size-2 shrink-0">
               <span className="absolute inline-flex size-full rounded-full bg-orange opacity-70 animate-ping" />

@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/renovation-nanterre" },
   // Doctrine V3 : page locale sans preuve locale reelle = noindex jusqu'a preuve documentee.
   robots: { index: false, follow: true },
-  title: "Rénovation à Nanterre : maison, pavillon et rénovation complète | ARCHI PILOTE",
+  title: "Rénovation à Nanterre : maison, pavillon et rénovation complète | ARCHI PILOTE RÉNOVATION",
   description: "Projet de rénovation à Nanterre : rénovation complète, structure, maison, appartement et lots techniques selon le bien. Étude et pilotage par ARCHI PILOTE RÉNOVATION.",
 };
 

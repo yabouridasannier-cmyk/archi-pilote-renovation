@@ -17,7 +17,7 @@ export function BlogGrid() {
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img src={PHOTOS[a.photo as keyof typeof PHOTOS]} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
-                  <span className="absolute top-3 left-3 glass-pill px-3 py-1 font-mono text-[0.62rem] tracking-[0.14em] uppercase text-white/90">{a.categorie}</span>
+                  <span className="absolute top-3 left-3 bg-black/45 border border-white/25 px-3 py-1 font-mono text-[0.62rem] tracking-[0.14em] uppercase text-white/90">{a.categorie}</span>
                 </div>
                 <div className="flex flex-col gap-2.5 p-6 flex-1">
                   <span className="font-mono text-[0.7rem] text-muted">{a.date}</span>

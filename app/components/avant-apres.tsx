@@ -89,10 +89,10 @@ export function AvantApres({
       </div>
 
       {/* Labels */}
-      <span className="absolute top-4 left-4 glass-pill px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
+      <span className="absolute top-4 left-4 bg-black/45 border border-white/25 px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
         {avantLabel}
       </span>
-      <span className="absolute top-4 right-4 glass-pill px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
+      <span className="absolute top-4 right-4 bg-black/45 border border-white/25 px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
         {apresLabel}
       </span>
 
@@ -103,7 +103,7 @@ export function AvantApres({
       >
         <div className="absolute inset-y-0 -translate-x-1/2 w-[2px] bg-white/85 shadow-[0_0_18px_rgba(0,0,0,0.5)]" />
         <div
-          className={`absolute top-1/2 -translate-y-1/2 -translate-x-1/2 size-12 rounded-full glass-pill flex items-center justify-center text-white transition-transform duration-300 ${
+          className={`absolute top-1/2 -translate-y-1/2 -translate-x-1/2 size-12 rounded-full bg-black/45 border border-white/30 flex items-center justify-center text-white transition-transform duration-300 ${
             dragging ? "scale-110" : ""
           }`}
         >
@@ -129,7 +129,7 @@ export function AvantApres({
             as="h2"
             segments={[
               { text: titre.split("—")[0].trim() + "," },
-              { text: "de nos mains.", serif: true, gradient: true },
+              { text: "en images.", serif: true, gradient: true },
             ]}
             className="display text-[clamp(2.2rem,5.5vw,4.3rem)] text-ivoire text-balance max-w-4xl"
           />

@@ -4,7 +4,7 @@ import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/expertises-et-cas-par-specialite" },
-  title: "Expertises et cas de rénovation | ARCHI PILOTE",
+  title: "Expertises et cas de rénovation | ARCHI PILOTE RÉNOVATION",
   description: "Structure, copropriété, réseaux, énergie, salle de bain, cuisine : les situations techniques et arbitrages que nous documentons projet après projet.",
 };
 

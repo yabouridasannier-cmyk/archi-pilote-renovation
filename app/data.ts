@@ -184,12 +184,15 @@ export const GALERIE_CATEGORIES: { id: Categorie; label: string }[] = [
 ];
 
 /* Catégorie "chantier" supprimée : elle n'était remplie que de banque d'images,
-   ce qui revient à prétendre montrer un chantier (interdit, dossier V3 §3.1). */
+   ce qui revient à prétendre montrer un chantier (interdit, dossier V3 §3.1).
+   ⚠ Les NOMS DE FICHIERS ne décrivent pas toujours le contenu (nommage initial
+   erroné) — les labels ci-dessous sont rédigés d'après les pixels, vérifiés
+   image par image le 26/08. Ne jamais se fier au nom de fichier. */
 export const GALERIE = [
-  { src: "refSalonBalconRue", label: "Séjour rénové, niveau de finition visé · illustration", cat: "sejour", portrait: false },
-  { src: "refCuisineSejour", label: "Cuisine ouverte, plan de travail marbré · illustration", cat: "cuisine", portrait: false },
-  { src: "refSalleBainMarbreNoir", label: "Salle d'eau marbre, douche et double vasque · illustration", cat: "sdb", portrait: true },
-  { src: "refSalleBainMarbreClair", label: "Salle de bain, baignoire et faïence marbrée · illustration", cat: "sdb", portrait: true },
-  { src: "refChambreTeteLitVelours", label: "Chambre, tête de lit velours et appliques · illustration", cat: "chambre", portrait: true },
-  { src: "refChambreDoreeJaune", label: "Chambre aux tons dorés, niveau de finition visé · illustration", cat: "chambre", portrait: true },
+  { src: "refSalonBalconRue", label: "Cuisine ouverte sur le séjour, crédence en pierre · illustration", cat: "cuisine", portrait: false },
+  { src: "refCuisineSejour", label: "Séjour et salle à manger, table en marbre · illustration", cat: "sejour", portrait: false },
+  { src: "refChambreDoreeJaune", label: "Salle de bain, baignoire et granit toute hauteur · illustration", cat: "sdb", portrait: false },
+  { src: "refSalleBainMarbreClair", label: "Salle d'eau, douche et vasque en pierre claire · illustration", cat: "sdb", portrait: true },
+  { src: "refSalleBainMarbreNoir", label: "Chambre, cheminée d'époque et moulures · illustration", cat: "chambre", portrait: false },
+  { src: "refChambreTeteLitVelours", label: "Chambre, balcons haussmanniens sur rue · illustration", cat: "chambre", portrait: true },
 ] as const;

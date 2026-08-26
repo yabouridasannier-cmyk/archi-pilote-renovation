@@ -53,7 +53,7 @@ export function GalerieGrid() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
                 <figcaption className="absolute bottom-0 inset-x-0 p-5 flex items-end justify-between gap-3">
                   <span className="text-white text-[0.95rem] font-medium leading-snug">{photo.label}</span>
-                  <span className="glass-pill px-3 py-1 font-mono text-[0.6rem] tracking-[0.16em] uppercase text-white/85 shrink-0">
+                  <span className="bg-black/45 border border-white/25 px-3 py-1 font-mono text-[0.6rem] tracking-[0.16em] uppercase text-white/85 shrink-0">
                     {GALERIE_CATEGORIES.find((c) => c.id === photo.cat)?.label ?? photo.cat}
                   </span>
                 </figcaption>
