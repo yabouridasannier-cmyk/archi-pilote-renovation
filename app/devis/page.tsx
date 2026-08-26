@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/devis" },
   title: "Estimer mon budget — ARCHI PILOTE RÉNOVATION",
   description:
-    "Estimez le budget de vos travaux de rénovation en 3 clics : type de projet, surface, montées en gamme. Fourchette immédiate, devis des entreprises sous 48 h après visite technique.",
+    "Estimez le budget de vos travaux de rénovation en quelques clics : type de projet, surface, montées en gamme. Fourchette immédiate, devis des entreprises sous 48 h après visite technique.",
 };
 
 export default function DevisPage() {
@@ -15,7 +15,7 @@ export default function DevisPage() {
     <main className="relative z-10 bg-carbone">
       <PageHeader
         eyebrow="Estimateur de budget"
-        segments={[{ text: "Votre budget," }, { text: "en trois clics.", serif: true, gradient: true }]}
+        segments={[{ text: "Votre budget," }, { text: "en quelques clics.", serif: true, gradient: true }]}
         lead="Une première fourchette immédiate, basée sur des fourchettes de marché Île-de-France, repères 2026. Le chiffrage définitif reste celui des devis remis par les entreprises, après une visite technique gratuite."
       />
       <section className="relative pb-24 md:pb-36">
