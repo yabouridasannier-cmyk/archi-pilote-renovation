@@ -88,12 +88,16 @@ export function AvantApres({
         <img src={avant} alt={avantLabel} className="absolute inset-0 size-full object-cover" draggable={false} />
       </div>
 
-      {/* Labels */}
+      {/* Labels — version courte sur mobile (les libellés complets se chevauchaient
+          sur écran étroit) ; la mention « illustration » reste portée par le texte
+          d'intro et la légende sous le comparateur. */}
       <span className="absolute top-4 left-4 bg-black/45 border border-white/25 px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
-        {avantLabel}
+        <span className="sm:hidden">{avantLabel.split("—")[0].trim()}</span>
+        <span className="hidden sm:inline">{avantLabel}</span>
       </span>
       <span className="absolute top-4 right-4 bg-black/45 border border-white/25 px-3.5 py-1.5 font-mono text-[0.66rem] tracking-[0.18em] uppercase text-white/90 pointer-events-none">
-        {apresLabel}
+        <span className="sm:hidden">{apresLabel.split("—")[0].trim()}</span>
+        <span className="hidden sm:inline">{apresLabel}</span>
       </span>
 
       {/* Poignée */}
