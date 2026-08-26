@@ -86,9 +86,11 @@ export async function POST(req: NextRequest) {
   if (errors.length) return NextResponse.json({ ok: false, errors }, { status: 422 });
 
   try {
+    const site = `https://${host}`;
     const r = await fetch(`https://formsubmit.co/ajax/${DEST}`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      // FormSubmit exige Origin/Referer, même en AJAX serveur.
+      headers: { "Content-Type": "application/json", Accept: "application/json", Origin: site, Referer: `${site}/contact` },
       body: JSON.stringify({
         _subject: `Nouveau projet — ${projet} à ${commune}`,
         _template: "table",
@@ -101,7 +103,9 @@ export async function POST(req: NextRequest) {
         Description: description || "(non renseignée)",
       }),
     });
-    if (!r.ok) throw new Error(`formsubmit ${r.status}`);
+    const res = (await r.json().catch(() => null)) as { success?: string | boolean } | null;
+    const delivered = r.ok && (res?.success === true || res?.success === "true");
+    if (!delivered) throw new Error("formsubmit not delivered");
     return NextResponse.json({ ok: true });
   } catch {
     // La livraison a échoué : on le dit franchement au visiteur (pas de faux succès).
