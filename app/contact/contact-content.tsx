@@ -78,6 +78,10 @@ export function ContactContent() {
       const data = await r.json().catch(() => ({ ok: false }));
       if (r.ok && data.ok) {
         setDone(true);
+      } else if (r.status === 422 && Array.isArray(data.errors) && data.errors.includes("tel")) {
+        setError("Vérifiez votre numéro de téléphone — il doit comporter 10 chiffres (ex. 06 12 34 56 78).");
+      } else if (r.status === 422) {
+        setError("Certains champs sont incomplets — vérifiez vos réponses puis renvoyez.");
       } else {
         setError(`Votre demande n'a pas pu être transmise. Appelez-nous directement au ${SITE.telAffiche} ou écrivez-nous sur WhatsApp.`);
       }
