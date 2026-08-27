@@ -25,6 +25,7 @@ const STATIC_PATHS = [
   "/renovation-appartement",
   "/second-oeuvre",
   "/renovation-maison-pavillon",
+  "/menuiserie-sur-mesure",
   "/ouverture-mur-porteur",
   "/extension-maison",
   "/surelevation",

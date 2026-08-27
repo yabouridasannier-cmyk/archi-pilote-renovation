@@ -34,3 +34,28 @@ Interdit : prétendre montrer un chantier, une équipe, un partenaire ou une imp
 - **~17 photos réelles de chantier** (triptyque avant/pendant/après même angle, contrôles avant fermeture, étaiement, fondations…) — brief à envoyer à Ilann.
 - **~5 documents anonymisés** (journal de décisions, décomposition de coûts, devis annoté).
 - **~5 infographies de données** (budget par familles, comparatif systèmes…).
+
+## Photos de chantiers réels — reçues du client le 27/08/2026
+
+Fournies par Ilann (WhatsApp) comme réalisations des équipes partenaires du groupe. Chaque image a été **vue et décrite d'après ses pixels** avant publication. Provenance projet par projet, dates et autorisations détaillées : à compléter par Ilann. Le lot brut complet (143 images, dont doublons, rendus d'inspiration exclus et photos avec visages écartées) est conservé hors repo.
+
+| ID | Fichier | Sujet vérifié | Statut | Usage |
+|---|---|---|---|---|
+| R-01 | chParquetVitrifie | Parquet poncé/vitrifié + cheminée | PUBLIÉ | galerie, /sols-finitions-renovation |
+| R-02 | chMenuiserieClaustra | Mur tasseaux + porte intégrée | PUBLIÉ | galerie |
+| R-03 | chCharpenteInterieur | Charpente bois neuve (intérieur) | PUBLIÉ | /gros-oeuvre-structure |
+| R-04 | chCharpenteLevee | Charpente levée avant couverture | PUBLIÉ | galerie, /extension-maison, /renovation-toiture-charpente |
+| R-05 | chLitCabane | Lit cabane + rangements enfant | PUBLIÉ | galerie, /menuiserie-sur-mesure |
+| R-06 | chRavalementArdoise | Maison échafaudée, ardoise refaite | PUBLIÉ | /renovation-maison-pavillon |
+| R-07 | chSdbCarreauxCiment | Douche carreaux ciment + vasque pierre | PUBLIÉ | galerie, /renovation-salle-de-bain-maison, services |
+| R-08 | chSdbBaignoireTeck | Baignoire îlot + meuble teck | PUBLIÉ | galerie |
+| R-09 | chCloisonsPlaco | Cloisons hydro/phoniques ossature métal | PUBLIÉ | /second-oeuvre, services, timeline |
+| R-10 | chSurelevationBrique | Élévation briques + échafaudage int. | PUBLIÉ | galerie, /surelevation, services |
+| R-11 | chBibliotheque | Bibliothèque toute hauteur + pierre | PUBLIÉ | galerie |
+| R-12 | chIsolationCombles | Isolation rampants + plaquage (artisan de loin, non identifiable) | PUBLIÉ | galerie, /renovation-energetique, services |
+| R-13 | chCuisineCremeIlot | Cuisine crème îlot noir | PUBLIÉ | galerie, services |
+| R-14 | chCuisineTerracotta | Cuisine terracotta/blanc, corniches | PUBLIÉ | galerie |
+| R-15 | chCuisineSauge | Cuisine sauge, crédence pierre verte | PUBLIÉ | galerie, /renovation-cuisine-maison |
+| R-16 | chCuisineBlancheU | Cuisine blanche en U, plans bois | PUBLIÉ | galerie |
+
+Écartées volontairement : rendus 3D/inspiration (WC pierre, WC plantes, sdb tasseaux, escalier), photos « Pinterest » (salons beige, cuisine US à poutres), photos avec visage reconnaissable (plombier au lavabo), terrasses/piscines (hors territoire ARCHI PILOTE RÉNOVATION), intérieurs haussmanniens premium supplémentaires (territoire éditorial ARCHI RENOV, V3 §5).

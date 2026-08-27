@@ -73,6 +73,7 @@ export function Footer() {
                   <Link href="/aides-renovation-energetique" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Aides & subventions</Link>
                   <Link href="/avant-apres-renovation-maison" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Avant / après</Link>
                   <Link href="/renovation-appartement" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Rénovation appartement</Link>
+                  <Link href="/menuiserie-sur-mesure" className="text-white/70 hover:text-orange transition-colors text-[0.95rem]">Menuiserie sur-mesure</Link>
                 </div>
                 <div className="flex flex-col gap-3">
                   <span className="font-mono text-[0.62rem] tracking-[0.24em] uppercase text-white/35">Contact</span>

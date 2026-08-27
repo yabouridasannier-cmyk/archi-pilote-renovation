@@ -15,7 +15,7 @@ export default function Page() {
       segments={[{ text: "Salle de bain :" }, { text: "l'étanchéité avant le décor.", serif: true, gradient: true }]}
       lead="Une salle de bain durable dépend du support, de l'étanchéité, des pentes, de la ventilation et des réseaux plus que du style du carrelage."
       photo="salleBainBeton"
-      photoAlt="Salle de bain en cours de rénovation, étanchéité sous carrelage"
+      photoAlt="Douche carreaux de ciment et vasque en pierre, en fin de chantier — chantier réel des équipes partenaires"
       sections={[
         { titre: "Étanchéité sous carrelage", texte: "Prescrire un système adapté et documenter sa mise en œuvre — c'est ce qui décide de la durabilité, bien avant le choix du carrelage." },
         { titre: "Ventilation", texte: "Une belle salle d'eau mal ventilée se dégrade vite, quels que soient les matériaux choisis." },

@@ -20,7 +20,7 @@ export default function Page() {
       segments={[{ text: "Le second œuvre," }, { text: "un système, pas une liste de lots.", serif: true, gradient: true }]}
       lead="Une rénovation réussit ou échoue dans ce qui ne se voit plus après fermeture : réseaux, réservations, renforts, ventilation. Le second œuvre technique consiste à faire dialoguer électricité, plomberie, cloisons et finitions avant que le parement ne cache tout — parce qu'une décision prise dans un lot crée une contrainte dans un autre, et que la corriger après coup coûte toujours plus cher que l'avoir anticipée."
       photo="chantierRenovation"
-      photoAlt="Pièce en travaux, cloisons ouvertes et réseaux apparents"
+      photoAlt="Cloisons hydrofuges et phoniques en cours de montage sur ossature métallique — chantier réel"
       slug="/second-oeuvre"
       sections={[
         { titre: "Les réseaux se lisent ensemble", texte: "Plomberie, électricité et ventilation partagent les mêmes cloisons, les mêmes gaines, parfois les mêmes réservations. Les passages sont contrôlés avant fermeture : un réseau validé isolément peut devenir incompatible dès qu'un autre lot pose le sien. Le pilotage consiste à organiser ce contrôle croisé au bon moment, pas après la pose des parements." },

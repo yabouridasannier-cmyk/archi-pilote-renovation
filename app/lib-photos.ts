@@ -6,21 +6,21 @@ export const PHOTOS = {
   sejourAvant: "https://images.unsplash.com/photo-1649083048770-82e8ffd80431?q=80&w=1600&auto=format&fit=crop",
   salonMinimal2: "https://images.unsplash.com/photo-1724582586458-a51791349977?q=80&w=1600&auto=format&fit=crop",
 
-  detailParquet: "https://images.unsplash.com/photo-1761053130711-2515ef532bb5?q=80&w=1600&auto=format&fit=crop",
+  detailParquet: "/photos/chantiers/chParquetVitrifie.jpeg",
   parquetGros: "https://images.unsplash.com/photo-1761053133165-0f3acdaf1770?q=80&w=1600&auto=format&fit=crop",
 
-  cuisineSurMesure: "https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?q=80&w=1600&auto=format&fit=crop",
+  cuisineSurMesure: "/photos/chantiers/chCuisineCremeIlot.jpeg",
   cuisineDetail: "https://images.unsplash.com/photo-1714860534425-7ce04e013dec?q=80&w=1600&auto=format&fit=crop",
 
-  salleBainBeton: "https://images.unsplash.com/photo-1696987007764-7f8b85dd3033?q=80&w=1600&auto=format&fit=crop",
+  salleBainBeton: "/photos/chantiers/chSdbCarreauxCiment.jpeg",
   betonCireDetail: "https://images.unsplash.com/photo-1560780552-ba54683cb263?q=80&w=1600&auto=format&fit=crop",
 
-  chantierRenovation: "https://images.unsplash.com/photo-1674649207083-281c2517ab49?q=80&w=1600&auto=format&fit=crop",
-  chantierIsolation: "https://images.unsplash.com/photo-1648475236583-2e25a6cbf3bd?q=80&w=1600&auto=format&fit=crop",
+  chantierRenovation: "/photos/chantiers/chCloisonsPlaco.jpeg",
+  chantierIsolation: "/photos/chantiers/chIsolationCombles.jpeg",
 
   planArchitecte: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop",
   devisDetail: "https://images.unsplash.com/photo-1542621334-a254cf47733d?q=80&w=1600&auto=format&fit=crop",
-  grosOeuvre: "https://images.unsplash.com/photo-1721244654392-9c912a6eb236?q=80&w=1600&auto=format&fit=crop",
+  grosOeuvre: "/photos/chantiers/chSurelevationBrique.jpeg",
 
   outilsArtisan: "https://images.unsplash.com/photo-1676311396794-f14881e9daaa?q=80&w=1600&auto=format&fit=crop",
   visiteTechnique: "https://images.unsplash.com/photo-1606676539940-12768ce0e762?q=80&w=1600&auto=format&fit=crop",
@@ -46,9 +46,32 @@ export const PHOTOS = {
   refSalleBainMarbreClair: "/photos/ref/refSalleBainMarbreClair.jpeg",
   refChambreDoreeJaune: "/photos/ref/refChambreDoreeJaune.jpeg",
   refSalonBalconRue: "/photos/ref/refSalonBalconRue.jpeg",
+
+  /* Photos de CHANTIERS RÉELS — fournies par le client (Ilann, 27/08/2026),
+     réalisations des équipes partenaires du groupe. Sélection et légendes
+     rédigées d'après les pixels, image par image. Registre : docs/REGISTRE-MEDIAS.md */
+  chParquetVitrifie: "/photos/chantiers/chParquetVitrifie.jpeg",
+  chMenuiserieClaustra: "/photos/chantiers/chMenuiserieClaustra.jpeg",
+  chCharpenteInterieur: "/photos/chantiers/chCharpenteInterieur.jpeg",
+  chCharpenteLevee: "/photos/chantiers/chCharpenteLevee.jpeg",
+  chLitCabane: "/photos/chantiers/chLitCabane.jpeg",
+  chRavalementArdoise: "/photos/chantiers/chRavalementArdoise.jpeg",
+  chSdbCarreauxCiment: "/photos/chantiers/chSdbCarreauxCiment.jpeg",
+  chSdbBaignoireTeck: "/photos/chantiers/chSdbBaignoireTeck.jpeg",
+  chCloisonsPlaco: "/photos/chantiers/chCloisonsPlaco.jpeg",
+  chSurelevationBrique: "/photos/chantiers/chSurelevationBrique.jpeg",
+  chBibliotheque: "/photos/chantiers/chBibliotheque.jpeg",
+  chIsolationCombles: "/photos/chantiers/chIsolationCombles.jpeg",
+  chCuisineCremeIlot: "/photos/chantiers/chCuisineCremeIlot.jpeg",
+  chCuisineTerracotta: "/photos/chantiers/chCuisineTerracotta.jpeg",
+  chCuisineSauge: "/photos/chantiers/chCuisineSauge.jpeg",
+  chCuisineBlancheU: "/photos/chantiers/chCuisineBlancheU.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —
-   transposition Next.js du cahier images V3 §3.2 pour les visuels de banque. */
+   transposition du cahier images V3 §3.2. Les fichiers locaux (une seule
+   variante servie) ne produisent pas de srcset. */
 export const srcSetOf = (url: string) =>
-  [480, 768, 1200, 1600].map((w) => `${url.replace(/w=1600/, `w=${w}`)} ${w}w`).join(", ");
+  url.includes("w=1600")
+    ? [480, 768, 1200, 1600].map((w) => `${url.replace(/w=1600/, `w=${w}`)} ${w}w`).join(", ")
+    : undefined;

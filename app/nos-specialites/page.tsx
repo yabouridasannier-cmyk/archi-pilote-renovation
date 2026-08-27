@@ -22,6 +22,7 @@ const SECOND_OEUVRE = [
   { titre: "Électricité et plomberie", href: "/electricite-plomberie-renovation", texte: "Réseaux, tableau, circuits, attentes, alimentations, évacuations et documentation avant fermeture." },
   { titre: "Rénovation énergétique", href: "/renovation-energetique", texte: "Isolation, ventilation et chauffage arbitrés ensemble plutôt qu'en additionnant des équipements." },
   { titre: "Sols et finitions", href: "/sols-finitions-renovation", texte: "Support, humidité, planéité, préparation et compatibilité des systèmes conditionnent le résultat final." },
+  { titre: "Menuiserie et rangements sur-mesure", href: "/menuiserie-sur-mesure", texte: "Bibliothèques, dressings, lits cabane, claustras : dessinés pour le lieu, fabriqués en atelier, posés en coordination avec les autres lots." },
 ];
 
 const A_EVITER = [

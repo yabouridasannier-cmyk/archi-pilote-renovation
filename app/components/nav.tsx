@@ -18,7 +18,7 @@ const LINKS = [
 const REALISATIONS_LINKS = [
   { href: "/realisations/pavillon-annees-30-hauts-de-seine/", label: "Pavillon des années 30, Hauts-de-Seine" },
   { href: "/realisations/extension-yvelines/", label: "Extension de plain-pied, Yvelines" },
-  { href: "/realisations", label: "Notre niveau de finition" },
+  { href: "/realisations", label: "Réalisations en images" },
 ];
 
 const SERVICES_LINKS: Record<string, string> = {

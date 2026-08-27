@@ -91,7 +91,7 @@ export function Hero() {
               </Link>
             </motion.div>
             <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.2, ease: EASE }}>
-              <Link href="/realisations" className="btn btn-ghost !text-white !border-white/90 hover:!bg-white hover:!text-orange-deep">Notre niveau de finition</Link>
+              <Link href="/realisations" className="btn btn-ghost !text-white !border-white/90 hover:!bg-white hover:!text-orange-deep">Voir les réalisations</Link>
             </motion.div>
           </div>
 

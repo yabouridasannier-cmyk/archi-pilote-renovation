@@ -175,24 +175,35 @@ export const ARTICLES: Article[] = [
    photographié). Réduite à 6 visuels et légendée en langage de matière plutôt
    qu'en langage de projet, pour ne jamais affirmer une réalisation qui n'existe
    pas (cf. audit T3 §3.2). Catégorie "appartement" supprimée : hors territoire. */
-export type Categorie = "cuisine" | "sdb" | "sejour" | "chambre";
+export type Categorie = "cuisine" | "sdb" | "sejour" | "chambre" | "menuiserie" | "chantier";
 export const GALERIE_CATEGORIES: { id: Categorie; label: string }[] = [
-  { id: "sejour", label: "Séjour" },
   { id: "cuisine", label: "Cuisine" },
   { id: "sdb", label: "Salle de bain" },
+  { id: "menuiserie", label: "Menuiserie sur-mesure" },
+  { id: "chantier", label: "Chantier en cours" },
+  { id: "sejour", label: "Séjour" },
   { id: "chambre", label: "Chambre" },
 ];
 
-/* Catégorie "chantier" supprimée : elle n'était remplie que de banque d'images,
-   ce qui revient à prétendre montrer un chantier (interdit, dossier V3 §3.1).
-   ⚠ Les NOMS DE FICHIERS ne décrivent pas toujours le contenu (nommage initial
-   erroné) — les labels ci-dessous sont rédigés d'après les pixels, vérifiés
-   image par image le 26/08. Ne jamais se fier au nom de fichier. */
+/* Photos « · chantier des équipes partenaires » = RÉELLES, fournies par le
+   client le 27/08 et vérifiées image par image (registre docs/REGISTRE-MEDIAS.md).
+   Les entrées « · illustration » restent des visuels de niveau de finition.
+   ⚠ Ne jamais se fier au nom de fichier : les labels décrivent les pixels. */
 export const GALERIE = [
-  { src: "refSalonBalconRue", label: "Cuisine ouverte sur le séjour, crédence en pierre · illustration", cat: "cuisine", portrait: false },
+  { src: "chCuisineSauge", label: "Cuisine vert sauge, crédence en pierre verte · chantier des équipes partenaires", cat: "cuisine", portrait: true },
+  { src: "chCuisineCremeIlot", label: "Cuisine crème, îlot central et plans noirs · chantier des équipes partenaires", cat: "cuisine", portrait: false },
+  { src: "chCuisineTerracotta", label: "Cuisine terracotta et blanc sous corniches d'époque · chantier des équipes partenaires", cat: "cuisine", portrait: true },
+  { src: "chCuisineBlancheU", label: "Cuisine blanche en U, plans bois · chantier des équipes partenaires", cat: "cuisine", portrait: true },
+  { src: "chSdbCarreauxCiment", label: "Douche carreaux de ciment, vasque en pierre · chantier des équipes partenaires", cat: "sdb", portrait: true },
+  { src: "chSdbBaignoireTeck", label: "Baignoire îlot et meuble teck, fin de pose · chantier des équipes partenaires", cat: "sdb", portrait: false },
+  { src: "chBibliotheque", label: "Bibliothèque toute hauteur contre mur en pierre · chantier des équipes partenaires", cat: "menuiserie", portrait: true },
+  { src: "chLitCabane", label: "Lit cabane et rangements d'enfant, en fabrication · chantier des équipes partenaires", cat: "menuiserie", portrait: true },
+  { src: "chMenuiserieClaustra", label: "Mur de tasseaux et porte intégrée, en pose · chantier des équipes partenaires", cat: "menuiserie", portrait: false },
+  { src: "chCharpenteLevee", label: "Charpente bois levée avant couverture · chantier des équipes partenaires", cat: "chantier", portrait: false },
+  { src: "chSurelevationBrique", label: "Élévation briques grande hauteur, échafaudage intérieur · chantier des équipes partenaires", cat: "chantier", portrait: false },
+  { src: "chIsolationCombles", label: "Isolation sous rampants, plaquage en grande hauteur · chantier des équipes partenaires", cat: "chantier", portrait: true },
+  { src: "chParquetVitrifie", label: "Parquet ancien poncé et vitrifié, cheminée conservée · chantier des équipes partenaires", cat: "sejour", portrait: false },
   { src: "refCuisineSejour", label: "Séjour et salle à manger, table en marbre · illustration", cat: "sejour", portrait: false },
-  { src: "refChambreDoreeJaune", label: "Salle de bain, baignoire et granit toute hauteur · illustration", cat: "sdb", portrait: false },
   { src: "refSalleBainMarbreClair", label: "Salle d'eau, douche et vasque en pierre claire · illustration", cat: "sdb", portrait: true },
-  { src: "refSalleBainMarbreNoir", label: "Chambre, cheminée d'époque et moulures · illustration", cat: "chambre", portrait: false },
   { src: "refChambreTeteLitVelours", label: "Chambre, balcons haussmanniens sur rue · illustration", cat: "chambre", portrait: true },
 ] as const;

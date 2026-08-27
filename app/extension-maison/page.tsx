@@ -14,8 +14,8 @@ export default function Page() {
       eyebrow="Gros œuvre"
       segments={[{ text: "Extension de maison :" }, { text: "cadrer avant de construire.", serif: true, gradient: true }]}
       lead="Une extension modifie surface, enveloppe, structure et parfois fiscalité ou autorisations. Le projet doit être cadré avant les devis."
-      photo="grosOeuvre"
-      photoAlt="Extension de maison en cours de gros œuvre"
+      photo="chCharpenteLevee"
+      photoAlt="Ossature et charpente bois levées sur dalle neuve — chantier réel des équipes partenaires"
       sections={[
         { titre: "Urbanisme et faisabilité", texte: "PLU, emprise au sol, hauteur, recul et voisinage peuvent décider du projet avant même le dessin final." },
         { titre: "Connexion à l'existant", texte: "Le point faible n'est pas toujours l'extension neuve mais sa liaison avec la maison : structure, étanchéité, niveaux, réseaux et thermique." },

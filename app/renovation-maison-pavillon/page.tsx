@@ -18,8 +18,8 @@ export default function Page() {
       eyebrow="Maison & pavillon"
       segments={[{ text: "Une maison se rénove" }, { text: "du sol à la toiture.", serif: true, gradient: true }]}
       lead="Un pavillon n'est pas une somme de pièces : c'est un bâtiment complet, avec une enveloppe qui protège, une structure qui porte, des réseaux qui traversent et des usages qui évoluent. Rénover une maison, c'est d'abord comprendre comment ces couches tiennent ensemble — puis décider dans le bon ordre, de la toiture aux finitions, pour que chaque lot prépare le suivant au lieu de le contredire."
-      photo="grosOeuvre"
-      photoAlt="Maison individuelle en cours de travaux, échafaudage en façade"
+      photo="chRavalementArdoise"
+      photoAlt="Maison ancienne sous échafaudage, toiture ardoise refaite — chantier réel des équipes partenaires"
       slug="/renovation-maison-pavillon"
       sections={[
         { titre: "Chaque maison réunit enveloppe, structure et usages", texte: "Toiture, murs, menuiseries forment l'enveloppe ; fondations, murs porteurs et planchers, la structure ; électricité, eau, chauffage et ventilation, les réseaux. Un projet de rénovation sérieux commence par une lecture de ces trois couches sur le bâtiment réel — pas sur un prix au mètre carré." },

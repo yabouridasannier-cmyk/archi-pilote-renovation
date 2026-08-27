@@ -15,7 +15,7 @@ export default function Page() {
       segments={[{ text: "Surélévation de maison :" }, { text: "vérifier la structure avant le projet.", serif: true, gradient: true }]}
       lead="Une surélévation crée de la surface sans emprise supplémentaire, mais elle ajoute des charges et modifie le bâtiment entier."
       photo="grosOeuvre"
-      photoAlt="Surélévation de maison, charpente en cours de reprise"
+      photoAlt="Élévation en briques grande hauteur, échafaudage intérieur — chantier réel des équipes partenaires"
       sections={[
         { titre: "Diagnostic initial", texte: "Structure porteuse, fondations, planchers, charpente existante et accès de chantier doivent être étudiés avant tout dessin de projet." },
         { titre: "Autorisations et conception", texte: "Le volume créé, la hauteur et l'aspect extérieur imposent une préparation administrative rigoureuse, souvent plus longue que le chantier lui-même." },

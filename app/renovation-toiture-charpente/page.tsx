@@ -14,8 +14,8 @@ export default function Page() {
       eyebrow="Gros œuvre"
       segments={[{ text: "Toiture et charpente :" }, { text: "traiter l'enveloppe en priorité.", serif: true, gradient: true }]}
       lead="Une toiture défaillante ruine les finitions. Avant d'isoler ou de repeindre, il faut comprendre l'eau, l'air, la ventilation et la structure."
-      photo="chantierIsolation"
-      photoAlt="Isolation des combles avant doublage, sous charpente"
+      photo="chCharpenteLevee"
+      photoAlt="Charpente bois neuve avant couverture — chantier réel des équipes partenaires"
       sections={[
         { titre: "Diagnostic utile", texte: "Couverture, zinguerie, points singuliers, bois, humidité, ventilation et isolation existante : chaque poste conditionne les suivants." },
         { titre: "Réparer ou refaire", texte: "Le bon choix dépend de l'état réel, de la compatibilité des matériaux et des objectifs thermiques — pas d'une règle générale." },

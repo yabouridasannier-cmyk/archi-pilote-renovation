@@ -14,8 +14,8 @@ export default function Page() {
       eyebrow="Second œuvre"
       segments={[{ text: "Sols et finitions :" }, { text: "la qualité dépend d'abord des supports.", serif: true, gradient: true }]}
       lead="Parquet, carrelage, béton ciré ou peinture ne compensent pas un support instable, humide ou mal préparé."
-      photo="parquetGros"
-      photoAlt="Détail de pose de parquet"
+      photo="chParquetVitrifie"
+      photoAlt="Parquet ancien poncé et vitrifié, cheminée conservée — chantier réel des équipes partenaires"
       sections={[
         { titre: "Planéité et humidité", texte: "Mesurer avant de choisir la finition — un support mal préparé se rappelle toujours au bout de quelques mois." },
         { titre: "Compatibilité des systèmes", texte: "Primaire, colle, ragréage, support et finition doivent fonctionner ensemble, pas être choisis indépendamment les uns des autres." },

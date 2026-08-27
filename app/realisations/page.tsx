@@ -8,7 +8,7 @@ import { PHOTOS } from "../lib-photos";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/realisations" },
-  title: "Niveau de finition visé — galerie d'illustration | ARCHI PILOTE RÉNOVATION",
+  title: "Réalisations des équipes partenaires — cuisines, salles de bain, chantiers | ARCHI PILOTE RÉNOVATION",
   description:
     "Rénovations de maisons en Île-de-France : gros œuvre, second œuvre, cuisines sur-mesure, salles de bain étanches, béton ciré.",
 };
@@ -19,8 +19,8 @@ export default function RealisationsPage() {
     <main className="relative z-10 bg-carbone">
       <PageHeader
         eyebrow="Réalisations"
-        segments={[{ text: "Nouvelle marque," }, { text: "premiers chantiers à venir.", serif: true, gradient: true }]}
-        lead="ARCHI PILOTE RÉNOVATION démarre : les visuels ci-dessous illustrent le niveau de finition visé. Vos vrais chantiers viendront remplacer cette galerie, projet après projet."
+        segments={[{ text: "Des chantiers réels," }, { text: "livrés par les équipes partenaires.", serif: true, gradient: true }]}
+        lead="La marque est neuve, les équipes ne le sont pas : cuisines, salles de bain, charpentes et menuiseries ci-dessous sont des chantiers réels réalisés par les entreprises partenaires du groupe. Les visuels marqués « illustration » le restent, clairement."
       />
       <AvantApres
         titre="L'ampleur d'une transformation"
