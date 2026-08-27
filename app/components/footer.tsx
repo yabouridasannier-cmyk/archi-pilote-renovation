@@ -98,6 +98,10 @@ export function Footer() {
             </p>
             <div className="flex flex-col md:flex-row items-center justify-between gap-3 text-[0.82rem] text-white/35">
               <span>© 2026 ARCHI PILOTE RÉNOVATION — <Link href="/mentions-legales" className="hover:text-orange transition-colors">Mentions légales</Link></span>
+              {/* Lien d'avis honnête : jamais d'étoiles ni de note affichées tant qu'il n'y a pas de vrais avis. */}
+              <a href="https://fr.trustpilot.com/evaluate/archipiloterenovation.fr" target="_blank" rel="noreferrer" className="hover:text-orange transition-colors">
+                Donner votre avis sur Trustpilot ★
+              </a>
             </div>
           </div>
         </footer>
