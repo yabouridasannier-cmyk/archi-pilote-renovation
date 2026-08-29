@@ -72,7 +72,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
             </Reveal>
           ))}
           <Reveal variant="slide-up" delay={0.2} className="mt-4">
-            <Link href="/devis" className="btn btn-primary w-fit">
+            <Link href="/estimateur-travaux" className="btn btn-primary w-fit">
               Estimer mon projet
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
             </Link>

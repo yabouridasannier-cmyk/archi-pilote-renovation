@@ -109,7 +109,7 @@ export function LocalPage({
           {[
             { href: "/nos-specialites", label: "Nos spécialités" },
             { href: "/notre-methode", label: "Notre méthode" },
-            { href: "/devis", label: "Estimer un budget" },
+            { href: "/estimateur-travaux", label: "Estimer un budget" },
           ].map((l) => (
             <Link key={l.href} href={l.href} className="btn btn-ghost !py-2.5 !px-5 text-sm">{l.label}</Link>
           ))}

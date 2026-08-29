@@ -1,0 +1,315 @@
+import type { Metadata } from "next";
+import { MqHero, MqSection, MqProse, MqFig, MqChecklist, MqNumbered, MqFaq, MqCta, MqReadNext } from "../components/mq";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/expertise-carrelage-zellige-travertin" },
+  title: "Zellige, travertin et joint époxy : notre expertise pose et étanchéité | ARCHI PILOTE RÉNOVATION",
+  description:
+    "Étanchéité sous carrelage, natte et bandes d'angle, pose du zellige, du travertin et joint époxy : étapes détaillées, schémas techniques, prix constatés et galeries avant / après en Île-de-France.",
+};
+
+export default function Page() {
+  return (
+    <main className="relative z-10 bg-carbone">
+      <MqHero
+        kicker="SAVOIR-FAIRE TECHNIQUE"
+        title="Zellige, travertin et joint époxy : l'expertise se joue sous le carrelage"
+        lead="Un revêtement haut de gamme ne tient que par ce qui se trouve dessous : support dressé, primaire d'accroche, natte d'étanchéité continue, bandes de renfort en angle et pente maîtrisée. ARCHI PILOTE RÉNOVATION photographie et fait valider chacune de ces étapes avant recouvrement, puis fait poser le zellige, le travertin et les joints époxy par des entreprises partenaires contractantes, sous notre pilotage et notre accompagnement de A à Z."
+      />
+
+      <MqSection
+        kicker="LE PRINCIPE"
+        title="L'étanchéité est un ouvrage, le joint n'est qu'une finition"
+        lead="La natte d'étanchéité et ses bandes d'angle assurent la barrière d'eau ; le joint époxy assure la résistance aux taches et à l'entretien."
+      >
+        <MqProse>
+          <p>
+            La grande majorité des désordres en pièce d'eau vient d'une étanchéité absente ou interrompue, jamais
+            d'un carreau mal choisi. Une natte posée en continuité entre le sol et les murs, renforcée dans tous
+            les angles et aux traversées de canalisation, est la seule barrière durable.
+          </p>
+          <p>
+            Le joint époxy intervient ensuite : il ne s'imprègne pas d'eau, ne noircit pas, supporte les produits
+            d'entretien et convient particulièrement aux douches, aux crédences de cuisine et aux plans de travail
+            carrelés.
+          </p>
+          <p>
+            Sa pose demande de la méthode : nettoyage immédiat à l'éponge et à l'eau claire, faute de quoi un
+            voile époxy figé reste en surface et devient très difficile à retirer.
+          </p>
+        </MqProse>
+        <div className="mt-8">
+          <MqFig
+            src="/photos/maquette/schema-etancheite-joint-epoxy.jpg"
+            alt="Coupe pédagogique d'une douche à l'italienne : support, primaire d'accroche, natte d'étanchéité, bande d'angle de renfort, colle, zellige et joint époxy"
+            caption="Composition d'une douche à l'italienne, du support au joint époxy : chaque couche a une fonction, et l'étanchéité se joue sous le carrelage, jamais dans le joint seul."
+          />
+        </div>
+      </MqSection>
+
+      <MqSection
+        kicker="MÉTHODE PÉDAGOGIQUE"
+        title="Les six étapes d'une pose maîtrisée, expliquées au client"
+        lead="Chaque étape est photographiée et transmise dans le suivi quotidien : le client comprend ce qu'il paie et ce qui disparaît sous la finition."
+      >
+        <MqNumbered
+          items={[
+            {
+              title: "Diagnostic et préparation du support",
+              text: "Contrôle de la planéité au réglet, reprise des faux aplombs, ragréage ou enduit d'aplanissement. Aucun revêtement fin n'est posé sur un support non dressé : les écarts se lisent ensuite en lumière rasante.",
+            },
+            {
+              title: "Réseaux, pentes et siphon",
+              text: "Positionnement de l'évacuation, forme de pente de 1 à 2 % vers le siphon, contrôle au niveau laser et essai de mise en pression des alimentations avant fermeture.",
+            },
+            {
+              title: "Primaire d'accroche et natte d'étanchéité",
+              text: "Application du primaire, puis natte d'étanchéité continue entre sol et murs, avec bandes de renfort dans tous les angles et manchons aux traversées. Étape photographiée et datée avant recouvrement.",
+            },
+            {
+              title: "Calepinage tracé à sec",
+              text: "Le calepinage est tracé avant la première colle : centrage du dessin, position des coupes, alignement sur les points de vue principaux. C'est là que se décide la qualité perçue du résultat.",
+            },
+            {
+              title: "Pose : zellige, travertin ou grand format",
+              text: "Zellige posé au peigne fin après mélange des boîtes ; travertin en double encollage pour supprimer les vides ; grands formats découpés en atelier pour limiter les épaufrures.",
+            },
+            {
+              title: "Joint époxy et protection",
+              text: "Joint époxy dans les zones humides et les crédences de cuisine pour sa résistance aux taches et aux produits d'entretien, puis hydrofuge sur les pierres poreuses avant mise en service.",
+            },
+          ]}
+        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+          <MqFig
+            src="/photos/maquette/schema-pose-zellige-etapes.jpg"
+            alt="Infographie en cinq étapes de la pose du zellige : support dressé, calepinage, mélange des boîtes, pose au peigne et joint fin"
+            caption="Les cinq étapes de la pose du zellige : support dressé, calepinage tracé à sec, mélange des boîtes pour répartir les nuances, encollage au peigne et joint fin."
+          />
+          <MqFig
+            src="/photos/maquette/schema-pose-travertin.jpg"
+            alt="Coupe type d'une pose de dalles grand format en travertin : chape ragréée, double encollage, pierre, joint minéral et hydrofuge"
+            caption="Pose de travertin grand format : chape ragréée, double encollage sans vide, joint minéral de 2 à 3 mm et traitement hydrofuge avant mise en service."
+          />
+        </div>
+      </MqSection>
+
+      <MqSection
+        kicker="ZELLIGE"
+        title="Le zellige : une matière vivante qui se prépare avant de se poser"
+        lead="Ses nuances et ses variations d'épaisseur sont un parti pris, à condition d'être réparties volontairement."
+      >
+        <MqChecklist
+          items={[
+            "Support dressé et sec : les écarts d'épaisseur du zellige deviennent visibles en lumière rasante sur un mur non plan.",
+            "Mélange systématique de plusieurs boîtes pour répartir les nuances de teinte sur toute la surface.",
+            "Calepinage tracé à sec : vertical, horizontal, en chevrons ou en écaille, décidé avant la commande.",
+            "Taux de casse de 10 à 15 % à prévoir : un produit artisanal se coupe moins docilement qu'un carreau industriel.",
+            "Joint fin de 1 à 2 mm, en époxy dans les zones humides, nettoyé immédiatement après tirage.",
+          ]}
+        />
+        <div className="mt-8">
+          <MqFig
+            src="/photos/maquette/chantier-pose-zellige-credence.jpg"
+            alt="Carreleur posant une crédence en zellige émaillé vert au peigne, boîtes de carreaux mélangées sur le plan de travail"
+            caption="Pose de zellige en crédence : boîtes mélangées pour répartir les nuances, encollage au peigne adapté et croisillons de calage avant joint époxy."
+          />
+        </div>
+      </MqSection>
+
+      <MqSection
+        kicker="TRAVERTIN ET PIERRE NATURELLE"
+        title="Le travertin : pierre poreuse, mise en œuvre exigeante"
+        lead="Sans hydrofuge, une pierre naturelle se tache durablement dès les premières semaines d'usage."
+      >
+        <MqChecklist
+          items={[
+            "Chape ragréée et parfaitement plane : un grand format ne pardonne aucun défaut de support.",
+            "Double encollage systématique pour supprimer les vides sous la dalle et éviter les cassures ponctuelles.",
+            "Joint minéral de 2 à 3 mm adapté à la pierre, jamais un joint standard coloré.",
+            "Traitement hydrofuge appliqué avant la mise en service, puis renouvelé selon l'usage de la pièce.",
+            "Découpes de grand format réalisées en atelier pour limiter les épaufrures sur les arêtes visibles.",
+          ]}
+        />
+        <div className="mt-8">
+          <MqFig
+            src="/photos/maquette/chantier-nappe-etancheite-douche.jpg"
+            alt="Salle d'eau avant carrelage : natte d'étanchéité appliquée au sol et sur les murs, bandes de renfort en angle et siphon de sol"
+            caption="Étanchéité sous carrelage posée avant zellige ou travertin : natte continue murs et sol, bandes d'angle de renfort, pente vers le siphon contrôlée au niveau laser."
+          />
+        </div>
+      </MqSection>
+
+      <MqSection
+        kicker="GALERIE TECHNIQUE"
+        title="De l'étanchéité brute à la pièce d'eau livrée"
+        lead="Photographies issues de chantiers réellement pilotés, prises aux mêmes points de vue avant et après."
+        wide
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MqFig
+            src="/photos/maquette/chantier-nappe-etancheite-douche.jpg"
+            alt="Salle d'eau avant carrelage : natte d'étanchéité appliquée au sol et sur les murs, bandes de renfort en angle et siphon de sol"
+            caption="Étanchéité sous carrelage posée avant zellige ou travertin : natte continue murs et sol, bandes d'angle de renfort, pente vers le siphon contrôlée au niveau laser."
+          />
+          <MqFig
+            src="/photos/maquette/chantier-pose-zellige-credence.jpg"
+            alt="Carreleur posant une crédence en zellige émaillé vert au peigne, boîtes de carreaux mélangées sur le plan de travail"
+            caption="Pose de zellige en crédence : boîtes mélangées pour répartir les nuances, encollage au peigne adapté et croisillons de calage avant joint époxy."
+          />
+          <MqFig
+            src="/photos/maquette/tendance-travertin-salle-bain.jpg"
+            alt="Salle de bain contemporaine en travertin beige avec vasque en pierre massive et robinetterie en laiton brossé"
+            caption="Travertin en salle d'eau : pierre naturelle appliquée en grand format, joints minces et traitement hydrofuge obligatoire avant mise en service."
+          />
+          <MqFig
+            src="/photos/maquette/tendance-zellige-credence.jpg"
+            alt="Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair"
+            caption="Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé."
+          />
+        </div>
+      </MqSection>
+
+      <MqSection
+        kicker="AVANT / APRÈS"
+        title="Faites glisser le curseur : ce que la finition recouvre"
+        lead="Les comparatifs interactifs montrent l'ouvrage caché, celui qui explique la durabilité et une bonne part du budget."
+        wide
+      >
+        <div className="flex flex-col gap-12">
+          <div>
+            <h3 className="display text-[1.3rem] text-ivoire">Extension : du jardin encombré au volume contemporain</h3>
+            <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
+              Étude de sol, déclaration préalable, fondations adaptées puis ossature bois et grandes baies : le
+              raccord à la meulière existante est traité au détail.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+              <MqFig
+                src="/photos/maquette/jardin-avant-extension.jpg"
+                alt="Jardin d'une maison de meulière francilienne avant extension, terrasse béton fissurée et abri de jardin"
+                caption="Avant : Avant extension : terrasse béton fissurée et abri vétuste. Le relevé, l'étude de sol Geo2Mo et la déclaration préalable précèdent tout terrassement."
+              />
+              <MqFig
+                src="/photos/maquette/extension-livree-apres.jpg"
+                alt="Extension contemporaine en bardage bois et grandes baies vitrées acier noir accolée à une maison de meulière"
+                caption="Après : Extension livrée : ossature bois, grandes baies à menuiseries acier, toiture zinc et raccord soigné à la meulière conservée."
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.3rem] text-ivoire">Surélévation : un étage gagné sans démolir</h3>
+            <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
+              Diagnostic de portance par l'ingénieur structure, dépose de la toiture, ossature bois préfabriquée
+              et mise hors d'eau rapide pour limiter l'exposition du bâti.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+              <MqFig
+                src="/photos/maquette/maison-avant-surelevation.jpg"
+                alt="Maison de ville francilienne de plain-pied en brique et enduit avant travaux de surélévation"
+                caption="Avant : Avant surélévation : combles bas inexploitables. La faisabilité dépend du PLU, de la portance des murs et du diagnostic de l'ingénieur structure."
+              />
+              <MqFig
+                src="/photos/maquette/maison-surelevee-apres.jpg"
+                alt="Même maison après surélévation à ossature bois avec bardage clair, grandes fenêtres anthracite et toiture zinc"
+                caption="Après : Surélévation livrée : étage à ossature bois, charges reprises sur les murs confortés, bardage clair et toiture zinc à faible pente."
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.3rem] text-ivoire">Trémie d'escalier : du chevêtre brut à l'escalier livré</h3>
+            <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
+              Étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques : l'escalier n'est posé
+              qu'après validation de la note de calcul.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+              <MqFig
+                src="/photos/maquette/tremie-chevetre-chantier.jpg"
+                alt="Création de trémie : étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques"
+                caption="Avant : Création de trémie : étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques, conformément à la note de calcul de l'ingénieur structure."
+              />
+              <MqFig
+                src="/photos/maquette/escalier-duplex-tremie.jpg"
+                alt="Escalier intérieur en chêne et acier noir desservant un duplex, trémie ouverte et garde-corps métallique"
+                caption="Après : Référence de style : escalier chêne et acier posé après création de trémie et reprise du plancher par chevêtre."
+              />
+            </div>
+          </div>
+        </div>
+      </MqSection>
+
+      <MqSection
+        kicker="MODÈLE ÉCONOMIQUE"
+        title="Carrelage, pierre et robinetterie : achetés en direct par le client"
+        lead="Ces postes ne relèvent pas de la garantie décennale de pose : le client achète au prix fournisseur, sans marge intermédiaire."
+      >
+        <MqProse>
+          <p>
+            Le carrelage, le zellige, la pierre naturelle, la robinetterie et les meubles de salle d'eau sont
+            achetés en direct par le client, sur des références que nous validons techniquement avant commande :
+            format, épaisseur, classement d'usage, compatibilité avec le support et avec le système d'étanchéité
+            retenu.
+          </p>
+          <p>
+            Notre flotte de camions retire les commandes chez les fournisseurs et les livre sur le chantier au
+            moment utile, ce qui évite le stockage prématuré, la casse et les immobilisations d'équipe. Aucune
+            marge n'est prise sur la fourniture.
+          </p>
+        </MqProse>
+        <div className="mt-8">
+          <MqFig
+            src="/photos/maquette/flotte-camions-retrait-materiaux.jpg"
+            alt="Camions et fourgons utilitaires chargeant des palettes de carrelage et des colis de cuisine dans un dépôt de matériaux"
+            caption="Logistique intégrée : notre flotte de camions retire les commandes achetées en direct par le client et les livre sur le chantier au bon moment."
+          />
+        </div>
+        <p className="text-muted text-[0.85rem] leading-relaxed mt-8 max-w-2xl">
+          Rôle et responsabilités. ARCHI PILOTE RÉNOVATION structure et pilote les projets de rénovation. Selon
+          les besoins, le projet mobilise des entreprises partenaires contractantes et, lorsque nécessaire, des
+          architectes ou ingénieurs partenaires indépendants. Les travaux sont exécutés et facturés par les
+          entreprises concernées.
+        </p>
+      </MqSection>
+
+      <MqSection kicker="QUESTIONS FRÉQUENTES" title="Zellige, travertin, joint époxy : les questions posées">
+        <MqFaq
+          items={[
+            {
+              q: "Pourquoi utiliser un joint époxy plutôt qu'un joint ciment ?",
+              a: "Le joint époxy ne se charge pas d'eau, résiste aux produits d'entretien et ne se salit pas comme un joint ciment. Il est recommandé en douche, en crédence de cuisine et sur les plans exposés. Sa mise en œuvre est plus technique : le nettoyage doit être fait immédiatement, sinon le voile époxy reste sur le carreau.",
+            },
+            {
+              q: "Le joint époxy remplace-t-il l'étanchéité ?",
+              a: "Non, jamais. L'étanchéité est assurée par la natte posée sous le carrelage, avec ses bandes d'angle. Le joint époxy est une finition résistante, pas une barrière d'eau. Une douche sans natte d'étanchéité finira par créer un désordre, quelle que soit la qualité du joint.",
+            },
+            {
+              q: "Combien coûte la pose de zellige ou de travertin en Île-de-France ?",
+              a: "Fourchettes constatées : 140 à 260 euros le mètre carré posé pour le zellige, 180 à 320 euros pour le travertin, selon le format, le calepinage et l'état du support. L'étanchéité, le ragréage et le joint époxy se chiffrent séparément.",
+            },
+            {
+              q: "Peut-on acheter soi-même le carrelage et la pierre ?",
+              a: "Oui, c'est même notre recommandation : le carrelage, la pierre et la robinetterie ne relèvent pas de la garantie décennale de pose. Le client achète en direct, sur des références validées techniquement par notre équipe, et notre flotte de camions retire la commande pour la livrer sur le chantier.",
+            },
+            {
+              q: "Quel délai prévoir pour une salle d'eau complète ?",
+              a: "Trois à quatre semaines en moyenne pour une salle d'eau complète en appartement ancien : dépose, réseaux, étanchéité et temps de séchage, pose, joints, puis pose des équipements et mise en service.",
+            },
+          ]}
+        />
+      </MqSection>
+
+      <MqReadNext
+        items={[
+          { href: "/menuiserie-agencement-sur-mesure", label: "Menuiserie et agencement sur mesure", sub: "Dressings, cuisines et façades sur mesure" },
+          { href: "/tendances-materiaux-francais", label: "Tendances & matières", sub: "Travertin, zellige, béton ciré" },
+          { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Postes hors décennale, jusqu'à 20 %" },
+          { href: "/realisations", label: "Réalisations", sub: "Comparatifs avant / après documentés" },
+        ]}
+      />
+
+      <MqCta
+        title="Un projet de salle d'eau ou de crédence en matière noble ?"
+        lead="Étude de projet gratuite sous 48 heures : faisabilité du support, système d'étanchéité, calepinage et budget réaliste."
+      />
+    </main>
+  );
+}

@@ -21,11 +21,12 @@ const PROJETS = new Set([
   "Salle de bain", "Isolation & DPE", "Gros œuvre / surélévation", "Autre projet",
 ]);
 const BUDGETS = new Set(["Moins de 10 000 €", "10 000 – 50 000 €", "50 000 – 100 000 €", "100 000 – 200 000 €", "Plus de 200 000 €", "Je ne sais pas encore"]);
-const HORIZONS = new Set(["Dans le mois", "Dans les 3 mois", "Dans les 6 mois", "Je me renseigne encore"]);
+const HORIZONS = new Set(["Dans le mois", "Dans les 3 mois", "Dans les 6 mois", "Je me renseigne encore", "Non précisé"]);
 
 type Payload = {
   projet?: unknown; budget?: unknown; horizon?: unknown;
   commune?: unknown; description?: unknown; nom?: unknown; tel?: unknown;
+  email?: unknown; surface?: unknown;
   website?: unknown; startedAt?: unknown;
 };
 
@@ -73,6 +74,8 @@ export async function POST(req: NextRequest) {
   const commune = str(body.commune, 80);
   const nom = str(body.nom, 80);
   const tel = str(body.tel, 30);
+  const email = str(body.email, 120);
+  const surface = str(body.surface, 20);
   const description = typeof body.description === "string" ? body.description.trim().slice(0, 2000) : "";
 
   const errors: string[] = [];
@@ -83,6 +86,7 @@ export async function POST(req: NextRequest) {
   if (!nom || nom.length < 2) errors.push("nom");
   const isTel = !!tel && /^(\+33|0)[1-9](?:[\s.-]?\d{2}){4}$/.test(tel);
   if (!isTel) errors.push("tel");
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) errors.push("email");
   if (errors.length) return NextResponse.json({ ok: false, errors }, { status: 422 });
 
   try {
@@ -96,6 +100,8 @@ export async function POST(req: NextRequest) {
         _template: "table",
         Nom: nom,
         Téléphone: tel,
+        Courriel: email || "(non renseigné)",
+        Surface: surface || "(non renseignée)",
         Projet: projet,
         Budget: budget,
         Démarrage: horizon,

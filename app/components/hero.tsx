@@ -85,7 +85,7 @@ export function Hero() {
 
           <div className="flex flex-wrap justify-center gap-3 mt-1 sm:mt-2">
             <motion.div initial={{ opacity: 0, filter: "blur(10px)", scale: 0.9 }} animate={{ opacity: 1, filter: "blur(0px)", scale: 1 }} transition={{ duration: 1, delay: 1.05, ease: EASE }}>
-              <Link href="/devis" className="btn btn-primary">
+              <Link href="/estimateur-travaux" className="btn btn-primary">
                 Estimer mon budget
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" className="mt-px"><path d="M5 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" /></svg>
               </Link>

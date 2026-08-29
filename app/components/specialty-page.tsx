@@ -121,7 +121,7 @@ export function SpecialtyPage({
             { href: "/notre-methode", label: "Notre méthode" },
             { href: "/modele-economique-transparence", label: "Notre modèle" },
             { href: "/garanties-assurances", label: "Garanties et assurances" },
-            { href: "/devis", label: "Estimer un budget" },
+            { href: "/estimateur-travaux", label: "Estimer un budget" },
           ].map((l) => (
             <Link key={l.href} href={l.href} className="btn btn-ghost !py-2.5 !px-5 text-sm">
               {l.label}
