@@ -127,6 +127,21 @@ export default function Page() {
       >
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
+            src="/photos/chantiers/chBibliotheque.jpeg"
+            alt="Bibliothèque toute hauteur en menuiserie sur mesure contre un mur en pierre, chantier réel"
+            caption="Bibliothèque toute hauteur livrée : rangements dessinés au centimètre pour épouser le mur en pierre existant. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chLitCabane.jpeg"
+            alt="Lit cabane et rangements sur mesure en fabrication dans une chambre d'enfant, chantier réel"
+            caption="Lit cabane et rangements d'une chambre d'enfant, en cours de fabrication sur mesure. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chMenuiserieClaustra.jpeg"
+            alt="Mur de tasseaux en menuiserie sur mesure avec porte intégrée, en cours de pose, chantier réel"
+            caption="Mur de tasseaux et porte intégrée, en cours de pose. Chantier réel des équipes partenaires."
+          />
+          <MqFig
             src="/photos/maquette/dressing-sur-mesure-chene.jpg"
             alt="Dressing sur mesure en chêne huilé avec façades cannelées, îlot de rangement, poignées laiton et éclairage intégré"
             caption="Dressing sur mesure en chêne huilé : façades cannelées, îlot à tiroirs, éclairage intégré et rangements dessinés au centimètre sur le volume existant."

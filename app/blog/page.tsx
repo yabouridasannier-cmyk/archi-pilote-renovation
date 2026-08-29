@@ -1,25 +1,28 @@
 import type { Metadata } from "next";
-import { PageHeader } from "../components/page-header";
+import { MqHero, MqReadNext } from "../components/mq";
 import { BlogGrid } from "./blog-grid";
-import { CtaFinal } from "../components/cta-final";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/blog" },
-  title: "Blog — Conseils rénovation | ARCHI PILOTE RÉNOVATION",
+  title: "Magazine de la rénovation | ARCHI PILOTE RÉNOVATION",
   description:
-    "Prix au m², matériaux, isolation, DPE : nos guides pratiques pour comprendre et réussir votre projet de rénovation de maison en Île-de-France.",
+    "Prix au m², matériaux, isolation, DPE : nos guides pratiques pour comprendre et réussir votre projet de rénovation en Île-de-France.",
 };
 
 export default function BlogPage() {
   return (
-    <main className="relative z-10 bg-carbone">
-      <PageHeader
-        eyebrow="Blog & conseils"
-        segments={[{ text: "Tout savoir avant" }, { text: "de rénover.", serif: true, gradient: true }]}
-        lead="Prix, matériaux, isolation : nos guides pratiques pour aborder votre projet avec des chiffres réels, pas des estimations vagues."
+    <main>
+      <MqHero
+        kicker="Magazine de la rénovation"
+        title="Tout savoir avant de rénover"
+        lead="Prix, matériaux, isolation : nos analyses techniques pour aborder votre projet avec des chiffres réels, pas des estimations vagues."
       />
       <BlogGrid />
-      <CtaFinal />
+      <MqReadNext items={[
+        { href: "/observatoire-prix-renovation", label: "Observatoire des prix réels", sub: "Fourchettes indicatives par poste" },
+        { href: "/glossaire-renovation", label: "Glossaire technique", sub: "Le vocabulaire du bâtiment" },
+        { href: "/estimateur-travaux", label: "Estimateur de travaux", sub: "Un budget indicatif en une minute" },
+      ]} />
     </main>
   );
 }
