@@ -1,17 +1,16 @@
 import type { Metadata } from "next";
-import { DM_Serif_Display, Sora, Space_Mono } from "next/font/google";
+import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { LenisProvider } from "./components/lenis-provider";
 import { Nav } from "./components/nav";
 import { Footer } from "./components/footer";
-import { ThemeSwitcher } from "./components/theme-switcher";
 import { WhatsappButton } from "./components/whatsapp-button";
 import { SITE_OFFLINE, EXPIRES_AT } from "./site-config";
 import { OfflineScreen } from "./components/offline-screen";
 
-const dmSerif = DM_Serif_Display({ variable: "--font-dm-serif", subsets: ["latin"], weight: ["400"], style: ["normal", "italic"], display: "swap" });
-const sora = Sora({ variable: "--font-sora", subsets: ["latin"], weight: ["400", "500", "600", "700"], display: "swap" });
-const spaceMono = Space_Mono({ variable: "--font-space-mono", subsets: ["latin"], weight: ["400", "700"], display: "swap" });
+const fraunces = Fraunces({ variable: "--font-dm-serif", subsets: ["latin"], weight: ["400", "500", "600"], style: ["normal", "italic"], display: "swap" });
+const manrope = Manrope({ variable: "--font-sora", subsets: ["latin"], weight: ["400", "500", "600", "700", "800"], display: "swap" });
+const manropeMono = Manrope({ variable: "--font-space-mono", subsets: ["latin"], weight: ["500", "600", "700"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://archipiloterenovation.fr"),
@@ -65,14 +64,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       lang="fr"
       data-theme="pierre"
       suppressHydrationWarning
-      className={`${dmSerif.variable} ${sora.variable} ${spaceMono.variable}`}
+      className={`${fraunces.variable} ${manrope.variable} ${manropeMono.variable}`}
     >
       <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `try{var t=localStorage.getItem('gr-theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}`,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_ORGANIZATION) }}
@@ -88,7 +82,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               {children}
               <Footer />
             </LenisProvider>
-            <ThemeSwitcher />
             <WhatsappButton />
           </>
         )}
