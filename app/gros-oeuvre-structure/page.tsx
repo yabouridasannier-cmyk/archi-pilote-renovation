@@ -306,6 +306,36 @@ export default function Page() {
             alt="Démolition d'une cloison dans un couloir, ossature bois apparente, chantier réel"
             caption="Démolition sélective dans un couloir d'appartement ancien : ossature apparente avant reconstruction. Chantier réel des équipes partenaires."
           />
+          <MqFig
+            src="/photos/chantiers/chDemolitionLattisPlatreChantier1.jpeg"
+            alt="Démolition d'une cloison en lattis et plâtre, chantier réel"
+            caption="Démolition d'une cloison ancienne en lattis et plâtre, structure mise à nu. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chDemolitionLattisPlatreChantier2.jpeg"
+            alt="Démolition d'une cloison ancienne, autre angle, chantier réel"
+            caption="Démolition sélective, autre angle du même chantier : gravats triés avant évacuation. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chDemolitionGravatsChantier.jpeg"
+            alt="Gravats de démolition triés avant évacuation, chantier réel"
+            caption="Gravats de démolition triés et sacs préparés avant évacuation. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chFacadeRavalementEchafaudage1.jpeg"
+            alt="Façade d'immeuble en cours de ravalement, échafaudage complet, chantier réel"
+            caption="Ravalement de façade en cours, échafaudage complet et protection des ouvrants. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chFacadeRavalementEchafaudage2.jpeg"
+            alt="Façade en cours de ravalement, autre bâtiment, chantier réel"
+            caption="Ravalement de façade sur un autre bâtiment, échafaudage en place. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chFacadeRavalementVillage.jpeg"
+            alt="Façade de bâtiment en cours de ravalement en centre-village, chantier réel"
+            caption="Ravalement de façade d'un bâtiment ancien, échafaudage et protections en place. Chantier réel des équipes partenaires."
+          />
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           {[

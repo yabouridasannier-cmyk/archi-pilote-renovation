@@ -182,6 +182,23 @@ export default function DetailInvisiblePage() {
               caption="Tableau électrique et compteur intégrés dans un placard sur mesure : l'accès de maintenance reste dégagé derrière une façade menuisée. Chantier réel des équipes partenaires."
             />
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <MqFig
+              src="/photos/chantiers/chDetailTiroirMainOuverture.jpeg"
+              alt="Tiroir vérifié à la main avant réception, chantier réel"
+              caption="Un tiroir se vérifie à la main avant réception : coulisses, jeux et alignement contrôlés un à un. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chDetailPoigneePorteMain1.jpeg"
+              alt="Poignée de porte vérifiée à la main, chantier réel"
+              caption="Vérification d'une poignée de porte avant réception : jeu, fixation et alignement du bâti. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chEtagereMuraleMainOuvriere.jpeg"
+              alt="Étagère murale vérifiée en cours de pose, chantier réel"
+              caption="Étagère murale vérifiée en cours de pose, fixations contrôlées avant réception. Chantier réel des équipes partenaires."
+            />
+          </div>
           <MqChecklist
             items={[
               "Aucune mention écrite du système d'étanchéité prévu sous carrelage dans le devis de plomberie ou de carrelage.",

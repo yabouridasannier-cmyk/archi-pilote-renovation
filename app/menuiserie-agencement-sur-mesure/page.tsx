@@ -281,6 +281,221 @@ export default function Page() {
             alt="Comptoir d'accueil livré dans un local commercial d'optique, autre angle, chantier réel"
             caption="Comptoir d'accueil livré, même local commercial, panneau d'acuité visuelle et climatisation en fond de pièce."
           />
+          <MqFig
+            src="/photos/chantiers/chMenuiserieInstallationPanneauMural.jpeg"
+            alt="Installation d'un panneau mural sur mesure en cours, outils au sol, chantier réel"
+            caption="Installation d'un panneau mural en menuiserie sur mesure, outils encore au sol avant réception."
+          />
+          <MqFig
+            src="/photos/chantiers/chEtagereBoisAssemblageAtelier.jpeg"
+            alt="Étagère en bois assemblée en atelier avant livraison, chantier réel"
+            caption="Étagère sur mesure assemblée en atelier avant livraison sur le chantier."
+          />
+          <MqFig
+            src="/photos/chantiers/chCouloirPorteAccordeonBois.jpeg"
+            alt="Couloir avec porte accordéon en bois ouverte, chantier réel"
+            caption="Porte accordéon en bois sur mesure, couloir d'un appartement rénové."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingOuvertTiroirsEntrouverts.jpeg"
+            alt="Dressing sur mesure avec tiroirs entrouverts, chantier réel"
+            caption="Dressing sur mesure livré, tiroirs entrouverts montrant les coulisses réglées."
+          />
+          <MqFig
+            src="/photos/chantiers/chEtagereCoinFenetreBrute.jpeg"
+            alt="Étagère d'angle sur mesure près d'une fenêtre, finition brute, chantier réel"
+            caption="Étagère d'angle sur mesure en finition brute, avant peinture, près d'une fenêtre."
+          />
+          <MqFig
+            src="/photos/chantiers/chArcheEncadrementBoisChantier.jpeg"
+            alt="Encadrement bois en arche en cours de pose, chantier réel"
+            caption="Encadrement bois en arche en cours de pose entre deux pièces."
+          />
+          <MqFig
+            src="/photos/chantiers/chVasqueBoisMuraleChantier.jpeg"
+            alt="Vasque murale sur meuble bois sur mesure, chantier réel"
+            caption="Vasque murale posée sur un meuble bois sur mesure, sol encore protégé."
+          />
+          <MqFig
+            src="/photos/chantiers/chCaissonTiroirsBoisAngle.jpeg"
+            alt="Caisson à tiroirs en bois sur mesure, vue d'angle, chantier réel"
+            caption="Caisson à tiroirs en bois sur mesure, vue d'angle avant pose des façades."
+          />
+          <MqFig
+            src="/photos/chantiers/chEtagereCoinCableApparent.jpeg"
+            alt="Étagère d'angle sur mesure, câble électrique encore apparent, chantier réel"
+            caption="Étagère d'angle sur mesure en cours de finition, réservation électrique encore apparente."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingEscalierArriereplan.jpeg"
+            alt="Dressing sur mesure livré, escalier en arrière-plan, chantier réel"
+            caption="Dressing sur mesure livré, escalier visible en arrière-plan du même chantier."
+          />
+          <MqFig
+            src="/photos/chantiers/chEtagereChantierEchelle.jpeg"
+            alt="Étagère sur mesure en cours de montage, échelle sur le chantier, chantier réel"
+            caption="Étagère sur mesure en cours de montage, échelle et outils encore sur place."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingEscalierArriereplan2.jpeg"
+            alt="Dressing sur mesure livré, autre vue avec escalier, chantier réel"
+            caption="Dressing sur mesure livré, autre vue du même chantier avec escalier en arrière-plan."
+          />
+          <MqFig
+            src="/photos/chantiers/chNicheArrondieBoisEclairage.jpeg"
+            alt="Niche murale arrondie en bois avec éclairage intégré, chantier réel"
+            caption="Niche murale arrondie en bois sur mesure, éclairage indirect intégré."
+          />
+          <MqFig
+            src="/photos/chantiers/chCouloirPorteBoisModerne.jpeg"
+            alt="Couloir rénové avec porte bois moderne, chantier réel"
+            caption="Couloir rénové, porte bois contemporaine sur mesure."
+          />
+          <MqFig
+            src="/photos/chantiers/chCouloirPortesBoisJumelles.jpeg"
+            alt="Couloir avec deux portes bois jumelles sur mesure, chantier réel"
+            caption="Couloir avec deux portes bois jumelles sur mesure, finitions livrées."
+          />
+          <MqFig
+            src="/photos/chantiers/chNicheArrondieCouloirBacklight.jpeg"
+            alt="Niche arrondie rétroéclairée dans un couloir, chantier réel"
+            caption="Niche arrondie sur mesure rétroéclairée, couloir d'un appartement rénové."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingArrondiCouloirParquet1.jpeg"
+            alt="Dressing arrondi sur mesure dans un couloir avec parquet, chantier réel"
+            caption="Dressing d'angle arrondi sur mesure, couloir avec parquet à chevrons."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingArrondiCouloirParquet2.jpeg"
+            alt="Dressing arrondi sur mesure, autre angle du même couloir, chantier réel"
+            caption="Dressing d'angle arrondi sur mesure, autre angle du même couloir."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingProcheToilettes.jpeg"
+            alt="Dressing sur mesure près d'une porte de toilettes, chantier réel"
+            caption="Dressing sur mesure livré, proche d'une porte de toilettes."
+          />
+          <MqFig
+            src="/photos/chantiers/chDetailPoigneePorteMain2.jpeg"
+            alt="Détail d'une poignée de porte vérifiée à la main, autre porte, chantier réel"
+            caption="Détail d'une poignée de porte sur mesure, vérification avant réception."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingBlancOuvertChantier1.jpeg"
+            alt="Dressing blanc sur mesure ouvert, en cours de chantier, chantier réel"
+            caption="Dressing blanc sur mesure, portes ouvertes, en cours de finition."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingBlancOuvertChantier2.jpeg"
+            alt="Dressing blanc sur mesure ouvert, autre vue du chantier, chantier réel"
+            caption="Dressing blanc sur mesure, autre vue du même chantier en cours de finition."
+          />
+          <MqFig
+            src="/photos/chantiers/chNicheBoisPortesArquees.jpeg"
+            alt="Niche en bois avec portes arquées sur mesure, chantier réel"
+            caption="Niche en bois sur mesure avec portes cintrées, style architectural soigné."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingSousPenteBlancPortes.jpeg"
+            alt="Dressing blanc sur mesure sous pente de toit, chantier réel"
+            caption="Dressing blanc sur mesure adapté à une pente de toit, façades livrées."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingBlancTiroirsOuverts.jpeg"
+            alt="Dressing blanc sur mesure, tiroirs ouverts, chantier réel"
+            caption="Dressing blanc sur mesure, tiroirs ouverts montrant l'agencement intérieur."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingBlancInterphone.jpeg"
+            alt="Dressing blanc sur mesure près d'un interphone, chantier réel"
+            caption="Dressing blanc sur mesure livré, interphone intégré au mur attenant."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingBlancPoigneesBoisVerticales.jpeg"
+            alt="Dressing blanc sur mesure avec poignées bois verticales, chantier réel"
+            caption="Dressing blanc sur mesure, poignées en bois verticales intégrées aux façades."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingEntreeNoyerChantier.jpeg"
+            alt="Dressing en placage noyer dans une entrée, en cours de chantier, chantier réel"
+            caption="Dressing en placage noyer livré dans une entrée d'appartement ancien."
+          />
+          <MqFig
+            src="/photos/chantiers/chEntreeDressingNoyerPorte.jpeg"
+            alt="Entrée avec dressing en placage noyer et porte sur mesure, chantier réel"
+            caption="Entrée avec dressing en placage noyer et porte assortie sur mesure."
+          />
+          <MqFig
+            src="/photos/chantiers/chGrilleAerationMdfAtelier2.jpeg"
+            alt="Grille d'aération sur mesure façonnée en atelier, chantier réel"
+            caption="Grille d'aération sur mesure en MDF, façonnée en atelier avant pose."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingNoyerAngleDeuxPortes.jpeg"
+            alt="Dressing en placage noyer, angle à deux portes, chantier réel"
+            caption="Dressing en placage noyer, angle à deux portes livré dans un appartement ancien."
+          />
+          <MqFig
+            src="/photos/chantiers/chBibliothequeBlancheVitreeChantier.jpeg"
+            alt="Bibliothèque blanche avec portes vitrées, en cours de chantier, chantier réel"
+            caption="Bibliothèque blanche sur mesure avec portes vitrées, en cours de finition."
+          />
+          <MqFig
+            src="/photos/chantiers/chNicheBoisAlcoveFinie.jpeg"
+            alt="Alcôve en bois sur mesure livrée, chantier réel"
+            caption="Alcôve en bois sur mesure livrée et finie."
+          />
+          <MqFig
+            src="/photos/chantiers/chCouloirPorteBleueNoyer.jpeg"
+            alt="Couloir avec porte bleue et menuiserie en noyer, chantier réel"
+            caption="Couloir avec porte bleue et menuiserie en placage noyer assortie."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingMiroirCouloir.jpeg"
+            alt="Dressing avec miroir intégré dans un couloir, chantier réel"
+            caption="Dressing sur mesure avec porte miroir intégrée, couloir d'un appartement rénové."
+          />
+          <MqFig
+            src="/photos/chantiers/chEtagereMuraleFenetreChantier.jpeg"
+            alt="Étagère murale sur mesure près d'une fenêtre, chantier réel"
+            caption="Étagère murale sur mesure en cours de montage, proche d'une fenêtre."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingBlancCarcasseCrochets.jpeg"
+            alt="Carcasse de dressing blanc avec crochets, chantier réel"
+            caption="Carcasse de dressing blanc sur mesure, crochets de penderie posés avant façades."
+          />
+          <MqFig
+            src="/photos/chantiers/chArmoireVitreeVerreDepoli.jpeg"
+            alt="Armoire vitrée en verre dépoli sur mesure, chantier réel"
+            caption="Armoire sur mesure à portes vitrées en verre dépoli, finition livrée."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingSousPenteTiroirs2.jpeg"
+            alt="Dressing sous pente avec tiroirs, autre vue, chantier réel"
+            caption="Dressing sur mesure sous pente de toit, tiroirs livrés, autre angle."
+          />
+          <MqFig
+            src="/photos/chantiers/chNicheArrondieRubanBleu.jpeg"
+            alt="Niche arrondie sur mesure, ruban de signalisation bleu au sol, chantier réel"
+            caption="Niche arrondie sur mesure en cours de finition, ruban de signalisation au sol."
+          />
+          <MqFig
+            src="/photos/chantiers/chFenetreBoisDecorativeChantier.jpeg"
+            alt="Fenêtre intérieure décorative en bois sur mesure, chantier réel"
+            caption="Fenêtre intérieure décorative en bois sur mesure, entre deux pièces."
+          />
+          <MqFig
+            src="/photos/chantiers/chPanneauKraftEchelleChantier.jpeg"
+            alt="Panneau en finition kraft brute, échelle sur le chantier, chantier réel"
+            caption="Panneau de menuiserie en finition brute kraft, échelle encore en place."
+          />
+          <MqFig
+            src="/photos/chantiers/chCouloirDressingToilettes.jpeg"
+            alt="Couloir avec dressing sur mesure près des toilettes, chantier réel"
+            caption="Couloir avec dressing sur mesure livré, proche de la porte des toilettes."
+          />
         </div>
       </MqSection>
 

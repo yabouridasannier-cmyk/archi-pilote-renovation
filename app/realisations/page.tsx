@@ -73,6 +73,22 @@ const PHOTOS_CHANTIERS = [
   { src: `${CH}/chPoteauAcierScelleGravats.jpeg`, alt: "Pied de poteau acier scellé, gravats de reprise au sol, chantier réel", cap: "Pied de poteau acier scellé après ouverture de mur porteur, gravats de reprise en cours d'évacuation." },
   { src: `${CH}/chPoutreAcierMurPierreApparente.jpeg`, alt: "Poutre acier de reprise de charge contre un mur en pierre apparente, chantier réel", cap: "Poutre acier de reprise de charge, mur dégagé jusqu'à la pierre apparente avant reprise d'enduit." },
   { src: `${CH}/chOptiquePresentoirsVitrine.jpeg`, alt: "Vitrine et présentoirs sur mesure livrés dans un local commercial d'optique, chantier réel", cap: "Vitrine et présentoirs sur mesure livrés dans le même local commercial d'optique." },
+
+  { src: `${CH}/chTerrassePiscineMaisonVue.jpeg`, alt: "Terrasse bois livrée devant une maison rénovée, chantier réel", cap: "Terrasse bois livrée en extension extérieure d'une maison rénovée." },
+  { src: `${CH}/chTerrasseBoisTransatsVue.jpeg`, alt: "Terrasse bois avec transats livrés, chantier réel", cap: "Terrasse bois livrée, mobilier extérieur installé." },
+  { src: `${CH}/chTerrasseBoisEscaliersMobilier.jpeg`, alt: "Terrasse bois avec escaliers et mobilier, chantier réel", cap: "Terrasse bois à plusieurs niveaux avec escaliers intégrés et mobilier extérieur." },
+  { src: `${CH}/chTerrasseBoisPiscineChamps.jpeg`, alt: "Terrasse bois autour d'une piscine avec vue sur les champs, chantier réel", cap: "Terrasse bois livrée autour d'une piscine, cadre champêtre." },
+  { src: `${CH}/chParquetChevronsPosePiece.jpeg`, alt: "Parquet posé à chevrons dans une pièce vide, chantier réel", cap: "Parquet en cours de pose à chevrons dans une pièce vide." },
+  { src: `${CH}/chCouloirBoisGaleriesBanc.jpeg`, alt: "Couloir habillé de bois avec banc intégré, style galerie, chantier réel", cap: "Couloir habillé de bois avec banc intégré, finitions livrées." },
+  { src: `${CH}/chCouloirBoisEscalierVue.jpeg`, alt: "Couloir habillé de bois avec vue sur un escalier, chantier réel", cap: "Couloir habillé de bois sur mesure, escalier visible en arrière-plan." },
+  { src: `${CH}/chCouloirBibliothequeChaleureux.jpeg`, alt: "Couloir avec bibliothèque intégrée et éclairage chaleureux, chantier réel", cap: "Couloir avec bibliothèque intégrée, éclairage chaleureux, finitions livrées." },
+  { src: `${CH}/chEscalierBoisConstructionMarches.jpeg`, alt: "Escalier en bois en cours de construction, marches posées, chantier réel", cap: "Escalier en bois en cours de construction, marches posées avant finition." },
+  { src: `${CH}/chRangementChantierEncombre.jpeg`, alt: "Rangement sur mesure dans une pièce encore encombrée de chantier, chantier réel", cap: "Rangement sur mesure livré, pièce encore en cours de finition." },
+  { src: `${CH}/chCuisineBleuCanardVueDeux.jpeg`, alt: "Cuisine laquée bleu canard, autre vue, chantier réel", cap: "Cuisine laquée bleu canard livrée, autre vue du même chantier." },
+  { src: `${CH}/chPorteCoulissanteClaustraChene3.jpeg`, alt: "Porte coulissante claustra en chêne, autre chantier, chantier réel", cap: "Porte coulissante claustra en chêne massif, autre chantier réel des équipes partenaires." },
+  { src: `${CH}/chEscalierOuvertConstruction.jpeg`, alt: "Escalier ouvert en cours de construction, chantier réel", cap: "Escalier à structure ouverte en cours de construction." },
+  { src: `${CH}/chCouloirParquetChevronsPorteBois.jpeg`, alt: "Couloir avec parquet à chevrons et porte bois, chantier réel", cap: "Couloir livré avec parquet à chevrons et porte bois sur mesure." },
+  { src: `${CH}/chCuisineAnthraciteCarreauxVue2.jpeg`, alt: "Cuisine anthracite avec carreaux de ciment, autre vue, chantier réel", cap: "Cuisine laquée anthracite livrée, autre vue avec sol en carreaux de ciment." },
 ];
 
 const DEROULE = [

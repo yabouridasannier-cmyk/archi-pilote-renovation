@@ -224,6 +224,31 @@ export default function Page() {
             alt="Cuisine laquée anthracite avec sol en carreaux de ciment à motifs, chantier réel"
             caption="Cuisine laquée anthracite livrée : plan de travail noir, robinetterie noire et sol en carreaux de ciment à motifs. Chantier réel des équipes partenaires."
           />
+          <MqFig
+            src="/photos/chantiers/chCuisineBlancheFinieIlot.jpeg"
+            alt="Cuisine blanche livrée avec îlot central, chantier réel"
+            caption="Cuisine blanche livrée avec îlot central et électroménager encastré. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineNoireSkylightFinie.jpeg"
+            alt="Cuisine noire livrée avec fenêtre de toit, chantier réel"
+            caption="Cuisine noire livrée sous une fenêtre de toit apportant la lumière naturelle. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineNoireSejourFinie.jpeg"
+            alt="Cuisine noire ouverte sur séjour, livrée, chantier réel"
+            caption="Cuisine noire ouverte sur séjour, livrée avec plan de travail et rangements muraux. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineBlanchePendantsFinie.jpeg"
+            alt="Cuisine blanche livrée avec suspensions lumineuses, chantier réel"
+            caption="Cuisine blanche livrée, suspensions lumineuses au-dessus du plan de travail. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineAnthraciteGalerie.jpeg"
+            alt="Cuisine anthracite livrée, vue en enfilade, chantier réel"
+            caption="Cuisine anthracite livrée, vue en enfilade depuis la pièce attenante. Chantier réel des équipes partenaires."
+          />
         </div>
       </MqSection>
 

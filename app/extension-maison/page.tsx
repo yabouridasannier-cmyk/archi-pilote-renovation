@@ -105,6 +105,40 @@ export default function Page() {
             caption="Référence de style : extension vitrée raccordée à une maison en meulière, avec reprise des fondations et étanchéité de jonction."
           />
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
+          <MqFig
+            src="/photos/chantiers/chCharpenteToitureOSBChantier.jpeg"
+            alt="Charpente d'extension en cours, panneaux OSB de toiture posés, échafaudage, chantier réel"
+            caption="Charpente d'extension en cours : panneaux OSB de toiture posés avant couverture définitive. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCharpenteParpaingConstruction.jpeg"
+            alt="Extension en parpaings avec charpente bois posée, dalle coulée, chantier réel"
+            caption="Extension en cours : murs en parpaings, charpente bois posée et dalle coulée avant fermeture. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCharpenteMaisonEchafaudage.jpeg"
+            alt="Charpente de maison en cours de montage avec échafaudage, chantier réel"
+            caption="Charpente en cours de montage, échafaudage en place pour la pose de la couverture. Chantier réel des équipes partenaires."
+          />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
+          <MqFig
+            src="/photos/chantiers/chTerrassePiscineBoisVue1.jpeg"
+            alt="Terrasse bois livrée autour d'une piscine, chantier réel"
+            caption="Terrasse bois livrée en extension extérieure autour d'une piscine. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chTerrasseBoisPiscineCourbe.jpeg"
+            alt="Terrasse bois aux formes courbes livrée autour d'une piscine, chantier réel"
+            caption="Terrasse bois aux formes courbes, livrée en extension extérieure d'une maison. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chLivraisonPanneauPrefabGrue.jpeg"
+            alt="Panneau préfabriqué livré par grue sur un chantier d'extension, chantier réel"
+            caption="Panneau préfabriqué livré par grue : logistique d'approvisionnement d'un chantier d'extension. Chantier réel des équipes partenaires."
+          />
+        </div>
       </MqSection>
 
       <MqSection

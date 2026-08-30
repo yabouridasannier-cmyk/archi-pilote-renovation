@@ -168,6 +168,11 @@ export default function Page() {
             caption="Salle de bain en cours de finition : faïence grand format, meuble sur mesure et vasques à poser. Chantier réel des équipes partenaires."
           />
           <MqFig
+            src="/photos/chantiers/chVasqueMarbreVanite.jpeg"
+            alt="Vasque en marbre sur meuble vanité en cours de finition, chantier réel"
+            caption="Vasque en marbre encastrée dans un meuble vanité en cours de finition. Chantier réel des équipes partenaires."
+          />
+          <MqFig
             src="/photos/maquette/tendance-zellige-credence.jpg"
             alt="Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair"
             caption="Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé."
