@@ -50,7 +50,7 @@ export const JSONLD_ORGANIZATION = {
   areaServed: ["Hauts-de-Seine", "Yvelines", "Essonne", "Val-d'Oise", "Seine-et-Marne", "Île-de-France"],
   address: {
     "@type": "PostalAddress",
-    streetAddress: "8 rue Gabriel Péri",
+    streetAddress: "8 bis rue Gabriel Péri",
     postalCode: "92250",
     addressLocality: "La Garenne-Colombes",
     addressCountry: "FR",

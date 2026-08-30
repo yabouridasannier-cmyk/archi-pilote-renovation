@@ -11,7 +11,7 @@ export const SITE = {
   nom: "ARCHI PILOTE RÉNOVATION",
   baseline: "Rénovation tous corps d'état — Île-de-France",
   zone: "Île-de-France",
-  structure: "ARCHI PILOTE RÉNOVATION est une marque exploitée par IA RENOV (SASU), RCS 889 976 387 Nanterre, 8 rue Gabriel Péri, 92250 La Garenne-Colombes.",
+  structure: "ARCHI PILOTE RÉNOVATION est une marque exploitée par IA RENOV (SASU), RCS 889 976 387 Nanterre, 8 bis rue Gabriel Péri, 92250 La Garenne-Colombes.",
   tel: "+33 6 52 79 80 89",
   telAffiche: "06 52 79 80 89",
   whatsapp: "https://wa.me/33652798089", // même numéro que le tel — à confirmer si un numéro WhatsApp distinct existe
@@ -207,8 +207,6 @@ export const ARTICLES: Article[] = [
     photo: "chSdbVasquesPoseMeubleBeige",
     img2: "chCuisineAnthraciteCarreauxVue2",
     img2Caption: "Cuisine anthracite avec sol en carreaux de ciment — chantier réel des équipes partenaires.",
-    img3: "chDemolitionGravatsChantier",
-    img3Caption: "Gravats de démolition triés avant évacuation — chantier réel des équipes partenaires.",
     corps: [
       "Un joint ciment classique est poreux. En quelques mois, il absorbe l'humidité, les moisissures s'y installent, et il noircit — quel que soit le sérieux du nettoyage. Au bout de deux ou trois ans, il se fissure et laisse passer l'eau, avec le risque de dégâts derrière le carrelage.",
       "Le joint époxy est une résine, pas du ciment. Il est non poreux et ne noircit pas — parce qu'il n'y a rien pour les moisissures à quoi s'accrocher. Les fabricants annoncent une durée de vie de 15 à 20 ans, contre 3 à 5 ans pour un joint ciment classique en zone humide.",
@@ -256,10 +254,10 @@ export const ARTICLES: Article[] = [
     categorie: "Copropriété",
     excerpt: "Un chantier qui touche une partie commune ou l'aspect extérieur du bâtiment ne se lance pas sans passer par le syndic — parfois bien avant le premier devis.",
     photo: "chFacadeRavalementEchafaudage1",
-    img2: "chFacadeRavalementVillage",
-    img2Caption: "Ravalement de façade d'un bâtiment ancien, échafaudage en place — chantier réel des équipes partenaires.",
-    img3: "chFacadeRavalementEchafaudage2",
-    img3Caption: "Ravalement de façade sur un autre bâtiment — chantier réel des équipes partenaires.",
+    img2: "chDemolitionOuvertureCouloir",
+    img2Caption: "Démolition sélective dans un couloir d'appartement ancien, l'une des phases les plus bruyantes d'un chantier — chantier réel des équipes partenaires.",
+    img3: "chFacadeRavalementVillage",
+    img3Caption: "Ravalement de façade d'un bâtiment ancien, échafaudage en place — chantier réel des équipes partenaires.",
     corps: [
       "En copropriété, le règlement encadre toute intervention touchant les éléments communs, la structure porteuse commune ou l'aspect extérieur du bâtiment. Selon la nature exacte des travaux, une simple information écrite au syndic peut suffire, ou au contraire une autorisation formelle votée en assemblée générale devient nécessaire avant tout démarrage.",
       "C'est notamment le cas d'une ouverture touchant un mur porteur mitoyen d'une partie commune, du remplacement d'une fenêtre visible depuis la rue, ou de la création d'une sortie de ventilation en façade. Ces dossiers doivent être présentés en amont, avec un descriptif technique précis, pour être inscrits à l'ordre du jour de la prochaine assemblée générale — dont la fréquence, généralement annuelle, doit être anticipée dans le calendrier du projet.",

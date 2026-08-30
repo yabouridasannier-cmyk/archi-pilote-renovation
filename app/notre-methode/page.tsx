@@ -133,9 +133,9 @@ export default function NotreMethodePage() {
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
         <MqFig
-          src="/photos/maquette/schema-mur-porteur.jpg"
-          alt="Schéma de pilotage d'un projet de rénovation en huit étapes, du cadrage du besoin à la documentation de fin de chantier"
-          caption="Les huit étapes de la méthode : chaque étape produit un livrable écrit avant de passer à la suivante."
+          src="/photos/pedagogie/06-huit-etapes.jpeg"
+          alt="Schéma pédagogique des huit étapes du pilotage : comprendre le besoin, lire le bâti, prioriser, chiffrer, sélectionner, vérifier les interfaces, suivre le chantier, dossier final"
+          caption="Schéma pédagogique : les huit étapes de la méthode, chacune produisant un livrable écrit avant de passer à la suivante."
           ratio="aspect-[16/9]"
         />
       </div>

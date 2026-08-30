@@ -21,7 +21,7 @@ export function Footer() {
             </p>
             <div className="mt-4 flex flex-col gap-1 text-[0.85rem]" style={{ color: "oklch(70% 0.012 75)" }}>
               <span>IA RENOV SASU — RCS Nanterre 889 976 387</span>
-              <span>8 rue Gabriel Péri, 92250 La Garenne-Colombes</span>
+              <span>8 bis rue Gabriel Péri, 92250 La Garenne-Colombes</span>
               <a href={`mailto:${SITE.email}`} className="hover:underline break-all" style={{ color: "oklch(80% 0.05 74)" }}>{SITE.email}</a>
               <a href={`tel:${SITE.tel.replace(/\s/g, "")}`} className="hover:underline" style={{ color: "oklch(80% 0.05 74)" }}>{SITE.telAffiche}</a>
               <a href={SITE.whatsapp} target="_blank" rel="noreferrer" className="hover:underline" style={{ color: "oklch(80% 0.05 74)" }}>WhatsApp</a>

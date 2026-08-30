@@ -74,9 +74,9 @@ export default function ModeleEconomiquePage() {
       <section className="pb-4">
         <div className="container-site max-w-4xl">
           <MqFig
-            src="/photos/maquette/hero-renovation.jpg"
-            alt="Tableau de chiffrage détaillé d'un projet de rénovation posé sur des plans, avec factures de matériaux visibles"
-            caption="La transparence du modèle repose sur un principe simple : chaque euro dépensé est rattaché à un poste identifiable."
+            src="/photos/pedagogie/07-modele-economique.jpeg"
+            alt="Schéma pédagogique des trois flux de facturation : honoraires de pilotage, travaux facturés par les entreprises partenaires, matériaux achetés en direct par le client"
+            caption="Schéma pédagogique : trois flux de facturation distincts et séparés, chacun rattaché à un interlocuteur identifiable."
             ratio="aspect-[16/9]"
           />
         </div>

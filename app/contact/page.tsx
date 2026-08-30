@@ -44,7 +44,7 @@ export default function ContactPage() {
             </a>
             <div className="border border-line bg-surface rounded-[2px] p-6">
               <p className="eyebrow">Siège</p>
-              <p className="text-ivoire/85 text-[0.9rem] mt-1 leading-relaxed">IA RENOV SASU<br />8 rue Gabriel Péri<br />92250 La Garenne-Colombes</p>
+              <p className="text-ivoire/85 text-[0.9rem] mt-1 leading-relaxed">IA RENOV SASU<br />8 bis rue Gabriel Péri<br />92250 La Garenne-Colombes</p>
             </div>
           </div>
         </div>
