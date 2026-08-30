@@ -17,6 +17,15 @@ export default function Page() {
         lead="Avant de parler cloisons, cuisine ou peinture, tout projet de rénovation doit répondre à une question simple : quels murs portent le bâtiment, et que devient la descente de charges si on les modifie ? Le gros œuvre traite l'ouverture de murs porteurs, la création de trémies, les reprises de plancher et les désordres du bâti existant. ARCHI PILOTE RÉNOVATION structure ce diagnostic en amont et pilote l'intervention des entreprises partenaires contractantes et, pour les dossiers lourds, d'un ingénieur structure ou d'un architecte DPLG partenaire indépendant."
       />
 
+      <div className="container-site max-w-4xl pb-12 md:pb-16">
+        <MqFig
+          src="/photos/maquette/schema-mur-porteur.jpg"
+          alt="Coupe technique d'une ouverture de mur porteur montrant la poutre de reprise, les poteaux d'appui aux extrémités, l'étaiement provisoire pendant les travaux et le principe de descente de charges vers les fondations."
+          caption="Principe d'une ouverture de mur porteur : poutre de reprise, poteaux d'appui, étaiement provisoire et descente de charges vers les fondations."
+          ratio="aspect-[16/9]"
+        />
+      </div>
+
       <MqSection
         title="Identifier un mur porteur avant tout devis"
         lead="Une erreur d'appréciation sur la nature d'un mur peut compromettre la stabilité du bâtiment ou faire annuler un devis déjà engagé."
@@ -73,11 +82,6 @@ export default function Page() {
             src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
             alt="Poutre acier de reprise de charge vue depuis un mur dégarni après ouverture, chantier réel"
             caption="Poutre acier de reprise scellée sur ses appuis, mur dégarni jusqu'au support en attente de la reprise d'enduit. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/maquette/schema-mur-porteur.jpg"
-            alt="Coupe technique d'une ouverture de mur porteur montrant la poutre de reprise, les poteaux d'appui aux extrémités, l'étaiement provisoire pendant les travaux et le principe de descente de charges vers les fondations."
-            caption="Principe d'ouverture d'un mur porteur : poutre de reprise, poteaux d'appui, étaiement provisoire et descente de charges."
           />
         </div>
         <div className="mt-12 flex flex-col gap-10">

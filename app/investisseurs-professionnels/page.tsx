@@ -96,6 +96,21 @@ export default function InvestisseursProfessionnelsPage() {
         }
       />
 
+      {/*
+        À GÉNÉRER — visuel de hero manquant. Le composant MqHero (app/components/mq.tsx)
+        n'a pas de slot image ; une fois l'illustration générée, suivre le pattern déjà
+        utilisé sur /parcours-expertise (un MqFig posé juste sous le hero, dans un
+        <div className="container-site max-w-4xl pb-12 md:pb-16">) plutôt que de
+        modifier mq.tsx. C'est une illustration éditoriale, pas une preuve : aucune
+        vraie photo ne réunit ces éléments.
+        Prompt FR proposé : « Photo éditoriale en plongée (flat lay), lumière naturelle
+        douce, sur une table en bois clair : un plan d'architecte déplié, une étiquette
+        de diagnostic de performance énergétique (DPE), un devis agrafé, un échéancier
+        sur papier quadrillé et une photo imprimée d'une façade de maison ancienne,
+        disposés comme pour une analyse avant acquisition. Aucun logo, aucune marque
+        visible, palette ivoire et bois clair, format 16:9. »
+      */}
+
       <MqSection
         kicker="Avant l'acquisition"
         title="Estimer les travaux au moment où cela change le prix"
@@ -142,16 +157,24 @@ export default function InvestisseursProfessionnelsPage() {
         title="Le budget se maîtrise avant le démarrage"
         lead="Notre modèle vise jusqu'à 20 % d'économies sur le budget travaux, sans dégrader le niveau de prestation."
       >
-        <MqChecklist
-          items={[
-            "Achat des matériaux en direct par le propriétaire, au prix fournisseur.",
-            "Analyse ligne à ligne des devis par un ancien expert en chiffrage.",
-            "Suppression des doublons et des prestations facturées deux fois entre lots.",
-            "Mise en concurrence documentée sur un descriptif identique.",
-            "Arbitrages décidés avant le démarrage, pas en cours de chantier.",
-            "Suivi de l'immobilisation du bien, poste par poste, semaine par semaine.",
-          ]}
-        />
+        <div className="flex flex-col gap-8">
+          <MqFig
+            src="/photos/chantiers/chDressingLaqueBlancCouloirPlans.jpeg"
+            alt="Plans d'exécution affichés sur un chantier, servant de référence pour arbitrer les postes de travaux"
+            caption="Les arbitrages se prennent sur plan et sur devis, avant le démarrage — pas une fois les murs ouverts. Chantier réel des équipes partenaires."
+            ratio="aspect-[16/9]"
+          />
+          <MqChecklist
+            items={[
+              "Achat des matériaux en direct par le propriétaire, au prix fournisseur.",
+              "Analyse ligne à ligne des devis par un ancien expert en chiffrage.",
+              "Suppression des doublons et des prestations facturées deux fois entre lots.",
+              "Mise en concurrence documentée sur un descriptif identique.",
+              "Arbitrages décidés avant le démarrage, pas en cours de chantier.",
+              "Suivi de l'immobilisation du bien, poste par poste, semaine par semaine.",
+            ]}
+          />
+        </div>
       </MqSection>
 
       <MqSection kicker="Questions fréquentes" title="Investisseurs : réponses directes">

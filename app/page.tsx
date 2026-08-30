@@ -118,14 +118,25 @@ export default function Home() {
       </MqSection>
 
       <MqSection kicker="Modèle économique" title="Une méthode issue du secteur des foncières" lead="Notre modèle vient de la gestion d'actifs immobiliers : le prix se construit en amont, par la précision du chiffrage et la maîtrise des achats, jamais par la négociation de dernière minute." wide>
-        <MqNumbered items={[
-          { title: "Achats de matériaux en direct", text: "Le client achète ses matériaux au prix fournisseur. Les marges en cascade disparaissent du budget, les références restent traçables et le niveau de gamme reste maîtrisé." },
-          { title: "Rigueur d'ancien expert en chiffrage", text: "Chaque devis est relu ligne à ligne : quantités, unités, hypothèses, exclusions, prestations manquantes et doublons entre lots." },
-          { title: "Architectes DPLG et ingénieurs structure", text: "Pour les dossiers lourds, nous nous faisons accompagner par des architectes DPLG et des bureaux d'études structure partenaires indépendants." },
-          { title: "Transparence des rôles", text: "Les missions de pilotage, d'accompagnement ou d'apport d'affaires sont distinguées. Les entreprises partenaires exécutent et facturent leurs travaux." },
-          { title: "Suivi quotidien documenté", text: "Photos datées transmises sur WhatsApp, comptes rendus écrits, journal des décisions et de leur impact budgétaire." },
-          { title: "Pilotage de A à Z", text: "De la première lecture du bien à la levée des réserves, un interlocuteur unique conserve le fil du projet." },
-        ]} />
+        <div className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] gap-10 items-start">
+          <MqNumbered
+            cols={2}
+            items={[
+              { title: "Achats de matériaux en direct", text: "Le client achète ses matériaux au prix fournisseur. Les marges en cascade disparaissent du budget, les références restent traçables et le niveau de gamme reste maîtrisé." },
+              { title: "Rigueur d'ancien expert en chiffrage", text: "Chaque devis est relu ligne à ligne : quantités, unités, hypothèses, exclusions, prestations manquantes et doublons entre lots." },
+              { title: "Architectes DPLG et ingénieurs structure", text: "Pour les dossiers lourds, nous nous faisons accompagner par des architectes DPLG et des bureaux d'études structure partenaires indépendants." },
+              { title: "Transparence des rôles", text: "Les missions de pilotage, d'accompagnement ou d'apport d'affaires sont distinguées. Les entreprises partenaires exécutent et facturent leurs travaux." },
+              { title: "Suivi quotidien documenté", text: "Photos datées transmises sur WhatsApp, comptes rendus écrits, journal des décisions et de leur impact budgétaire." },
+              { title: "Pilotage de A à Z", text: "De la première lecture du bien à la levée des réserves, un interlocuteur unique conserve le fil du projet." },
+            ]}
+          />
+          <MqFig
+            src="/photos/chantiers/chPlacagesNoyerEnAttente.jpeg"
+            alt="Panneaux de placage noyer achetés en direct par le client, réceptionnés et stockés dans l'appartement en chantier avant la pose des menuiseries sur mesure"
+            caption="Matériaux achetés en direct par le client, réceptionnés sur site avant la pose : traçabilité des références, marges en cascade supprimées. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
       </MqSection>
 
       <MqDark kicker="Méthode" title="Les huit étapes du pilotage" lead="Chaque étape produit un livrable écrit. Le projet avance sur des décisions documentées, pas sur des intentions." cta={{ href: "/notre-methode", label: "Détail complet de la méthode" }}>
@@ -150,6 +161,29 @@ export default function Home() {
           "Sortie de passoire énergétique classée F ou G.",
           "Projet d'investisseur, de bailleur ou de professionnel.",
         ]} />
+      </MqSection>
+
+      <MqSection kicker="Sur le terrain" title="Les grandes étapes d'un chantier de rénovation" lead="Trois étapes-types illustrées par des chantiers réels de nos équipes partenaires — projets distincts, même exigence à chaque étape." wide>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <MqFig
+            src="/photos/chantiers/chDemolitionGravatsChantier.jpeg"
+            alt="Démolition d'une cloison ancienne mettant à nu le lattis bois et plâtre, gravats au sol, avant reprise de structure"
+            caption="Démolition : mise à nu des cloisons anciennes avant toute reprise de structure. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
+            alt="Poutre métallique posée après ouverture d'un mur porteur, mur dégarni jusqu'à la maçonnerie ancienne"
+            caption="Structure : pose d'une poutre métallique après ouverture du mur porteur. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineBlanchePendantsFinie.jpeg"
+            alt="Cuisine blanche laquée livrée avec plan de travail bois, suspensions et sol en marbre et parquet"
+            caption="Livraison : cuisine et pièce de vie finies, prêtes à l'usage. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
       </MqSection>
 
       <MqSection kicker="Confiance" title="Ce que disent les clients accompagnés" wide>

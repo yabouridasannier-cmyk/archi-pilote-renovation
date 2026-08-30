@@ -26,9 +26,9 @@ export default function Page() {
 
       <div className="container-site max-w-4xl pb-4">
         <MqFig
-          src="/photos/maquette/hero-renovation.jpg"
-          alt="Séjour d'un appartement parisien après rénovation complète : parquet en point de Hongrie restauré, moulures conservées et menuiseries remises en état"
-          caption="Appartement ancien rénové : les finitions visibles dépendent d'arbitrages techniques décidés plusieurs semaines plus tôt."
+          src="/photos/chantiers/chCuisineNoireSejourFinie.jpeg"
+          alt="Séjour et cuisine ouverte livrés après rénovation d'appartement, parquet posé à chevrons, cuisine sombre sur mesure"
+          caption="Appartement rénové : les finitions visibles dépendent d'arbitrages techniques décidés plusieurs semaines plus tôt. Chantier réel des équipes partenaires."
           ratio="aspect-[16/9]"
         />
       </div>

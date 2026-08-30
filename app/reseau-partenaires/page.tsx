@@ -44,6 +44,23 @@ export default function ReseauPartenairesPage() {
         lead="ARCHI PILOTE RÉNOVATION mobilise un réseau d'entreprises partenaires contractantes sélectionnées sur des critères précis, ainsi que des architectes DPLG et ingénieurs structure partenaires indépendants pour les dossiers lourds. Les entreprises exécutent et facturent les travaux ; la marque structure et pilote le projet de A à Z."
       />
 
+      {/*
+        À GÉNÉRER — visuel de hero manquant pour cette page (carte des rôles et
+        responsabilités : Client / ARCHI PILOTE RÉNOVATION / Entreprises partenaires /
+        Architecte / Ingénieur). Le composant MqHero (app/components/mq.tsx) n'a pas de
+        slot image ; une fois le schéma généré, suivre le pattern déjà utilisé sur
+        /parcours-expertise (un MqFig posé juste sous le hero, dans un
+        <div className="container-site max-w-4xl pb-12 md:pb-16">) plutôt que de
+        modifier mq.tsx pour toutes les pages.
+        Prompt FR proposé : « Diagramme éditorial plat (fond ivoire, traits encre
+        carbone, accent orange laiton), organigramme horizontal en blocs reliés par
+        des flèches : Client → ARCHI PILOTE RÉNOVATION (pilotage) → Entreprises
+        partenaires contractantes (exécution), avec deux blocs satellites reliés à
+        ARCHI PILOTE RÉNOVATION : Architecte DPLG partenaire (conception) et Ingénieur
+        structure partenaire (calcul). Style infographie sobre, sans photo, format
+        16:9. »
+      */}
+
       <MqSection
         title="Critères de sélection des entreprises partenaires"
         lead="Chaque entreprise est évaluée avant d'intégrer le réseau."
@@ -62,11 +79,24 @@ export default function ReseauPartenairesPage() {
 
       <MqSection title="Documents exigés avant intervention" lead="Un dossier réuni avant tout démarrage de chantier.">
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/maquette/schema-electricite-nfc15100.jpg"
-            alt="Schéma d'un tableau électrique de logement rénové avec circuits, différentiel 30 mA et liaison équipotentielle"
-            caption="Organisation des circuits d'un logement rénové : protection différentielle 30 mA, sections adaptées et liaison équipotentielle en salle d'eau."
-          />
+          {/*
+            Image retirée : le schéma électrique affiché ici auparavant n'avait aucun
+            rapport avec les documents exigés (Kbis, assurance, devis) — un reliquat de
+            copier-coller entre sections. Il reste correctement utilisé ailleurs sur le
+            site (clinique-du-devis, detail-invisible, second-oeuvre).
+            LIMITATION HONNÊTE : nous n'avons pas de vraie photo d'un dossier anonymisé
+            (Kbis, attestation d'assurance, devis) et il ne faut pas en fabriquer un —
+            un faux document, même flouté, serait une pièce trompeuse. À défaut : soit
+            laisser la section sans visuel (la checklist ci-dessous suffit à elle
+            seule), soit commander une illustration éditoriale non documentaire.
+            À GÉNÉRER (optionnel) — prompt FR : « Illustration éditoriale plate (fond
+            ivoire, traits encre carbone, accent orange laiton) : une pochette de
+            dossier fermée par un ruban, posée sur une table, entourée de trois
+            pictogrammes simples — un tampon (assurance décennale), un sceau (Kbis) et
+            une feuille lignée (devis) — sans aucun texte lisible ni logo, pour éviter
+            toute confusion avec un vrai document. Style sobre, sans photo, format
+            4:3. »
+          */}
           <MqChecklist
             cols={1}
             items={[
@@ -85,9 +115,9 @@ export default function ReseauPartenairesPage() {
       >
         <div className="flex flex-col gap-8">
           <MqFig
-            src="/photos/maquette/detail-menuiserie-moulure.jpg"
-            alt="Détail de menuiserie en chêne : porte à panneaux moulurés, chambranle profilé et poignée en laiton patiné"
-            caption="Détail de menuiserie : profils de moulure relevés sur l'existant, chambranle reconstitué et quincaillerie laiton patiné posée à l'ancienne."
+            src="/photos/chantiers/chDressingLaqueBlancCouloirPlans.jpeg"
+            alt="Plans d'exécution affichés sur le chantier, à côté d'un dressing laqué blanc en cours de finition"
+            caption="Plans d'exécution consultés sur site pendant la pose : la conception se vérifie jusqu'au dernier vantail. Chantier réel des équipes partenaires."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">

@@ -73,12 +73,21 @@ export default function ParcoursExpertisePage() {
               PILOTE RÉNOVATION, avec les mêmes réflexes de vérification.
             </p>
           </MqProse>
-          <MqFig
-            src="/photos/maquette/schema-mur-porteur.jpg"
-            alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge"
-            caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis."
-            ratio="aspect-[16/9]"
-          />
+          {/*
+            À GÉNÉRER — schéma manquant pour cette section.
+            L'image précédente ici (schema-mur-porteur.jpg) montrait une ouverture de
+            mur porteur : hors-sujet à cet endroit, où le texte parle de lecture de
+            devis, pas de structure. Retirée pour ne pas induire en erreur. Ce visuel
+            reste correctement utilisé ailleurs sur le site (reseau-partenaires,
+            gros-oeuvre-structure, surelevation, etc.), donc rien n'est perdu.
+            Prompt FR proposé : « Schéma éditorial plat, style infographie technique
+            sobre (fond ivoire, traits encre carbone, un seul accent orange laiton
+            en surlignage) : une ligne de devis de rénovation qui se décompose en six
+            blocs étiquetés — Quantité, Unité, Fourniture, Pose, Hypothèse, Exclusion —
+            reliés par de fines flèches partant de la ligne de devis d'origine vers
+            chaque bloc. Aucun texte de marque, aucune photo, rendu vectoriel épuré,
+            format 16:9. »
+          */}
           <MqProse>
             <h3 className="display text-[1.3rem] text-ivoire">Transformer cette méthode pour les particuliers</h3>
             <p>Un particulier n'a pas besoin d'un discours de professionnel : il a besoin d'un projet lisible.</p>
@@ -123,6 +132,19 @@ export default function ParcoursExpertisePage() {
         title="Un réseau, pas une entreprise unique"
         lead="ARCHI PILOTE RÉNOVATION s'appuie, selon les besoins, sur des entreprises partenaires contractantes et des professionnels indépendants. Le choix dépend de la nature du projet, des assurances requises, des compétences nécessaires et des disponibilités réelles."
       >
+        {/*
+          À GÉNÉRER — carte des rôles pour cette section (rôles/responsabilités).
+          La grille ci-dessous liste déjà les 4 profils en texte, mais le client demande
+          un schéma conceptuel visuel incluant aussi le Client et ARCHI PILOTE
+          RÉNOVATION. Aucune photo réelle ne peut illustrer ceci.
+          Prompt FR proposé : « Diagramme éditorial minimaliste (fond ivoire, traits
+          fins encre carbone, un accent orange laiton), cinq bulles étiquetées en
+          réseau — Client au centre, reliée par des traits à ARCHI PILOTE RÉNOVATION
+          (pilotage), qui se relie à son tour à Entreprise partenaire (exécution),
+          Architecte DPLG (conception) et Ingénieur structure (calcul) — chaque trait
+          annoté du mot qui définit la responsabilité échangée. Style infographie
+          sobre, sans texture ni photo, format 16:9. »
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           <div className="flex flex-col gap-2">
             <h3 className="display text-[1.15rem] text-ivoire">Architectes DPLG partenaires</h3>

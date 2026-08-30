@@ -332,6 +332,15 @@ export default function SavoirFaireAncienPage() {
         }
       />
 
+      <div className="container-site max-w-4xl pb-12 md:pb-16">
+        <MqFig
+          src="/photos/chantiers/chDressingNoyerMouluresFenetre.jpeg"
+          alt="Fenêtre ancienne à ferronnerie ouvragée et corniche moulurée au plafond, dans un appartement haussmannien en cours de pose de rangements"
+          caption="Fenêtre ancienne conservée avec sa ferronnerie et sa corniche moulurée en plafond, pendant la pose d'un rangement sur mesure au premier plan. Chantier réel des équipes partenaires."
+          ratio="aspect-[16/9]"
+        />
+      </div>
+
       <MqSection
         kicker="Ce que nous préservons"
         title="Les ouvrages qui font le cachet d'un logement ancien"
@@ -358,9 +367,9 @@ export default function SavoirFaireAncienPage() {
               caption="Corniches, rosace et boiseries restituées en plâtre traditionnel : profils moulés d'après l'existant, fournis par la maison Guimier."
             />
             <MqFig
-              src="/photos/maquette/bibliotheque-chene-haussmannien.jpg"
-              alt="Bibliothèque en chêne massif encastrée dans un mur d'appartement haussmannien avec moulures et parquet point de Hongrie"
-              caption="Bibliothèque encastrée en chêne dans un appartement haussmannien : reprise des moulures existantes et raccord au parquet point de Hongrie."
+              src="/photos/chantiers/chBibliotheque.jpeg"
+              alt="Bibliothèque encastrée livrée dans un logement ancien, mur en pierre apparente conservé et parquet à bâtons rompus, chantier réel"
+              caption="Bibliothèque encastrée livrée : mur en pierre apparente conservé en niche et raccord au parquet à bâtons rompus d'origine. Chantier réel des équipes partenaires."
             />
             <MqFig
               src="/photos/maquette/sejour-haussmannien-renove.jpg"
