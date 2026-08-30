@@ -276,18 +276,11 @@ export default function Page() {
               </MqProse>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <MqFig
-              src="/photos/maquette/schema-humidite-origines.jpg"
-              alt="Coupe d'un logement ancien illustrant remontées capillaires, infiltrations, condensation et ponts thermiques"
-              caption="Origines de l'humidité dans un logement ancien et traitements associés : le diagnostic précède toujours le choix de la solution."
-            />
-            <MqFig
-              src="/photos/maquette/escalier-duplex-tremie.jpg"
-              alt="Escalier intérieur en chêne et acier noir desservant un duplex, trémie ouverte et garde-corps métallique"
-              caption="Référence de style : escalier chêne et acier posé après création de trémie et reprise du plancher par chevêtre."
-            />
-          </div>
+          <MqFig
+            src="/photos/maquette/schema-humidite-origines.jpg"
+            alt="Coupe d'un logement ancien illustrant remontées capillaires, infiltrations, condensation et ponts thermiques"
+            caption="Origines de l'humidité dans un logement ancien et traitements associés : le diagnostic précède toujours le choix de la solution."
+          />
         </div>
       </MqSection>
 
@@ -302,9 +295,9 @@ export default function Page() {
             caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
           />
           <MqFig
-            src="/photos/chantiers/chDemolitionOuvertureCouloir.jpeg"
-            alt="Démolition d'une cloison dans un couloir, ossature bois apparente, chantier réel"
-            caption="Démolition sélective dans un couloir d'appartement ancien : ossature apparente avant reconstruction. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
+            alt="Démolition d'une cloison ancienne en pan de bois et plâtre, lattis et poteaux mis à nu"
+            caption="Démolition d'une cloison ancienne en pan de bois et plâtre : lattis et poteaux mis à nu avant reconstruction. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/chantiers/chDemolitionLattisPlatreChantier1.jpeg"
@@ -320,21 +313,6 @@ export default function Page() {
             src="/photos/chantiers/chDemolitionGravatsChantier.jpeg"
             alt="Gravats de démolition triés avant évacuation, chantier réel"
             caption="Gravats de démolition triés et sacs préparés avant évacuation. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chFacadeRavalementEchafaudage1.jpeg"
-            alt="Façade d'immeuble en cours de ravalement, échafaudage complet, chantier réel"
-            caption="Ravalement de façade en cours, échafaudage complet et protection des ouvrants. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chFacadeRavalementEchafaudage2.jpeg"
-            alt="Façade en cours de ravalement, autre bâtiment, chantier réel"
-            caption="Ravalement de façade sur un autre bâtiment, échafaudage en place. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chFacadeRavalementVillage.jpeg"
-            alt="Façade de bâtiment en cours de ravalement en centre-village, chantier réel"
-            caption="Ravalement de façade d'un bâtiment ancien, échafaudage et protections en place. Chantier réel des équipes partenaires."
           />
         </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
@@ -364,6 +342,23 @@ export default function Page() {
             En immeuble occupé, qu'il s'agisse des voisins d'un même bâtiment ou des occupants du logement en cours de travaux, les horaires de nuisances sonores respectent généralement un cadre fixé par arrêté municipal, et l'accès aux parties communes est organisé pour limiter la gêne pendant les phases les plus bruyantes, comme le carottage ou la démolition.
           </p>
         </MqProse>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <MqFig
+            src="/photos/chantiers/chFacadeRavalementEchafaudage1.jpeg"
+            alt="Façade d'immeuble en cours de ravalement, échafaudage complet, chantier réel"
+            caption="Ravalement de façade : une modification de l'aspect extérieur qui relève du règlement de copropriété. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chFacadeRavalementEchafaudage2.jpeg"
+            alt="Façade en cours de ravalement, autre bâtiment, chantier réel"
+            caption="Ravalement de façade sur un autre bâtiment, échafaudage en place. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chFacadeRavalementVillage.jpeg"
+            alt="Façade de bâtiment en cours de ravalement en centre-village, chantier réel"
+            caption="Ravalement de façade d'un bâtiment ancien, échafaudage et protections en place. Chantier réel des équipes partenaires."
+          />
+        </div>
         <div className="mt-8">
           <MqChecklist
             items={[

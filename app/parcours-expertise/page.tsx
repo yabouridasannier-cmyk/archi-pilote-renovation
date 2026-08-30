@@ -88,6 +88,12 @@ export default function ParcoursExpertisePage() {
               les conséquences budgétaires.
             </p>
           </MqProse>
+          <MqFig
+            src="/photos/pedagogie/02-transformer-methode.jpeg"
+            alt="Schéma pédagogique : un enjeu technique de devis se traduit en sept décisions concrètes — conserver, remplacer, déplacer, renforcer, isoler, différer, supprimer"
+            caption="Schéma pédagogique : chaque enjeu technique du devis se traduit en une décision concrète et arbitrable."
+            ratio="aspect-[16/9]"
+          />
         </div>
       </MqSection>
 

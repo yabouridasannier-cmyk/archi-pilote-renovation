@@ -48,9 +48,14 @@ export const NAV_GROUPS = [
       { href: "/demarches-administratives-renovation", label: "Démarches administratives" },
       { href: "/glossaire-renovation", label: "Glossaire technique" },
       { href: "/guides", label: "Guides & conseils" },
-      { href: "/blog", label: "Magazine de la rénovation" },
       { href: "/estimateur-travaux", label: "Estimateur de travaux" },
       { href: "/faq", label: "Questions fréquentes" },
     ],
   },
+] as const;
+
+/* Liens autonomes affichés directement dans la barre de navigation,
+   hors des menus déroulants (ex. Blog, sorti de "Ressources" à la demande). */
+export const NAV_STANDALONE = [
+  { href: "/blog", label: "Blog" },
 ] as const;

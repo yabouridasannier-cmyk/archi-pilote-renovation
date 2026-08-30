@@ -163,7 +163,12 @@ export default function Page() {
         title="Menuiseries, étanchéité à l'air et risque de condensation"
         lead="Remplacer des menuiseries sans revoir la ventilation est l'une des erreurs les plus fréquentes en rénovation énergétique."
       >
-        <div className="flex flex-col gap-10">
+        <MqFig
+          src="/photos/pedagogie/03-menuiserie-condensation.jpeg"
+          alt="Schéma pédagogique avant/après : menuiserie ancienne avec fuites d'air diffuses, menuiserie neuve étanche avec risque de condensation sans ventilation adaptée"
+          caption="Schéma pédagogique : une menuiserie plus étanche supprime des fuites d'air qui participaient au renouvellement d'air — d'où le risque de condensation sans ventilation adaptée."
+        />
+        <div className="mt-10 flex flex-col gap-10">
           <div>
             <h3 className="display text-[1.25rem] text-ivoire">Menuiseries et vitrage : un choix qui affecte tout le système</h3>
             <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
@@ -260,6 +265,13 @@ export default function Page() {
                   réellement comme prévu, sans zone morte ni surventilation locale.
                 </p>
               </MqProse>
+            </div>
+            <div className="mt-6">
+              <MqFig
+                src="/photos/pedagogie/04-circuit-air.jpeg"
+                alt="Schéma pédagogique du circuit complet de l'air dans un logement : entrées d'air en séjour et chambres, transit sous les portes du couloir, extraction en cuisine et salle de bain"
+                caption="Schéma pédagogique : circuit complet de l'air — entrée par les pièces de vie, transit sous les portes, extraction en cuisine et salle de bain."
+              />
             </div>
           </div>
           <div>

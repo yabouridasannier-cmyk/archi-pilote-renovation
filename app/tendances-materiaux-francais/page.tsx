@@ -168,9 +168,9 @@ export default function TendancesMateriauxFrancaisPage() {
             </p>
           </MqProse>
           <MqFig
-            src="/photos/maquette/schema-planning-lots.jpg"
-            alt="Planning en lots d'un chantier de rénovation présenté sous forme de diagramme de phases hebdomadaires"
-            caption="Enchaînement des lots d'un chantier de rénovation : chaque phase conditionne la suivante, d'où l'importance du séquencement."
+            src="/photos/pedagogie/01-beton-cire.jpeg"
+            alt="Schéma pédagogique du béton ciré appliqué sur dalle béton et sur plancher bois ancien, avec ragréage fibré et primaire d'accroche"
+            caption="Schéma pédagogique : préparation du support avant béton ciré, sur dalle béton comme sur plancher bois ancien où la stabilité des solives se vérifie en premier."
             ratio="aspect-[16/9]"
           />
         </div>
@@ -192,9 +192,9 @@ export default function TendancesMateriauxFrancaisPage() {
             ]}
           />
           <MqFig
-            src="/photos/maquette/detail-menuiserie-moulure.jpg"
-            alt="Détail de menuiserie en chêne : porte à panneaux moulurés, chambranle profilé et poignée en laiton patiné"
-            caption="Détail de menuiserie : profils de moulure relevés sur l'existant, chambranle reconstitué et quincaillerie laiton patiné posée à l'ancienne."
+            src="/photos/pedagogie/05-menuiserie-moulures.jpeg"
+            alt="Schéma pédagogique de trois profils : corniche relevée, fenêtre à petits bois et crémone en laiton, menuiserie chêne à chambranle profilé"
+            caption="Schéma pédagogique : trois profils relevés sur l'existant — corniche, fenêtre à petits bois et crémone en laiton, menuiserie chêne à chambranle profilé."
             ratio="aspect-[16/9]"
           />
         </div>

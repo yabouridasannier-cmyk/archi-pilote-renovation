@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { NAV_GROUPS } from "./mq-nav-data";
+import { NAV_GROUPS, NAV_STANDALONE } from "./mq-nav-data";
 
 /* Navigation reprise de la maquette Lovable : 4 menus déroulants
    (Expertise / Travaux / Preuves / Ressources) + CTA. */
@@ -57,6 +57,15 @@ export function Nav() {
                 )}
               </div>
             ))}
+            {NAV_STANDALONE.map((l) => (
+              <Link
+                key={l.href}
+                href={l.href}
+                className={`px-3 py-2 text-[0.9rem] font-medium transition-colors ${pathname === l.href ? "text-ivoire" : "text-muted hover:text-ivoire"}`}
+              >
+                {l.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="flex items-center gap-3">
@@ -86,6 +95,13 @@ export function Nav() {
                 </div>
               </div>
             ))}
+            <div className="flex flex-col">
+              {NAV_STANDALONE.map((l) => (
+                <Link key={l.href} href={l.href} className={`py-2 text-[1.02rem] border-b border-line ${pathname === l.href ? "text-orange-deep" : "text-ivoire"}`}>
+                  {l.label}
+                </Link>
+              ))}
+            </div>
             <Link href="/contact" className="btn btn-primary w-full">Étudier mon projet</Link>
             <a href="tel:+33652798089" className="btn btn-ghost w-full">06 52 79 80 89</a>
           </nav>

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { SITE } from "../data";
-import { NAV_GROUPS } from "./mq-nav-data";
+import { NAV_GROUPS, NAV_STANDALONE } from "./mq-nav-data";
 
 /* Footer repris de la maquette Lovable : 4 colonnes sur encre + bloc légal.
    Coordonnées réelles conservées (e-mail Gmail actif — l'adresse
@@ -49,7 +49,7 @@ export function Footer() {
             indépendants. Les travaux sont exécutés et facturés par les entreprises concernées.
           </p>
           <div className="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[0.8rem]" style={{ color: "oklch(58% 0.012 70)" }}>
-            <span>© 2026 IA RENOV SASU. Marque ARCHI PILOTE RÉNOVATION. Tous droits réservés. — <Link href="/mentions-legales" className="hover:underline">Mentions légales</Link> — <Link href="/politique-confidentialite" className="hover:underline">Confidentialité</Link></span>
+            <span>© 2026 IA RENOV SASU. Marque ARCHI PILOTE RÉNOVATION. Tous droits réservés. — {NAV_STANDALONE.map((l) => (<Link key={l.href} href={l.href} className="hover:underline">{l.label}</Link>))} — <Link href="/mentions-legales" className="hover:underline">Mentions légales</Link> — <Link href="/politique-confidentialite" className="hover:underline">Confidentialité</Link></span>
             <a href="https://fr.trustpilot.com/evaluate/archipiloterenovation.fr" target="_blank" rel="noreferrer" className="hover:underline">Donner votre avis sur Trustpilot ★</a>
           </div>
         </div>

@@ -83,6 +83,18 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
                   </figure>
                 </Reveal>
               )}
+              {i === 1 && article.img3 && (
+                <Reveal variant="scale" delay={0.15}>
+                  <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
+                    <img src={PHOTOS[article.img3 as keyof typeof PHOTOS]} alt={article.img3Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
+                    {article.img3Caption && (
+                      <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
+                        {article.img3Caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                </Reveal>
+              )}
             </>
           ))}
           <Reveal variant="slide-up" delay={0.2} className="mt-4">
