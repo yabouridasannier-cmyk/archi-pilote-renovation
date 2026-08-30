@@ -131,6 +131,32 @@ export type Article = { slug: string; titre: string; date: string; dateISO: stri
 
 export const ARTICLES: Article[] = [
   {
+    slug: "extension-ou-surelevation-maison",
+    titre: "Extension ou surélévation : comment choisir selon votre terrain",
+    date: "29 août 2026", dateISO: "2026-08-29",
+    categorie: "Extension",
+    excerpt: "Deux façons de gagner de la surface sans déménager, mais deux logiques de faisabilité radicalement différentes : le terrain tranche avant le budget.",
+    photo: "grosOeuvre",
+    corps: [
+      "Agrandir une maison sans déménager passe par deux voies très différentes : construire au sol, en extension, ou construire en hauteur, en surélévation. Le choix ne se décide pas sur un coup de cœur esthétique : il dépend d'abord de ce que le terrain et le bâti existant permettent réellement.",
+      "L'extension exige une emprise au sol disponible et compatible avec le plan local d'urbanisme, ainsi qu'une étude de sol préalable pour dimensionner des fondations adaptées. La surélévation, elle, dispense de terrain supplémentaire mais impose un diagnostic de portance des murs existants par un ingénieur structure : un mur construit pour porter une toiture ne porte pas automatiquement un étage habitable de plus.",
+      "Dans les deux cas, une déclaration préalable ou un permis de construire est nécessaire selon la surface créée, et le délai administratif — souvent sous-estimé — conditionne le calendrier bien avant le premier coup de pioche. Le diagnostic de faisabilité, réalisé en amont avec un architecte ou un ingénieur structure partenaire, évite d'engager un budget sur un projet qui ne passera pas l'instruction du dossier.",
+    ],
+  },
+  {
+    slug: "signes-mur-porteur-avant-travaux",
+    titre: "Mur porteur : les signes qui doivent alerter avant travaux",
+    date: "25 août 2026", dateISO: "2026-08-25",
+    categorie: "Structure",
+    excerpt: "Aucun indice ne suffit seul pour juger si un mur porte le bâtiment : voici ceux qu'il faut recouper avant de valider un devis d'ouverture.",
+    photo: "chPoutreAcierMurDegarni",
+    corps: [
+      "Un mur épais n'est pas automatiquement porteur, et un mur fin en briques ou en carreaux de plâtre n'est pas automatiquement sans rôle structurel. C'est l'erreur la plus fréquente chez qui juge « à l'œil » avant travaux.",
+      "Quatre indices se recoupent : l'épaisseur du mur, son alignement vertical avec un mur de l'étage du dessous ou du dessus, le sens de pose des solives ou poutrelles du plancher, et sa position par rapport aux façades et aux refends principaux du bâtiment. Pris isolément, chacun n'est qu'une présomption ; ensemble, ils orientent un diagnostic fiable.",
+      "Quand le doute persiste, un sondage ponctuel dans une cloison ou un doublage permet d'observer la maçonnerie réelle sans engager une ouverture complète. Pour tout ouvrage engageant la stabilité de plusieurs niveaux, l'avis d'un ingénieur structure partenaire indépendant est sollicité avant toute validation de devis — cette étape, perçue comme une dépense évitable, protège en réalité le budget global du chantier.",
+    ],
+  },
+  {
     slug: "prix-renovation-maison-2026",
     titre: "Combien coûtent des travaux de rénovation de maison en 2026 ?",
     date: "18 août 2026", dateISO: "2026-08-18",
@@ -141,6 +167,19 @@ export const ARTICLES: Article[] = [
       "Le prix d'une rénovation dépend d'abord de son ampleur, bien plus que de la surface seule. Un rafraîchissement (peinture, sols simples) se situe entre 250 et 450 €/m². Une rénovation partielle, qui touche une ou deux pièces avec de la plomberie et de l'électricité, grimpe à 600-900 €/m². Une rénovation complète — toutes les pièces refaites, cuisine et salle de bain neuves — se chiffre entre 1000 et 1500 €/m². Le haut de gamme, avec des matériaux premium et des finitions d'architecte, démarre à 1500 €/m² et peut dépasser 2500 €/m².",
       "Ces fourchettes restent indicatives : seul un devis détaillé après visite technique, remis par l'entreprise qui réalisera les travaux, donne un chiffrage fiable poste par poste. C'est pour cette raison que les devis des entreprises partenaires arrivent sous 48h après la visite — vous devez pouvoir comparer et décider vite, avec des chiffres réels et non des estimations vagues.",
       "Un point souvent oublié : la TVA. Elle est réduite à 10 % sur les travaux d'amélioration d'un logement de plus de 2 ans, et descend à 5,5 % sur les travaux d'amélioration énergétique éligibles. Sur un chantier de 60 000 €, la différence entre 20 % et 10 % de TVA représente 6 000 € — un budget qui peut financer une cuisine entière. Ce taux s'applique aux travaux facturés par l'entreprise ; les matériaux achetés en direct par le client relèvent du taux standard.",
+    ],
+  },
+  {
+    slug: "devis-travaux-lignes-a-verifier",
+    titre: "Devis de travaux : les lignes à vérifier avant de signer",
+    date: "14 août 2026", dateISO: "2026-08-14",
+    categorie: "Devis",
+    excerpt: "Un devis forfaitaire de trois lignes ne se compare à rien. Voici ce qu'un devis détaillé doit préciser pour être réellement comparable.",
+    photo: "devisDetail",
+    corps: [
+      "Deux devis affichant le même total peuvent recouvrir des prestations très différentes. Le premier réflexe consiste à vérifier que le devis détaille des quantités réelles — mètres carrés, mètres linéaires, unités — et non un forfait global impossible à décomposer.",
+      "Trois points méritent une attention particulière : les exclusions écrites noir sur blanc (évacuation des gravats, protection des sols, reprise de peinture après un autre lot), la marque et la référence exacte des matériaux prévus plutôt qu'une simple catégorie, et le délai d'exécution engagé, pas seulement une date de début.",
+      "Un devis qui ne mentionne aucune de ces précisions n'est pas nécessairement malhonnête, mais il ne permet pas de comparer objectivement deux entreprises. Faire reformuler ces points avant signature coûte un échange de plus et évite le risque d'un avenant surprise en cours de chantier.",
     ],
   },
   {
@@ -157,6 +196,19 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "cuisine-sur-mesure-ou-caissons-standards",
+    titre: "Cuisine sur mesure ou caissons standards : où se joue vraiment l'économie",
+    date: "7 août 2026", dateISO: "2026-08-07",
+    categorie: "Cuisine & agencement",
+    excerpt: "Le caisson disparaît derrière la façade une fois la cuisine posée : voici pourquoi l'écart de prix ne se voit presque jamais sur le résultat.",
+    photo: "chCuisineBleuCanardBrillante",
+    corps: [
+      "Une cuisine intégralement sur mesure coûte cher parce que chaque caisson est fabriqué à l'unité. Or le caisson est invisible une fois la cuisine posée : il n'intervient ni dans l'esthétique ni dans la perception de la qualité par un visiteur.",
+      "L'alternative consiste à conserver des caissons standards de bonne facture, aux dimensions normalisées et aux quincailleries fiables, et à faire fabriquer sur mesure uniquement ce qui se voit et se touche : façades, plan de travail, plinthes et joues d'habillage contre les murs biais, fréquents en logement ancien.",
+      "L'écart de budget constaté sur un projet équivalent se situe généralement entre 30 et 50 % sur le poste mobilier, sans écart visible sur le résultat livré. La question à poser avant de chiffrer une cuisine n'est donc pas « sur mesure ou standard », mais « qu'est-ce qui doit vraiment être sur mesure ».",
+    ],
+  },
+  {
     slug: "sortir-passoire-energetique",
     titre: "DPE F ou G : comment sortir de la passoire énergétique",
     date: "2 août 2026", dateISO: "2026-08-02",
@@ -167,6 +219,45 @@ export const ARTICLES: Article[] = [
       "Un logement classé F ou G n'est pas seulement une facture de chauffage élevée : depuis 2025, ces logements sont progressivement interdits à la location. Sortir de la passoire énergétique est donc devenu un sujet patrimonial autant qu'un sujet de confort.",
       "La méthode commence toujours par un diagnostic complet, qui identifie les postes de déperdition réels — souvent les combles et les murs avant les fenêtres, contrairement à l'intuition. Vient ensuite l'isolation proprement dite, la pose d'une VMC double flux pour éviter les problèmes d'humidité une fois le logement étanche, puis le remplacement du système de chauffage si nécessaire — dimensionné après les travaux d'isolation, pas avant.",
       "Les aides existent et se cumulent souvent : MaPrimeRénov' et les Certificats d'Économie d'Énergie (CEE) peuvent financer une part significative des travaux selon les revenus du foyer et le gain énergétique obtenu. Les règles évoluent régulièrement et doivent être vérifiées au moment du projet. L'accompagnement dans ces démarches administratives fait partie du pilotage d'un chantier d'isolation bien mené — le gain de classe DPE ne sert à rien si le dossier d'aide n'aboutit pas.",
+    ],
+  },
+  {
+    slug: "coproprietaire-autorisations-avant-travaux",
+    titre: "Copropriété : les autorisations à obtenir avant de lancer un chantier",
+    date: "28 juillet 2026", dateISO: "2026-07-28",
+    categorie: "Copropriété",
+    excerpt: "Un chantier qui touche une partie commune ou l'aspect extérieur du bâtiment ne se lance pas sans passer par le syndic — parfois bien avant le premier devis.",
+    photo: "planArchitecte",
+    corps: [
+      "En copropriété, le règlement encadre toute intervention touchant les éléments communs, la structure porteuse commune ou l'aspect extérieur du bâtiment. Selon la nature exacte des travaux, une simple information écrite au syndic peut suffire, ou au contraire une autorisation formelle votée en assemblée générale devient nécessaire avant tout démarrage.",
+      "C'est notamment le cas d'une ouverture touchant un mur porteur mitoyen d'une partie commune, du remplacement d'une fenêtre visible depuis la rue, ou de la création d'une sortie de ventilation en façade. Ces dossiers doivent être présentés en amont, avec un descriptif technique précis, pour être inscrits à l'ordre du jour de la prochaine assemblée générale — dont la fréquence, généralement annuelle, doit être anticipée dans le calendrier du projet.",
+      "En immeuble occupé, les horaires des phases bruyantes comme la démolition ou le carottage sont généralement encadrés par arrêté municipal, et une information écrite préalable des voisins limite les tensions pendant le chantier. Ignorer ces étapes administratives ne fait pas gagner de temps : cela expose au contraire à un arrêt de chantier ordonné en cours de travaux.",
+    ],
+  },
+  {
+    slug: "parquet-massif-contrecolle-stratifie",
+    titre: "Parquet massif, contrecollé ou stratifié : quel revêtement pour quel usage",
+    date: "22 juillet 2026", dateISO: "2026-07-22",
+    categorie: "Matériaux",
+    excerpt: "Les trois solutions se ressemblent une fois posées, mais leur épaisseur de bois réel change tout pour la durée de vie et les rénovations futures.",
+    photo: "chCouloirParquetChevronsPortesOuvertes",
+    corps: [
+      "Le parquet massif est en bois plein sur toute son épaisseur, généralement 14 à 22 mm. Il se ponce et se rénove plusieurs fois sur des décennies, ce qui en fait la solution la plus durable — et la plus chère à l'achat comme à la pose, notamment en pose traditionnelle à bâtons rompus ou point de Hongrie.",
+      "Le parquet contrecollé associe une fine couche de bois noble, en général 2 à 6 mm, collée sur un support en contreplaqué ou en fibres de bois. Il coûte nettement moins cher que le massif et se ponce une à deux fois selon l'épaisseur de la couche d'usure — un compromis pertinent pour la plupart des chantiers de rénovation.",
+      "Le stratifié, enfin, n'est pas du bois mais un décor imprimé sur un support en fibres à haute densité. Il ne se ponce ni ne se rénove : rayé ou abîmé, il se remplace lame par lame ou intégralement. Sa résistance à l'usure quotidienne en fait un choix pertinent dans une pièce à fort passage, sous réserve d'accepter cette limite plutôt que d'y voir une alternative économique au bois véritable.",
+    ],
+  },
+  {
+    slug: "maprimerenov-cee-2026",
+    titre: "MaPrimeRénov' et CEE : ce qu'il faut vérifier avant de compter sur une aide",
+    date: "15 juillet 2026", dateISO: "2026-07-15",
+    categorie: "Aides financières",
+    excerpt: "Les aides à la rénovation énergétique se cumulent parfois, mais leurs règles et leurs montants évoluent d'une année sur l'autre : ce qui ne change pas, c'est l'ordre dans lequel les vérifier.",
+    photo: "chIsolationCombles",
+    corps: [
+      "MaPrimeRénov' et les Certificats d'Économie d'Énergie (CEE) sont les deux dispositifs les plus mobilisés pour financer une part des travaux d'isolation, de ventilation ou de remplacement de chauffage. Leurs montants dépendent des revenus du foyer et du gain énergétique obtenu, et leurs règles d'éligibilité sont révisées régulièrement — parfois en cours d'année.",
+      "Avant de compter sur l'une de ces aides dans un budget, trois vérifications s'imposent : la date exacte des barèmes en vigueur au moment du dépôt de dossier, la nécessité de faire réaliser les travaux par une entreprise certifiée RGE (Reconnu Garant de l'Environnement), sans laquelle aucune aide n'est versée, et l'ordre des démarches — la demande doit généralement être déposée avant la signature du devis, jamais après le début des travaux.",
+      "Un projet mal séquencé peut perdre le bénéfice d'une aide pour une simple question de date de dossier, même si les travaux réalisés étaient parfaitement éligibles sur le fond. L'accompagnement dans ces démarches fait partie du pilotage d'un chantier d'isolation : le gain de classe énergétique ne sert à rien si le dossier d'aide n'aboutit pas.",
     ],
   },
 ];
