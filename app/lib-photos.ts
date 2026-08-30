@@ -245,6 +245,14 @@ export const PHOTOS = {
   chFenetreBoisDecorativeChantier: "/photos/chantiers/chFenetreBoisDecorativeChantier.jpeg",
   chPanneauKraftEchelleChantier: "/photos/chantiers/chPanneauKraftEchelleChantier.jpeg",
   chCouloirDressingToilettes: "/photos/chantiers/chCouloirDressingToilettes.jpeg",
+
+  /* Photos envoyées directement par le client (30/08/2026) pour le dossier
+     d'ouverture de mur porteur — même chantier que le dossier bureau d'études
+     anonymisé (voir public/photos/etudes/). */
+  chDemolitionDegagementVersSejour: "/photos/chantiers/chDemolitionDegagementVersSejour.jpeg",
+  chDemolitionLattisPlatreOuverture: "/photos/chantiers/chDemolitionLattisPlatreOuverture.jpeg",
+  chPoutreAcierAngleSoudeVue1: "/photos/chantiers/chPoutreAcierAngleSoudeVue1.jpeg",
+  chPoutreAcierProfilVueLongue: "/photos/chantiers/chPoutreAcierProfilVueLongue.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —
