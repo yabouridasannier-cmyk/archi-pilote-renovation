@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
 import { SITE } from "../data";
 
 /* Formulaire de contact — mise en page maquette Lovable (une étape, 8 champs),
@@ -98,7 +99,12 @@ export function ContactForm() {
         <button type="submit" disabled={sending} className={`btn btn-primary w-full sm:w-auto ${sending ? "opacity-50 pointer-events-none" : ""}`}>
           {sending ? "Envoi en cours…" : "Envoyer ma demande d'étude gratuite"}
         </button>
-        <p className="text-muted text-[0.8rem]">Vos coordonnées servent uniquement à vous répondre au sujet de ce projet. Aucune donnée n&apos;est transmise à des tiers.</p>
+        <p className="text-muted text-[0.8rem]">
+          Vos coordonnées servent uniquement à vous répondre au sujet de ce projet et ne sont transmises à des tiers
+          qu&apos;en cas de mise en relation avec une entreprise partenaire pour l&apos;exécution des travaux. Vous
+          disposez d&apos;un droit d&apos;accès, de rectification et de suppression : voir notre{" "}
+          <Link href="/politique-confidentialite" className="text-orange hover:underline">politique de confidentialité</Link>.
+        </p>
       </div>
     </form>
   );

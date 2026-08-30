@@ -57,6 +57,7 @@ const STATIC_PATHS = [
   "/electricite-plomberie-renovation",
   "/sols-finitions-renovation",
   "/mentions-legales",
+  "/politique-confidentialite",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "../components/page-header";
 import { SITE } from "../data";
 
@@ -20,7 +21,7 @@ export default function MentionsLegalesPage() {
           <div className="flex flex-col gap-2">
             <h2 className="display text-xl text-ivoire normal-case">Éditeur du site</h2>
             <p>{SITE.structure}</p>
-            <p>Directeur de la publication : la gérance d&apos;IA RENOV (SASU).</p>
+            <p>Directeur de la publication : le Président d&apos;IA RENOV (SASU).</p>
             <p>Contact : <a href={`mailto:${SITE.email}`} className="text-orange hover:underline">{SITE.email}</a> — {SITE.telAffiche}</p>
           </div>
 
@@ -44,19 +45,23 @@ export default function MentionsLegalesPage() {
             <h2 className="display text-xl text-ivoire normal-case">Propriété intellectuelle</h2>
             <p>
               L&apos;ensemble des éléments de ce site (textes, structure, charte graphique) est protégé au titre du
-              droit d&apos;auteur. Les visuels de la galerie et des réalisations, tant qu&apos;ARCHI PILOTE RÉNOVATION n&apos;a
-              pas de chantier réel documenté, sont des illustrations et sont signalés comme tels sur les pages
-              concernées.
+              droit d&apos;auteur. Les photographies présentées comme chantiers réels et légendées « chantier réel des
+              équipes partenaires » proviennent de projets effectivement pilotés par les équipes partenaires du
+              groupe. Les autres visuels (schémas explicatifs, références de style, photographies de niveau de
+              finition) sont des illustrations et sont signalés comme tels sur les pages concernées.
             </p>
           </div>
 
           <div className="flex flex-col gap-2">
-            <h2 className="display text-xl text-ivoire normal-case">Données personnelles</h2>
+            <h2 className="display text-xl text-ivoire normal-case">Données personnelles et cookies</h2>
             <p>
-              Les informations transmises via les formulaires de ce site (contact, estimateur) sont utilisées
-              uniquement pour répondre à votre demande de projet. Conformément au RGPD, vous disposez d&apos;un
-              droit d&apos;accès, de rectification et de suppression de vos données, exerçable auprès de l&apos;adresse
-              ci-dessus.
+              Les informations transmises via le formulaire de contact de ce site sont utilisées
+              uniquement pour traiter votre demande de projet. Ce site ne dépose aucun cookie de mesure d&apos;audience
+              ni de publicité. Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de rectification,
+              d&apos;effacement, de limitation et d&apos;opposition sur vos données, ainsi que d&apos;un droit de réclamation
+              auprès de la CNIL. Le détail des données collectées, des durées de conservation et des modalités
+              d&apos;exercice de ces droits figure dans la{" "}
+              <Link href="/politique-confidentialite" className="text-orange hover:underline">politique de confidentialité</Link>.
             </p>
           </div>
         </div>
