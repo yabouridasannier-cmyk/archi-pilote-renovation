@@ -182,9 +182,9 @@ export default function AchatDirectMateriauxPage() {
               caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé."
             />
             <MqFig
-              src="/photos/maquette/tendance-cuisine-facades-sur-mesure-chene.jpg"
-              alt="Cuisine sur mesure avec façades cannelées en chêne massif, plan de travail en pierre naturelle veinée, crédence zellige vert d'eau et robinetterie laiton"
-              caption="Façades cannelées en chêne massif, plan en pierre naturelle et crédence zellige : ensemble sur mesure acheté en direct par le client, posé par l'entreprise partenaire."
+              src="/photos/chantiers/chCuisineBlancheBrillanteMarbre.jpeg"
+              alt="Cuisine laquée blanche brillante livrée avec sol en marbre, chantier réel"
+              caption="Cuisine laquée blanche livrée : éléments, plan de travail et électroménager pouvant être achetés en direct par le client auprès du fournisseur, posés par l'entreprise partenaire. Chantier réel des équipes partenaires."
             />
             <MqFig
               src="/photos/maquette/tendance-chene-massif-point-hongrie.jpg"

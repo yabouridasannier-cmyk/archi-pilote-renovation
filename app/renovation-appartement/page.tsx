@@ -142,9 +142,9 @@ export default function Page() {
             caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune."
           />
           <MqFig
-            src="/photos/maquette/cuisine-verriere-atelier.jpg"
-            alt="Cuisine ouverte sur séjour séparée par une verrière atelier en acier noir, façades sans poignée et plan de travail en pierre"
-            caption="Référence de style : ouverture de la cuisine sur le séjour par une verrière atelier, après reprise du mur porteur."
+            src="/photos/chantiers/chCuisineBlancheElectromenagerLG.jpeg"
+            alt="Cuisine blanche livrée avec électroménager encastré, chantier réel"
+            caption="Cuisine livrée après rénovation d'appartement : électroménager encastré, colonne de rangement et finitions réceptionnées. Chantier réel des équipes partenaires."
           />
         </div>
       </MqSection>

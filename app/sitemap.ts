@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { ARTICLES } from "./data";
 
-const BASE = "https://archipiloterenovation.fr";
+const BASE = "https://www.archipiloterenovation.com";
 
 /* Arborescence maquette Lovable (34 pages) + pages historiques conservées.
    Les pages locales noindexées et les anciennes URLs redirigées n'y figurent pas. */

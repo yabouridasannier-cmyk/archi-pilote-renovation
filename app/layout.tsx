@@ -13,7 +13,7 @@ const manrope = Manrope({ variable: "--font-sora", subsets: ["latin"], weight: [
 const manropeMono = Manrope({ variable: "--font-space-mono", subsets: ["latin"], weight: ["500", "600", "700"], display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://archipiloterenovation.fr"),
+  metadataBase: new URL("https://www.archipiloterenovation.com"),
   title: "ARCHI PILOTE RÉNOVATION — Rénovation tous corps d'état en Île-de-France",
   description:
     "Pilotage de travaux de rénovation en Île-de-France : gros œuvre, second œuvre, cuisine sur-mesure, salle de bain étanche, isolation DPE. Un seul interlocuteur, devis des entreprises sous 48h.",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     siteName: "ARCHI PILOTE RÉNOVATION",
-    url: "https://archipiloterenovation.fr",
+    url: "https://www.archipiloterenovation.com",
     title: "ARCHI PILOTE RÉNOVATION — Rénovation tous corps d'état en Île-de-France",
     description:
       "Pilotage de travaux de rénovation en Île-de-France. Un seul interlocuteur, des entreprises partenaires qui contractent directement avec vous.",
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
 export const JSONLD_ORGANIZATION = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "@id": "https://archipiloterenovation.fr/#organization",
+  "@id": "https://www.archipiloterenovation.com/#organization",
   name: "ARCHI PILOTE RÉNOVATION",
   legalName: "IA RENOV",
-  url: "https://archipiloterenovation.fr",
+  url: "https://www.archipiloterenovation.com",
   telephone: "+33652798089",
   email: "archipiloterenovation@gmail.com",
   description: "Pilotage de travaux de rénovation tous corps d'état en Île-de-France, priorité maison et pavillon.",

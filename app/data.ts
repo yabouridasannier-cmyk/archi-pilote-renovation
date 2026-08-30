@@ -127,7 +127,7 @@ export const AVANT_APRES = [
 ];
 
 /* Articles de blog — contenu ORIGINAL écrit pour ARCHI PILOTE RÉNOVATION, territoire maison/pavillon. */
-export type Article = { slug: string; titre: string; date: string; dateISO: string; excerpt: string; categorie: string; photo: string; corps: string[] };
+export type Article = { slug: string; titre: string; date: string; dateISO: string; excerpt: string; categorie: string; photo: string; corps: string[]; img2?: string; img2Caption?: string };
 
 export const ARTICLES: Article[] = [
   {
@@ -137,6 +137,8 @@ export const ARTICLES: Article[] = [
     categorie: "Extension",
     excerpt: "Deux façons de gagner de la surface sans déménager, mais deux logiques de faisabilité radicalement différentes : le terrain tranche avant le budget.",
     photo: "grosOeuvre",
+    img2: "chPortiqueAcierAngleGaine",
+    img2Caption: "Portique acier de reprise de charge posé après ouverture, chantier réel des équipes partenaires.",
     corps: [
       "Agrandir une maison sans déménager passe par deux voies très différentes : construire au sol, en extension, ou construire en hauteur, en surélévation. Le choix ne se décide pas sur un coup de cœur esthétique : il dépend d'abord de ce que le terrain et le bâti existant permettent réellement.",
       "L'extension exige une emprise au sol disponible et compatible avec le plan local d'urbanisme, ainsi qu'une étude de sol préalable pour dimensionner des fondations adaptées. La surélévation, elle, dispense de terrain supplémentaire mais impose un diagnostic de portance des murs existants par un ingénieur structure : un mur construit pour porter une toiture ne porte pas automatiquement un étage habitable de plus.",
@@ -150,6 +152,8 @@ export const ARTICLES: Article[] = [
     categorie: "Structure",
     excerpt: "Aucun indice ne suffit seul pour juger si un mur porte le bâtiment : voici ceux qu'il faut recouper avant de valider un devis d'ouverture.",
     photo: "chPoutreAcierMurDegarni",
+    img2: "chPoteauAcierPlatinePied",
+    img2Caption: "Pied de poteau acier scellé sur platine soudée, chantier réel des équipes partenaires.",
     corps: [
       "Un mur épais n'est pas automatiquement porteur, et un mur fin en briques ou en carreaux de plâtre n'est pas automatiquement sans rôle structurel. C'est l'erreur la plus fréquente chez qui juge « à l'œil » avant travaux.",
       "Quatre indices se recoupent : l'épaisseur du mur, son alignement vertical avec un mur de l'étage du dessous ou du dessus, le sens de pose des solives ou poutrelles du plancher, et sa position par rapport aux façades et aux refends principaux du bâtiment. Pris isolément, chacun n'est qu'une présomption ; ensemble, ils orientent un diagnostic fiable.",
@@ -163,6 +167,8 @@ export const ARTICLES: Article[] = [
     categorie: "Budget",
     excerpt: "Les fourchettes observées sur les projets accompagnés en Île-de-France, poste par poste, pour ne plus avancer à l'aveugle sur votre budget.",
     photo: "chantierRenovation",
+    img2: "chCuisineBlancheBrillanteMarbre",
+    img2Caption: "Cuisine haut de gamme livrée, sol en marbre — chantier réel des équipes partenaires.",
     corps: [
       "Le prix d'une rénovation dépend d'abord de son ampleur, bien plus que de la surface seule. Un rafraîchissement (peinture, sols simples) se situe entre 250 et 450 €/m². Une rénovation partielle, qui touche une ou deux pièces avec de la plomberie et de l'électricité, grimpe à 600-900 €/m². Une rénovation complète — toutes les pièces refaites, cuisine et salle de bain neuves — se chiffre entre 1000 et 1500 €/m². Le haut de gamme, avec des matériaux premium et des finitions d'architecte, démarre à 1500 €/m² et peut dépasser 2500 €/m².",
       "Ces fourchettes restent indicatives : seul un devis détaillé après visite technique, remis par l'entreprise qui réalisera les travaux, donne un chiffrage fiable poste par poste. C'est pour cette raison que les devis des entreprises partenaires arrivent sous 48h après la visite — vous devez pouvoir comparer et décider vite, avec des chiffres réels et non des estimations vagues.",
@@ -176,6 +182,8 @@ export const ARTICLES: Article[] = [
     categorie: "Devis",
     excerpt: "Un devis forfaitaire de trois lignes ne se compare à rien. Voici ce qu'un devis détaillé doit préciser pour être réellement comparable.",
     photo: "devisDetail",
+    img2: "chDetailTiroirCoulisses",
+    img2Caption: "Vérifier chaque détail avant réception, comme ici un tiroir sur coulisses — chantier réel des équipes partenaires.",
     corps: [
       "Deux devis affichant le même total peuvent recouvrir des prestations très différentes. Le premier réflexe consiste à vérifier que le devis détaille des quantités réelles — mètres carrés, mètres linéaires, unités — et non un forfait global impossible à décomposer.",
       "Trois points méritent une attention particulière : les exclusions écrites noir sur blanc (évacuation des gravats, protection des sols, reprise de peinture après un autre lot), la marque et la référence exacte des matériaux prévus plutôt qu'une simple catégorie, et le délai d'exécution engagé, pas seulement une date de début.",
@@ -189,6 +197,8 @@ export const ARTICLES: Article[] = [
     categorie: "Matériaux",
     excerpt: "Les joints ciment noircissent en quelques mois. Voici pourquoi les entreprises partenaires ne posent plus que de l'époxy en salle de bain et cuisine.",
     photo: "salleBainBeton",
+    img2: "chSdbVasquesPoseMeubleBeige",
+    img2Caption: "Salle de bain en cours de finition, faïence grand format — chantier réel des équipes partenaires.",
     corps: [
       "Un joint ciment classique est poreux. En quelques mois, il absorbe l'humidité, les moisissures s'y installent, et il noircit — quel que soit le sérieux du nettoyage. Au bout de deux ou trois ans, il se fissure et laisse passer l'eau, avec le risque de dégâts derrière le carrelage.",
       "Le joint époxy est une résine, pas du ciment. Il est non poreux et ne noircit pas — parce qu'il n'y a rien pour les moisissures à quoi s'accrocher. Les fabricants annoncent une durée de vie de 15 à 20 ans, contre 3 à 5 ans pour un joint ciment classique en zone humide.",
@@ -202,6 +212,8 @@ export const ARTICLES: Article[] = [
     categorie: "Cuisine & agencement",
     excerpt: "Le caisson disparaît derrière la façade une fois la cuisine posée : voici pourquoi l'écart de prix ne se voit presque jamais sur le résultat.",
     photo: "chCuisineBleuCanardBrillante",
+    img2: "chCuisineNoireBrillantePoigneesCuivrees",
+    img2Caption: "Cuisine laquée noire livrée avec filets de poignées cuivrées — chantier réel des équipes partenaires.",
     corps: [
       "Une cuisine intégralement sur mesure coûte cher parce que chaque caisson est fabriqué à l'unité. Or le caisson est invisible une fois la cuisine posée : il n'intervient ni dans l'esthétique ni dans la perception de la qualité par un visiteur.",
       "L'alternative consiste à conserver des caissons standards de bonne facture, aux dimensions normalisées et aux quincailleries fiables, et à faire fabriquer sur mesure uniquement ce qui se voit et se touche : façades, plan de travail, plinthes et joues d'habillage contre les murs biais, fréquents en logement ancien.",
@@ -215,6 +227,8 @@ export const ARTICLES: Article[] = [
     categorie: "Isolation & DPE",
     excerpt: "Diagnostic, isolation, chauffage, aides financières : la méthode pour gagner 2 à 3 classes DPE sans se perdre dans les démarches.",
     photo: "chantierIsolation",
+    img2: "chIsolationPhoniqueGranulesPlancher",
+    img2Caption: "Isolation par granulés posée entre lambourdes — chantier réel des équipes partenaires.",
     corps: [
       "Un logement classé F ou G n'est pas seulement une facture de chauffage élevée : depuis 2025, ces logements sont progressivement interdits à la location. Sortir de la passoire énergétique est donc devenu un sujet patrimonial autant qu'un sujet de confort.",
       "La méthode commence toujours par un diagnostic complet, qui identifie les postes de déperdition réels — souvent les combles et les murs avant les fenêtres, contrairement à l'intuition. Vient ensuite l'isolation proprement dite, la pose d'une VMC double flux pour éviter les problèmes d'humidité une fois le logement étanche, puis le remplacement du système de chauffage si nécessaire — dimensionné après les travaux d'isolation, pas avant.",
@@ -228,6 +242,8 @@ export const ARTICLES: Article[] = [
     categorie: "Copropriété",
     excerpt: "Un chantier qui touche une partie commune ou l'aspect extérieur du bâtiment ne se lance pas sans passer par le syndic — parfois bien avant le premier devis.",
     photo: "planArchitecte",
+    img2: "chDemolitionOuvertureCouloir",
+    img2Caption: "Démolition dans un couloir d'immeuble ancien, phase la plus sensible pour le voisinage — chantier réel des équipes partenaires.",
     corps: [
       "En copropriété, le règlement encadre toute intervention touchant les éléments communs, la structure porteuse commune ou l'aspect extérieur du bâtiment. Selon la nature exacte des travaux, une simple information écrite au syndic peut suffire, ou au contraire une autorisation formelle votée en assemblée générale devient nécessaire avant tout démarrage.",
       "C'est notamment le cas d'une ouverture touchant un mur porteur mitoyen d'une partie commune, du remplacement d'une fenêtre visible depuis la rue, ou de la création d'une sortie de ventilation en façade. Ces dossiers doivent être présentés en amont, avec un descriptif technique précis, pour être inscrits à l'ordre du jour de la prochaine assemblée générale — dont la fréquence, généralement annuelle, doit être anticipée dans le calendrier du projet.",
@@ -241,6 +257,8 @@ export const ARTICLES: Article[] = [
     categorie: "Matériaux",
     excerpt: "Les trois solutions se ressemblent une fois posées, mais leur épaisseur de bois réel change tout pour la durée de vie et les rénovations futures.",
     photo: "chCouloirParquetChevronsPortesOuvertes",
+    img2: "chEscalierBoisFlottantVueBas",
+    img2Caption: "Escalier flottant en bois massif, structure en cours de finition — chantier réel des équipes partenaires.",
     corps: [
       "Le parquet massif est en bois plein sur toute son épaisseur, généralement 14 à 22 mm. Il se ponce et se rénove plusieurs fois sur des décennies, ce qui en fait la solution la plus durable — et la plus chère à l'achat comme à la pose, notamment en pose traditionnelle à bâtons rompus ou point de Hongrie.",
       "Le parquet contrecollé associe une fine couche de bois noble, en général 2 à 6 mm, collée sur un support en contreplaqué ou en fibres de bois. Il coûte nettement moins cher que le massif et se ponce une à deux fois selon l'épaisseur de la couche d'usure — un compromis pertinent pour la plupart des chantiers de rénovation.",
@@ -254,6 +272,8 @@ export const ARTICLES: Article[] = [
     categorie: "Aides financières",
     excerpt: "Les aides à la rénovation énergétique se cumulent parfois, mais leurs règles et leurs montants évoluent d'une année sur l'autre : ce qui ne change pas, c'est l'ordre dans lequel les vérifier.",
     photo: "chIsolationCombles",
+    img2: "chSousCouchePanneauxOSB",
+    img2Caption: "Sous-couche en panneaux OSB avant isolation phonique — chantier réel des équipes partenaires.",
     corps: [
       "MaPrimeRénov' et les Certificats d'Économie d'Énergie (CEE) sont les deux dispositifs les plus mobilisés pour financer une part des travaux d'isolation, de ventilation ou de remplacement de chauffage. Leurs montants dépendent des revenus du foyer et du gain énergétique obtenu, et leurs règles d'éligibilité sont révisées régulièrement — parfois en cours d'année.",
       "Avant de compter sur l'une de ces aides dans un budget, trois vérifications s'imposent : la date exacte des barèmes en vigueur au moment du dépôt de dossier, la nécessité de faire réaliser les travaux par une entreprise certifiée RGE (Reconnu Garant de l'Environnement), sans laquelle aucune aide n'est versée, et l'ordre des démarches — la demande doit généralement être déposée avant la signature du devis, jamais après le début des travaux.",

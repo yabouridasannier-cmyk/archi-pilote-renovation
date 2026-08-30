@@ -61,9 +61,9 @@ export default function Page() {
               caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis."
             />
             <MqFig
-              src="/photos/maquette/sejour-haussmannien-renove.jpg"
-              alt="Séjour d'appartement haussmannien rénové avec moulures, cheminée en marbre et parquet chêne point de Hongrie"
-              caption="Référence de style : séjour haussmannien rénové, moulures et corniches restituées, parquet point de Hongrie et cheminée conservée."
+              src="/photos/chantiers/chCuisineSejourParquetChevrons.jpeg"
+              alt="Cuisine ouverte sur séjour livrée avec parquet posé à chevrons, chantier réel"
+              caption="Cuisine ouverte sur séjour livrée après rénovation complète, parquet posé à chevrons. Chantier réel des équipes partenaires."
             />
           </div>
         </div>

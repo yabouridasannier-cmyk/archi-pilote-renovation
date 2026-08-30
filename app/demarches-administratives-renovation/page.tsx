@@ -159,6 +159,13 @@ export default function DemarchesAdministrativesPage() {
       </MqSection>
 
       <MqSection title="Voisinage et nuisances" lead="Anticiper limite les tensions pendant le chantier.">
+        <div className="mb-8">
+          <MqFig
+            src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
+            alt="Démolition d'une cloison ancienne, phase la plus bruyante d'un chantier, chantier réel"
+            caption="Démolition : la phase la plus bruyante d'un chantier, celle qui justifie le plus une information préalable du voisinage. Chantier réel des équipes partenaires."
+          />
+        </div>
         <MqChecklist
           cols={1}
           items={[

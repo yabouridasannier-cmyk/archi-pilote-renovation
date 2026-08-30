@@ -140,9 +140,9 @@ export default function Page() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
           <MqFig
-            src="/photos/maquette/chantier-vmc-caisson-gaines.jpg"
-            alt="Caisson de ventilation mécanique contrôlée suspendu en faux plafond avec gaines isolées raccordées"
-            caption="Caisson de ventilation mécanique contrôlée posé en faux plafond : gaines isolées, pentes maîtrisées et accès de maintenance réservé."
+            src="/photos/chantiers/chIsolationCombles.jpeg"
+            alt="Isolation thermique par l'intérieur en cours, laine minérale entre ossature métallique, chantier réel"
+            caption="Isolation thermique en cours : laine minérale posée entre ossature métallique, murs et plafond, avant fermeture en plaques de plâtre. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/maquette/chantier-carottage-facade.jpg"

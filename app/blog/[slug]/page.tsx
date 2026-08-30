@@ -37,9 +37,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     datePublished: article.dateISO,
     dateModified: article.dateISO,
     image: PHOTOS[article.photo as keyof typeof PHOTOS],
-    url: `https://archipiloterenovation.fr/blog/${article.slug}`,
-    author: { "@type": "Organization", name: "ARCHI PILOTE RÉNOVATION", "@id": "https://archipiloterenovation.fr/#organization" },
-    publisher: { "@id": "https://archipiloterenovation.fr/#organization" },
+    url: `https://www.archipiloterenovation.com/blog/${article.slug}`,
+    author: { "@type": "Organization", name: "ARCHI PILOTE RÉNOVATION", "@id": "https://www.archipiloterenovation.com/#organization" },
+    publisher: { "@id": "https://www.archipiloterenovation.com/#organization" },
   };
 
   return (
@@ -67,9 +67,23 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
       <article className="container-site pb-20 md:pb-28">
         <div className="max-w-[42rem] mx-auto flex flex-col gap-6">
           {article.corps.map((p, i) => (
-            <Reveal key={i} variant="slide-up" delay={i * 0.05}>
-              <p className="text-ivoire/85 text-[1.05rem] leading-[1.75]">{p}</p>
-            </Reveal>
+            <>
+              <Reveal key={i} variant="slide-up" delay={i * 0.05}>
+                <p className="text-ivoire/85 text-[1.05rem] leading-[1.75]">{p}</p>
+              </Reveal>
+              {i === 0 && article.img2 && (
+                <Reveal variant="scale" delay={0.15}>
+                  <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
+                    <img src={PHOTOS[article.img2 as keyof typeof PHOTOS]} alt={article.img2Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
+                    {article.img2Caption && (
+                      <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
+                        {article.img2Caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                </Reveal>
+              )}
+            </>
           ))}
           <Reveal variant="slide-up" delay={0.2} className="mt-4">
             <Link href="/estimateur-travaux" className="btn btn-primary w-fit">

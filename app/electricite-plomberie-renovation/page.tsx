@@ -14,8 +14,8 @@ export default function Page() {
       eyebrow="Second œuvre"
       segments={[{ text: "Électricité et plomberie :" }, { text: "refaire les réseaux avant de fermer.", serif: true, gradient: true }]}
       lead="Les réseaux cachés sont difficiles à corriger après doublages, carrelage et peinture. Ils doivent être documentés avant fermeture."
-      photo="outilsArtisan"
-      photoAlt="Outils d'artisan, réseaux électriques en cours de rénovation"
+      photo="chPlacardTableauElectriqueIntegre"
+      photoAlt="Tableau électrique et compteur intégrés dans un placard sur mesure, chantier réel"
       sections={[
         { titre: "Diagnostic initial", texte: "Tableau, circuits, mise à la terre, distribution d'eau, évacuations, pression et production d'eau chaude — l'état réel avant toute décision." },
         { titre: "Plans de réseaux", texte: "Les plans évitent les décisions improvisées sur chantier, où une erreur coûte cher à corriger une fois les murs fermés." },

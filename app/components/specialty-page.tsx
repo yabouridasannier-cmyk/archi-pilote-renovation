@@ -46,9 +46,9 @@ export function SpecialtyPage({
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://archipiloterenovation.fr/" },
-        { "@type": "ListItem", position: 2, name: eyebrow, item: "https://archipiloterenovation.fr/services" },
-        { "@type": "ListItem", position: 3, name: pageTitle, item: `https://archipiloterenovation.fr${slug}` },
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.archipiloterenovation.com/" },
+        { "@type": "ListItem", position: 2, name: eyebrow, item: "https://www.archipiloterenovation.com/services" },
+        { "@type": "ListItem", position: 3, name: pageTitle, item: `https://www.archipiloterenovation.com${slug}` },
       ],
     },
   ];

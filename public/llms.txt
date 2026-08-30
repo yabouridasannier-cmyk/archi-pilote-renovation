@@ -1,16 +1,16 @@
 # ARCHI PILOTE RÉNOVATION
 > Marque de pilotage de travaux de rénovation en Île-de-France, exploitée par IA RENOV (SASU, RCS 889 976 387 Nanterre). La marque structure, analyse et pilote les projets ; les travaux sont réalisés et facturés par des entreprises partenaires indépendantes, chacune titulaire de ses propres assurances.
 
-Site : https://archipiloterenovation.fr
+Site : https://www.archipiloterenovation.com
 Contact : archipiloterenovation@gmail.com · +33 6 52 79 80 89
 
 ## Pages clés
-- [Accueil](https://archipiloterenovation.fr/) : rôle, périmètre, différence juridique
-- [Notre méthode](https://archipiloterenovation.fr/notre-methode) : les étapes du pilotage
-- [Modèle économique & transparence](https://archipiloterenovation.fr/modele-economique-transparence) : qui facture quoi
-- [Garanties & assurances](https://archipiloterenovation.fr/garanties-assurances) : qui porte quelles garanties
-- [Barème des coûts](https://archipiloterenovation.fr/bareme-prix-renovation) : fourchettes de marché IDF, datées, indicatives
-- [Nos spécialités](https://archipiloterenovation.fr/nos-specialites) : de la structure aux finitions
+- [Accueil](https://www.archipiloterenovation.com/) : rôle, périmètre, différence juridique
+- [Notre méthode](https://www.archipiloterenovation.com/notre-methode) : les étapes du pilotage
+- [Modèle économique & transparence](https://www.archipiloterenovation.com/modele-economique-transparence) : qui facture quoi
+- [Garanties & assurances](https://www.archipiloterenovation.com/garanties-assurances) : qui porte quelles garanties
+- [Barème des coûts](https://www.archipiloterenovation.com/observatoire-prix-renovation) : fourchettes de marché IDF, datées, indicatives
+- [Nos spécialités](https://www.archipiloterenovation.com/nos-specialites) : de la structure aux finitions
 
 ## À savoir
 - ARCHI PILOTE RÉNOVATION n'est ni une entreprise de travaux, ni un architecte : aucun lot exécuté, aucun travaux facturé par la marque.

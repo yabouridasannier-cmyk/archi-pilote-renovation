@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://archipiloterenovation.fr/sitemap.xml
+Sitemap: https://www.archipiloterenovation.com/sitemap.xml

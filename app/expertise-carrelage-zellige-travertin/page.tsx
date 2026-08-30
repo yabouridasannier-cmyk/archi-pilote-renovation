@@ -163,6 +163,11 @@ export default function Page() {
             caption="Travertin en salle d'eau : pierre naturelle appliquée en grand format, joints minces et traitement hydrofuge obligatoire avant mise en service."
           />
           <MqFig
+            src="/photos/chantiers/chSdbVasquesPoseMeubleBeige.jpeg"
+            alt="Salle de bain en cours de finition avec meuble sur mesure beige, faïence grand format et vasques à poser, chantier réel"
+            caption="Salle de bain en cours de finition : faïence grand format, meuble sur mesure et vasques à poser. Chantier réel des équipes partenaires."
+          />
+          <MqFig
             src="/photos/maquette/tendance-zellige-credence.jpg"
             alt="Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair"
             caption="Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé."
