@@ -144,7 +144,7 @@ export default function Home() {
       <MqSection kicker="Pour quels projets" title="Des situations très différentes, une même discipline">
         <MqChecklist items={[
           "Rénovation complète d'appartement à Paris et en proche couronne.",
-          "Rénovation de maison ou de pavillon en Hauts-de-Seine.",
+          "Rénovation de maison ou de pavillon en Île-de-France.",
           "Restructuration avec interventions lourdes et reprise de structure.",
           "Extension ou surélévation avec autorisations d'urbanisme.",
           "Sortie de passoire énergétique classée F ou G.",
