@@ -170,11 +170,18 @@ export default function DetailInvisiblePage() {
         lead="Certains signaux, visibles pendant le chantier, indiquent qu'un point invisible mérite un contrôle avant fermeture."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/maquette/schema-electricite-nfc15100.jpg"
-            alt="Schéma d'un tableau électrique de logement rénové avec circuits, différentiel 30 mA et liaison équipotentielle"
-            caption="Organisation des circuits d'un logement rénové : protection différentielle 30 mA, sections adaptées et liaison équipotentielle en salle d'eau."
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <MqFig
+              src="/photos/maquette/schema-electricite-nfc15100.jpg"
+              alt="Schéma d'un tableau électrique de logement rénové avec circuits, différentiel 30 mA et liaison équipotentielle"
+              caption="Organisation des circuits d'un logement rénové : protection différentielle 30 mA, sections adaptées et liaison équipotentielle en salle d'eau."
+            />
+            <MqFig
+              src="/photos/chantiers/chPlacardTableauElectriqueIntegre.jpeg"
+              alt="Tableau électrique et compteur intégrés dans un placard sur mesure, chantier réel"
+              caption="Tableau électrique et compteur intégrés dans un placard sur mesure : l'accès de maintenance reste dégagé derrière une façade menuisée. Chantier réel des équipes partenaires."
+            />
+          </div>
           <MqChecklist
             items={[
               "Aucune mention écrite du système d'étanchéité prévu sous carrelage dans le devis de plomberie ou de carrelage.",

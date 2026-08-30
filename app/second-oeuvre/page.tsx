@@ -203,6 +203,28 @@ export default function Page() {
             </div>
           ))}
         </div>
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MqFig
+            src="/photos/chantiers/chCuisineBlancheElectromenagerLG.jpeg"
+            alt="Cuisine blanche livrée avec électroménager encastré et sol en marbre, chantier réel"
+            caption="Cuisine blanche livrée : électroménager encastré, colonne de rangement et sol en marbre. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisinePlanNoirFacadesCremeVelux.jpeg"
+            alt="Cuisine sous comble avec plan de travail noir, façades crème et fenêtre de toit, chantier réel"
+            caption="Cuisine sous comble : plan de travail noir, façades claires et fenêtre de toit apportant la lumière naturelle. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineBlancheBrillanteMarbre.jpeg"
+            alt="Cuisine laquée blanche brillante avec sol en marbre et suspensions noires, chantier réel"
+            caption="Cuisine laquée blanche brillante livrée : sol en marbre, suspensions noires et plan de travail bois en séparation d'îlot. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineAnthraciteCarreauxCiment.jpeg"
+            alt="Cuisine laquée anthracite avec sol en carreaux de ciment à motifs, chantier réel"
+            caption="Cuisine laquée anthracite livrée : plan de travail noir, robinetterie noire et sol en carreaux de ciment à motifs. Chantier réel des équipes partenaires."
+          />
+        </div>
       </MqSection>
 
       <MqSection title="Peinture et finitions : la dernière étape, pas la première décision">

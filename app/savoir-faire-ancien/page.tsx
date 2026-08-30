@@ -367,6 +367,16 @@ export default function SavoirFaireAncienPage() {
               alt="Séjour d'appartement haussmannien rénové avec moulures, cheminée en marbre et parquet chêne point de Hongrie"
               caption="Référence de style : séjour haussmannien rénové, moulures et corniches restituées, parquet point de Hongrie et cheminée conservée."
             />
+            <MqFig
+              src="/photos/chantiers/chComptoirBarColonneFonteCarreauxAnciens.jpeg"
+              alt="Colonne en fonte d'origine et carreaux de ciment anciens conservés autour d'un comptoir en cours de finition, chantier réel"
+              caption="Colonne en fonte d'origine et carreaux de ciment anciens conservés en fond de niche, intégrés à un comptoir neuf. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chComptoirBarMouluresFinition.jpeg"
+              alt="Comptoir en bois mouluré fini autour d'une colonne en fonte d'origine, chantier réel"
+              caption="Comptoir en bois mouluré, panneaux à cadres et moulures, fini autour de la colonne en fonte conservée. Chantier réel des équipes partenaires."
+            />
           </div>
         </div>
       </MqSection>

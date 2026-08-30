@@ -70,9 +70,9 @@ export default function Page() {
             caption="Ouverture de mur porteur : étaiement du plancher haut avant percement, conformément à la note de calcul de l'ingénieur structure."
           />
           <MqFig
-            src="/photos/maquette/chantier-ipn-habillage.jpg"
-            alt="Poutre acier IPN posée au-dessus d'une ouverture entre deux pièces, en cours d'habillage en plaques de plâtre"
-            caption="IPN scellée sur appuis maçonnés puis habillée par le plaquiste : coffrage coupe-feu et raccord d'enduit avant peinture."
+            src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
+            alt="Poutre acier de reprise de charge vue depuis un mur dégarni après ouverture, chantier réel"
+            caption="Poutre acier de reprise scellée sur ses appuis, mur dégarni jusqu'au support en attente de la reprise d'enduit. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/maquette/schema-mur-porteur.jpg"
@@ -161,6 +161,23 @@ export default function Page() {
             La mise à niveau d'un plancher, lorsqu'un ressaut existe entre deux pièces, se traite par ragréage ou par une chape rapportée, mais seulement après avoir vérifié que la surépaisseur ajoutée reste compatible avec la charge admissible du plancher existant.
           </p>
         </MqProse>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <MqFig
+            src="/photos/chantiers/chPlancherSolivesBeton2.jpeg"
+            alt="Solives de plancher ancien décaissées et remplies en corps creux béton dans un couloir, chantier réel"
+            caption="Solives décaissées et remplies en corps creux béton avant chape : reprise de plancher dans un couloir d'immeuble ancien. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chSousCouchePanneauxOSB.jpeg"
+            alt="Panneaux OSB posés en sous-couche sur l'ancien parquet d'un appartement haussmannien, chantier réel"
+            caption="Sous-couche en panneaux OSB posée sur l'ancien parquet, moulures d'origine protégées, avant isolation phonique. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher.jpeg"
+            alt="Isolation phonique par granulés posée entre lambourdes sur un plancher ancien, chantier réel"
+            caption="Isolation phonique par granulés posée entre lambourdes, avant fermeture du plancher. Chantier réel des équipes partenaires."
+          />
+        </div>
       </MqSection>
 
       <MqSection
@@ -258,11 +275,18 @@ export default function Page() {
         title="Démolition, carottage et sciage : les gestes techniques du gros œuvre"
         lead="Le carottage et le sciage de béton permettent des découpes précises et contrôlées, indispensables dès qu'un ouvrage béton armé est concerné."
       >
-        <MqFig
-          src="/photos/maquette/schema-carottage-ventilation.jpg"
-          alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
-          caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
-        />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MqFig
+            src="/photos/maquette/schema-carottage-ventilation.jpg"
+            alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
+            caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
+          />
+          <MqFig
+            src="/photos/chantiers/chDemolitionOuvertureCouloir.jpeg"
+            alt="Démolition d'une cloison dans un couloir, ossature bois apparente, chantier réel"
+            caption="Démolition sélective dans un couloir d'appartement ancien : ossature apparente avant reconstruction. Chantier réel des équipes partenaires."
+          />
+        </div>
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           {[
             { title: "Démolition et évacuation", text: "Dépose sélective des éléments non porteurs, tri des matériaux et évacuation organisée, en particulier en immeuble occupé." },
@@ -358,9 +382,9 @@ export default function Page() {
             caption="Reprise en sous-œuvre : excavation et bétonnage par passes alternées jusqu'au bon sol identifié par le sondage géotechnique."
           />
           <MqFig
-            src="/photos/maquette/chantier-ipn-habillage.jpg"
-            alt="Poutre acier IPN posée au-dessus d'une ouverture entre deux pièces, en cours d'habillage en plaques de plâtre"
-            caption="IPN scellée sur appuis maçonnés puis habillée par le plaquiste : coffrage coupe-feu et raccord d'enduit avant peinture."
+            src="/photos/chantiers/chPoutreAcierSoudure.jpeg"
+            alt="Angle soudé d'une poutre et d'un poteau acier de reprise de charge, vu depuis le plafond, chantier réel"
+            caption="Assemblage soudé poutre-poteau d'un portique de reprise de charge, avant habillage et raccord de plâtrerie. Chantier réel des équipes partenaires."
           />
         </div>
         <div className="mt-12">
