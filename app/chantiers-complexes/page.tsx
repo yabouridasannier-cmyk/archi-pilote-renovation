@@ -140,12 +140,18 @@ export default function ChantiersComplexesPage() {
 
       <MqSection kicker="Expertise mobilisée" title="Architecte DPLG et ingénieur structure, chacun dans son périmètre">
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/maquette/schema-vmc.jpg"
-            alt="Schéma d'une ventilation mécanique contrôlée collective raccordée à une colonne technique d'immeuble ancien"
-            caption="Sur un dossier lourd, plusieurs lots techniques interagissent : structure, réseaux collectifs et ventilation doivent être pensés ensemble."
-            ratio="aspect-[16/9]"
-          />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <MqFig
+              src="/photos/chantiers/chPortiqueAcierAngleMurDegarni2.jpeg"
+              alt="Portique acier de reprise de charge, mur dégarni jusqu'au support, chantier réel"
+              caption="Portique acier de reprise de charge validé par l'ingénieur structure partenaire, avant habillage. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chPoutreAcierPlafondMurDegarni.jpeg"
+              alt="Poutre acier scellée en plafond, mur dégarni jusqu'au support, chantier réel"
+              caption="Poutre acier scellée sur ses appuis, dossier suivi conjointement avec l'ingénieur structure. Chantier réel des équipes partenaires."
+            />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
               <h3 className="display text-[1.15rem] text-ivoire">Ingénieur structure partenaire</h3>

@@ -67,8 +67,12 @@ const PHOTOS_CHANTIERS = [
   { src: `${CH}/chOptiquePresentoirsMuraux.jpeg`, alt: "Présentoirs muraux sur mesure pour un local commercial d'optique avec éclairage intégré", cap: "Présentoirs muraux sur mesure pour un local commercial d'optique, éclairage intégré au caisson bois." },
   { src: `${CH}/chOptiqueAccueilFinition.jpeg`, alt: "Local commercial d'optique livré avec présentoirs muraux et espace d'accueil finis", cap: "Local commercial d'optique livré : présentoirs muraux, espace d'accueil et sol en bois terminés." },
   { src: `${CH}/chOssatureBoisComptoirLocalCommercial.jpeg`, alt: "Ossature bois d'un comptoir en cours de montage dans un local commercial à structure métallique", cap: "Ossature bois d'un comptoir en cours de montage dans un local commercial : structure avant habillage et pose du plan de travail." },
+  { src: `${CH}/chOssatureBoisComptoirCommercial2.jpeg`, alt: "Ossature bois d'un comptoir de local commercial, autre angle, chantier réel", cap: "Même comptoir de local commercial, vu sous un autre angle avant habillage." },
   { src: `${CH}/chOuvertureImposteVitreeDoubleParte.jpeg`, alt: "Ouverture avec imposte vitrée au-dessus d'une double porte coulissante, chantier réel", cap: "Ouverture entre deux pièces avec imposte vitrée au-dessus d'une double porte coulissante, avant peinture des encadrements." },
   { src: `${CH}/chCouloirParquetChevronsPortesOuvertes.jpeg`, alt: "Couloir livré avec parquet posé à chevrons et portes anciennes restaurées, chantier réel", cap: "Couloir livré : parquet posé à chevrons, portes anciennes restaurées et enfilade de pièces dégagée." },
+  { src: `${CH}/chPoteauAcierScelleGravats.jpeg`, alt: "Pied de poteau acier scellé, gravats de reprise au sol, chantier réel", cap: "Pied de poteau acier scellé après ouverture de mur porteur, gravats de reprise en cours d'évacuation." },
+  { src: `${CH}/chPoutreAcierMurPierreApparente.jpeg`, alt: "Poutre acier de reprise de charge contre un mur en pierre apparente, chantier réel", cap: "Poutre acier de reprise de charge, mur dégagé jusqu'à la pierre apparente avant reprise d'enduit." },
+  { src: `${CH}/chOptiquePresentoirsVitrine.jpeg`, alt: "Vitrine et présentoirs sur mesure livrés dans un local commercial d'optique, chantier réel", cap: "Vitrine et présentoirs sur mesure livrés dans le même local commercial d'optique." },
 ];
 
 const DEROULE = [

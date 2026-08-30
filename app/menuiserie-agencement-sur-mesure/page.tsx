@@ -246,6 +246,41 @@ export default function Page() {
             alt="Verrière intérieure en bois sur mesure de forme pentagonale entre deux pièces, chantier réel"
             caption="Verrière intérieure en bois sur mesure, dessinée en pentagone pour épouser la forme du mur, entre deux pièces d'un appartement ancien."
           />
+          <MqFig
+            src="/photos/chantiers/chDressingNoyerMouluresAngle1.jpeg"
+            alt="Dressing et enfilade en placage noyer livrés sous corniche moulurée, autre angle, chantier réel"
+            caption="Dressing et enfilade en placage noyer, autre angle du même appartement ancien aux moulures conservées."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingNoyerMouluresFenetre.jpeg"
+            alt="Dressing en placage noyer livré près d'une fenêtre à moulures, chantier réel"
+            caption="Dressing en placage noyer livré, lumière naturelle et moulures d'origine conservées en fond de pièce."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingNoyerBufetMoulures4.jpeg"
+            alt="Enfilade en placage noyer livrée sous corniche moulurée, chantier réel"
+            caption="Enfilade en placage noyer livrée, quatrième angle du même ensemble de menuiserie sur mesure."
+          />
+          <MqFig
+            src="/photos/chantiers/chPlacagesNoyerEnAttente2.jpeg"
+            alt="Panneaux de placage noyer en attente de pose, appuyés contre un mur ancien, chantier réel"
+            caption="Panneaux de placage noyer en attente de pose, appuyés contre le mur d'un appartement ancien avant montage."
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingNoyerOuvertOutils.jpeg"
+            alt="Dressing en placage noyer ouvert, outils de pose au sol, chantier réel"
+            caption="Dressing en placage noyer, portes ouvertes, outils de pose encore au sol avant réception."
+          />
+          <MqFig
+            src="/photos/chantiers/chOptiqueComptoirCarcasseBrute2.jpeg"
+            alt="Carcasse du comptoir d'un local commercial d'optique, autre angle, chantier réel"
+            caption="Carcasse du comptoir d'accueil d'un local commercial d'optique, vue depuis un autre angle avant habillage."
+          />
+          <MqFig
+            src="/photos/chantiers/chOptiqueComptoirAccueilFini2.jpeg"
+            alt="Comptoir d'accueil livré dans un local commercial d'optique, autre angle, chantier réel"
+            caption="Comptoir d'accueil livré, même local commercial, panneau d'acuité visuelle et climatisation en fond de pièce."
+          />
         </div>
       </MqSection>
 

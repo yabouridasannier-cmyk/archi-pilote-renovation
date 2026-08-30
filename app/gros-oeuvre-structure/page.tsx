@@ -177,6 +177,26 @@ export default function Page() {
             alt="Isolation phonique par granulés posée entre lambourdes sur un plancher ancien, chantier réel"
             caption="Isolation phonique par granulés posée entre lambourdes, avant fermeture du plancher. Chantier réel des équipes partenaires."
           />
+          <MqFig
+            src="/photos/chantiers/chPlancherSolivesBoisRangees.jpeg"
+            alt="Plancher ancien en solives bois rangées avant pose du revêtement, chantier réel"
+            caption="Plancher ancien en solives bois vérifiées et alignées avant pose du revêtement. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chSousCouchePanneauxOSB2.jpeg"
+            alt="Panneaux OSB posés en sous-couche dans un autre appartement ancien, chantier réel"
+            caption="Sous-couche en panneaux OSB posée avant isolation phonique, autre chantier. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher2.jpeg"
+            alt="Isolation phonique par granulés posée entre lambourdes, autre angle, chantier réel"
+            caption="Isolation phonique par granulés, autre angle du même type de chantier. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg"
+            alt="Boiseries et moulures haussmanniennes partiellement déposées pendant la rénovation, chantier réel"
+            caption="Boiseries et moulures d'origine partiellement déposées pour reprise du plancher, avant repose. Chantier réel des équipes partenaires."
+          />
         </div>
       </MqSection>
 

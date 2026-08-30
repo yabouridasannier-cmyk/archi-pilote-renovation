@@ -377,6 +377,16 @@ export default function SavoirFaireAncienPage() {
               alt="Comptoir en bois mouluré fini autour d'une colonne en fonte d'origine, chantier réel"
               caption="Comptoir en bois mouluré, panneaux à cadres et moulures, fini autour de la colonne en fonte conservée. Chantier réel des équipes partenaires."
             />
+            <MqFig
+              src="/photos/chantiers/chComptoirBarColonneFonteVueLarge.jpeg"
+              alt="Vue large du comptoir en cours de finition autour de la colonne en fonte d'origine, chantier réel"
+              caption="Vue large du chantier : comptoir, étagères et colonne en fonte conservée dans leur contexte. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chComptoirBarEtageresOutils.jpeg"
+              alt="Étagères et comptoir en cours de finition, outils de chantier au sol, chantier réel"
+              caption="Étagères en bois et comptoir en cours de finition, échelle et outils encore en place avant réception. Chantier réel des équipes partenaires."
+            />
           </div>
         </div>
       </MqSection>

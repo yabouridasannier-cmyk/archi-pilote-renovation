@@ -134,6 +134,32 @@ export const PHOTOS = {
   chDressingBrutTiroirsRoulettes: "/photos/chantiers/chDressingBrutTiroirsRoulettes.jpeg",
   chPlacardCompteurElectriqueArrondi: "/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg",
   chDressingCarcasseChantEnBois: "/photos/chantiers/chDressingCarcasseChantEnBois.jpeg",
+
+  /* Troisième lot — photos réelles fournies par le client (Ilann, 30/08/2026),
+     continuations vérifiées de projets déjà confirmés réels (opticien, dressings
+     noyer haussmannien, comptoir bar colonne fonte, structure acier Tridenso,
+     plancher/isolation). Le reste du lot (photographie immobilière mise en scène,
+     un chantier d'hôtel sans rapport, images Pinterest) a été écarté. */
+  chPortiqueAcierAngleMurDegarni2: "/photos/chantiers/chPortiqueAcierAngleMurDegarni2.jpeg",
+  chPoutreAcierPlafondMurDegarni: "/photos/chantiers/chPoutreAcierPlafondMurDegarni.jpeg",
+  chPoutreAcierSoudureAngle2: "/photos/chantiers/chPoutreAcierSoudureAngle2.jpeg",
+  chPoutreAcierMurPierreApparente: "/photos/chantiers/chPoutreAcierMurPierreApparente.jpeg",
+  chPoteauAcierScelleGravats: "/photos/chantiers/chPoteauAcierScelleGravats.jpeg",
+  chOptiqueComptoirCarcasseBrute2: "/photos/chantiers/chOptiqueComptoirCarcasseBrute2.jpeg",
+  chOptiquePresentoirsVitrine: "/photos/chantiers/chOptiquePresentoirsVitrine.jpeg",
+  chOptiqueComptoirAccueilFini2: "/photos/chantiers/chOptiqueComptoirAccueilFini2.jpeg",
+  chDressingNoyerMouluresAngle1: "/photos/chantiers/chDressingNoyerMouluresAngle1.jpeg",
+  chDressingNoyerMouluresFenetre: "/photos/chantiers/chDressingNoyerMouluresFenetre.jpeg",
+  chDressingNoyerBufetMoulures4: "/photos/chantiers/chDressingNoyerBufetMoulures4.jpeg",
+  chPlacagesNoyerEnAttente2: "/photos/chantiers/chPlacagesNoyerEnAttente2.jpeg",
+  chDressingNoyerOuvertOutils: "/photos/chantiers/chDressingNoyerOuvertOutils.jpeg",
+  chComptoirBarColonneFonteVueLarge: "/photos/chantiers/chComptoirBarColonneFonteVueLarge.jpeg",
+  chComptoirBarEtageresOutils: "/photos/chantiers/chComptoirBarEtageresOutils.jpeg",
+  chOssatureBoisComptoirCommercial2: "/photos/chantiers/chOssatureBoisComptoirCommercial2.jpeg",
+  chSousCouchePanneauxOSB2: "/photos/chantiers/chSousCouchePanneauxOSB2.jpeg",
+  chPlancherSolivesBoisRangees: "/photos/chantiers/chPlancherSolivesBoisRangees.jpeg",
+  chDemolitionBoiseriesHaussmannien: "/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg",
+  chIsolationPhoniqueGranulesPlancher2: "/photos/chantiers/chIsolationPhoniqueGranulesPlancher2.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —
