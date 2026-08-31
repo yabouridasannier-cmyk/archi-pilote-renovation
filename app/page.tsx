@@ -180,9 +180,9 @@ export default function Home() {
             ratio="aspect-[3/4]"
           />
           <MqFig
-            src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
-            alt="Poutre métallique posée après ouverture d'un mur porteur, mur dégarni jusqu'à la maçonnerie ancienne"
-            caption="Structure : pose d'une poutre métallique après ouverture du mur porteur. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chPoutreAcierSoudure.jpeg"
+            alt="Assemblage soudé entre poutre et poteau acier de reprise de charge, autre chantier"
+            caption="Structure : assemblage soudé d'une poutre de reprise de charge, sur un autre chantier. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
           <MqFig

@@ -246,9 +246,9 @@ export default function Page() {
         </div>
         <div className="mt-8">
           <MqFig
-            src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
+            src="/photos/chantiers/chPoutreAcierPlafondMurDegarni.jpeg"
             alt="Contexte réel d'un prix de rénovation observé."
-            caption="Poutre IPN posée en sous-face d'un mur porteur ouvert, mur dégarni jusqu'au support d'origine : la reprise de charge se vérifie sur chantier, avant reprise des finitions. Chantier réel des équipes partenaires."
+            caption="Angle de structure acier scellé au plafond, mur dégarni jusqu'au support d'origine : la reprise de charge se vérifie sur chantier, avant reprise des finitions. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>
