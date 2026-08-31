@@ -15,9 +15,9 @@ const PANORAMA = [
     caption: "Travertin : pierre naturelle alvéolée, jointée en grand format, traitement hydrofuge obligatoire avant mise en service.",
   },
   {
-    src: "tendance-zellige-credence",
-    alt: "Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair",
-    caption: "Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé.",
+    src: "pedagogie-zellige-macro",
+    alt: "Gros plan sur la texture du zellige émaillé vert d'eau, irrégularités de surface et joints fins",
+    caption: "Zellige émaillé : irrégularités de surface assumées, calepinage et jointoiement fin sur support parfaitement dressé.",
   },
   {
     src: "pedagogie-beton-cire-macro",
@@ -30,14 +30,14 @@ const PANORAMA = [
     caption: "Détail de menuiserie : profils de moulure relevés sur l'existant, chambranle reconstitué et quincaillerie laiton patiné posée à l'ancienne.",
   },
   {
-    src: "tendance-chene-massif-point-hongrie",
-    alt: "Séjour parisien avec parquet chêne massif point de Hongrie, boiseries et bibliothèque en chêne huilé, murs enduits à la chaux ton argile",
-    caption: "Chêne massif point de Hongrie et boiseries huilées : la matière noble travaillée dans les volumes d'origine, murs enduits à la chaux ton argile.",
+    src: "pedagogie-chene-macro",
+    alt: "Gros plan sur le grain du chêne massif huilé, veinage et nœud caractéristiques",
+    caption: "Chêne massif huilé : grain et veinage naturels, la matière noble travaillée dans les volumes d'origine.",
   },
   {
-    src: "tendance-chaux-arches-pierre-bourgogne",
-    alt: "Couloir voûté avec arches courbes, enduit à la chaux beige rosé, sol en pierre de Bourgogne et applique en laiton patiné",
-    caption: "Arches maçonnées, enduit à la chaux et pierre de Bourgogne : la courbe et la matière minérale, signatures des intérieurs français 2026-2027.",
+    src: "pedagogie-chaux-macro",
+    alt: "Gros plan sur la texture d'un enduit à la chaux beige rosé, relief mat de la taloche",
+    caption: "Enduit à la chaux : texture mate et minérale, relief de la taloche, signature des intérieurs français 2026-2027.",
   },
   {
     src: "tendance-cuisine-facades-sur-mesure-chene",
