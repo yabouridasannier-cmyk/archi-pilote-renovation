@@ -256,14 +256,14 @@ export default function Page() {
             caption="Cuisine laquée anthracite livrée : plan de travail noir, robinetterie noire et sol en carreaux de ciment à motifs. Chantier réel des équipes partenaires."
           />
           <MqFig
-            src="/photos/chantiers/chCuisineBlancheFinieIlot.jpeg"
-            alt="Cuisine blanche livrée avec îlot central, chantier réel"
-            caption="Cuisine blanche livrée avec îlot central et électroménager encastré. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chCuisineSauge.jpeg"
+            alt="Cuisine vert sauge avec crédence en pierre veinée verte et four noir intégré, chantier réel"
+            caption="Cuisine vert sauge livrée : façades mates, crédence en pierre veinée verte et four noir encastré. Chantier réel des équipes partenaires."
           />
           <MqFig
-            src="/photos/chantiers/chCuisineNoireSkylightFinie.jpeg"
-            alt="Cuisine noire livrée avec fenêtre de toit, chantier réel"
-            caption="Cuisine noire livrée sous une fenêtre de toit apportant la lumière naturelle. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chCuisineTerracotta.jpeg"
+            alt="Cuisine terracotta avec façades hautes crème, corniche moulurée d'origine et sol en carreaux à motifs, chantier réel"
+            caption="Cuisine terracotta livrée dans un appartement ancien : façades hautes crème, corniche moulurée conservée et sol à motifs. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/chantiers/chCuisineNoireSejourFinie.jpeg"
@@ -271,16 +271,32 @@ export default function Page() {
             caption="Cuisine noire ouverte sur séjour, livrée avec plan de travail et rangements muraux. Chantier réel des équipes partenaires."
           />
           <MqFig
-            src="/photos/chantiers/chCuisineBlanchePendantsFinie.jpeg"
-            alt="Cuisine blanche livrée avec suspensions lumineuses, chantier réel"
-            caption="Cuisine blanche livrée, suspensions lumineuses au-dessus du plan de travail. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chCuisineNoireBrillantePoigneesCuivrees.jpeg"
+            alt="Cuisine noire laquée brillante avec poignées cuivrées et sol en carreaux de ciment à motifs orangés, chantier réel"
+            caption="Cuisine noire laquée livrée : poignées cuivrées, plan de travail clair et sol en carreaux de ciment à motifs. Chantier réel des équipes partenaires."
           />
           <MqFig
-            src="/photos/chantiers/chCuisineAnthraciteGalerie.jpeg"
-            alt="Cuisine anthracite livrée, vue en enfilade, chantier réel"
-            caption="Cuisine anthracite livrée, vue en enfilade depuis la pièce attenante. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chCuisineBleuCanardBrillante.jpeg"
+            alt="Cuisine bleu canard laquée avec plan de travail bois et découpe pour plaque de cuisson en attente, chantier réel"
+            caption="Cuisine bleu canard en finition : façades laquées posées, plan de travail bois et découpe prête à recevoir la plaque de cuisson. Chantier réel des équipes partenaires."
           />
         </div>
+        {/*
+          31/08 : vérification photo par photo de cette grille de 9 cuisines "livrées" — quatre
+          des neuf fichiers étaient en réalité des quasi-doublons pixel pour pixel de quatre autres
+          photos déjà présentes dans cette même grille, sous un nom de fichier et une légende
+          différents (vérifié par hachage d'image, correspondance exacte) :
+          chCuisineBlancheFinieIlot.jpeg = chCuisineBlancheElectromenagerLG.jpeg (déjà utilisée
+          plus haut) ; chCuisineNoireSkylightFinie.jpeg = chCuisinePlanNoirFacadesCremeVelux.jpeg
+          (déjà utilisée, et en plus incorrectement qualifiée de "cuisine noire" alors que les
+          façades y sont crème, seul le plan de travail est noir) ; chCuisineBlanchePendantsFinie.jpeg
+          = chCuisineBlancheBrillanteMarbre.jpeg (déjà utilisée) ; chCuisineAnthraciteGalerie.jpeg
+          = chCuisineAnthraciteCarreauxCiment.jpeg (déjà utilisée). Autrement dit la grille ne
+          montrait que 5 cuisines réelles distinctes répétées pour en simuler 9. Les 4 doublons ont
+          été remplacés par 4 photos réelles et distinctes du même dossier chantiers/, non utilisées
+          ailleurs sur ces 4 pages (vérifié), apportant une vraie diversité de teintes plutôt que
+          des répétitions : vert sauge, terracotta, noir laqué à poignées cuivrées, bleu canard.
+        */}
       </MqSection>
 
       <MqSection title="Peinture et finitions : la dernière étape, pas la première décision">

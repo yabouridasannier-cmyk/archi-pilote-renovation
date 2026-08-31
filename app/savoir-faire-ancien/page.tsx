@@ -368,9 +368,15 @@ export default function SavoirFaireAncienPage() {
             />
             <MqFig
               src="/photos/chantiers/chBibliotheque.jpeg"
-              alt="Bibliothèque encastrée livrée dans un logement ancien, mur en pierre apparente conservé et parquet à bâtons rompus, chantier réel"
-              caption="Bibliothèque encastrée livrée : mur en pierre apparente conservé en niche et raccord au parquet à bâtons rompus d'origine. Chantier réel des équipes partenaires."
+              alt="Bibliothèque encastrée livrée dans un logement ancien, mur en pierre apparente conservé en niche et parquet ancien au sol, chantier réel"
+              caption="Bibliothèque encastrée livrée : mur en pierre apparente conservé en niche et raccord au parquet ancien conservé. Chantier réel des équipes partenaires."
             />
+            {/*
+              Corrigé le 31/08/2026 après vérification de la photo : la légende affirmait un
+              parquet "à bâtons rompus", or le sol visible sur ce cliché est un parquet à larges
+              lames droites, sans le calepinage en bâtons rompus. Légende reformulée pour ne
+              décrire que ce qui est réellement visible.
+            */}
             <MqFig
               src="/photos/maquette/sejour-haussmannien-renove.jpg"
               alt="Séjour d'appartement haussmannien rénové avec moulures, cheminée en marbre et parquet chêne point de Hongrie"
@@ -386,16 +392,15 @@ export default function SavoirFaireAncienPage() {
               alt="Comptoir en bois mouluré fini autour d'une colonne en fonte d'origine, chantier réel"
               caption="Comptoir en bois mouluré, panneaux à cadres et moulures, fini autour de la colonne en fonte conservée. Chantier réel des équipes partenaires."
             />
-            <MqFig
-              src="/photos/chantiers/chComptoirBarColonneFonteVueLarge.jpeg"
-              alt="Vue large du comptoir en cours de finition autour de la colonne en fonte d'origine, chantier réel"
-              caption="Vue large du chantier : comptoir, étagères et colonne en fonte conservée dans leur contexte. Chantier réel des équipes partenaires."
-            />
-            <MqFig
-              src="/photos/chantiers/chComptoirBarEtageresOutils.jpeg"
-              alt="Étagères et comptoir en cours de finition, outils de chantier au sol, chantier réel"
-              caption="Étagères en bois et comptoir en cours de finition, échelle et outils encore en place avant réception. Chantier réel des équipes partenaires."
-            />
+            {/*
+              Retiré le 31/08/2026 : chComptoirBarColonneFonteVueLarge.jpeg et
+              chComptoirBarEtageresOutils.jpeg (contrôle par md5) sont OCTETS-IDENTIQUES à
+              chComptoirBarColonneFonteCarreauxAnciens.jpeg et chComptoirBarMouluresFinition.jpeg
+              ci-dessus — même fichier image dupliqué sous deux noms différents. Les deux entrées
+              étaient présentées avec une légende différente, comme s'il s'agissait de deux prises
+              de vue distinctes, ce qui double artificiellement la preuve de chantier réel affichée
+              sur cette grille. Entrées retirées plutôt que remplacées par une photo non vérifiée.
+            */}
           </div>
         </div>
       </MqSection>

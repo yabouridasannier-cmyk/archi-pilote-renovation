@@ -301,15 +301,31 @@ export default function Page() {
           />
           <MqFig
             src="/photos/chantiers/chDemolitionLattisPlatreChantier2.jpeg"
-            alt="Démolition d'une cloison ancienne, autre angle, chantier réel"
-            caption="Démolition sélective, autre angle du même chantier : gravats triés avant évacuation. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chDemolitionGravatsChantier.jpeg"
-            alt="Gravats de démolition triés avant évacuation, chantier réel"
-            caption="Gravats de démolition triés et sacs préparés avant évacuation. Chantier réel des équipes partenaires."
+            alt="Démolition d'une cloison ancienne, vue depuis le couloir, gravats et poussière au sol, chantier réel"
+            caption="Démolition sélective, vue depuis le couloir : gravats et poussière au sol, réseaux de plomberie encore apparents avant évacuation. Chantier réel des équipes partenaires."
           />
         </div>
+        {/*
+          31/08 : chDemolitionGravatsChantier.jpeg retiré de cette grille. Vérification photo par
+          photo : ce fichier est quasi identique (même mur dégarni, même tas de gravats, même
+          perceuse au sol) à chDemolitionCloisonBoisPlatre.jpeg déjà utilisée juste au-dessus dans
+          cette même grille — les deux montrent la même prise de vue, pas deux chantiers différents.
+          Sa légende affirmait en plus "gravats triés et sacs préparés avant évacuation", ce qui
+          n'est pas ce que montre la photo (tas de gravats en vrac avec une perceuse posée dessus,
+          aucun sac, aucun tri visible). Recherche d'un remplaçant réel dans public/photos/chantiers/
+          (mots-clés gravats/sac/évacuation) : aucune autre photo du dossier ne montre des gravats
+          triés en sacs prêts à l'évacuation — les seuls autres clichés de démolition disponibles
+          (chDemolitionMursDecapes.jpeg, chDemolitionOuvertureCouloir.jpeg,
+          chDemolitionLattisPlatreOuverture.jpeg) sont eux-mêmes des quasi-doublons des deux photos
+          déjà utilisées ci-dessus. La légende de chDemolitionLattisPlatreChantier2.jpeg a aussi été
+          corrigée : elle prétendait à tort "gravats triés avant évacuation" alors que la photo
+          montre un sol poussiéreux avec des tuyaux de plomberie encore apparents, pas des gravats
+          triés.
+          À GÉNÉRER si un visuel de gravats triés est souhaité : "Photographie réaliste de chantier,
+          gros plan sur des gravats de démolition (plâtre, briques, bois) triés par matériau et
+          conditionnés dans des sacs à gravats blancs tressés, prêts à être évacués, sol de chantier
+          protégé en arrière-plan, lumière naturelle, style photo-reportage BTP, aucun texte."
+        */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           {[
             { title: "Démolition et évacuation", text: "Dépose sélective des éléments non porteurs, tri des matériaux et évacuation organisée, en particulier en immeuble occupé." },

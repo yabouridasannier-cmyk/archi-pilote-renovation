@@ -194,12 +194,14 @@ export default function InvestisseursProfessionnelsPage() {
         lead="Notre modèle vise jusqu'à 20 % d'économies sur le budget travaux, sans dégrader le niveau de prestation."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/chantiers/chDressingLaqueBlancCouloirPlans.jpeg"
-            alt="Cas réel anonymisé de chiffrage avant rénovation d'un actif."
-            caption="Les arbitrages se prennent sur plan et sur devis, avant le démarrage — pas une fois les murs ouverts. Chantier réel des équipes partenaires."
-            ratio="aspect-[16/9]"
-          />
+          {/*
+            À GÉNÉRER (photo RÉELLE, jamais de génération IA pour un document de chiffrage) :
+            cette photo était jusqu'ici chDressingLaqueBlancCouloirPlans.jpeg — déjà utilisée sur
+            reseau-partenaires ET parcours-expertise (doublon strict retiré ici, gardée là où
+            l'usage est le plus juste). Aucun autre candidat réel de "plans/devis examinés avant
+            démarrage" n'existe dans /public/photos/chantiers/ sans dupliquer une page existante.
+            Alt prévu : "Cas réel anonymisé de chiffrage avant rénovation d'un actif."
+          */}
           <div className="flex flex-col gap-3 max-w-2xl">
             <h3 className="display text-[1.15rem] text-ivoire">Un mini cas, à partir d&apos;un chantier réel</h3>
             <p className="text-[0.95rem] text-ivoire/85 leading-relaxed">

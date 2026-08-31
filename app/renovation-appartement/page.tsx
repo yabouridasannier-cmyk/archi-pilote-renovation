@@ -151,13 +151,25 @@ export default function Page() {
           fichiers renvoyant à la même photo) — chaque image est réelle et associée au type
           d'étape qu'elle illustre, sans affirmer qu'il s'agit du même chantier suivi en
           continu.
+
+          Corrections du 31/08/2026 après vérification image par image :
+          1) chDemolitionCloisonBoisPlatre.jpeg était légendée comme un état "avant travaux"
+             avec "boiseries d'origine relevées avant tout chiffrage" — la photo montre en
+             réalité une cloison déjà ouverte jusqu'au lattis bois, gravats au sol : c'est une
+             photo de démolition, pas un relevé avant travaux. Légende corrigée en conséquence.
+          2) chCuisineSejourParquetChevrons.jpeg (dernière vignette, "Réception") s'est révélée
+             être la même pièce que chCuisineNoireSejourFinie.jpeg utilisée en photo d'ouverture
+             de cette page (même cuisine, même agencement, même angle) : la page affichait deux
+             fois la même scène sous deux légendes différentes. Remplacée par
+             chCuisineCremeIlot.jpeg (cuisine livrée distincte, non utilisée ailleurs sur le
+             site).
         */}
         <p className="eyebrow mt-10">Étapes réelles d'une rénovation d'appartement pilotée de A à Z</p>
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           <MqFig
             src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
-            alt="Salon haussmannien avant travaux, boiseries d'origine et plancher recouvert de gravats de plâtre"
-            caption="Lecture du bâti : boiseries et huisseries d'origine relevées avant tout chiffrage. Chantier réel des équipes partenaires."
+            alt="Cloison ancienne ouverte jusqu'au lattis de bois et au plâtre, gravats au sol, couloir d'appartement haussmannien"
+            caption="Démolition sélective : cloison ouverte jusqu'au lattis bois d'origine, gravats évacués au fur et à mesure du chantier. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/chantiers/chPlacardTableauElectriqueIntegre.jpeg"
@@ -185,9 +197,9 @@ export default function Page() {
             caption="Exécution pilotée : meuble et vasques posés, suivi quotidien avant raccordement final. Chantier réel des équipes partenaires."
           />
           <MqFig
-            src="/photos/chantiers/chCuisineSejourParquetChevrons.jpeg"
-            alt="Séjour et cuisine ouverte livrés, parquet à chevrons et cuisine sombre sur mesure"
-            caption="Réception : logement livré et réserves levées après pilotage complet du chantier. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chCuisineCremeIlot.jpeg"
+            alt="Cuisine ouverte livrée sous velux, îlot central en plan noir et façades sur mesure"
+            caption="Réception : cuisine livrée, îlot et façades sur mesure, réserves levées après pilotage complet du chantier. Chantier réel des équipes partenaires."
           />
         </div>
       </MqSection>

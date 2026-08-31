@@ -223,10 +223,17 @@ export default function NotreMethodePage() {
         <div className="flex flex-col gap-8">
           <MqFig
             src="/photos/maquette/schema-vmc.jpg"
-            alt="Schéma d'une ventilation mécanique contrôlée en immeuble ancien avec bouches d'extraction, gaines et caisson raccordés à la trémie existante"
+            alt="Schéma d'une ventilation mécanique contrôlée hygroréglable dans un appartement, avec entrées d'air, gaines vers le caisson en combles et bouches d'extraction en pièces techniques"
             caption="Interface type entre lots : la pose d'une ventilation mécanique contrôlée dépend de l'étanchéité à l'air obtenue par l'isolation."
             ratio="aspect-[16/9]"
           />
+          {/*
+            31/08 : alt corrigé — le schéma réutilisé ici (déjà utilisé sur la page
+            rénovation-énergétique) montre un plan d'appartement avec caisson VMC en combles et
+            gaines vers les pièces techniques, pas un "immeuble ancien" avec une "trémie existante"
+            comme l'affirmait l'ancien alt : ce détail ne figure pas dans l'image. La légende
+            visible (générique, "interface entre lots") restait exacte et n'a pas été modifiée.
+          */}
           <MqChecklist
             items={[
               "Réservations électriques posées avant l'implantation des meubles.",
