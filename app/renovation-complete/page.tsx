@@ -216,9 +216,9 @@ export default function Page() {
         />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
           <MqFig
-            src="/photos/chantiers/chDemolitionMursDecapes.jpeg"
-            alt="Arrivées de plomberie en attente, tubes multicouches repérés, avant fermeture des cloisons"
-            caption="Plomberie : arrivées repérées et contrôlées avant fermeture des cloisons. Chantier réel des équipes partenaires."
+            src="/photos/maquette/chantier-plomberie-encastree.jpg"
+            alt="Réseaux de plomberie encastrés en tubes multicouche rouges et bleus avec collecteur, avant fermeture des cloisons"
+            caption="Plomberie : principe de réseaux encastrés en multicouche depuis un collecteur, repérage chaud/froid avant fermeture. Illustration de référence, hors chantier documenté sur cette page."
           />
           <MqFig
             src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg"
