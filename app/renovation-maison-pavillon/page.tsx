@@ -66,10 +66,27 @@ export default function Page() {
             />
             <MqFig
               src="/photos/maquette/schema-vmc.jpg"
-              alt="Schéma de principe d'une ventilation mécanique contrôlée hygroréglable associée à un carottage de mur pour maison ou pavillon"
+              alt="Schéma de principe d'une ventilation mécanique contrôlée hygroréglable, ici représenté sur un plan d'appartement — le même principe s'applique à un pavillon de plain-pied"
               caption="Isolation et ventilation mécanique contrôlée doivent être pensées ensemble pour éviter tout report d'humidité."
             />
           </div>
+          {/*
+            À GÉNÉRER — il manque encore le schéma de coupe diagnostique demandé pour cette
+            section (fissures + humidité + isolation + charpente + fondations réunis dans une
+            seule coupe de maison). Le schéma ci-dessus (schema-humidite-origines.jpg) ne
+            couvre que l'humidité ; aucun des 7 schémas pédagogie existants (01-beton-cire à
+            07-modele-economique) ne correspond au sujet. Prompt français à utiliser :
+            "Schéma pédagogique en coupe isométrique d'une maison ancienne à un étage, style
+            illustration technique épurée (fond ivoire/crème, traits fins bruns, accents
+            orange laiton, typographie serif élégante pour les titres, légendes callout
+            numérotées reliées par de fins tirets) — vue en coupe verticale du sol à la
+            toiture montrant simultanément cinq points de diagnostic annotés : 1) fissure de
+            façade en tête de mur, 2) tache d'humidité et remontée capillaire en pied de mur,
+            3) isolation manquante ou dégradée dans les murs et sous toiture, 4) charpente
+            bois avec un point singulier (assemblage fragilisé), 5) fondations sans barrière
+            d'étanchéité. Aucune photo, dessin vectoriel uniquement, format paysage 16:9,
+            cohérent avec le style de schema-humidite-origines.jpg."
+          */}
         </div>
       </MqSection>
 
@@ -113,8 +130,8 @@ export default function Page() {
         <div className="mt-8">
           <MqFig
             src="/photos/maquette/schema-carottage-ventilation.jpg"
-            alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
-            caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
+            alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction"
+            caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction. En maison individuelle, la démarche reste technique ; une autorisation de copropriété ne s'applique qu'en cas de mur mitoyen ou de secteur protégé."
           />
         </div>
       </MqSection>
@@ -158,7 +175,7 @@ export default function Page() {
       <MqSection
         kicker="Pédagogie visuelle"
         title="Rénover un pavillon francilien : ce que l'on voit et ce que l'on ne voit pas"
-        lead="Une rénovation de pavillon se juge sur l'enveloppe : isolation, menuiseries, couverture et ventilation. Voici la même maison avant et après pilotage, puis les schémas techniques qui expliquent les ouvrages cachés."
+        lead="Une rénovation de pavillon se juge sur l'enveloppe : isolation, menuiseries, couverture et ventilation. Voici le type de transformation visé, avant et après, puis les schémas techniques qui expliquent les ouvrages cachés."
       >
         <div className="flex flex-col gap-12">
           <div>
@@ -166,16 +183,30 @@ export default function Page() {
             <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
               Isolation thermique par l'extérieur, remplacement des menuiseries, reprise de couverture et traitement des abords : l'enveloppe est traitée comme un ensemble cohérent.
             </p>
+            {/*
+              LIMITATION HONNÊTE — pavillon-facade-avant.jpg et pavillon-facade-apres.jpg sont
+              deux images d'illustration (stock), pas la même maison photographiée avant et
+              après un chantier ARCHI PILOTE. Vérifié à l'œil : silhouette de toiture et
+              position de cheminée proches, mais matériau de couverture, fenêtres et
+              ravalement diffèrent — ce sont deux visuels distincts. Aucune vraie séquence
+              avant/après du même pavillon n'existe dans /photos/chantiers/ : les photos de
+              ravalement réelles disponibles (chFacadeRavalementEchafaudage1.jpeg,
+              chFacadeRavalementEchafaudage2.jpeg, chFacadeRavalementVillage.jpeg,
+              chRavalementArdoise.jpeg) montrent des immeubles à étages sous échafaudage,
+              jamais un pavillon de plain-pied ni un état "après" sans échafaudage. À
+              remplacer par un vrai avant/après dès qu'un chantier client de pavillon est
+              documenté en photos.
+            */}
             <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
               <MqFig
                 src="/photos/maquette/pavillon-facade-avant.jpg"
                 alt="Façade d'un pavillon francilien des années 1970 avant rénovation, enduit fissuré, volets bois usés et menuiseries anciennes"
-                caption="Avant : État initial d'un pavillon francilien : enduit fissuré, menuiseries simple vitrage, absence d'isolation extérieure et étanchéité de toiture en fin de vie."
+                caption="Avant : image d'illustration d'un pavillon francilien type — enduit fissuré, menuiseries simple vitrage, isolation extérieure absente et couverture en fin de vie."
               />
               <MqFig
                 src="/photos/maquette/pavillon-facade-apres.jpg"
-                alt="Même pavillon francilien après rénovation avec isolation extérieure, enduit clair, menuiseries anthracite et terrasse en pierre"
-                caption="Après : Le même pavillon après pilotage complet : isolation thermique par l'extérieur, menuiseries à rupture de pont thermique, couverture reprise et abords paysagers."
+                alt="Pavillon francilien rénové avec isolation extérieure, enduit clair, menuiseries anthracite et terrasse en pierre"
+                caption="Après : image d'illustration du résultat visé par une rénovation énergétique complète — isolation thermique par l'extérieur, menuiseries à rupture de pont thermique, couverture reprise, abords paysagers."
               />
             </div>
           </div>
@@ -184,16 +215,26 @@ export default function Page() {
             <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
               Dépose de l'ancien isolant, traitement des périphéries, deux couches croisées et pare-vapeur continu : le premier poste de déperdition d'une passoire énergétique.
             </p>
+            {/*
+              LIMITATION HONNÊTE — combles-non-isoles-avant.jpg et combles-isoles-apres.jpg
+              sont aussi deux images d'illustration distinctes (charpentes différentes, l'une
+              visiblement ancienne, l'autre visiblement neuve), pas les mêmes combles
+              avant/après un chantier réel. La seule vraie photo de combles disponible
+              (chIsolationCombles.jpeg) montre une construction neuve en cours, pas la
+              rénovation d'un comble ancien — ce n'est pas un remplacement honnête pour cette
+              paire. À remplacer par un vrai avant/après dès qu'un chantier client est
+              documenté en photos.
+            */}
             <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
               <MqFig
                 src="/photos/maquette/combles-non-isoles-avant.jpg"
                 alt="Combles perdus avant intervention, isolant tassé et discontinu"
-                caption="Avant : Combles perdus avant intervention : isolant tassé et discontinu, ponts thermiques en périphérie, premier poste de déperdition d'une passoire énergétique."
+                caption="Avant : image d'illustration de combles perdus non isolés — isolant tassé et discontinu, ponts thermiques en périphérie, premier poste de déperdition d'une passoire énergétique."
               />
               <MqFig
                 src="/photos/maquette/combles-isoles-apres.jpg"
                 alt="Combles isolés avec deux couches croisées de laine minérale, pare-vapeur continu et chemin de circulation"
-                caption="Après : Combles traités : deux couches croisées de laine minérale, pare-vapeur continu jointoyé et chemin de circulation pour l'entretien des réseaux."
+                caption="Après : image d'illustration du traitement visé — deux couches croisées de laine minérale, pare-vapeur continu jointoyé et chemin de circulation pour l'entretien des réseaux."
               />
             </div>
           </div>

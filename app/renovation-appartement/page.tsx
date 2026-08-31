@@ -87,11 +87,16 @@ export default function Page() {
             ]}
           />
         </div>
-        <div className="mt-10">
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/maquette/schema-vmc.jpg"
             alt="Schéma de principe d'une ventilation mécanique contrôlée hygroréglable en appartement : entrées d'air en menuiseries, transit sous les portes, extraction en cuisine et salle de bains, gaines vers le caisson et carottage de traversée de mur"
             caption="Principe de ventilation hygroréglable : entrées d'air, transit et extraction forment un ensemble indissociable de l'isolation."
+          />
+          <MqFig
+            src="/photos/maquette/chantier-carottage-facade.jpg"
+            alt="Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation"
+            caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune."
           />
         </div>
       </MqSection>
@@ -130,21 +135,59 @@ export default function Page() {
             },
           ]}
         />
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="mt-10 max-w-3xl">
           <MqFig
             src="/photos/maquette/schema-demarches-copropriete.jpg"
-            alt="Parcours administratif d'un chantier en copropriété : syndic, assemblée générale, autorisation, déclaration en mairie"
+            alt="Démarches de copropriété avant une rénovation d'appartement."
             caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire."
           />
+        </div>
+
+        {/*
+          Sept photos réelles ci-dessous, chacune vérifiée individuellement (chantiers des
+          équipes partenaires). Honnêteté : la bibliothèque de photos ne permet pas de
+          prouver qu'elles documentent un seul et même appartement du relevé à la livraison
+          (pas de métadonnées EXIF exploitables, fichiers copiés en batch, plusieurs noms de
+          fichiers renvoyant à la même photo) — chaque image est réelle et associée au type
+          d'étape qu'elle illustre, sans affirmer qu'il s'agit du même chantier suivi en
+          continu.
+        */}
+        <p className="eyebrow mt-10">Étapes réelles d'une rénovation d'appartement pilotée de A à Z</p>
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
           <MqFig
-            src="/photos/maquette/chantier-carottage-facade.jpg"
-            alt="Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation"
-            caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune."
+            src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
+            alt="Salon haussmannien avant travaux, boiseries d'origine et plancher recouvert de gravats de plâtre"
+            caption="Lecture du bâti : boiseries et huisseries d'origine relevées avant tout chiffrage. Chantier réel des équipes partenaires."
           />
           <MqFig
-            src="/photos/chantiers/chCuisineBlancheElectromenagerLG.jpeg"
-            alt="Cuisine blanche livrée avec électroménager encastré, chantier réel"
-            caption="Cuisine livrée après rénovation d'appartement : électroménager encastré, colonne de rangement et finitions réceptionnées. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chPlacardTableauElectriqueIntegre.jpeg"
+            alt="Tableau électrique et compteur intégrés dans un placard sur mesure, ouvert pour vérification des réseaux"
+            caption="Vérification des réseaux existants : tableau électrique et compteur avant intégration dans un placard sur mesure. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chDemolitionOuvertureCouloir.jpeg"
+            alt="Ouverture d'une cloison ancienne jusqu'à l'ossature en bois, avant dépose complète"
+            caption="Structure mise à nu : la cloison est ouverte jusqu'à son ossature pour vérifier ce qu'elle autorise réellement. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chDemolitionLattisPlatreOuverture.jpeg"
+            alt="Même ossature après dépose complète du lattis et du plâtre, gravats au sol"
+            caption="Quelques jours plus tard : dépose complète du lattis et du plâtre, réseaux dégagés avant reconstruction. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
+            alt="Pose de parquet à chevrons dans une pièce en cours de finition, isolant phonique visible au sol"
+            caption="Second œuvre : pose du parquet à chevrons, matériau acheté en direct par le client au prix fournisseur. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chSdbVasquesPoseMeubleBeige.jpeg"
+            alt="Salle de bains en cours d'installation, meuble beige et vasques posées, câblages en attente"
+            caption="Exécution pilotée : meuble et vasques posés, suivi quotidien avant raccordement final. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chCuisineSejourParquetChevrons.jpeg"
+            alt="Séjour et cuisine ouverte livrés, parquet à chevrons et cuisine sombre sur mesure"
+            caption="Réception : logement livré et réserves levées après pilotage complet du chantier. Chantier réel des équipes partenaires."
           />
         </div>
       </MqSection>

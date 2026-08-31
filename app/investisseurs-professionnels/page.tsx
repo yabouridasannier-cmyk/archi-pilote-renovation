@@ -26,6 +26,29 @@ const AVANT_ACQUISITION = [
   },
 ];
 
+const DECISION = [
+  {
+    title: "Acheter",
+    resume: "Les travaux identifiés sont chiffrés et restent cohérents avec le rendement visé.",
+    body: "Aucun désordre structurel majeur au diagnostic ; le montant des travaux, ajouté au prix d'acquisition, reste compatible avec le loyer ou la revente envisagés.",
+  },
+  {
+    title: "Renégocier",
+    resume: "Des travaux significatifs sont nécessaires, mais le bien reste pertinent.",
+    body: "L'estimation chiffrée sert d'appui pour ajuster le prix d'acquisition à la baisse, à hauteur des postes réellement identifiés.",
+  },
+  {
+    title: "Différer",
+    resume: "Certains postes peuvent attendre sans aggraver le risque.",
+    body: "Les travaux non urgents, de confort ou de finition, sont reportés après l'acquisition pour lisser l'investissement dans le temps.",
+  },
+  {
+    title: "Abandonner",
+    resume: "Le risque identifié dépasse ce que le rendement visé peut absorber.",
+    body: "Structure compromise, non-conformité lourde ou incertitude majeure non levée par un diagnostic complémentaire : le dossier est écarté avant tout engagement.",
+  },
+];
+
 const PRISE_EN_CHARGE = [
   {
     title: "Remise en état locative",
@@ -117,11 +140,24 @@ export default function InvestisseursProfessionnelsPage() {
         lead="Une estimation produite après la signature ne sert plus à négocier. Nous intervenons pendant la phase de décision."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/maquette/schema-repartition-budget.jpg"
-            alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage"
-            caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé."
-          />
+          <div className="flex flex-col gap-3">
+            <div
+              role="img"
+              aria-label="Arbre de décision pour intégrer les travaux dans une acquisition."
+              className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8 border border-line rounded-[2px] bg-surface p-6"
+            >
+              {DECISION.map((d) => (
+                <div key={d.title} className="flex flex-col gap-2">
+                  <span className="text-orange-deep font-semibold text-[0.78rem] tracking-wide uppercase">{d.title}</span>
+                  <p className="text-[0.95rem] text-ivoire/85 leading-relaxed">{d.resume}</p>
+                  <p className="text-muted text-[0.85rem] leading-relaxed">{d.body}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl">
+              {"Quatre issues possibles selon les travaux identifiés et le risque qu'ils représentent : acheter, renégocier, différer ou abandonner le dossier."}
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
             {AVANT_ACQUISITION.map((b) => (
               <div key={b.title} className="flex flex-col gap-2">
@@ -160,10 +196,32 @@ export default function InvestisseursProfessionnelsPage() {
         <div className="flex flex-col gap-8">
           <MqFig
             src="/photos/chantiers/chDressingLaqueBlancCouloirPlans.jpeg"
-            alt="Plans d'exécution affichés sur un chantier, servant de référence pour arbitrer les postes de travaux"
+            alt="Cas réel anonymisé de chiffrage avant rénovation d'un actif."
             caption="Les arbitrages se prennent sur plan et sur devis, avant le démarrage — pas une fois les murs ouverts. Chantier réel des équipes partenaires."
             ratio="aspect-[16/9]"
           />
+          <div className="flex flex-col gap-3 max-w-2xl">
+            <h3 className="display text-[1.15rem] text-ivoire">Un mini cas, à partir d&apos;un chantier réel</h3>
+            <p className="text-[0.95rem] text-ivoire/85 leading-relaxed">
+              <span className="text-orange-deep font-semibold">{"État constaté — "}</span>
+              {"un actif ancien présentant les postes lourds classiques identifiés au diagnostic : réseaux vétustes, ventilation absente, menuiseries à reprendre."}
+            </p>
+            <p className="text-[0.95rem] text-ivoire/85 leading-relaxed">
+              <span className="text-orange-deep font-semibold">{"Budget engagé — "}</span>
+              {"chaque poste a été chiffré et arrêté sur plan avant la signature, à partir de ce type de plans annotés directement sur chantier."}
+            </p>
+            <p className="text-[0.95rem] text-ivoire/85 leading-relaxed">
+              <span className="text-orange-deep font-semibold">{"Arbitrage — "}</span>
+              {"répartition entre postes traités immédiatement et postes différés, en fonction du rendement locatif visé pour le bien."}
+            </p>
+            <p className="text-[0.95rem] text-ivoire/85 leading-relaxed">
+              <span className="text-orange-deep font-semibold">{"Résultat — "}</span>
+              {"un chantier démarré sur un budget déjà arrêté, sans avenant lié à un poste découvert en cours de travaux."}
+            </p>
+            <p className="text-muted text-[0.85rem] leading-relaxed">
+              {"Illustration à partir d'un chantier réel piloté pour un investisseur ; les montants précis relèvent de la confidentialité du dossier client et ne sont pas publiés ici."}
+            </p>
+          </div>
           <MqChecklist
             items={[
               "Achat des matériaux en direct par le propriétaire, au prix fournisseur.",

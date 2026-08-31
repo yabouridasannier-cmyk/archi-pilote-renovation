@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
-import { AvantApres } from "../components/avant-apres";
 
 export const metadata: Metadata = {
   title: "Tendances architecture intérieure française 2026-2027 : chêne massif, zellige et pierre | ARCHI PILOTE RÉNOVATION",
@@ -20,6 +19,13 @@ export default function Page() {
         lead="Les intérieurs français 2026-2027 se construisent autour de six matières : chêne massif huilé, zellige émaillé, pierre naturelle française, enduit à la chaux, laiton patiné et volumes courbes maçonnés. Ces partis pris ne sont pas décoratifs : chacun engage un support, une charge, une étanchéité et un savoir-faire. ARCHI PILOTE RÉNOVATION, marque exploitée par IA RENOV SASU (RCS Nanterre 889 976 387), conçoit ces intérieurs avec l'architecte partenaire Minh-Hoa Truong, les valide avec l'ingénieur structure Igli Braho du bureau Tridenso et les fait exécuter par des entreprises partenaires contractantes, sous un pilotage et un accompagnement de A à Z."
       />
 
+      <MqFig
+        src={`${M}/hero-renovation.jpg`}
+        alt="Tendances d'architecture intérieure française 2026-2027."
+        caption="Chêne massif en point de Hongrie, lignes courbes, sobriété : le minimalisme chaleureux qui définit l'intérieur parisien 2026-2027."
+        ratio="aspect-[21/9]"
+      />
+
       <MqSection kicker="Panorama" title="Six matières qui définissent l'intérieur français 2026-2027" lead="Le minimalisme chaleureux remplace le minimalisme froid : moins d'objets, plus de matière." wide>
         <MqNumbered cols={3} items={[
           { title: "Chêne massif huilé", text: "Point de Hongrie, bâtons rompus, larges lames : le chêne massif français revient au sol, en boiserie et en menuiserie intégrée. Huilé plutôt que verni, il vieillit au lieu de s'user." },
@@ -29,14 +35,19 @@ export default function Page() {
           { title: "Laiton patiné et quincaillerie", text: "Robinetterie, crémones, poignées, appliques : la ferronnerie signe le niveau de finition. Le laiton patiné remplace le chrome brillant sur la quasi-totalité des projets." },
           { title: "Courbes et volumes maçonnés", text: "Arches, niches, retours arrondis, banquettes maçonnées : la ligne droite se casse. Ces ouvrages relèvent du plaquiste et du maçon, pas du décorateur." },
         ]} />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
-          <MqFig src={`${M}/tendance-travertin-salle-bain.jpg`} alt="Salle de bain contemporaine en travertin beige avec vasque en pierre massive et robinetterie en laiton brossé" caption="Travertin en salle d'eau : pierre naturelle appliquée en grand format, joints minces et traitement hydrofuge obligatoire avant mise en service." />
-          <MqFig src={`${M}/tendance-zellige-credence.jpg`} alt="Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair" caption="Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé." />
-          <MqFig src={`${M}/tendance-beton-cire-sejour.jpg`} alt="Séjour haussmannien avec sol en béton ciré gris clair, moulures d'origine au plafond et cheminée en marbre" caption="Béton ciré sur plancher ancien : ragréage fibré, primaire d'accroche et contrôle de la charge admissible avant application des couches." />
-          <MqFig src={`${M}/detail-menuiserie-moulure.jpg`} alt="Détail de menuiserie en chêne : porte à panneaux moulurés, chambranle profilé et poignée en laiton patiné" caption="Détail de menuiserie : profils de moulure relevés sur l'existant, chambranle reconstitué et quincaillerie laiton patiné posée à l'ancienne." />
-          <MqFig src={`${M}/tendance-chene-massif-point-hongrie.jpg`} alt="Séjour parisien avec parquet chêne massif point de Hongrie, boiseries et bibliothèque en chêne huilé, murs enduits à la chaux ton argile" caption="Chêne massif point de Hongrie et boiseries huilées : la matière noble travaillée dans les volumes d'origine, murs enduits à la chaux ton argile." />
-          <MqFig src={`${M}/tendance-chaux-arches-pierre-bourgogne.jpg`} alt="Couloir voûté avec arches courbes, enduit à la chaux beige rosé, sol en pierre de Bourgogne et applique en laiton patiné" caption="Arches maçonnées, enduit à la chaux et pierre de Bourgogne : la courbe et la matière minérale, signatures des intérieurs français 2026-2027." />
-        </div>
+        {/* À GÉNÉRER — Visuel planche d'échantillons (image, ratio large ~21/9), à placer ici sous les Six matières.
+            Prompt FR : "Planche de six échantillons de matériaux à plat, vus de dessus, à l'échelle les uns des autres,
+            texture et grain réalistes et détaillés (chêne massif huilé, zellige émaillé, pierre naturelle française,
+            enduit à la chaux, laiton patiné, un fragment de courbe maçonnée enduite), rangés en grille sur fond neutre
+            clair, lumière douce et uniforme, aucun texte ni légende incrusté dans l'image, rendu macro-photographique
+            haut de gamme."
+            Alt prévu : "Six matières majeures de l'intérieur français 2026-2027."
+            Ce visuel doit être distinct des photos d'ambiance de la page /tendances-materiaux-francais (ne pas réutiliser
+            tendance-travertin-salle-bain.jpg, tendance-zellige-credence.jpg, tendance-beton-cire-sejour.jpg,
+            detail-menuiserie-moulure.jpg, tendance-chene-massif-point-hongrie.jpg ni tendance-chaux-arches-pierre-bourgogne.jpg,
+            qui illustrent déjà le panorama de l'autre page : les réutiliser ici recrée le problème de ressemblance signalé
+            par le client). Une fois généré (ex. /photos/maquette/planche-six-matieres-2026.jpg) :
+            <MqFig src={`${M}/planche-six-matieres-2026.jpg`} alt="Six matières majeures de l'intérieur français 2026-2027." caption="Chêne massif huilé, zellige émaillé, pierre naturelle française, chaux, laiton patiné et courbe maçonnée : les six matières de l'intérieur français 2026-2027, à l'échelle." ratio="aspect-[21/9]" /> */}
       </MqSection>
 
       <MqSection kicker="Panorama" title="Le chêne massif, matière reine du sol et de la menuiserie" wide>
@@ -93,10 +104,15 @@ export default function Page() {
         ]} /></div>
       </MqSection>
 
-      <MqSection kicker="Preuve visuelle" title="Avant / après : la matière noble se joue avant la finition" lead="Aucune matière noble ne rattrape un support mal préparé. Faites glisser le curseur." wide>
-        <h3 className="display text-[1.15rem] text-ivoire mb-2">De l&apos;état initial au plateau livré</h3>
-        <p className="text-muted text-[0.9rem] mb-4 max-w-2xl">Relevé de l&apos;existant, dépose complète, reprise des sols et des plafonds : le volume est restitué avant la pose du parquet chêne.</p>
-        <AvantApres standalone={false} titre="De l'état initial au plateau livré" avant={`${M}/chantier-etat-initial.jpg`} apres={`${M}/plateau-livre-parquet-chene.jpg`} avantLabel="Avant — état initial" apresLabel="Après — plateau livré" />
+      <MqSection kicker="Preuve visuelle" title="Chantier réel : la pose du chêne massif en point de Hongrie" lead="La matière noble se joue à la pose, pas à la mise en scène." wide>
+        <h3 className="display text-[1.15rem] text-ivoire mb-2">Le chevron, lame après lame</h3>
+        <p className="text-muted text-[0.9rem] mb-4 max-w-2xl">Encollage lame par lame sur sous-couche, calepinage ajusté à chaque ouverture de la pièce : la restitution du volume précède toujours la pose du parquet chêne.</p>
+        <MqFig
+          src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
+          alt="Chantier réel de pose de parquet en chêne massif à motif chevrons, lames encollées et sous-couche apparente"
+          caption="Pose du parquet chêne en chevrons : lames encollées une à une sur sous-couche acoustique, calepinage ajusté à chaque ouverture de la pièce. Chantier réel des équipes partenaires."
+          ratio="aspect-[16/9]"
+        />
       </MqSection>
 
       <MqSection kicker="Panorama" title="Haut de gamme et maîtrise du budget : notre modèle économique" lead="Les matières nobles deviennent accessibles quand la marge d'intermédiation sur la fourniture disparaît." wide>

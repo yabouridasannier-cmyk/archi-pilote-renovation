@@ -134,11 +134,48 @@ export default function ModeleEconomiquePage() {
         lead="L'économie ne repose pas sur une remise commerciale globale, mais sur l'addition de plusieurs mécanismes vérifiables, détaillés poste par poste dans le tableau suivant."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/maquette/schema-repartition-budget.jpg"
-            alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage"
-            caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé."
-          />
+          <div className="flex flex-col gap-3">
+            <div
+              role="img"
+              aria-label="Comparaison entre achat traditionnel et achat direct des matériaux."
+              className="grid grid-cols-1 md:grid-cols-2 gap-6 border border-line rounded-[2px] bg-surface p-6"
+            >
+              <div className="flex flex-col gap-3">
+                <span className="text-[0.78rem] font-semibold tracking-wide uppercase text-muted">Achat classique</span>
+                <div className="flex flex-col gap-1.5">
+                  {["Fabricant", "Grossiste", "Négoce ou distributeur", "Entreprise", "Client"].map((step, i, arr) => (
+                    <div key={step} className="flex items-center gap-2">
+                      <span className="flex-1 border border-line rounded-[2px] px-3 py-2 text-[0.85rem] text-ivoire/85">{step}</span>
+                      {i < arr.length - 1 && <span className="text-muted text-[0.75rem] whitespace-nowrap">+ marge ↓</span>}
+                    </div>
+                  ))}
+                </div>
+                <p className="text-muted text-[0.8rem] leading-relaxed">
+                  {"Chaque intermédiaire ajoute sa propre marge avant que le matériau n'atteigne le chantier."}
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <span className="text-[0.78rem] font-semibold tracking-wide uppercase text-orange-deep">Achat direct</span>
+                <div className="flex flex-col gap-1.5">
+                  <div className="flex items-center gap-2">
+                    <span className="flex-1 border border-orange-deep/40 rounded-[2px] px-3 py-2 text-[0.85rem] text-ivoire/85">
+                      {"Fournisseur (ex. Saint-Gobain, Guimier)"}
+                    </span>
+                    <span className="text-orange-deep text-[0.75rem] whitespace-nowrap">prix fournisseur ↓</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="flex-1 border border-orange-deep/40 rounded-[2px] px-3 py-2 text-[0.85rem] text-ivoire/85">Client</span>
+                  </div>
+                </div>
+                <p className="text-muted text-[0.8rem] leading-relaxed">
+                  {"Le client règle directement le fournisseur, sur des références validées techniquement par l'entreprise partenaire."}
+                </p>
+              </div>
+            </div>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl">
+              {"Comparaison de principe entre un circuit d'achat classique et l'achat direct par le client : c'est le nombre d'intermédiaires qui diminue, pas un pourcentage garanti sur chaque projet."}
+            </p>
+          </div>
           <div className="overflow-x-auto border border-line rounded-[2px] bg-surface">
             <table className="w-full text-left text-[0.92rem]">
               <thead>
@@ -168,9 +205,9 @@ export default function ModeleEconomiquePage() {
       <MqSection kicker="Achat direct" title="Le mécanisme central : le client achète ses matériaux">
         <div className="flex flex-col gap-8">
           <MqFig
-            src="/photos/maquette/approvisionnement-materiaux-plateforme.jpg"
-            alt="Entrepôt de matériaux de construction avec palettes de plaques de plâtre, laine minérale et sacs d'enduit"
-            caption="Approvisionnement en direct : plaques, isolants et enduits du groupe Saint-Gobain retirés à La Plateforme du Bâtiment, facturés au client sans marge."
+            src="/photos/chantiers/chPlacagesNoyerEnAttente.jpeg"
+            alt="Exemple anonymisé d'un achat direct de matériaux."
+            caption="Matériaux en placage noyer réceptionnés sur chantier avant pose, achetés en direct par le client sur des références validées techniquement. Chantier réel des équipes partenaires."
           />
           <MqProse>
             <p>

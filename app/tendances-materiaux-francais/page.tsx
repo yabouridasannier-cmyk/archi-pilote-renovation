@@ -78,6 +78,15 @@ export default function TendancesMateriauxFrancaisPage() {
         lead="Les trois matières qui structurent aujourd'hui l'esthétique française — travertin, zellige et béton ciré — sont exigeantes sur le support, jamais sur le style. Chacune impose une préparation précise : planéité, étanchéité, charge admissible, traitement de protection. ARCHI PILOTE RÉNOVATION conçoit ces finitions avec l'architecte partenaire Minh-Hoa Truong, les valide avec l'ingénieur structure Igli Braho du bureau Tridenso lorsque la structure est concernée, et les fait exécuter par des entreprises partenaires contractantes, sous notre pilotage et notre accompagnement de A à Z."
       />
 
+      {/* À GÉNÉRER — Visuel hero (image éditoriale, ratio large ~21/9 ou 16/9), à placer ici sous le H1.
+          Prompt FR : "Planche matière élégante et épurée : échantillons de travertin, zellige, béton ciré,
+          chêne massif, chaux et laiton, disposés à plat côte à côte et photographiés en lumière naturelle
+          douce (lumière de fin de matinée), sur fond neutre clair, sans mise en scène, sans texte, cadrage
+          serré façon planche d'architecte, rendu photographique haut de gamme."
+          Alt prévu : "Palette de matériaux français pour une rénovation intérieure haut de gamme."
+          Une fois généré (ex. /photos/maquette/planche-materiaux-francais.jpg) :
+          <MqFig src="/photos/maquette/planche-materiaux-francais.jpg" alt="Palette de matériaux français pour une rénovation intérieure haut de gamme." caption="Travertin, zellige, béton ciré, chêne, chaux et laiton : les six matières qui structurent la rénovation française haut de gamme." ratio="aspect-[21/9]" /> */}
+
       <MqSection
         kicker="Panorama"
         title="Quatre matières, quatre logiques de mise en œuvre"
@@ -113,9 +122,9 @@ export default function TendancesMateriauxFrancaisPage() {
             </p>
           </MqProse>
           <MqFig
-            src="/photos/maquette/schema-etancheite-salle-eau.jpg"
-            alt="Coupe d'une salle d'eau montrant la natte d'étanchéité sous carrelage, la bande d'angle, la pente et le siphon"
-            caption="Étanchéité sous carrelage : continuité de la natte entre murs et sol, bandes de renfort en angle et pente d'évacuation de 1 à 2 %."
+            src="/photos/maquette/schema-pose-travertin.jpg"
+            alt="Schéma pédagogique de la pose de dalles de travertin en grand format : chape ragréée, double encollage, joint minéral et hydrofuge"
+            caption="Coupe de pose du travertin : chape ragréée, double encollage au peigne, dalle grand format, joint minéral et traitement hydrofuge final."
             ratio="aspect-[16/9]"
           />
         </div>
@@ -140,9 +149,9 @@ export default function TendancesMateriauxFrancaisPage() {
             <p>Fourchette constatée : 140 à 260 euros le mètre carré posé, joint compris, selon la teinte et la provenance des carreaux.</p>
           </MqProse>
           <MqFig
-            src="/photos/maquette/tendance-zellige-credence.jpg"
-            alt="Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair"
-            caption="Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé."
+            src="/photos/maquette/schema-pose-zellige-etapes.jpg"
+            alt="Schéma pédagogique des cinq étapes de pose du zellige : support dressé, calepinage, mélange des boîtes, pose au peigne et joint fin"
+            caption="Les cinq étapes de pose du zellige : support dressé, calepinage à sec, mélange des boîtes pour répartir les nuances, pose au peigne et joint fin."
             ratio="aspect-[16/9]"
           />
         </div>
@@ -240,6 +249,31 @@ export default function TendancesMateriauxFrancaisPage() {
           </p>
         </div>
       </section>
+
+      <MqSection
+        kicker="Preuve visuelle"
+        title="Trois détails de chantiers réels"
+        lead="La matière se juge sur sa mise en œuvre, pas sur la mise en scène. Trois détails vérifiés, issus de chantiers réels des équipes partenaires."
+        wide
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <MqFig
+            src="/photos/chantiers/chPorteCoulissanteClaustraChene3.jpeg"
+            alt="Détail réel d'une porte coulissante à claustra en chêne massif, posée dans un appartement en rénovation"
+            caption="Porte coulissante à claustra en chêne massif : lames verticales rainurées et rail dissimulé en linteau, réalisée sur mesure. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chSdbBaignoireTeck.jpeg"
+            alt="Détail réel d'une salle de bain avec sol en grand format effet travertin et meuble vasque en teck massif"
+            caption="Salle de bain en fin de chantier : carrelage grand format effet travertin, baignoire îlot et meuble vasque en teck massif. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chSdbCarreauxCiment.jpeg"
+            alt="Détail réel d'une douche en carreaux de ciment à motifs patchwork, avec vasque en pierre et meuble en teck"
+            caption="Douche en carreaux de ciment à motifs patchwork : calepinage anticipé pour aligner les dessins entre murs, vasque en pierre sur meuble bois. Chantier réel des équipes partenaires."
+          />
+        </div>
+      </MqSection>
 
       <MqSection title="Questions fréquentes sur ces finitions">
         <MqFaq items={FAQ} />

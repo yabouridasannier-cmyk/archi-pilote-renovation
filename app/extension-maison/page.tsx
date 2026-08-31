@@ -17,6 +17,34 @@ export default function Page() {
         lead="Une extension réussie n'est pas seulement une surface supplémentaire : elle doit fonctionner avec la maison existante sur le plan de la circulation, de la structure, de la lumière, des réseaux, de l'isolation et de l'esthétique. ARCHI PILOTE RÉNOVATION cadre la faisabilité, structure le budget et pilote le projet de A à Z, tandis que les entreprises partenaires contractantes exécutent les travaux et les architectes ou ingénieurs indépendants interviennent sur les dossiers qui l'exigent."
       />
 
+      {/*
+        À GÉNÉRER — visuel hero manquant.
+        Vérifié le 31/08/2026 : MqHero (app/components/mq.tsx) n'a pas de slot image et aucun MqFig
+        n'est présent sous le hero de cette page. Le hero est donc 100% texte à ce jour — l'affirmation
+        d'un rapport précédent ("le hero est déjà un schéma technique, accepté par le client") est fausse.
+        Aucun des 7 schémas de /public/photos/pedagogie/ ne couvre ce sujet (vérifié par ls).
+
+        Sujet requis : coupe technique de l'interface entre une maison ancienne et son extension —
+        fondations, rupture de capillarité, isolation continue, raccord de toiture, passage des réseaux.
+        Alt prévu : "Interface technique entre une maison existante et son extension."
+
+        Prompt FR (à générer, style aligné sur schema-extension-surelevation.jpg déjà en place :
+        fond ivoire/crème uni, coupe technique en traits fins charbon, légende numérotée en cercles
+        ocre/doré, encadré légende en bas, échelle graphique) :
+        "Coupe technique 2D en ligne, style schéma d'architecte pédagogique, vue en coupe verticale d'une
+        maison ancienne en pierre raccordée à une extension contemporaine de plain-pied. Montrer de bas en
+        haut, avec légende numérotée en cercles ocre : (1) fondations existantes et fondations neuves de
+        l'extension côte à côte avec leur différence de profondeur, (2) rupture de capillarité / arase
+        étanche au pied du mur neuf, (3) continuité de l'isolation thermique entre mur existant et mur neuf
+        sans pont thermique au droit de la jonction, (4) raccord de toiture entre couverture ancienne et
+        toiture neuve à faible pente avec solin d'étanchéité, (5) passage des réseaux (électricité,
+        plomberie, VMC) traversant la jonction existant/neuf. Fond ivoire/crème uni (#F5F0E8 environ),
+        traits fins charbon, accents ocre/doré, encadré légende en bas à droite (Existant / Neuf / Isolant /
+        Rupture de capillarité), échelle graphique en bas, typographie sans-serif nette, aucune photo,
+        aucun rendu 3D réaliste — schéma pédagogique 2D uniquement, cohérent avec les schémas déjà produits
+        du site."
+      */}
+
       <MqSection
         title="La faisabilité avant tout budget définitif"
         lead="Un chiffrage précis ne vaut rien tant que les contraintes d'urbanisme, d'emprise, d'accès et de structure existante n'ont pas été vérifiées."
@@ -67,6 +95,17 @@ export default function Page() {
             caption="Les déperditions thermiques se concentrent souvent aux interfaces entre bâti existant et extension neuve."
           />
         </div>
+        {/*
+          À FOURNIR — photo RÉELLE manquante (ce n'est pas un visuel "à générer par IA").
+          Sujet demandé : terrain et façade avant travaux, avec implantation de l'extension ajoutée
+          en surimpression sobre. Alt prévu : "Étude d'implantation d'une extension de maison."
+          Vérifié le 31/08/2026 : aucun candidat honnête dans /public/photos/chantiers/ (pas de photo
+          de terrain/jardin avant travaux avec superposition d'implantation) et aucun schéma dans
+          /public/photos/pedagogie/. Ce visuel suppose une vraie photo de terrain d'un chantier
+          ARCHI PILOTE réel + un calque d'implantation sobre ajouté dessus — impossible à fabriquer
+          honnêtement ici sans une photo de terrain authentique fournie par le client/les équipes
+          partenaires. Ne pas combler avec une photo stock présentée comme réelle.
+        */}
       </MqSection>
 
       <MqSection
@@ -122,23 +161,16 @@ export default function Page() {
             caption="Charpente en cours de montage, échafaudage en place pour la pose de la couverture. Chantier réel des équipes partenaires."
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-          <MqFig
-            src="/photos/chantiers/chTerrassePiscineBoisVue1.jpeg"
-            alt="Terrasse bois livrée autour d'une piscine, chantier réel"
-            caption="Terrasse bois livrée en extension extérieure autour d'une piscine. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chTerrasseBoisPiscineCourbe.jpeg"
-            alt="Terrasse bois aux formes courbes livrée autour d'une piscine, chantier réel"
-            caption="Terrasse bois aux formes courbes, livrée en extension extérieure d'une maison. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chLivraisonPanneauPrefabGrue.jpeg"
-            alt="Panneau préfabriqué livré par grue sur un chantier d'extension, chantier réel"
-            caption="Panneau préfabriqué livré par grue : logistique d'approvisionnement d'un chantier d'extension. Chantier réel des équipes partenaires."
-          />
-        </div>
+        {/*
+          Rangée supprimée le 31/08/2026 (vérification image par image) : les 3 photos qui figuraient
+          ici (chTerrassePiscineBoisVue1.jpeg, chTerrasseBoisPiscineCourbe.jpeg,
+          chLivraisonPanneauPrefabGrue.jpeg) montrent des terrasses/piscine — hors-sujet dans une
+          section consacrée à l'interface maison existante/extension. La 3e photo était en plus
+          légendée à tort "Panneau préfabriqué livré par grue sur un chantier d'extension" alors
+          qu'elle montre une coque de piscine préfabriquée livrée par camion-grue. C'est exactement
+          le mélange de projets signalé par le client : la rangée est retirée plutôt que corrigée
+          par une légende approximative.
+        */}
       </MqSection>
 
       <MqSection
@@ -258,51 +290,61 @@ export default function Page() {
 
       <MqSection
         kicker="PÉDAGOGIE VISUELLE"
-        title="D'un jardin encombré à une extension livrée"
-        lead="Une extension réussie se joue avant le terrassement : étude de sol, autorisation d'urbanisme et fondations adaptées. Voici la transformation complète et le schéma de reprise des appuis."
+        title="Ce qui se joue avant et pendant une extension"
+        lead="Une extension réussie se joue avant le terrassement : étude de sol, autorisation d'urbanisme et fondations adaptées. Les photos ci-dessous sont des exemples d'illustration à chaque étape type — elles ne documentent pas un unique chantier de bout en bout (voir note ci-dessous)."
         wide
       >
+        {/*
+          Corrigé le 31/08/2026 après vérification visuelle des fichiers sources : cette section
+          présentait jardin-avant-extension.jpg et extension-livree-apres.jpg comme le "avant" et
+          "après" d'UN MÊME projet (légendes "Avant :" / "Après :" répétées deux fois sur la page).
+          Ouverture des deux fichiers : ce sont deux maisons différentes (pierre/toiture/jardin/
+          extension tous différents) — exactement le problème signalé par le client ("les visuels
+          actuels mélangent plusieurs projets"). La fausse paire "avant/après" dupliquée est retirée
+          et les légendes ci-dessous ne prétendent plus qu'il s'agit du même bien.
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/maquette/jardin-avant-extension.jpg"
             alt="Jardin d'une maison de meulière francilienne avant extension, terrasse béton fissurée et abri de jardin"
-            caption="Avant extension : terrasse béton fissurée et abri vétuste. Le relevé, l'étude de sol Geo2Mo et la déclaration préalable précèdent tout terrassement."
+            caption="Exemple d'illustration — terrain avant travaux : le relevé, l'étude de sol et la déclaration préalable précèdent tout terrassement."
           />
           <MqFig
-            src="/photos/maquette/extension-livree-apres.jpg"
-            alt="Extension contemporaine en bardage bois et grandes baies vitrées acier noir accolée à une maison de meulière"
-            caption="Extension livrée : ossature bois, grandes baies à menuiseries acier, toiture zinc et raccord soigné à la meulière conservée."
+            src="/photos/chantiers/chIsolationCombles.jpeg"
+            alt="Pose de l'isolation et du doublage sous toiture dans une extension en cours de second œuvre, chantier réel"
+            caption="Isolation et doublage posés en sous-face de toiture avant fermeture des cloisons. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/maquette/extension-verre-meuliere.jpg"
             alt="Extension contemporaine vitrée à ossature acier greffée sur une maison ancienne en meulière d'Île-de-France"
-            caption="Référence de style : extension vitrée raccordée à une maison en meulière, avec reprise des fondations et étanchéité de jonction."
+            caption="Référence de style A (photo d'illustration, projet distinct) : extension vitrée à ossature acier sur maison en meulière."
           />
+          <MqFig
+            src="/photos/maquette/extension-livree-apres.jpg"
+            alt="Extension contemporaine en bardage bois et grandes baies vitrées acier noir accolée à une maison de meulière"
+            caption="Référence de style B (photo d'illustration, projet distinct) : extension en bardage bois et grandes baies vitrées."
+          />
+        </div>
+        <div className="mt-5">
           <MqFig
             src="/photos/maquette/schema-reprise-sous-oeuvre.jpg"
             alt="Schéma en coupe d'une reprise en sous-œuvre : plots bétonnés par passes alternées, bon sol porteur, sondage géotechnique et étaiement"
             caption="Reprise en sous-œuvre : excavation et bétonnage par passes alternées jusqu'au bon sol identifié par le sondage géotechnique."
           />
         </div>
-        <div className="mt-12">
-          <h3 className="display text-[1.3rem] text-ivoire">Extension : du jardin encombré au volume contemporain</h3>
-          <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
-            Étude de sol, déclaration préalable, fondations adaptées puis ossature bois et grandes baies : le
-            raccord à la meulière existante est traité au détail.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-            <MqFig
-              src="/photos/maquette/jardin-avant-extension.jpg"
-              alt="Jardin d'une maison de meulière francilienne avant extension, terrasse béton fissurée et abri de jardin"
-              caption="Avant : Avant extension : terrasse béton fissurée et abri vétuste. Le relevé, l'étude de sol Geo2Mo et la déclaration préalable précèdent tout terrassement."
-            />
-            <MqFig
-              src="/photos/maquette/extension-livree-apres.jpg"
-              alt="Extension contemporaine en bardage bois et grandes baies vitrées acier noir accolée à une maison de meulière"
-              caption="Après : Extension livrée : ossature bois, grandes baies à menuiseries acier, toiture zinc et raccord soigné à la meulière conservée."
-            />
-          </div>
-        </div>
+        {/*
+          À FOURNIR — la vraie séquence demandée par le client n'existe pas encore comme actif.
+          Sujet demandé : suite RÉELLE et cohérente d'UNE SEULE extension, du début à la fin —
+          terrassement, structure, hors d'eau, second œuvre, livraison. Alt prévu : "Étapes réelles
+          de construction d'une extension de maison."
+          Vérifié le 31/08/2026 : /public/photos/chantiers/ (~200 fichiers) contient de vraies photos
+          de chantier mais aucune suite documentée d'un seul et même projet d'extension du terrassement
+          à la livraison — ce sont des chantiers différents (cuisines, dressings, charpentes de
+          maisons distinctes, etc.). Fabriquer une continuité à partir de ces photos séparées
+          reproduirait le problème signalé par le client. Ce visuel a donc besoin d'un vrai reportage
+          photo (5 étapes) sur UN chantier ARCHI PILOTE réel et identifié, pas d'une génération IA
+          ni d'un montage de photos d'origines diverses.
+        */}
       </MqSection>
 
       <MqSection>

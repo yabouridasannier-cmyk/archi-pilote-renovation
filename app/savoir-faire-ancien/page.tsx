@@ -418,6 +418,12 @@ export default function SavoirFaireAncienPage() {
               caption="Répartition indicative des déperditions thermiques : la toiture et les murs concentrent l'essentiel des pertes d'un logement ancien."
             />
           </div>
+          <MqFig
+            src="/photos/pedagogie/05-menuiserie-moulures.jpeg"
+            alt="Détails d'une fenêtre en bois reproduite à l'identique : profil de corniche relevé, petits bois et crémone en laiton, chambranle en chêne profilé"
+            caption="Schéma pédagogique : profils relevés sur l'existant avant reproduction — corniche, fenêtre à petits bois et crémone en laiton, chambranle en chêne à profil identique."
+            ratio="aspect-[16/9]"
+          />
           <MqProse>
             <h3 className="display text-[1.3rem] text-ivoire">Le relevé précède toujours la dépose</h3>
             <p>Chaque châssis est mesuré et photographié avant démontage, quincaillerie comprise.</p>
@@ -463,6 +469,36 @@ export default function SavoirFaireAncienPage() {
               caption="Référence de style : séjour haussmannien rénové, moulures et corniches restituées, parquet point de Hongrie et cheminée conservée."
             />
           </div>
+          {/*
+            À GÉNÉRER — Visual 3 (brief original, jamais traité) : séquence RÉELLE du MÊME profil de
+            corniche/moulure/rosace — avant, prise d'empreinte ou relevé, reproduction, pose et finition.
+            Alt prévu : "Étapes de restitution d'une moulure ancienne."
+
+            Vérification faite dans /public/photos/chantiers/ (~200 fichiers) : aucune photo ne documente
+            cette continuité sur un seul profil. Les seuls fichiers contenant "Moulures" dans leur nom
+            (chDressingNoyerMoulures2.jpeg, chDressingNoyerMouluresAngle1.jpeg,
+            chDressingBufetNoyerMoulures1.jpeg, chDressingNoyerBufetMoulures4.jpeg,
+            chBibliothequePanneauxMoulures.jpeg) montrent des moulures de dressings/bibliothèques en
+            menuiserie (portes de placard) et non une restitution de corniche/rosace en plâtre relevée
+            puis moulée par la maison Guimier — sujet hors-propos, à ne pas réutiliser ici pour ne pas
+            présenter une fausse séquence. Par ailleurs chDressingBufetNoyerMoulures1.jpeg et
+            chDressingNoyerBufetMoulures4.jpeg sont la même photo dupliquée sous deux noms différents.
+
+            Réel à privilégier : demander aux équipes partenaires de photographier, sur un seul et même
+            chantier, le fragment avant dépose, la prise d'empreinte/le relevé du profil, le moule ou le
+            gabarit, la pose au plâtre et la finition peinte.
+
+            À défaut, prompt de génération (macro réaliste, PAS un rendu illustratif) :
+            "Photographie macro documentaire en 5 vignettes contiguës, format triptyque large, lumière
+            naturelle de chantier, grain photo réel (pas de style aquarelle ni schématique) : (1) fragment
+            de corniche en plâtre ancienne, encore en place au plafond d'un appartement haussmannien,
+            partiellement dégradé ; (2) prise d'empreinte au silicone ou relevé au calibre sur ce même
+            fragment ; (3) moule en plâtre du profil reproduit, posé sur un établi d'atelier ; (4) pose du
+            nouveau profil au plâtre traditionnel, calage au cordeau, angle de pièce ; (5) même corniche
+            finie et peinte en blanc mat, raccord invisible avec la partie ancienne conservée. Cohérence de
+            lumière, de teinte et de profil entre les 5 vignettes pour bien montrer qu'il s'agit du même
+            ouvrage du début à la fin."
+          */}
           <MqChecklist
             cols={1}
             items={[
@@ -521,6 +557,36 @@ export default function SavoirFaireAncienPage() {
         lead="Douze étapes documentées par photographies datées, transmises au client au fil du chantier."
         wide
       >
+        {/*
+          À GÉNÉRER — Visual 4 (brief original, jamais traité) : séquence RÉELLE du MÊME appartement ancien —
+          relevé, protection, travaux techniques, finition, livraison.
+          Alt prévu : "Rénovation d'un appartement ancien sans perdre son cachet."
+
+          Vérification faite dans /public/photos/chantiers/ : chDemolitionOuvertureCouloir.jpeg,
+          chDemolitionLattisPlatreChantier2.jpeg, chDemolitionGravatsChantier.jpeg et
+          chDemolitionCloisonBoisPlatre.jpeg montrent bien le même couloir d'un appartement haussmannien
+          (même papier peint ancien, même fenêtre à volets, même garde-corps) à des instants rapprochés
+          d'une seule phase de démolition — mais aucune photo de protection des sols/menuiseries, de
+          travaux techniques (électricité, plomberie, VMC) ni de finition/livraison de CE MÊME appartement
+          n'a été retrouvée dans le dossier. Impossible de compléter honnêtement les 5 étapes du brief sans
+          mélanger des chantiers différents (ce serait fabriquer une fausse continuité). La grille ci-dessous
+          reste donc composée de photos stock génériques de /public/photos/maquette/, jamais présentées
+          comme réelles (légendes sans la mention "Chantier réel des équipes partenaires").
+
+          Réel à privilégier : demander aux équipes de reprendre en photo, sur UN SEUL chantier d'appartement
+          ancien suivi du début à la fin, les 5 étapes ci-dessous.
+
+          À défaut, prompt de génération (macro réaliste, PAS un rendu illustratif) :
+          "Photographie macro documentaire en 5 vignettes contiguës, même appartement ancien haussmannien du
+          relevé à la livraison, grain photo réel (pas de style aquarelle ni schématique) : (1) relevé au
+          mètre et à l'appareil photo d'une pièce ancienne avant travaux, cheminée et moulures d'origine
+          visibles ; (2) protection intégrale du sol et des menuiseries conservées par bâches et cartons
+          avant démolition ; (3) réseaux techniques (électricité, plomberie ou VMC) posés et encore apparents
+          avant fermeture des doublages ; (4) finition en cours : enduit, ponçage, peinture autour des
+          moulures restituées ; (5) même pièce livrée, meublée sobrement, moulures et parquet ancien mis en
+          valeur. Cohérence de lumière, de couleur de mur et de profil de moulure entre les 5 vignettes pour
+          bien montrer qu'il s'agit du même chantier du début à la fin."
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {DEROULE.map((f) => (
             <MqFig key={f.caption} src={`/photos/maquette/${f.src}.jpg`} alt={f.alt} caption={f.caption} />
@@ -575,6 +641,35 @@ export default function SavoirFaireAncienPage() {
           />
         </div>
       </MqSection>
+
+      {/*
+        À GÉNÉRER — Visual 5 (brief original, jamais traité) : "Trois schémas" homogènes fenêtre / corniche /
+        intégration d'un réseau derrière doublage.
+        Alt prévu : "Arbitrages techniques pour préserver le charme d'un logement ancien."
+
+        À NE PAS CONFONDRE avec la section "Trois schémas pour comprendre les arbitrages techniques"
+        juste au-dessus (schema-vmc.jpg, schema-etancheite-salle-eau.jpg, schema-mur-porteur.jpg) : ces
+        3 schémas sont corrects pour LEUR propre sujet (ventilation, étanchéité, structure) mais ne
+        traitent pas fenêtre/corniche/réseau derrière doublage — ce triptyque manque encore.
+
+        Vérifié un par un dans /public/photos/pedagogie/ (7 schémas) : 01-beton-cire (béton ciré),
+        02-transformer-methode (méthode), 03-menuiserie-condensation (fuite d'air / condensation avant-après),
+        04-circuit-air (plan de circulation d'air VMC), 05-menuiserie-moulures (déjà réutilisé plus haut sur
+        cette page pour le Visual 2 — triptyque corniche/fenêtre-crémone/chambranle, format différent d'une
+        coupe technique), 06-huit-etapes, 07-modele-economique. Aucun ne correspond à ce sujet précis.
+
+        Prompt de génération (diagramme, même style que les schémas pédagogiques existants du site — fond
+        ivoire clair, traits noirs fins, aplats beige/orange discrets, légendes en français) :
+        "Trois schémas techniques en coupe, style pédagogique homogène, fond ivoire clair, traits noirs fins,
+        aplats de couleur beige et orange discrets, légendes en français sous chaque coupe, même style
+        graphique que les schémas pédagogiques existants du site : (1) coupe verticale d'une fenêtre
+        ancienne reproduite à l'identique — profil du dormant et de l'ouvrant en bois, double vitrage
+        feuilleté, joint d'étanchéité, proportions d'origine conservées ; (2) coupe d'une corniche en plâtre
+        restituée — profil mouluré, raccord au plafond et au mur, réservation pour éviter toute traversée
+        par un réseau ; (3) coupe d'un doublage intégrant un réseau (gaine électrique ou VMC) derrière une
+        ossature métallique et une plaque de plâtre, sans traversée du décor ancien conservé. Les trois
+        coupes à la même échelle graphique et dans le même style pour former un triptyque cohérent."
+      */}
 
       <MqSection kicker="Questions fréquentes" title="Rénover l'ancien sans le dénaturer">
         <MqFaq items={FAQ} />

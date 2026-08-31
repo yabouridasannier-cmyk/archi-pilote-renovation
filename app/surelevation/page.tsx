@@ -17,6 +17,32 @@ export default function Page() {
         lead="Une surélévation ajoute une charge nouvelle sur des fondations et des murs porteurs qui n'ont pas été conçus pour cela à l'origine. La question centrale n'est donc pas esthétique mais structurelle : la maison ou l'immeuble peut-il supporter ce poids supplémentaire ? ARCHI PILOTE RÉNOVATION cadre la faisabilité, mobilise les ingénieurs structure et architectes DPLG partenaires indépendants nécessaires, et pilote le projet de A à Z jusqu'à la livraison."
       />
 
+      {/*
+        À GÉNÉRER — visuel hero manquant.
+        Vérifié le 31/08/2026 : MqHero (app/components/mq.tsx) n'a pas de slot image et aucun MqFig
+        n'est présent sous le hero de cette page. Le hero est donc 100% texte à ce jour — l'affirmation
+        d'un rapport précédent ("le hero est déjà un schéma technique, accepté par le client") est fausse.
+        Aucun des 7 schémas de /public/photos/pedagogie/ ne couvre ce sujet (vérifié par ls).
+
+        Sujet requis : coupe d'une maison avec surélévation légère — charges, murs repris, trémie et
+        toiture. Alt prévu : "Principe structurel d'une surélévation de maison."
+
+        Prompt FR (à générer, style aligné sur schema-extension-surelevation.jpg déjà en place :
+        fond ivoire/crème uni, coupe technique en traits fins charbon, légende numérotée en cercles
+        ocre/doré, encadré légende en bas, échelle graphique) :
+        "Coupe technique 2D en ligne, style schéma d'architecte pédagogique, vue en coupe verticale d'une
+        maison existante recevant une surélévation légère en ossature bois. Montrer de bas en haut, avec
+        légende numérotée en cercles ocre : (1) fondations existantes et leur charge admissible, (2) murs
+        porteurs existants repris/renforcés pour recevoir la charge supplémentaire, (3) plancher haut
+        existant devenu plancher intermédiaire, avec trémie d'escalier menant au niveau surélevé (chevêtre
+        et solives de rive), (4) ossature bois légère du niveau créé, (5) toiture neuve à faible pente sur
+        la surélévation. Fond ivoire/crème uni (#F5F0E8 environ), traits fins charbon, accents ocre/doré,
+        encadré légende en bas à droite (Existant / Neuf / Structure porteuse / Charge reprise), flèches de
+        descente de charge, échelle graphique en bas, typographie sans-serif nette, aucune photo, aucun
+        rendu 3D réaliste — schéma pédagogique 2D uniquement, cohérent avec les schémas déjà produits du
+        site."
+      */}
+
       <MqSection
         title="La question structurelle avant toute question esthétique"
         lead="Avant d'imaginer la nouvelle pièce, il faut vérifier que les fondations, les murs porteurs et la charpente existante peuvent recevoir la charge supplémentaire."
@@ -127,6 +153,32 @@ export default function Page() {
           alt="Planning en lots d'un chantier de rénovation présenté sous forme de diagramme de phases hebdomadaires"
           caption="Enchaînement des lots d'un chantier de rénovation : chaque phase conditionne la suivante, d'où l'importance du séquencement."
         />
+        {/*
+          À GÉNÉRER — cette infographie générique (planning en lots toutes rénovations confondues) ne
+          couvre pas le sujet spécifique demandé ici. Elle est conservée en attendant, mais devrait être
+          remplacée par l'infographie ci-dessous.
+          Vérifié le 31/08/2026 : aucun des 7 schémas de /public/photos/pedagogie/ ne couvre le phasage
+          d'une surélévation.
+
+          Sujet requis : phasage d'une surélévation jusqu'à la mise hors d'eau — dépose de toiture,
+          protection provisoire, ossature, couverture, isolation, raccords, finitions.
+          Alt prévu : "Phasage d'une surélévation jusqu'à la mise hors d'eau."
+
+          Prompt FR (à générer, style aligné sur schema-planning-lots.jpg déjà en place : fond
+          ivoire/crème, bandeau de titre, diagramme de phases en lignes horizontales avec jalons,
+          légende, encadré infos) :
+          "Infographie 2D en ligne, style schéma d'architecte pédagogique, diagramme de phasage d'un
+          chantier de surélévation de maison présenté en 7 étapes horizontales successives avec jalons
+          entre chaque étape : (1) Dépose de la toiture existante, (2) Protection provisoire /
+          étanchéité provisoire de bâchage, (3) Montage de l'ossature du niveau surélevé, (4) Pose de la
+          couverture neuve, (5) Isolation du nouveau niveau, (6) Raccords de réseaux verticaux
+          (électricité, plomberie, chauffage), (7) Finitions intérieures et extérieures. Fond
+          ivoire/crème uni (#F5F0E8 environ), bandeau de titre en haut avec sous-titre "PHASAGE D'UNE
+          SURÉLÉVATION — MISE HORS D'EAU", icônes fines en ligne charbon pour chaque étape, jalons en
+          losange ocre/doré reliés par des flèches, légende en bas, encadré infos (durée indicative,
+          intervenants), typographie sans-serif nette, aucune photo, aucun rendu 3D réaliste — schéma
+          pédagogique 2D uniquement, cohérent avec les schémas déjà produits du site."
+        */}
         <div className="mt-10">
           <MqNumbered
             items={[
@@ -175,6 +227,19 @@ export default function Page() {
             être traitée avec soin, tant sur le plan thermique qu'acoustique.
           </p>
         </MqProse>
+        {/*
+          Déplacé ici le 31/08/2026 depuis la section "Gagner un étage" : ce schéma traite précisément
+          de la trémie d'escalier décrite dans le paragraphe ci-dessus (chevêtre, linçoirs, sabots), et
+          n'a pas de lien avec la maison spécifique montrée dans la section "avant/après" plus bas — il
+          y créait une fausse impression de continuité avec ce projet précis.
+        */}
+        <div className="mt-8">
+          <MqFig
+            src="/photos/maquette/schema-tremie-plancher.jpg"
+            alt="Schéma d'une trémie d'escalier dans un plancher bois : solives sectionnées, chevêtre, linçoirs, sabots métalliques et étaiement provisoire"
+            caption="Trémie dans un plancher bois : le chevêtre et les linçoirs reprennent les charges des solives coupées, sur sabots métalliques dimensionnés."
+          />
+        </div>
       </MqSection>
 
       <MqSection
@@ -202,50 +267,45 @@ export default function Page() {
       <MqSection
         kicker="PÉDAGOGIE VISUELLE"
         title="Gagner un étage sans démolir : la surélévation en images"
-        lead="La surélévation dépend de la portance des murs existants et du règlement d'urbanisme. Ce comparatif montre une maison francilienne avant et après création d'un étage à ossature bois."
+        lead="La surélévation dépend de la portance des murs existants et du règlement d'urbanisme. Ce comparatif montre une maison francilienne avant et après création d'un étage à ossature bois — même façade, même angle de prise de vue."
         wide
       >
+        {/*
+          Vérifié le 31/08/2026 (ouverture des fichiers sources) : maison-avant-surelevation.jpg et
+          maison-surelevee-apres.jpg montrent bien LA MÊME maison (même trame de façade, même
+          appareillage brique, mêmes volets, même bâtiment mitoyen à gauche avec sa lucarne) — ce
+          binôme avant/après est cohérent et conservé tel quel, avec une légende qui précise qu'il
+          s'agit d'une photo d'illustration (photos stock, pas un chantier ARCHI PILOTE identifié).
+
+          En revanche surelevation-ossature-bois.jpg, qui était présentée juste à côté comme la phase
+          "chantier" de CE MÊME projet, montre un bâtiment différent (immeuble à étages avec balcons,
+          gabarit et ferronnerie différents de la maison avant/après). Photo retirée de cette suite :
+          la garder aurait reproduit le problème signalé par le client (mélange de plusieurs projets
+          présentés comme un seul). Le schéma de trémie (schema-tremie-plancher.jpg), qui n'a pas de
+          lien avec ce projet précis, a été déplacé dans la section "Interfaces techniques" ci-dessus,
+          où il correspond réellement au texte.
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/maquette/maison-avant-surelevation.jpg"
             alt="Maison de ville francilienne de plain-pied en brique et enduit avant travaux de surélévation"
-            caption="Avant surélévation : combles bas inexploitables. La faisabilité dépend du PLU, de la portance des murs et du diagnostic de l'ingénieur structure."
+            caption="Photo d'illustration — avant surélévation : combles bas inexploitables. La faisabilité dépend du PLU, de la portance des murs et du diagnostic de l'ingénieur structure."
           />
           <MqFig
             src="/photos/maquette/maison-surelevee-apres.jpg"
             alt="Même maison après surélévation à ossature bois avec bardage clair, grandes fenêtres anthracite et toiture zinc"
-            caption="Surélévation livrée : étage à ossature bois, charges reprises sur les murs confortés, bardage clair et toiture zinc à faible pente."
-          />
-          <MqFig
-            src="/photos/maquette/surelevation-ossature-bois.jpg"
-            alt="Surélévation en ossature bois d'une maison de ville, charpente apparente, couverture zinc et échafaudage"
-            caption="Chantier de surélévation en ossature bois : étage créé après étude de structure et dépose de la couverture existante."
-          />
-          <MqFig
-            src="/photos/maquette/schema-tremie-plancher.jpg"
-            alt="Schéma d'une trémie d'escalier dans un plancher bois : solives sectionnées, chevêtre, linçoirs, sabots métalliques et étaiement provisoire"
-            caption="Trémie dans un plancher bois : le chevêtre et les linçoirs reprennent les charges des solives coupées, sur sabots métalliques dimensionnés."
+            caption="Photo d'illustration — même maison, après : étage à ossature bois, charges reprises sur les murs confortés, bardage clair et toiture zinc à faible pente."
           />
         </div>
-        <div className="mt-12">
-          <h3 className="display text-[1.3rem] text-ivoire">Surélévation : un étage gagné sans démolir</h3>
-          <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
-            Diagnostic de portance par l'ingénieur structure, dépose de la toiture, ossature bois préfabriquée et
-            mise hors d'eau rapide pour limiter l'exposition du bâti.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-            <MqFig
-              src="/photos/maquette/maison-avant-surelevation.jpg"
-              alt="Maison de ville francilienne de plain-pied en brique et enduit avant travaux de surélévation"
-              caption="Avant : Avant surélévation : combles bas inexploitables. La faisabilité dépend du PLU, de la portance des murs et du diagnostic de l'ingénieur structure."
-            />
-            <MqFig
-              src="/photos/maquette/maison-surelevee-apres.jpg"
-              alt="Même maison après surélévation à ossature bois avec bardage clair, grandes fenêtres anthracite et toiture zinc"
-              caption="Après : Surélévation livrée : étage à ossature bois, charges reprises sur les murs confortés, bardage clair et toiture zinc à faible pente."
-            />
-          </div>
-        </div>
+        {/*
+          À FOURNIR — photo RÉELLE manquante pour compléter la suite avant/chantier/après.
+          Sujet demandé : chantier en cours de la MÊME maison que ci-dessus (structure bois), même
+          façade et même angle. Vérifié le 31/08/2026 : /public/photos/chantiers/ ne contient aucune
+          photo de chantier de surélévation correspondant à ce bâtiment précis (chSurelevationBrique.jpeg
+          et surelevation-ossature-bois.jpg montrent chacun un bâtiment différent). Ce visuel a besoin
+          d'une vraie photo de chantier prise sur CE bien pendant les travaux — pas d'une photo stock
+          d'un autre bâtiment présentée comme la suite de celui-ci.
+        */}
       </MqSection>
 
       <MqSection>
