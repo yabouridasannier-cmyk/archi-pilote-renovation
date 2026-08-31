@@ -26,7 +26,8 @@ export default function Page() {
             trop tard pour les corriger simplement.
           </p>
         </MqProse>
-        <div className="mt-6"><MqFig src={`${M}/hero-renovation.jpg`} alt="Contrôle de réception d'un chantier de rénovation avec liste de réserves et attestations d'assurance des entreprises" caption="Chaque point de réception s'appuie sur un document écrit, jamais sur une simple parole donnée." /></div>
+        {/* Visuel 1 (hero) — remplace hero-renovation.jpg : ce fichier est un salon haussmannien meublé (photo de déco générique réutilisée sur plusieurs pages du site), sans aucun rapport avec un contrôle de réception. Aucune vraie photo de "fiche de réserves + niveau + documents d'assurance anonymisés" n'existe dans /photos/chantiers/ ni /photos/maquette/ (ce fonds ne contient que des photos de chantier technique — menuiserie, gros œuvre, réseaux — jamais de scène de bureau/paperasse). En attendant une vraie photo de réception avec documents, on utilise la photo réelle la plus honnête disponible : un contrôle technique avant fermeture, cohérent avec le propos de la page ("photos datées", "document écrit"). LIMITATION : commander une vraie photo de réception (fiche de réserves en main, niveau, attestations anonymisées) pour remplacer ce visuel de transition. */}
+        <div className="mt-6"><MqFig src="/photos/chantiers/chPortiqueAcierAngleGaine.jpeg" alt="Angle de structure métallique et gaine électrique contrôlés avant la pose des plaques de plâtre" caption="Un contrôle avant fermeture s'appuie sur une photo datée, jamais sur une simple parole donnée. Chantier réel des équipes partenaires." /></div>
       </MqSection>
 
       <MqSection kicker="Nos huit engagements" title="Ce que nous appliquons sur chaque projet piloté" wide>
@@ -54,7 +55,24 @@ export default function Page() {
       </MqSection>
 
       <MqSection kicker="Points de réception" title="Les contrôles réalisés à chaque étape sensible" wide>
-        <MqFig src={`${M}/schema-etancheite-salle-eau.jpg`} alt="Coupe d'une salle d'eau montrant la natte d'étanchéité sous carrelage, la bande d'angle, la pente et le siphon" caption="Étanchéité sous carrelage : continuité de la natte entre murs et sol, bandes de renfort en angle et pente d'évacuation de 1 à 2 %." />
+        {/*
+          À GÉNÉRER — Visuel 2 : infographie "Cinq jalons de contrôle qualité pendant une rénovation".
+          Aucun schéma existant dans /photos/pedagogie/ ne correspond (01-beton-cire, 02-transformer-methode,
+          03-menuiserie-condensation, 04-circuit-air, 05-menuiserie-moulures, 06-huit-etapes, 07-modele-economique) —
+          le schema-etancheite-salle-eau.jpg précédemment placé ici était une coupe technique d'étanchéité sous carrelage,
+          hors-sujet par rapport à la matrice de contrôle attendue : retiré de cet emplacement.
+          Alt prévu une fois l'image générée : "Cinq jalons de contrôle qualité pendant une rénovation."
+          Prompt FR exact à utiliser pour la génération :
+          "Infographie pédagogique au format paysage, fond ivoire chaud uni (#F5EDDD), style trait fin cohérent avec
+          les schémas pédagogiques existants du site (contours bruns/ocre, icônes en lignes simples, badges ronds
+          numérotés à fond ocre clair, aucun dégradé ni ombre portée, typographie sans-serif épaisse et lisible).
+          Titre en haut : « Cinq jalons de contrôle qualité pendant une rénovation ». Cinq blocs numérotés de 1 à 5
+          alignés en frise horizontale, chacun avec un badge rond numéroté, une icône ligne et un intitulé court :
+          1. Avant travaux (icône maison avec loupe ou plan déplié) — 2. Avant fermeture (icône cloison ouverte avec
+          câbles et gaines apparents) — 3. Avant revêtement (icône sol nu avec règle ou niveau) — 4. Essais (icône
+          robinet qui coule et ampoule allumée) — 5. Réception (icône feuille avec coche et trousseau de clés).
+          Aucune photo réaliste mélangée aux pictogrammes, texte net et lisible, livrable en 4:3 ou 16:9."
+        */}
         <div className="mt-8"><MqNumbered cols={2} items={[
           { title: "Réception des lots de structure et de gros œuvre", text: "Contrôle de la conformité aux plans, des appuis, des niveaux et de l'absence de désordre visible avant fermeture des ouvrages." },
           { title: "Réception des réseaux avant fermeture", text: "Vérification électrique, plomberie et ventilation avant la pose des cloisons ou des revêtements qui les recouvriraient." },
@@ -69,6 +87,18 @@ export default function Page() {
           <div><h3 className="display text-[1.05rem] text-ivoire">Ce qu&apos;elle ne garantit pas</h3><p className="text-muted text-[0.92rem] mt-2 leading-relaxed">L&apos;absence totale d&apos;aléa technique, toujours possible sur un bâtiment existant.</p></div>
           <div><h3 className="display text-[1.05rem] text-ivoire">Ce que le client y gagne</h3><p className="text-muted text-[0.92rem] mt-2 leading-relaxed">Une traçabilité complète, du choix de l&apos;entreprise partenaire à la levée de la dernière réserve.</p></div>
         </div>
+      </MqSection>
+
+      <MqSection kicker="Avant livraison" title="Quatre points de détail vérifiés avant réception" wide>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MqFig src={`${M}/chantier-nappe-etancheite-douche.jpg`} alt="Salle d'eau avant carrelage : natte d'étanchéité appliquée au sol et sur les murs, bandes de renfort en angle et siphon de sol" caption="Étanchéité contrôlée avant carrelage : continuité de la natte entre murs et sol, bandes d'angle et pente vers le siphon." />
+          <MqFig src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg" alt="Tableau électrique et compteur intégrés dans un placard sur mesure, disjoncteurs visibles avant pose des finitions" caption="Tableau électrique contrôlé et accessible avant fermeture du placard technique. Chantier réel des équipes partenaires." />
+          <MqFig src="/photos/chantiers/chCouloirPortesBoisJumelles.jpeg" alt="Deux portes intérieures en bois posées dans un couloir en chantier, sol encore protégé par un film avant finitions" caption="Alignement et aplomb des menuiseries vérifiés avant retrait des protections de chantier. Chantier réel des équipes partenaires." />
+          <MqFig src="/photos/chantiers/chSdbCarreauxCiment.jpeg" alt="Douche à carreaux de ciment avec vasque en pierre, tube de mastic silicone posé sur le plan avant retrait des films de protection" caption="Joints silicone et étanchéité de la vasque contrôlés avant dépose des films de protection. Chantier réel des équipes partenaires." />
+        </div>
+        <p className="text-[0.82rem] text-muted mt-4 max-w-3xl">
+          Quatre chantiers différents illustrent ici chacun leur propre point de contrôle — étanchéité, tableau électrique, menuiserie, joints — sans prétendre provenir d&apos;un même chantier.
+        </p>
       </MqSection>
 
       <MqSection kicker="Questions fréquentes" title="Réponses directes sur nos engagements qualité">

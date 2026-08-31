@@ -8,6 +8,33 @@ export const metadata: Metadata = {
     "Déclaration préalable, permis de construire, copropriété, assemblée générale, dossier syndic pour la ventilation : repères génériques pour orienter votre projet.",
 };
 
+const ARBRE_AUTORISATIONS = [
+  {
+    title: "Intérieur privatif",
+    body: "Généralement aucune autorisation d'urbanisme n'est nécessaire, sauf en secteur protégé.",
+  },
+  {
+    title: "Partie commune",
+    body: "Accord du syndic, avec vote en assemblée générale si le sujet le nécessite.",
+  },
+  {
+    title: "Façade",
+    body: "Déclaration préalable de travaux, et accord de la copropriété si la façade est une partie commune.",
+  },
+  {
+    title: "Structure",
+    body: "Avis technique et accord du syndic dès qu'une partie commune ou une dalle est concernée.",
+  },
+  {
+    title: "Extension",
+    body: "Permis de construire au-delà de certains seuils de surface, selon le plan local d'urbanisme.",
+  },
+  {
+    title: "Surélévation",
+    body: "Permis de construire, avec reprise des charges jusqu'aux fondations et accord de la copropriété si la structure de l'immeuble est concernée.",
+  },
+];
+
 const AUTORISATIONS = [
   {
     title: "Déclaration préalable de travaux",
@@ -89,6 +116,42 @@ export default function DemarchesAdministrativesPage() {
         lead="Selon la nature du projet, une déclaration préalable, un permis de construire ou une autorisation de la copropriété peuvent être nécessaires. Cette page présente des repères génériques et prudents pour orienter la réflexion : ils ne remplacent jamais l'avis d'un professionnel compétent sur un dossier précis."
       />
 
+      {/*
+        Visuel 1 (hero) — infographie déterministe, pas une image générée.
+        Arbre simple : la nature des travaux détermine le niveau d'autorisation.
+      */}
+      <section className="pb-8 md:pb-12">
+        <div className="container-site max-w-4xl">
+          <div className="flex flex-col gap-3">
+            <div
+              role="img"
+              aria-label="Autorisations possibles selon la nature des travaux de rénovation."
+              className="flex flex-col items-center"
+            >
+              <div className="border border-line rounded-[2px] bg-surface px-5 py-3 text-center">
+                <span className="text-ivoire font-semibold text-[0.95rem]">Nature des travaux envisagés</span>
+              </div>
+              <div className="w-px h-6 bg-line" aria-hidden />
+              <div className="w-full h-px bg-line" aria-hidden />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-6 w-full pt-6">
+                {ARBRE_AUTORISATIONS.map((a) => (
+                  <div key={a.title} className="flex flex-col items-center gap-2 text-center">
+                    <div className="w-px h-4 bg-line" aria-hidden />
+                    <div className="flex flex-col gap-1.5 border border-line rounded-[2px] bg-surface p-4 w-full">
+                      <span className="text-orange-deep font-semibold text-[0.78rem] tracking-wide uppercase">{a.title}</span>
+                      <p className="text-[0.88rem] text-ivoire/85 leading-relaxed">{a.body}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl">
+              {"Six familles de travaux, du strictement privatif à la surélévation, chacune avec le niveau d'autorisation qui lui est généralement associé."}
+            </p>
+          </div>
+        </div>
+      </section>
+
       <MqSection
         title="Autorisations d'urbanisme"
         lead="Le seuil d'autorisation dépend de la surface créée et de la zone d'urbanisme."
@@ -121,6 +184,24 @@ export default function DemarchesAdministrativesPage() {
             alt="Parcours administratif d'un chantier en copropriété : syndic, assemblée générale, autorisation, déclaration en mairie"
             caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire."
           />
+
+          {/*
+            À GÉNÉRER — Visuel 2 (diagramme généré, distinct du schéma ci-dessus).
+            Aucun des 7 schémas de /public/photos/pedagogie/ ne correspond à ce sujet
+            (vérifié : 01-beton-cire, 02-transformer-methode, 03-menuiserie-condensation,
+            04-circuit-air, 05-menuiserie-moulures, 06-huit-etapes, 07-modele-economique).
+            Une fois généré, l'ajouter en <MqFig> juste ici, ratio="aspect-[16/9]",
+            alt="Étapes d'une demande d'autorisation en copropriété."
+            Prompt FR proposé : « Schéma pédagogique horizontal en 6 étapes numérotées,
+            style éditorial minimaliste sur fond ivoire, illustrant la chronologie d'une
+            demande d'autorisation en copropriété : 1. Préparation du dossier technique,
+            2. Inscription à l'ordre du jour de l'assemblée générale, 3. Présentation en
+            assemblée générale, 4. Accord des copropriétaires, 5. Affichage de la décision,
+            6. Démarrage des travaux. Icônes simples et sobres, une flèche continue reliant
+            les étapes de gauche à droite, typographie nette, palette ivoire et rouille
+            (terracotta), aucun texte parasite, aucun logo, format 16:9. »
+          */}
+
           <MqChecklist
             cols={1}
             items={[
@@ -137,6 +218,19 @@ export default function DemarchesAdministrativesPage() {
         title="Dossier au syndic pour une ventilation absente ou défaillante"
         lead="Procédure détaillée, étape par étape."
       >
+        {/*
+          Visuel 3 — limitation honnête. Le cahier des charges demande ici une photo
+          RÉELLE anonymisée montrant la composition d'un dossier technique transmis au
+          syndic (sommaire, plan, notice, assurance, devis), alt prévu :
+          "Composition d'un dossier technique transmis au syndic."
+          Aucun candidat honnête dans /public/photos/chantiers/ : ce dossier ne contient
+          que des photos de chantier (cuisines, dressings, démolition, façades, escaliers,
+          plomberie, charpente...), aucune ne montre un document, un plan papier, une
+          notice ou un devis. Faute d'une vraie photo disponible, aucune image n'est
+          insérée ici plutôt que d'en fabriquer une fausse. Il faudra qu'une vraie photo
+          anonymisée d'un dossier technique (chantier réel) soit fournie avant de compléter
+          cette section, suivie du pattern <MqFig> déjà en place ailleurs sur cette page.
+        */}
         <MqNumbered items={ETAPES_SYNDIC} />
       </MqSection>
 

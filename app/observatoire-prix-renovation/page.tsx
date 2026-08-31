@@ -9,17 +9,37 @@ export const metadata: Metadata = {
 };
 
 const FOURCHETTES = [
-  { poste: "Démolition / dépose", unite: "m² ou forfait pièce", prix: "20 – 60 € / m²" },
-  { poste: "Plomberie (rénovation complète)", unite: "point d'eau", prix: "400 – 900 € / point" },
-  { poste: "Électricité (mise aux normes)", unite: "m² habitable", prix: "70 – 130 € / m²" },
-  { poste: "Cloisons (placo sur ossature)", unite: "m²", prix: "45 – 90 € / m²" },
-  { poste: "Peinture (préparation incluse)", unite: "m² au sol", prix: "25 – 55 € / m²" },
-  { poste: "Carrelage (pose incluse)", unite: "m²", prix: "50 – 110 € / m²" },
-  { poste: "Menuiseries extérieures", unite: "unité posée", prix: "500 – 1 400 € / fenêtre" },
-  { poste: "Isolation thermique (intérieure)", unite: "m² de paroi", prix: "40 – 90 € / m²" },
-  { poste: "Ventilation (VMC simple à double flux)", unite: "logement", prix: "1 500 – 6 000 € / logement" },
-  { poste: "Ouverture de mur porteur", unite: "ouverture", prix: "3 000 – 9 000 € / ouverture" },
-  { poste: "Carottage (diagnostic ou passage réseau)", unite: "forage", prix: "150 – 450 € / forage" },
+  { poste: "Démolition / dépose", unite: "m² ou forfait pièce", prix: "20 – 60 € / m²", min: 20, max: 60 },
+  { poste: "Plomberie (rénovation complète)", unite: "point d'eau", prix: "400 – 900 € / point", min: 400, max: 900 },
+  { poste: "Électricité (mise aux normes)", unite: "m² habitable", prix: "70 – 130 € / m²", min: 70, max: 130 },
+  { poste: "Cloisons (placo sur ossature)", unite: "m²", prix: "45 – 90 € / m²", min: 45, max: 90 },
+  { poste: "Peinture (préparation incluse)", unite: "m² au sol", prix: "25 – 55 € / m²", min: 25, max: 55 },
+  { poste: "Carrelage (pose incluse)", unite: "m²", prix: "50 – 110 € / m²", min: 50, max: 110 },
+  { poste: "Menuiseries extérieures", unite: "unité posée", prix: "500 – 1 400 € / fenêtre", min: 500, max: 1400 },
+  { poste: "Isolation thermique (intérieure)", unite: "m² de paroi", prix: "40 – 90 € / m²", min: 40, max: 90 },
+  { poste: "Ventilation (VMC simple à double flux)", unite: "logement", prix: "1 500 – 6 000 € / logement", min: 1500, max: 6000 },
+  { poste: "Ouverture de mur porteur", unite: "ouverture", prix: "3 000 – 9 000 € / ouverture", min: 3000, max: 9000 },
+  { poste: "Carottage (diagnostic ou passage réseau)", unite: "forage", prix: "150 – 450 € / forage", min: 150, max: 450 },
+];
+
+// Échelle logarithmique commune au graphique (les postes ci-dessus vont de 20 € à 9 000 €).
+const PRIX_SCALE_MIN = 20;
+const PRIX_SCALE_MAX = 9000;
+function prixToPercent(valeur: number) {
+  const a = Math.log10(PRIX_SCALE_MIN);
+  const b = Math.log10(PRIX_SCALE_MAX);
+  return ((Math.log10(valeur) - a) / (b - a)) * 100;
+}
+
+// Six curseurs déjà décrits en toutes lettres dans la section « Ce qui déplace le prix »
+// ci-dessous : mêmes intitulés, reformulés en paire de pôles bas/haut pour l'infographie.
+const FACTEURS_PRIX = [
+  { label: "Surface concernée", bas: "Chantier réduit", haut: "Grande surface" },
+  { label: "État initial du bâti", bas: "Support sain", haut: "Support dégradé" },
+  { label: "Structure du bâtiment", bas: "Structure simple", haut: "Porteurs, planchers complexes" },
+  { label: "Accès au chantier", bas: "Accès facile", haut: "Accès contraint" },
+  { label: "Gamme de matériaux", bas: "Entrée de gamme", haut: "Haut de gamme" },
+  { label: "Délai souhaité", bas: "Délai standard", haut: "Délai accéléré" },
 ];
 
 export default function Page() {
@@ -52,11 +72,49 @@ export default function Page() {
         title="Fourchettes de prix indicatives par poste de travaux"
         lead="Fourniture et pose, hors remise liée à l'achat direct de matériaux par le client, sur la base des projets accompagnés en Île-de-France."
       >
-        <MqFig
-          src="/photos/maquette/schema-repartition-budget.jpg"
-          alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage"
-          caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé."
-        />
+        <div
+          role="img"
+          aria-label="Fourchettes de prix de rénovation observées en Île-de-France, par poste de travaux, premier semestre 2024."
+          className="border border-line bg-surface rounded-[2px] overflow-hidden"
+        >
+          <div className="px-5 pt-5 pb-1 flex items-baseline justify-between gap-4 flex-wrap">
+            <h3 className="display text-[1.05rem] text-ivoire">Fourchettes de prix par poste (échelle logarithmique)</h3>
+            <span className="text-muted text-[0.78rem] whitespace-nowrap">Île-de-France · 1er semestre 2024</span>
+          </div>
+          <div className="px-5 pt-4 pb-2 flex flex-col gap-3">
+            {FOURCHETTES.map((r) => {
+              const left = prixToPercent(r.min);
+              const right = prixToPercent(r.max);
+              return (
+                <div key={r.poste} className="grid grid-cols-[8rem_1fr_6.5rem] sm:grid-cols-[13rem_1fr_7rem] items-center gap-3">
+                  <span className="text-[0.78rem] text-ivoire/85 leading-snug">{r.poste}</span>
+                  <div className="relative h-2 bg-line/50 rounded-full overflow-hidden">
+                    <div
+                      className="absolute inset-y-0 bg-orange-deep/75 rounded-full"
+                      style={{ left: `${left}%`, width: `${Math.max(right - left, 1.2)}%` }}
+                    />
+                  </div>
+                  <span className="text-[0.76rem] text-muted text-right whitespace-nowrap">{r.prix}</span>
+                </div>
+              );
+            })}
+            <div className="grid grid-cols-[8rem_1fr_6.5rem] sm:grid-cols-[13rem_1fr_7rem] gap-3 mt-1">
+              <span aria-hidden />
+              <div className="relative h-4 text-[0.68rem] text-muted">
+                <span className="absolute" style={{ left: `${prixToPercent(100)}%` }}>100 €</span>
+                <span className="absolute" style={{ left: `${prixToPercent(1000)}%` }}>1 000 €</span>
+                <span className="absolute" style={{ left: `${prixToPercent(9000)}%`, transform: "translateX(-100%)" }}>9 000 €</span>
+              </div>
+              <span aria-hidden />
+            </div>
+          </div>
+          <p className="px-5 pb-5 pt-2 text-[0.78rem] text-muted leading-snug border-t border-line mt-2">
+            Fourchettes de prix de rénovation observées en Île-de-France, par poste de travaux — premier semestre 2024,
+            à partir d&apos;exemples représentatifs de projets accompagnés. Échelle logarithmique commune : l&apos;unité de
+            référence diffère selon le poste (m², point, unité posée, logement, ouverture, forage — voir le tableau
+            ci-dessous).
+          </p>
+        </div>
         <div className="overflow-x-auto border border-line rounded-[2px] mt-8">
           <table className="w-full min-w-[40rem] text-left text-[0.92rem]">
             <thead>
@@ -88,11 +146,36 @@ export default function Page() {
         title="Ce qui déplace le prix d'un même poste"
         lead="Six variables expliquent l'essentiel de l'écart entre le bas et le haut de chaque fourchette."
       >
-        <MqFig
-          src="/photos/maquette/schema-carottage-ventilation.jpg"
-          alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
-          caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
-        />
+        <div
+          role="img"
+          aria-label="Facteurs qui font varier le prix d'un même poste de rénovation."
+          className="border border-line bg-surface rounded-[2px] overflow-hidden"
+        >
+          <div className="px-5 pt-5 pb-1">
+            <h3 className="display text-[1.05rem] text-ivoire">Six curseurs qui font bouger le prix d&apos;un même poste</h3>
+          </div>
+          <div className="px-5 pt-3 pb-2 flex flex-col gap-5">
+            {FACTEURS_PRIX.map((f) => (
+              <div key={f.label} className="flex flex-col gap-1.5">
+                <span className="text-[0.85rem] font-medium text-ivoire">{f.label}</span>
+                <div className="relative h-1.5 bg-line rounded-full">
+                  <div
+                    aria-hidden
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 size-3 rounded-full bg-orange-deep border-2 border-surface"
+                  />
+                </div>
+                <div className="flex justify-between text-[0.72rem] text-muted">
+                  <span>{f.bas}</span>
+                  <span>{f.haut}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="px-5 pb-5 pt-2 text-[0.78rem] text-muted leading-snug border-t border-line mt-2">
+            Position illustrative : chaque projet se situe différemment sur ces six curseurs, dans un sens ou dans
+            l&apos;autre selon la configuration réelle du logement — voir le détail de chaque facteur ci-dessous.
+          </p>
+        </div>
         <div className="mt-8">
           <MqChecklist
             cols={1}
@@ -163,9 +246,10 @@ export default function Page() {
         </div>
         <div className="mt-8">
           <MqFig
-            src="/photos/maquette/schema-mur-porteur.jpg"
-            alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge"
-            caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis."
+            src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
+            alt="Contexte réel d'un prix de rénovation observé."
+            caption="Poutre IPN posée en sous-face d'un mur porteur ouvert, mur dégarni jusqu'au support d'origine : la reprise de charge se vérifie sur chantier, avant reprise des finitions. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
       </MqSection>

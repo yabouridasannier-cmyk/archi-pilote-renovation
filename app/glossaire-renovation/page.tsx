@@ -95,6 +95,36 @@ export default function Page() {
         lead="Ce glossaire réunit plus de quarante termes techniques utilisés en rénovation, classés par famille : structure, second œuvre, énergie et ventilation, administratif et chiffrage. Chaque définition tient en une à trois phrases et vise à faciliter la lecture des devis, des diagnostics et des échanges avec les entreprises partenaires."
       />
 
+      {/*
+        À GÉNÉRER — Visuel 1, seul visuel de cette page. Le client est explicite :
+        "la page doit rester rapide et scannable ; une image par définition serait une
+        erreur" — donc UN SEUL visuel compact ici, jamais un par terme du glossaire.
+        Vérifié le 31/08 dans /public/photos/pedagogie/ (7 schémas déjà produits :
+        01-beton-cire, 02-transformer-methode, 03-menuiserie-condensation,
+        04-circuit-air, 05-menuiserie-moulures, 06-huit-etapes, 07-modele-economique) —
+        aucun ne correspond au sujet demandé.
+        Sujet : planche technique sobre regroupant poutre, pare-vapeur, nourrice, VMC,
+        chape et joint époxy.
+        Alt à utiliser : "Principaux éléments techniques expliqués dans le glossaire de
+        la rénovation."
+        Une fois produite, l'ajouter ici (hero compact, format large) via
+        <div className="container-site max-w-4xl pb-12 md:pb-16">
+          <MqFig src="..." alt="..." ratio="aspect-[21/9]" caption="..." />
+        </div>
+        avant la première <MqSection> des familles de termes — compact, PAS une image
+        par définition.
+        Prompt FR exact pour la génération :
+        "Planche technique éditoriale et sobre présentant six pictogrammes techniques
+        alignés sur une seule ligne horizontale, fond ivoire uni, traits fins noir mat,
+        courte légende en français sous chaque élément : une poutre de reprise en coupe,
+        un pare-vapeur en coupe de paroi, une nourrice de plomberie avec ses départs,
+        une bouche de VMC avec son conduit, une chape en coupe sur dalle, un joint en
+        époxy entre deux carreaux. Style schéma pédagogique cohérent avec les
+        illustrations techniques déjà produites pour ce site (mêmes gris/noir sur ivoire,
+        aucune touche de couleur vive), aucune photographie, aucun personnage, format
+        large 21:9, compact et lisible en petite taille."
+      */}
+
       {FAMILLES.map((f) => (
         <MqSection key={f.titre} kicker={f.titre} wide>
           <dl className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">

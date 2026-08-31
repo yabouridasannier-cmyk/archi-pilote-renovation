@@ -74,6 +74,42 @@ const THEMES = [
   },
 ];
 
+/* Visuel 1 — icônes SVG inline, PAS IA, traits fins cohérents (même stroke que le
+   reste du site : currentColor, strokeWidth 1.6, viewBox 24x24, cf. app/components/
+   services-list.tsx). Une icône par catégorie de la FAQ : structure, budget, énergie,
+   matériaux, copropriété, rôles, et une 7e pour le déroulement du chantier (thème
+   supplémentaire présent sur cette page, non listé dans le brief mais traité à
+   l'identique pour rester cohérent). Avant cette passe, la page n'avait ni photo ni
+   icône : juste un libellé texte (eyebrow) par catégorie — donc pas de correction d'un
+   mauvais existant, plutôt un ajout du visuel demandé. */
+function CategoryIcon({ id }: { id: string }) {
+  const common = { width: 20, height: 20, viewBox: "0 0 24 24", fill: "none", stroke: "currentColor", strokeWidth: 1.6, strokeLinecap: "round" as const, strokeLinejoin: "round" as const };
+  const icons: Record<string, React.ReactNode> = {
+    "Rôle et responsabilités": (
+      <svg {...common}><circle cx="12" cy="6.2" r="2.4" /><circle cx="5.8" cy="17.4" r="2.1" /><circle cx="18.2" cy="17.4" r="2.1" /><path d="M12 8.6v3M12 11.6 6.6 15.4M12 11.6l5.4 3.8" /></svg>
+    ),
+    "Prix et économies": (
+      <svg {...common}><path d="M3 11.5 11.5 3H19a2 2 0 0 1 2 2v7.5L12.5 21 3 11.5Z" /><circle cx="15.4" cy="8.6" r="1.15" /></svg>
+    ),
+    "Gros œuvre": (
+      <svg {...common}><path d="M5 4.5h14M5 19.5h14M9 4.5v15M15 4.5v15" /></svg>
+    ),
+    "Second œuvre": (
+      <svg {...common}><path d="m12 4 8 4.2-8 4.2-8-4.2L12 4Z" /><path d="m4 12.3 8 4.2 8-4.2" /><path d="m4 16.3 8 4.2 8-4.2" /></svg>
+    ),
+    "Rénovation énergétique et ventilation": (
+      <svg {...common}><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" /></svg>
+    ),
+    "Copropriété et syndic": (
+      <svg {...common}><path d="M5 21V6.5L12 3l7 3.5V21" /><path d="M9 21v-5h6v5" /><path d="M9 9h1.2M13.8 9H15M9 13h1.2M13.8 13H15" /></svg>
+    ),
+    "Déroulement du chantier": (
+      <svg {...common}><rect x="5" y="4" width="14" height="17" rx="1.5" /><path d="M9 4V3h6v1" /><path d="m8.5 10.7 2 2 4-4M8.5 16.5h7" /></svg>
+    ),
+  };
+  return icons[id] ?? null;
+}
+
 export default function Page() {
   return (
     <main>
@@ -84,7 +120,13 @@ export default function Page() {
       />
 
       {THEMES.map((t) => (
-        <MqSection key={t.kicker} kicker={t.kicker}>
+        <MqSection key={t.kicker}>
+          <div className="flex items-center gap-2.5 mb-5">
+            <span aria-hidden className="inline-flex items-center justify-center size-8 shrink-0 border border-line rounded-[2px] text-orange-deep">
+              <CategoryIcon id={t.kicker} />
+            </span>
+            <p className="eyebrow">{t.kicker}</p>
+          </div>
           <MqFaq items={t.faqs} />
         </MqSection>
       ))}

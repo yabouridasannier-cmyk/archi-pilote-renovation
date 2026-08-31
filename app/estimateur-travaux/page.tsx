@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MqHero, MqSection, MqChecklist, MqFig, MqFaq, MqCta, MqReadNext } from "../components/mq";
+import { MqHero, MqSection, MqFaq, MqCta, MqReadNext } from "../components/mq";
 import { Estimateur } from "./estimateur";
 
 export const metadata: Metadata = {
@@ -8,6 +8,19 @@ export const metadata: Metadata = {
     "Fourchette de budget travaux à partir de la surface, du niveau de rénovation, du type de bien et des postes techniques structurants — valeurs constatées en Île-de-France.",
   alternates: { canonical: "/estimateur-travaux" },
 };
+
+/* Diagramme déterministe "inclus / non inclus" — deux colonnes fixes, aucune donnée
+   utilisateur, donc pas de raison de passer par le composant client Estimateur. */
+const INCLUS = [
+  "Travaux et main-d'œuvre des entreprises partenaires.",
+  "Dépose et évacuation des gravats.",
+];
+
+const NON_INCLUS = [
+  "Mobilier, électroménager et décoration.",
+  "Honoraires d'un architecte DPLG ou d'un ingénieur structure partenaire.",
+  "Aléas structurels découverts après dépose (peuvent déplacer le budget vers le haut de la fourchette).",
+];
 
 export default function EstimateurPage() {
   return (
@@ -23,20 +36,67 @@ export default function EstimateurPage() {
       </MqSection>
 
       <MqSection kicker="Lecture des résultats" title="Ce que cette fourchette contient et ce qu'elle ne contient pas" wide>
-        <div className="grid grid-cols-1 lg:grid-cols-[7fr_5fr] gap-8 items-start">
-          <MqChecklist cols={1} items={[
-            "Travaux, main-d'œuvre, dépose et évacuation des gravats sont inclus dans les fourchettes de base.",
-            "Le mobilier, l'électroménager et la décoration ne sont pas comptés.",
-            "Les honoraires d'un architecte DPLG ou d'un ingénieur structure partenaire sont hors périmètre.",
-            "Les aléas structurels découverts après dépose peuvent déplacer le budget vers le haut de la fourchette.",
-            "L'achat direct des matériaux par le client s'applique ensuite, avec un objectif pouvant atteindre 20 % d'économies.",
-          ]} />
-          <MqFig
-            src="/photos/maquette/schema-repartition-budget.jpg"
-            alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage"
-            caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé."
-          />
+        {/*
+          Diagramme déterministe (JSX/CSS pur, aucune image générée) — remplace l'ancien
+          MqChecklist à liste unique + le schéma IA schema-repartition-budget.jpg, qui
+          faisait doublon avec la "Répartition indicative par lot" déjà calculée en
+          direct dans l'outil ci-dessus (voir estimateur.tsx, bloc LOTS). Deux colonnes
+          fixes inclus/non inclus, conforme au brief : jamais d'image IA pour un contenu
+          qui relève de faits, pas d'esthétique dispensable ici — l'outil reste la
+          priorité.
+        */}
+        <div
+          role="img"
+          aria-label="Ce que la fourchette de budget inclut et n'inclut pas. Inclus : travaux et main-d'œuvre des entreprises partenaires, dépose et évacuation des gravats. Non inclus : mobilier, électroménager et décoration, honoraires d'architecte ou d'ingénieur, aléas structurels découverts après dépose."
+          className="grid grid-cols-1 sm:grid-cols-2 gap-px bg-line border border-line rounded-[2px] overflow-hidden"
+        >
+          <div className="bg-surface p-6 flex flex-col gap-4">
+            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-orange-deep">Inclus dans la fourchette</p>
+            <ul className="flex flex-col gap-3">
+              {INCLUS.map((t) => (
+                <li key={t} className="flex items-start gap-3 text-[0.9rem] text-ivoire/85 leading-relaxed">
+                  <span aria-hidden className="mt-0.5 shrink-0 size-4 rounded-full flex items-center justify-center" style={{ background: "oklch(54% 0.095 70 / 15%)" }}>
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="oklch(54% 0.095 70)" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"><path d="M20 6 9 17l-5-5" /></svg>
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="bg-surface p-6 flex flex-col gap-4">
+            <p className="text-[0.68rem] font-bold tracking-[0.2em] uppercase text-muted">Non inclus</p>
+            <ul className="flex flex-col gap-3">
+              {NON_INCLUS.map((t) => (
+                <li key={t} className="flex items-start gap-3 text-[0.9rem] text-ivoire/85 leading-relaxed">
+                  <span aria-hidden className="mt-0.5 shrink-0 size-4 rounded-full border border-line-strong flex items-center justify-center text-muted">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.4" strokeLinecap="round" strokeLinejoin="round"><path d="M6 6l12 12M18 6 6 18" /></svg>
+                  </span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+        <p className="text-muted text-[0.82rem] mt-5 max-w-2xl leading-relaxed">
+          L&apos;achat direct des matériaux par le client s&apos;applique ensuite au budget travaux, avec un objectif pouvant atteindre 20&nbsp;% d&apos;économies.
+        </p>
+
+        {/*
+          Visuel 1 du brief — graphique HTML/SVG (pas IA) de répartition du budget par
+          poste, alimenté par les choix de l'utilisateur, à afficher après les résultats.
+          NON traité dans cette passe : cette section vit dans app/estimateur-travaux/
+          estimateur.tsx (composant client qui détient l'état surface/niveau/bien/
+          finition/options), fichier hors périmètre de cette intervention (seuls les 4
+          page.tsx listés en amont sont modifiables ici). L'outil affiche déjà une liste
+          dynamique "Répartition indicative par lot" (calculée en direct à partir de
+          `mid * l.part`, voir le bloc LOTS d'estimateur.tsx) mais sous forme de texte,
+          pas de barres proportionnelles — donc la donnée dynamique existe, la
+          représentation graphique manque encore. Piste pour une passe dédiée à
+          estimateur.tsx : transformer cette liste en barres horizontales CSS pures
+          (largeur = `${l.part * 100}%`), avec role="img" aria-label, toujours sans
+          aucune image générée. Priorité confirmée par le client : l'outil qui fonctionne
+          avant l'esthétique — pas de blocage sur ce point pour cette passe.
+        */}
       </MqSection>
 
       <MqSection kicker="Questions fréquentes" title="Ce que les propriétaires demandent sur cette estimation">

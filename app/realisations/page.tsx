@@ -101,7 +101,7 @@ const DEROULE = [
   { src: `${M}/chantier-vmc-caisson-gaines.jpg`, alt: "Caisson de ventilation mécanique contrôlée suspendu en faux plafond avec gaines isolées raccordées", cap: "Illustration de référence (hors chantier documenté sur cette page) : principe d'un caisson de VMC en faux plafond, gaines isolées et pentes maîtrisées." },
   { src: `${M}/chantier-carottage-facade.jpg`, alt: "Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation", cap: "Illustration de référence (hors chantier documenté sur cette page) : carottage de façade pour ventilation, après accord écrit du syndic sur la partie commune." },
   { src: `${M}/moulures-corniches-pose.jpg`, alt: "Salon haussmannien avec corniches en plâtre, rosace et boiseries restituées pendant la rénovation", cap: "Illustration de référence (hors chantier documenté sur cette page) : restitution de corniches, rosace et boiseries en plâtre traditionnel d'après l'existant." },
-  { src: `${CH}/chParquetVitrifie.jpeg`, alt: "Séjour livré avec parquet ancien poncé et vitrifié, cheminée et moulures d'origine conservées", cap: "Plateau livré : parquet ancien poncé et vitrifié, cheminée et moulures d'origine conservées et restaurées. Chantier réel des équipes partenaires." },
+  { src: `${CH}/chParquetVitrifie.jpeg`, alt: "Séjour livré avec parquet ancien poncé et vitrifié, cheminée et moulures d'origine conservées", cap: "Autre chantier réel des équipes partenaires, sans lien avec les photos de démolition en tête de série : parquet ancien poncé et vitrifié, cheminée et moulures d'origine conservées et restaurées." },
 ];
 
 const COMPARAISONS = [

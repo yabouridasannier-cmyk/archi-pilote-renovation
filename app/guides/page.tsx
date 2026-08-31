@@ -35,6 +35,37 @@ export default function Page() {
         lead="Cette page pilier regroupe douze guides thématiques pour orienter un projet de rénovation, du budget à la structure en passant par l'énergie et les démarches en copropriété. Chaque entrée résume l'intention de recherche et renvoie vers la page de service correspondante, sans article séparé à parcourir."
       />
 
+      {/*
+        Diagnostic client (antérieur à la refonte qui a porté cette page à 12 guides) :
+        "les quatre illustrations actuelles sont pertinentes mais visuellement
+        hétérogènes." Vérifié le 31/08 : la page compte bien 12 guides aujourd'hui
+        (tableau GUIDES ci-dessus) mais la grille "Repères visuels" n'affiche encore
+        que 4 vignettes, et les 12 cartes de guides plus bas n'ont elles-mêmes AUCUNE
+        vignette — l'écart entre "douze vignettes cohérentes, une par question" (brief)
+        et l'état réel est donc à la fois un écart de nombre (4 sur 12) et de style.
+
+        Hétérogénéité précise des 4 images actuelles :
+        - schema-repartition-budget.jpg, schema-mur-porteur.jpg et
+          schema-demarches-copropriete.jpg (dossier /photos/maquette) appartiennent à
+          UNE MÊME série d'illustrations techniques générées : même registre de schéma
+          pédagogique dessiné, même palette ivoire/trait noir. Cohérentes entre elles.
+        - chIsolationCombles.jpeg (dossier /photos/chantiers, légende "chantier réel des
+          équipes partenaires") est une PHOTOGRAPHIE RÉELLE de chantier, pas un schéma
+          généré : registre visuel opposé (photo vs dessin technique). C'est cette
+          quatrième image qui casse la cohérence de la série et qui correspond très
+          précisément à l'hétérogénéité signalée par le client.
+
+        Régénérer 12 vignettes cohérentes (une par guide) est hors scope pour cette
+        passe (page P1, priorité plus basse que les pages déjà traitées). Piste pour une
+        passe dédiée : 1) remplacer chIsolationCombles.jpeg par un 4e schéma généré dans
+        la même série que les 3 autres ; 2) étendre à 12 vignettes, une par entrée de
+        GUIDES, chacune représentant la DÉCISION posée par la question (ex. "reconnaître
+        un mur porteur" → un repérage visuel du mur, pas une pièce déjà rénovée) plutôt
+        que le résultat rêvé (budget, structure, énergie, autorisation, méthode) —
+        conformément à la règle Visuel 2 du brief, à appliquer aussi si des vignettes
+        sont un jour ajoutées aux 12 cartes de guides ci-dessous, qui n'en ont aucune
+        pour l'instant.
+      */}
       <MqSection kicker="Repères visuels" title="Quatre illustrations pédagogiques pour situer les sujets les plus consultés" wide>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <MqFig src={`${M}/schema-repartition-budget.jpg`} alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage" caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé." />
