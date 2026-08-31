@@ -647,34 +647,19 @@ export default function SavoirFaireAncienPage() {
         </div>
       </MqSection>
 
-      {/*
-        À GÉNÉRER — Visual 5 (brief original, jamais traité) : "Trois schémas" homogènes fenêtre / corniche /
-        intégration d'un réseau derrière doublage.
-        Alt prévu : "Arbitrages techniques pour préserver le charme d'un logement ancien."
-
-        À NE PAS CONFONDRE avec la section "Trois schémas pour comprendre les arbitrages techniques"
-        juste au-dessus (schema-vmc.jpg, schema-etancheite-salle-eau.jpg, schema-mur-porteur.jpg) : ces
-        3 schémas sont corrects pour LEUR propre sujet (ventilation, étanchéité, structure) mais ne
-        traitent pas fenêtre/corniche/réseau derrière doublage — ce triptyque manque encore.
-
-        Vérifié un par un dans /public/photos/pedagogie/ (7 schémas) : 01-beton-cire (béton ciré),
-        02-transformer-methode (méthode), 03-menuiserie-condensation (fuite d'air / condensation avant-après),
-        04-circuit-air (plan de circulation d'air VMC), 05-menuiserie-moulures (déjà réutilisé plus haut sur
-        cette page pour le Visual 2 — triptyque corniche/fenêtre-crémone/chambranle, format différent d'une
-        coupe technique), 06-huit-etapes, 07-modele-economique. Aucun ne correspond à ce sujet précis.
-
-        Prompt de génération (diagramme, même style que les schémas pédagogiques existants du site — fond
-        ivoire clair, traits noirs fins, aplats beige/orange discrets, légendes en français) :
-        "Trois schémas techniques en coupe, style pédagogique homogène, fond ivoire clair, traits noirs fins,
-        aplats de couleur beige et orange discrets, légendes en français sous chaque coupe, même style
-        graphique que les schémas pédagogiques existants du site : (1) coupe verticale d'une fenêtre
-        ancienne reproduite à l'identique — profil du dormant et de l'ouvrant en bois, double vitrage
-        feuilleté, joint d'étanchéité, proportions d'origine conservées ; (2) coupe d'une corniche en plâtre
-        restituée — profil mouluré, raccord au plafond et au mur, réservation pour éviter toute traversée
-        par un réseau ; (3) coupe d'un doublage intégrant un réseau (gaine électrique ou VMC) derrière une
-        ossature métallique et une plaque de plâtre, sans traversée du décor ancien conservé. Les trois
-        coupes à la même échelle graphique et dans le même style pour former un triptyque cohérent."
-      */}
+      <MqSection
+        kicker="Pédagogie"
+        title="Arbitrages techniques pour préserver le charme d'un logement ancien"
+        lead="Fenêtre, corniche et réseau derrière doublage : trois arbitrages qui reviennent systématiquement dans un logement ancien."
+        wide
+      >
+        <MqFig
+          src="/photos/pedagogie/32-savoir-faire-trois-schemas.jpeg"
+          alt="Trois coupes techniques : fenêtre ancienne avec crémone laiton, corniche en plâtre, réseau derrière doublage"
+          caption="Arbitrages techniques pour préserver le charme d'un logement ancien. Schéma pédagogique."
+          ratio="aspect-[16/9]"
+        />
+      </MqSection>
 
       <MqSection kicker="Questions fréquentes" title="Rénover l'ancien sans le dénaturer">
         <MqFaq items={FAQ} />

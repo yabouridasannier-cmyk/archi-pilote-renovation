@@ -119,20 +119,14 @@ export default function InvestisseursProfessionnelsPage() {
         }
       />
 
-      {/*
-        À GÉNÉRER — visuel de hero manquant. Le composant MqHero (app/components/mq.tsx)
-        n'a pas de slot image ; une fois l'illustration générée, suivre le pattern déjà
-        utilisé sur /parcours-expertise (un MqFig posé juste sous le hero, dans un
-        <div className="container-site max-w-4xl pb-12 md:pb-16">) plutôt que de
-        modifier mq.tsx. C'est une illustration éditoriale, pas une preuve : aucune
-        vraie photo ne réunit ces éléments.
-        Prompt FR proposé : « Photo éditoriale en plongée (flat lay), lumière naturelle
-        douce, sur une table en bois clair : un plan d'architecte déplié, une étiquette
-        de diagnostic de performance énergétique (DPE), un devis agrafé, un échéancier
-        sur papier quadrillé et une photo imprimée d'une façade de maison ancienne,
-        disposés comme pour une analyse avant acquisition. Aucun logo, aucune marque
-        visible, palette ivoire et bois clair, format 16:9. »
-      */}
+      <div className="container-site max-w-4xl pb-12 md:pb-16">
+        <MqFig
+          src="/photos/pedagogie/23-investisseurs-flatlay.jpeg"
+          alt="Plan d'architecte, étiquette DPE, devis et échéancier réunis sur une table pour une analyse avant acquisition"
+          caption="Analyse travaux avant acquisition d'un actif immobilier. Illustration éditoriale."
+          ratio="aspect-[16/9]"
+        />
+      </div>
 
       <MqSection
         kicker="Avant l'acquisition"

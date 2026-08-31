@@ -253,6 +253,8 @@ export const PHOTOS = {
   chDemolitionLattisPlatreOuverture: "/photos/chantiers/chDemolitionLattisPlatreOuverture.jpeg",
   chPoutreAcierAngleSoudeVue1: "/photos/chantiers/chPoutreAcierAngleSoudeVue1.jpeg",
   chPoutreAcierProfilVueLongue: "/photos/chantiers/chPoutreAcierProfilVueLongue.jpeg",
+  pedaJointEpoxyMacro: "/photos/pedagogie/33-blog-joint-epoxy-macro.jpeg",
+  pedaJointCimentMacro: "/photos/pedagogie/34-blog-joint-ciment-macro.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

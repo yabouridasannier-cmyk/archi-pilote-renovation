@@ -35,19 +35,12 @@ export default function Page() {
           { title: "Laiton patiné et quincaillerie", text: "Robinetterie, crémones, poignées, appliques : la ferronnerie signe le niveau de finition. Le laiton patiné remplace le chrome brillant sur la quasi-totalité des projets." },
           { title: "Courbes et volumes maçonnés", text: "Arches, niches, retours arrondis, banquettes maçonnées : la ligne droite se casse. Ces ouvrages relèvent du plaquiste et du maçon, pas du décorateur." },
         ]} />
-        {/* À GÉNÉRER — Visuel planche d'échantillons (image, ratio large ~21/9), à placer ici sous les Six matières.
-            Prompt FR : "Planche de six échantillons de matériaux à plat, vus de dessus, à l'échelle les uns des autres,
-            texture et grain réalistes et détaillés (chêne massif huilé, zellige émaillé, pierre naturelle française,
-            enduit à la chaux, laiton patiné, un fragment de courbe maçonnée enduite), rangés en grille sur fond neutre
-            clair, lumière douce et uniforme, aucun texte ni légende incrusté dans l'image, rendu macro-photographique
-            haut de gamme."
-            Alt prévu : "Six matières majeures de l'intérieur français 2026-2027."
-            Ce visuel doit être distinct des photos d'ambiance de la page /tendances-materiaux-francais (ne pas réutiliser
-            tendance-travertin-salle-bain.jpg, tendance-zellige-credence.jpg, tendance-beton-cire-sejour.jpg,
-            detail-menuiserie-moulure.jpg, tendance-chene-massif-point-hongrie.jpg ni tendance-chaux-arches-pierre-bourgogne.jpg,
-            qui illustrent déjà le panorama de l'autre page : les réutiliser ici recrée le problème de ressemblance signalé
-            par le client). Une fois généré (ex. /photos/maquette/planche-six-matieres-2026.jpg) :
-            <MqFig src={`${M}/planche-six-matieres-2026.jpg`} alt="Six matières majeures de l'intérieur français 2026-2027." caption="Chêne massif huilé, zellige émaillé, pierre naturelle française, chaux, laiton patiné et courbe maçonnée : les six matières de l'intérieur français 2026-2027, à l'échelle." ratio="aspect-[21/9]" /> */}
+        <MqFig
+          src="/photos/pedagogie/31-tendances-2026-six-matieres.jpeg"
+          alt="Six matières à plat : chêne massif huilé, zellige émaillé, pierre naturelle française, chaux, laiton patiné, courbe maçonnée"
+          caption="Six matières majeures de l'intérieur français 2026-2027."
+          ratio="aspect-[21/9]"
+        />
       </MqSection>
 
       <MqSection kicker="Panorama" title="Le chêne massif, matière reine du sol et de la menuiserie" wide>

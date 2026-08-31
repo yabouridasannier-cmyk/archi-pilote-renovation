@@ -81,29 +81,14 @@ export default function DetailInvisiblePage() {
         lead="Une finition soignée ne prouve rien sur ce qui se cache derrière. Étanchéité de salle de bains, supports de fixation, traversées de parois, réservations, réseau de ventilation et câblage électrique doivent être contrôlés et photographiés avant que le lot suivant ne les recouvre. Ce contrôle documenté évite les défauts qui ne se révèlent qu'à l'usage, une fois le chantier terminé."
       />
 
-      {/*
-        À GÉNÉRER — Visuel 1 (hero, généré technique).
-        Sujet : mur ou salle d'eau en coupe montrant ce qui disparaît après
-        fermeture.
-        Alt prévu : "Éléments techniques à contrôler avant fermeture des
-        cloisons."
-        Prompt FR : Illustration technique éditoriale en coupe verticale d'une
-        salle d'eau en cours de rénovation, montrant dans une seule image en
-        écorché : l'ossature métallique et l'isolant de la cloison, la natte
-        d'étanchéité sous carrelage remontant en plinthe, un renfort de
-        fixation intégré derrière la cloison pour un meuble suspendu, une
-        gaine électrique cheminant dans la cloison, une canalisation
-        d'évacuation encastrée, et une bouche de ventilation raccordée à un
-        réseau de gaines. La moitié gauche de l'image montre la paroi fermée
-        et finie (carrelage, peinture) ; la moitié droite montre la même
-        paroi en écorché révélant ces éléments avant fermeture. Style dessin
-        technique éditorial au trait fin rehaussé de couleur, cohérent avec
-        les schémas existants du site (tons ivoire/carbone, accent orange
-        brûlé), pas de style bande dessinée. Format paysage 16:9.
-        Constat : aucun des 7 schémas de /public/photos/pedagogie/ ne
-        correspond à ce sujet précis (coupe multi-éléments avant fermeture) —
-        ne pas réutiliser un schéma hors-sujet.
-      */}
+      <div className="container-site max-w-4xl pb-4">
+        <MqFig
+          src="/photos/pedagogie/16-detail-invisible-hero.jpeg"
+          alt="Coupe technique d'une salle d'eau montrant réseaux électriques, plomberie encastrée, isolation, pare-vapeur et natte d'étanchéité avant fermeture"
+          caption="Éléments techniques à contrôler avant fermeture des cloisons. Schéma pédagogique."
+          ratio="aspect-[16/9]"
+        />
+      </div>
 
       <MqSection
         kicker="Le problème"

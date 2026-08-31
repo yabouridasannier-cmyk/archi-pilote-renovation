@@ -102,19 +102,12 @@ export default function Page() {
             La rigueur d'ancien expert en chiffrage appliquée à chaque projet consiste à décomposer le budget en familles homogènes, plutôt que de raisonner en enveloppe globale. Cette décomposition permet d'identifier immédiatement où se situent les marges de négociation et où se situent les postes incompressibles.
           </p>
         </MqProse>
-        {/*
-          À GÉNÉRER (diagramme, aucun chiffre figé dans l'image — les familles et leur
-          poids relatif restent au format HTML ci-dessous, éditables sans regénérer le visuel) :
-          "Infographie éditoriale sobre, fond crème, style dessin technique, palette ocre et
-          anthracite, représentant sous forme de blocs proportionnels QUALITATIFS (sans le
-          moindre pourcentage ni chiffre écrit) la répartition d'un budget de rénovation
-          complète par grandes familles : études et diagnostics, dépose et préparation,
-          structure et maçonnerie, réseaux techniques, isolation et cloisons, menuiseries et
-          équipements, finitions, réserve pour aléas. Uniquement les intitulés des familles et
-          des blocs de taille relative libre, aucune valeur chiffrée visible."
-          (L'ancien visuel /photos/maquette/schema-repartition-budget.jpg affichait des
-          pourcentages figés et non vérifiés — retiré pour cette raison, cf. rapport.)
-        */}
+        <MqFig
+          src="/photos/pedagogie/18-renovation-complete-budget.jpeg"
+          alt="Répartition qualitative d'un budget de rénovation complète par grandes familles, sans chiffres"
+          caption="Répartition des familles de coûts d'une rénovation complète. Schéma pédagogique, sans valeur chiffrée."
+          ratio="aspect-[16/9]"
+        />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
           {[
             { title: "Études et diagnostics", text: "Diagnostics techniques, éventuelles études de structure, relevés précis avant chiffrage." },

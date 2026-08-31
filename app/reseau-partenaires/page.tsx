@@ -44,22 +44,14 @@ export default function ReseauPartenairesPage() {
         lead="ARCHI PILOTE RÉNOVATION mobilise un réseau d'entreprises partenaires contractantes sélectionnées sur des critères précis, ainsi que des architectes DPLG et ingénieurs structure partenaires indépendants pour les dossiers lourds. Les entreprises exécutent et facturent les travaux ; la marque structure et pilote le projet de A à Z."
       />
 
-      {/*
-        À GÉNÉRER — visuel de hero manquant pour cette page (carte des rôles et
-        responsabilités : Client / ARCHI PILOTE RÉNOVATION / Entreprises partenaires /
-        Architecte / Ingénieur). Le composant MqHero (app/components/mq.tsx) n'a pas de
-        slot image ; une fois le schéma généré, suivre le pattern déjà utilisé sur
-        /parcours-expertise (un MqFig posé juste sous le hero, dans un
-        <div className="container-site max-w-4xl pb-12 md:pb-16">) plutôt que de
-        modifier mq.tsx pour toutes les pages.
-        Prompt FR proposé : « Diagramme éditorial plat (fond ivoire, traits encre
-        carbone, accent orange laiton), organigramme horizontal en blocs reliés par
-        des flèches : Client → ARCHI PILOTE RÉNOVATION (pilotage) → Entreprises
-        partenaires contractantes (exécution), avec deux blocs satellites reliés à
-        ARCHI PILOTE RÉNOVATION : Architecte DPLG partenaire (conception) et Ingénieur
-        structure partenaire (calcul). Style infographie sobre, sans photo, format
-        16:9. »
-      */}
+      <div className="container-site max-w-4xl pb-12 md:pb-16">
+        <MqFig
+          src="/photos/pedagogie/29-reseau-partenaires-organigramme.jpeg"
+          alt="Organigramme : Client relié à ARCHI PILOTE RÉNOVATION (pilotage), puis Entreprises partenaires, Architecte DPLG et Ingénieur structure"
+          caption="Rôles des entreprises, architectes et ingénieurs partenaires. Schéma pédagogique."
+          ratio="aspect-[16/9]"
+        />
+      </div>
 
       <MqSection
         title="Critères de sélection des entreprises partenaires"

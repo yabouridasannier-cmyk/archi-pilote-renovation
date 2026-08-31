@@ -98,20 +98,14 @@ export default function AchatDirectMateriauxPage() {
         lead="ARCHI PILOTE RÉNOVATION fait acheter au client, en direct et sans marge d'intermédiation, tous les matériaux qui ne relèvent pas de la garantie décennale de l'entreprise : carrelage, robinetterie, parquet, cuisines équipées, façades et menuiseries sur mesure, luminaires. La pose reste intégralement assurée par les entreprises partenaires contractantes, couvertes par leur décennale. Ce modèle, issu de la pratique du chiffrage en foncière, vise jusqu'à 20 % d'économies sur ces postes et libère le choix des matériaux du catalogue d'une entreprise."
       />
 
-      {/*
-        À GÉNÉRER — visuel de hero manquant. Le composant MqHero (app/components/mq.tsx)
-        n'a pas de slot image ; une fois l'illustration générée, suivre le pattern déjà
-        utilisé sur /parcours-expertise (un MqFig posé juste sous le hero, dans un
-        <div className="container-site max-w-4xl pb-12 md:pb-16">) plutôt que de
-        modifier mq.tsx. C'est une illustration éditoriale, pas une preuve : aucune
-        vraie photo ne réunit ces éléments sans révéler de marque ou de document réel.
-        Prompt FR proposé : « Photo éditoriale en plongée (flat lay), lumière naturelle
-        douce, sur une table en bois clair : une palette de carrelage et d'échantillons
-        de matériaux, un bon de commande, une facture et un plan de pose, disposés avec
-        soin comme pour un chantier en préparation. Aucun logo, aucune marque, aucune
-        enseigne lisible sur les documents ou les emballages. Palette ivoire, bois clair
-        et gris chaud, format 16:9. »
-      */}
+      <div className="container-site max-w-4xl pb-12 md:pb-16">
+        <MqFig
+          src="/photos/pedagogie/24-achat-direct-flatlay.jpeg"
+          alt="Échantillons de carrelage, bon de commande, facture et plan de pose disposés sur une table pour un chantier en préparation"
+          caption="Organisation d'un achat direct de matériaux pour un chantier. Illustration éditoriale."
+          ratio="aspect-[16/9]"
+        />
+      </div>
 
       <MqSection
         kicker="Périmètre"
@@ -168,20 +162,14 @@ export default function AchatDirectMateriauxPage() {
         title="Les six étapes de l'achat direct, du chiffrage à la réception"
         lead="L'économie ne vient pas de l'achat lui-même mais du cadrage qui le précède."
       >
-        {/*
-          À GÉNÉRER — infographie des six étapes, absente de /photos/pedagogie (les 7
-          schémas existants couvrent d'autres sujets ; 06-huit-etapes.jpeg est déjà
-          utilisé par /notre-methode et /savoir-faire-ancien pour un autre processus,
-          à ne pas réutiliser ici). Une fois produite, l'ajouter en
-          <MqFig ratio="aspect-[16/9]" /> juste au-dessus de <MqNumbered items={ETAPES} />.
-          Prompt FR proposé : « Infographie pédagogique épurée en 6 étapes horizontales
-          reliées par une ligne continue, style éditorial minimaliste, fond ivoire :
-          1) cadrage des postes achetés en direct, 2) validation technique des références,
-          3) calcul des quantités et des réserves, 4) négociation et commande, 5) calage
-          des livraisons sur le planning de chantier, 6) réception et contrôle
-          contradictoire. Icônes fines au trait, typographie sobre, palette laiton et
-          carbone, aucune marque ni logo visible, format 16:9. »
-        */}
+        <div className="mb-10">
+          <MqFig
+            src="/photos/pedagogie/25-achat-direct-etapes.jpeg"
+            alt="Six étapes de l'achat direct de matériaux : cadrage, validation technique, calcul des quantités, négociation, livraison, réception"
+            caption="Étapes de l'achat direct des matériaux par le client. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
+        </div>
         <MqNumbered items={ETAPES} />
       </MqSection>
 

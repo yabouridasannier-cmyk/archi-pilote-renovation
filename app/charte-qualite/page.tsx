@@ -55,24 +55,14 @@ export default function Page() {
       </MqSection>
 
       <MqSection kicker="Points de réception" title="Les contrôles réalisés à chaque étape sensible" wide>
-        {/*
-          À GÉNÉRER — Visuel 2 : infographie "Cinq jalons de contrôle qualité pendant une rénovation".
-          Aucun schéma existant dans /photos/pedagogie/ ne correspond (01-beton-cire, 02-transformer-methode,
-          03-menuiserie-condensation, 04-circuit-air, 05-menuiserie-moulures, 06-huit-etapes, 07-modele-economique) —
-          le schema-etancheite-salle-eau.jpg précédemment placé ici était une coupe technique d'étanchéité sous carrelage,
-          hors-sujet par rapport à la matrice de contrôle attendue : retiré de cet emplacement.
-          Alt prévu une fois l'image générée : "Cinq jalons de contrôle qualité pendant une rénovation."
-          Prompt FR exact à utiliser pour la génération :
-          "Infographie pédagogique au format paysage, fond ivoire chaud uni (#F5EDDD), style trait fin cohérent avec
-          les schémas pédagogiques existants du site (contours bruns/ocre, icônes en lignes simples, badges ronds
-          numérotés à fond ocre clair, aucun dégradé ni ombre portée, typographie sans-serif épaisse et lisible).
-          Titre en haut : « Cinq jalons de contrôle qualité pendant une rénovation ». Cinq blocs numérotés de 1 à 5
-          alignés en frise horizontale, chacun avec un badge rond numéroté, une icône ligne et un intitulé court :
-          1. Avant travaux (icône maison avec loupe ou plan déplié) — 2. Avant fermeture (icône cloison ouverte avec
-          câbles et gaines apparents) — 3. Avant revêtement (icône sol nu avec règle ou niveau) — 4. Essais (icône
-          robinet qui coule et ampoule allumée) — 5. Réception (icône feuille avec coche et trousseau de clés).
-          Aucune photo réaliste mélangée aux pictogrammes, texte net et lisible, livrable en 4:3 ou 16:9."
-        */}
+        <div className="mb-10">
+          <MqFig
+            src="/photos/pedagogie/17-charte-qualite-jalons.jpeg"
+            alt="Cinq jalons de contrôle qualité pendant une rénovation : avant travaux, avant fermeture, avant revêtement, essais, réception"
+            caption="Cinq jalons de contrôle qualité pendant une rénovation. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
+        </div>
         <div className="mt-8"><MqNumbered cols={2} items={[
           { title: "Réception des lots de structure et de gros œuvre", text: "Contrôle de la conformité aux plans, des appuis, des niveaux et de l'absence de désordre visible avant fermeture des ouvrages." },
           { title: "Réception des réseaux avant fermeture", text: "Vérification électrique, plomberie et ventilation avant la pose des cloisons ou des revêtements qui les recouvriraient." },

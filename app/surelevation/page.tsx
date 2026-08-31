@@ -17,31 +17,14 @@ export default function Page() {
         lead="Une surélévation ajoute une charge nouvelle sur des fondations et des murs porteurs qui n'ont pas été conçus pour cela à l'origine. La question centrale n'est donc pas esthétique mais structurelle : la maison ou l'immeuble peut-il supporter ce poids supplémentaire ? ARCHI PILOTE RÉNOVATION cadre la faisabilité, mobilise les ingénieurs structure et architectes DPLG partenaires indépendants nécessaires, et pilote le projet de A à Z jusqu'à la livraison."
       />
 
-      {/*
-        À GÉNÉRER — visuel hero manquant.
-        Vérifié le 31/08/2026 : MqHero (app/components/mq.tsx) n'a pas de slot image et aucun MqFig
-        n'est présent sous le hero de cette page. Le hero est donc 100% texte à ce jour — l'affirmation
-        d'un rapport précédent ("le hero est déjà un schéma technique, accepté par le client") est fausse.
-        Aucun des 7 schémas de /public/photos/pedagogie/ ne couvre ce sujet (vérifié par ls).
-
-        Sujet requis : coupe d'une maison avec surélévation légère — charges, murs repris, trémie et
-        toiture. Alt prévu : "Principe structurel d'une surélévation de maison."
-
-        Prompt FR (à générer, style aligné sur schema-extension-surelevation.jpg déjà en place :
-        fond ivoire/crème uni, coupe technique en traits fins charbon, légende numérotée en cercles
-        ocre/doré, encadré légende en bas, échelle graphique) :
-        "Coupe technique 2D en ligne, style schéma d'architecte pédagogique, vue en coupe verticale d'une
-        maison existante recevant une surélévation légère en ossature bois. Montrer de bas en haut, avec
-        légende numérotée en cercles ocre : (1) fondations existantes et leur charge admissible, (2) murs
-        porteurs existants repris/renforcés pour recevoir la charge supplémentaire, (3) plancher haut
-        existant devenu plancher intermédiaire, avec trémie d'escalier menant au niveau surélevé (chevêtre
-        et solives de rive), (4) ossature bois légère du niveau créé, (5) toiture neuve à faible pente sur
-        la surélévation. Fond ivoire/crème uni (#F5F0E8 environ), traits fins charbon, accents ocre/doré,
-        encadré légende en bas à droite (Existant / Neuf / Structure porteuse / Charge reprise), flèches de
-        descente de charge, échelle graphique en bas, typographie sans-serif nette, aucune photo, aucun
-        rendu 3D réaliste — schéma pédagogique 2D uniquement, cohérent avec les schémas déjà produits du
-        site."
-      */}
+      <div className="container-site max-w-4xl pb-4">
+        <MqFig
+          src="/photos/pedagogie/21-surelevation-coupe.jpeg"
+          alt="Coupe technique d'une surélévation légère à ossature bois : reprise de charges, trémie d'escalier, structure de toiture"
+          caption="Principe structurel d'une surélévation de maison. Schéma pédagogique."
+          ratio="aspect-[16/9]"
+        />
+      </div>
 
       <MqSection
         title="La question structurelle avant toute question esthétique"
@@ -149,36 +132,10 @@ export default function Page() {
         lead="La surélévation expose temporairement le bâtiment aux intempéries pendant la dépose de la toiture existante et la pose de la nouvelle structure : ce phasage se prépare minutieusement."
       >
         <MqFig
-          src="/photos/maquette/schema-planning-lots.jpg"
-          alt="Planning en lots d'un chantier de rénovation présenté sous forme de diagramme de phases hebdomadaires"
-          caption="Enchaînement des lots d'un chantier de rénovation : chaque phase conditionne la suivante, d'où l'importance du séquencement."
+          src="/photos/pedagogie/22-surelevation-phasage.jpeg"
+          alt="Phasage d'une surélévation en sept étapes : dépose de toiture, protection provisoire, ossature bois, couverture, isolation, raccords, finitions"
+          caption="Phasage d'une surélévation jusqu'à la mise hors d'eau. Schéma pédagogique."
         />
-        {/*
-          À GÉNÉRER — cette infographie générique (planning en lots toutes rénovations confondues) ne
-          couvre pas le sujet spécifique demandé ici. Elle est conservée en attendant, mais devrait être
-          remplacée par l'infographie ci-dessous.
-          Vérifié le 31/08/2026 : aucun des 7 schémas de /public/photos/pedagogie/ ne couvre le phasage
-          d'une surélévation.
-
-          Sujet requis : phasage d'une surélévation jusqu'à la mise hors d'eau — dépose de toiture,
-          protection provisoire, ossature, couverture, isolation, raccords, finitions.
-          Alt prévu : "Phasage d'une surélévation jusqu'à la mise hors d'eau."
-
-          Prompt FR (à générer, style aligné sur schema-planning-lots.jpg déjà en place : fond
-          ivoire/crème, bandeau de titre, diagramme de phases en lignes horizontales avec jalons,
-          légende, encadré infos) :
-          "Infographie 2D en ligne, style schéma d'architecte pédagogique, diagramme de phasage d'un
-          chantier de surélévation de maison présenté en 7 étapes horizontales successives avec jalons
-          entre chaque étape : (1) Dépose de la toiture existante, (2) Protection provisoire /
-          étanchéité provisoire de bâchage, (3) Montage de l'ossature du niveau surélevé, (4) Pose de la
-          couverture neuve, (5) Isolation du nouveau niveau, (6) Raccords de réseaux verticaux
-          (électricité, plomberie, chauffage), (7) Finitions intérieures et extérieures. Fond
-          ivoire/crème uni (#F5F0E8 environ), bandeau de titre en haut avec sous-titre "PHASAGE D'UNE
-          SURÉLÉVATION — MISE HORS D'EAU", icônes fines en ligne charbon pour chaque étape, jalons en
-          losange ocre/doré reliés par des flèches, légende en bas, encadré infos (durée indicative,
-          intervenants), typographie sans-serif nette, aucune photo, aucun rendu 3D réaliste — schéma
-          pédagogique 2D uniquement, cohérent avec les schémas déjà produits du site."
-        */}
         <div className="mt-10">
           <MqNumbered
             items={[

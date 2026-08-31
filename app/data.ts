@@ -204,9 +204,9 @@ export const ARTICLES: Article[] = [
     date: "10 août 2026", dateISO: "2026-08-10",
     categorie: "Matériaux",
     excerpt: "Les joints ciment noircissent en quelques mois. Voici pourquoi les entreprises partenaires privilégient largement l'époxy en salle de bain et cuisine.",
-    photo: "chSdbCarreauxCiment",
-    img2: "chCuisineAnthraciteCarreauxVue2",
-    img2Caption: "Cuisine anthracite avec sol en carreaux de ciment — chantier réel des équipes partenaires.",
+    photo: "pedaJointEpoxyMacro",
+    img2: "pedaJointCimentMacro",
+    img2Caption: "Joint ciment classique : poreux, taché et fissuré après quelques années en zone humide. Photo pédagogique.",
     corps: [
       "Un joint ciment classique est poreux. En quelques mois, il absorbe l'humidité, les moisissures s'y installent, et il noircit — quel que soit le sérieux du nettoyage. Au bout de deux ou trois ans, il se fissure et laisse passer l'eau, avec le risque de dégâts derrière le carrelage.",
       "Le joint époxy est une résine, pas du ciment. Il est non poreux et ne noircit pas — parce qu'il n'y a rien pour les moisissures à quoi s'accrocher. Les fabricants annoncent une durée de vie de 15 à 20 ans, contre 3 à 5 ans pour un joint ciment classique en zone humide.",

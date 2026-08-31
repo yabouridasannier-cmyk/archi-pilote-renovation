@@ -17,33 +17,14 @@ export default function Page() {
         lead="Une extension réussie n'est pas seulement une surface supplémentaire : elle doit fonctionner avec la maison existante sur le plan de la circulation, de la structure, de la lumière, des réseaux, de l'isolation et de l'esthétique. ARCHI PILOTE RÉNOVATION cadre la faisabilité, structure le budget et pilote le projet de A à Z, tandis que les entreprises partenaires contractantes exécutent les travaux et les architectes ou ingénieurs indépendants interviennent sur les dossiers qui l'exigent."
       />
 
-      {/*
-        À GÉNÉRER — visuel hero manquant.
-        Vérifié le 31/08/2026 : MqHero (app/components/mq.tsx) n'a pas de slot image et aucun MqFig
-        n'est présent sous le hero de cette page. Le hero est donc 100% texte à ce jour — l'affirmation
-        d'un rapport précédent ("le hero est déjà un schéma technique, accepté par le client") est fausse.
-        Aucun des 7 schémas de /public/photos/pedagogie/ ne couvre ce sujet (vérifié par ls).
-
-        Sujet requis : coupe technique de l'interface entre une maison ancienne et son extension —
-        fondations, rupture de capillarité, isolation continue, raccord de toiture, passage des réseaux.
-        Alt prévu : "Interface technique entre une maison existante et son extension."
-
-        Prompt FR (à générer, style aligné sur schema-extension-surelevation.jpg déjà en place :
-        fond ivoire/crème uni, coupe technique en traits fins charbon, légende numérotée en cercles
-        ocre/doré, encadré légende en bas, échelle graphique) :
-        "Coupe technique 2D en ligne, style schéma d'architecte pédagogique, vue en coupe verticale d'une
-        maison ancienne en pierre raccordée à une extension contemporaine de plain-pied. Montrer de bas en
-        haut, avec légende numérotée en cercles ocre : (1) fondations existantes et fondations neuves de
-        l'extension côte à côte avec leur différence de profondeur, (2) rupture de capillarité / arase
-        étanche au pied du mur neuf, (3) continuité de l'isolation thermique entre mur existant et mur neuf
-        sans pont thermique au droit de la jonction, (4) raccord de toiture entre couverture ancienne et
-        toiture neuve à faible pente avec solin d'étanchéité, (5) passage des réseaux (électricité,
-        plomberie, VMC) traversant la jonction existant/neuf. Fond ivoire/crème uni (#F5F0E8 environ),
-        traits fins charbon, accents ocre/doré, encadré légende en bas à droite (Existant / Neuf / Isolant /
-        Rupture de capillarité), échelle graphique en bas, typographie sans-serif nette, aucune photo,
-        aucun rendu 3D réaliste — schéma pédagogique 2D uniquement, cohérent avec les schémas déjà produits
-        du site."
-      */}
+      <div className="container-site max-w-4xl pb-4">
+        <MqFig
+          src="/photos/pedagogie/20-extension-interface.jpeg"
+          alt="Coupe technique de l'interface entre une maison ancienne et son extension : fondations, rupture de pont thermique, isolation continue, jonction de toiture, réseaux"
+          caption="Interface technique entre une maison existante et son extension. Schéma pédagogique."
+          ratio="aspect-[16/9]"
+        />
+      </div>
 
       <MqSection
         title="La faisabilité avant tout budget définitif"

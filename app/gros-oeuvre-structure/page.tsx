@@ -419,24 +419,14 @@ export default function Page() {
             </p>
           </MqProse>
         </div>
-        {/*
-          À GÉNÉRER (infographie technique premium) : frise des 7 étapes listées ci-dessus
-          (diagnostic, étude de descente de charges, autorisations, étaiement, dépose/carottage,
-          pose de l'ouvrage définitif, retrait de l'étaiement) avec des points d'arrêt visuels
-          (losange ou pastille) marquant les validations obligatoires (ingénieur structure,
-          syndic) avant de passer à l'étape suivante.
-          Alt conseillé : "Ordre des opérations d'un chantier de gros œuvre."
-          Prompt FR : "Infographie pédagogique 4:3, fond ivoire, traits fins noir mat, accent
-          laiton : frise horizontale en sept temps illustrant l'ordre d'un chantier de gros
-          œuvre — diagnostic et sondages, étude de descente de charges, démarches d'autorisation,
-          mise en place de l'étaiement, dépose/carottage/sciage, pose et solidarisation de
-          l'ouvrage définitif, retrait de l'étaiement et reprise des finitions — avec des points
-          d'arrêt (losange) marquant chaque validation obligatoire avant la suite. Aucun texte
-          dans l'image, légendes ajoutées en HTML ensuite."
-          Aucune image n'existe actuellement pour cette frise (vérifié dans public/photos/maquette/
-          et public/photos/pedagogie/ : schema-planning-lots.jpg couvre l'enchaînement des LOTS de
-          second œuvre, pas la séquence structurelle du gros œuvre demandée ici).
-        */}
+        <div className="mt-10">
+          <MqFig
+            src="/photos/pedagogie/12-gros-oeuvre-ordre-operations.jpeg"
+            alt="Frise en sept étapes de l'ordre d'un chantier de gros œuvre avec points d'arrêt de validation"
+            caption="Ordre des opérations d'un chantier de gros œuvre. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
+        </div>
       </MqSection>
 
       <MqSection

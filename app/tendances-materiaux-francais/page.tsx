@@ -78,14 +78,12 @@ export default function TendancesMateriauxFrancaisPage() {
         lead="Les trois matières qui structurent aujourd'hui l'esthétique française — travertin, zellige et béton ciré — sont exigeantes sur le support, jamais sur le style. Chacune impose une préparation précise : planéité, étanchéité, charge admissible, traitement de protection. ARCHI PILOTE RÉNOVATION conçoit ces finitions avec l'architecte partenaire Minh-Hoa Truong, les valide avec l'ingénieur structure Igli Braho du bureau Tridenso lorsque la structure est concernée, et les fait exécuter par des entreprises partenaires contractantes, sous notre pilotage et notre accompagnement de A à Z."
       />
 
-      {/* À GÉNÉRER — Visuel hero (image éditoriale, ratio large ~21/9 ou 16/9), à placer ici sous le H1.
-          Prompt FR : "Planche matière élégante et épurée : échantillons de travertin, zellige, béton ciré,
-          chêne massif, chaux et laiton, disposés à plat côte à côte et photographiés en lumière naturelle
-          douce (lumière de fin de matinée), sur fond neutre clair, sans mise en scène, sans texte, cadrage
-          serré façon planche d'architecte, rendu photographique haut de gamme."
-          Alt prévu : "Palette de matériaux français pour une rénovation intérieure haut de gamme."
-          Une fois généré (ex. /photos/maquette/planche-materiaux-francais.jpg) :
-          <MqFig src="/photos/maquette/planche-materiaux-francais.jpg" alt="Palette de matériaux français pour une rénovation intérieure haut de gamme." caption="Travertin, zellige, béton ciré, chêne, chaux et laiton : les six matières qui structurent la rénovation française haut de gamme." ratio="aspect-[21/9]" /> */}
+      <MqFig
+        src="/photos/pedagogie/30-tendances-materiaux-planche.jpeg"
+        alt="Planche matière : échantillons de travertin, zellige, béton ciré, chêne massif, chaux et laiton"
+        caption="Palette de matériaux français pour une rénovation intérieure haut de gamme."
+        ratio="aspect-[21/9]"
+      />
 
       <MqSection
         kicker="Panorama"

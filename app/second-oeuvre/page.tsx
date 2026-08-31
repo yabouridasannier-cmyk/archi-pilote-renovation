@@ -18,19 +18,12 @@ export default function Page() {
       />
 
       <div className="container-site max-w-4xl pb-4 md:pb-6">
-        {/*
-          À GÉNÉRER (diagramme hero, aucun visuel équivalent existant à ce jour — vérifié dans
-          public/photos/maquette/ et public/photos/pedagogie/ : aucune axonométrie d'appartement
-          montrant simultanément électricité, plomberie, VMC, cloisons, chauffage et menuiserie).
-          Alt conseillé : "Organisation des lots de second œuvre dans un appartement."
-          Prompt FR : "Illustration technique éditoriale en vue axonométrique d'un volume
-          d'appartement en rénovation, style trait fin sur fond ivoire/crème. La coupe montre
-          simultanément : gaines électriques et tableau électrique dans une cloison, canalisations
-          de plomberie encastrées avec pente, caisson VMC avec gaines vers cuisine et salle de
-          bain, ossature de cloison avec isolant, radiateur, menuiserie intérieure. Légendes en
-          français : Électricité, Plomberie, VMC, Cloisons/doublage, Chauffage, Menuiserie
-          intérieure. Titre : SECOND ŒUVRE : LES RÉSEAUX AVANT LA FERMETURE."
-        */}
+        <MqFig
+          src="/photos/pedagogie/09-second-oeuvre-axono.jpeg"
+          alt="Axonométrie d'un appartement montrant électricité, plomberie, VMC, cloisons, chauffage et menuiserie"
+          caption="Organisation des lots de second œuvre dans un appartement. Schéma pédagogique."
+          ratio="aspect-[16/9]"
+        />
       </div>
 
       <MqSection

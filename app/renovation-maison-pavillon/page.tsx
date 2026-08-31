@@ -70,23 +70,14 @@ export default function Page() {
               caption="Isolation et ventilation mécanique contrôlée doivent être pensées ensemble pour éviter tout report d'humidité."
             />
           </div>
-          {/*
-            À GÉNÉRER — il manque encore le schéma de coupe diagnostique demandé pour cette
-            section (fissures + humidité + isolation + charpente + fondations réunis dans une
-            seule coupe de maison). Le schéma ci-dessus (schema-humidite-origines.jpg) ne
-            couvre que l'humidité ; aucun des 7 schémas pédagogie existants (01-beton-cire à
-            07-modele-economique) ne correspond au sujet. Prompt français à utiliser :
-            "Schéma pédagogique en coupe isométrique d'une maison ancienne à un étage, style
-            illustration technique épurée (fond ivoire/crème, traits fins bruns, accents
-            orange laiton, typographie serif élégante pour les titres, légendes callout
-            numérotées reliées par de fins tirets) — vue en coupe verticale du sol à la
-            toiture montrant simultanément cinq points de diagnostic annotés : 1) fissure de
-            façade en tête de mur, 2) tache d'humidité et remontée capillaire en pied de mur,
-            3) isolation manquante ou dégradée dans les murs et sous toiture, 4) charpente
-            bois avec un point singulier (assemblage fragilisé), 5) fondations sans barrière
-            d'étanchéité. Aucune photo, dessin vectoriel uniquement, format paysage 16:9,
-            cohérent avec le style de schema-humidite-origines.jpg."
-          */}
+          <div className="mt-8">
+            <MqFig
+              src="/photos/pedagogie/19-maison-pavillon-diagnostic.jpeg"
+              alt="Coupe diagnostique d'une maison ancienne : fissure de façade, humidité, isolation dégradée, charpente fragilisée, fondations sans étanchéité"
+              caption="Points de diagnostic d'une maison ancienne avant travaux. Schéma pédagogique."
+              ratio="aspect-[16/9]"
+            />
+          </div>
         </div>
       </MqSection>
 

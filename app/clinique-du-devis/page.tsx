@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MqHero, MqSection, MqProse, MqChecklist, MqDark, MqDarkSteps, MqFaq, MqCta, MqReadNext } from "../components/mq";
+import { MqHero, MqSection, MqProse, MqFig, MqChecklist, MqDark, MqDarkSteps, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/clinique-du-devis" },
@@ -60,26 +60,14 @@ export default function Page() {
         lead="Un devis de rénovation ne se juge pas sur son total mais sur ce qu'il décrit ligne à ligne. Notre clinique du devis applique une méthode issue du chiffrage en foncière : vérification des quantités, des unités, des hypothèses, des exclusions et des interfaces entre lots. Objectif : transformer un document commercial en outil de décision comparable, avant tout engagement financier."
       />
 
-      {/*
-        À GÉNÉRER — Visuel 1 (hero, généré éditorial).
-        Sujet : devis anonymisé en gros plan avec six zones visuelles surlignées :
-        quantité, unité, fourniture, pose, exclusion, hypothèse.
-        Alt prévu : "Éléments à contrôler dans un devis de rénovation."
-        Prompt FR : Photographie éditoriale en gros plan d'un devis de travaux de
-        rénovation posé sur une table, vu en légère plongée. Document entièrement
-        fictif et anonymisé : aucun nom de société réelle, aucun logo, aucune
-        adresse ni signature identifiable, chiffres d'exemple non significatifs
-        volontairement génériques, pour ne jamais ressembler à un document
-        officiel authentique. Six zones du document mises en évidence par un
-        surlignage coloré ou un encadré discret, chacune annotée d'une légende
-        courte en français : « Quantité », « Unité », « Fourniture », « Pose »,
-        « Exclusion », « Hypothèse ». Lumière naturelle douce, palette ivoire /
-        carbone avec touche orange brûlé cohérente avec l'identité éditoriale du
-        site, style sobre, aucun élément de marque réel visible. Format
-        paysage 4:3.
-        Constat : aucun des 7 schémas de /public/photos/pedagogie/ ne traite du
-        sujet « devis » — ne pas combler avec un schéma hors-sujet.
-      */}
+      <div className="container-site max-w-4xl pb-4">
+        <MqFig
+          src="/photos/pedagogie/13-clinique-devis-hero.jpeg"
+          alt="Devis de rénovation anonymisé avec six zones mises en évidence : quantité, unité, fourniture, pose, exclusion, hypothèse"
+          caption="Éléments à contrôler dans un devis de rénovation. Document fictif et anonymisé, schéma pédagogique."
+          ratio="aspect-[4/3]"
+        />
+      </div>
 
       <MqSection
         kicker="POURQUOI LE TOTAL NE SUFFIT PAS"
@@ -140,27 +128,14 @@ export default function Page() {
         title="La procédure d'analyse en huit étapes"
         lead="Chaque devis reçu suit la même trame de vérification, quel que soit le corps de métier concerné."
       >
-        {/*
-          À GÉNÉRER — Visuel 2 (infographie générée).
-          Sujet : procédure verticale en huit contrôles (les libellés détaillés
-          restent en HTML ci-dessous via MqDarkSteps ; ce visuel est un
-          complément graphique d'ouverture de section, pas un remplacement du
-          texte).
-          Alt prévu : "Méthode en huit étapes pour analyser un devis de travaux."
-          Prompt FR : Infographie éditoriale verticale en huit étapes numérotées
-          (01 à 08), style minimaliste au trait avec aplats de couleur, sur fond
-          sombre encre cohérent avec cette section (anthracite/carbone, accent
-          orange brûlé). Chaque étape illustrée par une icône simple (pas de
-          texte long, pas de photographie) : 1) identité des lots, 2) quantités
-          et unités, 3) hypothèses techniques, 4) exclusions écrites,
-          5) prestations manquantes entre lots, 6) doublons entre lots,
-          7) code couleur vert/orange/rouge, 8) liste de questions avant
-          signature. Colonne verticale unique reliée par une ligne fine,
-          esthétique éditoriale sobre (pas de style « stock illustration »
-          générique). Format portrait.
-          Constat : aucun des 7 schémas de /public/photos/pedagogie/ ne
-          correspond à ce sujet — ne pas réutiliser un schéma hors-sujet.
-        */}
+        <div className="mb-10">
+          <MqFig
+            src="/photos/pedagogie/14-clinique-devis-8-etapes.jpeg"
+            alt="Huit contrôles numérotés pour analyser un devis de travaux de rénovation"
+            caption="Méthode en huit étapes pour analyser un devis de travaux. Schéma pédagogique."
+            ratio="aspect-[3/4]"
+          />
+        </div>
         <MqDarkSteps
           steps={[
             {
@@ -237,26 +212,14 @@ export default function Page() {
         title="Les erreurs de lecture les plus coûteuses"
         lead="Certaines formulations reviennent d'un devis à l'autre. Les reconnaître évite la majorité des mauvaises surprises."
       >
-        {/*
-          À GÉNÉRER — Visuel 3 (généré).
-          Sujet : comparatif de trois devis : forfait opaque, devis incomplet,
-          devis comparable.
-          Alt prévu : "Comparaison entre un devis opaque, incomplet et détaillé."
-          Prompt FR : Infographie éditoriale présentant trois extraits de devis
-          fictifs côte à côte, à plat sur fond neutre clair, chacun clairement
-          anonymisé (aucun nom de société réelle, aucun logo, chiffres d'exemple
-          non significatifs). 1) « Forfait opaque » : une seule ligne « Total
-          travaux » sans détail. 2) « Devis incomplet » : quelques lignes de
-          lots avec des zones grisées signalant des postes manquants
-          (évacuation, mise aux normes). 3) « Devis comparable » : lignes
-          détaillées avec quantités, unités et mentions claires, mises en
-          valeur par un léger encadré vert. Style photographique éditorial
-          doux, vue de dessus, palette ivoire / carbone avec accent orange
-          brûlé. Aucun élément ne doit pouvoir être confondu avec un document
-          réel d'une entreprise existante. Format paysage 16:9.
-          Constat : aucun des 7 schémas de /public/photos/pedagogie/ ne
-          correspond à ce sujet — ne pas réutiliser un schéma hors-sujet.
-        */}
+        <div className="mb-10">
+          <MqFig
+            src="/photos/pedagogie/15-clinique-devis-comparatif.jpeg"
+            alt="Comparaison de trois devis de rénovation : forfait opaque, devis incomplet, devis comparable et détaillé"
+            caption="Comparaison entre un devis opaque, incomplet et détaillé. Documents fictifs, schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
+        </div>
         <MqChecklist
           cols={1}
           items={[

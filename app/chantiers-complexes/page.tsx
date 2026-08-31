@@ -73,22 +73,10 @@ export default function ChantiersComplexesPage() {
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
-        {/*
-          À GÉNÉRER (diagramme technique premium) : coupe d'immeuble occupé avec mur porteur,
-          réseaux déplacés, protections, syndic et phasage.
-          Alt conseillé : "Anatomie d'un chantier complexe en immeuble occupé."
-          schema-mur-porteur.jpg (ci-dessous) est un schéma générique de reprise de mur porteur :
-          il ne montre ni l'immeuble occupé, ni les réseaux déplacés, ni le syndic, ni le phasage.
-          Gardé en attendant faute de meilleur candidat existant dans public/photos/maquette/
-          (vérifié : schema-demarches-copropriete.jpg, schema-planning-lots.jpg,
-          schema-reprise-sous-oeuvre.jpg, schema-extension-surelevation.jpg,
-          schema-tremie-plancher.jpg ne couvrent chacun qu'une seule des contraintes du brief,
-          pas la lecture globale demandée).
-        */}
         <MqFig
-          src="/photos/maquette/schema-mur-porteur.jpg"
-          alt="Schéma en coupe d'une reprise de structure lourde avec poutre métallique, poteaux d'appui et étaiement"
-          caption="Une reprise de structure lourde combine plusieurs contraintes : la stabilité de l'ouvrage, le phasage des travaux et, en immeuble occupé, la vie quotidienne des occupants."
+          src="/photos/pedagogie/10-chantiers-complexes-hero.jpeg"
+          alt="Coupe d'un immeuble haussmannien occupé pendant des travaux lourds : mur porteur ouvert, réseaux déviés, protections de chantier, accord du syndic, phasage"
+          caption="Anatomie d'un chantier complexe en immeuble occupé. Schéma pédagogique."
           ratio="aspect-[16/9]"
         />
       </div>
@@ -208,15 +196,14 @@ export default function ChantiersComplexesPage() {
       </MqSection>
 
       <MqDark kicker="Phasage" title="Comment un dossier lourd est séquencé, étape par étape">
-        {/*
-          À GÉNÉRER (infographie technique premium) : chronologie diagnostic → sondage → calcul →
-          autorisation → étaiement → ouverture → structure → contrôle → finitions.
-          Alt conseillé : "Séquence d'une intervention structurelle complexe."
-          Aucune image n'existe actuellement pour illustrer cette section (les schémas générés
-          01 à 07 dans public/photos/pedagogie/ traitent d'autres sujets : béton ciré, méthode,
-          menuiserie/condensation, circuit d'air, moulures, huit étapes génériques, modèle
-          économique — aucun ne couvre la chronologie spécifique d'un chantier structurel complexe).
-        */}
+        <div className="mb-10">
+          <MqFig
+            src="/photos/pedagogie/11-chantiers-complexes-frise.jpeg"
+            alt="Frise en 9 étapes : diagnostic, sondage, calcul, autorisation, étaiement, ouverture, structure, contrôle, finitions"
+            caption="Séquence d'une intervention structurelle complexe. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
+        </div>
         <MqDarkSteps steps={PHASES} />
       </MqDark>
 

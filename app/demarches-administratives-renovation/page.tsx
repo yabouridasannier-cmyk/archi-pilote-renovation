@@ -185,22 +185,12 @@ export default function DemarchesAdministrativesPage() {
             caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire."
           />
 
-          {/*
-            À GÉNÉRER — Visuel 2 (diagramme généré, distinct du schéma ci-dessus).
-            Aucun des 7 schémas de /public/photos/pedagogie/ ne correspond à ce sujet
-            (vérifié : 01-beton-cire, 02-transformer-methode, 03-menuiserie-condensation,
-            04-circuit-air, 05-menuiserie-moulures, 06-huit-etapes, 07-modele-economique).
-            Une fois généré, l'ajouter en <MqFig> juste ici, ratio="aspect-[16/9]",
-            alt="Étapes d'une demande d'autorisation en copropriété."
-            Prompt FR proposé : « Schéma pédagogique horizontal en 6 étapes numérotées,
-            style éditorial minimaliste sur fond ivoire, illustrant la chronologie d'une
-            demande d'autorisation en copropriété : 1. Préparation du dossier technique,
-            2. Inscription à l'ordre du jour de l'assemblée générale, 3. Présentation en
-            assemblée générale, 4. Accord des copropriétaires, 5. Affichage de la décision,
-            6. Démarrage des travaux. Icônes simples et sobres, une flèche continue reliant
-            les étapes de gauche à droite, typographie nette, palette ivoire et rouille
-            (terracotta), aucun texte parasite, aucun logo, format 16:9. »
-          */}
+          <MqFig
+            src="/photos/pedagogie/26-demarches-copropriete.jpeg"
+            alt="Chronologie en 6 étapes d'une demande d'autorisation en copropriété : préparation, inscription, assemblée générale, accord, affichage, travaux"
+            caption="Étapes d'une demande d'autorisation en copropriété. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
 
           <MqChecklist
             cols={1}
