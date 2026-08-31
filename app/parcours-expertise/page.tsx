@@ -193,12 +193,6 @@ export default function ParcoursExpertisePage() {
         lead="La confiance ne doit pas reposer sur des slogans mais sur des critères vérifiables. Voici ceux que nous appliquons à notre propre organisation et que nous recommandons d'exiger de tout interlocuteur de chantier."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/maquette/chantier-isolation-laine.jpg"
-            alt="Chantier d'isolation intérieure : laine minérale entre rails métalliques sur murs et plafond avant pose du placo"
-            caption="Isolation thermique par l'intérieur en cours : laine minérale posée entre ossature métallique, murs et plafond, avant fermeture en plaques de plâtre."
-            ratio="aspect-[16/9]"
-          />
           <MqChecklist
             items={[
               "Un auteur identifié et joignable, pas une adresse générique anonyme.",
