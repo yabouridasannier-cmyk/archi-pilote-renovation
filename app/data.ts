@@ -288,8 +288,8 @@ export const ARTICLES: Article[] = [
     categorie: "Aides financières",
     excerpt: "Les aides à la rénovation énergétique se cumulent parfois, mais leurs règles et leurs montants évoluent d'une année sur l'autre : ce qui ne change pas, c'est l'ordre dans lequel les vérifier.",
     photo: "chCharpenteToitureOSBChantier",
-    img2: "chDemolitionLattisPlatreChantier2",
-    img2Caption: "Démolition sélective, gravats triés avant évacuation — chantier réel des équipes partenaires.",
+    img2: "chIsolationCombles",
+    img2Caption: "Isolation thermique par l'intérieur, laine minérale posée entre ossature métallique avant fermeture — chantier réel des équipes partenaires.",
     img3: "chRangementChantierEncombre",
     img3Caption: "Rangement sur mesure livré, pièce encore en cours de finition — chantier réel des équipes partenaires.",
     corps: [
