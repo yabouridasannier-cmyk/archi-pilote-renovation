@@ -129,18 +129,6 @@ export default function ChantiersComplexesPage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <MqFig
-              src="/photos/chantiers/chPortiqueAcierAngleMurDegarni2.jpeg"
-              alt="Portique acier de reprise de charge, mur dégarni jusqu'au support, chantier réel"
-              caption="Portique acier de reprise de charge sur un mur porteur ouvert, avant habillage. Chantier réel des équipes partenaires."
-            />
-            <MqFig
-              src="/photos/chantiers/chPoutreAcierPlafondMurDegarni.jpeg"
-              alt="Poutre acier scellée en plafond, mur dégarni jusqu'au support, chantier réel"
-              caption="Poutre acier scellée sur ses appuis, mur porteur dégarni jusqu'au support. Chantier réel des équipes partenaires."
-            />
-          </div>
           <MqFig
             src="/photos/maquette/schema-carottage-ventilation.jpg"
             alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"

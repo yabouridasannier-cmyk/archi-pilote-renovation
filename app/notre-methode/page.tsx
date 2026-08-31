@@ -197,14 +197,6 @@ export default function NotreMethodePage() {
             </div>
           ))}
         </div>
-        <div className="mt-8 max-w-md">
-          <MqFig
-            src="/photos/chantiers/chPortiqueAcierAngleGaine.jpeg"
-            alt="Exemple de suivi documenté et de contrôle avant fermeture des ouvrages."
-            caption="Détail vérifié avant fermeture : gaine électrique et angle de structure contrôlés avant la pose des plaques de plâtre, sur le même principe que les comptes rendus et photos datées transmis à chaque étape. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
-        </div>
       </MqSection>
 
       <MqSection

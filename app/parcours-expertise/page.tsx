@@ -182,16 +182,6 @@ export default function ParcoursExpertisePage() {
         </div>
       </MqSection>
 
-      <MqSection kicker="Pourquoi cette page existe" title="La confiance repose sur une méthode, pas sur un slogan">
-        <MqProse>
-          <p>
-            Elle doit reposer sur une méthode expliquée, des réalisations documentées et une compréhension claire du rôle de chacun. C'est
-            pourquoi cette page détaille l'origine du parcours, les critères de compétence attendus et le fonctionnement réel du réseau de
-            partenaires mobilisé selon les projets.
-          </p>
-        </MqProse>
-      </MqSection>
-
       <MqSection kicker="Questions fréquentes" title="Réponses directes sur l'expertise et le parcours">
         <MqFaq items={FAQ} />
       </MqSection>
