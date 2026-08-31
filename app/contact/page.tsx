@@ -19,6 +19,22 @@ export default function ContactPage() {
         lead="Le formulaire ci-dessous permet de qualifier votre projet de rénovation : commune, type de travaux, surface et budget envisagé. ARCHI PILOTE RÉNOVATION lit votre demande, hiérarchise les travaux et revient vers vous sous 48 heures ouvrées avec une première lecture et un budget indicatif, sans engagement de votre part."
       />
 
+      {/*
+        À GÉNÉRER — image éditoriale manquante (aucun visuel équivalent dans
+        public/photos/chantiers ni public/photos/pedagogie).
+        Prompt FR : "Vue verticale en légère plongée sur une table en bois ivoire :
+        plans d'architecte déroulés, un mètre ruban, des échantillons de bois (chêne,
+        noyer) et de pierre (travertin, marbre) disposés avec soin, et un téléphone
+        posé affichant une galerie de photos de suivi de chantier, sans aucune donnée
+        personnelle ni visage visible. Lumière naturelle douce, ambiance éditoriale
+        sobre, palette ivoire et bois, aucun texte incrusté, aucune marque visible."
+        Alt prévu : "Préparation d'une étude de projet de rénovation avec plans et
+        échantillons."
+        Une fois générée : <MqFig src="/photos/pedagogie/etude-projet-plans-echantillons.jpg"
+        alt="Préparation d'une étude de projet de rénovation avec plans et échantillons"
+        ratio="aspect-[3/4]" /> dans un <div className="max-w-md mx-auto my-4">.
+      */}
+
       <MqSection kicker="Ce qu'il faut préparer" title="Quatre informations suffisent pour démarrer">
         <MqChecklist items={[
           "Adresse ou commune du bien concerné",

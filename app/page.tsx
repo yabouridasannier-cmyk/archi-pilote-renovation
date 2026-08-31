@@ -68,6 +68,15 @@ export default function Home() {
             "Pilotage d'ensemble et suivi des décisions.",
           ]} />
         </div>
+        {/* Visuel 2 — À GÉNÉRER (diagramme, pas de photo). Toujours manquant à ce jour.
+            À produire puis placer ici via <MqFig ratio="aspect-[16/9]" />.
+            Sujet : schéma axonométrique des interfaces entre les lots (structure, plomberie, électricité, isolation, cuisine).
+            Prompt FR exact pour la génération :
+            "Schéma pédagogique architectural en coupe axonométrique d'un appartement en rénovation, montrant simultanément
+            la structure porteuse (poutre IPN, poteaux d'appui), les réseaux de plomberie encastrés, le réseau électrique,
+            l'isolation dans les cloisons, et une cuisine aménagée — avec des repères visuels indiquant les points de
+            croisement entre ces cinq lots. Fond ivoire, traits fins noir mat façon dessin technique, aucun texte dans
+            l'image, format 16:9." */}
       </MqSection>
 
       <MqSection kicker="Nos domaines" title="Gros œuvre, second œuvre et lots techniques" wide>

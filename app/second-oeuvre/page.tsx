@@ -17,6 +17,22 @@ export default function Page() {
         lead="Une fois la structure traitée, le second œuvre rassemble l'électricité, la plomberie, le chauffage, les cloisons, les menuiseries intérieures et les finitions. Chaque lot est simple pris isolément ; la difficulté vient de leurs interfaces, en particulier avant fermeture des cloisons. ARCHI PILOTE RÉNOVATION structure l'enchaînement des lots et les points de contrôle, pendant que les entreprises partenaires contractantes exécutent et facturent chaque intervention."
       />
 
+      <div className="container-site max-w-4xl pb-4 md:pb-6">
+        {/*
+          À GÉNÉRER (diagramme hero, aucun visuel équivalent existant à ce jour — vérifié dans
+          public/photos/maquette/ et public/photos/pedagogie/ : aucune axonométrie d'appartement
+          montrant simultanément électricité, plomberie, VMC, cloisons, chauffage et menuiserie).
+          Alt conseillé : "Organisation des lots de second œuvre dans un appartement."
+          Prompt FR : "Illustration technique éditoriale en vue axonométrique d'un volume
+          d'appartement en rénovation, style trait fin sur fond ivoire/crème. La coupe montre
+          simultanément : gaines électriques et tableau électrique dans une cloison, canalisations
+          de plomberie encastrées avec pente, caisson VMC avec gaines vers cuisine et salle de
+          bain, ossature de cloison avec isolant, radiateur, menuiserie intérieure. Légendes en
+          français : Électricité, Plomberie, VMC, Cloisons/doublage, Chauffage, Menuiserie
+          intérieure. Titre : SECOND ŒUVRE : LES RÉSEAUX AVANT LA FERMETURE."
+        */}
+      </div>
+
       <MqSection
         title="Électricité : sécuriser avant d'équiper"
         lead="Le lot électrique commence par un tableau conforme et un plan d'implantation clair, avant toute réflexion sur le nombre de prises."
@@ -70,6 +86,21 @@ export default function Page() {
       </MqSection>
 
       <MqSection title="Plomberie : pentes, diamètres et alimentation">
+        {/*
+          29/08 : emplacement visé pour un triptyque RÉEL "tableau électrique + collecteur
+          plomberie + gaines VMC avant fermeture" (alt conseillé : "Réseaux techniques vérifiés
+          avant fermeture des cloisons"). Vérifié dans public/photos/chantiers/ : une vraie photo
+          de tableau électrique existe (chPlacardTableauElectriqueIntegre.jpeg, montage en placard
+          avec compteur ancien + disjoncteurs — mais trop éloigné/peu lisible pour illustrer la
+          légende détaillée "différentiels 30 mA, circuits repérés" déjà utilisée ailleurs sur
+          cette page), mais aucune photo réelle de collecteur de plomberie ni de gaines VMC avant
+          fermeture n'a été trouvée. Les deux images ci-dessous (chantier-plomberie-encastree.jpg,
+          chantier-tableau-electrique-neuf.jpg) restent donc des photos de stock (dossier
+          public/photos/maquette/, jamais présentées comme "chantier réel" dans leur légende) : le
+          triptyque réel à 3 sujets demandé n'est pas réalisable avec les photos actuellement
+          disponibles. À compléter avec de vraies photos de chantier (tableau, collecteur,
+          gaines VMC) prises avant une prochaine fermeture de cloisons.
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/maquette/chantier-plomberie-encastree.jpg"
@@ -253,6 +284,17 @@ export default function Page() {
       </MqSection>
 
       <MqSection title="Peinture et finitions : la dernière étape, pas la première décision">
+        {/*
+          29/08 : emplacement visé pour un visuel RÉEL "Avant les finitions" — même pièce brute
+          puis livrée, cadrage identique (alt conseillé : "Passage du second œuvre brut aux
+          finitions livrées"). Recherché dans public/photos/chantiers/ : aucune paire de photos
+          ne montre la même pièce avec un cadrage identique aux deux stades (les photos "brut" en
+          stock (tableau-electrique-vetuste-avant.jpg, salle-eau-condensation-avant.jpg) et les
+          photos "livré" (tableau-electrique-neuf-apres.jpg, salle-eau-vmc-apres.jpg) plus bas sur
+          cette page montrent des sujets et des pièces différents, pas la même pièce au même
+          cadrage). À compléter avec une vraie paire de photos prises au même endroit, avant puis
+          après travaux, sur un chantier réel.
+        */}
         <MqProse>
           <p>
             La peinture et les finitions interviennent en toute fin de chantier, mais les choix de teintes, de finitions et de matériaux associés sont arbitrés bien plus tôt, en cohérence avec l'implantation des équipements et des menuiseries déjà posées. Une peinture réalisée trop tôt, avant la fin des lots poussiéreux comme le ponçage de cloisons, doit souvent être reprise.

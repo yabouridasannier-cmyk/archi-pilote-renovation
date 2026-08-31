@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MqHero, MqSection, MqChecklist, MqQuotes, MqFaq, MqCta, MqReadNext } from "../components/mq";
+import { MqHero, MqSection, MqChecklist, MqFig, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/temoignages-clients" },
@@ -12,14 +12,29 @@ const QUOTES = [
   {
     quote: "Nous avons pu comparer nos devis ligne à ligne avant de signer, ce qui a changé notre façon de discuter avec les entreprises.",
     author: "Client, propriétaire occupant — Rénovation complète d'un appartement, Paris, exemple anonymisé",
+    photo: {
+      src: "/photos/chantiers/chCuisineSejourParquetChevrons.jpeg",
+      alt: "Cuisine et séjour rénovés avec parquet à chevrons dans un appartement ancien, chantier réel",
+      caption: "Illustration : rénovation complète d'un appartement ancien, cuisine et séjour livrés. Chantier réel des équipes partenaires.",
+    },
   },
   {
     quote: "Le suivi par photos datées chaque jour nous a permis de suivre le chantier sans être sur place en permanence.",
     author: "Cliente, investisseur locatif — Second œuvre technique d'un studio, Hauts-de-Seine, exemple anonymisé",
+    photo: {
+      src: "/photos/chantiers/chCloisonsPlaco.jpeg",
+      alt: "Cloisons en plaques de plâtre montées lors d'un second œuvre technique, chantier réel",
+      caption: "Illustration : second œuvre technique d'un studio, cloisons et réseaux avant finition. Chantier réel des équipes partenaires.",
+    },
   },
   {
     quote: "L'achat direct des matériaux nous a semblé plus contraignant au départ, mais l'écart de budget final nous a convaincus.",
     author: "Client, propriétaire occupant — Rénovation énergétique d'une maison, Île-de-France, exemple anonymisé",
+    photo: {
+      src: "/photos/chantiers/chIsolationCombles.jpeg",
+      alt: "Isolation des combles d'une maison avant pose du parement, chantier réel",
+      caption: "Illustration : rénovation énergétique, isolation des combles avant finition. Chantier réel des équipes partenaires.",
+    },
   },
 ];
 
@@ -61,7 +76,17 @@ export default function TemoignagesClientsPage() {
         lead="Ces citations sont présentées comme des exemples représentatifs de retours reçus, anonymisés à la demande des clients concernés."
         wide
       >
-        <MqQuotes items={QUOTES} />
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {QUOTES.map((q) => (
+            <div key={q.author} className="flex flex-col gap-4">
+              <MqFig src={q.photo.src} alt={q.photo.alt} caption={q.photo.caption} />
+              <blockquote className="border border-line bg-surface rounded-[2px] p-6 flex flex-col gap-4">
+                <p className="text-[0.95rem] leading-relaxed text-ivoire/90">« {q.quote} »</p>
+                <footer className="text-muted text-[0.82rem] mt-auto">{q.author}</footer>
+              </blockquote>
+            </div>
+          ))}
+        </div>
       </MqSection>
 
       <MqSection
@@ -89,6 +114,22 @@ export default function TemoignagesClientsPage() {
             </p>
           </div>
         </div>
+
+        {/*
+          À FOURNIR PAR LE CLIENT — document réel, ne peut pas être généré par IA.
+          Ce visuel doit être une véritable capture d'écran anonymisée d'un avis
+          publié (Google Business Profile, ou autre plateforme d'avis), avec lien
+          vers la plateforme si autorisé. Fabriquer un faux avis ou une fausse
+          capture serait une preuve inventée : à ne jamais faire. Demander à Yanis
+          / au client d'exporter une capture réelle (nom masqué, note visible,
+          date visible), puis l'intégrer ainsi :
+          <div className="max-w-md mx-auto mt-8">
+            <MqFig src="/photos/chantiers/[capture-avis-anonymisee].jpg"
+              alt="Exemple anonymisé d'un témoignage client publié et vérifiable"
+              ratio="aspect-[3/2]" />
+          </div>
+          Tant qu'aucune capture réelle n'est fournie, ne rien afficher ici.
+        */}
       </MqSection>
 
       <MqSection

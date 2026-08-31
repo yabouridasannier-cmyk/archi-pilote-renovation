@@ -165,41 +165,32 @@ export default function Page() {
             La mise à niveau d'un plancher, lorsqu'un ressaut existe entre deux pièces, se traite par ragréage ou par une chape rapportée, mais seulement après avoir vérifié que la surépaisseur ajoutée reste compatible avec la charge admissible du plancher existant.
           </p>
         </MqProse>
+        {/*
+          Séquence resserrée à un avant/pendant/après unique (29/08 : la page comportait 7 photos
+          de plancher, dont deux paires de doublons exacts — chSousCouchePanneauxOSB.jpeg /
+          chSousCouchePanneauxOSB2.jpeg et chIsolationPhoniqueGranulesPlancher.jpeg /
+          chIsolationPhoniqueGranulesPlancher2.jpeg sont pixel pour pixel la même photo, alors que
+          les légendes affirmaient à tort "autre chantier" / "autre angle". chPlancherSolivesBoisRangees.jpeg
+          a aussi été retiré : malgré son nom de fichier, l'image montre le même corps creux béton
+          que chPlancherSolivesBeton2.jpeg, pas des solives bois — la légende "solives bois rangées"
+          ne correspondait pas au contenu réel de la photo. chDemolitionBoiseriesHaussmannien.jpeg
+          retiré car hors-sujet plancher (boiseries murales).
+        */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
           <MqFig
             src="/photos/chantiers/chPlancherSolivesBeton2.jpeg"
             alt="Solives de plancher ancien décaissées et remplies en corps creux béton dans un couloir, chantier réel"
-            caption="Solives décaissées et remplies en corps creux béton avant chape : reprise de plancher dans un couloir d'immeuble ancien. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chSousCouchePanneauxOSB.jpeg"
-            alt="Panneaux OSB posés en sous-couche sur l'ancien parquet d'un appartement haussmannien, chantier réel"
-            caption="Sous-couche en panneaux OSB posée sur l'ancien parquet, moulures d'origine protégées, avant isolation phonique. Chantier réel des équipes partenaires."
+            caption="Avant : solives décaissées et remplies en corps creux béton avant chape, reprise de plancher dans un couloir d'immeuble ancien. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher.jpeg"
             alt="Isolation phonique par granulés posée entre lambourdes sur un plancher ancien, chantier réel"
-            caption="Isolation phonique par granulés posée entre lambourdes, avant fermeture du plancher. Chantier réel des équipes partenaires."
+            caption="Pendant : isolation phonique par granulés posée entre lambourdes, avant fermeture du plancher. Chantier réel des équipes partenaires."
           />
           <MqFig
-            src="/photos/chantiers/chPlancherSolivesBoisRangees.jpeg"
-            alt="Plancher ancien en solives bois rangées avant pose du revêtement, chantier réel"
-            caption="Plancher ancien en solives bois vérifiées et alignées avant pose du revêtement. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chSousCouchePanneauxOSB2.jpeg"
-            alt="Panneaux OSB posés en sous-couche dans un autre appartement ancien, chantier réel"
-            caption="Sous-couche en panneaux OSB posée avant isolation phonique, autre chantier. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher2.jpeg"
-            alt="Isolation phonique par granulés posée entre lambourdes, autre angle, chantier réel"
-            caption="Isolation phonique par granulés, autre angle du même type de chantier. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg"
-            alt="Boiseries et moulures haussmanniennes partiellement déposées pendant la rénovation, chantier réel"
-            caption="Boiseries et moulures d'origine partiellement déposées pour reprise du plancher, avant repose. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chParquetVitrifie.jpeg"
+            alt="Parquet ancien poncé et vitrifié dans un séjour avec cheminée en marbre, chantier réel"
+            caption="Après : parquet ancien poncé et vitrifié, plancher livré prêt à l'usage. Chantier réel des équipes partenaires."
           />
         </div>
       </MqSection>
@@ -412,6 +403,24 @@ export default function Page() {
             </p>
           </MqProse>
         </div>
+        {/*
+          À GÉNÉRER (infographie technique premium) : frise des 7 étapes listées ci-dessus
+          (diagnostic, étude de descente de charges, autorisations, étaiement, dépose/carottage,
+          pose de l'ouvrage définitif, retrait de l'étaiement) avec des points d'arrêt visuels
+          (losange ou pastille) marquant les validations obligatoires (ingénieur structure,
+          syndic) avant de passer à l'étape suivante.
+          Alt conseillé : "Ordre des opérations d'un chantier de gros œuvre."
+          Prompt FR : "Infographie pédagogique 4:3, fond ivoire, traits fins noir mat, accent
+          laiton : frise horizontale en sept temps illustrant l'ordre d'un chantier de gros
+          œuvre — diagnostic et sondages, étude de descente de charges, démarches d'autorisation,
+          mise en place de l'étaiement, dépose/carottage/sciage, pose et solidarisation de
+          l'ouvrage définitif, retrait de l'étaiement et reprise des finitions — avec des points
+          d'arrêt (losange) marquant chaque validation obligatoire avant la suite. Aucun texte
+          dans l'image, légendes ajoutées en HTML ensuite."
+          Aucune image n'existe actuellement pour cette frise (vérifié dans public/photos/maquette/
+          et public/photos/pedagogie/ : schema-planning-lots.jpg couvre l'enchaînement des LOTS de
+          second œuvre, pas la séquence structurelle du gros œuvre demandée ici).
+        */}
       </MqSection>
 
       <MqSection
@@ -437,20 +446,33 @@ export default function Page() {
           />
         </div>
         <div className="mt-12">
-          <h3 className="display text-[1.3rem] text-ivoire">Trémie d'escalier : du chevêtre brut à l'escalier livré</h3>
+          {/*
+            29/08 : les deux photos qui occupaient cet emplacement (tremie-chevetre-chantier.jpg
+            et escalier-duplex-tremie.jpg, toutes deux dans public/photos/maquette/ donc des
+            stocks, non des chantiers réels) posaient un problème de fidélité : la seconde était
+            explicitement légendée "Référence de style", c'est-à-dire un autre escalier que celui
+            montré en "avant" — présentées côte à côte en avant/après, elles laissaient croire à
+            tort à la même intervention. Remplacées par deux vraies photos de chantier (dossier
+            public/photos/chantiers/) montrant la même trémie d'escalier réelle à deux stades de
+            construction. Ces photos ne montrent pas de finition livrée (marches encore en
+            contreplaqué brut) : le titre et le texte ont été ajustés en conséquence pour rester
+            honnêtes sur ce que montrent réellement les images, plutôt que de parler d'un
+            "escalier livré" non documenté par une photo réelle.
+          */}
+          <h3 className="display text-[1.3rem] text-ivoire">Trémie d'escalier : du plancher ouvert à la structure posée</h3>
           <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
-            Étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques : l'escalier n'est posé qu'après validation de la note de calcul.
+            Étaiement, découpe des solives puis chevêtre sur sabots métalliques : la structure d'escalier sur mesure n'est posée dans la trémie qu'après validation de la note de calcul.
           </p>
           <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
             <MqFig
-              src="/photos/maquette/tremie-chevetre-chantier.jpg"
-              alt="Création d'une trémie d'escalier : plancher bois découpé, chevêtre neuf boulonné sur sabots métalliques et étais en place"
-              caption="Avant : Création de trémie : étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques, conformément à la note de calcul de l'ingénieur structure."
+              src="/photos/chantiers/chEscalierBoisConstructionMarches.jpeg"
+              alt="Structure d'escalier en bois posée dans une trémie de plancher ouverte, éclairage suspendu, chantier réel"
+              caption="Avant finition : trémie ouverte dans le plancher et structure d'escalier sur mesure en cours de pose. Chantier réel des équipes partenaires."
             />
             <MqFig
-              src="/photos/maquette/escalier-duplex-tremie.jpg"
-              alt="Escalier intérieur en chêne et acier noir desservant un duplex, trémie ouverte et garde-corps métallique"
-              caption="Après : Référence de style : escalier chêne et acier posé après création de trémie et reprise du plancher par chevêtre."
+              src="/photos/chantiers/chEscalierBoisFlottantPalier.jpeg"
+              alt="Structure d'escalier en bois avec palier posée dans une trémie de plancher, chantier réel"
+              caption="Structure posée : escalier et palier en place dans la trémie, prêts à recevoir leur finition définitive. Chantier réel des équipes partenaires."
             />
           </div>
         </div>

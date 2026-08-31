@@ -73,10 +73,22 @@ export default function ChantiersComplexesPage() {
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
+        {/*
+          À GÉNÉRER (diagramme technique premium) : coupe d'immeuble occupé avec mur porteur,
+          réseaux déplacés, protections, syndic et phasage.
+          Alt conseillé : "Anatomie d'un chantier complexe en immeuble occupé."
+          schema-mur-porteur.jpg (ci-dessous) est un schéma générique de reprise de mur porteur :
+          il ne montre ni l'immeuble occupé, ni les réseaux déplacés, ni le syndic, ni le phasage.
+          Gardé en attendant faute de meilleur candidat existant dans public/photos/maquette/
+          (vérifié : schema-demarches-copropriete.jpg, schema-planning-lots.jpg,
+          schema-reprise-sous-oeuvre.jpg, schema-extension-surelevation.jpg,
+          schema-tremie-plancher.jpg ne couvrent chacun qu'une seule des contraintes du brief,
+          pas la lecture globale demandée).
+        */}
         <MqFig
           src="/photos/maquette/schema-mur-porteur.jpg"
-          alt="Schéma en coupe d'une reprise de structure lourde avec poutre métallique, poteaux d'appui et étaiement dans un immeuble occupé"
-          caption="Une reprise de structure en immeuble occupé combine trois contraintes : la stabilité de l'ouvrage, le phasage des travaux et la vie quotidienne des occupants."
+          alt="Schéma en coupe d'une reprise de structure lourde avec poutre métallique, poteaux d'appui et étaiement"
+          caption="Une reprise de structure lourde combine plusieurs contraintes : la stabilité de l'ouvrage, le phasage des travaux et, en immeuble occupé, la vie quotidienne des occupants."
           ratio="aspect-[16/9]"
         />
       </div>
@@ -129,6 +141,18 @@ export default function ChantiersComplexesPage() {
               </p>
             </div>
           </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <MqFig
+              src="/photos/chantiers/chPortiqueAcierAngleMurDegarni2.jpeg"
+              alt="Portique acier de reprise de charge, mur dégarni jusqu'au support, chantier réel"
+              caption="Portique acier de reprise de charge sur un mur porteur ouvert, avant habillage. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chPoutreAcierPlafondMurDegarni.jpeg"
+              alt="Poutre acier scellée en plafond, mur dégarni jusqu'au support, chantier réel"
+              caption="Poutre acier scellée sur ses appuis, mur porteur dégarni jusqu'au support. Chantier réel des équipes partenaires."
+            />
+          </div>
           <MqFig
             src="/photos/maquette/schema-carottage-ventilation.jpg"
             alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
@@ -140,18 +164,18 @@ export default function ChantiersComplexesPage() {
 
       <MqSection kicker="Expertise mobilisée" title="Architecte DPLG et ingénieur structure, chacun dans son périmètre">
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <MqFig
-              src="/photos/chantiers/chPortiqueAcierAngleMurDegarni2.jpeg"
-              alt="Portique acier de reprise de charge, mur dégarni jusqu'au support, chantier réel"
-              caption="Portique acier de reprise de charge validé par l'ingénieur structure partenaire, avant habillage. Chantier réel des équipes partenaires."
-            />
-            <MqFig
-              src="/photos/chantiers/chPoutreAcierPlafondMurDegarni.jpeg"
-              alt="Poutre acier scellée en plafond, mur dégarni jusqu'au support, chantier réel"
-              caption="Poutre acier scellée sur ses appuis, dossier suivi conjointement avec l'ingénieur structure. Chantier réel des équipes partenaires."
-            />
-          </div>
+          {/*
+            À GÉNÉRER : photo RÉELLE (jamais de génération IA, jamais de faux document) d'une
+            note de calcul anonymisée posée près d'une poutre ou d'un portique réellement posé.
+            Alt conseillé : "Contrôle d'une reprise de structure avec note de calcul."
+            Aucune photo de ce type n'existe dans public/photos/chantiers/ (vérifié par recherche
+            de fichiers "note", "calcul", "document", "plan" — aucune correspondance pertinente).
+            Les deux photos qui occupaient cet emplacement (chPortiqueAcierAngleMurDegarni2.jpeg
+            et chPoutreAcierPlafondMurDegarni.jpeg) ont été déplacées dans la section
+            "Ce qui définit un dossier lourd" (contraintes de structure / mur porteur) : elles
+            montrent un ouvrage structurel réel mais pas la répartition des rôles architecte/ingénieur
+            ni une note de calcul, donc elles ne représentaient pas le sujet de cette section.
+          */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
               <h3 className="display text-[1.15rem] text-ivoire">Ingénieur structure partenaire</h3>
@@ -184,6 +208,15 @@ export default function ChantiersComplexesPage() {
       </MqSection>
 
       <MqDark kicker="Phasage" title="Comment un dossier lourd est séquencé, étape par étape">
+        {/*
+          À GÉNÉRER (infographie technique premium) : chronologie diagnostic → sondage → calcul →
+          autorisation → étaiement → ouverture → structure → contrôle → finitions.
+          Alt conseillé : "Séquence d'une intervention structurelle complexe."
+          Aucune image n'existe actuellement pour illustrer cette section (les schémas générés
+          01 à 07 dans public/photos/pedagogie/ traitent d'autres sujets : béton ciré, méthode,
+          menuiserie/condensation, circuit d'air, moulures, huit étapes génériques, modèle
+          économique — aucun ne couvre la chronologie spécifique d'un chantier structurel complexe).
+        */}
         <MqDarkSteps steps={PHASES} />
       </MqDark>
 

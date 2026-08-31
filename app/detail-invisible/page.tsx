@@ -81,6 +81,30 @@ export default function DetailInvisiblePage() {
         lead="Une finition soignée ne prouve rien sur ce qui se cache derrière. Étanchéité de salle de bains, supports de fixation, traversées de parois, réservations, réseau de ventilation et câblage électrique doivent être contrôlés et photographiés avant que le lot suivant ne les recouvre. Ce contrôle documenté évite les défauts qui ne se révèlent qu'à l'usage, une fois le chantier terminé."
       />
 
+      {/*
+        À GÉNÉRER — Visuel 1 (hero, généré technique).
+        Sujet : mur ou salle d'eau en coupe montrant ce qui disparaît après
+        fermeture.
+        Alt prévu : "Éléments techniques à contrôler avant fermeture des
+        cloisons."
+        Prompt FR : Illustration technique éditoriale en coupe verticale d'une
+        salle d'eau en cours de rénovation, montrant dans une seule image en
+        écorché : l'ossature métallique et l'isolant de la cloison, la natte
+        d'étanchéité sous carrelage remontant en plinthe, un renfort de
+        fixation intégré derrière la cloison pour un meuble suspendu, une
+        gaine électrique cheminant dans la cloison, une canalisation
+        d'évacuation encastrée, et une bouche de ventilation raccordée à un
+        réseau de gaines. La moitié gauche de l'image montre la paroi fermée
+        et finie (carrelage, peinture) ; la moitié droite montre la même
+        paroi en écorché révélant ces éléments avant fermeture. Style dessin
+        technique éditorial au trait fin rehaussé de couleur, cohérent avec
+        les schémas existants du site (tons ivoire/carbone, accent orange
+        brûlé), pas de style bande dessinée. Format paysage 16:9.
+        Constat : aucun des 7 schémas de /public/photos/pedagogie/ ne
+        correspond à ce sujet précis (coupe multi-éléments avant fermeture) —
+        ne pas réutiliser un schéma hors-sujet.
+      */}
+
       <MqSection
         kicker="Le problème"
         title="La finition masque, elle ne garantit rien"
@@ -121,10 +145,37 @@ export default function DetailInvisiblePage() {
         lead="Chaque zone technique fait l'objet d'une vérification avant que le lot suivant ne la recouvre."
       >
         <div className="flex flex-col gap-10">
+          {/*
+            LIMITATION HONNÊTE — Visuel 2 (réel), requis ici.
+            Sujet demandé : grille de huit photos datées réelles couvrant
+            réseaux, étanchéité, fixations, isolation, pare-vapeur, gaines,
+            essais, repérage.
+            Alt prévu : "Contrôles photographiques réalisés avant recouvrement
+            des ouvrages."
+            Constat après vérification des ~200 photos de
+            /public/photos/chantiers/ : aucun jeu de 8 photos datées
+            documentant ce protocole de contrôle qualité n'existe. Seules deux
+            candidates partielles, et aucune ne convient sans induire en
+            erreur sur ce qu'elle montre réellement :
+            - chPlacardTableauElectriqueIntegre.jpeg montre un tableau
+              électrique fini intégré dans un placard sur mesure (un résultat
+              livré), pas un contrôle avant fermeture ;
+            - chIsolationCombles.jpeg documente une isolation de combles, pas
+              un doublage de cloison avant fermeture.
+            Aucune photo réelle ne couvre étanchéité, pare-vapeur, gaines,
+            essais ou repérage dans ce contexte précis.
+            Ce contenu ne peut pas être fabriqué (ce sont des preuves de
+            chantier, pas un schéma générique) : il doit être constitué au fil
+            des prochains chantiers d'ARCHI PILOTE RÉNOVATION en photographiant
+            réellement ces huit points avant fermeture, avec date. En
+            attendant, le schéma pédagogique ci-dessous (doublage isolant /
+            pare-vapeur) reste affiché à titre d'illustration du principe,
+            mais ne remplace pas la bibliothèque de preuves demandée.
+          */}
           <MqFig
             src="/photos/maquette/schema-doublage-isolant.jpg"
             alt="Coupe verticale d'un doublage isolant sur mur ancien : rails, montants, laine minérale, pare-vapeur et plaque de plâtre"
-            caption="Doublage isolant sur mur ancien : ossature métallique à entraxe 600 mm, laine minérale, pare-vapeur continu et plaque de plâtre."
+            caption="Doublage isolant sur mur ancien : ossature métallique à entraxe 600 mm, laine minérale, pare-vapeur continu et plaque de plâtre. Schéma pédagogique — grille de photos réelles à constituer sur chantier."
           />
           <MqNumbered items={ETAPES} />
         </div>
@@ -170,35 +221,25 @@ export default function DetailInvisiblePage() {
         lead="Certains signaux, visibles pendant le chantier, indiquent qu'un point invisible mérite un contrôle avant fermeture."
       >
         <div className="flex flex-col gap-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <MqFig
-              src="/photos/maquette/schema-electricite-nfc15100.jpg"
-              alt="Schéma d'un tableau électrique de logement rénové avec circuits, différentiel 30 mA et liaison équipotentielle"
-              caption="Organisation des circuits d'un logement rénové : protection différentielle 30 mA, sections adaptées et liaison équipotentielle en salle d'eau."
-            />
-            <MqFig
-              src="/photos/chantiers/chPlacardTableauElectriqueIntegre.jpeg"
-              alt="Tableau électrique et compteur intégrés dans un placard sur mesure, chantier réel"
-              caption="Tableau électrique et compteur intégrés dans un placard sur mesure : l'accès de maintenance reste dégagé derrière une façade menuisée. Chantier réel des équipes partenaires."
-            />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            <MqFig
-              src="/photos/chantiers/chDetailTiroirMainOuverture.jpeg"
-              alt="Tiroir vérifié à la main avant réception, chantier réel"
-              caption="Un tiroir se vérifie à la main avant réception : coulisses, jeux et alignement contrôlés un à un. Chantier réel des équipes partenaires."
-            />
-            <MqFig
-              src="/photos/chantiers/chDetailPoigneePorteMain1.jpeg"
-              alt="Poignée de porte vérifiée à la main, chantier réel"
-              caption="Vérification d'une poignée de porte avant réception : jeu, fixation et alignement du bâti. Chantier réel des équipes partenaires."
-            />
-            <MqFig
-              src="/photos/chantiers/chEtagereMuraleMainOuvriere.jpeg"
-              alt="Étagère murale vérifiée en cours de pose, chantier réel"
-              caption="Étagère murale vérifiée en cours de pose, fixations contrôlées avant réception. Chantier réel des équipes partenaires."
-            />
-          </div>
+          {/*
+            Images retirées (5) : le bloc précédent associait à cette section
+            un schéma de tableau électrique, une photo de tableau intégré fini
+            dans un placard, puis trois photos de contrôle de menuiserie
+            (tiroir, poignée de porte, étagère murale). Aucune de ces cinq
+            images n'illustre les six signaux d'alerte listés ci-dessous
+            (absence d'étanchéité mentionnée, absence de renfort, traversée non
+            calfeutrée, réservation non confirmée, gaine non contrôlée,
+            câblage fermé sans photo) : elles montrent soit un résultat fini
+            sans rapport, soit des contrôles de menuiserie visible — pas les
+            défauts invisibles avant fermeture dont parle cette page. Les
+            garder aurait reproduit le défaut relevé par le client (images
+            trop générales, sans lien réel avec le propos).
+            À GÉNÉRER / RÉEL — si un visuel est souhaité ici, il devrait
+            montrer concrètement l'un des signaux listés (ex. une traversée de
+            gaine non calfeutrée, ou l'absence de renfort visible derrière une
+            ossature avant pose de plaque de plâtre) : aucune photo de ce type
+            n'existe actuellement dans /public/photos/chantiers/.
+          */}
           <MqChecklist
             items={[
               "Aucune mention écrite du système d'étanchéité prévu sous carrelage dans le devis de plomberie ou de carrelage.",
@@ -217,6 +258,25 @@ export default function DetailInvisiblePage() {
         title="Une preuve conservée avant recouvrement"
         lead="Le suivi quotidien par photos datées transforme un contrôle ponctuel en dossier exploitable dans la durée."
       >
+        {/*
+          LIMITATION HONNÊTE — Visuel 3 (réel), requis dans cette section.
+          Sujet demandé : avant fermeture puis même zone après finition,
+          cadrage identique.
+          Alt prévu : "Avant et après fermeture d'un ouvrage technique
+          contrôlé."
+          Constat après vérification de /public/photos/chantiers/ (~200
+          fichiers) : aucune paire avant/après à cadrage identique documentant
+          la fermeture d'un ouvrage technique n'y existe. Des paires avant/
+          après existent ailleurs dans /public/photos/maquette/ (combles,
+          façade, tableau électrique) mais documentent d'autres sujets à des
+          cadrages différents (isolation de combles, ravalement, remplacement
+          d'équipement) — les utiliser ici ferait dire à une légende quelque
+          chose d'absent de la photo, exactement l'erreur à éviter.
+          Ce visuel doit venir d'une vraie paire de photos prises par les
+          équipes sur un chantier réel, au même cadrage, avant puis après
+          fermeture d'une cloison ou d'une chape — contenu à constituer, pas à
+          simuler.
+        */}
         <MqProse>
           <p>
             {"Chaque point vérifié fait l'objet d'une photo datée, transmise le jour même sur WhatsApp, avec un repère de pièce et de zone. Ces photos sont ensuite classées dans le dossier de suivi du projet, aux côtés des notices et des garanties, pour constituer une trace exploitable en cas de question ultérieure sur un ouvrage devenu invisible."}

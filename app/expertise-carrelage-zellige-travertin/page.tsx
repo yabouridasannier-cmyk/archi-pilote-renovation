@@ -80,17 +80,24 @@ export default function Page() {
             },
           ]}
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+        <div className="mt-10 max-w-2xl">
           <MqFig
-            src="/photos/maquette/schema-pose-zellige-etapes.jpg"
-            alt="Infographie en cinq étapes de la pose du zellige : support dressé, calepinage, mélange des boîtes, pose au peigne et joint fin"
-            caption="Les cinq étapes de la pose du zellige : support dressé, calepinage tracé à sec, mélange des boîtes pour répartir les nuances, encollage au peigne et joint fin."
+            src="/photos/maquette/chantier-pose-zellige-credence.jpg"
+            alt="Carreleur posant une crédence en zellige émaillé vert au peigne, boîtes de carreaux mélangées sur le plan de travail"
+            caption="Mélange des boîtes et pose au peigne : le carreleur répartit les nuances avant l'encollage final."
           />
-          <MqFig
-            src="/photos/maquette/schema-pose-travertin.jpg"
-            alt="Coupe type d'une pose de dalles grand format en travertin : chape ragréée, double encollage, pierre, joint minéral et hydrofuge"
-            caption="Pose de travertin grand format : chape ragréée, double encollage sans vide, joint minéral de 2 à 3 mm et traitement hydrofuge avant mise en service."
-          />
+          {/*
+            À PHOTOGRAPHIER (chantiers réels, pas d'infographie générée ici — le client
+            demande six détails réels pour cette section) : quatre gros plans à compléter
+            en plus du cliché ci-dessus (mélange des boîtes + pose) —
+            1) support dressé au réglet avant pose,
+            2) calepinage tracé à sec avec croix ou taquets de calage,
+            3) application du joint époxy à la raclette caoutchouc,
+            4) nettoyage à l'éponge humide juste après jointoiement, avant voile figé.
+            Les deux schémas génériques précédemment ici
+            (/photos/maquette/schema-pose-zellige-etapes.jpg et schema-pose-travertin.jpg)
+            ont été retirés : la brief demande du RÉEL pour cette section, pas des schémas.
+          */}
         </div>
       </MqSection>
 
@@ -188,63 +195,37 @@ export default function Page() {
       >
         <div className="flex flex-col gap-12">
           <div>
-            <h3 className="display text-[1.3rem] text-ivoire">Extension : du jardin encombré au volume contemporain</h3>
+            <h3 className="display text-[1.3rem] text-ivoire">Douche à l'italienne : de la pose fraîche à la livraison</h3>
             <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
-              Étude de sol, déclaration préalable, fondations adaptées puis ossature bois et grandes baies : le
-              raccord à la meulière existante est traité au détail.
+              Même cabine de douche en travertin : film de protection encore en place sur le receveur juste après
+              la pose, puis douche nettoyée et livrée, prête à l'usage.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
               <MqFig
-                src="/photos/maquette/jardin-avant-extension.jpg"
-                alt="Jardin d'une maison de meulière francilienne avant extension, terrasse béton fissurée et abri de jardin"
-                caption="Avant : Avant extension : terrasse béton fissurée et abri vétuste. Le relevé, l'étude de sol Geo2Mo et la déclaration préalable précèdent tout terrassement."
+                src="/photos/maquette/salle-eau-cabine-douche-angle.jpg"
+                alt="Douche en travertin fraîchement posée, film de protection orange encore en place sur le receveur"
+                caption="Avant livraison : douche en travertin fraîchement posée, film de protection encore en place sur le receveur."
               />
               <MqFig
-                src="/photos/maquette/extension-livree-apres.jpg"
-                alt="Extension contemporaine en bardage bois et grandes baies vitrées acier noir accolée à une maison de meulière"
-                caption="Après : Extension livrée : ossature bois, grandes baies à menuiseries acier, toiture zinc et raccord soigné à la meulière conservée."
-              />
-            </div>
-          </div>
-          <div>
-            <h3 className="display text-[1.3rem] text-ivoire">Surélévation : un étage gagné sans démolir</h3>
-            <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
-              Diagnostic de portance par l'ingénieur structure, dépose de la toiture, ossature bois préfabriquée
-              et mise hors d'eau rapide pour limiter l'exposition du bâti.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-              <MqFig
-                src="/photos/maquette/maison-avant-surelevation.jpg"
-                alt="Maison de ville francilienne de plain-pied en brique et enduit avant travaux de surélévation"
-                caption="Avant : Avant surélévation : combles bas inexploitables. La faisabilité dépend du PLU, de la portance des murs et du diagnostic de l'ingénieur structure."
-              />
-              <MqFig
-                src="/photos/maquette/maison-surelevee-apres.jpg"
-                alt="Même maison après surélévation à ossature bois avec bardage clair, grandes fenêtres anthracite et toiture zinc"
-                caption="Après : Surélévation livrée : étage à ossature bois, charges reprises sur les murs confortés, bardage clair et toiture zinc à faible pente."
-              />
-            </div>
-          </div>
-          <div>
-            <h3 className="display text-[1.3rem] text-ivoire">Trémie d'escalier : du chevêtre brut à l'escalier livré</h3>
-            <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
-              Étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques : l'escalier n'est posé
-              qu'après validation de la note de calcul.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
-              <MqFig
-                src="/photos/maquette/tremie-chevetre-chantier.jpg"
-                alt="Création de trémie : étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques"
-                caption="Avant : Création de trémie : étaiement, découpe des solives, chevêtre et linçoirs sur sabots métalliques, conformément à la note de calcul de l'ingénieur structure."
-              />
-              <MqFig
-                src="/photos/maquette/escalier-duplex-tremie.jpg"
-                alt="Escalier intérieur en chêne et acier noir desservant un duplex, trémie ouverte et garde-corps métallique"
-                caption="Après : Référence de style : escalier chêne et acier posé après création de trémie et reprise du plancher par chevêtre."
+                src="/photos/maquette/salle-eau-douche-italienne.jpg"
+                alt="Même douche en travertin livrée et nettoyée, robinetterie noire et receveur dégagé de toute protection"
+                caption="Après livraison : la même cabine, nettoyée et prête à l'usage."
               />
             </div>
           </div>
         </div>
+        {/*
+          Les trois comparatifs précédemment ici (extension jardin, surélévation, trémie
+          d'escalier) provenaient visiblement d'une autre page (gros œuvre / extension) et
+          n'avaient aucun rapport avec le carrelage, le zellige ou l'étanchéité : retirés
+          conformément au diagnostic client ("supprimer les images hors sujet").
+          Limite honnête : la paire ci-dessus montre la même cabine de douche à deux
+          instants (juste posée → livrée), pas littéralement "avant étanchéité" (nappe à nu)
+          → "après livraison" comme décrit dans le brief idéal — aucune photo de nappe
+          d'étanchéité et de salle d'eau livrée montrant avec certitude LA MÊME pièce n'a
+          été trouvée dans la bibliothèque actuelle. À vérifier avec Yanis / le client si un
+          couple plus littéral existe ailleurs.
+        */}
       </MqSection>
 
       <MqSection

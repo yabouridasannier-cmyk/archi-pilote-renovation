@@ -138,6 +138,22 @@ export default function Page() {
             </div>
           </div>
         </div>
+        {/*
+          29/08 : emplacement visé pour un DIAGRAMME GÉNÉRÉ comparatif ITI / ITE / pont thermique
+          de liaison, même code couleur (alt conseillé : "Comparaison entre isolation intérieure,
+          extérieure et ponts thermiques"). Vérifié : cet emplacement ne contenait jusqu'ici aucune
+          image de ce type (ni bonne ni erronée) — /photos/pedagogie/03-menuiserie-condensation.jpeg
+          est utilisée plus bas sur cette page, dans la section "Menuiseries, étanchéité à l'air et
+          risque de condensation" (ligne ~167), où son sujet réel (menuiserie ancienne/étanche et
+          risque de condensation) correspond à la légende de cette section-là ; elle n'occupe pas
+          cet emplacement Isolation et n'a donc pas été déplacée.
+          Prompt FR : "Diagramme pédagogique comparatif 4:3, fond ivoire, traits fins noir mat,
+          accent laiton : trois coupes de mur côte à côte avec le même code couleur — isolation
+          thermique intérieure (ITI, doublage sur le mur existant côté intérieur), isolation
+          thermique extérieure (ITE, manteau isolant sur la façade), et un détail de pont
+          thermique de liaison (jonction plancher/mur non traitée avec fuite de chaleur
+          symbolisée). Aucun texte dans l'image, légendes ajoutées en HTML ensuite."
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
           <MqFig
             src="/photos/chantiers/chIsolationCombles.jpeg"
@@ -435,17 +451,22 @@ export default function Page() {
         lead="Les combles représentent le premier poste de déperdition, la ventilation le premier facteur d'insalubrité. Ces visuels et schémas expliquent l'isolation en deux couches croisées et le principe d'une pompe à chaleur air-eau."
         wide
       >
+        {/*
+          29/08 : les deux photos combles-non-isoles-avant.jpg / combles-isoles-apres.jpg étaient
+          affichées deux fois de suite sur cette page (ici, puis à nouveau juste en dessous dans
+          la sous-section "Combles :" avec préfixes Avant/Après) — doublon supprimé ici, l'unique
+          occurrence restante est la sous-section détaillée ci-dessous.
+          Limite constatée à documenter honnêtement : ces deux photos sont des images de stock
+          (dossier public/photos/maquette/, jamais présentées comme "chantier réel" dans leur
+          légende — donc pas de fausse allégation), pas de vraies photos de chantier. Recherché
+          dans public/photos/chantiers/ (grep isolation/combles/laine) : une seule photo réelle
+          correspond, chIsolationCombles.jpeg — mais elle est déjà utilisée plus haut sur cette
+          même page (section Isolation, ligne ~143) ; la réutiliser ici aurait créé un doublon
+          interne à la page. Faute d'un second angle réel disponible pour ces combles, le
+          stock reste en place ; à remplacer par de vraies photos avant/après du même chantier
+          dès qu'elles seront disponibles.
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <MqFig
-            src="/photos/maquette/combles-non-isoles-avant.jpg"
-            alt="Combles perdus non isolés, ancienne laine tassée entre les solives et charpente apparente"
-            caption="Combles perdus avant intervention : isolant tassé et discontinu, ponts thermiques en périphérie, premier poste de déperdition d'une passoire énergétique."
-          />
-          <MqFig
-            src="/photos/maquette/combles-isoles-apres.jpg"
-            alt="Combles isolés avec deux couches croisées de laine minérale, pare-vapeur continu et chemin de circulation"
-            caption="Combles traités : deux couches croisées de laine minérale, pare-vapeur continu jointoyé et chemin de circulation pour l'entretien des réseaux."
-          />
           <MqFig
             src="/photos/maquette/schema-isolation-combles.jpg"
             alt="Schéma en coupe de l'isolation des combles : charpente, deux couches croisées de laine minérale, pare-vapeur continu et ventilation de sous-toiture"

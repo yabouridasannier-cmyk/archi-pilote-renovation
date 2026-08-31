@@ -158,6 +158,22 @@ export default function NotreMethodePage() {
             avec les architectes DPLG ou ingénieurs structure partenaires indépendants mobilisés sur les dossiers lourds.
           </p>
         </MqProse>
+        {/* Visuel 2 — À GÉNÉRER (diagramme, pas de photo). Aucun des 7 schémas déjà produits dans
+            /public/photos/pedagogie/ ne correspond à ce sujet (vérifié : 01-beton-cire, 02-transformer-methode,
+            03-menuiserie-condensation, 04-circuit-air, 05-menuiserie-moulures, 06-huit-etapes déjà utilisé plus haut,
+            07-modele-economique). À produire puis placer ici via <MqFig ratio="aspect-[16/9]" />.
+            Sujet : carte des dépendances entre structure, réseaux, isolation, ventilation, cuisine et finitions.
+            Alt à utiliser : "Dépendances et risques entre les différents lots de rénovation."
+            Prompt FR exact pour la génération :
+            "Diagramme pédagogique en carte des dépendances montrant six lots de rénovation reliés entre eux : Structure,
+            Réseaux (électricité et plomberie), Isolation, Ventilation, Cuisine et Finitions, chacun représenté par une
+            bulle ou un rectangle arrondi. Des traits fins relient les lots interdépendants, avec de courtes légendes en
+            français sur chaque lien indiquant le risque concret (par exemple : une ouverture qui déplace un réseau, une
+            isolation qui modifie la ventilation, une cuisine dessinée avant l'électricité, une finition bloquée par une
+            réservation oubliée). Fond ivoire, traits fins noir mat, touches orange brûlé pour signaler les points de
+            risque, typographie sans-serif nette, esthétique de schéma technique et pédagogique cohérente avec les
+            diagrammes déjà produits pour ce site, aucune photographie, aucun personnage, aucun texte superflu hors les
+            légendes indiquées, format 16:9." */}
       </MqSection>
 
       <MqDark kicker="Détail des huit étapes" title="Livrables, documents et durée indicative">
@@ -188,6 +204,14 @@ export default function NotreMethodePage() {
               </p>
             </div>
           ))}
+        </div>
+        <div className="mt-8 max-w-md">
+          <MqFig
+            src="/photos/chantiers/chPortiqueAcierAngleGaine.jpeg"
+            alt="Exemple de suivi documenté et de contrôle avant fermeture des ouvrages."
+            caption="Détail vérifié avant fermeture : gaine électrique et angle de structure contrôlés avant la pose des plaques de plâtre, sur le même principe que les comptes rendus et photos datées transmis à chaque étape. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
         </div>
       </MqSection>
 
