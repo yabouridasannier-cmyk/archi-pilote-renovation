@@ -203,7 +203,7 @@ export const ARTICLES: Article[] = [
     titre: "Joints époxy ou joints classiques : pourquoi le choix compte",
     date: "10 août 2026", dateISO: "2026-08-10",
     categorie: "Matériaux",
-    excerpt: "Les joints ciment noircissent en quelques mois. Voici pourquoi les entreprises partenaires ne posent plus que de l'époxy en salle de bain et cuisine.",
+    excerpt: "Les joints ciment noircissent en quelques mois. Voici pourquoi les entreprises partenaires privilégient largement l'époxy en salle de bain et cuisine.",
     photo: "chSdbVasquesPoseMeubleBeige",
     img2: "chCuisineAnthraciteCarreauxVue2",
     img2Caption: "Cuisine anthracite avec sol en carreaux de ciment — chantier réel des équipes partenaires.",
