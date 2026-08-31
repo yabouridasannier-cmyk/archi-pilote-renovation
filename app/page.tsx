@@ -139,9 +139,9 @@ export default function Home() {
             ]}
           />
           <MqFig
-            src="/photos/chantiers/chPlacagesNoyerEnAttente.jpeg"
-            alt="Panneaux de placage noyer achetés en direct par le client, réceptionnés et stockés dans l'appartement en chantier avant la pose des menuiseries sur mesure"
-            caption="Matériaux achetés en direct par le client, réceptionnés sur site avant la pose : traçabilité des références, marges en cascade supprimées. Chantier réel des équipes partenaires."
+            src="/photos/pedagogie/37-accueil-materiaux-schema.jpeg"
+            alt="Schéma des matériaux achetés en direct par le client (carrelage, parquet, robinetterie, peinture...) reliés à un bon de commande unique"
+            caption="Matériaux achetés en direct par le client, sans marge d'intermédiation : traçabilité des références du bon de commande à la pose. Schéma pédagogique."
             ratio="aspect-[3/4]"
           />
         </div>
@@ -171,27 +171,13 @@ export default function Home() {
         ]} />
       </MqSection>
 
-      <MqSection kicker="Sur le terrain" title="Les grandes étapes d'un chantier de rénovation" lead="Trois étapes-types illustrées par des chantiers réels de nos équipes partenaires — projets distincts, même exigence à chaque étape." wide>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <MqFig
-            src="/photos/chantiers/chDemolitionGravatsChantier.jpeg"
-            alt="Démolition d'une cloison ancienne mettant à nu le lattis bois et plâtre, gravats au sol, avant reprise de structure"
-            caption="Démolition : mise à nu des cloisons anciennes avant toute reprise de structure. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
-          <MqFig
-            src="/photos/chantiers/chPoutreAcierSoudure.jpeg"
-            alt="Assemblage soudé entre poutre et poteau acier de reprise de charge, autre chantier"
-            caption="Structure : assemblage soudé d'une poutre de reprise de charge, sur un autre chantier. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisineBlanchePendantsFinie.jpeg"
-            alt="Cuisine blanche laquée livrée avec plan de travail bois, suspensions et sol en marbre et parquet"
-            caption="Livraison : cuisine et pièce de vie finies, prêtes à l'usage. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
-        </div>
+      <MqSection kicker="Sur le terrain" title="Les grandes étapes d'un chantier de rénovation" lead="De la prise de rendez-vous à la finition, cinq étapes structurent chaque projet, quelle que soit son ampleur." wide>
+        <MqFig
+          src="/photos/pedagogie/38-accueil-etapes-schema.jpeg"
+          alt="Les cinq grandes étapes d'un chantier de rénovation : prise de rendez-vous, devis, démolition, structure, finition"
+          caption="Les grandes étapes d'un chantier de rénovation. Schéma pédagogique."
+          ratio="aspect-[16/9]"
+        />
       </MqSection>
 
       <MqSection kicker="Confiance" title="Ce que disent les clients accompagnés" wide>

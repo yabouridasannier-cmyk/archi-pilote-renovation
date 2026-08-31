@@ -241,12 +241,6 @@ export default function NotreMethodePage() {
 
       <MqSection kicker="Résultat" title="Ce que cette méthode démontre, et ce qu'elle ne démontre pas">
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/chantiers/chIsolationCombles.jpeg"
-            alt="Isolation thermique par l'intérieur en cours, laine minérale entre ossature métallique, chantier réel"
-            caption="Isolation thermique par l'intérieur en cours : laine minérale posée entre ossature métallique, murs et plafond, avant fermeture en plaques de plâtre. Chantier réel des équipes partenaires."
-            ratio="aspect-[16/9]"
-          />
           <MqNumbered
             items={[
               {

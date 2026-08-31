@@ -108,28 +108,6 @@ export default function Page() {
         />
       </MqSection>
 
-      <MqSection kicker="Panorama" title="Haut de gamme et maîtrise du budget : notre modèle économique" lead="Les matières nobles deviennent accessibles quand la marge d'intermédiation sur la fourniture disparaît." wide>
-        <MqProse>
-          <p>
-            Le carrelage, la robinetterie, le parquet, les cuisines équipées et les façades sur mesure ne relèvent pas de
-            la garantie décennale de l&apos;entreprise qui les pose. Sur ces postes, ARCHI PILOTE RÉNOVATION fait acheter le
-            client en direct, auprès des fournisseurs identifiés et du groupe Saint-Gobain via La Plateforme du Bâtiment,
-            avec un objectif d&apos;économies pouvant atteindre 20&nbsp;%.
-          </p>
-          <p>
-            Ce modèle, issu de la pratique du chiffrage en foncière, produit deux effets : le budget baisse sur les
-            postes de fourniture, et le choix des matériaux n&apos;est plus bridé par le catalogue d&apos;une entreprise. Le
-            client peut viser le zellige artisanal ou le chêne massif là où un devis classique l&apos;aurait orienté vers un
-            équivalent industriel.
-          </p>
-          <p>
-            La pose, elle, reste entièrement assurée par les entreprises partenaires contractantes, couvertes par leur
-            garantie décennale, sous notre pilotage et notre accompagnement quotidien documenté par photographies.
-          </p>
-        </MqProse>
-        <div className="mt-6"><MqFig src={`${M}/tendance-cuisine-facades-sur-mesure-chene.jpg`} alt="Cuisine sur mesure avec façades cannelées en chêne massif, plan de travail en pierre naturelle veinée, crédence zellige vert d'eau et robinetterie laiton" caption="Façades cannelées en chêne massif, plan en pierre naturelle et crédence zellige : ensemble sur mesure acheté en direct par le client, posé par l'entreprise partenaire." /></div>
-      </MqSection>
-
       <MqSection kicker="Questions fréquentes" title="Ce que l'on nous demande sur les tendances 2026-2027">
         <MqFaq items={[
           { q: "Quelles sont les tendances d'architecture intérieure française pour 2026-2027 ?", a: "Six matières dominent : chêne massif huilé, zellige émaillé, pierre naturelle française, enduit à la chaux, laiton patiné et volumes courbes maçonnés. Elles remplacent un minimalisme froid par un minimalisme chaleureux, avec des exigences techniques précises de support et de pose." },

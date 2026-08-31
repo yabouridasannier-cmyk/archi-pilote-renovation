@@ -27,7 +27,7 @@ export default function Page() {
           </p>
         </MqProse>
         {/* Visuel 1 (hero) — remplace hero-renovation.jpg : ce fichier est un salon haussmannien meublé (photo de déco générique réutilisée sur plusieurs pages du site), sans aucun rapport avec un contrôle de réception. Aucune vraie photo de "fiche de réserves + niveau + documents d'assurance anonymisés" n'existe dans /photos/chantiers/ ni /photos/maquette/ (ce fonds ne contient que des photos de chantier technique — menuiserie, gros œuvre, réseaux — jamais de scène de bureau/paperasse). En attendant une vraie photo de réception avec documents, on utilise la photo réelle la plus honnête disponible : un contrôle technique avant fermeture, cohérent avec le propos de la page ("photos datées", "document écrit"). LIMITATION : commander une vraie photo de réception (fiche de réserves en main, niveau, attestations anonymisées) pour remplacer ce visuel de transition. */}
-        <div className="mt-6"><MqFig src="/photos/chantiers/chPortiqueAcierAngleGaine.jpeg" alt="Angle de structure métallique et gaine électrique contrôlés avant la pose des plaques de plâtre" caption="Un contrôle avant fermeture s'appuie sur une photo datée, jamais sur une simple parole donnée. Chantier réel des équipes partenaires." /></div>
+        <div className="mt-6"><MqFig src="/photos/pedagogie/42-charte-qualite-hero.jpeg" alt="Charte qualité avec engagements cochés, à côté d'un rapport de contrôle daté avec photos de chantier" caption="Chaque engagement correspond à un document, une action datée ou un contrôle vérifiable par le client lui-même." /></div>
       </MqSection>
 
       <MqSection kicker="Nos huit engagements" title="Ce que nous appliquons sur chaque projet piloté" wide>

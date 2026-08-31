@@ -46,34 +46,10 @@ export default function ParcoursExpertisePage() {
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
-        {/*
-          CORRIGÉ — vérification photo/libellé.
-          L'alt précédent affirmait "Ancien expert en chiffrage examinant un
-          devis de rénovation ligne à ligne à côté de plans d'appartement" :
-          faux. Le fichier hero-renovation.jpg montre un salon haussmannien
-          meublé, vide de toute présence humaine, sans devis ni plan visible
-          nulle part dans le cadre — exactement le type d'écart signalé par
-          le client (libellé décrivant un sujet absent de la photo). Alt et
-          caption réécrits ci-dessous pour décrire ce qui est réellement
-          visible. Photo stock (dossier /photos/maquette/), jamais présentée
-          comme un chantier réel.
-          À GÉNÉRER si un visuel "expert + devis + plans" est souhaité ici :
-          « Photographie éditoriale documentaire, cadrage large en légère
-          plongée, montrant un ancien expert en chiffrage (silhouette
-          professionnelle sobre, 40-55 ans) penché sur un devis de rénovation
-          imprimé qu'il annote au stylo, avec des plans d'appartement dépliés
-          à côté sur la table. Document et plans entièrement fictifs et
-          anonymisés : aucun nom de société réelle, aucun logo, chiffres et
-          adresses génériques et non significatifs. Lumière naturelle douce
-          de jour, décor de bureau sobre. Palette ivoire / carbone avec
-          touche orange brûlé cohérente avec l'identité éditoriale du site.
-          Style photographique réaliste, pas d'illustration. Format
-          paysage 16:9. »
-        */}
         <MqFig
-          src="/photos/maquette/hero-renovation.jpg"
-          alt="Salon rénové de style haussmannien : parquet à chevrons, moulures d'origine restaurées et double porte-fenêtre sur balcon filant"
-          caption="Un salon abouti ne doit rien au hasard : chaque poste — parquet, moulures, menuiseries — a été lu et négocié avant d'être exécuté."
+          src="/photos/pedagogie/39-parcours-expertise-hero.jpeg"
+          alt="Ancien expert en chiffrage examinant un devis de rénovation ligne à ligne, plans d'appartement dépliés à côté"
+          caption="Lecture ligne à ligne d'un devis de rénovation : quantités, unités, hypothèses, exclusions. Document fictif et anonymisé."
           ratio="aspect-[16/9]"
         />
       </div>

@@ -210,9 +210,9 @@ export default function ChantiersComplexesPage() {
       <MqSection kicker="Gestion des aléas" title="Ce que documenter un aléa change concrètement">
         <div className="flex flex-col gap-8">
           <MqFig
-            src="/photos/chantiers/chPoteauAcierPlatinePied.jpeg"
-            alt="Pied de poteau acier scellé sur platine soudée, sol démoli autour, chantier réel"
-            caption="Aléa géré en cours de chantier : platine soudée découverte et scellée après ouverture du sol, avant rebouchage et traitement anticorrosion. Chantier réel des équipes partenaires."
+            src="/photos/pedagogie/40-chantiers-complexes-aleas-schema.jpeg"
+            alt="Les 4 étapes de gestion d'un aléa de chantier : suspension de la zone, photo datée, validation écrite du client, chiffrage de la reprise"
+            caption="Ce que documenter un aléa change concrètement. Schéma pédagogique."
             ratio="aspect-[16/9]"
           />
           <MqChecklist

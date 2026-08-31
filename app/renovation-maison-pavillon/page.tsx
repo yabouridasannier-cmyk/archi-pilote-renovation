@@ -37,13 +37,6 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
-            <div className="mt-6">
-              <MqFig
-                src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
-                alt="Mur dégarni jusqu'au support pour lecture du bâti, poutre de reprise apparente, chantier réel"
-                caption="Lecture du bâti : mur dégarni jusqu'au support pour vérifier son état réel avant de chiffrer la suite des travaux. Chantier réel des équipes partenaires."
-              />
-            </div>
           </div>
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Points singuliers de toiture et de façade</h3>

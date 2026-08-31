@@ -10,9 +10,9 @@ export const metadata: Metadata = {
 
 const PANORAMA = [
   {
-    src: "tendance-travertin-salle-bain",
-    alt: "Salle de bain contemporaine en travertin beige avec vasque en pierre massive et robinetterie en laiton brossé",
-    caption: "Travertin en salle d'eau : pierre naturelle appliquée en grand format, joints minces et traitement hydrofuge obligatoire avant mise en service.",
+    src: "pedagogie-travertin-macro",
+    alt: "Gros plan sur la texture du travertin naturel, alvéoles et veinage caractéristiques",
+    caption: "Travertin : pierre naturelle alvéolée, jointée en grand format, traitement hydrofuge obligatoire avant mise en service.",
   },
   {
     src: "tendance-zellige-credence",
@@ -20,9 +20,9 @@ const PANORAMA = [
     caption: "Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé.",
   },
   {
-    src: "tendance-beton-cire-sejour",
-    alt: "Séjour haussmannien avec sol en béton ciré gris clair, moulures d'origine au plafond et cheminée en marbre",
-    caption: "Béton ciré sur plancher ancien : ragréage fibré, primaire d'accroche et contrôle de la charge admissible avant application des couches.",
+    src: "pedagogie-beton-cire-macro",
+    alt: "Gros plan sur la texture du béton ciré, surface minérale continue sans joint",
+    caption: "Béton ciré : surface minérale continue sans joint, ragréage fibré et primaire d'accroche avant application des couches.",
   },
   {
     src: "detail-menuiserie-moulure",

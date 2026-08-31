@@ -43,8 +43,8 @@ const DEROULE = [
   },
   {
     src: "chantier-demolition",
-    alt: "Phase de démolition d'un logement ancien avec cloisons déposées, gravats en sacs et protections de sol",
-    caption: "Démolition sélective : dépose des cloisons non porteuses, tri et évacuation en sacs, protection intégrale des sols conservés.",
+    alt: "Phase de démolition d'un logement ancien, plafond ouvert jusqu'aux solives, gravats conditionnés en big bags avant évacuation",
+    caption: "Démolition en cours : plafond ouvert jusqu'aux solives, gravats triés et conditionnés en big bags pour évacuation.",
   },
   {
     src: "chantier-ouverture-mur-etaiement",
@@ -53,8 +53,8 @@ const DEROULE = [
   },
   {
     src: "chantier-ipn-habillage",
-    alt: "Poutre acier IPN posée au-dessus d'une ouverture entre deux pièces, en cours d'habillage en plaques de plâtre",
-    caption: "IPN scellée sur appuis maçonnés puis habillée par le plaquiste : coffrage coupe-feu et raccord d'enduit avant peinture.",
+    alt: "Poutre de reprise de charge apparente au-dessus d'une ouverture entre deux pièces, habillage métallique à fixations apparentes, pièce encore en cours de finition",
+    caption: "Poutre de reprise scellée sur ses appuis maçonnés et habillée d'un coffrage métallique à fixations apparentes : la pièce attend encore son revêtement de sol et ses finitions électriques.",
   },
   {
     src: "chantier-plomberie-encastree",
@@ -149,7 +149,7 @@ const COMPARATIFS: {
     },
     apres: {
       src: "chantier-ipn-habillage",
-      caption: "IPN scellée sur appuis maçonnés puis habillée par le plaquiste : coffrage coupe-feu et raccord d'enduit avant peinture.",
+      caption: "Poutre de reprise scellée sur ses appuis maçonnés, habillée d'un coffrage métallique à fixations apparentes.",
     },
   },
   {
@@ -334,9 +334,9 @@ export default function SavoirFaireAncienPage() {
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
         <MqFig
-          src="/photos/chantiers/chDressingNoyerMouluresFenetre.jpeg"
-          alt="Fenêtre ancienne à ferronnerie ouvragée et corniche moulurée au plafond, dans un appartement haussmannien en cours de pose de rangements"
-          caption="Fenêtre ancienne conservée avec sa ferronnerie et sa corniche moulurée en plafond, pendant la pose d'un rangement sur mesure au premier plan. Chantier réel des équipes partenaires."
+          src="/photos/pedagogie/41-savoir-faire-fenetre-hero.jpeg"
+          alt="Fenêtre ancienne parisienne restaurée à l'identique, petits bois fins et crémone en laiton patiné"
+          caption="Fenêtre ancienne restaurée à l'identique, avec crémone en laiton et double vitrage discret."
           ratio="aspect-[16/9]"
         />
       </div>
