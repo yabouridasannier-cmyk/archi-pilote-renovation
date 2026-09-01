@@ -169,6 +169,19 @@ export default function ParcoursExpertisePage() {
         lead="La confiance ne doit pas reposer sur des slogans mais sur des critères vérifiables. Voici ceux que nous appliquons à notre propre organisation et que nous recommandons d'exiger de tout interlocuteur de chantier."
       >
         <div className="flex flex-col gap-8">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 border border-line bg-surface rounded-[2px] p-6">
+            <div className="shrink-0 w-20 h-20 rounded-full bg-orange-deep/10 border border-orange-deep/30 flex items-center justify-center">
+              <span className="display text-[1.4rem] text-orange-deep">IA</span>
+            </div>
+            <div className="text-center sm:text-left">
+              <p className="text-[0.75rem] uppercase tracking-wide text-muted mb-1">Votre interlocuteur</p>
+              <h3 className="display text-[1.2rem] text-ivoire">Ilann Atlan</h3>
+              <p className="mt-2 text-muted text-[0.92rem] leading-relaxed max-w-xl">
+                C&apos;est lui qui pilote votre dossier, du premier rendez-vous à la réception des travaux : un interlocuteur identifié et
+                joignable, qui porte personnellement le suivi de votre projet plutôt qu&apos;une adresse générique.
+              </p>
+            </div>
+          </div>
           <MqChecklist
             items={[
               "Un auteur identifié et joignable, pas une adresse générique anonyme.",

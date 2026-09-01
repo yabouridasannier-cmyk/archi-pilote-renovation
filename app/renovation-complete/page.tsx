@@ -207,22 +207,57 @@ export default function Page() {
             },
           ]}
         />
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-5">
-          <MqFig
-            src="/photos/maquette/chantier-plomberie-encastree.jpg"
-            alt="Réseaux de plomberie encastrés en tubes multicouche rouges et bleus avec collecteur, avant fermeture des cloisons"
-            caption="Plomberie : principe de réseaux encastrés en multicouche depuis un collecteur, repérage chaud/froid avant fermeture. Illustration de référence, hors chantier documenté sur cette page."
-          />
-          <MqFig
-            src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg"
-            alt="Tableau électrique neuf et compteur intégrés dans un placard sur mesure, contrôle avant fermeture"
-            caption="Électricité : tableau et compteur vérifiés avant intégration dans le placard sur mesure. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/maquette/chantier-nappe-etancheite-douche.jpg"
-            alt="Natte d'étanchéité continue posée au sol et sur les murs d'une douche, avant carrelage"
-            caption="Étanchéité : natte continue et bandes d'angle contrôlées avant pose du carrelage."
-          />
+        <div className="mt-10 flex flex-col gap-10">
+          <div>
+            <h3 className="display text-[1.05rem] text-ivoire mb-4">Plomberie</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <MqFig
+                src="/photos/maquette/chantier-plomberie-encastree.jpg"
+                alt="Réseaux de plomberie encastrés en tubes multicouche rouges et bleus avec collecteur, avant fermeture des cloisons"
+                caption="Principe de réseaux encastrés en multicouche depuis un collecteur, repérage chaud/froid avant fermeture. Illustration de référence, hors chantier documenté sur cette page."
+              />
+              <MqFig
+                src="/photos/pedagogie/48-plomberie-collecteur-macro.jpeg"
+                alt="Gros plan d'un collecteur de plomberie multicouche avec départs rouges et bleus repérés, avant fermeture des cloisons"
+                caption="Détail d'un collecteur multicouche : chaque départ chaud/froid est repéré avant la fermeture du réseau. Illustration de référence, hors chantier documenté sur cette page."
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.05rem] text-ivoire mb-4">Électricité</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <MqFig
+                src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg"
+                alt="Tableau électrique neuf et compteur intégrés dans un placard sur mesure, contrôle avant fermeture"
+                caption="Tableau et compteur vérifiés avant intégration dans le placard sur mesure. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/pedagogie/49-electricite-tableau-macro.jpeg"
+                alt="Gros plan d'un tableau électrique ouvert avec disjoncteurs et câblage avant fermeture du coffret"
+                caption="Détail d'un tableau électrique avant fermeture : chaque circuit est repéré et protégé par son disjoncteur. Illustration de référence, hors chantier documenté sur cette page."
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.05rem] text-ivoire mb-4">Étanchéité</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <MqFig
+                src="/photos/maquette/chantier-nappe-etancheite-douche.jpg"
+                alt="Natte d'étanchéité continue posée au sol et sur les murs d'une douche, avant carrelage"
+                caption="Natte continue et bandes d'angle contrôlées avant pose du carrelage. Illustration de référence, hors chantier documenté sur cette page."
+              />
+              <MqFig
+                src="/photos/pedagogie/50-etancheite-angle-douche-macro.jpeg"
+                alt="Gros plan d'un angle de douche étanché avec bande d'angle armée avant carrelage"
+                caption="Renfort d'angle par bande armée : le point le plus exposé aux infiltrations est traité avant tout carrelage. Illustration de référence, hors chantier documenté sur cette page."
+              />
+              <MqFig
+                src="/photos/pedagogie/51-etancheite-passage-canalisation-macro.jpeg"
+                alt="Gros plan d'un passage de canalisation traité par manchette d'étanchéité avant carrelage"
+                caption="Passage de canalisation : la manchette d'étanchéité évite toute infiltration au point singulier avant carrelage. Illustration de référence, hors chantier documenté sur cette page."
+              />
+            </div>
+          </div>
         </div>
         <div className="mt-10">
           <MqFig

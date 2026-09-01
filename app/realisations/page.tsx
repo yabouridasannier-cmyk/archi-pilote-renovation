@@ -61,6 +61,15 @@ const PHOTOS_CHANTIERS = [
   { src: `${CH}/chCuisineBleuCanardBrillante.jpeg`, alt: "Cuisine laquée bleu canard avec plan de travail bois massif et four encastré", cap: "Cuisine laquée bleu canard, façades brillantes et plan de travail bois massif, four encastré et rangements muraux." },
   { src: `${CH}/chCuisineNoireBrillantePoigneesCuivrees.jpeg`, alt: "Cuisine laquée noire brillante avec filets de poignées cuivrées et sol en carreaux de ciment", cap: "Cuisine laquée noire brillante avec filets de poignées cuivrées, sol en carreaux de ciment à motifs." },
   { src: `${CH}/chCuisineSejourParquetChevrons.jpeg`, alt: "Cuisine ouverte sur séjour avec parquet posé à chevrons", cap: "Cuisine ouverte sur séjour, façades foncées, plan de travail clair et parquet posé à chevrons." },
+  // 01/09 : deux cuisines réelles reçues du client dans un nouvel export (dossier "mur-porteur") ont
+  // été vérifiées avant ajout — comparaison visuelle directe, même angle, mêmes éléments au plan de
+  // travail : il s'agit des mêmes deux chantiers que chCuisinePlanNoirFacadesCremeVelux.jpeg et
+  // chCuisineBlancheBrillanteMarbre.jpeg (déjà utilisées sur second-oeuvre et achat-direct-materiaux),
+  // simplement réexportées par le client sous un nouveau nom de fichier (hash MD5 différent, contenu
+  // visuel quasi identique). Ajout des DEUX fichiers déjà vétés ici plutôt que doublons quasi-pixel des
+  // mêmes cuisines, conformément au nettoyage du 31/08 documenté dans second-oeuvre/page.tsx.
+  { src: `${CH}/chCuisinePlanNoirFacadesCremeVelux.jpeg`, alt: "Cuisine sous comble avec plan de travail noir mat, îlot central et fenêtre de toit, four et micro-ondes encastrés en colonne", cap: "Cuisine sous comble livrée, plan de travail noir mat et îlot central, four et micro-ondes encastrés en colonne, éclairée par une fenêtre de toit." },
+  { src: `${CH}/chCuisineBlancheBrillanteMarbre.jpeg`, alt: "Cuisine laquée blanche brillante avec bar en bois massif, sol en marbre et suspensions noires", cap: "Cuisine laquée blanche brillante, bar en bois massif prolongeant le plan de travail, sol en marbre et suspensions noires." },
   { src: `${CH}/chSdbVasquesPoseMeubleBeige.jpeg`, alt: "Salle de bain en cours de finition avec meuble sur mesure beige et vasques à poser", cap: "Salle de bain en cours de finition : meuble sur mesure beige, vasques à poser et faïence grand format." },
   { src: `${CH}/chOptiqueComptoirCarcasseBrute.jpeg`, alt: "Carcasse en cours de montage du comptoir d'accueil d'un local commercial d'optique", cap: "Agencement d'un local commercial (opticien) : carcasse du comptoir d'accueil en cours de montage." },
   { src: `${CH}/chOptiqueComptoirAccueilFini.jpeg`, alt: "Comptoir d'accueil livré dans un local commercial d'optique, habillage bois et laque terminés", cap: "Comptoir d'accueil livré dans le même local commercial : habillage bois et laque terminés." },
@@ -86,6 +95,10 @@ const PHOTOS_CHANTIERS = [
   { src: `${CH}/chEscalierOuvertConstruction.jpeg`, alt: "Escalier ouvert en cours de construction, chantier réel", cap: "Escalier à structure ouverte en cours de construction." },
   { src: `${CH}/chCouloirParquetChevronsPorteBois.jpeg`, alt: "Couloir avec parquet à chevrons et porte bois, chantier réel", cap: "Couloir livré avec parquet à chevrons et porte bois sur mesure." },
   { src: `${CH}/chCuisineAnthraciteCarreauxVue2.jpeg`, alt: "Cuisine anthracite avec carreaux de ciment, autre vue, chantier réel", cap: "Cuisine laquée anthracite livrée, autre vue avec sol en carreaux de ciment." },
+  { src: `${CH}/chBoiserieCourbeNicheEtageres.jpeg`, alt: "Boiserie courbe sur mesure en placage chêne avec niche de rangement intégrée, chantier réel", cap: "Boiserie courbe sur mesure, dessinée pour épouser l'angle réel de la pièce, avec niche de rangement à casiers asymétriques intégrée." },
+  { src: `${CH}/chVasqueDoubleBoisCannele.jpeg`, alt: "Meuble vasque double sur mesure en chêne cannelé avec plan en marbre, chantier réel", cap: "Meuble vasque double sur mesure, façade en chêne cannelé et plan de toilette en marbre." },
+  { src: `${CH}/chBibliothequeChenePieceComplete.jpeg`, alt: "Bibliothèque sur mesure du sol au plafond en placage chêne occupant une pièce entière, chantier réel", cap: "Bibliothèque sur mesure occupant une pièce entière, du sol au plafond, placage chêne, parquet en cours de pose." },
+  { src: `${CH}/chRangementRadiateurEtageresOuvertes.jpeg`, alt: "Ensemble de rangements sur mesure avec étagères ouvertes et niche technique pour radiateur, chantier réel", cap: "Ensemble de rangements sur mesure : étagères ouvertes, niche technique à claire-voie pour le radiateur et dressing fermé sur la même façade." },
 ];
 
 const DEROULE = [

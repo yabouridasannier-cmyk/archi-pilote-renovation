@@ -140,21 +140,12 @@ export default function ChantiersComplexesPage() {
 
       <MqSection kicker="Expertise mobilisée" title="Architecte DPLG et ingénieur structure, chacun dans son périmètre">
         <div className="flex flex-col gap-8">
-          {/*
-            À GÉNÉRER : photo RÉELLE (jamais de génération IA, jamais de faux document) d'une
-            note de calcul anonymisée posée près d'une poutre ou d'un portique réellement posé.
-            Alt conseillé : "Contrôle d'une reprise de structure avec note de calcul."
-            Aucune photo de ce type n'existe dans public/photos/chantiers/ (re-vérifié le 01/09 sur
-            les ~200 fichiers : recherche "note", "calcul", "document", "plan", "syndic", "architecte"
-            — aucune correspondance pertinente).
-            Les deux photos qui étaient passées par cet emplacement (chPortiqueAcierAngleMurDegarni2.jpeg
-            et chPoutreAcierPlafondMurDegarni.jpeg) ont depuis été retirées de la page entièrement
-            (commit c3d0c00, "paire de photos retirée sous Aléas techniques probables — redondant"),
-            pas déplacées : elles ne sont plus utilisées nulle part sur cette page. Elles montraient un
-            ouvrage structurel réel mais pas la répartition des rôles architecte/ingénieur ni une note de
-            calcul, donc elles ne représentaient de toute façon pas le sujet de cette section. Section
-            volontairement sans photo tant qu'aucun visuel honnête n'existe pour ce sujet précis.
-          */}
+          <MqFig
+            src="/photos/pedagogie/45-chantiers-complexes-roles-dplg-ingenieur.jpeg"
+            alt="Schéma en deux colonnes : Architecte DPLG (conception, dépôt de permis, urbanisme) et Ingénieur structure (note de calcul, descente de charges, dimensionnement)"
+            caption="Répartition des rôles : conception côté architecte, calcul côté ingénieur structure. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
               <h3 className="display text-[1.15rem] text-ivoire">Ingénieur structure partenaire</h3>

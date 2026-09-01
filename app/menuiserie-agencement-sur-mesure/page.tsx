@@ -154,7 +154,7 @@ export default function Page() {
       <MqSection
         kicker="GALERIE"
         title="Réalisations d'agencement livrées"
-        lead="Sélection resserrée à douze réalisations, regroupées par cuisine, dressing, bibliothèque et espace commercial."
+        lead="Sélection resserrée à quatorze réalisations, regroupées par cuisine, dressing, bibliothèque et espace commercial."
         wide
       >
         <div className="flex flex-col gap-12">
@@ -196,6 +196,11 @@ export default function Page() {
                 alt="Dressing et enfilade en placage noyer livrés dans un appartement ancien, chantier réel"
                 caption="Dressing et enfilade en placage noyer, moulures d'origine conservées en fond. Chantier réel des équipes partenaires."
               />
+              <MqFig
+                src="/photos/chantiers/chDressingBeigeAngleLumineux.jpeg"
+                alt="Angle de dressing sur mesure laqué taupe avec éclairage intégré en corniche, chantier réel"
+                caption="Dressing d'angle laqué taupe, éclairage intégré en corniche et poignée creusée sans ferrure apparente. Chantier réel des équipes partenaires."
+              />
             </div>
           </div>
           <div>
@@ -215,6 +220,11 @@ export default function Page() {
                 src="/photos/chantiers/chBibliothequePanneauxMoulures.jpeg"
                 alt="Bibliothèque sur mesure avec portes à panneaux moulurés et parties vitrées, chantier réel"
                 caption="Bibliothèque à portes moulurées et parties vitrées, style traditionnel. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chEtagereCactusSurMesure.jpeg"
+                alt="Étagère murale sur mesure taillée en forme de cactus, bois brut avant finition, chantier réel"
+                caption="Découpe sur mesure : étagère murale en forme de cactus, illustrant la liberté de forme permise par la fabrication en atelier. Chantier réel des équipes partenaires."
               />
             </div>
           </div>
