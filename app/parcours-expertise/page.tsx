@@ -169,19 +169,19 @@ export default function ParcoursExpertisePage() {
         lead="La confiance ne doit pas reposer sur des slogans mais sur des critères vérifiables. Voici ceux que nous appliquons à notre propre organisation et que nous recommandons d'exiger de tout interlocuteur de chantier."
       >
         <div className="flex flex-col gap-8">
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 border border-line bg-surface rounded-[2px] p-6">
-            <div className="shrink-0 w-20 h-20 rounded-full border border-orange-deep/30 overflow-hidden">
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 border border-line bg-surface rounded-[2px] p-6 sm:p-8">
+            <div className="shrink-0 w-40 sm:w-48 aspect-[3/4] border border-orange-deep/30 rounded-[2px] overflow-hidden">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/photos/equipe/ilann-atlan.jpg"
                 alt="Ilann Atlan, votre interlocuteur ARCHI PILOTE RÉNOVATION"
-                className="w-full h-full object-cover object-[center_18%]"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="text-center sm:text-left">
               <p className="text-[0.75rem] uppercase tracking-wide text-muted mb-1">Votre interlocuteur</p>
-              <h3 className="display text-[1.2rem] text-ivoire">Ilann Atlan</h3>
-              <p className="mt-2 text-muted text-[0.92rem] leading-relaxed max-w-xl">
+              <h3 className="display text-[1.5rem] text-ivoire">Ilann Atlan</h3>
+              <p className="mt-3 text-muted text-[0.95rem] leading-relaxed max-w-xl">
                 C&apos;est lui qui pilote votre dossier, du premier rendez-vous à la réception des travaux : un interlocuteur identifié et
                 joignable, qui porte personnellement le suivi de votre projet plutôt qu&apos;une adresse générique.
               </p>
