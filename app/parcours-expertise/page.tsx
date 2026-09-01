@@ -170,8 +170,13 @@ export default function ParcoursExpertisePage() {
       >
         <div className="flex flex-col gap-8">
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 border border-line bg-surface rounded-[2px] p-6">
-            <div className="shrink-0 w-20 h-20 rounded-full bg-orange-deep/10 border border-orange-deep/30 flex items-center justify-center">
-              <span className="display text-[1.4rem] text-orange-deep">IA</span>
+            <div className="shrink-0 w-20 h-20 rounded-full border border-orange-deep/30 overflow-hidden">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/photos/equipe/ilann-atlan.jpg"
+                alt="Ilann Atlan, votre interlocuteur ARCHI PILOTE RÉNOVATION"
+                className="w-full h-full object-cover object-[center_18%]"
+              />
             </div>
             <div className="text-center sm:text-left">
               <p className="text-[0.75rem] uppercase tracking-wide text-muted mb-1">Votre interlocuteur</p>
