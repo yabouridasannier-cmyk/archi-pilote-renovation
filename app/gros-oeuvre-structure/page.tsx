@@ -175,6 +175,20 @@ export default function Page() {
           que chPlancherSolivesBeton2.jpeg, pas des solives bois — la légende "solives bois rangées"
           ne correspondait pas au contenu réel de la photo. chDemolitionBoiseriesHaussmannien.jpeg
           retiré car hors-sujet plancher (boiseries murales).
+
+          01/09 : correctif sur le pairage de doublons décrit ci-dessus (29/08), qui était inexact.
+          Empreinte MD5 vérifiée sur toute la photothèque + confirmation visuelle œil nu :
+          chIsolationPhoniqueGranulesPlancher.jpeg (utilisée juste en dessous, légende "Pendant")
+          est en réalité identique au bit près à chDemolitionBoiseriesHaussmannien.jpeg — pas à
+          chIsolationPhoniqueGranulesPlancher2.jpeg comme indiqué le 29/08. Et chPlancherSolivesBeton2.jpeg
+          (utilisée juste en dessous, légende "Avant") est identique à chIsolationPhoniqueGranulesPlancher2.jpeg.
+          chSousCouchePanneauxOSB.jpeg et chSousCouchePanneauxOSB2.jpeg restent bien identiques entre elles.
+          Dans les 3 cas, l'autre moitié de la paire avait déjà été retirée de cette page le 29/08 :
+          aucun doublon visuel n'est donc actuellement affiché ici pour ces 3 paires, et les légendes des
+          deux photos utilisées ci-dessous correspondent bien à ce qu'elles montrent réellement (granulés
+          blancs en vrac sur plancher / corps creux béton entre solives dans un couloir). Vérification
+          élargie : les 22 images utilisées sur cette page entière (chantiers + schémas + pédagogie) ont
+          chacune un MD5 distinct — aucun autre doublon détecté sur cette page.
         */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
           <MqFig

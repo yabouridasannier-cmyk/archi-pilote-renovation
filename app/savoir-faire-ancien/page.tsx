@@ -483,11 +483,22 @@ export default function SavoirFaireAncienPage() {
             cette continuité sur un seul profil. Les seuls fichiers contenant "Moulures" dans leur nom
             (chDressingNoyerMoulures2.jpeg, chDressingNoyerMouluresAngle1.jpeg,
             chDressingBufetNoyerMoulures1.jpeg, chDressingNoyerBufetMoulures4.jpeg,
+            chDressingBufetNoyerMoulures3.jpeg, chDressingNoyerMouluresFenetre.jpeg,
             chBibliothequePanneauxMoulures.jpeg) montrent des moulures de dressings/bibliothèques en
             menuiserie (portes de placard) et non une restitution de corniche/rosace en plâtre relevée
             puis moulée par la maison Guimier — sujet hors-propos, à ne pas réutiliser ici pour ne pas
-            présenter une fausse séquence. Par ailleurs chDressingBufetNoyerMoulures1.jpeg et
-            chDressingNoyerBufetMoulures4.jpeg sont la même photo dupliquée sous deux noms différents.
+            présenter une fausse séquence.
+
+            Contrôle MD5 complémentaire (01/09/2026) sur ce lot : il ne contient en réalité que 3 clichés
+            distincts, chacun enregistré deux fois sous un nom différent —
+            chDressingBufetNoyerMoulures1.jpeg ≡ chDressingNoyerBufetMoulures4.jpeg,
+            chDressingNoyerMoulures2.jpeg ≡ chDressingNoyerMouluresAngle1.jpeg, et
+            chDressingBufetNoyerMoulures3.jpeg ≡ chDressingNoyerMouluresFenetre.jpeg (l'ancien hero de
+            cette page, remplacé depuis par le schéma généré /photos/pedagogie/41-savoir-faire-fenetre-hero.jpeg).
+            chBibliothequePanneauxMoulures.jpeg a un hash distinct des 6 autres et sert déjà sur
+            /menuiserie-agencement-sur-mesure. Aucun des 6 noms dupliqués n'est utilisé comme src sur la
+            présente page : pas de doublon visible pour le visiteur ici, ce lot entier reste hors-sujet
+            et à ne pas réutiliser.
 
             Réel à privilégier : demander aux équipes partenaires de photographier, sur un seul et même
             chantier, le fragment avant dépose, la prise d'empreinte/le relevé du profil, le moule ou le

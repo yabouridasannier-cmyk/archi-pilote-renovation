@@ -82,7 +82,7 @@ export default function Page() {
         />
         <div className="mt-10">
           <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
-            Six photos d'un même chantier de dressing sur mesure, de la matière première à la livraison.
+            Cinq photos d'un même chantier de dressing sur mesure, de la matière première à la livraison.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             <MqFig
@@ -99,11 +99,6 @@ export default function Page() {
               src="/photos/chantiers/chDressingNoyerCarcasseTringle.jpeg"
               alt="Carcasse de dressing en placage noyer avec tringle et étagères, en cours de montage, chantier réel"
               caption="Assemblage : tringle de penderie et étagères réglables posées avant les façades. Chantier réel des équipes partenaires."
-            />
-            <MqFig
-              src="/photos/chantiers/chDressingNoyerOuvertOutils.jpeg"
-              alt="Dressing en placage noyer ouvert, outils de pose au sol, chantier réel"
-              caption="Pose : façades montées, outils encore au sol avant réception. Chantier réel des équipes partenaires."
             />
             <MqFig
               src="/photos/chantiers/chDetailTiroirCoulisses.jpeg"
