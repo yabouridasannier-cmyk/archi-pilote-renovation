@@ -25,29 +25,28 @@ const PANORAMA = [
     caption: "Béton ciré : surface minérale continue sans joint, ragréage fibré et primaire d'accroche avant application des couches.",
   },
   {
-    src: "/photos/chantiers/chHdgChambrePlacardMoulure.jpeg",
-    alt: "Placard toute hauteur à panneaux moulurés dans une chambre ancienne parisienne, corniche en plâtre et appliques en laiton",
+    src: "/photos/maquette/detail-menuiserie-moulure.jpg",
+    alt: "Gros plan sur un profil de moulure en chêne et une poignée en laiton patiné",
     caption:
-      "Menuiserie à panneaux moulurés : placard toute hauteur couronné d'une corniche, laqué dans le ton des boiseries et arrêté au nu du plafond. Chantier réel des équipes partenaires.",
+      "Détail de menuiserie : profils de moulure relevés sur l'existant, chambranle reconstitué et quincaillerie laiton patiné posée à l'ancienne.",
   },
   {
-    src: "/photos/chantiers/chHdgChambreDressingChevrons.jpeg",
-    alt: "Chambre ancienne parisienne : parquet chêne clair en point de Hongrie, dressing et tablettes en chêne, cheminée de marbre et trumeau mouluré",
-    caption:
-      "Chêne clair au sol et en menuiserie : parquet en point de Hongrie, dressing et tablettes en chêne, sous corniches et trumeau en plâtre mouluré. Chantier réel des équipes partenaires.",
+    src: "/photos/maquette/pedagogie-chene-macro.jpg",
+    alt: "Gros plan sur le grain et le veinage naturels d'un chêne massif huilé",
+    caption: "Chêne massif huilé : grain et veinage naturels, la matière noble travaillée dans les volumes d'origine.",
   },
   {
     src: "/photos/maquette/pedagogie-chaux-macro.jpg",
     alt: "Gros plan sur la texture d'un enduit à la chaux beige rosé, relief mat de la taloche",
     caption: "Enduit à la chaux : texture mate et minérale, relief de la taloche, signature des intérieurs français 2026-2027.",
   },
-  {
-    src: "/photos/chantiers/chHdgCuisineOnyxParquetVersailles.jpeg",
-    alt: "Cuisine sur mesure en chêne clair avec panneau mural en onyx veiné, plan de travail dans la même pierre et sol en panneaux de Versailles",
-    caption:
-      "Cuisine sur mesure en chêne clair : panneau mural toute hauteur et plan de travail en onyx à veines horizontales, caisson d'angle arrondi, sol en panneaux de Versailles. Chantier réel des équipes partenaires.",
-  },
 ];
+
+/* 02/09 : cette grille montre LA MATIÈRE en gros plan, pas des pièces livrées.
+   Trois vignettes avaient été remplacées par des photos de réalisations
+   (chambres, cuisine) — hors sujet ici, signalé par le client : les
+   réalisations ont leur place sur /realisations, pas dans un panorama de
+   matériaux. Les macros de matière sont rétablies. */
 
 const FAQ = [
   {
@@ -272,11 +271,6 @@ export default function TendancesMateriauxFrancaisPage() {
             src="/photos/chantiers/chSdbCarreauxCiment.jpeg"
             alt="Détail réel d'une douche en carreaux de ciment à motifs patchwork, avec vasque en pierre et meuble en teck"
             caption="Douche en carreaux de ciment à motifs patchwork : calepinage anticipé pour aligner les dessins entre murs, vasque en pierre sur meuble bois. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chHdgSalleEauPierreDouche.jpeg"
-            alt="Salle d'eau réelle en pierre calcaire beige : fond de douche en panneau cannelé, vasque-auge taillée dans la masse et robinetterie en laiton patiné"
-            caption="Pierre calcaire beige en grand format : fond de douche en panneau cannelé, vasque-auge taillée dans la masse et robinetterie murale encastrée en laiton patiné. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/chantiers/chHdgDetailMarbreGrisVasque.jpeg"
