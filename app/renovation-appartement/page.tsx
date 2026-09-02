@@ -63,6 +63,36 @@ export default function Page() {
             </div>
           ))}
         </div>
+
+        {/*
+          Ajouté le 02/09/2026 — les trois familles de contraintes ci-dessus n'étaient illustrées par
+          aucune photographie. Les trois clichés suivants viennent d'un même appartement haussmannien
+          parisien livré par les équipes partenaires ; chacun a été ouvert et décrit avant rédaction de
+          sa légende, qui ne mentionne que ce qui est visible à l'image.
+
+          Honnêteté : ces photos montrent le RÉSULTAT livré, pas la contrainte elle-même. Aucune ne
+          documente le relevé des chutes, une note de calcul de structure ni un débit de ventilation —
+          le titre de la grille le dit explicitement, et aucune légende n'affirme qu'une pièce d'eau a
+          été déplacée ou qu'un mur a été ouvert, ce que les images ne permettent pas d'établir.
+        */}
+        <p className="eyebrow mt-12">Ce que ces contraintes donnent une fois le logement livré</p>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-5">
+          <MqFig
+            src="/photos/chantiers/chHdgCuisineOnyxParquetVersailles.jpeg"
+            alt="Cuisine implantée en linéaire le long du couloir d'un appartement haussmannien livré, plan de travail et crédence en pierre veinée, meubles hauts couronnés d'une corniche, parquet chêne en panneaux de Versailles"
+            caption="Implantation : cuisine développée en linéaire le long du couloir d'entrée, plan de travail et crédence taillés dans la même pierre veinée, meubles hauts couronnés d'une corniche alignée sur celle du couloir, parquet chêne posé en panneaux de Versailles. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chHdgSdbMarbreGrisPassageChambre.jpeg"
+            alt="Salle d'eau en marbre gris ouverte en enfilade d'une chambre haussmannienne, douche à l'italienne et vasque monolithique, radiateur en fonte à colonnes visible côté chambre"
+            caption="Pièce d'eau : salle d'eau implantée en enfilade d'une chambre, douche à l'italienne et vasque monolithique taillées dans le même marbre gris, robinetterie murale en laiton et huisserie doublée de bois clair. Côté chambre, radiateur en fonte à colonnes maintenu en place et parquet chêne à chevrons. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chHdgSalonBoucleAppliquesBronze.jpeg"
+            alt="Salon haussmannien livré, grille de ventilation encastrée à fleur de mur au-dessus de la porte, corniche sculptée et panneaux moulurés conservés, grande glace à cadre mouluré et parquet chêne à chevrons"
+            caption="Ventilation : la grille est encastrée à fleur du panneau mural au-dessus de la porte, sans traversée de la corniche sculptée ni des moulures conservées. Grande glace à cadre mouluré maintenue en place, portes-fenêtres à volets intérieurs en bois et parquet chêne à chevrons. Chantier réel des équipes partenaires."
+          />
+        </div>
       </MqSection>
 
       <MqSection
@@ -195,6 +225,27 @@ export default function Page() {
             src="/photos/chantiers/chSdbVasquesPoseMeubleBeige.jpeg"
             alt="Salle de bains en cours d'installation, meuble beige et vasques posées, câblages en attente"
             caption="Exécution pilotée : meuble et vasques posés, suivi quotidien avant raccordement final. Chantier réel des équipes partenaires."
+          />
+          {/*
+            Ajouté le 02/09/2026 — deux photographies d'une salle d'eau EN COURS de pose, sur le
+            chantier haussmannien parisien livré par les équipes partenaires. Elles documentent
+            l'étape 6 (« Exécution pilotée et suivi quotidien » : protection et points de contrôle
+            avant finition), qui n'était illustrée que par une seule vignette.
+
+            Les deux clichés montrent la même pièce à la même phase — c'est écrit dans les légendes.
+            Aucune ne présente un ouvrage livré : le film de protection au sol, le receveur bâché, la
+            découpe brute du plan vasque et l'absence de robinetterie sont visibles à l'image et
+            explicitement mentionnés, pour qu'aucun visiteur ne prenne ces vues pour une réception.
+          */}
+          <MqFig
+            src="/photos/chantiers/chHdgSdbMarbreProfilesLaitonPose.jpeg"
+            alt="Salle d'eau en cours de pose, murs en marbre beige grand format, profilés en laiton aux arêtes, plan vasque en marbre percé et découpé, vasque et robinetterie non posées"
+            caption="Point de contrôle avant finition : dalles de marbre posées à joints alignés, profilés en laiton en arêtes et en nez de tablette, plan vasque percé et sa découpe ovale encore brute. Ouvrage non terminé — ni vasque, ni robinetterie, ni éclairage définitif. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chHdgDoucheMarbreLaitonProtection.jpeg"
+            alt="Niche de douche de la même salle d'eau en cours, parois en marbre beige et profilés laiton, receveur et sol recouverts d'un film de protection, spot de chantier provisoire"
+            caption="Même pièce, même phase : la niche de douche est habillée de marbre et de profilés en laiton, receveur et sol restent sous film de protection jusqu'à la fin des interventions, l'éclairage est encore provisoire. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/chantiers/chCuisineCremeIlot.jpeg"

@@ -258,6 +258,42 @@ export const PHOTOS = {
   chPoutreAcierProfilVueLongue: "/photos/chantiers/chPoutreAcierProfilVueLongue.jpeg",
   pedaJointEpoxyMacro: "/photos/pedagogie/33-blog-joint-epoxy-macro.jpeg",
   pedaJointCimentMacro: "/photos/pedagogie/34-blog-joint-ciment-macro.jpeg",
+
+  /* Réalisations haut de gamme envoyées par le client le 01/09/2026 (mail
+     « Photo haut-de-gamme ») : appartement haussmannien parisien livré.
+     Deux d'entre elles montrent un chantier ENCORE EN COURS et ne doivent pas
+     être légendées comme livrées — chHdgSdbMarbreProfilesLaitonPose et
+     chHdgDoucheMarbreLaitonProtection (film de protection au sol). */
+  chHdgChambreBalconApplique: "/photos/chantiers/chHdgChambreBalconApplique.jpeg",
+  chHdgChambrePlacardMoulure: "/photos/chantiers/chHdgChambrePlacardMoulure.jpeg",
+  chHdgSuiteMarbreNoirBaignoire: "/photos/chantiers/chHdgSuiteMarbreNoirBaignoire.jpeg",
+  chHdgChambreTeteVeloursMarbre: "/photos/chantiers/chHdgChambreTeteVeloursMarbre.jpeg",
+  chHdgSdbMarbreNoirDoubleVasque: "/photos/chantiers/chHdgSdbMarbreNoirDoubleVasque.jpeg",
+  chHdgSdbMarbreClairBaignoire: "/photos/chantiers/chHdgSdbMarbreClairBaignoire.jpeg",
+  chHdgChambreVeloursTaupeBalcon: "/photos/chantiers/chHdgChambreVeloursTaupeBalcon.jpeg",
+  chHdgChambreLustreSdbOuverte: "/photos/chantiers/chHdgChambreLustreSdbOuverte.jpeg",
+  chHdgDetailCeramiqueRobinetterie: "/photos/chantiers/chHdgDetailCeramiqueRobinetterie.jpeg",
+  chHdgCuisineOnyxParquetVersailles: "/photos/chantiers/chHdgCuisineOnyxParquetVersailles.jpeg",
+  chHdgSejourCuisineOnyxBanquette: "/photos/chantiers/chHdgSejourCuisineOnyxBanquette.jpeg",
+  chHdgEntreeCouloirCuisineOnyx: "/photos/chantiers/chHdgEntreeCouloirCuisineOnyx.jpeg",
+  chHdgDiptyqueChambreSdbBaignoire: "/photos/chantiers/chHdgDiptyqueChambreSdbBaignoire.jpeg",
+  chHdgDetailNicheOnyxCheminee: "/photos/chantiers/chHdgDetailNicheOnyxCheminee.jpeg",
+  chHdgSalleEauPierreDouche: "/photos/chantiers/chHdgSalleEauPierreDouche.jpeg",
+  chHdgDetailMarbreGrisVasque: "/photos/chantiers/chHdgDetailMarbreGrisVasque.jpeg",
+  chHdgDiptyqueSalonMiroirBalcon: "/photos/chantiers/chHdgDiptyqueSalonMiroirBalcon.jpeg",
+  chHdgChambreVeloursNicheBureau: "/photos/chantiers/chHdgChambreVeloursNicheBureau.jpeg",
+  chHdgSalonSalleMangerMoulures: "/photos/chantiers/chHdgSalonSalleMangerMoulures.jpeg",
+  chHdgSdbMarbreGrisPassageChambre: "/photos/chantiers/chHdgSdbMarbreGrisPassageChambre.jpeg",
+  chHdgSalleMangerTableDressee: "/photos/chantiers/chHdgSalleMangerTableDressee.jpeg",
+  chHdgSalonBoucleAppliquesBronze: "/photos/chantiers/chHdgSalonBoucleAppliquesBronze.jpeg",
+  chHdgSdbMarbreProfilesLaitonPose: "/photos/chantiers/chHdgSdbMarbreProfilesLaitonPose.jpeg",
+  chHdgChambreLattesBoisTv: "/photos/chantiers/chHdgChambreLattesBoisTv.jpeg",
+  chHdgChambreLattesCacheRadiateur: "/photos/chantiers/chHdgChambreLattesCacheRadiateur.jpeg",
+  chHdgSalleMangerSuspensionAlbatre: "/photos/chantiers/chHdgSalleMangerSuspensionAlbatre.jpeg",
+  chHdgChambreChemineeMiroirMoulure: "/photos/chantiers/chHdgChambreChemineeMiroirMoulure.jpeg",
+  chHdgDoucheMarbreLaitonProtection: "/photos/chantiers/chHdgDoucheMarbreLaitonProtection.jpeg",
+  chHdgChambreCapitonneeSuspension: "/photos/chantiers/chHdgChambreCapitonneeSuspension.jpeg",
+  chHdgChambreDressingChevrons: "/photos/chantiers/chHdgChambreDressingChevrons.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

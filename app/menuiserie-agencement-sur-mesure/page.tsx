@@ -126,6 +126,13 @@ export default function Page() {
               Dressings toute hauteur en chêne huilé, îlots à tiroirs, façades cannelées, éclairage intégré et
               penderies dimensionnées sur les usages réels du foyer.
             </p>
+            <div className="mt-2">
+              <MqFig
+                src="/photos/chantiers/chHdgSuiteMarbreNoirBaignoire.jpeg"
+                alt="Suite parentale avec dressings toute hauteur en placage bois clair à poignées laiton pleine hauteur, colonne d'étagères en chêne et double porte à panneaux moulurés"
+                caption="Suite parentale : dressings toute hauteur en placage bois clair posés au nu du panneautage, poignées laiton pleine hauteur et colonne d'étagères en chêne séparant la chambre de la salle de bains ouverte. Chantier réel des équipes partenaires."
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-2">
             <h3 className="display text-[1.15rem] text-ivoire">Cuisines et façades sur mesure</h3>
@@ -133,6 +140,13 @@ export default function Page() {
               Caissons standards optimisés, façades en chêne massif, en placage ou en laqué, plinthes ajustées,
               joues d'habillage et plans en pierre naturelle ou en stratifié compact.
             </p>
+            <div className="mt-2">
+              <MqFig
+                src="/photos/chantiers/chHdgCuisineOnyxParquetVersailles.jpeg"
+                alt="Cuisine à façades en placage bois clair sans poignée apparente, colonnes toute hauteur montées sous la corniche et plan de travail en pierre naturelle rubanée"
+                caption="Cuisine sur mesure : colonnes toute hauteur en placage bois clair ouvrant par gorge en creux, sans poignée apparente, retour de meuble arrondi et plan de travail taillé dans la même pierre rubanée que la crédence. Chantier réel des équipes partenaires."
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-2">
             <h3 className="display text-[1.15rem] text-ivoire">Bibliothèques et rangements de couloir</h3>
@@ -140,6 +154,13 @@ export default function Page() {
               Rangements intégrés du sol au plafond dans les circulations et les retours de cheminée : de la
               surface récupérée sans réduire visuellement le volume.
             </p>
+            <div className="mt-2">
+              <MqFig
+                src="/photos/chantiers/chHdgChambreDressingChevrons.jpeg"
+                alt="Étagères en chêne en porte-à-faux sur un retour de cloison, à côté d'un dressing toute hauteur en placage bois clair, sous une corniche moulurée conservée"
+                caption="Rangements intégrés : étagères en chêne en porte-à-faux sur un retour de cloison et dressing toute hauteur en placage bois clair, l'ensemble s'arrêtant sous la corniche moulurée conservée. Chantier réel des équipes partenaires."
+              />
+            </div>
           </div>
           <div className="flex flex-col gap-2">
             <h3 className="display text-[1.15rem] text-ivoire">Menuiseries patrimoniales</h3>
@@ -147,6 +168,13 @@ export default function Page() {
               Portes à panneaux, chambranles profilés, plinthes hautes, fenêtres reproduites à l'identique avec
               crémones en laiton et moulures en plâtre traditionnel de la maison Guimier.
             </p>
+            <div className="mt-2">
+              <MqFig
+                src="/photos/chantiers/chHdgChambrePlacardMoulure.jpeg"
+                alt="Placard toute hauteur à façades blanches moulurées reprenant le dessin des panneaux de la pièce, avec imposte au-dessus des vantaux et corniche redescendue en retour"
+                caption="Menuiserie accordée à l'existant : placard toute hauteur dont les façades moulurées reprennent le dessin des panneaux de la pièce, imposte au-dessus des vantaux, corniche redescendue en retour sur le caisson et radiateur en fonte ancien conservé. Chantier réel des équipes partenaires."
+              />
+            </div>
           </div>
         </div>
       </MqSection>
@@ -154,7 +182,7 @@ export default function Page() {
       <MqSection
         kicker="GALERIE"
         title="Réalisations d'agencement livrées"
-        lead="Sélection resserrée à quatorze réalisations, regroupées par cuisine, dressing, bibliothèque et espace commercial."
+        lead="Vingt-deux vues d'ouvrages d'agencement, regroupées par cuisine, dressing, bibliothèque, espace commercial, agencements d'appartement ancien et habillages bois."
         wide
       >
         <div className="flex flex-col gap-12">
@@ -245,6 +273,64 @@ export default function Page() {
                 src="/photos/chantiers/chOptiqueAccueilFinition.jpeg"
                 alt="Finition de l'accueil d'un local commercial d'optique, chantier réel"
                 caption="Finition de l'espace d'accueil, local commercial d'optique. Chantier réel des équipes partenaires."
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-5">Agencements d'un appartement ancien parisien</h3>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
+              Six ouvrages d'un appartement ancien parisien livré : rangements toute hauteur, niches menuisées et
+              détails d'exécution, tous dessinés sur le relevé de volumes anciens jamais d'équerre.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <MqFig
+                src="/photos/chantiers/chHdgSejourCuisineOnyxBanquette.jpeg"
+                alt="Pièce de vie avec colonnes de rangement toute hauteur en placage bois clair et retour de comptoir arrondi sur piètement cannelé"
+                caption="Pièce de vie : colonnes de rangement toute hauteur en placage bois clair alignées sous la corniche, retour de comptoir arrondi porté par un piètement à cannelures, plan taillé dans la même pierre que la crédence. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chHdgChambreLustreSdbOuverte.jpeg"
+                alt="Chambre dont la salle de bains ouverte est encadrée par deux volumes de dressing toute hauteur en placage bois clair et une colonne d'étagères en chêne"
+                caption="Chambre avec salle de bains ouverte : deux volumes de dressing toute hauteur en placage bois clair encadrent la niche de pierre, la colonne d'étagères en chêne en porte-à-faux servant de séparation. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chHdgChambreVeloursNicheBureau.jpeg"
+                alt="Niche-bureau en placage bois clair encastrée dans l'épaisseur de la cloison, en prolongement d'un mur de tête de lit capitonné"
+                caption="Niche-bureau encastrée dans l'épaisseur de la cloison : joues, tablette et retour en placage bois clair dessinés sur le relevé, en prolongement du panneautage capitonné de la tête de lit. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chHdgChambreCapitonneeSuspension.jpeg"
+                alt="Mur de tête de lit en panneaux capitonnés crème monté toute hauteur sur un soubassement en chêne qui se retourne en tête de lit"
+                caption="Tête de lit intégrée : panneautage capitonné crème monté toute hauteur jusqu'au plafond sur un soubassement en chêne qui se retourne en tête de lit, applique en laiton fixée à travers le capitonnage. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chHdgDetailNicheOnyxCheminee.jpeg"
+                alt="Diptyque : niche de crédence encadrée de pierre rubanée au-dessus de tiroirs à façades cannelées, et tablette de cheminée en marbre sculpté"
+                caption="Deux détails d'ouvrage : à gauche, une niche de crédence dont le fond, la tablette et l'encadrement sont taillés dans la même pierre, posée sur des tiroirs à façades cannelées ; à droite, la tablette de cheminée en marbre sculpté conservée avec son foyer en fonte. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chHdgDetailCeramiqueRobinetterie.jpeg"
+                alt="Diptyque : étagères en bois massif clair encastrées sur un fond strié dans la masse, et commandes de douche encastrées en bronze"
+                caption="Détail d'exécution : à gauche, étagères en bois massif clair encastrées sur un fond strié dans la masse ; à droite, les commandes de douche en bronze patiné encastrées dans un parement de pierre à cannelures. Chantier réel des équipes partenaires."
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-5">Habillages bois et cache-radiateurs</h3>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
+              Deux vues d'un autre chantier : là où le radiateur et l'écran ne peuvent pas être déplacés, c'est
+              l'habillage qui est fabriqué sur mesure autour d'eux.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <MqFig
+                src="/photos/chantiers/chHdgChambreLattesCacheRadiateur.jpeg"
+                alt="Cache-radiateur sur mesure en coffrage laqué fermé par une tôle perforée, surmonté d'une niche habillée de tasseaux de bois recevant un écran"
+                caption="Cache-radiateur sur mesure : coffrage laqué fermé par une tôle perforée, surmonté d'une niche en tasseaux de bois qui reçoit l'écran ; la cloison voisine est habillée de textile tendu dans un encadrement cintré. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chHdgChambreLattesBoisTv.jpeg"
+                alt="Mur habillé de tasseaux de bois sur fond sombre du sol au plafond, sous un faux plafond incurvé à éclairage indirect"
+                caption="Même chantier : mur habillé de tasseaux de bois sur fond sombre du sol au plafond, faux plafond incurvé intégrant spots orientables, éclairage indirect et reprise de ventilation. Chantier réel des équipes partenaires."
               />
             </div>
           </div>

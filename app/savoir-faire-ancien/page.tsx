@@ -98,6 +98,15 @@ const DEROULE = [
   },
 ];
 
+/*
+  Examiné le 02/09/2026 : les 15 comparatifs ci-dessous restent intégralement composés d'images de
+  stock de /public/photos/maquette/. Les photographies réelles du chantier haussmannien livré n'y ont
+  volontairement PAS été insérées. Un bloc « avant / après » se lit comme deux états d'un même
+  ouvrage ; placer un cliché réel du client en « après » d'un « avant » de stock (réseaux encastrés,
+  étaiement, ossature…) fabriquerait une continuité qui n'existe pas et laisserait croire que ces
+  chantiers sont les siens. Ces photos réelles sont donc utilisées plus haut, seules et légendées pour
+  ce qu'elles montrent, plutôt qu'en second terme d'une comparaison.
+*/
 const COMPARATIFS: {
   title: string;
   text: string;
@@ -356,15 +365,26 @@ export default function SavoirFaireAncienPage() {
             ))}
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/*
+              Remplacé le 02/09/2026 — les deux premières vignettes étaient des photos de stock
+              (/photos/maquette/fenetre-identique-cremone-laiton.jpg et moulures-corniches-pose.jpg),
+              toutes deux déjà affichées une seconde fois plus bas sur la MÊME page (sections
+              « Menuiseries » et « Plâtrerie décorative ») : la grille montrait donc deux fois les
+              mêmes images de stock au visiteur. Elles sont remplacées ici par deux photographies
+              réelles du chantier haussmannien livré par les équipes partenaires, chacune ouverte et
+              décrite avant rédaction de la légende. Les légendes se limitent à ce qui est visible :
+              rien n'affirme que ces fenêtres ont été « reproduites à l'identique » ni que ces
+              moulures ont été « restituées » — aucune photo du dossier ne documente ces opérations.
+            */}
             <MqFig
-              src="/photos/maquette/fenetre-identique-cremone-laiton.jpg"
-              alt="Fenêtre en bois reproduite à l'identique dans un appartement haussmannien, petits bois et crémone en laiton"
-              caption="Fenêtre reproduite à l'identique : section des petits bois relevée sur l'existant, crémone en laiton restaurée et remontée sur le nouveau châssis."
+              src="/photos/chantiers/chHdgChambreBalconApplique.jpeg"
+              alt="Chambre d'angle en rotonde d'un appartement haussmannien livré, deux portes-fenêtres en bois à petits bois ouvertes sur des balcons en ferronnerie, radiateur en fonte à colonnes et parquet chêne à chevrons"
+              caption="Chambre d'angle livrée : portes-fenêtres en bois à petits bois, volets intérieurs repliés dans leurs embrasures et radiateur en fonte à colonnes maintenus en place ; garde-corps de balcon en ferronnerie et immeubles en pierre de taille en vis-à-vis. Chantier réel des équipes partenaires."
             />
             <MqFig
-              src="/photos/maquette/moulures-corniches-pose.jpg"
-              alt="Salon haussmannien avec corniches en plâtre, rosace et boiseries restituées pendant les finitions"
-              caption="Corniches, rosace et boiseries restituées en plâtre traditionnel : profils moulés d'après l'existant, fournis par la maison Guimier."
+              src="/photos/chantiers/chHdgSalonSalleMangerMoulures.jpeg"
+              alt="Salon et salle à manger d'un appartement haussmannien livré, rosace de plafond et corniche sculptée, murs à panneaux moulurés, parquet chêne à chevrons et cheminée en marbre"
+              caption="Salon-salle à manger livré : rosace de plafond et corniche sculptée conservées, murs à panneaux moulurés, grande glace à cadre mouluré encastrée dans le lambris, parquet chêne à chevrons et cheminée en marbre en angle de pièce. Chantier réel des équipes partenaires."
             />
             <MqFig
               src="/photos/chantiers/chBibliotheque.jpeg"
@@ -377,10 +397,17 @@ export default function SavoirFaireAncienPage() {
               lames droites, sans le calepinage en bâtons rompus. Légende reformulée pour ne
               décrire que ce qui est réellement visible.
             */}
+            {/*
+              Remplacé le 02/09/2026 — cette vignette portait /photos/maquette/sejour-haussmannien-renove.jpg,
+              photo de stock légendée « Référence de style » et déjà réaffichée plus bas dans la section
+              « Plâtrerie décorative » de cette même page. L'ouvrage « Cheminées et pierre » de la liste
+              ci-dessus n'était illustré par AUCUNE photographie. Il l'est désormais par un cliché réel du
+              chantier haussmannien livré, ouvert et vérifié avant rédaction de la légende.
+            */}
             <MqFig
-              src="/photos/maquette/sejour-haussmannien-renove.jpg"
-              alt="Séjour d'appartement haussmannien rénové avec moulures, cheminée en marbre et parquet chêne point de Hongrie"
-              caption="Référence de style : séjour haussmannien rénové, moulures et corniches restituées, parquet point de Hongrie et cheminée conservée."
+              src="/photos/chantiers/chHdgChambreChemineeMiroirMoulure.jpeg"
+              alt="Chambre d'appartement haussmannien livrée, cheminée en marbre blanc sculpté avec foyer en fonte, trumeau mouluré au-dessus, corniche sculptée et parquet chêne à chevrons"
+              caption="Cheminée en marbre blanc sculpté et son foyer en fonte conservés, surmontés d'un trumeau à cadre mouluré ; corniche sculptée et panneaux muraux maintenus, parquet chêne posé à chevrons et dressing en bois clair ajusté contre le mur. Chantier réel des équipes partenaires."
             />
             {/*
               Ajouté le 02/09/2026 — photos réelles fournies par le client (consigne littérale
@@ -415,6 +442,22 @@ export default function SavoirFaireAncienPage() {
               src="/photos/chantiers/chComptoirBarMouluresFinition.jpeg"
               alt="Comptoir en bois mouluré fini autour d'une colonne en fonte d'origine, chantier réel"
               caption="Comptoir en bois mouluré, panneaux à cadres et moulures, fini autour de la colonne en fonte conservée. Chantier réel des équipes partenaires."
+            />
+            {/*
+              Ajouté le 02/09/2026 — deux ouvrages de la liste ci-dessus n'étaient documentés par
+              aucune photographie : « Cheminées et pierre » (gros plan de la sculpture) et « Mise aux
+              normes invisible ». Les deux clichés ci-dessous, issus du chantier haussmannien livré,
+              ont été ouverts et décrits avant rédaction des légendes.
+            */}
+            <MqFig
+              src="/photos/chantiers/chHdgDetailNicheOnyxCheminee.jpeg"
+              alt="Diptyque : à gauche une niche neuve en onyx veiné au-dessus d'un meuble à façades cannelées, à droite le gros plan d'une tablette de cheminée en marbre blanc sculpté avec coquille et volutes"
+              caption="Pierre neuve et pierre ancienne côte à côte : à gauche, niche taillée dans une dalle d'onyx veiné posée au-dessus d'un meuble à façades cannelées ; à droite, gros plan de la traverse d'une cheminée en marbre blanc — coquille, volutes et feuillages sculptés — conservée avec sa plaque de foyer en fonte. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chHdgChambreLustreSdbOuverte.jpeg"
+              alt="Chambre haussmannienne livrée avec salle de bain ouverte, grille de ventilation encastrée dans le mur sous la corniche sculptée, porte ancienne à panneaux moulurés et parquet chêne à chevrons"
+              caption="Mise aux normes intégrée au décor : la grille de ventilation est encastrée à fleur de mur, juste sous la corniche sculptée conservée, sans traversée ni saignée dans le décor. Porte ancienne à panneaux moulurés, soubassement mouluré et parquet chêne à chevrons maintenus autour d'une salle de bain ouverte en marbre. Chantier réel des équipes partenaires."
             />
             {/*
               Retiré le 31/08/2026 : chComptoirBarColonneFonteVueLarge.jpeg et
@@ -486,16 +529,35 @@ export default function SavoirFaireAncienPage() {
         lead="Les décors en plâtre disparus sont restitués à partir d'un fragment prélevé sur place, non choisis sur catalogue."
       >
         <div className="flex flex-col gap-8">
+          {/*
+            Remplacé le 02/09/2026 — les deux vignettes de cette section étaient les mêmes photos de
+            stock que celles affichées plus haut dans la grille « Ce que nous préservons »
+            (moulures-corniches-pose.jpg et sejour-haussmannien-renove.jpg) : la page montrait donc
+            quatre fois deux images. Elles sont remplacées par deux photographies réelles du chantier
+            haussmannien livré, ouvertes et décrites avant rédaction des légendes.
+
+            HONNÊTETÉ : ces deux clichés documentent un décor mouluré CONSERVÉ et une menuiserie neuve
+            raccordée à ce décor. Ils ne documentent PAS une restitution de profil par la maison Guimier
+            (relevé du fragment, moulage, pose au plâtre) — aucune photo du dossier ne montre cette
+            séquence, ce que rappelle déjà le commentaire ci-dessous. Les légendes n'attribuent donc
+            aucun ouvrage restitué à ces images.
+
+            Le second cliché provient du même appartement que la vignette de tête de la grille
+            « Ce que nous préservons » (chHdgSalonSalleMangerMoulures) : il s'agit d'une prise de vue
+            distincte — gros plan d'un cadre de glace et vue du balcon — et non du même fichier
+            réaffiché. Aucune légende de la page ne présente ces deux images comme deux chantiers
+            différents.
+          */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <MqFig
-              src="/photos/maquette/moulures-corniches-pose.jpg"
-              alt="Salon haussmannien avec corniches en plâtre, rosace et boiseries restituées pendant les finitions"
-              caption="Corniches, rosace et boiseries restituées en plâtre traditionnel : profils moulés d'après l'existant, fournis par la maison Guimier."
+              src="/photos/chantiers/chHdgChambrePlacardMoulure.jpeg"
+              alt="Chambre haussmannienne livrée, placard sur mesure toute hauteur à portes blanches moulurées couronné d'une corniche alignée sur celle de la pièce, radiateur en fonte à colonnes conservé"
+              caption="Raccord du neuf au décor existant : le placard sur mesure monte jusqu'au plafond et se termine par une corniche alignée sur celle de la pièce ; ses portes reprennent le dessin des panneaux moulurés. Radiateur en fonte à colonnes et volet intérieur en bois conservés. Chantier réel des équipes partenaires."
             />
             <MqFig
-              src="/photos/maquette/sejour-haussmannien-renove.jpg"
-              alt="Séjour d'appartement haussmannien rénové avec moulures, cheminée en marbre et parquet chêne point de Hongrie"
-              caption="Référence de style : séjour haussmannien rénové, moulures et corniches restituées, parquet point de Hongrie et cheminée conservée."
+              src="/photos/chantiers/chHdgDiptyqueSalonMiroirBalcon.jpeg"
+              alt="Diptyque : à gauche le gros plan d'un cadre de glace mouluré en plâtre reflétant un salon haussmannien et sa cheminée en marbre, à droite le balcon parisien en ferronnerie et les immeubles en pierre de taille en vis-à-vis"
+              caption="À gauche, cadre de glace mouluré en gros plan — rang de perles, rais-de-cœur et coquille — le salon et sa cheminée en marbre se reflétant dans le miroir. À droite, le balcon sur rue du même appartement : garde-corps en ferronnerie et façades en pierre de taille en vis-à-vis. Chantier réel des équipes partenaires."
             />
           </div>
           {/*

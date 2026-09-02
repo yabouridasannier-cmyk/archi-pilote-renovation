@@ -34,9 +34,9 @@ export default function Home() {
             </div>
           </div>
           <MqFig
-            src="/photos/maquette/hero-renovation.jpg"
-            alt="Séjour d'un appartement haussmannien parisien rénové : parquet en point de Hongrie restauré, moulures conservées et menuiseries remises en état"
-            caption="Rénovation complète d'un appartement haussmannien : le résultat visible dépend des arbitrages techniques décidés en amont."
+            src="/photos/chantiers/chHdgSalonBoucleAppliquesBronze.jpeg"
+            alt="Salon d'un appartement ancien parisien livré : murs panneautés et corniche ornée, trumeau à cadre sculpté, volets intérieurs persiennés et parquet chêne à chevrons"
+            caption="Salon livré dans un appartement ancien parisien : panneautage mouluré repris sur tout le pourtour jusque sur les portes, trumeau à cadre sculpté intégré au panneautage, volets intérieurs persiennés en place et parquet chêne à chevrons. Chantier réel des équipes partenaires."
             ratio="aspect-[4/3]"
           />
         </div>

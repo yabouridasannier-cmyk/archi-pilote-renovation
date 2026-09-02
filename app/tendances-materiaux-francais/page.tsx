@@ -10,39 +10,42 @@ export const metadata: Metadata = {
 
 const PANORAMA = [
   {
-    src: "pedagogie-travertin-macro",
+    src: "/photos/maquette/pedagogie-travertin-macro.jpg",
     alt: "Gros plan sur la texture du travertin naturel, alvéoles et veinage caractéristiques",
     caption: "Travertin : pierre naturelle alvéolée, jointée en grand format, traitement hydrofuge obligatoire avant mise en service.",
   },
   {
-    src: "pedagogie-zellige-macro",
+    src: "/photos/maquette/pedagogie-zellige-macro.jpg",
     alt: "Gros plan sur la texture du zellige émaillé vert d'eau, irrégularités de surface et joints fins",
     caption: "Zellige émaillé : irrégularités de surface assumées, calepinage et jointoiement fin sur support parfaitement dressé.",
   },
   {
-    src: "pedagogie-beton-cire-macro",
+    src: "/photos/maquette/pedagogie-beton-cire-macro.jpg",
     alt: "Gros plan sur la texture du béton ciré, surface minérale continue sans joint",
     caption: "Béton ciré : surface minérale continue sans joint, ragréage fibré et primaire d'accroche avant application des couches.",
   },
   {
-    src: "detail-menuiserie-moulure",
-    alt: "Détail de menuiserie en chêne : porte à panneaux moulurés, chambranle profilé et poignée en laiton patiné",
-    caption: "Détail de menuiserie : profils de moulure relevés sur l'existant, chambranle reconstitué et quincaillerie laiton patiné posée à l'ancienne.",
+    src: "/photos/chantiers/chHdgChambrePlacardMoulure.jpeg",
+    alt: "Placard toute hauteur à panneaux moulurés dans une chambre ancienne parisienne, corniche en plâtre et appliques en laiton",
+    caption:
+      "Menuiserie à panneaux moulurés : placard toute hauteur couronné d'une corniche, laqué dans le ton des boiseries et arrêté au nu du plafond. Chantier réel des équipes partenaires.",
   },
   {
-    src: "pedagogie-chene-macro",
-    alt: "Gros plan sur le grain du chêne massif huilé, veinage et nœud caractéristiques",
-    caption: "Chêne massif huilé : grain et veinage naturels, la matière noble travaillée dans les volumes d'origine.",
+    src: "/photos/chantiers/chHdgChambreDressingChevrons.jpeg",
+    alt: "Chambre ancienne parisienne : parquet chêne clair en point de Hongrie, dressing et tablettes en chêne, cheminée de marbre et trumeau mouluré",
+    caption:
+      "Chêne clair au sol et en menuiserie : parquet en point de Hongrie, dressing et tablettes en chêne, sous corniches et trumeau en plâtre mouluré. Chantier réel des équipes partenaires.",
   },
   {
-    src: "pedagogie-chaux-macro",
+    src: "/photos/maquette/pedagogie-chaux-macro.jpg",
     alt: "Gros plan sur la texture d'un enduit à la chaux beige rosé, relief mat de la taloche",
     caption: "Enduit à la chaux : texture mate et minérale, relief de la taloche, signature des intérieurs français 2026-2027.",
   },
   {
-    src: "tendance-cuisine-facades-sur-mesure-chene",
-    alt: "Cuisine sur mesure avec façades cannelées en chêne massif, plan de travail en pierre naturelle veinée, crédence zellige vert d'eau et robinetterie laiton",
-    caption: "Façades cannelées en chêne massif, plan en pierre naturelle et crédence zellige : ensemble sur mesure acheté en direct par le client, posé par l'entreprise partenaire.",
+    src: "/photos/chantiers/chHdgCuisineOnyxParquetVersailles.jpeg",
+    alt: "Cuisine sur mesure en chêne clair avec panneau mural en onyx veiné, plan de travail dans la même pierre et sol en panneaux de Versailles",
+    caption:
+      "Cuisine sur mesure en chêne clair : panneau mural toute hauteur et plan de travail en onyx à veines horizontales, caisson d'angle arrondi, sol en panneaux de Versailles. Chantier réel des équipes partenaires.",
   },
 ];
 
@@ -87,13 +90,13 @@ export default function TendancesMateriauxFrancaisPage() {
 
       <MqSection
         kicker="Panorama"
-        title="Quatre matières, quatre logiques de mise en œuvre"
-        lead="Chaque matière se juge sur son support avant de se juger sur son aspect."
+        title="Chaque matière, sa logique de mise en œuvre"
+        lead="Chaque matière se juge sur son support avant de se juger sur son aspect. Trois de ces vues sont des photos de chantiers réels des équipes partenaires."
         wide
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {PANORAMA.map((f) => (
-            <MqFig key={f.caption} src={`/photos/maquette/${f.src}.jpg`} alt={f.alt} caption={f.caption} />
+            <MqFig key={f.caption} src={f.src} alt={f.alt} caption={f.caption} />
           ))}
         </div>
       </MqSection>
@@ -250,8 +253,8 @@ export default function TendancesMateriauxFrancaisPage() {
 
       <MqSection
         kicker="Preuve visuelle"
-        title="Trois détails de chantiers réels"
-        lead="La matière se juge sur sa mise en œuvre, pas sur la mise en scène. Trois détails vérifiés, issus de chantiers réels des équipes partenaires."
+        title="Six détails de chantiers réels"
+        lead="La matière se juge sur sa mise en œuvre, pas sur la mise en scène. Six détails vérifiés, issus de chantiers réels des équipes partenaires — les trois derniers montrent des pierres naturelles posées en grand format, dont une salle de bain photographiée en cours de pose."
         wide
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
@@ -269,6 +272,21 @@ export default function TendancesMateriauxFrancaisPage() {
             src="/photos/chantiers/chSdbCarreauxCiment.jpeg"
             alt="Détail réel d'une douche en carreaux de ciment à motifs patchwork, avec vasque en pierre et meuble en teck"
             caption="Douche en carreaux de ciment à motifs patchwork : calepinage anticipé pour aligner les dessins entre murs, vasque en pierre sur meuble bois. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chHdgSalleEauPierreDouche.jpeg"
+            alt="Salle d'eau réelle en pierre calcaire beige : fond de douche en panneau cannelé, vasque-auge taillée dans la masse et robinetterie en laiton patiné"
+            caption="Pierre calcaire beige en grand format : fond de douche en panneau cannelé, vasque-auge taillée dans la masse et robinetterie murale encastrée en laiton patiné. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chHdgDetailMarbreGrisVasque.jpeg"
+            alt="Détail réel d'une salle d'eau en marbre gris veiné : vasque-auge taillée dans la masse et robinetterie murale en laiton patiné"
+            caption="Marbre gris veiné en grand format : vasque-auge taillée dans la masse avec tablette en retour, robinetterie murale encastrée en laiton patiné, aucun meuble rapporté. Chantier réel des équipes partenaires."
+          />
+          <MqFig
+            src="/photos/chantiers/chHdgSdbMarbreProfilesLaitonPose.jpeg"
+            alt="Salle de bain en cours de pose : marbre bréché beige-gris en grand format, profilés laiton sur les arêtes et plan vasque percé avant mise en place de la cuve"
+            caption="Pose en cours, salle de bain non livrée : marbre bréché beige-gris en grand format, profilés laiton rapportés sur chaque arête, plan vasque percé en attente de la cuve. Chantier réel des équipes partenaires."
           />
         </div>
       </MqSection>
