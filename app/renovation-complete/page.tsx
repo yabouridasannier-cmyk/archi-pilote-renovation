@@ -242,19 +242,22 @@ export default function Page() {
             <h3 className="display text-[1.05rem] text-ivoire mb-4">Étanchéité</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <MqFig
-                src="/photos/maquette/chantier-nappe-etancheite-douche.jpg"
-                alt="Natte d'étanchéité continue posée au sol et sur les murs d'une douche, avant carrelage"
-                caption="Natte continue et bandes d'angle contrôlées avant pose du carrelage. Illustration de référence, hors chantier documenté sur cette page."
+                src="/photos/chantiers/chEtancheiteSolDoucheTrameArmee.jpeg"
+                alt="Sol de douche préparé : treillis d'armature métallique posé sur la dalle, évacuation et siphon en attente, cloisons en plaques hydrofuges"
+                caption="Sol de douche préparé avant étanchéité : treillis d'armature posé sur la dalle, évacuation et siphon laissés en attente, cloisons montées en plaques hydrofuges. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
               <MqFig
-                src="/photos/pedagogie/50-etancheite-angle-douche-macro.jpeg"
-                alt="Gros plan d'un angle de douche étanché avec bande d'angle armée avant carrelage"
-                caption="Renfort d'angle par bande armée : le point le plus exposé aux infiltrations est traité avant tout carrelage. Illustration de référence, hors chantier documenté sur cette page."
+                src="/photos/chantiers/chEtancheiteReceveurDoucheLaser.jpeg"
+                alt="Implantation d'un receveur de douche au laser de niveau, plaques hydrofuges et réservations du mitigeur et de la bonde tracées à la main"
+                caption="Implantation du receveur de douche au laser de niveau : la ligne verte donne le niveau de référence, les réservations du mitigeur et de la bonde sont tracées sur les plaques hydrofuges. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
               <MqFig
-                src="/photos/pedagogie/51-etancheite-passage-canalisation-macro.jpeg"
-                alt="Gros plan d'un passage de canalisation traité par manchette d'étanchéité avant carrelage"
-                caption="Passage de canalisation : la manchette d'étanchéité évite toute infiltration au point singulier avant carrelage. Illustration de référence, hors chantier documenté sur cette page."
+                src="/photos/chantiers/chParVapeurSopremaMuralSdb.jpeg"
+                alt="Pare-vapeur SOPREMA posé et adhésivé sur la paroi d'une salle de bain, arrivées de robinetterie laissées en attente"
+                caption="Pare-vapeur posé sur la paroi de la salle de bain, lés et pourtour repris à la bande adhésive, arrivées de robinetterie laissées en attente. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
             </div>
           </div>

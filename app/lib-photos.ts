@@ -6,7 +6,10 @@ export const PHOTOS = {
   sejourAvant: "https://images.unsplash.com/photo-1649083048770-82e8ffd80431?q=80&w=1600&auto=format&fit=crop",
   salonMinimal2: "https://images.unsplash.com/photo-1724582586458-a51791349977?q=80&w=1600&auto=format&fit=crop",
 
-  detailParquet: "/photos/chantiers/chParquetVitrifie.jpeg",
+  // 02/09 : pointait vers chParquetVitrifie.jpeg, un parquet à lames droites, alors que la
+  // page d'accueil l'affiche avec le libellé « Parquet point de Hongrie » — affirmation fausse.
+  // Remplacé par une vraie photo de pose à chevrons fournie par le client.
+  detailParquet: "/photos/chantiers/chParquetChevronsCouloirDeuxTeintes.jpeg",
   parquetGros: "https://images.unsplash.com/photo-1761053133165-0f3acdaf1770?q=80&w=1600&auto=format&fit=crop",
 
   cuisineSurMesure: "/photos/chantiers/chCuisineCremeIlot.jpeg",

@@ -63,6 +63,13 @@ export default function Page() {
               </MqProse>
             </div>
           </div>
+          {/*
+            02/09 : la photo « suite-parentale-dressing.jpg » (chambre avec dressing) occupait
+            cette grille dans une section consacrée à l'électricité — hors sujet, signalé par le
+            client. Elle est remplacée par une vraie photo de tableau électrique en cours de
+            câblage, fournie par le client et déposée dans public/photos/chantiers/, qui illustre
+            exactement la désignation « Tableau électrique et circuits » juste au-dessus.
+          */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <MqFig
               src="/photos/maquette/schema-electricite-nfc15100.jpg"
@@ -70,40 +77,67 @@ export default function Page() {
               caption="Organisation des circuits d'un logement rénové : protection différentielle 30 mA, sections adaptées et liaison équipotentielle en salle d'eau."
             />
             <MqFig
-              src="/photos/maquette/suite-parentale-dressing.jpg"
-              alt="Suite parentale contemporaine avec tête de lit en lin, boiseries chêne clair et dressing intégré"
-              caption="Référence de style : suite parentale avec dressing intégré, menuiseries sur mesure et éclairage indirect en corniche."
+              src="/photos/chantiers/chTableauElectriqueDisjoncteurs.jpeg"
+              alt="Tableau électrique en cours de câblage dans une niche : rangées de disjoncteurs alimentées par peignes et borniers de répartition repérés"
+              caption="Tableau électrique en cours de câblage : disjoncteurs divisionnaires alimentés par peignes, borniers de répartition repérés bleu et rouge, disjoncteur de branchement en partie haute. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/4]"
             />
+          </div>
+          <div>
+            <h3 className="display text-[1.3rem] text-ivoire">Cheminement des réseaux avant fermeture</h3>
+            <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
+              Une fois le plan validé, les gaines sont tirées et repérées pendant que tout reste accessible : c&apos;est la dernière étape
+              où une correction reste peu coûteuse.
+            </p>
+            <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+              <MqFig
+                src="/photos/chantiers/chElectriciteFauxPlafondFaisceaux.jpeg"
+                alt="Faisceaux de gaines et attentes de câbles regroupés le long d'un voile béton, avant fermeture du faux plafond"
+                caption="Faisceaux de gaines tirés au-dessus de l'ossature et attentes de câbles descendues le long du voile béton, avant plaquage. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chElectriciteFauxPlafondRailsCablage.jpeg"
+                alt="Ossature métallique de faux plafond posée sur une pièce, gaines clipsées sur les fourrures et attente de point lumineux au centre"
+                caption="Ossature de faux plafond terminée : gaines clipsées sur les fourrures et attente de point lumineux descendue au centre de la pièce, avant pose des plaques. Chantier réel des équipes partenaires."
+              />
+            </div>
           </div>
         </div>
       </MqSection>
 
       <MqSection title="Plomberie : pentes, diamètres et alimentation">
         {/*
-          29/08 : emplacement visé pour un triptyque RÉEL "tableau électrique + collecteur
-          plomberie + gaines VMC avant fermeture" (alt conseillé : "Réseaux techniques vérifiés
-          avant fermeture des cloisons"). Vérifié dans public/photos/chantiers/ : une vraie photo
-          de tableau électrique existe (chPlacardTableauElectriqueIntegre.jpeg, montage en placard
-          avec compteur ancien + disjoncteurs — mais trop éloigné/peu lisible pour illustrer la
-          légende détaillée "différentiels 30 mA, circuits repérés" déjà utilisée ailleurs sur
-          cette page), mais aucune photo réelle de collecteur de plomberie ni de gaines VMC avant
-          fermeture n'a été trouvée. Les deux images ci-dessous (chantier-plomberie-encastree.jpg,
-          chantier-tableau-electrique-neuf.jpg) restent donc des photos de stock (dossier
-          public/photos/maquette/, jamais présentées comme "chantier réel" dans leur légende) : le
-          triptyque réel à 3 sujets demandé n'est pas réalisable avec les photos actuellement
-          disponibles. À compléter avec de vraies photos de chantier (tableau, collecteur,
-          gaines VMC) prises avant une prochaine fermeture de cloisons.
+          02/09 : le manque signalé le 29/08 à cet emplacement (aucune photo réelle de collecteur
+          de plomberie disponible) est levé — le client a fourni de vraies photos de ses chantiers,
+          déposées dans public/photos/chantiers/. Chaque photo utilisée ici a été ouverte et
+          décrite d'après ce qu'elle montre réellement ; les douze fichiers de plomberie fournis
+          ont des empreintes MD5 toutes distinctes (aucun doublon), et aucune n'était déjà employée
+          ailleurs dans app/. Les deux photos de stock qui occupaient cette grille ont donc été
+          remplacées :
+          - chantier-plomberie-encastree.jpg (stock) → chNourriceManometreEvacuationPvc.jpeg,
+            qui montre exactement le sujet décrit dans la légende d'origine (nourrice, départs
+            multicouche repérés chaud/froid, manomètre de mise en pression).
+          - chantier-tableau-electrique-neuf.jpg (stock) → chPlomberieAlimentationEvacuationPlacoHydro.jpeg.
+            Le tableau électrique était hors sujet dans une section « Plomberie » et déjà illustré
+            deux fois sur cette page (schéma NF C 15-100 dans la section Électricité, avant/après
+            dans la section pédagogique) : la grille gagne un vrai sujet plomberie au lieu d'un
+            troisième visuel de tableau.
+          Reste manquant pour le triptyque envisagé le 29/08 : aucune photo réelle de gaines VMC
+          avant fermeture des cloisons n'existe encore dans le dossier chantiers/.
         */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
-            src="/photos/maquette/chantier-plomberie-encastree.jpg"
-            alt="Réseaux de plomberie encastrés en tubes multicouche rouges et bleus avec collecteur dans une salle de bain en travaux"
-            caption="Réseaux encastrés : alimentation en multicouche depuis un collecteur, repérage chaud/froid et essai de mise en pression avant fermeture."
+            src="/photos/chantiers/chNourriceManometreEvacuationPvc.jpeg"
+            alt="Nourrice de plomberie sur rail avec manomètre, départs multicouche repérés chaud et froid et réseau d'évacuation PVC, chantier réel"
+            caption="Nourrice d'alimentation posée sur rail : départs en multicouche repérés chaud et froid, flexible annelé jaune pour le gaz, manomètre laissé en place pour la mise en pression et réseau d'évacuation PVC raccordé au même endroit. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
-            src="/photos/maquette/chantier-tableau-electrique-neuf.jpg"
-            alt="Tableau électrique neuf ouvert avec rangées de disjoncteurs, interrupteurs différentiels 30 mA et circuits étiquetés"
-            caption="Tableau refait selon la norme NF C 15-100 : différentiels 30 mA, circuits dédiés et étiquetage complet remis au client."
+            src="/photos/chantiers/chPlomberieAlimentationEvacuationPlacoHydro.jpeg"
+            alt="Attentes d'alimentation en multicouche et évacuations PVC laissées bouchées sur un doublage hydrofuge, chantier réel"
+            caption="Attentes laissées bouchées sur doublage hydrofuge : alimentation en multicouche assemblée par raccords à sertir, évacuations PVC en attente et sortie au sol réservée, dans l'attente du raccordement des appareils. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
         <div className="mt-12 flex flex-col gap-10">
@@ -138,6 +172,18 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+              <MqFig
+                src="/photos/chantiers/chPlomberieMulticoucheDistributionMurale.jpeg"
+                alt="Distribution murale en multicouche avec raccords à sertir en laiton, colliers de fixation et descentes en gaine annelée, chantier réel"
+                caption="Distribution murale en attente : tronçons multicouche assemblés par raccords à sertir, fixés au collier, descentes protégées en gaine annelée et réservation d'évacuation ménagée dans le mur. Chantier réel des équipes partenaires."
+              />
+              <MqFig
+                src="/photos/chantiers/chNourriceLaiton12Departs.jpeg"
+                alt="Nourrice d'alimentation en laiton à une douzaine de départs multicouche, chacun équipé de sa vanne quart de tour, chantier réel"
+                caption="Nourrice d'alimentation en laiton : une douzaine de départs en multicouche, chacun isolable par sa propre vanne quart de tour, avec la vanne générale rouge en bout de collecteur. Chantier réel des équipes partenaires."
+              />
+            </div>
           </div>
         </div>
       </MqSection>
@@ -155,6 +201,21 @@ export default function Page() {
                   Le choix et le dimensionnement des émetteurs de chauffage dépendent directement du niveau d'isolation du logement une fois les travaux terminés, et non de l'état initial du bien. Un radiateur dimensionné avant l'isolation risque d'être surdimensionné, ou inversement insuffisant si l'isolation prévue n'est finalement pas réalisée.
                 </p>
               </MqProse>
+            </div>
+            <div className="mt-6">
+              <MqFig
+                src="/photos/chantiers/chNourriceMulticoucheRadiateurs.jpeg"
+                alt="Collecteurs en laiton et départs multicouche du réseau de chauffage, raccords à sertir repérés par bagues de couleur, chantier réel"
+                caption="Distribution du réseau de chauffage : collecteurs en laiton superposés, départs multicouche assemblés par raccords à sertir repérés par bagues de couleur et fixés au collier avant habillage. Chantier réel des équipes partenaires."
+              />
+            </div>
+            <div className="mt-5 max-w-sm mx-auto">
+              <MqFig
+                src="/photos/chantiers/chChaudiereMuraleSaunierDuval.jpeg"
+                alt="Chaudière murale Saunier Duval raccordée sur un mur de pierre, vannes d'isolement rouges et filtre à tamis en bronze, chantier réel"
+                caption="Chaudière murale raccordée sur un mur de pierre : vannes d'isolement quart de tour sur les raccordements, filtre à tamis en bronze et liaisons calorifugées. Chantier réel des équipes partenaires."
+                ratio="aspect-[9/16]"
+              />
             </div>
           </div>
           <div>
@@ -375,6 +436,20 @@ export default function Page() {
             "Photo datée de chaque réseau encastré avant pose des plaques de cloison",
           ]}
         />
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MqFig
+            src="/photos/chantiers/chPlomberieColonneCuivreVannes.jpeg"
+            alt="Colonne montante en cuivre avec piquages, vannes d'arrêt étiquetées et numérotées et flexibles annelés jaunes, chantier réel"
+            caption="Colonne montante et piquages en cuivre : chaque départ reçoit sa vanne d'arrêt, étiquetée et numérotée une par une, avant raccordement par flexible. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chPlomberieDistributionVannesBeton.jpeg"
+            alt="Distribution de plomberie apparente sur voile béton brut avec vannes quart de tour rouges et raccords à sertir, chantier réel"
+            caption="Réseaux apparents sur voile béton brut, contrôlables départ par départ : vannes quart de tour rouges, raccords à sertir et tracés repérés directement sur le support. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
       </MqSection>
 
       <MqSection

@@ -159,11 +159,13 @@ export default function Page() {
             src="/photos/chantiers/chIsolationCombles.jpeg"
             alt="Isolation thermique par l'intérieur en cours, laine minérale entre ossature métallique, chantier réel"
             caption="Isolation thermique en cours : laine minérale posée entre ossature métallique, murs et plafond, avant fermeture en plaques de plâtre. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
-            src="/photos/maquette/chantier-carottage-facade.jpg"
-            alt="Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation"
-            caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune."
+            src="/photos/chantiers/chIsolationLaineUrsaVarioSdb.jpeg"
+            alt="Isolation par l'intérieur en laine minérale posée entre montants, joints et pourtour d'une fenêtre neuve repris à la bande adhésive, chantier réel"
+            caption="Isolation par l'intérieur en laine minérale posée entre montants : les joints et le pourtour de la fenêtre neuve sont repris à la bande adhésive, là où se concentrent les ponts thermiques résiduels. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
         <div className="mt-5">
@@ -223,6 +225,20 @@ export default function Page() {
                   autres.
                 </p>
               </MqProse>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-6">
+              <MqFig
+                src="/photos/chantiers/chParVapeurSopremaFenetreSdb.jpeg"
+                alt="Membrane pare-vapeur SOPREMA posée sur l'isolation et adhésivée autour d'une fenêtre neuve, arrivées d'eau et gaine électrique traversant la membrane"
+                caption="Pare-vapeur posé sur l'isolation et adhésivé autour de la fenêtre neuve : arrivées d'eau et gaine électrique traversent la membrane, points sensibles de l'étanchéité à l'air. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chPlacoHydroSopremaFenetreSdb.jpeg"
+                alt="Plaques de plâtre hydrofuges posées sur le pare-vapeur autour d'une fenêtre neuve, partie basse encore ouverte sur la membrane et les arrivées d'eau"
+                caption="Habillage en plaques hydrofuges refermé sur le pare-vapeur ; la partie basse reste ouverte sur la membrane et les arrivées d'eau. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
             </div>
           </div>
         </div>
@@ -305,6 +321,19 @@ export default function Page() {
                   infiltration d'eau ou d'air parasite à cet endroit.
                 </p>
               </MqProse>
+            </div>
+            {/*
+              02/09 : cette photo de carottage occupait auparavant la grille de la section « Isolation »
+              (hors sujet à cet endroit) ; elle est déplacée ici, au droit du texte qui décrit
+              précisément le carottage de traversée. Sa place dans la grille Isolation est prise par
+              une vraie photo de chantier (chIsolationLaineUrsaVarioSdb.jpeg).
+            */}
+            <div className="mt-6">
+              <MqFig
+                src="/photos/maquette/chantier-carottage-facade.jpg"
+                alt="Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation"
+                caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune. Illustration de référence, hors chantier documenté sur cette page."
+              />
             </div>
           </div>
         </div>

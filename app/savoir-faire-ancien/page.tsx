@@ -382,6 +382,30 @@ export default function SavoirFaireAncienPage() {
               alt="Séjour d'appartement haussmannien rénové avec moulures, cheminée en marbre et parquet chêne point de Hongrie"
               caption="Référence de style : séjour haussmannien rénové, moulures et corniches restituées, parquet point de Hongrie et cheminée conservée."
             />
+            {/*
+              Ajouté le 02/09/2026 — photos réelles fournies par le client (consigne littérale
+              « Parquet et boiseries »). Elles illustrent l'ouvrage « Parquets et boiseries » de la
+              liste ci-dessus, qui n'était jusqu'ici documenté que par la photo de référence
+              /photos/maquette/sejour-haussmannien-renove.jpg (stock, légendée « Référence de style »).
+              Contrôle fait avant ajout : les deux fichiers ont un MD5 unique dans
+              /public/photos/chantiers/ (403de81… et f731ebd…) et n'étaient utilisés nulle part
+              ailleurs dans app/ — pas de doublon introduit.
+              Les légendes ne décrivent que ce qui est visible sur les clichés : le motif de pose et
+              la coupe de raccord sont vérifiables à l'image, mais ces parquets sont des ouvrages
+              NEUFS. Rien ici n'affirme donc une dépose lame par lame ni un complément en chêne de
+              récupération (ce que décrit le texte de l'ouvrage) : aucune photo du dossier ne
+              documente cette reprise-là.
+            */}
+            <MqFig
+              src="/photos/chantiers/chParquetChevronsCouloirDeuxTeintes.jpeg"
+              alt="Raccord de deux parquets chêne posés à chevrons au droit d'un seuil, entre un couloir et une pièce, chantier réel"
+              caption="Parquets chêne posés à chevrons (point de Hongrie), motif traditionnel des logements anciens : raccord traité au droit du seuil par une seule coupe droite, avec un changement net de teinte de part et d'autre. Chantier réel des équipes partenaires."
+            />
+            <MqFig
+              src="/photos/chantiers/chParquetChevronsCacheRadiateur.jpeg"
+              alt="Cache-radiateur en bois sur mesure à lames horizontales posé sur un parquet chêne à chevrons, plinthes de même teinte, chantier réel"
+              caption="Cache-radiateur sur mesure à lames horizontales, peint dans la même teinte que les plinthes, sur parquet chêne posé à chevrons : le radiateur est masqué par une menuiserie ajustée plutôt que laissé apparent. Chantier réel des équipes partenaires."
+            />
             <MqFig
               src="/photos/chantiers/chComptoirBarColonneFonteCarreauxAnciens.jpeg"
               alt="Colonne en fonte d'origine et carreaux de ciment anciens conservés autour d'un comptoir en cours de finition, chantier réel"
