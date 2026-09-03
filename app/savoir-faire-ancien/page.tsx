@@ -42,6 +42,17 @@ const OUVRAGES = [
   « accord écrit du syndic », « support ragréé », ainsi que la restitution de corniches attribuée à
   la maison Guimier. Correction de fond sur la plomberie : les tubes visibles cheminent en apparent,
   aucun collecteur n'est dans le cadre — la légende ne peut pas annoncer des « réseaux encastrés ».
+
+  Carte d'usage établie le 03/09/2026 (comptage `grep` sur app/, hors commentaires) : trois des douze
+  vignettes de stock ci-dessous étaient parmi les images les plus recyclées du site —
+  chantier-ouverture-mur-etaiement (3 pages : gros-oeuvre-structure, realisations, ici),
+  chantier-vmc-caisson-gaines (4 pages : realisations, renovation-energetique, second-oeuvre, ici) et
+  chantier-carottage-facade (4 pages : realisations, renovation-appartement, renovation-energetique,
+  ici). Elles sont remplacées par trois visuels de /photos/maquette/ jusque-là employés nulle part
+  (vérifié fichier par fichier), et choisis parce qu'ils parlent d'un chantier DANS L'ANCIEN, ce qui
+  est le sujet de la page : reprise d'un plancher bois ancien, entrée-galerie à boiseries, séjour
+  haussmannien livré. Le carottage de façade et le caisson de VMC restent illustrés sur les pages
+  énergie et second œuvre, où ils sont à leur place.
 */
 const DEROULE = [
   {
@@ -55,9 +66,9 @@ const DEROULE = [
     caption: "Démolition en cours : plafond ouvert jusqu'aux solives, gravats conditionnés en big bags et en sacs avant évacuation.",
   },
   {
-    src: "chantier-ouverture-mur-etaiement",
-    alt: "Ouverture percée dans un mur porteur en briques avec trois étais métalliques soutenant le plancher supérieur",
-    caption: "Ouverture pratiquée dans un mur en briques : linteau métallique en place et trois étais réglables maintenant le plancher haut.",
+    src: "tremie-chevetre-chantier",
+    alt: "Plancher bois ancien ouvert : trémie bordée d'un chevêtre en bois neuf assemblé sur ferrures métalliques, étais réglables sous le solivage et murs en pierre apparents",
+    caption: "Reprise d'un plancher bois ancien : trémie ouverte dans le solivage, chevêtre en bois neuf assemblé sur ferrures métalliques et étais réglables en place sous l'ouverture.",
   },
   {
     src: "chantier-ipn-habillage",
@@ -75,16 +86,6 @@ const DEROULE = [
     caption: "Tableau électrique neuf : un interrupteur différentiel 40 A / 30 mA en tête de chaque rangée, circuits séparés et étiquetés poste par poste.",
   },
   {
-    src: "chantier-vmc-caisson-gaines",
-    alt: "Caisson de ventilation mécanique contrôlée suspendu en faux plafond avec gaines raccordées sur ses piquages",
-    caption: "Caisson de ventilation mécanique contrôlée installé dans le plénum d'un faux plafond, gaines raccordées sur ses piquages avant fermeture.",
-  },
-  {
-    src: "chantier-carottage-facade",
-    alt: "Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation, carotte extraite posée au sol",
-    caption: "Carottage d'un mur de façade pour une sortie de ventilation : bâti fixé au mur, carottage à l'eau, carotte extraite posée au sol et sols protégés par des bâches.",
-  },
-  {
     src: "chantier-isolation-laine",
     alt: "Chantier d'isolation intérieure : laine minérale entre rails métalliques sur murs et plafond avant pose du placo",
     caption: "Isolation thermique par l'intérieur en cours : laine minérale posée entre ossature métallique, murs et plafond, avant fermeture en plaques de plâtre.",
@@ -100,96 +101,22 @@ const DEROULE = [
     caption: "Décors en plâtre d'un salon en cours de travaux : corniche à modillons, rosace de plafond et panneaux moulurés, échafaudage roulant en place et sols protégés.",
   },
   {
+    src: "entree-galerie-boiseries",
+    alt: "Entrée-galerie aux murs entièrement panneautés et moulurés, banquette encastrée dans la boiserie, quincaillerie en laiton et sol en damier noir et blanc posé en diagonale",
+    caption: "Entrée-galerie : murs panneautés et moulurés du sol au plafond, banquette encastrée dans la boiserie, patère et quincaillerie en laiton, sol en damier noir et blanc posé en diagonale.",
+  },
+  {
     src: "plateau-livre-parquet-chene",
     alt: "Grand plateau livré après rénovation avec parquet chêne à lames droites, éclairage sur rails et embrasures de fenêtres cintrées habillées de bois",
     caption: "Plateau livré : parquet chêne à lames droites, rails d'éclairage fixés au plafond et embrasures de fenêtres cintrées habillées de bois.",
   },
-];
-
-/*
-  Examiné le 02/09/2026 : les comparatifs ci-dessous restent intégralement composés d'images de
-  stock de /public/photos/maquette/. Les photographies réelles du chantier haussmannien livré n'y ont
-  volontairement PAS été insérées. Un bloc « avant / après » se lit comme deux états d'un même
-  ouvrage ; placer un cliché réel du client en « après » d'un « avant » de stock (réseaux encastrés,
-  étaiement, ossature…) fabriquerait une continuité qui n'existe pas et laisserait croire que ces
-  chantiers sont les siens. Ces photos réelles sont donc utilisées plus haut, seules et légendées pour
-  ce qu'elles montrent, plutôt qu'en second terme d'une comparaison.
-
-  Repris le 03/09/2026 : le même raisonnement s'appliquait aux paires de stock entre elles. Les 30
-  images ont été ouvertes une par une. Sur les 15 paires, 4 seulement montraient réellement UN MÊME
-  bâtiment avant puis après (pavillon, combles, extension, surélévation : mêmes pignons, mêmes
-  ouvertures, mêmes maisons voisines). Les 11 autres associaient deux lieux différents sous un
-  « Avant : » / « Après : » qui affirme une continuité inexistante, et le plus souvent une pièce
-  meublée en second terme d'un intitulé technique :
-  — « Réseaux encastrés puis pièce d'eau livrée » : plomberie d'un chantier / salle de bain en placage
-    sombre d'un autre ; — « Étanchéité sous carrelage » : douche à l'étanchéité liquide / salle d'eau
-    en travertin ; — « De l'état initial au plateau livré » : petite pièce ancienne / grand plateau à
-    embrasures cintrées ; — « De l'ossature brute à la pièce livrée », « Ouvrir un mur porteur »,
-    « Pose du zellige », « Salle d'eau : condensation », « Doublage isolant » : même schéma.
-  — « Caissons standards, façades sur mesure » était le cas le plus net : l'« Avant » était une
-    cuisine en chêne entièrement finie, photographiée sous une rosace.
-  — « Trémie d'escalier » portait l'aveu dans sa propre légende : « Après : Référence de style ».
-  Ces 11 paires ont été supprimées. Les ouvrages techniques qu'elles portaient (état initial,
-  ouverture de mur, poutre habillée, plomberie, isolation, ossature) restent illustrés dans la
-  section « Déroulé » ci-dessus — ce qui supprime au passage les 7 images qui s'affichaient deux fois
-  sur cette page (chantier-etat-initial, chantier-ossature-placo-plafond, chantier-ouverture-mur-etaiement,
-  chantier-ipn-habillage, chantier-plomberie-encastree, chantier-isolation-laine, plateau-livre-parquet-chene).
-*/
-const COMPARATIFS: {
-  title: string;
-  text: string;
-  avant?: { src: string; caption: string };
-  apres?: { src: string; caption: string };
-}[] = [
   {
-    title: "Pavillon francilien : de la façade fatiguée à l'enveloppe performante",
-    text: "Isolation thermique par l'extérieur, remplacement des menuiseries, reprise de couverture et traitement des abords : l'enveloppe est traitée comme un ensemble cohérent.",
-    avant: {
-      src: "pavillon-facade-avant",
-      caption: "État initial d'un pavillon francilien : enduit fissuré et sali, volets en bois vétustes, descente d'eaux pluviales rouillée, garde-corps corrodé et abords en friche.",
-    },
-    apres: {
-      src: "pavillon-facade-apres",
-      caption: "Le même pavillon après travaux : façade réenduite, menuiseries neuves à dormants sombres, couverture et gouttières remplacées, escalier et garde-corps refaits, abords paysagers et allée en dalles.",
-    },
-  },
-  {
-    title: "Combles : de l'isolant tassé à la double couche croisée",
-    text: "Dépose de l'ancien isolant, traitement des périphéries, deux couches croisées et pare-vapeur continu : le premier poste de déperdition d'une passoire énergétique.",
-    avant: {
-      src: "combles-non-isoles-avant",
-      caption: "Combles perdus avant intervention : ancien isolant tassé et discontinu entre les solives, planches de circulation posées en travers.",
-    },
-    apres: {
-      src: "combles-isoles-apres",
-      caption: "Les mêmes combles après traitement : laine minérale entre solives, film jointoyé à l'adhésif sur toute la surface et chemin de circulation en panneaux.",
-    },
-  },
-  {
-    title: "Extension : du jardin encombré au volume contemporain",
-    text: "Étude de sol, déclaration préalable, fondations adaptées puis ossature bois et grandes baies : le raccord à la meulière existante est traité au détail.",
-    avant: {
-      src: "jardin-avant-extension",
-      caption: "Avant extension : pignon en meulière aveugle, terrasse béton fissurée et appentis en tôle adossé au mur de clôture.",
-    },
-    apres: {
-      src: "extension-livree-apres",
-      caption: "Le même pignon après extension : volume bardé de bois à claire-voie, grandes baies d'angle à profilés fins noirs, toiture-terrasse à couronnement métallique et terrasse en dalles de pierre. La meulière est laissée apparente.",
-    },
-  },
-  {
-    title: "Surélévation : un étage gagné sans démolir",
-    text: "Diagnostic de portance par l'ingénieur structure, dépose de la toiture, ossature bois préfabriquée et mise hors d'eau rapide pour limiter l'exposition du bâti.",
-    avant: {
-      src: "maison-avant-surelevation",
-      caption: "Avant surélévation : maison de bourg à un seul niveau, comble sous rampants éclairé par deux fenêtres de toit, façade à encadrements de briques.",
-    },
-    apres: {
-      src: "maison-surelevee-apres",
-      caption: "La même maison surélevée : étage supplémentaire habillé d'un bardage clair à joints debout, larges baies à profilés sombres et toiture à faible pente. Le rez-de-chaussée, ses briques et ses volets bois sont inchangés.",
-    },
+    src: "sejour-haussmannien-renove",
+    alt: "Séjour haussmannien livré : corniche sculptée, murs à panneaux moulurés, cheminée en marbre blanc surmontée d'une glace à cadre doré, parquet chêne à chevrons et enfilade vers la salle à manger",
+    caption: "Séjour livré : corniche sculptée courant sur tout le pourtour, murs à panneaux moulurés, cheminée en marbre blanc surmontée d'une grande glace à cadre doré, parquet chêne posé à chevrons et enfilade ouverte sur la salle à manger.",
   },
 ];
+
 
 const FAQ = [
   {
@@ -292,6 +219,33 @@ export default function SavoirFaireAncienPage() {
                 placard, où la mise aux normes invisible est le sujet.
               Les mentions « conservé », « maintenu » et « restitué » ont été retirées partout où la
               photographie ne documente pas l'opération elle-même.
+
+              03/09/2026 — CARTE D'USAGE. Comptage `grep` sur app/ (commentaires exclus) de chaque
+              photo de cette grille, pour répondre au reproche du client « les mêmes photos reviennent
+              partout ». Trois vignettes étaient employées sur 3 pages ou plus et sont remplacées par
+              des clichés jusqu'ici employés nulle part (0 page), tous rouverts avant d'être retenus,
+              et tous recadrés mentalement en 4/3 + object-cover pour vérifier que le sujet survit :
+              — chHdgChambrePlacardMoulure (3 pages : menuiserie-agencement-sur-mesure, realisations,
+                ici) → chCouloirPorteBleueNoyer (0 page). Même démonstration — une menuiserie neuve
+                posée dans un décor ancien — mais la corniche, la porte à panneaux peinte en bleu et
+                le garde-corps en ferronnerie y sont réellement dans le cadre.
+              — chParquetChevronsCouloirDeuxTeintes (3 pages : realisations, tendances-2026-2027, ici,
+                + la clé `detailParquet` de lib-photos.ts qui la sert encore ailleurs) →
+                chCouloirParquetChevronsPortesOuvertes, qui n'était employée que sur /realisations et
+                en est retirée en contrepartie : elle ne sert donc plus que sur cette page.
+              — chHdgDetailNicheOnyxCheminee (4 pages : menuiserie-agencement-sur-mesure, realisations,
+                tendances-2026-2027, ici) → chEncadrementBoisPorteMiroirAtelier (0 page). La cheminée
+                en marbre sculpté reste illustrée par la vignette voisine, il n'y avait donc pas de
+                perte de sujet.
+              Deux photos restent employées sur cette page ET sur /realisations
+              (chHdgSalonSalleMangerMoulures, chHdgChambreChemineeMiroirMoulure) : 2 pages chacune,
+              sous le seuil, et ce sont les seuls clichés du dossier où le décor ancien restitué et la
+              cheminée en marbre sculpté sont franchement le sujet.
+              chDemolitionBoiseriesHaussmannien est conservée ici alors qu'elle est identique au bit
+              près à chIsolationPhoniqueGranulesPlancher : ce jumeau a été retiré de /realisations dans
+              le même passage, de sorte que l'image vue par le visiteur passe de 4 pages à 3.
+              chPlacardTableauElectriqueIntegre passe de 3 à 2 pages, retirée du « Déroulé » de
+              /realisations et gardée ici, où « la mise aux normes invisible » est justement le sujet.
             */}
             <MqFig
               src="/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg"
@@ -311,9 +265,9 @@ export default function SavoirFaireAncienPage() {
               radiateur et la persienne sont d'origine.
             */}
             <MqFig
-              src="/photos/chantiers/chHdgChambrePlacardMoulure.jpeg"
-              alt="Chambre haussmannienne livrée, placard sur mesure toute hauteur à portes blanches moulurées couronné d'une corniche alignée sur celle de la pièce, radiateur en fonte à colonnes"
-              caption="Raccord du neuf au décor existant : le placard sur mesure monte jusqu'au plafond et se termine par une corniche alignée sur celle de la pièce ; ses portes reprennent le dessin des panneaux moulurés. Radiateur en fonte à colonnes et persienne en bois en place. Chantier réel des équipes partenaires."
+              src="/photos/chantiers/chCouloirPorteBleueNoyer.jpeg"
+              alt="Pièce d'appartement ancien en cours de finition : rangement en placage noyer monté jusque sous la corniche moulurée, porte à panneaux moulurés peinte en bleu, fenêtre sur rue à garde-corps en ferronnerie"
+              caption="Raccord du neuf au décor existant : le rangement en placage noyer monte jusque sous la corniche moulurée du plafond et vient buter contre la porte à panneaux moulurés peinte en bleu. La fenêtre sur rue garde son garde-corps en ferronnerie, face aux façades en pierre de taille du vis-à-vis. Chantier réel des équipes partenaires."
             />
             <MqFig
               src="/photos/chantiers/chHdgChambreChemineeMiroirMoulure.jpeg"
@@ -329,17 +283,21 @@ export default function SavoirFaireAncienPage() {
               reprise-là.
             */}
             <MqFig
-              src="/photos/chantiers/chParquetChevronsCouloirDeuxTeintes.jpeg"
-              alt="Raccord de deux parquets chêne posés à chevrons au droit d'un seuil, entre un couloir et une pièce, chantier réel"
-              caption="Parquets chêne posés à chevrons (point de Hongrie), motif traditionnel des logements anciens : raccord traité au droit du seuil par une seule coupe droite, avec un changement net de teinte de part et d'autre. Chantier réel des équipes partenaires."
+              src="/photos/chantiers/chCouloirParquetChevronsPortesOuvertes.jpeg"
+              alt="Couloir d'appartement ancien livré : parquet chêne posé à chevrons, pointe du motif alignée dans l'axe du passage, portes à panneaux moulurés repeintes en gris taupe"
+              caption="Parquet chêne posé à chevrons, motif traditionnel des logements anciens : la pointe du chevron est calée dans l'axe du couloir et le motif se poursuit dans la pièce suivante. De part et d'autre, des portes à panneaux moulurés repeintes en gris taupe, à paumelles et béquilles noires apparentes. Chantier réel des équipes partenaires."
             />
             {/*
               Légende revue le 03/09/2026 après ouverture de l'image : les carreaux anciens visibles
               sont des carreaux émaillés à motif floral et non des « carreaux de ciment » (matériau
               non identifiable à l'image), et ils courent le long des murs — pas « en fond de niche ».
-              La seconde vue de ce même local (chComptoirBarMouluresFinition) a été retirée : sa
-              légende annonçait un comptoir « fini », alors qu'il y est en MDF brut, avant peinture,
-              avec échafaudage et compagnon dans le cadre.
+              La seconde vue de ce même local (chComptoirBarMouluresFinition) reste écartée d'ICI : deux
+              vignettes du même bar sur la même page seraient des quasi-jumelles. Elle a en revanche été
+              placée sur /realisations le 03/09/2026, en remplacement de cette photo-ci qui y faisait
+              double emploi avec la présente page ; sa légende y a été refaite, l'ancienne annonçant un
+              comptoir « fini » alors qu'il y est en MDF brut, avant peinture. Résultat : ce cliché-ci
+              n'est plus employé que sur cette page, et le local reste montré sur les deux, sous deux
+              angles différents.
             */}
             <MqFig
               src="/photos/chantiers/chComptoirBarColonneFonteCarreauxAnciens.jpeg"
@@ -347,15 +305,18 @@ export default function SavoirFaireAncienPage() {
               caption="Colonne en fonte et carreaux anciens à motif floral conservés en place, autour d'un comptoir neuf encore en bois brut. Chantier réel des équipes partenaires."
             />
             {/*
-              Légende revue le 03/09/2026 : « onyx » et « conservée » ont été retirés. La dalle de
-              gauche est une pierre fortement veinée dont la nature exacte n'est pas identifiable à
-              l'image, et rien sur le cliché ne documente la conservation de la cheminée de droite —
-              seule sa sculpture est vérifiable.
+              03/09/2026 — remplace le diptyque chHdgDetailNicheOnyxCheminee, employé sur 4 pages
+              (menuiserie-agencement-sur-mesure, realisations, tendances-2026-2027 et ici). Ce cliché-ci
+              n'était employé nulle part. Il a été ouvert puis recadré en 4/3 : la source est en portrait
+              (1200 × 1599), mais le recadrage centré garde l'essentiel — l'encadrement en chêne, la porte
+              à panneaux, le radiateur en fonte et les corniches de la pièce du fond. Aucune mention de
+              « conservation » : la légende ne dit que ce qui est dans le cadre, à savoir que ces ouvrages
+              sont encore en place au milieu d'un chantier en cours.
             */}
             <MqFig
-              src="/photos/chantiers/chHdgDetailNicheOnyxCheminee.jpeg"
-              alt="Diptyque : à gauche une niche taillée dans une pierre veinée au-dessus d'un meuble à façades cannelées, à droite le gros plan d'une tablette de cheminée en marbre blanc sculpté avec coquille et volutes"
-              caption="Pierre neuve et pierre ancienne côte à côte : à gauche, niche taillée dans une dalle de pierre veinée posée au-dessus d'un meuble à façades cannelées ; à droite, gros plan de la traverse d'une cheminée en marbre blanc — coquille, volutes et feuillages sculptés — avec son âtre en fonte. Chantier réel des équipes partenaires."
+              src="/photos/chantiers/chEncadrementBoisPorteMiroirAtelier.jpeg"
+              alt="Ouverture entre deux pièces habillée d'un encadrement en chêne massif à angles coupés, pièce du fond en travaux avec porte à panneaux, radiateur en fonte à colonnes et corniches moulurées"
+              caption="Ouverture entre deux pièces habillée d'un encadrement en chêne massif à angles coupés. Dans la pièce du fond, encore en travaux — sols bâchés, pots de peinture, escabeau —, la porte à panneaux, le radiateur en fonte à colonnes et les corniches moulurées du plafond sont toujours en place. Chantier réel des équipes partenaires."
             />
             {/*
               Ajouté le 03/09/2026 pour l'ouvrage « Mise aux normes invisible », à la place de la
@@ -517,27 +478,18 @@ export default function SavoirFaireAncienPage() {
       >
         <div className="flex flex-col gap-8">
           {/*
-            Revu le 03/09/2026 : la légende de la photo d'entrepôt nommait le fournisseur et le point
-            de retrait, invisibles à l'image (aucune enseigne dans le cadre) et facturait même la
-            fourniture « sans marge ». Ces engagements sont portés par la liste ci-dessous, qui est
-            leur place ; la légende ne décrit plus que ce que montre la photo. Les deux visuels passent
-            en aspect-[10/7], leur dimension réelle (1280×896) : en 4/3, object-cover rognait 43 px de
-            chaque côté et mordait sur le cadre et le pied de page du schéma de budget.
+            03/09/2026 — les deux visuels de cette section ont été retirés, et c'est voulu.
+            — approvisionnement-materiaux-plateforme.jpg était employée sur 4 pages
+              (achat-direct-materiaux, menuiserie-agencement-sur-mesure, modele-economique-transparence
+              et ici). C'est une photo de stock d'entrepôt, sans enseigne dans le cadre : elle ne prouve
+              rien de l'approvisionnement décrit ci-dessous, et /public/photos/maquette/ ne contient
+              aucune autre vue de dépôt qui pourrait la remplacer sans être, elle aussi, déjà employée
+              ailleurs (flotte-camions-retrait-materiaux est sur 3 pages).
+            — schema-repartition-budget.jpg est un camembert de répartition BUDGÉTAIRE, hors sujet dans
+              une section consacrée à l'achat des matériaux, et déjà présent sur /guides,
+              /clinique-du-devis et /estimateur-travaux.
+            Les engagements d'approvisionnement sont portés par la liste ci-dessous, qui est leur place.
           */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <MqFig
-              src="/photos/maquette/approvisionnement-materiaux-plateforme.jpg"
-              alt="Entrepôt de matériaux de construction avec palettes de plaques de plâtre, rouleaux de laine minérale et sacs d'enduit"
-              caption="Dépôt de matériaux : plaques de plâtre sur palettes, rouleaux de laine minérale et sacs d'enduit, prêts à être retirés."
-              ratio="aspect-[10/7]"
-            />
-            <MqFig
-              src="/photos/maquette/schema-repartition-budget.jpg"
-              alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage"
-              caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé."
-              ratio="aspect-[10/7]"
-            />
-          </div>
           <MqChecklist
             cols={1}
             items={[
@@ -608,62 +560,34 @@ export default function SavoirFaireAncienPage() {
         </div>
       </MqSection>
 
-      <MqSection
-        kicker="Comparatifs"
-        title="Avant / après sur les ouvrages déterminants"
-        lead="Quatre comparaisons portant chacune sur un même bâtiment, photographié avant puis après travaux."
-      >
-        <div className="flex flex-col gap-12">
-          {COMPARATIFS.map((c) => (
-            <div key={c.title} className="flex flex-col gap-4">
-              <div className="flex flex-col gap-2 max-w-2xl">
-                <h3 className="display text-[1.3rem] text-ivoire">{c.title}</h3>
-                <p className="text-muted text-[0.95rem] leading-relaxed">{c.text}</p>
-              </div>
-              {c.avant && c.apres && (
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                  <MqFig src={`/photos/maquette/${c.avant.src}.jpg`} alt={c.avant.caption} caption={`Avant : ${c.avant.caption}`} />
-                  <MqFig src={`/photos/maquette/${c.apres.src}.jpg`} alt={c.apres.caption} caption={`Après : ${c.apres.caption}`} />
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </MqSection>
+      {/*
+        03/09/2026 — DEUX SECTIONS SUPPRIMÉES ICI, en réponse au reproche du client (« les mêmes
+        photos reviennent partout ») et au critère propre à cette page (une photo doit y illustrer un
+        ouvrage ANCIEN préservé).
 
-      <MqSection
-        kicker="Pédagogie"
-        title="Trois schémas pour comprendre les arbitrages techniques"
-        lead="Ventilation, étanchéité et structure conditionnent la durabilité d'une rénovation dans l'ancien."
-        wide
-      >
-        {/*
-          ratio aligné sur la dimension réelle des trois schémas (1280×896 = 10/7). En aspect-[4/3],
-          object-cover rognait 43 px de chaque côté et amputait la première lettre des titres
-          (« PRINCIPE D'UNE VMC », « ÉTANCHÉITÉ SOUS CARRELAGE ») — vérifié en simulant le recadrage
-          le 03/09/2026.
-        */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <MqFig
-            src="/photos/maquette/schema-vmc.jpg"
-            alt="Schéma d'une ventilation mécanique contrôlée avec entrées d'air, bouches d'extraction, gaines et caisson"
-            caption="Principe de la ventilation mécanique contrôlée : entrées d'air en pièces sèches, extraction en cuisine et salle d'eau, réseau raccordé au caisson."
-            ratio="aspect-[10/7]"
-          />
-          <MqFig
-            src="/photos/maquette/schema-etancheite-salle-eau.jpg"
-            alt="Coupe d'une salle d'eau montrant la natte d'étanchéité sous carrelage, la bande d'angle, la pente et le siphon"
-            caption="Étanchéité sous carrelage : continuité de la natte entre murs et sol, bandes de renfort en angle et pente d'évacuation de 1 à 2 %."
-            ratio="aspect-[10/7]"
-          />
-          <MqFig
-            src="/photos/maquette/schema-mur-porteur.jpg"
-            alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge"
-            caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis."
-            ratio="aspect-[10/7]"
-          />
-        </div>
-      </MqSection>
+        1) « Comparatifs — Avant / après sur les ouvrages déterminants » (4 paires, 8 images de stock).
+           Comptage `grep` sur app/ : combles-non-isoles-avant et combles-isoles-apres étaient sur
+           4 pages chacune ; pavillon-facade-avant/apres, jardin-avant-extension, extension-livree-apres,
+           maison-avant-surelevation et maison-surelevee-apres sur 3 pages chacune. Aucune de ces huit
+           images ne montre un ouvrage ancien préservé : ravalement et isolation par l'extérieur d'un
+           pavillon, isolation de combles, extension à bardage bois à claire-voie, surélévation à
+           bardage à joints debout — ce sont des ouvrages d'enveloppe contemporains, et chacune de ces
+           quatre paires a déjà sa page dédiée (/renovation-maison-pavillon, /renovation-energetique,
+           /extension-maison, /surelevation), d'où elles sont recopiées telles quelles. Il n'existe pas
+           dans /public/photos/maquette/ d'autre paire avant/après portant sur un même bâtiment : la
+           section ne pouvait donc pas être « rechargée » avec des visuels moins sollicités, seulement
+           retirée. Les paires restent en place sur leurs pages d'origine.
+
+        2) « Pédagogie — Trois schémas pour comprendre les arbitrages techniques ».
+           schema-mur-porteur.jpg (7 pages) et schema-vmc.jpg (6 pages) sont les deux visuels les plus
+           recyclés de tout le site ; schema-etancheite-salle-eau.jpg est sur 3 pages. Une ouverture de
+           mur porteur, un principe de VMC et une étanchéité de salle d'eau ne relèvent pas du sujet de
+           cette page, et la section « Pédagogie » qui suit immédiatement porte déjà un schéma dessiné
+           POUR elle (32-savoir-faire-trois-schemas.jpeg, employé nulle part ailleurs) qui traite
+           exactement les trois arbitrages de l'ancien : fenêtre à crémone, corniche, réseau derrière
+           doublage. Les trois schémas généraux restent en place sur /detail-invisible, /second-oeuvre,
+           /gros-oeuvre-structure, /renovation-energetique et les autres pages qui les portaient.
+      */}
 
       <MqSection
         kicker="Pédagogie"

@@ -76,32 +76,53 @@ export default function Page() {
           poteau sur platine. Les trois fichiers sont nativement en 900×1600 : ils partagent donc
           le même cadrage 9/16 sans qu'aucun ne soit amputé, là où ils étaient auparavant affichés
           en 4/3 paysage (chPoutreAcierMurDegarni perdait près de la moitié de sa hauteur).
+
+          03/09 (bis) — retour client « les trois photos acier se ressemblent ». Vérifié en ouvrant
+          les 12 fichiers ch*Acier* de la photothèque : par empreinte MD5 ils ne comptent que
+          6 images réellement distinctes (chPoutreAcierMurDegarni = chPoutreAcierMurPierreApparente,
+          chPoutreAcierSoudure = chPoutreAcierSoudureAngle2, chPoteauAcierPlatinePied =
+          chPoteauAcierScelleGravats, chPortiqueAcierAngleFenetre = chPoutreAcierPlafondMurDegarni,
+          chPortiqueAcierAngleGaine = chPortiqueAcierAngleMurDegarni2), et à l'œil ces 6 images se
+          ramènent à un seul et même portique photographié de près, plus le pied de poteau.
+          chPoutreAcierMurDegarni (ex-« La poutre ») et chPoutreAcierSoudure (« L'assemblage »)
+          étaient effectivement deux cadrages voisins du même profilé sombre : même barre verticale
+          occupant toute la hauteur, même soudure en tête. Le premier est remplacé par
+          chPortiqueAcierAngleFenetre, qui est la vue LARGE du même mur (on y retrouve le même
+          papier peint à motifs et la même gaine grise que sur le gros plan supprimé) : on y lit la
+          poutre filant sous le plafond, le poteau à l'about et l'ouverture qu'ils encadrent. La
+          grille enchaîne donc désormais trois échelles différentes — ensemble clair / détail de
+          soudure / pied de poteau au sol — et non trois gros plans sombres.
+
+          Légende de la photo d'étaiement corrigée le même jour : elle affirmait « conformément à la
+          note de calcul de l'ingénieur structure », qui n'est pas quelque chose qu'une photo peut
+          montrer, et « avant percement » alors que l'ouverture est déjà faite et la poutre déjà
+          posée en tête sur l'image.
         */}
         <div className="mb-5">
           <MqFig
             src="/photos/maquette/chantier-ouverture-mur-etaiement.jpg"
-            alt="Ouverture percée dans un mur porteur en briques avec trois étais métalliques soutenant le plancher supérieur"
-            caption="Ouverture de mur porteur : étaiement du plancher haut avant percement, conformément à la note de calcul de l'ingénieur structure."
+            alt="Ouverture pratiquée dans un mur en briques, trois étais métalliques réglables en appui sous la poutre posée en tête d'ouverture"
+            caption="Ouverture pratiquée dans un mur en briques : trois étais réglables soutiennent la poutre posée en tête d'ouverture, gravats encore au sol."
             ratio="aspect-[10/7]"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <MqFig
-            src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
-            alt="Poutre acier de reprise de charge scellée sur son appui, mur dégarni jusqu'au support, gaine électrique apparente"
-            caption="La poutre : profilé acier de reprise scellé sur son appui, mur dégarni jusqu'au support en attente de la reprise d'enduit. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chPortiqueAcierAngleFenetre.jpeg"
+            alt="Portique acier vu en angle : poutre horizontale filant sous le plafond et poteau vertical à l'about de l'ouverture, mur voisin dégarni et gaine électrique apparente"
+            caption="Le portique : poutre acier filant sous le plafond et poteau vertical à l'about, encadrant l'ouverture vers la pièce voisine ; mur dégarni jusqu'au support, gaine électrique encore apparente. Chantier réel des équipes partenaires."
             ratio="aspect-[9/16]"
           />
           <MqFig
             src="/photos/chantiers/chPoutreAcierSoudure.jpeg"
-            alt="Angle soudé entre une poutre et un poteau acier de reprise de charge, vu depuis le plafond ouvert"
-            caption="L'assemblage : jonction soudée entre la poutre et le poteau du portique de reprise, plafond ouvert avant habillage. Chantier réel des équipes partenaires."
+            alt="Gros plan sur la jonction soudée entre une poutre et un poteau acier, cordons de soudure visibles, plafond ouvert au-dessus"
+            caption="L'assemblage : gros plan sur la jonction soudée entre la poutre et le poteau, cordons de soudure apparents, plafond ouvert au-dessus. Chantier réel des équipes partenaires."
             ratio="aspect-[9/16]"
           />
           <MqFig
             src="/photos/chantiers/chPoteauAcierPlatinePied.jpeg"
-            alt="Pied de poteau acier soudé sur sa platine, posé au fond d'un plancher ouvert et entouré de gravats"
-            caption="L'appui : pied de poteau soudé sur sa platine, descendu au fond du plancher ouvert avant scellement et rebouchage. Chantier réel des équipes partenaires."
+            alt="Pied de poteau acier soudé sur sa platine rectangulaire, posé au fond d'un plancher ouvert et entouré de gravats"
+            caption="L'appui : pied de poteau soudé sur sa platine, posé au fond du plancher ouvert, gravats encore en place tout autour. Chantier réel des équipes partenaires."
             ratio="aspect-[9/16]"
           />
         </div>
@@ -223,7 +244,16 @@ export default function Page() {
           intérieurs, même câble blanc au plafond) une fois le plancher refermé en panneaux
           OSB : la séquence devient une vraie reprise de plancher suivie jusqu'à sa fermeture.
         */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/*
+          03/09 (bis) : ratio du volet « Isolation » corrigé. chIsolationPhoniqueGranulesPlancher.jpeg
+          est nativement en 1600×1200, c'est-à-dire un PAYSAGE, alors qu'il était affiché en 3/4
+          portrait comme ses deux voisines : le recadrage supprimait environ 44 % de sa largeur,
+          donc les boiseries de gauche et la fenêtre de droite — précisément les repères qui
+          permettent de vérifier que le volet « Fermeture » montre bien la même pièce. Chaque photo
+          reprend donc son ratio natif (3/4, 4/3, 3/4) et la grille passe en items-start, comme le
+          diptyque escalier plus bas sur cette page.
+        */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
           <MqFig
             src="/photos/chantiers/chPlancherSolivesBeton2.jpeg"
             alt="Solives de plancher ancien décaissées et remplies en corps creux béton dans un couloir, lambourdes posées par-dessus"
@@ -232,9 +262,9 @@ export default function Page() {
           />
           <MqFig
             src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher.jpeg"
-            alt="Granulés isolants versés entre les lambourdes d'un plancher ancien, boiseries d'origine encore en place"
+            alt="Granulés isolants versés entre les lambourdes d'un plancher ancien, boiseries d'origine et fenêtres encore en place"
             caption="Isolation : granulés versés entre lambourdes pour le traitement phonique, avant fermeture du plancher. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
+            ratio="aspect-[4/3]"
           />
           <MqFig
             src="/photos/chantiers/chSousCouchePanneauxOSB.jpeg"
@@ -349,47 +379,36 @@ export default function Page() {
             ratio="aspect-[10/7]"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/*
+          03/09 (bis) — retour client « c'est trois fois presque la même chose ». Il avait raison :
+          les trois photos affichées ici (chDemolitionCloisonBoisPlatre, chDemolitionLattisPlatreChantier1,
+          chDemolitionLattisPlatreChantier2) sont le MÊME mur en pan de bois du MÊME appartement,
+          pris à trois distances — même lattis, même poussière beige, même huisserie. Les 9 fichiers
+          chDemolition* de la photothèque ont été ouverts un par un : ils se réduisent à trois prises
+          de vue de cette unique cloison (chDemolitionGravatsChantier et chDemolitionLattisPlatreOuverture
+          sont des recadrages de chDemolitionCloisonBoisPlatre ; chDemolitionOuvertureCouloir est
+          chDemolitionLattisPlatreChantier1 ; chDemolitionMursDecapes et chDemolitionDegagementVersSejour
+          sont chDemolitionLattisPlatreChantier2), plus chDemolitionBoiseriesHaussmannien qui est
+          hors sujet ET identique au bit près à chIsolationPhoniqueGranulesPlancher, déjà utilisée
+          plus haut sur cette page.
+          Aucune autre photo du dossier ne documente honnêtement un carottage, un sciage de béton ou
+          un tri de gravats. La grille passe donc de 3 à 1 : mieux vaut une image juste que trois
+          quasi-identiques. La photo conservée est la plus explicite des trois (ossature entièrement
+          dégagée + tas de gravats + perforateur au sol). Elle est native en 1200×1600, donc affichée
+          en 3/4 et bornée en largeur : à pleine largeur de colonne, un portrait ferait près de
+          1 200 px de haut.
+          À GÉNÉRER si un second visuel est souhaité pour cette section : un carottage de mur béton
+          en cours (couronne diamantée, collerette d'eau) et/ou des gravats triés en sacs prêts à
+          l'évacuation — deux gestes cités dans le texte mais non documentés par la photothèque.
+        */}
+        <div className="max-w-md">
           <MqFig
             src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
-            alt="Cloison ancienne en pan de bois et plâtre déposée, lattis et poteaux mis à nu, gravats et perforateur au sol"
-            caption="Cloison ancienne en pan de bois et plâtre déposée : lattis et poteaux mis à nu, gravats de plâtre au sol. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
-          <MqFig
-            src="/photos/chantiers/chDemolitionLattisPlatreChantier1.jpeg"
-            alt="Même chantier vu plus largement : ossature en lattis et plâtre dégagée de part et d'autre d'une huisserie conservée"
-            caption="Vue d'ensemble du même chantier : ossature dégagée de part et d'autre d'une huisserie conservée. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
-          <MqFig
-            src="/photos/chantiers/chDemolitionLattisPlatreChantier2.jpeg"
-            alt="Vue depuis le couloir à travers une huisserie : murs décroûtés, poussière au sol et tubes de plomberie rouges et bleus apparents"
-            caption="Vue depuis le couloir : murs décroûtés, sol couvert de poussière et tubes de plomberie encore apparents avant reprise. Chantier réel des équipes partenaires."
+            alt="Cloison ancienne en pan de bois et plâtre déposée, lattis et poteaux mis à nu sur toute la hauteur, tas de gravats et perforateur au sol"
+            caption="Cloison ancienne en pan de bois et plâtre déposée : lattis et poteaux mis à nu sur toute la hauteur, tas de gravats de plâtre et perforateur au sol. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>
-        {/*
-          31/08 : chDemolitionGravatsChantier.jpeg retiré de cette grille. Vérification photo par
-          photo : ce fichier est quasi identique (même mur dégarni, même tas de gravats, même
-          perceuse au sol) à chDemolitionCloisonBoisPlatre.jpeg déjà utilisée juste au-dessus dans
-          cette même grille — les deux montrent la même prise de vue, pas deux chantiers différents.
-          Sa légende affirmait en plus "gravats triés et sacs préparés avant évacuation", ce qui
-          n'est pas ce que montre la photo (tas de gravats en vrac avec une perceuse posée dessus,
-          aucun sac, aucun tri visible). Recherche d'un remplaçant réel dans public/photos/chantiers/
-          (mots-clés gravats/sac/évacuation) : aucune autre photo du dossier ne montre des gravats
-          triés en sacs prêts à l'évacuation — les seuls autres clichés de démolition disponibles
-          (chDemolitionMursDecapes.jpeg, chDemolitionOuvertureCouloir.jpeg,
-          chDemolitionLattisPlatreOuverture.jpeg) sont eux-mêmes des quasi-doublons des deux photos
-          déjà utilisées ci-dessus. La légende de chDemolitionLattisPlatreChantier2.jpeg a aussi été
-          corrigée : elle prétendait à tort "gravats triés avant évacuation" alors que la photo
-          montre un sol poussiéreux avec des tuyaux de plomberie encore apparents, pas des gravats
-          triés.
-          À GÉNÉRER si un visuel de gravats triés est souhaité : "Photographie réaliste de chantier,
-          gros plan sur des gravats de démolition (plâtre, briques, bois) triés par matériau et
-          conditionnés dans des sacs à gravats blancs tressés, prêts à être évacués, sol de chantier
-          protégé en arrière-plan, lumière naturelle, style photo-reportage BTP, aucun texte."
-        */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           {[
             { title: "Démolition et évacuation", text: "Dépose sélective des éléments non porteurs, tri des matériaux et évacuation organisée, en particulier en immeuble occupé." },
@@ -423,18 +442,24 @@ export default function Page() {
           échafaudage disent la même chose une fois — et c'était la seule en portrait
           (1200×1600) dans une grille affichée en 4/3, donc la seule à être amputée. Les deux
           photos conservées sont nativement en 4/3 : la grille est homogène et sans recadrage.
+
+          03/09 (bis) — retour client « ce sont les deux mêmes photos ». Les deux fichiers ont été
+          ouverts et comparés : chFacadeRavalementEchafaudage2 et chFacadeRavalementVillage sont le
+          MÊME bâtiment, le même jour (même toiture d'ardoise en mansarde, même souche de cheminée
+          en brique à trois abouts, même échafaudage bâché, mêmes volets gris, même ciel gris uni) —
+          l'un est un gros plan du haut de la façade, l'autre la vue large depuis la rue. La légende
+          « Autre ravalement, sur un bâtiment ancien de centre-village » était donc fausse : ce n'est
+          pas un autre chantier. La paire passe à une seule image, et c'est la vue large qui est
+          gardée : elle montre l'immeuble entier, l'échafaudage du sol au toit et la rue — c'est-à-dire
+          exactement ce dont parle la section (aspect extérieur, voie publique, copropriété), là où
+          le gros plan ne montrait qu'un fragment de corniche. Elle est native en 1600×1200, donc
+          affichée en 4/3 pleine largeur sans recadrage.
         */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
-          <MqFig
-            src="/photos/chantiers/chFacadeRavalementEchafaudage2.jpeg"
-            alt="Façade d'immeuble sous échafaudage complet pendant un ravalement, filets de protection en place"
-            caption="Ravalement de façade sous échafaudage : une modification de l'aspect extérieur, qui relève du règlement de copropriété. Chantier réel des équipes partenaires."
-            ratio="aspect-[4/3]"
-          />
+        <div className="mt-8">
           <MqFig
             src="/photos/chantiers/chFacadeRavalementVillage.jpeg"
-            alt="Façade d'un bâtiment ancien en centre-village sous échafaudage, protections déroulées au pied du mur"
-            caption="Autre ravalement, sur un bâtiment ancien de centre-village : échafaudage monté et protections déroulées au pied de la façade. Chantier réel des équipes partenaires."
+            alt="Immeuble ancien de centre-village entièrement ceinturé d'un échafaudage bâché pendant un ravalement, vu depuis la rue en contrebas"
+            caption="Ravalement de façade : l'immeuble est ceinturé d'un échafaudage bâché monté depuis la rue. Modifier l'aspect extérieur relève du règlement de copropriété. Chantier réel des équipes partenaires."
             ratio="aspect-[4/3]"
           />
         </div>

@@ -104,11 +104,13 @@ export default function Page() {
             src="/photos/maquette/schema-vmc.jpg"
             alt="Schéma de principe d'une ventilation mécanique contrôlée hygroréglable en appartement : entrées d'air en menuiseries, transit sous les portes, extraction en cuisine et salle de bains, gaines vers le caisson et carottage de traversée de mur"
             caption="Principe de ventilation hygroréglable : entrées d'air, transit et extraction forment un ensemble indissociable de l'isolation."
+            ratio="aspect-[10/7]"
           />
           <MqFig
             src="/photos/maquette/chantier-carottage-facade.jpg"
             alt="Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation"
             caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -152,11 +154,12 @@ export default function Page() {
             src="/photos/maquette/schema-demarches-copropriete.jpg"
             alt="Démarches de copropriété avant une rénovation d'appartement."
             caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire."
+            ratio="aspect-[10/7]"
           />
         </div>
 
         {/*
-          Sept photos réelles ci-dessous, chacune vérifiée individuellement (chantiers des
+          Huit photos réelles ci-dessous, chacune vérifiée individuellement (chantiers des
           équipes partenaires). Honnêteté : la bibliothèque de photos ne permet pas de
           prouver qu'elles documentent un seul et même appartement du relevé à la livraison
           (pas de métadonnées EXIF exploitables, fichiers copiés en batch, plusieurs noms de
@@ -175,64 +178,85 @@ export default function Page() {
              fois la même scène sous deux légendes différentes. Remplacée par
              chCuisineCremeIlot.jpeg (cuisine livrée distincte, non utilisée ailleurs sur le
              site).
+
+          Correction du 03/09/2026 — DÉFAUT SIGNALÉ PAR LE CLIENT (« tu mets 14 fois les mêmes
+          photos de démolition et de structure mise à nu »). Vérification visuelle fichier par
+          fichier : la séquence affichait QUATRE fois le même mur.
+          a) chDemolitionCloisonBoisPlatre.jpeg et chDemolitionLattisPlatreOuverture.jpeg sont
+             la MÊME prise de vue (md5 différents — recadrage de 1200 à 1186 px de large — mais
+             perforateur posé au même endroit sur le tas de gravats, câble enroulé à l'identique,
+             même fenêtre bleutée derrière le lattis). Elles étaient légendées comme deux moments
+             distincts (« Structure mise à nu » puis « Quelques jours plus tard ») : c'était faux.
+          b) chDemolitionGravatsChantier.jpeg, dans la bibliothèque, est un troisième exemplaire
+             de cette même prise de vue. Écarté.
+          c) chDemolitionOuvertureCouloir.jpeg est le MÊME mur et le MÊME couloir vus de plus
+             loin (même lattis en pan de bois, même huisserie à gauche, même fenêtre au fond).
+          Une seule de ces vues est conservée (vignette 1). Les trois autres sont remplacées par
+          des étapes qui apportent chacune une information nouvelle : réseaux d'eau, électricité
+          et faux plafond, plancher isolé, implantation de la salle d'eau.
+
+          Même traitement pour les salles de bains, second point signalé par le client :
+          chHdgSdbMarbreProfilesLaitonPose.jpeg et chHdgDoucheMarbreLaitonProtection.jpeg sont
+          la même salle d'eau à la même phase (mêmes dalles de marbre, mêmes profilés laiton,
+          même plan vasque découpé visible dans les deux cadrages). Les deux sont retirées d'ici
+          — elles restent visibles sur /realisations et /tendances-2026-2027 — et remplacées par
+          deux stades réellement différents d'une salle d'eau : l'implantation avant carrelage
+          (chEtancheiteReceveurDoucheLaser) puis l'équipement posé (chSdbVasquesPoseMeubleBeige).
+
+          Enfin, chaque vignette reçoit désormais le ratio natif de son fichier (aspect-[3/4]
+          pour les portraits 1200×1600, aspect-[4/3] pour les paysages 1600×1200). Le cadre
+          paysage par défaut de MqFig amputait les portraits de près de la moitié de leur
+          hauteur. La grille passe en items-start pour rester alignée avec des hauteurs mixtes.
         */}
         <p className="eyebrow mt-10">Étapes réelles d'une rénovation d'appartement pilotée de A à Z</p>
-        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 items-start">
           <MqFig
             src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
-            alt="Cloison ancienne ouverte jusqu'au lattis de bois et au plâtre, gravats au sol, couloir d'appartement haussmannien"
-            caption="Démolition sélective : cloison ouverte jusqu'au lattis bois d'origine, gravats évacués au fur et à mesure du chantier. Chantier réel des équipes partenaires."
+            alt="Cloison ancienne ouverte jusqu'au lattis de bois et au plâtre, tas de gravats et perforateur au sol, pièce voisine décapée"
+            caption="Dépose : la cloison est ouverte jusqu'au lattis bois d'origine, gravats et perforateur au sol, pièce voisine décapée jusqu'au plâtre. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
-            src="/photos/chantiers/chPlacardTableauElectriqueIntegre.jpeg"
-            alt="Tableau électrique et compteur intégrés dans un placard sur mesure, ouvert pour vérification des réseaux"
-            caption="Vérification des réseaux existants : tableau électrique et compteur avant intégration dans un placard sur mesure. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chPlomberieMulticoucheDistributionMurale.jpeg"
+            alt="Distribution d'eau neuve sur un mur nu : tubes sertis sur raccords laiton, fixés par colliers, descentes en gaines et attente d'évacuation en PVC"
+            caption="Réseaux d'eau : distribution tracée au crayon sur le mur, tubes sertis sur raccords laiton et maintenus par colliers, attente d'évacuation laissée ouverte. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
           <MqFig
-            src="/photos/chantiers/chDemolitionOuvertureCouloir.jpeg"
-            alt="Ouverture d'une cloison ancienne jusqu'à l'ossature en bois, avant dépose complète"
-            caption="Structure mise à nu : la cloison est ouverte jusqu'à son ossature pour vérifier ce qu'elle autorise réellement. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chElectriciteFauxPlafondRailsCablage.jpeg"
+            alt="Plafond d'appartement équipé de fourrures métalliques, gaines annelées et conducteurs électriques apparents avant pose des plaques, doublage et pare-vapeur en fond"
+            caption="Électricité et faux plafond : fourrures posées, gaines et conducteurs tirés avant la fermeture des plaques — c'est le moment où tout se vérifie. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
           <MqFig
-            src="/photos/chantiers/chDemolitionLattisPlatreOuverture.jpeg"
-            alt="Même ossature après dépose complète du lattis et du plâtre, gravats au sol"
-            caption="Quelques jours plus tard : dépose complète du lattis et du plâtre, réseaux dégagés avant reconstruction. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher.jpeg"
+            alt="Plancher ancien mis à nu dans une pièce à boiseries, granulés isolants blancs versés entre les bois du plancher, fenêtres anciennes et volets intérieurs en bois, immeuble en vis-à-vis"
+            caption="Plancher mis à nu : granulés isolants versés entre les bois du plancher ancien avant repose d'un revêtement, boiseries de la pièce encore en place. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
+          />
+          <MqFig
+            src="/photos/chantiers/chEtancheiteReceveurDoucheLaser.jpeg"
+            alt="Salle d'eau en préparation : plaques de plâtre hydrofuges vertes, ligne laser verte projetée au niveau, bâti du receveur de douche et attentes d'évacuation en PVC noir"
+            caption="Salle d'eau : emplacement du receveur repéré au laser, attentes d'évacuation et réservations de robinetterie tracées sur les plaques hydrofuges, avant carrelage. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
-            alt="Pose d'un sol stratifié imitation chêne à bâtons rompus, lames clipsées sur sous-couche et chutes au sol"
-            caption="Second œuvre : pose du revêtement de sol à bâtons rompus, matériau acheté en direct par le client au prix fournisseur. Chantier réel des équipes partenaires."
+            alt="Pose d'un sol stratifié imitation chêne à bâtons rompus, lames clipsées sur sous-couche, chutes et outils au sol"
+            caption="Sols : pose du revêtement à bâtons rompus (stratifié imitation chêne), lames clipsées sur sous-couche, chutes et outils encore au sol. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
           <MqFig
             src="/photos/chantiers/chSdbVasquesPoseMeubleBeige.jpeg"
-            alt="Salle de bains en cours d'installation, meuble beige et vasques posées, câblages en attente"
-            caption="Exécution pilotée : meuble et vasques posés, suivi quotidien avant raccordement final. Chantier réel des équipes partenaires."
-          />
-          {/*
-            Ajouté le 02/09/2026 — deux photographies d'une salle d'eau EN COURS de pose, sur le
-            chantier haussmannien parisien livré par les équipes partenaires. Elles documentent
-            l'étape 6 (« Exécution pilotée et suivi quotidien » : protection et points de contrôle
-            avant finition), qui n'était illustrée que par une seule vignette.
-
-            Les deux clichés montrent la même pièce à la même phase — c'est écrit dans les légendes.
-            Aucune ne présente un ouvrage livré : le film de protection au sol, le receveur bâché, la
-            découpe brute du plan vasque et l'absence de robinetterie sont visibles à l'image et
-            explicitement mentionnés, pour qu'aucun visiteur ne prenne ces vues pour une réception.
-          */}
-          <MqFig
-            src="/photos/chantiers/chHdgSdbMarbreProfilesLaitonPose.jpeg"
-            alt="Salle d'eau en cours de pose, murs en marbre beige grand format, profilés en laiton aux arêtes, plan vasque en marbre percé et découpé, vasque et robinetterie non posées"
-            caption="Point de contrôle avant finition : dalles de marbre posées à joints alignés, profilés en laiton en arêtes et en nez de tablette, plan vasque percé et sa découpe ovale encore brute. Ouvrage non terminé — ni vasque, ni robinetterie, ni éclairage définitif. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chHdgDoucheMarbreLaitonProtection.jpeg"
-            alt="Niche de douche de la même salle d'eau en cours, parois en marbre beige et profilés laiton, receveur et sol recouverts d'un film de protection, spot de chantier provisoire"
-            caption="Même pièce, même phase : la niche de douche est habillée de marbre et de profilés en laiton, receveur et sol restent sous film de protection jusqu'à la fin des interventions, l'éclairage est encore provisoire. Chantier réel des équipes partenaires."
+            alt="Salle d'eau équipée : meuble sur mesure beige, plan blanc et deux vasques rondes posées, câble électrique pendant au-dessus de la crédence, robinetterie absente"
+            caption="Équipements : meuble sur mesure, plan blanc et vasques en place ; le câble reste pendant au-dessus de la crédence et la robinetterie n'est pas posée. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/chantiers/chCuisineCremeIlot.jpeg"
-            alt="Cuisine ouverte livrée sous velux, îlot central en plan noir et façades sur mesure"
-            caption="Réception : cuisine livrée, îlot et façades sur mesure, réserves levées après pilotage complet du chantier. Chantier réel des équipes partenaires."
+            alt="Cuisine ouverte en fin de chantier sous velux, îlot central et plan de travail noir, façades crème sur mesure, four et micro-ondes encastrés"
+            caption="Fin de chantier : cuisine posée sous velux, îlot et plan de travail noir en place, façades sur mesure montées ; un câble reste en attente de raccordement au-dessus du plan de travail. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
         </div>
       </MqSection>

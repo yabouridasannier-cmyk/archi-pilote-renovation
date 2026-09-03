@@ -130,6 +130,61 @@ export const AVANT_APRES = [
 export type Article = { slug: string; titre: string; date: string; dateISO: string; excerpt: string; categorie: string; photo: string; corps: string[]; img2?: string; img2Caption?: string; img3?: string; img3Caption?: string };
 
 export const ARTICLES: Article[] = [
+  /* 03/09 : six articles ajoutés au titre du plan éditorial du dossier client
+     (30 articles prévus, 12 en ligne) — n° 2, 3, 8, 14, 16 et 22. Aucune image
+     nouvelle : uniquement des clés déjà déclarées dans lib-photos.ts, ouvertes
+     une par une avant d'écrire leur légende. */
+  {
+    slug: "reception-chantier-preparer-les-reserves",
+    titre: "Réception de chantier : préparer les réserves sans improviser",
+    date: "2 septembre 2026", dateISO: "2026-09-02",
+    categorie: "Réception",
+    excerpt: "La réception se prépare bien avant le jour J : une réserve utile désigne un emplacement et un défaut précis, jamais une impression générale.",
+    photo: "chRangementChantierEncombre",
+    img2: "chDetailTiroirMainOuverture",
+    img2Caption: "Essai d'un tiroir pendant la pose : chaque ouvrant se manœuvre au fil du chantier, sinon il sera manœuvré pour la première fois le jour de la réception. Chantier réel des équipes partenaires.",
+    img3: "chNicheArrondieRubanBleu",
+    img3Caption: "Meuble d'entrée refermant le compteur et le tableau électrique, portes ouvertes en cours de pose : l'accès aux organes de coupe se vérifie avant que la menuiserie ne le referme. Chantier réel des équipes partenaires.",
+    corps: [
+      "La réception est l'acte par lequel vous acceptez l'ouvrage, avec ou sans réserves. Elle est écrite, datée, signée, et elle fait courir les garanties : parfait achèvement pendant un an, garantie biennale sur les équipements dissociables pendant deux ans, décennale pendant dix ans. Sur un chantier où chaque entreprise contracte directement avec vous, elle se prononce avec chacune d'elles, lot par lot, et non par une signature globale en fin de travaux.",
+      "La préparation commence bien avant la visite. Relire le devis signé et ses avenants, rassembler les plans et les décisions prises en cours de chantier, et tenir depuis le premier jour une liste des points restés ouverts : c'est cette liste, et non la mémoire, qui évite d'en découvrir douze le jour J. La visite se fait de préférence à la lumière du jour, protections retirées et matériel replié, en testant réellement les équipements — ouvrants, robinetterie, écoulements, prises, éclairages, ventilation, chauffage. Les finitions se regardent sous plusieurs angles, en lumière rasante : c'est ainsi qu'apparaissent les défauts d'alignement, les reprises d'enduit et les manques de peinture.",
+      "Une réserve utile décrit un emplacement et un défaut. « Rayure sur le montant droit du placard de la chambre 2, à hauteur de poignée » se lève ; « peinture à revoir » se discute pendant des mois. Chaque réserve gagne à être photographiée et assortie d'un délai de levée convenu par écrit. Il faut aussi distinguer la réserve de ce qui n'a jamais été commandé : un poste absent du devis n'est pas un défaut, c'est un avenant. Enfin, la réception est le bon moment pour récupérer ce qui devient introuvable ensuite — notices et garanties des équipements, références des matériaux et des teintes, attestations d'assurance des entreprises, et les photos des ouvrages prises avant fermeture des murs.",
+    ],
+  },
+  {
+    slug: "ordre-intervention-lots-renovation-complete",
+    titre: "Rénovation complète : dans quel ordre faire intervenir les lots ?",
+    date: "1 septembre 2026", dateISO: "2026-09-01",
+    categorie: "Organisation de chantier",
+    excerpt: "L'ordre des lots ne relève pas de l'habitude : on descend du plus destructif vers le plus fragile, et rien ne se referme avant que les réseaux soient posés.",
+    photo: "chPlancherSolivesBeton1",
+    img2: "chSousCouchePanneauxOSB",
+    img2Caption: "Panneaux OSB posés en support de sol dans un appartement mis à nu, une gaine encore en attente au sol : le revêtement final ne vient qu'après les réseaux. Chantier réel des équipes partenaires.",
+    img3: "chCouloirParquetChevronsPortesOuvertes",
+    img3Caption: "Dernier lot en place : parquet posé à chevrons et portes peintes, une fois les murs, les réseaux et les enduits terminés. Chantier réel des équipes partenaires.",
+    corps: [
+      "L'ordre d'intervention des lots suit une règle simple : on descend du plus destructif vers le plus fragile, et on ne referme jamais un ouvrage avant que ce qui doit passer dedans soit posé. Une rénovation complète qui dérape ne dérape que rarement sur la technique — elle dérape sur l'enchaînement. Une cloison fermée trop tôt, un carrelage posé avant qu'une évacuation soit arrêtée, une cuisine choisie après le passage du plombier coûtent chacun une reprise que personne n'avait chiffrée.",
+      "La séquence commence par les études et les repérages : relevé de l'existant, diagnostics, et repérage amiante avant travaux dans les bâtiments concernés. Viennent ensuite l'installation de chantier et les protections, puis la démolition et les déposes, la structure — ouvertures, reprises de charge, étaiement —, et la mise hors d'eau et hors d'air lorsque l'enveloppe est touchée. Les réseaux suivent : évacuations, alimentations, électricité, ventilation, chauffage. C'est seulement là que l'on referme, avec l'isolation, les doublages, les cloisons et les plafonds. Arrivent alors les chapes et ragréages, l'étanchéité des pièces humides, le carrelage, les enduits et sous-couches, puis les menuiseries intérieures, la cuisine, les sanitaires et l'appareillage. Sols fragiles, peintures de finition et plinthes ferment la marche, avant nettoyage, mise en service et réception.",
+      "Ce qui casse cet ordre se décide presque toujours en amont, pas sur le chantier. Le plan de cuisine et le calepinage de la salle de bain doivent être arrêtés avant le passage des réseaux, faute de quoi on repique dans des murs déjà fermés. Les commandes à long délai — menuiseries sur mesure, cuisine, carrelage, appareils — se lancent bien avant leur date de pose. Et certains temps ne se compriment pas : séchage d'une chape, séchage d'un enduit, instruction d'une autorisation. Tenir un planning consiste moins à presser les entreprises qu'à tenir ces jalons-là, en gardant l'interface entre des entreprises qui contractent chacune directement avec vous.",
+    ],
+  },
+  {
+    slug: "ipn-hea-heb-choix-profile",
+    titre: "IPN, HEA ou HEB : ce que change réellement le choix du profilé",
+    date: "31 août 2026", dateISO: "2026-08-31",
+    categorie: "Structure",
+    excerpt: "Le profilé ne se choisit pas au catalogue mais au calcul. Ce que vous voyez changer, c'est la retombée sous plafond, les appuis et le travail de reprise autour.",
+    photo: "chPoutreAcierProfilVueLongue",
+    img2: "chPoutreAcierMurDegarni",
+    img2Caption: "Tête de poteau et platine soudée sous la poutre, maçonnerie mise à nu autour de l'appui : c'est l'appui, et pas la poutre seule, qui décide de la descente de charges. Chantier réel des équipes partenaires.",
+    img3: "chPortiqueAcierAngleFenetre",
+    img3Caption: "Portique acier en place dans l'angle d'une pièce, poutre en tête et poteau en descente, avant habillage et finitions. Chantier réel des équipes partenaires.",
+    corps: [
+      "IPN, HEA et HEB désignent trois familles de profilés en acier laminé, pas trois niveaux de qualité. Dans le langage courant, « IPN » est devenu le nom générique de toute poutre métallique posée au-dessus d'une ouverture, y compris quand la pièce réellement mise en œuvre n'en est pas un. Le profilé adapté à votre ouverture est le résultat d'un calcul mené par un bureau d'études structure, à partir de la portée, des charges reprises et de la déformation admissible. Il ne se choisit ni sur l'habitude d'une entreprise, ni sur un forum.",
+      "Ce qui distingue ces familles tient à la forme de la section. L'IPN est un profil en I aux ailes inclinées, hérité des séries anciennes ; l'IPE reprend la même silhouette avec des ailes parallèles. Les HEA, HEB et HEM forment la famille des profils en H, à ailes larges et parallèles, avec une matière répartie autrement. À hauteur égale, un HEB est plus massif qu'un HEA et reprend davantage de charge, mais il pèse plus lourd, se manipule plus difficilement et coûte plus cher à mettre en œuvre. Deux contraintes tranchent presque toujours : la portée et les charges à reprendre d'un côté, la hauteur disponible sous plafond de l'autre. C'est cette seconde contrainte qui explique qu'on préfère parfois un profil large et bas à une poutre haute qui mangerait la hauteur de passage.",
+      "Le profilé n'est qu'une pièce d'un système. Se vérifient avec au moins autant d'attention : les appuis — poteaux, platines, semelles de répartition —, la descente de charges jusqu'à un support capable de la reprendre, l'étaiement pendant la dépose du mur, et le calage en tête de poutre, qui conditionne le transfert réel des charges de la maçonnerie vers l'acier. Un profil correctement dimensionné mais mal appuyé reste un mauvais système. Tout cela disparaît ensuite sous l'habillage : la note de calcul, les références des pièces et les photos datées de la pose se conservent, parce qu'elles ne seront plus vérifiables une fois le plâtre refermé.",
+    ],
+  },
   {
     slug: "extension-ou-surelevation-maison",
     titre: "Extension ou surélévation : comment choisir selon votre terrain",
@@ -148,6 +203,21 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "ouvrir-mur-porteur-copropriete-assemblee",
+    titre: "Ouvrir un mur porteur en copropriété : les pièces à préparer avant l'assemblée",
+    date: "27 août 2026", dateISO: "2026-08-27",
+    categorie: "Copropriété",
+    excerpt: "En immeuble, la structure ne relève pas de votre seule décision : ce qui fait avancer le dossier, c'est son contenu, remis au syndic avant l'envoi de la convocation.",
+    photo: "chDemolitionLattisPlatreOuverture",
+    img2: "chPoutreAcierAngleSoudeVue1",
+    img2Caption: "L'ouvrage tel qu'il est autorisé puis exécuté : poteau soudé sous la poutre, réseaux repassés autour une fois la structure en place. Chantier réel des équipes partenaires.",
+    corps: [
+      "Un mur porteur situé à l'intérieur d'un lot privatif reste, dans la plupart des règlements de copropriété, un élément de structure rattaché aux parties communes. Son ouverture n'est donc pas une décision privée : elle demande une autorisation votée en assemblée générale. Ce qui fait avancer un dossier n'est pas l'insistance auprès du syndic, mais sa complétude — un dossier incomplet est renvoyé à l'assemblée suivante, c'est-à-dire le plus souvent à l'année suivante.",
+      "Les pièces attendues varient d'un règlement et d'un syndic à l'autre : la première démarche consiste à en demander la liste par écrit. Reviennent presque toujours les plans de l'existant et du projet, un descriptif technique de l'ouverture précisant la méthode, l'étaiement et le phasage, l'étude d'un bureau d'études structure avec la descente de charges et le profilé retenu, les attestations d'assurance décennale et de responsabilité civile des entreprises appelées à intervenir, le planning et les horaires envisagés, enfin les modalités d'accès, de protection des parties communes et d'évacuation des gravats. Certaines copropriétés demandent en plus l'intervention d'un contrôleur technique, ou l'engagement de remettre un rapport en fin de travaux. La majorité applicable au vote dépend de la nature exacte des travaux et se vérifie avec le syndic, jamais sur une règle générale trouvée en ligne.",
+      "Le calendrier se lit à l'envers. La demande doit parvenir au syndic assez tôt pour être inscrite à l'ordre du jour, lui-même arrêté avant l'envoi de la convocation, dont le délai est encadré par la loi. Transmise après cet envoi, elle ne sera pas examinée : il faudra attendre l'assemblée suivante, ou en provoquer une extraordinaire — dont les frais retombent généralement sur le demandeur. D'ici là, rien ne se commande et rien ne se démolit. Une fois l'autorisation obtenue, le procès-verbal rejoint le dossier de chantier avec l'étude de structure et les photos de l'ouvrage avant habillage : ce sont exactement les pièces qu'on vous redemandera des années plus tard, à la revente comme en cas de sinistre.",
+    ],
+  },
+  {
     slug: "signes-mur-porteur-avant-travaux",
     titre: "Mur porteur : les signes qui doivent alerter avant travaux",
     date: "25 août 2026", dateISO: "2026-08-25",
@@ -162,6 +232,21 @@ export const ARTICLES: Article[] = [
       "Un mur épais n'est pas automatiquement porteur, et un mur fin en briques ou en carreaux de plâtre n'est pas automatiquement sans rôle structurel. C'est l'erreur la plus fréquente chez qui juge « à l'œil » avant travaux.",
       "Quatre indices se recoupent : l'épaisseur du mur, son alignement vertical avec un mur de l'étage du dessous ou du dessus, le sens de pose des solives ou poutrelles du plancher, et sa position par rapport aux façades et aux refends principaux du bâtiment. Pris isolément, chacun n'est qu'une présomption ; ensemble, ils orientent un diagnostic fiable.",
       "Quand le doute persiste, un sondage ponctuel dans une cloison ou un doublage permet d'observer la maçonnerie réelle sans engager une ouverture complète. Pour tout ouvrage engageant la stabilité de plusieurs niveaux, l'avis d'un ingénieur structure partenaire indépendant est sollicité avant toute validation de devis — cette étape, perçue comme une dépense évitable, protège en réalité le budget global du chantier.",
+    ],
+  },
+  {
+    slug: "vmc-renovation-verifier-au-dela-du-debit",
+    titre: "VMC en rénovation : ce qu'il faut vérifier au-delà du débit",
+    date: "21 août 2026", dateISO: "2026-08-21",
+    categorie: "Ventilation",
+    excerpt: "Le débit est la donnée la plus citée et la moins suffisante : une ventilation ne fonctionne que si l'air dispose d'un chemin complet, de l'entrée jusqu'au rejet.",
+    photo: "chParVapeurSopremaMuralSdb",
+    img2: "chGrilleAerationMdfSurMesure",
+    img2Caption: "Panneau ajouré taillé sur mesure à l'atelier : les passages d'air se dessinent avec la menuiserie, pas une fois les ouvrages posés. Chantier réel des équipes partenaires.",
+    corps: [
+      "Une VMC ne se juge pas au seul débit annoncé aux bouches. C'est un circuit complet : l'air doit pouvoir entrer quelque part, traverser le logement, être extrait dans les pièces humides, puis être rejeté à l'extérieur. Si un maillon manque, le débit réellement obtenu s'effondre quelles que soient les performances du caisson. En rénovation, le maillon manquant est presque toujours l'entrée d'air.",
+      "Trois vérifications passent avant la fiche technique. Les entrées d'air d'abord : remplacer les menuiseries sans conserver ni recréer d'entrées rend le logement plus étanche que le système ne le suppose, et l'extraction se met à tirer sur les défauts d'étanchéité du bâti au lieu d'un air neuf maîtrisé. Les transferts entre pièces ensuite : sans détalonnage des portes ni grille de passage, l'air n'atteint jamais la bouche d'extraction. Le réseau enfin — sa longueur, le nombre de coudes, la section retenue, les gaines souples écrasées derrière un doublage, et l'isolation des conduits qui traversent un volume froid, faute de quoi la condensation s'installe dans les combles. En immeuble, le point de rejet en façade ou en toiture relève en plus du règlement de copropriété.",
+      "Restent deux critères qu'on découvre trop tard. Le bruit : la position du caisson, sa suspension et la vitesse de l'air dans les conduits décident du confort réel, et un groupe posé au-dessus d'une chambre finit débranché. L'entretien : bouches démontables, filtres accessibles sur une double flux, trappe de visite prévue au moment du plafond et non après coup. Le choix entre simple flux et double flux se pose d'ailleurs dans cet ordre — une double flux ne donne sa mesure que dans une enveloppe suffisamment étanche à l'air, avec la place nécessaire à son réseau et un entretien réellement tenu. À la réception, un débit se mesure aux bouches : c'est la seule vérification qui ne se discute pas.",
     ],
   },
   {
@@ -201,6 +286,23 @@ export const ARTICLES: Article[] = [
       "Deux devis affichant le même total peuvent recouvrir des prestations très différentes. Le premier réflexe consiste à vérifier que le devis détaille des quantités réelles — mètres carrés, mètres linéaires, unités — et non un forfait global impossible à décomposer.",
       "Trois points méritent une attention particulière : les exclusions écrites noir sur blanc (évacuation des gravats, protection des sols, reprise de peinture après un autre lot), la marque et la référence exacte des matériaux prévus plutôt qu'une simple catégorie, et le délai d'exécution engagé, pas seulement une date de début.",
       "Un devis qui ne mentionne aucune de ces précisions n'est pas nécessairement malhonnête, mais il ne permet pas de comparer objectivement deux entreprises. Faire reformuler ces points avant signature coûte un échange de plus et évite le risque d'un avenant surprise en cours de chantier.",
+    ],
+  },
+  {
+    slug: "etancheite-sous-carrelage-points-singuliers",
+    titre: "Étanchéité sous carrelage : les points singuliers à documenter",
+    date: "12 août 2026", dateISO: "2026-08-12",
+    categorie: "Salle de bain",
+    excerpt: "Un carrelage n'est pas une étanchéité. Ce qui protège le plancher se joue dessous, sur quelques points précis — et n'est plus vérifiable une fois la pose faite.",
+    photo: "pedaEtancheiteAngleDouche",
+    img2: "pedaEtancheitePassageCanalisation",
+    img2Caption: "Traversée de canalisation traitée par une collerette noyée dans le système d'étanchéité, et non par un simple joint appliqué en surface. Photo pédagogique.",
+    img3: "chHdgDoucheMarbreLaitonProtection",
+    img3Caption: "Douche en pierre grand format, chantier encore en cours, film de protection au sol : une fois la pierre posée, l'ouvrage d'étanchéité placé dessous n'est plus ni visible ni contrôlable. Chantier réel des équipes partenaires.",
+    corps: [
+      "Un carrelage, aussi bien posé soit-il, n'est pas une barrière étanche : l'eau passe par les joints, les micro-fissures et les jonctions. L'étanchéité est un ouvrage distinct, placé sous le carrelage — système d'étanchéité liquide appliqué au rouleau, ou natte membrane collée —, mis en œuvre selon son avis technique et choisi en fonction du classement d'exposition à l'eau de la pièce. C'est cet ouvrage invisible à la livraison qui protège le plancher, les cloisons et, en immeuble, le logement du dessous.",
+      "Une étanchéité ne cède presque jamais en pleine surface : elle cède sur les points singuliers. Ce sont les angles rentrants et sortants, renforcés par des bandes d'armature ; la jonction entre le sol et les murs ; les traversées de canalisations, traitées par manchette et non par un cordon de mastic ; la platine de bonde ou le corps de caniveau, dont la collerette doit être noyée dans le système ; les pieds de cloison et les seuils, où l'étanchéité doit s'arrêter proprement en remontant assez haut. Deux conditions en amont ne se rattrapent pas ensuite : un support plan, propre, stable et compatible avec le système retenu, et des pentes réalisées avant l'étanchéité — une pente ne se corrige pas à la colle.",
+      "Une fois le carrelage posé, plus rien de tout cela ne se vérifie sans démolir. D'où la règle : documenter avant de recouvrir. Photos datées de chaque point singulier, référence exacte du système employé — primaire, bandes et mastic de la même famille, plutôt qu'un assemblage de marques —, respect des temps de séchage entre couches, et, lorsque la configuration le permet, essai de mise en eau avant carrelage. Ces pièces se rangent avec le dossier de fin de chantier. Elles ne servent à rien tant que tout va bien, et deviennent la seule preuve exploitable le jour où une trace apparaît au plafond du voisin.",
     ],
   },
   {

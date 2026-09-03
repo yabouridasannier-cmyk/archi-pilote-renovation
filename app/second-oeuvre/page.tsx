@@ -173,16 +173,27 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
-            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/*
+              03/09 : chNourriceLaiton12Departs.jpeg retirée de cette grille. Les douze photos de
+              plomberie du dossier chantiers/ ont bien douze empreintes MD5 distinctes, mais trois
+              d'entre elles montrent LE MÊME collecteur, sur le MÊME mur de placo vert, à quelques
+              centimètres de recul près : chNourriceLaiton12Departs.jpeg,
+              chNourriceLaitonVanneGenerale.jpeg et chNourriceDoubleAnglePlafond.jpeg (mêmes
+              étiquettes collées sur le laiton, mêmes vannes noires à repère bleu, même vanne
+              générale rouge en bout de barre). Deux d'entre elles étaient affichées, l'une ici,
+              l'autre sur /renovation-complete : c'est exactement le « trois fois presque la même
+              chose » signalé par le client. Une seule est conservée sur l'ensemble des deux pages,
+              celle de /renovation-complete, qui montre en plus le plancher ouvert.
+              La photo restante ici est la seule de la série qui illustre vraiment le propos du
+              paragraphe (tracé au crayon sur le mur, réservation d'évacuation, descentes en
+              attente) : elle passe donc en pleine largeur, à son ratio natif 4/3 (1600 × 1200).
+            */}
+            <div className="mt-6">
               <MqFig
                 src="/photos/chantiers/chPlomberieMulticoucheDistributionMurale.jpeg"
                 alt="Distribution murale en multicouche avec raccords à sertir en laiton, colliers de fixation et descentes en gaine annelée, chantier réel"
                 caption="Distribution murale en attente : tronçons multicouche assemblés par raccords à sertir, fixés au collier, descentes protégées en gaine annelée et réservation d'évacuation ménagée dans le mur. Chantier réel des équipes partenaires."
-              />
-              <MqFig
-                src="/photos/chantiers/chNourriceLaiton12Departs.jpeg"
-                alt="Nourrice d'alimentation en laiton à une douzaine de départs multicouche, chacun équipé de sa vanne quart de tour, chantier réel"
-                caption="Nourrice d'alimentation en laiton : une douzaine de départs en multicouche, chacun isolable par sa propre vanne quart de tour, avec la vanne générale rouge en bout de collecteur. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
             </div>
           </div>
@@ -203,14 +214,18 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
-            <div className="mt-6">
-              <MqFig
-                src="/photos/chantiers/chNourriceMulticoucheRadiateurs.jpeg"
-                alt="Collecteurs en laiton et départs multicouche du réseau de chauffage, raccords à sertir repérés par bagues de couleur, chantier réel"
-                caption="Distribution du réseau de chauffage : collecteurs en laiton superposés, départs multicouche assemblés par raccords à sertir repérés par bagues de couleur et fixés au collier avant habillage. Chantier réel des équipes partenaires."
-              />
-            </div>
-            <div className="mt-5 max-w-sm mx-auto">
+            {/*
+              03/09 : chNourriceMulticoucheRadiateurs.jpeg retirée. Deux raisons.
+              (1) Redondance : elle faisait la QUATRIÈME photo « réseau de tuyaux blancs sur un mur »
+              de la page, après la nourrice à manomètre, les attentes sur doublage hydrofuge et la
+              distribution murale tracée au crayon. C'est le défaut signalé par le client.
+              (2) Honnêteté : la légende affirmait « réseau de CHAUFFAGE » et « avant habillage ».
+              Ni l'un ni l'autre n'est démontrable sur l'image. Les bagues de couleur visibles sur
+              les raccords sont les repères de mâchoire de la pince à sertir, pas un repérage
+              chaud/froid, et rien n'indique que ce réseau soit destiné à être coffré. La chaudière
+              murale ci-dessous, elle, montre sans ambiguïté un ouvrage de chauffage.
+            */}
+            <div className="mt-6 max-w-sm mx-auto">
               <MqFig
                 src="/photos/chantiers/chChaudiereMuraleSaunierDuval.jpeg"
                 alt="Chaudière murale Saunier Duval raccordée sur un mur de pierre, vannes d'isolement rouges et filtre à tamis en bronze, chantier réel"
@@ -256,12 +271,28 @@ export default function Page() {
             Les pentes du sol vers l'évacuation, le positionnement précis du receveur ou du siphon de sol, et le traitement soigné de chaque traversée conditionnent l'étanchéité réelle de l'ensemble. Un contrôle avant pose du carrelage, éventuellement complété par une mise en eau de vérification, permet de détecter un défaut avant qu'il ne soit définitivement recouvert.
           </p>
         </MqProse>
-        <div className="mt-8">
+        {/*
+          03/09 : cette section n'avait aucune photo réelle, alors que /renovation-complete en
+          affichait DEUX prises sur le même chantier de douche, sur le même placo hydrofuge vert
+          (chEtancheiteSolDoucheTrameArmee + chEtancheiteReceveurDoucheLaser) — les « mêmes photos
+          de salle de bain » signalées par le client. Les deux sont désormais réparties : le sol
+          de douche reste sur /renovation-complete, l'implantation au laser arrive ici, où le texte
+          ci-dessus parle précisément du « positionnement précis du receveur ou du siphon de sol ».
+          Aucune page ne montre donc plus deux vues du même local d'un coup.
+          Le fichier est en 1200 × 1600 (portrait) : affiché en aspect-[3/4], son ratio natif.
+        */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
           <MqFig
             src="/photos/maquette/schema-etancheite-salle-eau.jpg"
             alt="Coupe d'une salle d'eau montrant la natte d'étanchéité sous carrelage, la bande d'angle, la pente et le siphon"
             caption="Étanchéité sous carrelage : continuité de la natte entre murs et sol, bandes de renfort en angle et pente d'évacuation de 1 à 2 %."
             ratio="aspect-[10/7]"
+          />
+          <MqFig
+            src="/photos/chantiers/chEtancheiteReceveurDoucheLaser.jpeg"
+            alt="Implantation d'un receveur de douche au laser de niveau, plaques hydrofuges et réservations du mitigeur et de la bonde tracées à la main"
+            caption="Implantation du receveur au laser de niveau : la ligne verte donne le niveau de référence, les réservations du mitigeur et de la bonde sont tracées sur les plaques hydrofuges avant toute étanchéité. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
       </MqSection>
@@ -330,6 +361,22 @@ export default function Page() {
           dans le même cadre 3/4 aurait coupé 44 % de sa largeur, c'est-à-dire précisément les deux
           bords où se voit que la pose est EN COURS (dents de scie non coupées à gauche, chutes de
           lames à droite) — le seul élément qui rattache l'image au propos de la section.
+        */}
+        {/*
+          À FOURNIR PAR LE CLIENT : photo de carrelage.
+
+          03/09 : le client a demandé d'ajouter des photos de carrelage dans cette section. Elles
+          devaient arriver par un export WhatsApp ; l'export reçu ne contient aucun fichier nouveau.
+          Les 244 photos de public/photos/chantiers/ ont été passées en revue : du carrelage y est
+          bien VISIBLE sur quelques images (chSdbVasquesPoseMeubleBeige.jpeg, mur et sol en grand
+          format beige ; chVasqueBoisMuraleChantier.jpeg, mur en grès effet marbre ;
+          chSdbCarreauxCiment.jpeg, carreaux de ciment), mais aucune ne montre la POSE d'un
+          carrelage — pas de calepinage, pas de croisillons, pas de coupe, pas de colle peignée.
+          Toutes montrent des pièces d'eau déjà carrelées où le sujet est le meuble vasque.
+          Les employer ici, sous des intitulés qui parlent de séquencement (implantation arrêtée
+          avant les réseaux, cotes relevées après cloisons, revêtement posé après chape), serait
+          détourner une photo de salle de bain pour faire passer une illustration de carrelage.
+          Rien n'est donc inventé : la case reste vide en attendant les vraies photos du client.
         */}
         <div className="mt-5">
           <MqFig
@@ -424,18 +471,32 @@ export default function Page() {
             "Photo datée de chaque réseau encastré avant pose des plaques de cloison",
           ]}
         />
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
-          <MqFig
-            src="/photos/chantiers/chPlomberieColonneCuivreVannes.jpeg"
-            alt="Colonne montante en cuivre avec piquages, vannes d'arrêt étiquetées et numérotées et flexibles annelés jaunes, chantier réel"
-            caption="Colonne montante et piquages en cuivre : chaque départ reçoit sa vanne d'arrêt, étiquetée et numérotée une par une, avant raccordement par flexible. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
+        {/*
+          03/09 : chPlomberieColonneCuivreVannes.jpeg retirée de cette grille, pour deux raisons.
+          (1) Redondance : la page comptait huit photos de réseaux de tuyauterie, au point qu'elles
+          se confondaient à la lecture — le reproche du client. Cette grille en alignait deux de
+          plus, juste sous une checklist déjà technique.
+          (2) Légende inexacte : elle annonçait des vannes « avant raccordement par flexible » alors
+          que les flexibles annelés jaunes sont, sur plusieurs départs, DÉJÀ raccordés.
+          Elle est remplacée par une photo qui manquait complètement à la page : une cloison
+          d'ossature métallique en cours de fermeture. C'est littéralement le sujet du titre
+          ci-dessus, et c'est un registre visuel neuf (montants, plaques, structure béton) au milieu
+          d'une page saturée de tuyaux. Ratios natifs respectés : la plomberie est en 1200 × 1600
+          (aspect-[3/4]), la cloison en 1600 × 1200 (aspect-[4/3]) ; items-start aligne les deux
+          cadres par le haut.
+        */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
           <MqFig
             src="/photos/chantiers/chPlomberieDistributionVannesBeton.jpeg"
             alt="Distribution de plomberie apparente sur voile béton brut avec vannes quart de tour rouges et raccords à sertir, chantier réel"
             caption="Réseaux apparents sur voile béton brut, contrôlables départ par départ : vannes quart de tour rouges, raccords à sertir et tracés repérés directement sur le support. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chCloisonsPlaco.jpeg"
+            alt="Cloison d'ossature métallique en cours de fermeture : montants apparents, plaques hydrofuges vertes et plaques roses posées sur une face, structure béton apparente"
+            caption="Cloison en cours de fermeture : montants encore apparents sur toute la hauteur, plaques hydrofuges et plaques techniques posées sur une seule face, tracé au sol repéré à la bombe. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
         </div>
       </MqSection>

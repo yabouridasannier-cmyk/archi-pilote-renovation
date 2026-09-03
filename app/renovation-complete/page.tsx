@@ -26,7 +26,16 @@ export default function Page() {
 
       <section className="pb-4">
         <div className="container-site max-w-4xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/*
+            03/09 : ratio corrigé sur la seconde photo. Le fichier est en 1600 × 901, soit du 16/9,
+            et il était affiché dans un cadre 4/3 : object-cover rognait un quart de sa LARGEUR,
+            c'est-à-dire les deux extrémités de la pièce (le coin salon à gauche, le plan de
+            travail et son mitigeur à droite) — précisément ce qui montre que la cuisine est
+            ouverte sur le séjour, seul propos de la légende. Chaque cadre suit désormais son
+            ratio natif, et items-start aligne les deux figures par le haut malgré leurs hauteurs
+            différentes.
+          */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
             <MqFig
               src="/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg"
               alt="Salon d'appartement ancien en cours de rénovation complète : parquet déposé, granulés isolants versés entre les solives, boiseries d'origine encore en place"
@@ -37,7 +46,7 @@ export default function Page() {
               src="/photos/chantiers/chCuisineSejourParquetChevrons.jpeg"
               alt="Cuisine ouverte sur séjour livrée après une rénovation complète d'appartement, parquet posé à chevrons"
               caption="Autre chantier, une fois livré : cuisine ouverte sur séjour, parquet posé à chevrons. Chantier réel des équipes partenaires."
-              ratio="aspect-[4/3]"
+              ratio="aspect-[16/9]"
             />
           </div>
         </div>
@@ -225,18 +234,22 @@ export default function Page() {
               exactement ce sujet : nourrices en laiton et départs descendant dans le plancher
               ouvert, avant refermeture.
             */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+            {/*
+              03/09 : 48-plomberie-collecteur-macro.jpeg retirée de cette grille. Les deux images
+              montraient la même chose — deux barres de collecteur en laiton, vannes en ligne,
+              départs souples en dessous — à ceci près que celle de gauche est un vrai chantier et
+              celle de droite une illustration de référence en lumière de studio. Les mettre côte à
+              côte donnait la sensation de doublon signalée par le client, et faisait de surcroît
+              passer un visuel de stock juste à côté d'une photo réelle qui dit la même chose en
+              mieux (le plancher ouvert, lui, se voit).
+              La photo réelle reste seule, en pleine largeur, à son ratio natif 4/3 (1600 × 1200).
+            */}
+            <div>
               <MqFig
                 src="/photos/chantiers/chNourriceDoubleAnglePlafond.jpeg"
                 alt="Deux nourrices en laiton fixées en angle de plafond, départs multicouche descendant dans un plancher ouvert avec gaines rouges et bleues"
                 caption="Deux nourrices en laiton posées en angle de plafond : chaque départ multicouche est isolable par sa vanne, puis descend dans le plancher ouvert avant refermeture. Chantier réel des équipes partenaires."
                 ratio="aspect-[4/3]"
-              />
-              <MqFig
-                src="/photos/pedagogie/48-plomberie-collecteur-macro.jpeg"
-                alt="Gros plan de deux collecteurs de plomberie en laiton avec départs rouges et bleus, sur un mur de brique"
-                caption="Détail de collecteurs en laiton : les départs chaud et froid sont séparés et repérés par la couleur des gaines. Illustration de référence, hors chantier documenté sur cette page."
-                ratio="aspect-[3/2]"
               />
             </div>
           </div>
@@ -266,21 +279,26 @@ export default function Page() {
               carrelage dont parle cette section ; elle est déjà employée à sa vraie place, sur
               /renovation-energetique, dans la section « étanchéité à l'air ». (2) Cadrage : le
               fichier est en 1600×900 (paysage) alors qu'il était affiché en aspect-[3/4]
-              (portrait), ce qui amputait environ deux tiers de la largeur de l'image. Les deux
-              photos restantes montrent bien, elles, la préparation d'une étanchéité de sol de
-              douche, et sont toutes deux nativement en 3/4 : la grille est homogène.
+              (portrait), ce qui amputait environ deux tiers de la largeur de l'image.
             */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/*
+              03/09 : « pareil pour la salle de bain en bas, c'était les mêmes photos ». Ce bloc
+              affichait les deux seules photos de douche du dossier chantiers/, prises sur le même
+              chantier : même placo hydrofuge vert, même sol béton, même cadrage de coin de local.
+              Vues l'une à côté de l'autre elles se lisaient comme un doublon, alors qu'elles
+              documentent deux gestes différents. Elles sont donc séparées plutôt que supprimées :
+              le sol de douche préparé reste ici, l'implantation du receveur au laser part sur
+              /second-oeuvre, dans la section « Salles d'eau », dont le texte parle justement du
+              positionnement du receveur et du siphon. Aucune des deux pages ne montre plus deux
+              vues du même local à la suite.
+              Portrait 1200 × 1600 laissé en aspect-[3/4] natif, dans un conteneur borné pour ne pas
+              occuper toute la largeur de la colonne de lecture.
+            */}
+            <div className="max-w-sm">
               <MqFig
                 src="/photos/chantiers/chEtancheiteSolDoucheTrameArmee.jpeg"
                 alt="Sol de douche préparé : treillis d'armature métallique posé sur la dalle, évacuation et siphon en attente, cloisons en plaques hydrofuges"
                 caption="Sol de douche préparé avant étanchéité : treillis d'armature posé sur la dalle, évacuation et siphon laissés en attente, cloisons montées en plaques hydrofuges. Chantier réel des équipes partenaires."
-                ratio="aspect-[3/4]"
-              />
-              <MqFig
-                src="/photos/chantiers/chEtancheiteReceveurDoucheLaser.jpeg"
-                alt="Implantation d'un receveur de douche au laser de niveau, plaques hydrofuges et réservations du mitigeur et de la bonde tracées à la main"
-                caption="Implantation du receveur de douche au laser de niveau : la ligne verte donne le niveau de référence, les réservations du mitigeur et de la bonde sont tracées sur les plaques hydrofuges. Chantier réel des équipes partenaires."
                 ratio="aspect-[3/4]"
               />
             </div>

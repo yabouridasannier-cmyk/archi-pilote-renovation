@@ -308,6 +308,29 @@ export const PHOTOS = {
   pedaEtancheiteAngleDouche: "/photos/pedagogie/50-etancheite-angle-douche-macro.jpeg",
   pedaEtancheitePassageCanalisation: "/photos/pedagogie/51-etancheite-passage-canalisation-macro.jpeg",
   pedaMaPrimeRenovCee: "/photos/pedagogie/53-blog-maprimerenov-cee.jpeg",
+
+  /* 03/09 : second lot de photos réelles présentes sur le disque mais jamais déclarées,
+     donc invisibles pour app/data.ts (les articles référencent des clés, pas des chemins).
+     Ce sont les seules vraies photos d'étanchéité, de plomberie et d'électricité du fonds :
+     sans elles, les articles techniques retombaient sur des visuels approximatifs. */
+  chEtancheiteReceveurDoucheLaser: "/photos/chantiers/chEtancheiteReceveurDoucheLaser.jpeg",
+  chEtancheiteSolDoucheTrameArmee: "/photos/chantiers/chEtancheiteSolDoucheTrameArmee.jpeg",
+  chPlomberieColonneCuivreVannes: "/photos/chantiers/chPlomberieColonneCuivreVannes.jpeg",
+  chPlomberieMulticoucheDistributionMurale: "/photos/chantiers/chPlomberieMulticoucheDistributionMurale.jpeg",
+  chPlomberieDistributionVannesBeton: "/photos/chantiers/chPlomberieDistributionVannesBeton.jpeg",
+  chPlomberieVannesRougesBetonDetail: "/photos/chantiers/chPlomberieVannesRougesBetonDetail.jpeg",
+  chPlomberieAlimentationEvacuationPlacoHydro: "/photos/chantiers/chPlomberieAlimentationEvacuationPlacoHydro.jpeg",
+  chNourriceMulticoucheRadiateurs: "/photos/chantiers/chNourriceMulticoucheRadiateurs.jpeg",
+  chNourriceManometreEvacuationPvc: "/photos/chantiers/chNourriceManometreEvacuationPvc.jpeg",
+  chNourriceLaitonDoubleDeparts: "/photos/chantiers/chNourriceLaitonDoubleDeparts.jpeg",
+  chNourriceLaiton12Departs: "/photos/chantiers/chNourriceLaiton12Departs.jpeg",
+  chNourriceLaitonVanneGenerale: "/photos/chantiers/chNourriceLaitonVanneGenerale.jpeg",
+  chNourriceDoubleAnglePlafond: "/photos/chantiers/chNourriceDoubleAnglePlafond.jpeg",
+  chElectriciteFauxPlafondFaisceaux: "/photos/chantiers/chElectriciteFauxPlafondFaisceaux.jpeg",
+  chElectriciteFauxPlafondRailsCablage: "/photos/chantiers/chElectriciteFauxPlafondRailsCablage.jpeg",
+  chTableauElectriqueDisjoncteurs: "/photos/chantiers/chTableauElectriqueDisjoncteurs.jpeg",
+  chParquetChevronsCacheRadiateur: "/photos/chantiers/chParquetChevronsCacheRadiateur.jpeg",
+  chParquetChevronsCouloirDeuxTeintes: "/photos/chantiers/chParquetChevronsCouloirDeuxTeintes.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —
