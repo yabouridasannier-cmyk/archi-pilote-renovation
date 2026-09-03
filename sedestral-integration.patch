@@ -1,0 +1,973 @@
+diff --git a/.env.example b/.env.example
+new file mode 100644
+index 0000000..69d9f5f
+--- /dev/null
++++ b/.env.example
+@@ -0,0 +1,19 @@
++# ============================================================
++# Variables d'environnement — copier en .env.local pour un test
++# en local. Ce fichier-ci est versionné, .env.local ne l'est pas.
++# En production, ces valeurs vivent dans les secrets GitHub Actions
++# (Settings → Secrets and variables → Actions).
++# ============================================================
++
++# Clé d'API Sedestral. Jamais préfixée NEXT_PUBLIC_ : elle ne doit
++# jamais partir dans le bundle envoyé au navigateur.
++SEDESTRAL_API_KEY=
++
++# Origine publique du site, sans slash final. Sert à construire l'URL
++# renvoyée à Sedestral et à vérifier la mise en ligne avant confirmation.
++SITE_ORIGIN=https://www.archipiloterenovation.com
++
++# Optionnels
++# SEDESTRAL_API_BASE=https://api.sedestral.com/api/v1
++# SEDESTRAL_DEFAULT_CATEGORY=Rénovation
++# SEDESTRAL_DEPLOY_TIMEOUT_MS=900000
+diff --git a/.github/workflows/sedestral-sync.yml b/.github/workflows/sedestral-sync.yml
+new file mode 100644
+index 0000000..79f0e5c
+--- /dev/null
++++ b/.github/workflows/sedestral-sync.yml
+@@ -0,0 +1,41 @@
++name: Synchronisation Sedestral
++
++# Toutes les heures. GitHub Actions n'est pas ponctuel à la minute près :
++# un décalage de quelques minutes est normal et sans conséquence ici.
++on:
++  schedule:
++    - cron: "7 * * * *"
++  workflow_dispatch:
++    inputs:
++      dry_run:
++        description: "Essai à blanc (aucune écriture, aucun PATCH)"
++        type: boolean
++        default: false
++
++# Un seul run à la fois : deux synchronisations simultanées se marcheraient
++# dessus sur le fichier d'état et sur le push.
++concurrency:
++  group: sedestral-sync
++  cancel-in-progress: false
++
++jobs:
++  sync:
++    runs-on: ubuntu-latest
++    timeout-minutes: 30
++    permissions:
++      contents: write # commit des articles et des images
++
++    steps:
++      - uses: actions/checkout@v4
++        with:
++          ref: main
++
++      - uses: actions/setup-node@v4
++        with:
++          node-version: "22"
++
++      - name: Synchroniser
++        env:
++          SEDESTRAL_API_KEY: ${{ secrets.SEDESTRAL_API_KEY }}
++          SITE_ORIGIN: ${{ vars.SITE_ORIGIN }}
++        run: node scripts/sedestral-sync.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+diff --git a/.gitignore b/.gitignore
+index c76eed3..70d543d 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -2,3 +2,8 @@ node_modules
+ .next
+ .vercel
+ .DS_Store
++
++# Variables d'environnement — jamais versionnées (.env.example l'est, lui)
++.env
++.env.local
++.env.*.local
+diff --git a/app/blog/[slug]/page.tsx b/app/blog/[slug]/page.tsx
+index 77f8234..5dd9d53 100644
+--- a/app/blog/[slug]/page.tsx
++++ b/app/blog/[slug]/page.tsx
+@@ -1,33 +1,34 @@
++import { Fragment } from "react";
+ import type { Metadata } from "next";
+ import Link from "next/link";
+ import { notFound } from "next/navigation";
+-import { ARTICLES } from "../../data";
+-import { PHOTOS } from "../../lib-photos";
++import { ALL_ARTICLES, photoSrc } from "../../lib-articles";
+ import { Reveal } from "../../components/reveal";
+ import { WordReveal } from "../../components/word-reveal";
+ import { CtaFinal } from "../../components/cta-final";
+ 
+ export function generateStaticParams() {
+-  return ARTICLES.map((a) => ({ slug: a.slug }));
++  return ALL_ARTICLES.map((a) => ({ slug: a.slug }));
+ }
+ 
+ export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+   const { slug } = await params;
+-  const article = ARTICLES.find((a) => a.slug === slug);
++  const article = ALL_ARTICLES.find((a) => a.slug === slug);
+   if (!article) return {};
+   return {
+     title: `${article.titre} — ARCHI PILOTE RÉNOVATION`,
+     description: article.excerpt,
++    keywords: article.keyword ? [article.keyword] : undefined,
+     alternates: { canonical: `/blog/${article.slug}` },
+   };
+ }
+ 
+ export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
+   const { slug } = await params;
+-  const article = ARTICLES.find((a) => a.slug === slug);
++  const article = ALL_ARTICLES.find((a) => a.slug === slug);
+   if (!article) return notFound();
+ 
+-  const autres = ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 2);
++  const autres = ALL_ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 2);
+ 
+   const jsonLdBlogPosting = {
+     "@context": "https://schema.org",
+@@ -35,8 +36,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug:
+     headline: article.titre,
+     description: article.excerpt,
+     datePublished: article.dateISO,
++    ...(article.keyword ? { keywords: article.keyword } : {}),
+     dateModified: article.dateISO,
+-    image: PHOTOS[article.photo as keyof typeof PHOTOS],
++    image: photoSrc(article.photo),
+     url: `https://www.archipiloterenovation.com/blog/${article.slug}`,
+     author: { "@type": "Organization", name: "ARCHI PILOTE RÉNOVATION", "@id": "https://www.archipiloterenovation.com/#organization" },
+     publisher: { "@id": "https://www.archipiloterenovation.com/#organization" },
+@@ -60,43 +62,50 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug:
+ 
+       <Reveal variant="scale" className="container-site mb-14 md:mb-20">
+         <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
+-          <img src={PHOTOS[article.photo as keyof typeof PHOTOS]} alt={article.titre} className="absolute inset-0 size-full object-cover" />
++          <img src={photoSrc(article.photo)} alt={article.titre} className="absolute inset-0 size-full object-cover" />
+         </div>
+       </Reveal>
+ 
+       <article className="container-site pb-20 md:pb-28">
+         <div className="max-w-[42rem] mx-auto flex flex-col gap-6">
+-          {article.corps.map((p, i) => (
+-            <>
+-              <Reveal key={i} variant="slide-up" delay={i * 0.05}>
+-                <p className="text-ivoire/85 text-[1.05rem] leading-[1.75]">{p}</p>
+-              </Reveal>
+-              {i === 0 && article.img2 && (
+-                <Reveal variant="scale" delay={0.15}>
+-                  <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
+-                    <img src={PHOTOS[article.img2 as keyof typeof PHOTOS]} alt={article.img2Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
+-                    {article.img2Caption && (
+-                      <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
+-                        {article.img2Caption}
+-                      </figcaption>
+-                    )}
+-                  </figure>
++          {article.bodyHtml ? (
++            /* Article importé depuis Sedestral : corps HTML assaini à la synchronisation. */
++            <Reveal variant="slide-up">
++              <div className="prose-article" dangerouslySetInnerHTML={{ __html: article.bodyHtml }} />
++            </Reveal>
++          ) : (
++            article.corps.map((p, i) => (
++              <Fragment key={i}>
++                <Reveal variant="slide-up" delay={i * 0.05}>
++                  <p className="text-ivoire/85 text-[1.05rem] leading-[1.75]">{p}</p>
+                 </Reveal>
+-              )}
+-              {i === 1 && article.img3 && (
+-                <Reveal variant="scale" delay={0.15}>
+-                  <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
+-                    <img src={PHOTOS[article.img3 as keyof typeof PHOTOS]} alt={article.img3Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
+-                    {article.img3Caption && (
+-                      <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
+-                        {article.img3Caption}
+-                      </figcaption>
+-                    )}
+-                  </figure>
+-                </Reveal>
+-              )}
+-            </>
+-          ))}
++                {i === 0 && article.img2 && (
++                  <Reveal variant="scale" delay={0.15}>
++                    <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
++                      <img src={photoSrc(article.img2)} alt={article.img2Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
++                      {article.img2Caption && (
++                        <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
++                          {article.img2Caption}
++                        </figcaption>
++                      )}
++                    </figure>
++                  </Reveal>
++                )}
++                {i === 1 && article.img3 && (
++                  <Reveal variant="scale" delay={0.15}>
++                    <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
++                      <img src={photoSrc(article.img3)} alt={article.img3Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
++                      {article.img3Caption && (
++                        <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
++                          {article.img3Caption}
++                        </figcaption>
++                      )}
++                    </figure>
++                  </Reveal>
++                )}
++              </Fragment>
++            ))
++          )}
+           <Reveal variant="slide-up" delay={0.2} className="mt-4">
+             <Link href="/estimateur-travaux" className="btn btn-primary w-fit">
+               Estimer mon projet
+@@ -114,7 +123,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug:
+               {autres.map((a) => (
+                 <Link key={a.slug} href={`/blog/${a.slug}`} className="group card-e rounded-none overflow-hidden flex flex-col">
+                   <div className="relative aspect-[16/9] overflow-hidden">
+-                    <img src={PHOTOS[a.photo as keyof typeof PHOTOS]} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
++                    <img src={photoSrc(a.photo)} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                   </div>
+                   <div className="p-5 flex flex-col gap-1.5">
+                     <span className="font-mono text-[0.66rem] text-orange uppercase tracking-[0.1em]">{a.categorie}</span>
+diff --git a/app/blog/blog-grid.tsx b/app/blog/blog-grid.tsx
+index 752603a..785f537 100644
+--- a/app/blog/blog-grid.tsx
++++ b/app/blog/blog-grid.tsx
+@@ -1,6 +1,5 @@
+ import Link from "next/link";
+-import { ARTICLES } from "../data";
+-import { PHOTOS } from "../lib-photos";
++import { ALL_ARTICLES, photoSrc } from "../lib-articles";
+ 
+ /** Grille magazine des articles — carte photo + catégorie + titre + extrait. */
+ export function BlogGrid() {
+@@ -8,10 +7,10 @@ export function BlogGrid() {
+     <section className="py-12 md:py-16">
+       <div className="container-site">
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+-          {ARTICLES.map((a) => (
++          {ALL_ARTICLES.map((a) => (
+               <Link key={a.slug} href={`/blog/${a.slug}`} className="group border border-line bg-surface rounded-[2px] overflow-hidden flex flex-col h-full block">
+                 <div className="relative aspect-[16/10] overflow-hidden">
+-                  <img src={PHOTOS[a.photo as keyof typeof PHOTOS]} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
++                  <img src={photoSrc(a.photo)} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
+                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                   <span className="absolute top-3 left-3 bg-black/45 border border-white/25 px-3 py-1 font-mono text-[0.62rem] tracking-[0.14em] uppercase text-white/90">{a.categorie}</span>
+                 </div>
+diff --git a/app/globals.css b/app/globals.css
+index d9b5b19..4fcd324 100644
+--- a/app/globals.css
++++ b/app/globals.css
+@@ -185,3 +185,28 @@ html.lenis, html.lenis body { height: auto; }
+ ::-webkit-scrollbar-thumb:hover { background: var(--c-orange-deep); }
+ 
+ @media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
++
++/* ---------- Corps d'article importé depuis Sedestral ----------
++   Le HTML vient de l'API : il n'a pas de classes utilitaires, on le
++   stylise ici pour rester dans la grammaire typographique du site. */
++.prose-article { color: color-mix(in oklab, var(--c-ivoire) 85%, transparent); font-size: 1.05rem; line-height: 1.75; }
++.prose-article > * + * { margin-top: 1.35rem; }
++.prose-article h2 { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.015em; line-height: 1.15; font-size: clamp(1.45rem, 2.6vw, 1.9rem); color: var(--c-ivoire); margin-top: 2.6rem; }
++.prose-article h3 { font-family: var(--font-display); font-weight: 500; line-height: 1.2; font-size: clamp(1.15rem, 2vw, 1.4rem); color: var(--c-ivoire); margin-top: 2.1rem; }
++.prose-article h4 { font-weight: 600; font-size: 1.05rem; color: var(--c-ivoire); margin-top: 1.8rem; }
++.prose-article strong { color: var(--c-ivoire); font-weight: 600; }
++.prose-article a { color: var(--c-orange-deep); text-decoration: underline; text-underline-offset: 3px; }
++.prose-article a:hover { color: var(--c-orange); }
++.prose-article ul, .prose-article ol { padding-left: 1.35rem; display: flex; flex-direction: column; gap: 0.5rem; }
++.prose-article ul { list-style: none; }
++.prose-article ul > li { position: relative; padding-left: 1rem; }
++.prose-article ul > li::before { content: ""; position: absolute; left: 0; top: 0.72em; width: 0.4rem; height: 1px; background: var(--c-orange); }
++.prose-article ol { list-style: decimal; }
++.prose-article blockquote { border-left: 2px solid var(--c-orange); padding-left: 1.25rem; font-family: var(--font-serif); font-style: italic; color: var(--c-ivoire); }
++.prose-article img { width: 100%; height: auto; display: block; border: 1px solid var(--c-line); }
++.prose-article figure { margin-inline: 0; }
++.prose-article figcaption { margin-top: 0.6rem; font-family: var(--font-body); font-size: 0.8rem; color: var(--c-muted); }
++.prose-article table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
++.prose-article th, .prose-article td { border: 1px solid var(--c-line); padding: 0.6rem 0.8rem; text-align: left; }
++.prose-article th { background: var(--c-surface); color: var(--c-ivoire); font-weight: 600; }
++.prose-article hr { border: 0; border-top: 1px solid var(--c-line); margin-block: 2.2rem; }
+diff --git a/app/lib-articles.ts b/app/lib-articles.ts
+new file mode 100644
+index 0000000..fb8eae1
+--- /dev/null
++++ b/app/lib-articles.ts
+@@ -0,0 +1,58 @@
++/* ============================================================
++   Source unique des articles du blog.
++
++   Deux origines, un seul modèle :
++   · ARTICLES (app/data.ts) — articles éditoriaux écrits à la main,
++     corps en paragraphes de texte brut, `photo` = clé de PHOTOS.
++   · content/blog/generated.json — articles importés depuis Sedestral
++     par scripts/sedestral-sync.mjs, corps en HTML assaini,
++     `photo` = chemin interne /uploads/sedestral/<slug>/cover.*
++
++   Le fichier JSON est importé statiquement : tout est figé au build,
++   aucune lecture de disque au runtime (compatible export statique Vercel).
++   ============================================================ */
++
++import { ARTICLES, type Article } from "./data";
++import { PHOTOS } from "./lib-photos";
++import generatedRaw from "../content/blog/generated.json";
++
++export type GeneratedArticle = {
++  sedestralId: string;
++  slug: string;
++  titre: string;
++  date: string;
++  dateISO: string;
++  excerpt: string;
++  categorie: string;
++  photo: string;
++  keyword?: string;
++  bodyHtml: string;
++};
++
++export type BlogArticle = Article & {
++  /** Corps HTML — présent uniquement sur les articles venus de Sedestral. */
++  bodyHtml?: string;
++  /** Mot-clé principal transmis par Sedestral. */
++  keyword?: string;
++  sedestralId?: string;
++};
++
++const generated: BlogArticle[] = (generatedRaw as unknown as GeneratedArticle[]).map((a) => ({
++  ...a,
++  corps: [],
++}));
++
++/** Tous les articles, du plus récent au plus ancien. */
++export const ALL_ARTICLES: BlogArticle[] = [...ARTICLES, ...generated].sort((a, b) =>
++  b.dateISO.localeCompare(a.dateISO),
++);
++
++/**
++ * Résout une référence d'image : clé du catalogue PHOTOS pour les articles
++ * éditoriaux, chemin interne ou URL absolue pour les articles Sedestral.
++ */
++export function photoSrc(ref: string | undefined): string {
++  if (!ref) return "";
++  if (ref.startsWith("/") || ref.startsWith("http")) return ref;
++  return PHOTOS[ref as keyof typeof PHOTOS] ?? "";
++}
+diff --git a/app/sitemap.ts b/app/sitemap.ts
+index 3e49a9d..133e6ec 100644
+--- a/app/sitemap.ts
++++ b/app/sitemap.ts
+@@ -1,5 +1,5 @@
+ import type { MetadataRoute } from "next";
+-import { ARTICLES } from "./data";
++import { ALL_ARTICLES } from "./lib-articles";
+ 
+ const BASE = "https://www.archipiloterenovation.com";
+ 
+@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
+     url: `${BASE}${path}`,
+     lastModified: new Date("2026-08-29"),
+   }));
+-  const articleEntries = ARTICLES.map((a) => ({
++  const articleEntries = ALL_ARTICLES.map((a) => ({
+     url: `${BASE}/blog/${a.slug}`,
+     lastModified: new Date(a.dateISO),
+   }));
+diff --git a/content/blog/_sedestral-state.json b/content/blog/_sedestral-state.json
+new file mode 100644
+index 0000000..3abb923
+--- /dev/null
++++ b/content/blog/_sedestral-state.json
+@@ -0,0 +1,4 @@
++{
++  "version": 1,
++  "articles": {}
++}
+diff --git a/content/blog/generated.json b/content/blog/generated.json
+new file mode 100644
+index 0000000..fe51488
+--- /dev/null
++++ b/content/blog/generated.json
+@@ -0,0 +1 @@
++[]
+diff --git a/docs/SEDESTRAL.md b/docs/SEDESTRAL.md
+new file mode 100644
+index 0000000..8cc4c6d
+--- /dev/null
++++ b/docs/SEDESTRAL.md
+@@ -0,0 +1,96 @@
++# Synchronisation Sedestral → blog
++
++Publication automatique des articles rédigés dans Sedestral, toutes les heures,
++sans intervention manuelle.
++
++## Pourquoi GitHub Actions et pas un cron Vercel
++
++Le blog est statique : les articles sont figés dans le dépôt au moment du build.
++Une route serverless appelée par Vercel Cron ne pourrait ni écrire les images
++dans `public/`, ni ajouter un article — le système de fichiers est en lecture
++seule en production, et tout ce qui y serait écrit disparaîtrait au déploiement
++suivant.
++
++La synchronisation tourne donc **hors du site**, dans un runner GitHub Actions
++qui écrit dans le dépôt et pousse. Vercel déploie sur ce push, comme pour
++n'importe quel commit.
++
++## Cycle d'un article
++
++1. `GET /alya/blog-articles?states=DRAFT`
++2. Téléchargement de la couverture et des images du corps dans
++   `public/uploads/sedestral/<slug>/`, réécriture des URLs vers ces copies
++   internes, retrait des liens sortants vers sedestral.com, assainissement du HTML
++3. Écriture dans `content/blog/generated.json`, commit, push → build Vercel
++4. Attente de la mise en ligne réelle : le script interroge
++   `https://<site>/blog/<slug>` jusqu'à obtenir un HTTP 200 (15 min max)
++5. **Seulement à ce moment** :
++   `PATCH /alya/blog-articles/{id}` avec `{ "state": "PUBLISHED", "url": … }`
++
++Si le déploiement dépasse le délai ou si le PATCH échoue, l'article reste en
++attente de confirmation dans l'état local et la confirmation est retentée
++au run suivant. Il n'est jamais réimporté.
++
++## Idempotence
++
++`content/blog/_sedestral-state.json` conserve l'id Sedestral de chaque article
++importé, son slug, son URL et la date de confirmation :
++
++```json
++{ "version": 1, "articles": { "art_42": { "slug": "…", "url": "…", "importedAt": "…", "confirmedAt": "…" } } }
++```
++
++Un id présent dans ce fichier n'est jamais réimporté, même si l'API le renvoie
++encore à l'état DRAFT. Ne pas éditer ce fichier à la main.
++
++## Gestion des erreurs
++
++Chaque article est traité isolément. Ce qui est journalisé sans interrompre
++le reste :
++
++| Situation | Conséquence |
++|---|---|
++| Titre, corps ou couverture manquant | Article ignoré, repris au run suivant |
++| Couverture non téléchargeable | Article ignoré (la maquette exige une image) |
++| Image du corps non téléchargeable | Article publié, URL d'origine conservée pour cette image |
++| Page non en ligne dans le délai | Pas de PATCH, confirmation retentée au run suivant |
++| PATCH en échec | Article en ligne, confirmation retentée au run suivant |
++
++Les incidents apparaissent en annotations sur le run GitHub. Un run qui a
++rencontré au moins une erreur bloquante se termine en échec, ce qui déclenche
++la notification GitHub.
++
++## Configuration
++
++**Secret** — `Settings → Secrets and variables → Actions → Secrets` :
++`SEDESTRAL_API_KEY`.
++
++**Variable** — même écran, onglet `Variables` : `SITE_ORIGIN`, l'origine
++publique du site sans slash final.
++
++La clé n'est jamais préfixée `NEXT_PUBLIC_`, n'existe que dans le runner et
++n'entre jamais dans le bundle envoyé au navigateur.
++
++## Commandes
++
++```bash
++npm run sedestral:dry    # lit l'API, affiche les champs, n'écrit rien
++npm run sedestral:sync   # cycle complet (commit + push)
++node scripts/sedestral-sync.mjs --no-push   # import local sans push ni PATCH
++```
++
++Depuis GitHub : onglet `Actions → Synchronisation Sedestral → Run workflow`,
++avec une case « essai à blanc ».
++
++## Articles éditoriaux et articles importés
++
++`app/lib-articles.ts` fusionne les deux sources et les trie par date :
++
++- `ARTICLES` dans `app/data.ts` — articles écrits à la main, corps en
++  paragraphes, `photo` = clé du catalogue `PHOTOS`
++- `content/blog/generated.json` — articles Sedestral, corps HTML,
++  `photo` = chemin interne
++
++Les slugs sont dédoublonnés contre les deux sources : un article Sedestral qui
++reprendrait un slug existant reçoit un suffixe `-2`. Les articles écrits à la
++main ne sont jamais modifiés par le script.
+diff --git a/package.json b/package.json
+index 734e50a..649e40c 100644
+--- a/package.json
++++ b/package.json
+@@ -5,7 +5,9 @@
+   "scripts": {
+     "dev": "next dev",
+     "build": "next build",
+-    "start": "next start"
++    "start": "next start",
++    "sedestral:sync": "node scripts/sedestral-sync.mjs",
++    "sedestral:dry": "node scripts/sedestral-sync.mjs --dry-run"
+   },
+   "dependencies": {
+     "@gsap/react": "^2.1.2",
+diff --git a/scripts/sedestral-sync.mjs b/scripts/sedestral-sync.mjs
+new file mode 100644
+index 0000000..f1e68b8
+--- /dev/null
++++ b/scripts/sedestral-sync.mjs
+@@ -0,0 +1,459 @@
++#!/usr/bin/env node
++/* ============================================================
++   Synchronisation Sedestral → blog ARCHI PILOTE RÉNOVATION
++
++   Cycle complet, exécuté toutes les heures par GitHub Actions :
++     1. GET  /alya/blog-articles?states=DRAFT
++     2. pour chaque article inconnu : téléchargement de la couverture
++        et des images du corps dans public/uploads/sedestral/<slug>/,
++        réécriture des URLs sedestral.com → URLs internes, écriture
++        dans content/blog/generated.json
++     3. commit + push  →  déploiement Vercel
++     4. attente de la mise en ligne réelle (HTTP 200 sur l'URL finale)
++     5. PATCH /alya/blog-articles/{id}  { state: PUBLISHED, url }
++        — jamais avant l'étape 4.
++
++   Idempotence : content/blog/_sedestral-state.json garde l'id Sedestral
++   de tout article importé. Un id connu n'est jamais réimporté ; un id
++   importé mais non confirmé est repris à l'étape 4 au run suivant.
++
++   Robustesse : chaque article est traité dans son propre try/catch.
++   Une couverture manquante, une image morte ou un PATCH en échec
++   n'interrompent jamais le traitement des autres articles.
++
++   Aucune dépendance npm : Node 20+ (fetch, fs/promises) uniquement.
++   Usage : node scripts/sedestral-sync.mjs [--dry-run] [--no-push]
++   ============================================================ */
++
++import { readFile, writeFile, mkdir, readdir, rm } from "node:fs/promises";
++import { existsSync } from "node:fs";
++import { execFile } from "node:child_process";
++import { promisify } from "node:util";
++import path from "node:path";
++import { fileURLToPath } from "node:url";
++
++const exec = promisify(execFile);
++const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
++
++/* ---------- Configuration ---------- */
++
++const API_BASE = process.env.SEDESTRAL_API_BASE ?? "https://api.sedestral.com/api/v1";
++const API_KEY = process.env.SEDESTRAL_API_KEY;
++
++/* Origine publique du site : sert à construire l'URL renvoyée à Sedestral
++   et à vérifier la mise en ligne. Surchargée par la variable d'environnement
++   SITE_ORIGIN (définie dans le workflow). */
++const SITE_ORIGIN = (process.env.SITE_ORIGIN ?? "https://www.archipiloterenovation.com").replace(/\/$/, "");
++
++const BLOG_PREFIX = "/blog"; // structure d'URL existante : /blog/<slug>
++const DEFAULT_CATEGORY = process.env.SEDESTRAL_DEFAULT_CATEGORY ?? "Rénovation";
++
++const GENERATED_FILE = path.join(ROOT, "content/blog/generated.json");
++const STATE_FILE = path.join(ROOT, "content/blog/_sedestral-state.json");
++const EDITORIAL_FILE = path.join(ROOT, "app/data.ts");
++const UPLOAD_DIR = path.join(ROOT, "public/uploads/sedestral");
++const UPLOAD_PUBLIC = "/uploads/sedestral";
++
++const DEPLOY_TIMEOUT_MS = Number(process.env.SEDESTRAL_DEPLOY_TIMEOUT_MS ?? 15 * 60_000);
++const DEPLOY_POLL_MS = 20_000;
++const MAX_IMAGE_BYTES = 15 * 1024 * 1024;
++const HTTP_TIMEOUT_MS = 45_000;
++
++const DRY_RUN = process.argv.includes("--dry-run");
++const NO_PUSH = process.argv.includes("--no-push") || DRY_RUN;
++
++/* ---------- Journalisation ---------- */
++
++const errors = [];
++const stamp = () => new Date().toISOString().slice(11, 19);
++const log = (...a) => console.log(`[${stamp()}]`, ...a);
++const warn = (msg) => { console.log(`::warning::${msg}`); };
++const fail = (msg) => { errors.push(msg); console.log(`::error::${msg}`); };
++
++/* ---------- HTTP ---------- */
++
++async function api(pathname, init = {}) {
++  const url = pathname.startsWith("http") ? pathname : `${API_BASE}${pathname}`;
++  const res = await fetch(url, {
++    ...init,
++    signal: AbortSignal.timeout(HTTP_TIMEOUT_MS),
++    headers: {
++      Authorization: `Bearer ${API_KEY}`,
++      Accept: "application/json",
++      ...(init.body ? { "Content-Type": "application/json" } : {}),
++      ...init.headers,
++    },
++  });
++  const text = await res.text();
++  let data = null;
++  try { data = text ? JSON.parse(text) : null; } catch { /* réponse non JSON */ }
++  if (!res.ok) {
++    const detail = (text || "").slice(0, 400);
++    throw new Error(`${init.method ?? "GET"} ${url} → HTTP ${res.status} ${detail}`);
++  }
++  return data;
++}
++
++/* ---------- Lecture tolérante de la réponse ----------
++   Les noms de champs exacts de l'API ne sont pas figés : on accepte les
++   variantes usuelles plutôt que de casser au premier renommage. */
++
++function first(obj, keys) {
++  for (const k of keys) {
++    const v = obj?.[k];
++    if (v === null || v === undefined || v === "") continue;
++    if (typeof v === "object" && !Array.isArray(v)) {
++      const nested = v.url ?? v.src ?? v.href ?? v.value ?? v.name;
++      if (nested) return nested;
++      continue;
++    }
++    if (Array.isArray(v)) { if (v.length) return typeof v[0] === "string" ? v[0] : (v[0]?.name ?? v[0]?.value); continue; }
++    return v;
++  }
++  return undefined;
++}
++
++function asList(payload) {
++  if (Array.isArray(payload)) return payload;
++  for (const k of ["data", "items", "results", "articles", "content", "blogArticles"]) {
++    if (Array.isArray(payload?.[k])) return payload[k];
++  }
++  if (Array.isArray(payload?.data?.items)) return payload.data.items;
++  return [];
++}
++
++function normalize(raw) {
++  return {
++    id: String(first(raw, ["id", "_id", "uuid", "articleId"]) ?? ""),
++    title: first(raw, ["title", "name", "heading"]),
++    metaDescription: first(raw, ["metaDescription", "meta_description", "seoDescription", "description", "excerpt"]),
++    body: first(raw, ["body", "content", "html", "bodyHtml", "contentHtml"]),
++    cover: first(raw, ["cover", "coverUrl", "cover_url", "coverImage", "image", "thumbnail", "picture"]),
++    slug: first(raw, ["slug", "permalink", "handle"]),
++    keyword: first(raw, ["keyword", "mainKeyword", "primaryKeyword", "focusKeyword", "mainKeyphrase", "keywords", "tags"]),
++    category: first(raw, ["category", "categoryName", "topic"]),
++    publishedAt: first(raw, ["publishedAt", "createdAt", "created_at", "date", "updatedAt"]),
++  };
++}
++
++/* ---------- Utilitaires ---------- */
++
++function slugify(s) {
++  return String(s).normalize("NFD").replace(/[\u0300-\u036f]/g, "")
++    .toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 80);
++}
++
++function frDate(iso) {
++  return new Intl.DateTimeFormat("fr-FR", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" })
++    .format(new Date(iso));
++}
++
++async function readJson(file, fallback) {
++  try { return JSON.parse(await readFile(file, "utf8")); } catch { return fallback; }
++}
++
++async function writeJson(file, data) {
++  await mkdir(path.dirname(file), { recursive: true });
++  await writeFile(file, JSON.stringify(data, null, 2) + "\n", "utf8");
++}
++
++/** Slugs déjà pris par les articles éditoriaux écrits à la main dans app/data.ts. */
++async function editorialSlugs() {
++  try {
++    const src = await readFile(EDITORIAL_FILE, "utf8");
++    return new Set([...src.matchAll(/slug:\s*"([^"]+)"/g)].map((m) => m[1]));
++  } catch { return new Set(); }
++}
++
++/* ---------- Assainissement du HTML ----------
++   Le corps vient d'un outil interne (source de confiance) mais est injecté
++   via dangerouslySetInnerHTML : on retire tout ce qui peut exécuter du code
++   ou casser la mise en page. */
++
++const ALLOWED_TAGS = new Set([
++  "p", "br", "hr", "strong", "b", "em", "i", "u", "s", "mark", "small", "sub", "sup",
++  "h2", "h3", "h4", "h5", "h6", "ul", "ol", "li", "blockquote", "figure", "figcaption",
++  "a", "img", "table", "thead", "tbody", "tfoot", "tr", "th", "td", "code", "pre", "span", "div",
++]);
++const ALLOWED_ATTRS = {
++  a: ["href", "title", "target", "rel"],
++  img: ["src", "alt", "width", "height", "loading"],
++  th: ["colspan", "rowspan"],
++  td: ["colspan", "rowspan"],
++};
++
++function sanitizeHtml(html) {
++  let out = String(html);
++  // Blocs entiers supprimés, contenu compris.
++  out = out.replace(/<(script|style|iframe|object|embed|form|noscript)\b[\s\S]*?<\/\1>/gi, "");
++  out = out.replace(/<(script|style|iframe|object|embed|form|noscript)\b[^>]*\/?>/gi, "");
++  out = out.replace(/<!--[\s\S]*?-->/g, "");
++
++  return out.replace(/<(\/?)([a-zA-Z][a-zA-Z0-9]*)((?:[^>"']|"[^"]*"|'[^']*')*)>/g, (full, close, rawTag, rawAttrs) => {
++    const tag = rawTag.toLowerCase();
++    if (!ALLOWED_TAGS.has(tag)) return ""; // balise retirée, contenu conservé
++    if (close) return `</${tag}>`;
++
++    const allowed = ALLOWED_ATTRS[tag] ?? [];
++    const kept = [];
++    for (const m of rawAttrs.matchAll(/([a-zA-Z-]+)\s*=\s*("([^"]*)"|'([^']*)')/g)) {
++      const name = m[1].toLowerCase();
++      const value = m[3] ?? m[4] ?? "";
++      if (!allowed.includes(name)) continue;
++      if ((name === "href" || name === "src") && /^\s*(javascript|data|vbscript):/i.test(value)) continue;
++      kept.push(`${name}="${value.replace(/"/g, "&quot;")}"`);
++    }
++    if (tag === "a") {
++      const href = kept.find((k) => k.startsWith("href="));
++      if (href && /^href="https?:\/\//i.test(href) && !href.includes(new URL(SITE_ORIGIN).host)) {
++        kept.push('target="_blank"', 'rel="noopener noreferrer"');
++      }
++    }
++    if (tag === "img" && !kept.some((k) => k.startsWith("loading="))) kept.push('loading="lazy"');
++    const selfClosing = tag === "img" || tag === "br" || tag === "hr";
++    return `<${tag}${kept.length ? " " + kept.join(" ") : ""}${selfClosing ? " /" : ""}>`;
++  })
++    // Liens vidés de leur href (protocole refusé) : on ne garde que le texte.
++    .replace(/<a>([\s\S]*?)<\/a>/gi, "$1");
++}
++
++/* ---------- Téléchargement des images ---------- */
++
++const EXT_BY_TYPE = {
++  "image/jpeg": ".jpg", "image/jpg": ".jpg", "image/png": ".png", "image/webp": ".webp",
++  "image/avif": ".avif", "image/gif": ".gif", "image/svg+xml": ".svg",
++};
++
++async function downloadImage(url, slug, basename) {
++  const res = await fetch(url, { signal: AbortSignal.timeout(HTTP_TIMEOUT_MS), redirect: "follow" });
++  if (!res.ok) throw new Error(`HTTP ${res.status}`);
++  const type = (res.headers.get("content-type") ?? "").split(";")[0].trim().toLowerCase();
++  if (type && !type.startsWith("image/")) throw new Error(`type inattendu : ${type}`);
++  const buf = Buffer.from(await res.arrayBuffer());
++  if (!buf.length) throw new Error("fichier vide");
++  if (buf.length > MAX_IMAGE_BYTES) throw new Error(`trop lourd (${Math.round(buf.length / 1024)} Ko)`);
++
++  const urlExt = path.extname(new URL(url).pathname).toLowerCase();
++  const ext = EXT_BY_TYPE[type] ?? (/^\.(jpe?g|png|webp|avif|gif|svg)$/.test(urlExt) ? urlExt : ".jpg");
++  const dir = path.join(UPLOAD_DIR, slug);
++  await mkdir(dir, { recursive: true });
++  await writeFile(path.join(dir, basename + ext), buf);
++  return `${UPLOAD_PUBLIC}/${slug}/${basename}${ext}`;
++}
++
++/** Remplace toutes les <img src> distantes par leur copie interne. */
++async function internalizeBodyImages(html, slug) {
++  const srcs = [...String(html).matchAll(/<img\b[^>]*?\bsrc\s*=\s*["']([^"']+)["']/gi)].map((m) => m[1]);
++  const unique = [...new Set(srcs)].filter((s) => /^https?:\/\//i.test(s));
++  let out = String(html);
++  let i = 0;
++  for (const src of unique) {
++    i += 1;
++    try {
++      const local = await downloadImage(src, slug, `img-${String(i).padStart(2, "0")}`);
++      out = out.split(src).join(local);
++      log(`    image ${i}/${unique.length} → ${local}`);
++    } catch (e) {
++      warn(`[${slug}] image non téléchargée (${src}) : ${e.message} — URL d'origine conservée`);
++    }
++  }
++  // Les liens sortants vers sedestral.com n'ont rien à faire sur le blog :
++  // on garde le texte, on retire le lien.
++  const unwrapped = out.match(/<a\b[^>]*href\s*=\s*["'][^"']*sedestral\.com[^"']*["'][^>]*>/gi)?.length ?? 0;
++  if (unwrapped) {
++    out = out.replace(/<a\b[^>]*href\s*=\s*["'][^"']*sedestral\.com[^"']*["'][^>]*>([\s\S]*?)<\/a>/gi, "$1");
++    log(`    ${unwrapped} lien(s) sortant(s) vers sedestral.com retiré(s)`);
++  }
++
++  // Filet de sécurité : plus aucune URL sedestral.com ne doit subsister.
++  const leftovers = [...out.matchAll(/https?:\/\/[^\s"'<>]*sedestral\.com[^\s"'<>]*/gi)].map((m) => m[0]);
++  if (leftovers.length) warn(`[${slug}] ${leftovers.length} URL(s) sedestral.com non réécrite(s) : ${leftovers.slice(0, 3).join(", ")}`);
++  return out;
++}
++
++/* ---------- Git ---------- */
++
++async function git(...args) {
++  const { stdout } = await exec("git", args, { cwd: ROOT, maxBuffer: 10 * 1024 * 1024 });
++  return stdout.trim();
++}
++
++async function commitAndPush(message) {
++  if (NO_PUSH) { log(`(push désactivé) commit prévu : ${message}`); return false; }
++  await git("config", "user.name", "sedestral-sync[bot]");
++  await git("config", "user.email", "sedestral-sync@users.noreply.github.com");
++  await git("add", "content/blog", "public/uploads/sedestral");
++  const staged = await git("diff", "--cached", "--name-only");
++  if (!staged) { log("rien à commiter"); return false; }
++  await git("commit", "-m", message);
++  await git("push");
++  log(`poussé : ${message}`);
++  return true;
++}
++
++/* ---------- Vérification de mise en ligne ---------- */
++
++async function waitOnline(url, deadline) {
++  while (Date.now() < deadline) {
++    try {
++      const res = await fetch(url, { signal: AbortSignal.timeout(20_000), redirect: "follow", headers: { "Cache-Control": "no-cache" } });
++      if (res.ok) return true;
++    } catch { /* déploiement en cours */ }
++    await new Promise((r) => setTimeout(r, DEPLOY_POLL_MS));
++  }
++  return false;
++}
++
++/* ---------- Programme principal ---------- */
++
++async function main() {
++  if (!API_KEY) {
++    console.log("::error::SEDESTRAL_API_KEY absente de l'environnement — arrêt.");
++    process.exit(1);
++  }
++  log(`Synchronisation Sedestral — site ${SITE_ORIGIN}${DRY_RUN ? " (essai à blanc)" : ""}`);
++
++  const payload = await api("/alya/blog-articles?states=DRAFT");
++  const rawList = asList(payload);
++  log(`${rawList.length} article(s) à l'état DRAFT`);
++
++  if (DRY_RUN) {
++    console.log("\n--- Réponse brute du premier article (vérification des noms de champs) ---");
++    const sample = rawList[0];
++    if (!sample) { console.log("(aucun article DRAFT)"); return; }
++    const shown = { ...sample };
++    for (const k of Object.keys(shown)) {
++      if (typeof shown[k] === "string" && shown[k].length > 300) shown[k] = shown[k].slice(0, 300) + " …[tronqué]";
++    }
++    console.log(JSON.stringify(shown, null, 2));
++    console.log("\n--- Champs retenus après normalisation ---");
++    const n = normalize(sample);
++    console.log(JSON.stringify({ ...n, body: n.body ? `${String(n.body).length} caractères` : undefined }, null, 2));
++    return;
++  }
++
++  const state = await readJson(STATE_FILE, { version: 1, articles: {} });
++  const generated = await readJson(GENERATED_FILE, []);
++  const taken = new Set([...(await editorialSlugs()), ...generated.map((a) => a.slug)]);
++
++  /* --- Phase 1 : import --- */
++  const nouveaux = [];
++  for (const raw of rawList) {
++    const a = normalize(raw);
++    try {
++      if (!a.id) throw new Error("identifiant absent de la réponse API");
++      if (state.articles[a.id]) { log(`· ${a.id} déjà importé — ignoré`); continue; }
++      if (!a.title || !a.body) throw new Error("titre ou corps manquant");
++      if (!a.cover) throw new Error("image de couverture absente");
++
++      let slug = slugify(a.slug || a.title);
++      if (!slug) throw new Error("slug impossible à construire");
++      let n = 2;
++      const base = slug;
++      while (taken.has(slug)) slug = `${base}-${n++}`;
++
++      log(`→ import « ${a.title} » (${a.id}) → ${BLOG_PREFIX}/${slug}`);
++      const cover = await downloadImage(String(a.cover), slug, "cover");
++      log(`    couverture → ${cover}`);
++      const body = sanitizeHtml(await internalizeBodyImages(a.body, slug));
++
++      const iso = a.publishedAt ? new Date(a.publishedAt).toISOString() : new Date().toISOString();
++      const article = {
++        sedestralId: a.id,
++        slug,
++        titre: String(a.title).trim(),
++        date: frDate(iso),
++        dateISO: iso.slice(0, 10),
++        excerpt: String(a.metaDescription ?? "").trim(),
++        categorie: String(a.category ?? DEFAULT_CATEGORY).trim() || DEFAULT_CATEGORY,
++        photo: cover,
++        keyword: a.keyword ? String(a.keyword).trim() : undefined,
++        bodyHtml: body,
++      };
++      generated.push(article);
++      taken.add(slug);
++      state.articles[a.id] = {
++        slug,
++        url: `${SITE_ORIGIN}${BLOG_PREFIX}/${slug}`,
++        importedAt: new Date().toISOString(),
++        confirmedAt: null,
++      };
++      nouveaux.push(a.id);
++    } catch (e) {
++      fail(`article ignoré (${a.id || "id inconnu"} — « ${a.title ?? "sans titre"} ») : ${e.message}`);
++      // Les fichiers éventuellement déjà écrits pour ce slug sont retirés au run suivant
++      // par le nettoyage des dossiers orphelins ci-dessous.
++    }
++  }
++
++  if (nouveaux.length) {
++    generated.sort((x, y) => y.dateISO.localeCompare(x.dateISO));
++    await writeJson(GENERATED_FILE, generated);
++    await writeJson(STATE_FILE, state);
++    await cleanOrphanUploads(generated);
++    await commitAndPush(`content: ${nouveaux.length} article(s) Sedestral publié(s)`);
++  } else {
++    log("aucun nouvel article à importer");
++  }
++
++  /* --- Phase 2 : confirmation (nouveaux + reliquats des runs précédents) --- */
++  const aConfirmer = Object.entries(state.articles).filter(([, v]) => !v.confirmedAt);
++  if (!aConfirmer.length) { log("rien à confirmer auprès de Sedestral"); return finish(); }
++
++  const deadline = Date.now() + DEPLOY_TIMEOUT_MS;
++  let confirmés = 0;
++  for (const [id, entry] of aConfirmer) {
++    try {
++      log(`· vérification de la mise en ligne : ${entry.url}`);
++      const online = await waitOnline(entry.url, deadline);
++      if (!online) {
++        fail(`page non accessible dans le délai imparti (${entry.url}) — PATCH non envoyé, reprise au prochain run`);
++        continue;
++      }
++      await api(`/alya/blog-articles/${encodeURIComponent(id)}`, {
++        method: "PATCH",
++        body: JSON.stringify({ state: "PUBLISHED", url: entry.url }),
++      });
++      entry.confirmedAt = new Date().toISOString();
++      confirmés += 1;
++      log(`  ✓ confirmé PUBLISHED auprès de Sedestral`);
++    } catch (e) {
++      fail(`PATCH en échec pour ${id} (${entry.url}) : ${e.message} — reprise au prochain run`);
++    }
++  }
++
++  if (confirmés) {
++    await writeJson(STATE_FILE, state);
++    // [skip ci] : ce commit ne change aucun contenu rendu, inutile de redéployer.
++    await commitAndPush(`chore: confirmation Sedestral de ${confirmés} article(s) [skip ci]`);
++  }
++  finish();
++}
++
++/** Supprime les dossiers d'images d'articles qui ne sont plus référencés
++    (import interrompu à mi-chemin lors d'un run précédent). */
++async function cleanOrphanUploads(generated) {
++  if (!existsSync(UPLOAD_DIR)) return;
++  const valides = new Set(generated.map((a) => a.slug));
++  for (const dir of await readdir(UPLOAD_DIR, { withFileTypes: true })) {
++    if (dir.isDirectory() && !valides.has(dir.name)) {
++      await rm(path.join(UPLOAD_DIR, dir.name), { recursive: true, force: true });
++      warn(`dossier d'images orphelin supprimé : ${dir.name}`);
++    }
++  }
++}
++
++function finish() {
++  if (errors.length) {
++    log(`terminé avec ${errors.length} erreur(s) :`);
++    errors.forEach((e) => log(`  – ${e}`));
++    process.exitCode = 1;
++  } else {
++    log("terminé sans erreur");
++  }
++}
++
++main().catch((e) => {
++  console.log(`::error::échec global de la synchronisation : ${e.stack ?? e.message}`);
++  process.exit(1);
++});
