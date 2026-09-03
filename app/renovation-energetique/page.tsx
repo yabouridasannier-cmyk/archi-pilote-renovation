@@ -25,6 +25,7 @@ export default function Page() {
           src="/photos/maquette/schema-deperditions.jpg"
           alt="Schéma illustrant les déperditions thermiques typiques d'une passoire énergétique : pertes de chaleur par la toiture, les murs, les menuiseries, le plancher bas et le renouvellement d'air non maîtrisé."
           caption="Répartition indicative des déperditions thermiques dans un logement mal isolé, avant travaux de rénovation énergétique."
+          ratio="aspect-[10/7]"
         />
         <div className="mt-10 flex flex-col gap-10">
           <div>
@@ -77,6 +78,7 @@ export default function Page() {
             src="/photos/maquette/schema-dpe-passoire.jpg"
             alt="Étiquettes du diagnostic de performance énergétique de A à G et postes de travaux associés sur une maison en coupe"
             caption="Étiquettes du diagnostic de performance énergétique et postes de travaux qui les influencent : isolation, menuiseries, ventilation, chauffage."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -154,11 +156,26 @@ export default function Page() {
           thermique de liaison (jonction plancher/mur non traitée avec fuite de chaleur
           symbolisée). Aucun texte dans l'image, légendes ajoutées en HTML ensuite."
         */}
+        {/*
+          03/09 : deux corrections dans cette section.
+          (1) fenetre-identique-cremone-laiton.jpg est retirée. Cette image (stock) montre une
+          fenêtre haussmannienne finie, crémone en laiton, vue sur les toits — une belle
+          menuiserie livrée, placée sous un intitulé qui traite de l'isolation intérieure,
+          extérieure et des ponts thermiques. Elle ne démontre rien de tout cela, et sa légende
+          affirmait en outre des choses invisibles sur la photo (« section des petits bois
+          relevée sur l'existant », « crémone restaurée et remontée sur le nouveau châssis » :
+          rien n'indique que ce châssis soit neuf). Le sujet « fenêtre reproduite à l'identique »
+          relève des pages de savoir-faire, pas d'une section sur les déperditions.
+          (2) La légende de chIsolationCombles.jpeg annonçait une isolation posée « murs et
+          plafond ». Le fichier montre l'inverse : la laine minérale est posée entre les chevrons
+          de la toiture uniquement, les murs sont en briques monomur encore nues. Légende
+          corrigée pour ne décrire que l'ouvrage visible.
+        */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
           <MqFig
             src="/photos/chantiers/chIsolationCombles.jpeg"
-            alt="Isolation thermique par l'intérieur en cours, laine minérale entre ossature métallique, chantier réel"
-            caption="Isolation thermique en cours : laine minérale posée entre ossature métallique, murs et plafond, avant fermeture en plaques de plâtre. Chantier réel des équipes partenaires."
+            alt="Laine minérale posée entre les chevrons d'une toiture, ossature métallique en attente et ouvrier vissant une plaque de plâtre depuis un échafaudage roulant"
+            caption="Isolation de toiture en cours : laine minérale posée entre chevrons, ossature métallique en place et pose des plaques de plâtre en cours depuis l'échafaudage. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
           <MqFig
@@ -166,13 +183,6 @@ export default function Page() {
             alt="Isolation par l'intérieur en laine minérale posée entre montants, joints et pourtour d'une fenêtre neuve repris à la bande adhésive, chantier réel"
             caption="Isolation par l'intérieur en laine minérale posée entre montants : les joints et le pourtour de la fenêtre neuve sont repris à la bande adhésive, là où se concentrent les ponts thermiques résiduels. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
-          />
-        </div>
-        <div className="mt-5">
-          <MqFig
-            src="/photos/maquette/fenetre-identique-cremone-laiton.jpg"
-            alt="Fenêtre en bois reproduite à l'identique dans un appartement haussmannien, petits bois et crémone en laiton"
-            caption="Fenêtre reproduite à l'identique : section des petits bois relevée sur l'existant, crémone en laiton restaurée et remontée sur le nouveau châssis."
           />
         </div>
       </MqSection>
@@ -185,6 +195,7 @@ export default function Page() {
           src="/photos/pedagogie/03-menuiserie-condensation.jpeg"
           alt="Schéma pédagogique avant/après : menuiserie ancienne avec fuites d'air diffuses, menuiserie neuve étanche avec risque de condensation sans ventilation adaptée"
           caption="Schéma pédagogique : une menuiserie plus étanche supprime des fuites d'air qui participaient au renouvellement d'air — d'où le risque de condensation sans ventilation adaptée."
+          ratio="aspect-[3/2]"
         />
         <div className="mt-10 flex flex-col gap-10">
           <div>
@@ -252,6 +263,7 @@ export default function Page() {
           src="/photos/maquette/schema-vmc.jpg"
           alt="Schéma de principe d'une ventilation mécanique contrôlée hygroréglable montrant les entrées d'air en menuiseries des pièces de vie, le transit de l'air sous les portes intérieures, l'extraction en cuisine et salle de bain, et un carottage de traversée pour le rejet d'air."
           caption="Principe d'une ventilation mécanique contrôlée hygroréglable : entrées d'air, transit sous les portes, extraction en pièces techniques."
+          ratio="aspect-[10/7]"
         />
         <div className="mt-10 flex flex-col gap-10">
           <div>
@@ -303,6 +315,7 @@ export default function Page() {
                 src="/photos/pedagogie/04-circuit-air.jpeg"
                 alt="Schéma pédagogique du circuit complet de l'air dans un logement : entrées d'air en séjour et chambres, transit sous les portes du couloir, extraction en cuisine et salle de bain"
                 caption="Schéma pédagogique : circuit complet de l'air — entrée par les pièces de vie, transit sous les portes, extraction en cuisine et salle de bain."
+                ratio="aspect-[3/2]"
               />
             </div>
           </div>
@@ -333,6 +346,7 @@ export default function Page() {
                 src="/photos/maquette/chantier-carottage-facade.jpg"
                 alt="Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation"
                 caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune. Illustration de référence, hors chantier documenté sur cette page."
+                ratio="aspect-[10/7]"
               />
             </div>
           </div>
@@ -500,11 +514,13 @@ export default function Page() {
             src="/photos/maquette/schema-isolation-combles.jpg"
             alt="Schéma en coupe de l'isolation des combles : charpente, deux couches croisées de laine minérale, pare-vapeur continu et ventilation de sous-toiture"
             caption="Principe d'isolation des combles : deux couches croisées, pare-vapeur continu côté chaud et lame d'air ventilée sous couverture."
+            ratio="aspect-[10/7]"
           />
           <MqFig
             src="/photos/maquette/schema-pompe-a-chaleur.jpg"
             alt="Schéma d'installation d'une pompe à chaleur air-eau : unité extérieure, module hydraulique, ballon d'eau chaude, radiateurs basse température et plancher chauffant"
             caption="Pompe à chaleur air-eau : unité extérieure, module hydraulique, ballon sanitaire et émetteurs basse température adaptés au bâti rénové."
+            ratio="aspect-[10/7]"
           />
         </div>
         <div className="flex flex-col gap-12 mt-12">
@@ -519,11 +535,13 @@ export default function Page() {
                 src="/photos/maquette/combles-non-isoles-avant.jpg"
                 alt="Combles perdus non isolés, ancienne laine tassée entre les solives et charpente apparente"
                 caption="Avant : Combles perdus avant intervention : isolant tassé et discontinu, ponts thermiques en périphérie, premier poste de déperdition d'une passoire énergétique."
+                ratio="aspect-[10/7]"
               />
               <MqFig
                 src="/photos/maquette/combles-isoles-apres.jpg"
-                alt="Combles isolés avec deux couches croisées de laine minérale, pare-vapeur continu et chemin de circulation"
-                caption="Après : Combles traités : deux couches croisées de laine minérale, pare-vapeur continu jointoyé et chemin de circulation pour l'entretien des réseaux."
+                alt="Combles isolés en laine minérale recouverte d'une membrane continue aux lés jointoyés, chemin de circulation en panneaux posé au centre"
+                caption="Après : combles traités — laine minérale posée entre solives sous une membrane continue aux lés jointoyés, et chemin de circulation en panneaux pour l'entretien des réseaux."
+                ratio="aspect-[10/7]"
               />
             </div>
           </div>
@@ -533,16 +551,26 @@ export default function Page() {
               La cause est traitée avant la finition : extraction VMC dimensionnée, étanchéité sous carrelage,
               puis pose du travertin et de la robinetterie.
             </p>
+            {/*
+              03/09 : même correction que sur /second-oeuvre, où ce diptyque était dupliqué.
+              salle-eau-vmc-apres.jpg est une salle de bain décorée et mise en scène (vase,
+              branche d'olivier, tabouret) dont la légende affirmait « extraction VMC
+              dimensionnée » et « étanchéité sous carrelage » : deux ouvrages qu'aucun pixel de
+              l'image ne montre. Remplacée par le visuel de caisson de VMC et gaines, qui montre
+              l'équipement dont parle le texte, signalé comme illustration de référence.
+            */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
               <MqFig
                 src="/photos/maquette/salle-eau-condensation-avant.jpg"
-                alt="Pathologie classique : ventilation absente ou obstruée, condensation permanente et moisissures"
-                caption="Avant : Pathologie classique : ventilation absente ou obstruée, condensation permanente et moisissures. Le traitement commence par le renouvellement d'air, pas par la peinture."
+                alt="Salle d'eau dégradée par la condensation, moisissures en plafond et en angles, grille de ventilation encrassée"
+                caption="La cause : ventilation absente ou obstruée — grille encrassée, moisissures au plafond et dans les angles. Le traitement commence par le renouvellement d'air, pas par la peinture."
+                ratio="aspect-[10/7]"
               />
               <MqFig
-                src="/photos/maquette/salle-eau-vmc-apres.jpg"
-                alt="Salle d'eau rénovée en travertin clair avec douche à l'italienne, robinetterie laiton et bouche d'extraction VMC discrète"
-                caption="Après : Salle d'eau assainie et livrée : extraction VMC dimensionnée, étanchéité sous carrelage, travertin clair et robinetterie laiton brossé."
+                src="/photos/maquette/chantier-vmc-caisson-gaines.jpg"
+                alt="Caisson de ventilation mécanique contrôlée suspendu en faux plafond, gaines d'extraction raccordées sur ses piquages"
+                caption="Le traitement : caisson d'extraction mécanique suspendu en faux plafond, gaines raccordées vers les pièces humides avant fermeture. Illustration de référence, hors chantier documenté sur cette page."
+                ratio="aspect-[10/7]"
               />
             </div>
           </div>

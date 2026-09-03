@@ -72,12 +72,20 @@ export default function ChantiersComplexesPage() {
         lead="Un chantier devient complexe lorsqu'il combine une reprise de structure, une copropriété avec parties communes concernées, un immeuble occupé pendant les travaux ou un risque d'aléa technique important. Ces dossiers exigent un diagnostic approfondi, la mobilisation d'un ingénieur structure ou d'un architecte DPLG partenaire indépendant, un phasage précis et une gestion documentée de chaque imprévu, du premier relevé jusqu'à la levée des réserves."
       />
 
+      {/*
+        03/09 : les cinq visuels de cette page sont des schémas pédagogiques — chacun a été
+        ouvert et confronté à son intitulé, aucun ne présente une pièce décorée sous un titre
+        technique. En revanche, tous étaient affichés en aspect-[16/9] alors qu'ils sont
+        nativement en 3/2 (1536×1024) ou 10/7 (1280×896) : le recadrage rognait le haut et le
+        bas de chaque schéma, c'est-à-dire précisément le titre et les mentions de bas de page.
+        Chaque figure reprend désormais son ratio natif et s'affiche en entier.
+      */}
       <div className="container-site max-w-4xl pb-12 md:pb-16">
         <MqFig
           src="/photos/pedagogie/10-chantiers-complexes-hero.jpeg"
           alt="Coupe d'un immeuble haussmannien occupé pendant des travaux lourds : mur porteur ouvert, réseaux déviés, protections de chantier, accord du syndic, phasage"
           caption="Anatomie d'un chantier complexe en immeuble occupé. Schéma pédagogique."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -133,7 +141,7 @@ export default function ChantiersComplexesPage() {
             src="/photos/maquette/schema-carottage-ventilation.jpg"
             alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
             caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -144,7 +152,7 @@ export default function ChantiersComplexesPage() {
             src="/photos/pedagogie/45-chantiers-complexes-roles-dplg-ingenieur.jpeg"
             alt="Schéma en deux colonnes : Architecte DPLG (conception, dépôt de permis, urbanisme) et Ingénieur structure (note de calcul, descente de charges, dimensionnement)"
             caption="Répartition des rôles : conception côté architecte, calcul côté ingénieur structure. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
@@ -183,7 +191,7 @@ export default function ChantiersComplexesPage() {
             src="/photos/pedagogie/11-chantiers-complexes-frise.jpeg"
             alt="Frise en 9 étapes : diagnostic, sondage, calcul, autorisation, étaiement, ouverture, structure, contrôle, finitions"
             caption="Séquence d'une intervention structurelle complexe. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
         </div>
         <MqDarkSteps steps={PHASES} />
@@ -195,7 +203,7 @@ export default function ChantiersComplexesPage() {
             src="/photos/pedagogie/40-chantiers-complexes-aleas-schema.jpeg"
             alt="Les 4 étapes de gestion d'un aléa de chantier : suspension de la zone, photo datée, validation écrite du client, chiffrage de la reprise"
             caption="Ce que documenter un aléa change concrètement. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
           <MqChecklist
             items={[

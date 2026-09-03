@@ -22,7 +22,7 @@ export default function Page() {
           src="/photos/pedagogie/09-second-oeuvre-axono.jpeg"
           alt="Axonométrie d'un appartement montrant électricité, plomberie, VMC, cloisons, chauffage et menuiserie"
           caption="Organisation des lots de second œuvre dans un appartement. Schéma pédagogique."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -70,11 +70,12 @@ export default function Page() {
             câblage, fournie par le client et déposée dans public/photos/chantiers/, qui illustre
             exactement la désignation « Tableau électrique et circuits » juste au-dessus.
           */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
             <MqFig
               src="/photos/maquette/schema-electricite-nfc15100.jpg"
               alt="Schéma d'un tableau électrique de logement rénové avec circuits, différentiel 30 mA et liaison équipotentielle"
               caption="Organisation des circuits d'un logement rénové : protection différentielle 30 mA, sections adaptées et liaison équipotentielle en salle d'eau."
+              ratio="aspect-[10/7]"
             />
             <MqFig
               src="/photos/chantiers/chTableauElectriqueDisjoncteurs.jpeg"
@@ -89,7 +90,7 @@ export default function Page() {
               Une fois le plan validé, les gaines sont tirées et repérées pendant que tout reste accessible : c&apos;est la dernière étape
               où une correction reste peu coûteuse.
             </p>
-            <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
               <MqFig
                 src="/photos/chantiers/chElectriciteFauxPlafondFaisceaux.jpeg"
                 alt="Faisceaux de gaines et attentes de câbles regroupés le long d'un voile béton, avant fermeture du faux plafond"
@@ -238,6 +239,7 @@ export default function Page() {
             src="/photos/maquette/schema-doublage-isolant.jpg"
             alt="Coupe verticale d'un doublage isolant sur mur ancien : rails, montants, laine minérale, pare-vapeur et plaque de plâtre"
             caption="Doublage isolant sur mur ancien : ossature métallique à entraxe 600 mm, laine minérale, pare-vapeur continu et plaque de plâtre."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -259,6 +261,7 @@ export default function Page() {
             src="/photos/maquette/schema-etancheite-salle-eau.jpg"
             alt="Coupe d'une salle d'eau montrant la natte d'étanchéité sous carrelage, la bande d'angle, la pente et le siphon"
             caption="Étanchéité sous carrelage : continuité de la natte entre murs et sol, bandes de renfort en angle et pente d'évacuation de 1 à 2 %."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -288,69 +291,54 @@ export default function Page() {
             </div>
           ))}
         </div>
+        {/*
+          03/09 : cette grille comptait NEUF photos de cuisines finies, présentées comme
+          « livrées », sous une section qui ne parle pas de décoration mais de séquencement
+          (implantation arrêtée avant les réseaux, cotes relevées après cloisons, revêtement
+          posé après chape). Une cuisine meublée n'illustre aucun de ces trois points : c'est
+          exactement le défaut signalé par le client. Vérification faite fichier par fichier,
+          plusieurs légendes étaient en outre fausses — chCuisineBlancheElectromenagerLG.jpeg
+          annonçait une cuisine « livrée » avec « sol en marbre » alors que le réfrigérateur y
+          est encore emballé sous film et étiqueté, qu'une colonne est une carcasse sans portes
+          et que le sol est un parquet clair puis un carrelage clair, pas du marbre ;
+          chCuisineNoireBrillantePoigneesCuivrees.jpeg était dite « livrée » avec un seau de
+          chantier et des outils au premier plan. Six des neuf fichiers étaient de surcroît des
+          portraits (jusqu'à 900×1600) affichés dans un cadre 4/3 paysage, qui en amputait près
+          de la moitié de la hauteur.
+          La galerie est remplacée par trois photos qui montrent réellement les trois points de
+          la section, dans l'ordre des trois encadrés ci-dessus, toutes prises en cours de
+          chantier. Les cuisines finies gardent leur place sur les pages de réalisations, pas
+          dans une section technique de second œuvre.
+        */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
-            src="/photos/chantiers/chCuisineBlancheElectromenagerLG.jpeg"
-            alt="Cuisine blanche livrée avec électroménager encastré et sol en marbre, chantier réel"
-            caption="Cuisine blanche livrée : électroménager encastré, colonne de rangement et sol en marbre. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisinePlanNoirFacadesCremeVelux.jpeg"
-            alt="Cuisine sous comble avec plan de travail noir, façades crème et fenêtre de toit, chantier réel"
-            caption="Cuisine sous comble : plan de travail noir, façades claires et fenêtre de toit apportant la lumière naturelle. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisineBlancheBrillanteMarbre.jpeg"
-            alt="Cuisine laquée blanche brillante avec sol en marbre et suspensions noires, chantier réel"
-            caption="Cuisine laquée blanche brillante livrée : sol en marbre, suspensions noires et plan de travail bois en séparation d'îlot. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisineAnthraciteCarreauxCiment.jpeg"
-            alt="Cuisine laquée anthracite avec sol en carreaux de ciment à motifs, chantier réel"
-            caption="Cuisine laquée anthracite livrée : plan de travail noir, robinetterie noire et sol en carreaux de ciment à motifs. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisineSauge.jpeg"
-            alt="Cuisine vert sauge avec crédence en pierre veinée verte et four noir intégré, chantier réel"
-            caption="Cuisine vert sauge livrée : façades mates, crédence en pierre veinée verte et four noir encastré. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisineTerracotta.jpeg"
-            alt="Cuisine terracotta avec façades hautes crème, corniche moulurée d'origine et sol en carreaux à motifs, chantier réel"
-            caption="Cuisine terracotta livrée dans un appartement ancien : façades hautes crème, corniche moulurée conservée et sol à motifs. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisineNoireSejourFinie.jpeg"
-            alt="Cuisine noire ouverte sur séjour, livrée, chantier réel"
-            caption="Cuisine noire ouverte sur séjour, livrée avec plan de travail et rangements muraux. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCuisineNoireBrillantePoigneesCuivrees.jpeg"
-            alt="Cuisine noire laquée brillante avec poignées cuivrées et sol en carreaux de ciment à motifs orangés, chantier réel"
-            caption="Cuisine noire laquée livrée : poignées cuivrées, plan de travail clair et sol en carreaux de ciment à motifs. Chantier réel des équipes partenaires."
-          />
-          <MqFig
             src="/photos/chantiers/chCuisineBleuCanardBrillante.jpeg"
-            alt="Cuisine bleu canard laquée avec plan de travail bois et découpe pour plaque de cuisson en attente, chantier réel"
-            caption="Cuisine bleu canard en finition : façades laquées posées, plan de travail bois et découpe prête à recevoir la plaque de cuisson. Chantier réel des équipes partenaires."
+            alt="Cuisine bleu canard en cours d'installation : plan de travail bois percé pour l'évier et la plaque, sols bâchés et plancher ouvert"
+            caption="Cuisine : meubles posés et plan de travail percé aux cotes de l'évier et de la plaque, réseaux encore accessibles par le plancher ouvert. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chArcheEncadrementBoisChantier.jpeg"
+            alt="Passage cintré habillé en MDF cannelé, posé dans une cloison terminée, sols bâchés et panneaux en attente"
+            caption="Menuiserie intérieure : passage cintré habillé sur mesure, ajusté sur la cloison une fois celle-ci terminée, sols bâchés pendant la pose. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
         {/*
-          31/08 : vérification photo par photo de cette grille de 9 cuisines "livrées" — quatre
-          des neuf fichiers étaient en réalité des quasi-doublons pixel pour pixel de quatre autres
-          photos déjà présentes dans cette même grille, sous un nom de fichier et une légende
-          différents (vérifié par hachage d'image, correspondance exacte) :
-          chCuisineBlancheFinieIlot.jpeg = chCuisineBlancheElectromenagerLG.jpeg (déjà utilisée
-          plus haut) ; chCuisineNoireSkylightFinie.jpeg = chCuisinePlanNoirFacadesCremeVelux.jpeg
-          (déjà utilisée, et en plus incorrectement qualifiée de "cuisine noire" alors que les
-          façades y sont crème, seul le plan de travail est noir) ; chCuisineBlanchePendantsFinie.jpeg
-          = chCuisineBlancheBrillanteMarbre.jpeg (déjà utilisée) ; chCuisineAnthraciteGalerie.jpeg
-          = chCuisineAnthraciteCarreauxCiment.jpeg (déjà utilisée). Autrement dit la grille ne
-          montrait que 5 cuisines réelles distinctes répétées pour en simuler 9. Les 4 doublons ont
-          été remplacés par 4 photos réelles et distinctes du même dossier chantiers/, non utilisées
-          ailleurs sur ces 4 pages (vérifié), apportant une vraie diversité de teintes plutôt que
-          des répétitions : vert sauge, terracotta, noir laqué à poignées cuivrées, bleu canard.
+          Le troisième visuel est sorti de la grille et passé en pleine largeur : le fichier est
+          en 1600×1200 (paysage) alors que les deux autres sont en 1200×1600 (portrait). Le forcer
+          dans le même cadre 3/4 aurait coupé 44 % de sa largeur, c'est-à-dire précisément les deux
+          bords où se voit que la pose est EN COURS (dents de scie non coupées à gauche, chutes de
+          lames à droite) — le seul élément qui rattache l'image au propos de la section.
         */}
+        <div className="mt-5">
+          <MqFig
+            src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
+            alt="Pose d'un revêtement de sol à bâtons rompus en cours dans une pièce vide, lames non encore coupées en périphérie et chutes posées au sol"
+            caption="Revêtement de sol : pose à bâtons rompus en cours sur support préparé, coupes de périphérie et plinthes encore à faire, avant peinture finale. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
+          />
+        </div>
       </MqSection>
 
       <MqSection title="Peinture et finitions : la dernière étape, pas la première décision">
@@ -466,31 +454,45 @@ export default function Page() {
             <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
               <MqFig
                 src="/photos/maquette/tableau-electrique-vetuste-avant.jpg"
-                alt="Ancien tableau électrique vétuste à porte-fusibles porcelaine et câblage tissu dégradé"
-                caption="Avant : Tableau électrique vétuste : porte-fusibles anciens, absence de différentiel 30 mA et circuits non repérés, non conforme à la norme NF C 15-100."
+                alt="Ancien tableau électrique vétuste en coffret bois, porte-fusibles en porcelaine et câblage sous tissu dégradé"
+                caption="Avant : coffret bois d'origine, porte-fusibles en porcelaine et câblage sous tissu, sans dispositif différentiel ni repérage des circuits."
+                ratio="aspect-[10/7]"
               />
               <MqFig
                 src="/photos/maquette/tableau-electrique-neuf-apres.jpg"
-                alt="Tableau électrique neuf aux normes avec rangées de disjoncteurs, interrupteurs différentiels et câblage en peignes"
-                caption="Après : Tableau remis aux normes : différentiels 30 mA, circuits séparés et repérés, câblage en peignes et attestation de conformité fournie à la réception."
+                alt="Tableau électrique neuf avec trois rangées de disjoncteurs, interrupteurs différentiels et câblage en peignes"
+                caption="Après : coffret neuf à trois rangées, interrupteurs différentiels en tête de rangée, circuits séparés et câblage en peignes."
+                ratio="aspect-[10/7]"
               />
             </div>
           </div>
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Salle d'eau : de la condensation chronique à la ventilation maîtrisée</h3>
             <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
-              La cause est traitée avant la finition : extraction VMC dimensionnée, étanchéité sous carrelage, puis pose du travertin et de la robinetterie.
+              La cause est traitée avant la finition : le renouvellement d&apos;air est rétabli par une extraction mécanique raccordée, avant tout travail de peinture ou de revêtement.
             </p>
+            {/*
+              03/09 : la seconde image de ce diptyque était salle-eau-vmc-apres.jpg, une salle
+              de bain entièrement décorée et mise en scène (vase, branche d'olivier, tabouret),
+              légendée « extraction VMC dimensionnée, étanchéité sous carrelage ». Aucune de ces
+              deux affirmations n'est démontrable sur l'image : l'étanchéité est par définition
+              invisible sous le carrelage, et aucune bouche d'extraction n'y est identifiable.
+              Une pièce décorée n'illustre pas une ventilation. Remplacée par le visuel de
+              caisson de VMC et gaines déjà employé sur /realisations, avec la même mention
+              honnête d'illustration de référence : il montre l'ouvrage dont parle le texte.
+            */}
             <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
               <MqFig
                 src="/photos/maquette/salle-eau-condensation-avant.jpg"
-                alt="Salle d'eau dégradée par la condensation, moisissures en plafond et bouche de ventilation obstruée"
-                caption="Avant : Pathologie classique : ventilation absente ou obstruée, condensation permanente et moisissures. Le traitement commence par le renouvellement d'air, pas par la peinture."
+                alt="Salle d'eau dégradée par la condensation, moisissures en plafond et en angles, grille de ventilation encrassée"
+                caption="La cause : ventilation absente ou obstruée — grille encrassée, moisissures au plafond et dans les angles. Le traitement commence par le renouvellement d'air, pas par la peinture."
+                ratio="aspect-[10/7]"
               />
               <MqFig
-                src="/photos/maquette/salle-eau-vmc-apres.jpg"
-                alt="Salle d'eau rénovée en travertin clair avec douche à l'italienne, robinetterie laiton et bouche d'extraction VMC discrète"
-                caption="Après : Salle d'eau assainie et livrée : extraction VMC dimensionnée, étanchéité sous carrelage, travertin clair et robinetterie laiton brossé."
+                src="/photos/maquette/chantier-vmc-caisson-gaines.jpg"
+                alt="Caisson de ventilation mécanique contrôlée suspendu en faux plafond, gaines d'extraction raccordées sur ses piquages"
+                caption="Le traitement : caisson d'extraction mécanique suspendu en faux plafond, gaines raccordées vers les pièces humides avant fermeture. Illustration de référence, hors chantier documenté sur cette page."
+                ratio="aspect-[10/7]"
               />
             </div>
           </div>

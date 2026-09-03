@@ -65,34 +65,16 @@ export default function Page() {
         </div>
 
         {/*
-          Ajouté le 02/09/2026 — les trois familles de contraintes ci-dessus n'étaient illustrées par
-          aucune photographie. Les trois clichés suivants viennent d'un même appartement haussmannien
-          parisien livré par les équipes partenaires ; chacun a été ouvert et décrit avant rédaction de
-          sa légende, qui ne mentionne que ce qui est visible à l'image.
-
-          Honnêteté : ces photos montrent le RÉSULTAT livré, pas la contrainte elle-même. Aucune ne
-          documente le relevé des chutes, une note de calcul de structure ni un débit de ventilation —
-          le titre de la grille le dit explicitement, et aucune légende n'affirme qu'une pièce d'eau a
-          été déplacée ou qu'un mur a été ouvert, ce que les images ne permettent pas d'établir.
+          03/09 : un bloc de trois photos de pièces livrées (cuisine, salle d'eau, salon) avait été
+          ajouté ici sous l'intitulé « Ce que ces contraintes donnent une fois le logement livré ».
+          Retiré : les trois intitulés au-dessus sont techniques (structure, évacuations, ventilation)
+          et aucune de ces photos ne montre la contrainte — ni chute, ni reprise de charge, ni débit
+          d'air. Illustrer une contrainte technique par une pièce décorée est incohérent, et
+          l'avertissement qui accompagnait le bloc ne rattrapait pas le décalage.
+          Ces trois photos restent visibles sur /realisations, où elles sont à leur place.
+          Les ouvrages techniques de cette page sont illustrés plus bas (schéma VMC, carottage de
+          façade, démolitions, réseaux mis à nu).
         */}
-        <p className="eyebrow mt-12">Ce que ces contraintes donnent une fois le logement livré</p>
-        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-5">
-          <MqFig
-            src="/photos/chantiers/chHdgCuisineOnyxParquetVersailles.jpeg"
-            alt="Cuisine implantée en linéaire le long du couloir d'un appartement haussmannien livré, plan de travail et crédence en pierre veinée, meubles hauts couronnés d'une corniche, parquet chêne en panneaux de Versailles"
-            caption="Implantation : cuisine développée en linéaire le long du couloir d'entrée, plan de travail et crédence taillés dans la même pierre veinée, meubles hauts couronnés d'une corniche alignée sur celle du couloir, parquet chêne posé en panneaux de Versailles. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chHdgSdbMarbreGrisPassageChambre.jpeg"
-            alt="Salle d'eau en marbre gris ouverte en enfilade d'une chambre haussmannienne, douche à l'italienne et vasque monolithique, radiateur en fonte à colonnes visible côté chambre"
-            caption="Pièce d'eau : salle d'eau implantée en enfilade d'une chambre, douche à l'italienne et vasque monolithique taillées dans le même marbre gris, robinetterie murale en laiton et huisserie doublée de bois clair. Côté chambre, radiateur en fonte à colonnes maintenu en place et parquet chêne à chevrons. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chHdgSalonBoucleAppliquesBronze.jpeg"
-            alt="Salon haussmannien livré, grille de ventilation encastrée à fleur de mur au-dessus de la porte, corniche sculptée et panneaux moulurés conservés, grande glace à cadre mouluré et parquet chêne à chevrons"
-            caption="Ventilation : la grille est encastrée à fleur du panneau mural au-dessus de la porte, sans traversée de la corniche sculptée ni des moulures conservées. Grande glace à cadre mouluré maintenue en place, portes-fenêtres à volets intérieurs en bois et parquet chêne à chevrons. Chantier réel des équipes partenaires."
-          />
-        </div>
       </MqSection>
 
       <MqSection
@@ -218,8 +200,8 @@ export default function Page() {
           />
           <MqFig
             src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
-            alt="Pose de parquet à chevrons dans une pièce en cours de finition, isolant phonique visible au sol"
-            caption="Second œuvre : pose du parquet à chevrons, matériau acheté en direct par le client au prix fournisseur. Chantier réel des équipes partenaires."
+            alt="Pose d'un sol stratifié imitation chêne à bâtons rompus, lames clipsées sur sous-couche et chutes au sol"
+            caption="Second œuvre : pose du revêtement de sol à bâtons rompus, matériau acheté en direct par le client au prix fournisseur. Chantier réel des équipes partenaires."
           />
           <MqFig
             src="/photos/chantiers/chSdbVasquesPoseMeubleBeige.jpeg"

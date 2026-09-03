@@ -84,7 +84,12 @@ const PHOTOS_CHANTIERS = [
   { src: `${CH}/chTerrasseBoisTransatsVue.jpeg`, alt: "Terrasse bois avec transats livrés, chantier réel", cap: "Terrasse bois livrée, mobilier extérieur installé." },
   { src: `${CH}/chTerrasseBoisEscaliersMobilier.jpeg`, alt: "Terrasse bois avec escaliers et mobilier, chantier réel", cap: "Terrasse bois à plusieurs niveaux avec escaliers intégrés et mobilier extérieur." },
   { src: `${CH}/chTerrasseBoisPiscineChamps.jpeg`, alt: "Terrasse bois autour d'une piscine avec vue sur les champs, chantier réel", cap: "Terrasse bois livrée autour d'une piscine, cadre champêtre." },
-  { src: `${CH}/chParquetChevronsPosePiece.jpeg`, alt: "Parquet posé à chevrons dans une pièce vide, chantier réel", cap: "Parquet en cours de pose à chevrons dans une pièce vide." },
+  /* 03/09 : cette photo était légendée « parquet à chevrons » sur trois pages. Vérification à
+     l'image : motif de veinage répétitif identique d'une lame à l'autre, about droits (pas de
+     coupe d'onglet), lames posées flottantes sur mousse blanche, chutes clipsables au sol —
+     c'est un sol stratifié imitation chêne posé en bâtons rompus, pas du chêne massif à
+     chevrons. Légende corrigée ici et sur /achat-direct-materiaux et /renovation-appartement. */
+  { src: `${CH}/chParquetChevronsPosePiece.jpeg`, alt: "Sol stratifié imitation chêne en cours de pose à bâtons rompus dans une pièce vide, chutes de lames au sol", cap: "Sol stratifié imitation chêne en cours de pose à bâtons rompus : lames clipsées sur sous-couche, découpes périphériques en attente." },
   { src: `${CH}/chParquetChevronsCacheRadiateur.jpeg`, alt: "Pièce livrée avec parquet chêne clair posé à chevrons et cache-radiateur sur mesure à claire-voie horizontale dans l'angle", cap: "Parquet chêne clair posé à chevrons jusqu'au pied d'un cache-radiateur sur mesure à claire-voie horizontale, intégré dans l'angle de la pièce. Chantier réel des équipes partenaires." },
   { src: `${CH}/chParquetChevronsCouloirDeuxTeintes.jpeg`, alt: "Raccord entre deux parquets à chevrons de teintes différentes à l'aplomb d'un passage de porte, dans un couloir", cap: "Raccord entre deux parquets à chevrons de teintes différentes : la jonction est calée à l'aplomb du passage de porte, sans barre de seuil rapportée. Chantier réel des équipes partenaires." },
   { src: `${CH}/chCouloirDressingToilettes.jpeg`, alt: "Couloir habillé d'un dressing en chêne du sol au plafond, parquet posé", cap: "Couloir habillé d'un dressing sur mesure en chêne du sol au plafond, finitions livrées." },

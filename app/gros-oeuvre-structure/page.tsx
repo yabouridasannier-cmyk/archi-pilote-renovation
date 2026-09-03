@@ -22,7 +22,7 @@ export default function Page() {
           src="/photos/maquette/schema-mur-porteur.jpg"
           alt="Coupe technique d'une ouverture de mur porteur montrant la poutre de reprise, les poteaux d'appui aux extrémités, l'étaiement provisoire pendant les travaux et le principe de descente de charges vers les fondations."
           caption="Principe d'une ouverture de mur porteur : poutre de reprise, poteaux d'appui, étaiement provisoire et descente de charges vers les fondations."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[10/7]"
         />
       </div>
 
@@ -67,21 +67,42 @@ export default function Page() {
       </MqSection>
 
       <MqSection title="Ouverture de mur porteur, trémie et reprise de charges">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <MqFig
-            src="/photos/maquette/chantier-etat-initial.jpg"
-            alt="Pièce d'appartement ancien vide avant travaux, murs jaunis et fissurés, parquet usé et cheminée d'origine encrassée"
-            caption="État initial relevé avant intervention : fissures de surface, parquet désaffleuré, cheminée et corniches d'origine à conserver."
-          />
+        {/*
+          03/09 : chantier-etat-initial.jpg retirée de cette section. La photo (stock) montre une
+          pièce ancienne vide avant travaux — ni ouverture, ni trémie, ni reprise de charges : elle
+          n'illustrait donc pas l'intitulé sous lequel elle était placée. À sa place, trois photos
+          réelles de structure acier, qui correspondent une à une aux trois développements de la
+          section : la poutre sur ses appuis, l'assemblage soudé poutre-poteau, puis le pied de
+          poteau sur platine. Les trois fichiers sont nativement en 900×1600 : ils partagent donc
+          le même cadrage 9/16 sans qu'aucun ne soit amputé, là où ils étaient auparavant affichés
+          en 4/3 paysage (chPoutreAcierMurDegarni perdait près de la moitié de sa hauteur).
+        */}
+        <div className="mb-5">
           <MqFig
             src="/photos/maquette/chantier-ouverture-mur-etaiement.jpg"
             alt="Ouverture percée dans un mur porteur en briques avec trois étais métalliques soutenant le plancher supérieur"
             caption="Ouverture de mur porteur : étaiement du plancher haut avant percement, conformément à la note de calcul de l'ingénieur structure."
+            ratio="aspect-[10/7]"
           />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <MqFig
             src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
-            alt="Poutre acier de reprise de charge vue depuis un mur dégarni après ouverture, chantier réel"
-            caption="Poutre acier de reprise scellée sur ses appuis, mur dégarni jusqu'au support en attente de la reprise d'enduit. Chantier réel des équipes partenaires."
+            alt="Poutre acier de reprise de charge scellée sur son appui, mur dégarni jusqu'au support, gaine électrique apparente"
+            caption="La poutre : profilé acier de reprise scellé sur son appui, mur dégarni jusqu'au support en attente de la reprise d'enduit. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
+          />
+          <MqFig
+            src="/photos/chantiers/chPoutreAcierSoudure.jpeg"
+            alt="Angle soudé entre une poutre et un poteau acier de reprise de charge, vu depuis le plafond ouvert"
+            caption="L'assemblage : jonction soudée entre la poutre et le poteau du portique de reprise, plafond ouvert avant habillage. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
+          />
+          <MqFig
+            src="/photos/chantiers/chPoteauAcierPlatinePied.jpeg"
+            alt="Pied de poteau acier soudé sur sa platine, posé au fond d'un plancher ouvert et entouré de gravats"
+            caption="L'appui : pied de poteau soudé sur sa platine, descendu au fond du plancher ouvert avant scellement et rebouchage. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
           />
         </div>
         <div className="mt-12 flex flex-col gap-10">
@@ -190,21 +211,36 @@ export default function Page() {
           élargie : les 22 images utilisées sur cette page entière (chantiers + schémas + pédagogie) ont
           chacune un MD5 distinct — aucun autre doublon détecté sur cette page.
         */}
+        {/*
+          03/09 : le troisième volet de cette séquence était chParquetVitrifie.jpeg, légendée
+          « Après : parquet ancien poncé et vitrifié, plancher livré prêt à l'usage ». Deux
+          problèmes vérifiés en ouvrant les fichiers. (1) La photo montre un séjour d'un AUTRE
+          immeuble (parquet à lames droites, cheminée en marbre foncé), sans rapport avec les
+          deux premières : la séquence « Avant / Pendant / Après » laissait croire à un même
+          plancher suivi de bout en bout. (2) Un parquet vitrifié est une finition, pas un
+          ouvrage de gros œuvre. Remplacée par chSousCouchePanneauxOSB.jpeg, qui montre la
+          MÊME pièce que le volet « Pendant » (mêmes boiseries à panneaux ocre, mêmes volets
+          intérieurs, même câble blanc au plafond) une fois le plancher refermé en panneaux
+          OSB : la séquence devient une vraie reprise de plancher suivie jusqu'à sa fermeture.
+        */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
           <MqFig
             src="/photos/chantiers/chPlancherSolivesBeton2.jpeg"
-            alt="Solives de plancher ancien décaissées et remplies en corps creux béton dans un couloir, chantier réel"
-            caption="Avant : solives décaissées et remplies en corps creux béton avant chape, reprise de plancher dans un couloir d'immeuble ancien. Chantier réel des équipes partenaires."
+            alt="Solives de plancher ancien décaissées et remplies en corps creux béton dans un couloir, lambourdes posées par-dessus"
+            caption="Décaissement : solives dégagées et remplissage en corps creux béton entre elles, lambourdes reposées dessus, dans un couloir d'immeuble ancien. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher.jpeg"
-            alt="Isolation phonique par granulés posée entre lambourdes sur un plancher ancien, chantier réel"
-            caption="Pendant : isolation phonique par granulés posée entre lambourdes, avant fermeture du plancher. Chantier réel des équipes partenaires."
+            alt="Granulés isolants versés entre les lambourdes d'un plancher ancien, boiseries d'origine encore en place"
+            caption="Isolation : granulés versés entre lambourdes pour le traitement phonique, avant fermeture du plancher. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
-            src="/photos/chantiers/chParquetVitrifie.jpeg"
-            alt="Parquet ancien poncé et vitrifié dans un séjour avec cheminée en marbre, chantier réel"
-            caption="Après : parquet ancien poncé et vitrifié, plancher livré prêt à l'usage. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chSousCouchePanneauxOSB.jpeg"
+            alt="Panneaux OSB posés sur le plancher de la même pièce, refermant les lambourdes et les granulés"
+            caption="Fermeture : la même pièce une fois le plancher refermé en panneaux OSB, support prêt à recevoir son revêtement. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
       </MqSection>
@@ -217,6 +253,7 @@ export default function Page() {
           src="/photos/maquette/geo2mo-etude-geotechnique.jpg"
           alt="Schéma d'une étude géotechnique avec forage de reconnaissance des sols, prélèvement d'échantillon et fondations d'un bâti ancien"
           caption="Étude géotechnique : forage de reconnaissance, couches de sol identifiées et fondations existantes analysées avant toute reprise structurelle."
+          ratio="aspect-square"
         />
         <div className="mt-10 flex flex-col gap-10">
           <div>
@@ -289,6 +326,7 @@ export default function Page() {
             src="/photos/maquette/schema-humidite-origines.jpg"
             alt="Coupe d'un logement ancien illustrant remontées capillaires, infiltrations, condensation et ponts thermiques"
             caption="Origines de l'humidité dans un logement ancien et traitements associés : le diagnostic précède toujours le choix de la solution."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -297,26 +335,38 @@ export default function Page() {
         title="Démolition, carottage et sciage : les gestes techniques du gros œuvre"
         lead="Le carottage et le sciage de béton permettent des découpes précises et contrôlées, indispensables dès qu'un ouvrage béton armé est concerné."
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/*
+          03/09 : cette grille mélangeait un schéma paysage (1280×896) et trois photos portrait
+          (1200×1600) dans un même cadre 4/3, qui amputait chacune des trois photos d'environ
+          44 % de sa hauteur. Le schéma de carottage passe en pleine largeur à son ratio natif,
+          les trois photos de démolition forment une grille homogène en 3/4, leur ratio réel.
+        */}
+        <div className="mb-5">
           <MqFig
             src="/photos/maquette/schema-carottage-ventilation.jpg"
             alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
             caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
+            ratio="aspect-[10/7]"
           />
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           <MqFig
             src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
-            alt="Démolition d'une cloison ancienne en pan de bois et plâtre, lattis et poteaux mis à nu"
-            caption="Démolition d'une cloison ancienne en pan de bois et plâtre : lattis et poteaux mis à nu avant reconstruction. Chantier réel des équipes partenaires."
+            alt="Cloison ancienne en pan de bois et plâtre déposée, lattis et poteaux mis à nu, gravats et perforateur au sol"
+            caption="Cloison ancienne en pan de bois et plâtre déposée : lattis et poteaux mis à nu, gravats de plâtre au sol. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/chantiers/chDemolitionLattisPlatreChantier1.jpeg"
-            alt="Démolition d'une cloison en lattis et plâtre, chantier réel"
-            caption="Démolition d'une cloison ancienne en lattis et plâtre, structure mise à nu. Chantier réel des équipes partenaires."
+            alt="Même chantier vu plus largement : ossature en lattis et plâtre dégagée de part et d'autre d'une huisserie conservée"
+            caption="Vue d'ensemble du même chantier : ossature dégagée de part et d'autre d'une huisserie conservée. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/chantiers/chDemolitionLattisPlatreChantier2.jpeg"
-            alt="Démolition d'une cloison ancienne, vue depuis le couloir, gravats et poussière au sol, chantier réel"
-            caption="Démolition sélective, vue depuis le couloir : gravats et poussière au sol, réseaux de plomberie encore apparents avant évacuation. Chantier réel des équipes partenaires."
+            alt="Vue depuis le couloir à travers une huisserie : murs décroûtés, poussière au sol et tubes de plomberie rouges et bleus apparents"
+            caption="Vue depuis le couloir : murs décroûtés, sol couvert de poussière et tubes de plomberie encore apparents avant reprise. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
         {/*
@@ -367,21 +417,25 @@ export default function Page() {
             En immeuble occupé, qu'il s'agisse des voisins d'un même bâtiment ou des occupants du logement en cours de travaux, les horaires de nuisances sonores respectent généralement un cadre fixé par arrêté municipal, et l'accès aux parties communes est organisé pour limiter la gêne pendant les phases les plus bruyantes, comme le carottage ou la démolition.
           </p>
         </MqProse>
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5">
-          <MqFig
-            src="/photos/chantiers/chFacadeRavalementEchafaudage1.jpeg"
-            alt="Façade d'immeuble en cours de ravalement, échafaudage complet, chantier réel"
-            caption="Ravalement de façade : une modification de l'aspect extérieur qui relève du règlement de copropriété. Chantier réel des équipes partenaires."
-          />
+        {/*
+          03/09 : la troisième photo de ravalement (chFacadeRavalementEchafaudage1.jpeg) a été
+          retirée. Elle faisait double emploi avec les deux autres — trois façades sous
+          échafaudage disent la même chose une fois — et c'était la seule en portrait
+          (1200×1600) dans une grille affichée en 4/3, donc la seule à être amputée. Les deux
+          photos conservées sont nativement en 4/3 : la grille est homogène et sans recadrage.
+        */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/chantiers/chFacadeRavalementEchafaudage2.jpeg"
-            alt="Façade en cours de ravalement, autre bâtiment, chantier réel"
-            caption="Ravalement de façade sur un autre bâtiment, échafaudage en place. Chantier réel des équipes partenaires."
+            alt="Façade d'immeuble sous échafaudage complet pendant un ravalement, filets de protection en place"
+            caption="Ravalement de façade sous échafaudage : une modification de l'aspect extérieur, qui relève du règlement de copropriété. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
           <MqFig
             src="/photos/chantiers/chFacadeRavalementVillage.jpeg"
-            alt="Façade de bâtiment en cours de ravalement en centre-village, chantier réel"
-            caption="Ravalement de façade d'un bâtiment ancien, échafaudage et protections en place. Chantier réel des équipes partenaires."
+            alt="Façade d'un bâtiment ancien en centre-village sous échafaudage, protections déroulées au pied du mur"
+            caption="Autre ravalement, sur un bâtiment ancien de centre-village : échafaudage monté et protections déroulées au pied de la façade. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
         </div>
         <div className="mt-8">
@@ -438,7 +492,7 @@ export default function Page() {
             src="/photos/pedagogie/12-gros-oeuvre-ordre-operations.jpeg"
             alt="Frise en sept étapes de l'ordre d'un chantier de gros œuvre avec points d'arrêt de validation"
             caption="Ordre des opérations d'un chantier de gros œuvre. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
         </div>
       </MqSection>
@@ -448,21 +502,25 @@ export default function Page() {
         title="Comprendre une intervention structurelle, étape par étape"
         lead="Chaque ouvrage structurel suit la même logique : diagnostic, note de calcul de l'ingénieur structure, étaiement, exécution, contrôle. Les schémas ci-dessous détaillent la trémie de plancher et la reprise en sous-œuvre."
       >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/*
+          03/09 : chPoutreAcierSoudure.jpeg occupait la troisième case de cette grille de schémas.
+          Le fichier est un portrait 900×1600 affiché en 4/3 paysage, qui en supprimait plus de la
+          moitié de la hauteur. La photo n'est pas perdue : elle est remontée dans la section
+          « Ouverture de mur porteur », au droit du texte sur les assemblages, où elle est affichée
+          à son ratio. Restent ici les deux schémas, tous deux en 10/7, donc homogènes et complets.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/maquette/schema-tremie-plancher.jpg"
             alt="Schéma d'une trémie d'escalier dans un plancher bois : solives sectionnées, chevêtre, linçoirs, sabots métalliques et étaiement provisoire"
             caption="Trémie dans un plancher bois : le chevêtre et les linçoirs reprennent les charges des solives coupées, sur sabots métalliques dimensionnés."
+            ratio="aspect-[10/7]"
           />
           <MqFig
             src="/photos/maquette/schema-reprise-sous-oeuvre.jpg"
             alt="Schéma en coupe d'une reprise en sous-œuvre : plots bétonnés par passes alternées, bon sol porteur, sondage géotechnique et étaiement"
             caption="Reprise en sous-œuvre : excavation et bétonnage par passes alternées jusqu'au bon sol identifié par le sondage géotechnique."
-          />
-          <MqFig
-            src="/photos/chantiers/chPoutreAcierSoudure.jpeg"
-            alt="Angle soudé d'une poutre et d'un poteau acier de reprise de charge, vu depuis le plafond, chantier réel"
-            caption="Assemblage soudé poutre-poteau d'un portique de reprise de charge, avant habillage et raccord de plâtrerie. Chantier réel des équipes partenaires."
+            ratio="aspect-[10/7]"
           />
         </div>
         <div className="mt-12">
@@ -483,16 +541,18 @@ export default function Page() {
           <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
             Étaiement, découpe des solives puis chevêtre sur sabots métalliques : la structure d'escalier sur mesure n'est posée dans la trémie qu'après validation de la note de calcul.
           </p>
-          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="mt-5 grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
             <MqFig
               src="/photos/chantiers/chEscalierBoisConstructionMarches.jpeg"
-              alt="Structure d'escalier en bois posée dans une trémie de plancher ouverte, éclairage suspendu, chantier réel"
-              caption="Avant finition : trémie ouverte dans le plancher et structure d'escalier sur mesure en cours de pose. Chantier réel des équipes partenaires."
+              alt="Escalier vu de face depuis le bas, marches en contreplaqué brut montant vers une trémie ouverte dans le plancher"
+              caption="Vue depuis le bas : marches en contreplaqué brut montant vers la trémie ouverte dans le plancher, sols encore protégés. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/4]"
             />
             <MqFig
               src="/photos/chantiers/chEscalierBoisFlottantPalier.jpeg"
-              alt="Structure d'escalier en bois avec palier posée dans une trémie de plancher, chantier réel"
-              caption="Structure posée : escalier et palier en place dans la trémie, prêts à recevoir leur finition définitive. Chantier réel des équipes partenaires."
+              alt="Même escalier vu de profil, volée et palier intermédiaire en contreplaqué brut en appui sur un limon maçonné"
+              caption="Vue de profil : volée et palier intermédiaire en place, encore en contreplaqué brut, avant habillage définitif. Chantier réel des équipes partenaires."
+              ratio="aspect-[4/3]"
             />
           </div>
         </div>

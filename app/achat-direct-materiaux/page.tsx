@@ -200,8 +200,8 @@ export default function AchatDirectMateriauxPage() {
             />
             <MqFig
               src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
-              alt="Parquet en chêne posé en chevrons dans une pièce rénovée, chantier réel"
-              caption="Parquet chevrons livré et posé : le client achète l'essence et le calepinage retenus, l'entreprise partenaire assure la pose et la finition. Chantier réel des équipes partenaires."
+              alt="Sol stratifié imitation chêne en cours de pose à bâtons rompus, lames clipsées sur sous-couche et chutes au sol"
+              caption="Revêtement de sol acheté en direct : sol stratifié imitation chêne posé à bâtons rompus, lames clipsées sur sous-couche. Le client achète le revêtement et le calepinage retenus, l'entreprise partenaire assure la pose. Chantier réel des équipes partenaires."
             />
             <MqFig
               src="/photos/chantiers/chCuisineBlancheBrillanteMarbre.jpeg"

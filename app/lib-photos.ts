@@ -294,6 +294,20 @@ export const PHOTOS = {
   chHdgDoucheMarbreLaitonProtection: "/photos/chantiers/chHdgDoucheMarbreLaitonProtection.jpeg",
   chHdgChambreCapitonneeSuspension: "/photos/chantiers/chHdgChambreCapitonneeSuspension.jpeg",
   chHdgChambreDressingChevrons: "/photos/chantiers/chHdgChambreDressingChevrons.jpeg",
+
+  /* 03/09 : ces photos existaient sur le disque mais n'étaient déclarées nulle part,
+     donc inutilisables par les articles de blog (qui référencent des clés, pas des
+     chemins). Elles rendent des images honnêtes aux articles isolation / DPE / aides,
+     où des photos d'isolation PHONIQUE illustraient à tort des sujets THERMIQUES. */
+  chIsolationLaineUrsaVarioSdb: "/photos/chantiers/chIsolationLaineUrsaVarioSdb.jpeg",
+  chIsolationFenetreSdbLaineVario: "/photos/chantiers/chIsolationFenetreSdbLaineVario.jpeg",
+  chParVapeurSopremaMuralSdb: "/photos/chantiers/chParVapeurSopremaMuralSdb.jpeg",
+  chParVapeurSopremaFenetreSdb: "/photos/chantiers/chParVapeurSopremaFenetreSdb.jpeg",
+  chPlacoHydroSopremaFenetreSdb: "/photos/chantiers/chPlacoHydroSopremaFenetreSdb.jpeg",
+  chChaudiereMuraleSaunierDuval: "/photos/chantiers/chChaudiereMuraleSaunierDuval.jpeg",
+  pedaEtancheiteAngleDouche: "/photos/pedagogie/50-etancheite-angle-douche-macro.jpeg",
+  pedaEtancheitePassageCanalisation: "/photos/pedagogie/51-etancheite-passage-canalisation-macro.jpeg",
+  pedaMaPrimeRenovCee: "/photos/pedagogie/53-blog-maprimerenov-cee.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

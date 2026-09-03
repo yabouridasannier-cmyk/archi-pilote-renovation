@@ -33,10 +33,19 @@ export default function Home() {
               <Link href="/notre-methode" className="btn btn-ghost">Voir la méthode</Link>
             </div>
           </div>
+          {/*
+            Vérifié le 03/09/2026 en ouvrant la photo et en simulant le recadrage réel du composant
+            (source 1600×1066 affichée en aspect-[4/3] + object-cover : 89 px rognés de chaque côté,
+            rien d'essentiel n'est coupé). Deux corrections de légende après contrôle à l'image :
+            — les volets persiennés visibles sont clos DERRIÈRE le vitrage, côté extérieur : rien ne
+              permet d'écrire « volets intérieurs » ;
+            — le motif du parquet a été vérifié au zoom : lames abouties en pointe, joint continu au
+              faîte, c'est bien une pose à chevrons (point de Hongrie).
+          */}
           <MqFig
             src="/photos/chantiers/chHdgSalonBoucleAppliquesBronze.jpeg"
-            alt="Salon d'un appartement ancien parisien livré : murs panneautés et corniche ornée, trumeau à cadre sculpté, volets intérieurs persiennés et parquet chêne à chevrons"
-            caption="Salon livré dans un appartement ancien parisien : panneautage mouluré repris sur tout le pourtour jusque sur les portes, trumeau à cadre sculpté intégré au panneautage, volets intérieurs persiennés en place et parquet chêne à chevrons. Chantier réel des équipes partenaires."
+            alt="Salon d'un appartement ancien parisien livré : murs panneautés et corniche ornée, grande glace à cadre sculpté, persiennes closes derrière la fenêtre et parquet chêne à chevrons"
+            caption="Salon livré dans un appartement ancien parisien : panneautage mouluré repris sur tout le pourtour jusque sur les portes, grande glace à cadre sculpté encastrée dans le panneautage, persiennes closes derrière la fenêtre et parquet chêne posé à chevrons. Chantier réel des équipes partenaires."
             ratio="aspect-[4/3]"
           />
         </div>
@@ -111,15 +120,23 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col gap-5">
+            {/*
+              ratio aligné sur la dimension réelle des deux schémas (1280×896 = 10/7). En aspect-[4/3]
+              par défaut, object-cover rognait 43 px de chaque côté et amputait la première lettre des
+              titres du schéma des déperditions (« DÉPERDITIONS », « LOGEMENT ») — vérifié en simulant
+              le recadrage le 03/09/2026.
+            */}
             <MqFig
               src="/photos/maquette/schema-mur-porteur.jpg"
               alt="Schéma en coupe d'une ouverture de mur porteur : poutre métallique IPN, poteaux d'appui, étaiement provisoire et descente de charges vers les fondations"
               caption="Ouverture de mur porteur : la reprise de charges, les appuis et l'étaiement provisoire se décident avant tout devis de finition."
+              ratio="aspect-[10/7]"
             />
             <MqFig
               src="/photos/maquette/schema-deperditions.jpg"
               alt="Schéma des déperditions thermiques d'un logement classé passoire énergétique : toiture, murs, fenêtres, plancher bas et ponts thermiques avec pourcentages indicatifs"
               caption="Déperditions thermiques : l'ordre des travaux se déduit des postes de perte, pas des offres commerciales du moment."
+              ratio="aspect-[10/7]"
             />
           </div>
         </div>
@@ -138,11 +155,16 @@ export default function Home() {
               { title: "Pilotage de A à Z", text: "De la première lecture du bien à la levée des réserves, un interlocuteur unique conserve le fil du projet." },
             ]}
           />
+          {/*
+            ratio aligné sur la dimension réelle du schéma (1024×1536 = 2/3). En aspect-[3/4],
+            object-cover rognait 85 px en haut et en bas : les titres « CARRELAGE » et « PARQUET »
+            étaient coupés dans la hauteur des lettres — vérifié en simulant le recadrage le 03/09/2026.
+          */}
           <MqFig
             src="/photos/pedagogie/37-accueil-materiaux-schema.jpeg"
             alt="Schéma des matériaux achetés en direct par le client (carrelage, parquet, robinetterie, peinture...) reliés à un bon de commande unique"
             caption="Matériaux achetés en direct par le client, sans marge d'intermédiation : traçabilité des références du bon de commande à la pose. Schéma pédagogique."
-            ratio="aspect-[3/4]"
+            ratio="aspect-[2/3]"
           />
         </div>
       </MqSection>

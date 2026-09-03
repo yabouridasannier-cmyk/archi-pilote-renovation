@@ -133,7 +133,10 @@ export default function Page() {
             src="/photos/pedagogie/14-clinique-devis-8-etapes.jpeg"
             alt="Huit contrôles numérotés pour analyser un devis de travaux de rénovation"
             caption="Méthode en huit étapes pour analyser un devis de travaux. Schéma pédagogique."
-            ratio="aspect-[3/4]"
+            /* 03/09 : le fichier est en 1536x1024 (paysage). Il était affiché en aspect-[3/4]
+               (portrait) : object-cover rognait les deux côtés et coupait le titre et la
+               colonne de droite. Ratio aligné sur le ratio natif de l'image. */
+            ratio="aspect-[3/2]"
           />
         </div>
         <MqDarkSteps

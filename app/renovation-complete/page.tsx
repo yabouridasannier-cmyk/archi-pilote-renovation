@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { MqHero, MqSection, MqProse, MqFig, MqStats, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
-/* Avant/après hero : mêmes conventions que le reste du kit — deux photos réelles,
-   chacune issue d'un chantier réel des équipes partenaires (pas nécessairement le
-   même bien, aucun appariement image par image n'est certifié — cf. rapport). */
+/* 03/09 : le diptyque d'ouverture n'était pas un avant/après. Les deux photos viennent
+   de deux chantiers différents, et la légende « Avant » affirmait deux choses que
+   l'image contredit : les boiseries n'y sont pas déposées (elles sont encore en place,
+   dégradées) et le sol n'est pas protégé (le parquet est déposé, l'espace entre solives
+   est rempli de granulés isolants). Les deux légendes décrivent désormais uniquement ce
+   qui est visible et n'annoncent plus un même bien avant/après. */
 
 export const metadata: Metadata = {
   title: "Rénovation complète : structurer votre projet | ARCHI PILOTE",
@@ -26,14 +29,14 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <MqFig
               src="/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg"
-              alt="Appartement ancien mis à nu avant rénovation complète : boiseries déposées, sols protégés, murs décapés"
-              caption="Avant : appartement mis à nu avant rénovation complète, boiseries d'origine déposées et sols protégés. Chantier réel des équipes partenaires."
+              alt="Salon d'appartement ancien en cours de rénovation complète : parquet déposé, granulés isolants versés entre les solives, boiseries d'origine encore en place"
+              caption="En cours de chantier : parquet déposé jusqu'aux solives et granulés isolants versés entre lambourdes, boiseries d'origine encore en place. Chantier réel des équipes partenaires."
               ratio="aspect-[4/3]"
             />
             <MqFig
               src="/photos/chantiers/chCuisineSejourParquetChevrons.jpeg"
               alt="Cuisine ouverte sur séjour livrée après une rénovation complète d'appartement, parquet posé à chevrons"
-              caption="Après : cuisine ouverte sur séjour livrée après rénovation complète, parquet posé à chevrons. Chantier réel des équipes partenaires."
+              caption="Autre chantier, une fois livré : cuisine ouverte sur séjour, parquet posé à chevrons. Chantier réel des équipes partenaires."
               ratio="aspect-[4/3]"
             />
           </div>
@@ -81,6 +84,7 @@ export default function Page() {
             src="/photos/maquette/schema-mur-porteur.jpg"
             alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge"
             caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis."
+            ratio="aspect-[10/7]"
           />
         </div>
 
@@ -89,6 +93,7 @@ export default function Page() {
             src="/photos/maquette/schema-planning-lots.jpg"
             alt="Ordre logique des lots d'une rénovation complète, de la dépose à la réception"
             caption="Ordre logique des lots d'une rénovation complète : dépose, gros œuvre, réseaux, cloisons, chapes, carrelage, peinture, cuisine, puis réception des travaux."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -106,7 +111,7 @@ export default function Page() {
           src="/photos/pedagogie/18-renovation-complete-budget.jpeg"
           alt="Répartition qualitative d'un budget de rénovation complète par grandes familles, sans chiffres"
           caption="Répartition des familles de coûts d'une rénovation complète. Schéma pédagogique, sans valeur chiffrée."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
         <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
           {[
@@ -145,11 +150,12 @@ export default function Page() {
               </MqProse>
             </div>
           </div>
-          <MqFig
-            src="/photos/maquette/schema-planning-lots.jpg"
-            alt="Planning en lots d'un chantier de rénovation présenté sous forme de diagramme de phases hebdomadaires"
-            caption="Enchaînement des lots d'un chantier de rénovation : chaque phase conditionne la suivante, d'où l'importance du séquencement."
-          />
+          {/*
+            03/09 : le planning en lots (schema-planning-lots.jpg) était affiché DEUX FOIS sur
+            cette page — une première fois plus haut, sous « Ordre logique des lots », puis à
+            nouveau ici sous une légende différente. Doublon supprimé : l'unique occurrence
+            reste celle de la section « Pourquoi l'ordre des décisions détermine tout le reste ».
+          */}
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Documents attendus à chaque étape</h3>
             <div className="mt-5">
@@ -210,37 +216,61 @@ export default function Page() {
         <div className="mt-10 flex flex-col gap-10">
           <div>
             <h3 className="display text-[1.05rem] text-ivoire mb-4">Plomberie</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/*
+              03/09 : chantier-plomberie-encastree.jpg (stock) retiré de cette grille. Photo
+              ouverte et comparée à sa légende : elle montre des tuyaux APPARENTS courant le
+              long d'un mur carrelé ancien, sans aucun collecteur visible, alors que la légende
+              annonçait « réseaux encastrés en multicouche depuis un collecteur, avant fermeture
+              des cloisons ». Remplacée par une photo réelle du dossier chantiers/ qui montre
+              exactement ce sujet : nourrices en laiton et départs descendant dans le plancher
+              ouvert, avant refermeture.
+            */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
               <MqFig
-                src="/photos/maquette/chantier-plomberie-encastree.jpg"
-                alt="Réseaux de plomberie encastrés en tubes multicouche rouges et bleus avec collecteur, avant fermeture des cloisons"
-                caption="Principe de réseaux encastrés en multicouche depuis un collecteur, repérage chaud/froid avant fermeture. Illustration de référence, hors chantier documenté sur cette page."
+                src="/photos/chantiers/chNourriceDoubleAnglePlafond.jpeg"
+                alt="Deux nourrices en laiton fixées en angle de plafond, départs multicouche descendant dans un plancher ouvert avec gaines rouges et bleues"
+                caption="Deux nourrices en laiton posées en angle de plafond : chaque départ multicouche est isolable par sa vanne, puis descend dans le plancher ouvert avant refermeture. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
               <MqFig
                 src="/photos/pedagogie/48-plomberie-collecteur-macro.jpeg"
-                alt="Gros plan d'un collecteur de plomberie multicouche avec départs rouges et bleus repérés, avant fermeture des cloisons"
-                caption="Détail d'un collecteur multicouche : chaque départ chaud/froid est repéré avant la fermeture du réseau. Illustration de référence, hors chantier documenté sur cette page."
+                alt="Gros plan de deux collecteurs de plomberie en laiton avec départs rouges et bleus, sur un mur de brique"
+                caption="Détail de collecteurs en laiton : les départs chaud et froid sont séparés et repérés par la couleur des gaines. Illustration de référence, hors chantier documenté sur cette page."
+                ratio="aspect-[3/2]"
               />
             </div>
           </div>
           <div>
             <h3 className="display text-[1.05rem] text-ivoire mb-4">Électricité</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <MqFig
-                src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg"
-                alt="Tableau électrique neuf et compteur intégrés dans un placard sur mesure, contrôle avant fermeture"
-                caption="Tableau et compteur vérifiés avant intégration dans le placard sur mesure. Chantier réel des équipes partenaires."
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
               <MqFig
                 src="/photos/pedagogie/49-electricite-tableau-macro.jpeg"
-                alt="Gros plan d'un tableau électrique ouvert avec disjoncteurs et câblage avant fermeture du coffret"
-                caption="Détail d'un tableau électrique avant fermeture : chaque circuit est repéré et protégé par son disjoncteur. Illustration de référence, hors chantier documenté sur cette page."
+                alt="Tableau électrique ouvert, deux rangées de disjoncteurs et borniers de terre câblés, encastré dans un mur ancien décroûté"
+                caption="Tableau électrique ouvert dans un mur ancien décroûté : deux rangées de disjoncteurs, borniers de terre et de neutre raccordés avant fermeture du coffret. Illustration de référence, hors chantier documenté sur cette page."
+                ratio="aspect-[3/2]"
+              />
+              <MqFig
+                src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg"
+                alt="Compteur et tableau électriques logés dans un placard sur mesure en MDF brut, portes ouvertes, étagères arrondies en attente de finition"
+                caption="Compteur et tableau logés dans un placard sur mesure en MDF brut, portes ouvertes pour le contrôle, avant peinture et finitions. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
             </div>
           </div>
           <div>
             <h3 className="display text-[1.05rem] text-ivoire mb-4">Étanchéité</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+            {/*
+              03/09 : chParVapeurSopremaMuralSdb.jpeg retirée de ce triptyque, pour deux raisons
+              vérifiées sur le fichier lui-même. (1) Sujet : la photo montre un PARE-VAPEUR
+              (étanchéité à l'AIR, membrane SOPREMA / Isover Vario) et non l'étanchéité sous
+              carrelage dont parle cette section ; elle est déjà employée à sa vraie place, sur
+              /renovation-energetique, dans la section « étanchéité à l'air ». (2) Cadrage : le
+              fichier est en 1600×900 (paysage) alors qu'il était affiché en aspect-[3/4]
+              (portrait), ce qui amputait environ deux tiers de la largeur de l'image. Les deux
+              photos restantes montrent bien, elles, la préparation d'une étanchéité de sol de
+              douche, et sont toutes deux nativement en 3/4 : la grille est homogène.
+            */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <MqFig
                 src="/photos/chantiers/chEtancheiteSolDoucheTrameArmee.jpeg"
                 alt="Sol de douche préparé : treillis d'armature métallique posé sur la dalle, évacuation et siphon en attente, cloisons en plaques hydrofuges"
@@ -253,12 +283,6 @@ export default function Page() {
                 caption="Implantation du receveur de douche au laser de niveau : la ligne verte donne le niveau de référence, les réservations du mitigeur et de la bonde sont tracées sur les plaques hydrofuges. Chantier réel des équipes partenaires."
                 ratio="aspect-[3/4]"
               />
-              <MqFig
-                src="/photos/chantiers/chParVapeurSopremaMuralSdb.jpeg"
-                alt="Pare-vapeur SOPREMA posé et adhésivé sur la paroi d'une salle de bain, arrivées de robinetterie laissées en attente"
-                caption="Pare-vapeur posé sur la paroi de la salle de bain, lés et pourtour repris à la bande adhésive, arrivées de robinetterie laissées en attente. Chantier réel des équipes partenaires."
-                ratio="aspect-[3/4]"
-              />
             </div>
           </div>
         </div>
@@ -267,6 +291,7 @@ export default function Page() {
             src="/photos/maquette/schema-demarches-copropriete.jpg"
             alt="Parcours administratif d'un chantier en copropriété : syndic, assemblée générale, autorisation, déclaration en mairie"
             caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
