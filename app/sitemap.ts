@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { ARTICLES } from "./data";
+import { ALL_ARTICLES } from "./lib-articles";
 
 const BASE = "https://www.archipiloterenovation.com";
 
@@ -65,7 +65,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${BASE}${path}`,
     lastModified: new Date("2026-08-29"),
   }));
-  const articleEntries = ARTICLES.map((a) => ({
+  const articleEntries = ALL_ARTICLES.map((a) => ({
     url: `${BASE}/blog/${a.slug}`,
     lastModified: new Date(a.dateISO),
   }));

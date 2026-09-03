@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { ARTICLES } from "../data";
-import { PHOTOS } from "../lib-photos";
+import { ALL_ARTICLES, photoSrc } from "../lib-articles";
 
 /** Grille magazine des articles — carte photo + catégorie + titre + extrait. */
 export function BlogGrid() {
@@ -8,10 +7,10 @@ export function BlogGrid() {
     <section className="py-12 md:py-16">
       <div className="container-site">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {ARTICLES.map((a) => (
+          {ALL_ARTICLES.map((a) => (
               <Link key={a.slug} href={`/blog/${a.slug}`} className="group border border-line bg-surface rounded-[2px] overflow-hidden flex flex-col h-full block">
                 <div className="relative aspect-[16/10] overflow-hidden">
-                  <img src={PHOTOS[a.photo as keyof typeof PHOTOS]} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
+                  <img src={photoSrc(a.photo)} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
                   <span className="absolute top-3 left-3 bg-black/45 border border-white/25 px-3 py-1 font-mono text-[0.62rem] tracking-[0.14em] uppercase text-white/90">{a.categorie}</span>
                 </div>

@@ -1,33 +1,34 @@
+import { Fragment } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ARTICLES } from "../../data";
-import { PHOTOS } from "../../lib-photos";
+import { ALL_ARTICLES, photoSrc } from "../../lib-articles";
 import { Reveal } from "../../components/reveal";
 import { WordReveal } from "../../components/word-reveal";
 import { CtaFinal } from "../../components/cta-final";
 
 export function generateStaticParams() {
-  return ARTICLES.map((a) => ({ slug: a.slug }));
+  return ALL_ARTICLES.map((a) => ({ slug: a.slug }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
-  const article = ARTICLES.find((a) => a.slug === slug);
+  const article = ALL_ARTICLES.find((a) => a.slug === slug);
   if (!article) return {};
   return {
     title: `${article.titre} — ARCHI PILOTE RÉNOVATION`,
     description: article.excerpt,
+    keywords: article.keyword ? [article.keyword] : undefined,
     alternates: { canonical: `/blog/${article.slug}` },
   };
 }
 
 export default async function ArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  const article = ARTICLES.find((a) => a.slug === slug);
+  const article = ALL_ARTICLES.find((a) => a.slug === slug);
   if (!article) return notFound();
 
-  const autres = ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 2);
+  const autres = ALL_ARTICLES.filter((a) => a.slug !== article.slug).slice(0, 2);
 
   const jsonLdBlogPosting = {
     "@context": "https://schema.org",
@@ -35,8 +36,9 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
     headline: article.titre,
     description: article.excerpt,
     datePublished: article.dateISO,
+    ...(article.keyword ? { keywords: article.keyword } : {}),
     dateModified: article.dateISO,
-    image: PHOTOS[article.photo as keyof typeof PHOTOS],
+    image: photoSrc(article.photo),
     url: `https://www.archipiloterenovation.com/blog/${article.slug}`,
     author: { "@type": "Organization", name: "ARCHI PILOTE RÉNOVATION", "@id": "https://www.archipiloterenovation.com/#organization" },
     publisher: { "@id": "https://www.archipiloterenovation.com/#organization" },
@@ -60,43 +62,50 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
 
       <Reveal variant="scale" className="container-site mb-14 md:mb-20">
         <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
-          <img src={PHOTOS[article.photo as keyof typeof PHOTOS]} alt={article.titre} className="absolute inset-0 size-full object-cover" />
+          <img src={photoSrc(article.photo)} alt={article.titre} className="absolute inset-0 size-full object-cover" />
         </div>
       </Reveal>
 
       <article className="container-site pb-20 md:pb-28">
         <div className="max-w-[42rem] mx-auto flex flex-col gap-6">
-          {article.corps.map((p, i) => (
-            <>
-              <Reveal key={i} variant="slide-up" delay={i * 0.05}>
-                <p className="text-ivoire/85 text-[1.05rem] leading-[1.75]">{p}</p>
-              </Reveal>
-              {i === 0 && article.img2 && (
-                <Reveal variant="scale" delay={0.15}>
-                  <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
-                    <img src={PHOTOS[article.img2 as keyof typeof PHOTOS]} alt={article.img2Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
-                    {article.img2Caption && (
-                      <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
-                        {article.img2Caption}
-                      </figcaption>
-                    )}
-                  </figure>
+          {article.bodyHtml ? (
+            /* Article importé depuis Sedestral : corps HTML assaini à la synchronisation. */
+            <Reveal variant="slide-up">
+              <div className="prose-article" dangerouslySetInnerHTML={{ __html: article.bodyHtml }} />
+            </Reveal>
+          ) : (
+            article.corps.map((p, i) => (
+              <Fragment key={i}>
+                <Reveal variant="slide-up" delay={i * 0.05}>
+                  <p className="text-ivoire/85 text-[1.05rem] leading-[1.75]">{p}</p>
                 </Reveal>
-              )}
-              {i === 1 && article.img3 && (
-                <Reveal variant="scale" delay={0.15}>
-                  <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
-                    <img src={PHOTOS[article.img3 as keyof typeof PHOTOS]} alt={article.img3Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
-                    {article.img3Caption && (
-                      <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
-                        {article.img3Caption}
-                      </figcaption>
-                    )}
-                  </figure>
-                </Reveal>
-              )}
-            </>
-          ))}
+                {i === 0 && article.img2 && (
+                  <Reveal variant="scale" delay={0.15}>
+                    <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
+                      <img src={photoSrc(article.img2)} alt={article.img2Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
+                      {article.img2Caption && (
+                        <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
+                          {article.img2Caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  </Reveal>
+                )}
+                {i === 1 && article.img3 && (
+                  <Reveal variant="scale" delay={0.15}>
+                    <figure className="relative aspect-[16/10] rounded-none overflow-hidden card-e my-2">
+                      <img src={photoSrc(article.img3)} alt={article.img3Caption ?? article.titre} className="absolute inset-0 size-full object-cover" loading="lazy" />
+                      {article.img3Caption && (
+                        <figcaption className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/70 to-transparent text-white/90 text-[0.8rem] px-4 py-3">
+                          {article.img3Caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  </Reveal>
+                )}
+              </Fragment>
+            ))
+          )}
           <Reveal variant="slide-up" delay={0.2} className="mt-4">
             <Link href="/estimateur-travaux" className="btn btn-primary w-fit">
               Estimer mon projet
@@ -114,7 +123,7 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
               {autres.map((a) => (
                 <Link key={a.slug} href={`/blog/${a.slug}`} className="group card-e rounded-none overflow-hidden flex flex-col">
                   <div className="relative aspect-[16/9] overflow-hidden">
-                    <img src={PHOTOS[a.photo as keyof typeof PHOTOS]} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <img src={photoSrc(a.photo)} alt={a.titre} className="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>
                   <div className="p-5 flex flex-col gap-1.5">
                     <span className="font-mono text-[0.66rem] text-orange uppercase tracking-[0.1em]">{a.categorie}</span>
