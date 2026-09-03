@@ -134,6 +134,23 @@ export const ARTICLES: Article[] = [
      (30 articles prévus, 12 en ligne) — n° 2, 3, 8, 14, 16 et 22. Aucune image
      nouvelle : uniquement des clés déjà déclarées dans lib-photos.ts, ouvertes
      une par une avant d'écrire leur légende. */
+  /* 03/09 (2e lot) : six articles de plus — n° 6, 7, 10, 13, 23 et 25 du plan,
+     ce qui porte le blog à 24 des 30 articles prévus. Mêmes règles : clés déjà
+     déclarées, chaque image ouverte avant d'écrire sa légende, et vérification
+     dHash de chaque candidate contre TOUTES les images déjà employées dans le
+     blog. Trois candidates ont été écartées à ce titre :
+       - chPoteauAcierPlatinePied  ≡ chPoteauAcierScelleGravats (d=0, img2 de
+         « signes-mur-porteur ») — c'était pourtant la seule photo d'un pied de
+         poteau, donc le meilleur visuel possible pour l'article surélévation ;
+       - chRavalementArdoise ≡ chFacadeRavalementEchafaudage2 (d=3, img3 de
+         « coproprietaire-autorisations ») — seule vue serrée d'une couverture
+         ardoise du fonds, remplacée par la vue de rue du même chantier ;
+       - chPortiqueAcierAngleGaine ≡ chPoutreAcierAngleSoudeVue1 (d=12, img2 de
+         « ouvrir-mur-porteur »), lui-même identique à chPortiqueAcierAngleMurDegarni2.
+     Articles sans img2/img3 : « isolation-interieure-erreurs-humidite » — les
+     quatre autres photos de cette salle de bains sont soit déjà employées
+     (chIsolationLaineUrsaVarioSdb sur l'article aides, chParVapeurSopremaMuralSdb
+     en hero de l'article VMC), soit des recadrages de celles-ci. */
   {
     slug: "reception-chantier-preparer-les-reserves",
     titre: "Réception de chantier : préparer les réserves sans improviser",
@@ -186,6 +203,23 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "photos-techniques-avant-de-fermer-les-murs",
+    titre: "Les photos techniques à conserver avant de fermer les murs",
+    date: "30 août 2026", dateISO: "2026-08-30",
+    categorie: "Suivi de chantier",
+    excerpt: "Une fois le doublage refermé, tout ce qui passe derrière devient invisible. Quelques minutes de photos par pièce évitent de percer au hasard pendant des années.",
+    photo: "chPlomberieMulticoucheDistributionMurale",
+    img2: "chElectriciteFauxPlafondFaisceaux",
+    img2Caption: "Faisceaux de gaines et de conducteurs regroupés le long d'un mur, ossature de faux plafond déjà en place : cet état ne sera plus visible une fois les plaques posées. Chantier réel des équipes partenaires.",
+    img3: "chNourriceManometreEvacuationPvc",
+    img3Caption: "Nourrice de distribution équipée d'un manomètre et réseau d'évacuation en PVC monté à côté : c'est sur ce montage que se fait l'essai de mise en pression, et c'est à ce moment-là qu'il faut le photographier. Chantier réel des équipes partenaires.",
+    corps: [
+      "Une fois les plaques posées, la chape coulée, le carrelage collé et les peintures faites, tout ce qui passe dans les murs et les planchers disparaît. Le jour où quelqu'un perce pour fixer un radiateur, un miroir, une patère ou un support de téléviseur, la seule information fiable est une photo prise avant fermeture. Il en va de même à la revente, en cas de sinistre, ou lorsqu'une autre entreprise reprend un lot des années plus tard. Ces images ne sont pas des souvenirs de chantier : ce sont des documents, et elles ne coûtent rien tant qu'on les prend au bon moment.",
+      "Encore faut-il qu'elles soient exploitables. Procédez pièce par pièce et mur par mur, toujours dans le même ordre, avec d'abord une vue d'ensemble du mur — pour pouvoir se situer — puis les détails. Chaque photo doit contenir une référence de mesure : un mètre déroulé depuis un point fixe, une règle posée le long du réseau, un trait de niveau. Une photo sans repère ne donne aucune distance et ne sert à rien. Précisez ce point fixe dans le nom du fichier ou sur un croquis joint — « depuis l'angle gauche », « depuis le sol brut » —, car le niveau du sol fini n'existe pas encore au moment de la prise de vue. Nommez et datez : pièce, mur, lot. Et prenez-les en lumière du jour ou avec un éclairage de chantier, sans ombre portée en travers du mur.",
+      "Ce qu'il faut photographier, sans prétendre à l'exhaustivité : les alimentations d'eau chaude et froide, leur nature — cuivre, multicouche, PER — et leur tracé ; les nourrices, leurs départs et ce que chaque vanne isole ; les évacuations avec leurs diamètres, leurs piquages et leurs tampons de visite avant qu'ils ne soient recouverts ; l'électricité, c'est-à-dire les gaines, les boîtes d'encastrement, les boîtes de dérivation — dont l'emplacement doit rester accessible —, les circuits spécialisés et le tableau, rangée par rangée ; le réseau de ventilation et l'emplacement de sa trappe de visite ; les renforts et fixations posés dans la cloison en prévision d'un meuble suspendu, d'une barre d'appui ou d'un écran ; l'ouvrage d'étanchéité des pièces humides avec ses points singuliers, avant carrelage ; enfin la chape, son épaisseur et, s'il existe, le tracé du plancher chauffant — celui-là n'est pas négociable. L'essai de mise en pression des réseaux mérite sa propre photo, manomètre lisible. Rassemblez le tout, avec les fiches techniques et les attestations d'assurance, dans le dossier de fin de chantier : c'est la seule version des réseaux qui sera encore vraie longtemps après la réception.",
+    ],
+  },
+  {
     slug: "extension-ou-surelevation-maison",
     titre: "Extension ou surélévation : comment choisir selon votre terrain",
     date: "29 août 2026", dateISO: "2026-08-29",
@@ -203,18 +237,54 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "isolation-interieure-erreurs-humidite",
+    titre: "Isolation intérieure : les erreurs qui créent humidité et inconfort",
+    date: "28 août 2026", dateISO: "2026-08-28",
+    categorie: "Isolation & DPE",
+    excerpt: "Une isolation par l'intérieur mal posée ne se voit pas davantage qu'une bonne. Ce sont toujours les mêmes points — continuité, points singuliers, ventilation — qui produisent condensation et parois froides.",
+    photo: "chPlacoHydroSopremaFenetreSdb",
+    corps: [
+      "Isoler par l'intérieur déplace la température dans l'épaisseur du mur : la maçonnerie, désormais placée du côté froid de l'isolant, reste froide toute la saison de chauffe. La vapeur d'eau produite dans le logement — cuisine, douches, respiration, linge qui sèche — ne doit donc pas pouvoir l'atteindre. Deux conditions le permettent : une gestion continue de la vapeur et de l'air côté chaud, assurée par un pare-vapeur ou une membrane frein-vapeur selon le système retenu, et une ventilation qui évacue réellement cette vapeur. Si l'une des deux manque, la condensation se produit à l'intérieur de la paroi, là où personne ne la voit — jusqu'à ce que des traces apparaissent en plinthe, dans les angles ou derrière un meuble.",
+      "Les erreurs se répètent d'un chantier à l'autre. Isoler sans ventiler, ou supprimer les entrées d'air en changeant les menuiseries, arrive en tête. Vient ensuite la membrane discontinue : lés non recouverts, adhésif qui n'est pas celui du système, absence de collage périphérique en pied, en tête, dans les angles et autour des menuiseries. Puis les traversées non traitées — boîtiers électriques, gaines, canalisations, points de fixation — alors qu'un vide technique entre la membrane et la plaque permet de faire passer l'électricité sans jamais la percer. Les ponts thermiques oubliés produisent le même symptôme : isoler la partie courante et laisser nus les tableaux de fenêtres, les coffres de volets, les appuis, les seuils, les retours de refends ou les rives de plancher crée une bande froide exactement là où la condensation se dépose. S'y ajoutent l'isolant mal rempli — laine tassée, joints ouverts, lame d'air parasite derrière le panneau — et le cas le plus coûteux : doubler un mur déjà humide. Une remontée capillaire, une infiltration en façade ou une descente d'eau pluviale défectueuse ne s'arrêtent pas parce qu'on a posé un isolant devant ; elles sont simplement enfermées. La cause se traite avant, pas après. Sur un mur ancien perspirant — pierre, brique pleine, torchis —, la capacité de la paroi à sécher fait partie du choix du système et se vérifie avec un professionnel compétent, plutôt qu'en transposant une solution vue ailleurs.",
+      "L'ordre des opérations résume presque tout : traiter les causes d'humidité, vérifier la ventilation, puis seulement isoler et refermer. Pendant la pose, la séquence est tout aussi stricte — isolant en remplissage, membrane, adhésifs et collages du même système, réservations électriques, puis fermeture. Avant de poser la plaque, photographiez la membrane, les recouvrements et chaque traversée traitée : ce sont précisément les points qui ne seront plus contrôlables. Conservez les références du système complet ainsi que les fiches techniques. Enfin, le résultat se juge honnêtement au premier hiver et pas en juin : parois froides au contact, condensation sur les vitrages, traces dans les angles, air qui stagne dans une pièce. Ces signes-là se lisent au moment le plus froid, et ils indiquent presque toujours l'un des points de la liste ci-dessus.",
+    ],
+  },
+  {
     slug: "ouvrir-mur-porteur-copropriete-assemblee",
     titre: "Ouvrir un mur porteur en copropriété : les pièces à préparer avant l'assemblée",
     date: "27 août 2026", dateISO: "2026-08-27",
     categorie: "Copropriété",
     excerpt: "En immeuble, la structure ne relève pas de votre seule décision : ce qui fait avancer le dossier, c'est son contenu, remis au syndic avant l'envoi de la convocation.",
-    photo: "chDemolitionLattisPlatreOuverture",
-    img2: "chPoutreAcierAngleSoudeVue1",
-    img2Caption: "L'ouvrage tel qu'il est autorisé puis exécuté : poteau soudé sous la poutre, réseaux repassés autour une fois la structure en place. Chantier réel des équipes partenaires.",
+    /* 03/09 : le héros était chDemolitionLattisPlatreOuverture — c'est LE MÊME CLICHÉ que
+       le héros de « signes-mur-porteur-avant-travaux » (chDemolitionGravatsChantier) :
+       même perforateur au même endroit sur les gravats, même câble enroulé, même papier
+       peint, l'un simplement plus large que l'autre. Les deux articles s'affichaient sur
+       la même ligne de la grille du blog. Le contrôle dHash ne les rapproche pas (d=33,
+       le recadrage fausse l'empreinte) : c'est la comparaison à l'œil qui a tranché.
+       Le portique acier passe en héros — il illustre mieux le sujet, l'ouvrage tel
+       qu'autorisé puis exécuté — et la photo de démolition sort de cet article. */
+    photo: "chPoutreAcierAngleSoudeVue1",
     corps: [
       "Un mur porteur situé à l'intérieur d'un lot privatif reste, dans la plupart des règlements de copropriété, un élément de structure rattaché aux parties communes. Son ouverture n'est donc pas une décision privée : elle demande une autorisation votée en assemblée générale. Ce qui fait avancer un dossier n'est pas l'insistance auprès du syndic, mais sa complétude — un dossier incomplet est renvoyé à l'assemblée suivante, c'est-à-dire le plus souvent à l'année suivante.",
       "Les pièces attendues varient d'un règlement et d'un syndic à l'autre : la première démarche consiste à en demander la liste par écrit. Reviennent presque toujours les plans de l'existant et du projet, un descriptif technique de l'ouverture précisant la méthode, l'étaiement et le phasage, l'étude d'un bureau d'études structure avec la descente de charges et le profilé retenu, les attestations d'assurance décennale et de responsabilité civile des entreprises appelées à intervenir, le planning et les horaires envisagés, enfin les modalités d'accès, de protection des parties communes et d'évacuation des gravats. Certaines copropriétés demandent en plus l'intervention d'un contrôleur technique, ou l'engagement de remettre un rapport en fin de travaux. La majorité applicable au vote dépend de la nature exacte des travaux et se vérifie avec le syndic, jamais sur une règle générale trouvée en ligne.",
       "Le calendrier se lit à l'envers. La demande doit parvenir au syndic assez tôt pour être inscrite à l'ordre du jour, lui-même arrêté avant l'envoi de la convocation, dont le délai est encadré par la loi. Transmise après cet envoi, elle ne sera pas examinée : il faudra attendre l'assemblée suivante, ou en provoquer une extraordinaire — dont les frais retombent généralement sur le demandeur. D'ici là, rien ne se commande et rien ne se démolit. Une fois l'autorisation obtenue, le procès-verbal rejoint le dossier de chantier avec l'étude de structure et les photos de l'ouvrage avant habillage : ce sont exactement les pièces qu'on vous redemandera des années plus tard, à la revente comme en cas de sinistre.",
+    ],
+  },
+  {
+    slug: "planning-chantier-commandes-a-lancer-en-premier",
+    titre: "Planning : quelles commandes lancer en premier ?",
+    date: "26 août 2026", dateISO: "2026-08-26",
+    categorie: "Organisation de chantier",
+    excerpt: "Un planning ne tient pas parce qu'on presse les entreprises, mais parce que les décisions à long délai ont été prises assez tôt. Voici lesquelles, et dans quel ordre.",
+    photo: "chElectriciteFauxPlafondRailsCablage",
+    img2: "chDressingNoyerCarcassesVides",
+    img2Caption: "Caissons plaqués noyer montés dans une pièce moulurée, portes et panneaux encore posés au sol : la menuiserie sur mesure se fabrique en atelier pendant que le chantier avance — à condition d'avoir été commandée à temps. Chantier réel des équipes partenaires.",
+    img3: "chParquetChevronsCacheRadiateur",
+    img3Caption: "Parquet chêne à chevrons posé et cache-radiateur à lames en place : un sol de ce type se commande longtemps avant sa date de pose, et se pose parmi les tout derniers lots. Chantier réel des équipes partenaires.",
+    corps: [
+      "Sur une rénovation, ce qui arrête un chantier est rarement la main-d'œuvre : c'est ce qui n'est pas encore arrivé, ou ce qui n'est pas encore décidé. Deux horloges tournent en parallèle. Celle des travaux — démolition, structure, réseaux, cloisons, finitions — et celle des approvisionnements : études, validation, fabrication, livraison. La méthode consiste à remonter le temps depuis chaque date de pose : on retranche le délai de fabrication et de livraison annoncé, on ajoute une marge, et on obtient une date limite de décision. Tout ce qui est arrêté après cette date décale le chantier, quel que soit le nombre de compagnons présents.",
+      "Les commandes se classent donc par date limite de décision, et non par ordre de pose. En premier viennent les études et les autorisations : bureau d'études structure, déclaration préalable ou permis, et en copropriété l'inscription à l'ordre du jour d'une assemblée — elles conditionnent tout le reste. Viennent ensuite les ouvrages qui se mesurent sur place puis se fabriquent : menuiseries extérieures sur mesure, structure métallique, escalier, verrière. Troisième famille, moins évidente : le plan de cuisine et le calepinage de la salle de bain. Ils ne se posent pas tôt, mais l'implantation des réseaux en dépend ; les arrêter tard oblige à repiquer dans un mur déjà fermé. Suivent les menuiseries intérieures, dressings et agencements sur mesure, dont le temps d'atelier est réel. Puis les revêtements — carrelage, pierre, parquet — pour lesquels comptent la disponibilité de la référence, l'homogénéité des lots et des bains de teinte, et une quantité calculée chutes comprises : une référence arrêtée par le fabricant en cours de chantier est un classique. Enfin les appareils — électroménager, sanitaires, robinetterie, radiateurs, groupe de ventilation : l'appareil lui-même peut arriver tard, mais sa fiche technique doit être connue avant le passage des réseaux, faute de quoi on pose des attentes au mauvais endroit.",
+      "Tenir tout cela suppose une seule liste, tenue à jour avec le chantier et pas à côté. Pour chaque poste : la référence exacte, le fournisseur, le délai annoncé, la date limite de décision, la date de livraison confirmée et le lieu de stockage. Ce dernier point se sous-estime : ce qui arrive trop tôt doit être stocké au sec, à plat, à l'abri des chocs et du vol — et dans un logement occupé, la place manque presque toujours. Prévoyez aussi qui réceptionne les marchandises, qui les contrôle à l'arrivée et sous quel délai les réserves de transport doivent être émises : un panneau livré rayé se conteste dans les heures qui suivent, pas trois semaines plus tard. Certains temps, enfin, ne se compriment jamais — séchage d'une chape, séchage des enduits, acclimatation d'un parquet bois avant pose, instruction d'une autorisation. Un planning honnête les affiche au lieu de faire semblant de les absorber.",
     ],
   },
   {
@@ -235,6 +305,36 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "renovation-toiture-reparer-traiter-remplacer",
+    titre: "Rénovation de toiture : réparer, traiter ou remplacer ?",
+    date: "24 août 2026", dateISO: "2026-08-24",
+    categorie: "Toiture",
+    excerpt: "Trois réponses possibles à la même fuite. Ce qui tranche n'est pas l'âge de la couverture, mais l'état du support et de la charpente sous les ardoises ou les tuiles.",
+    photo: "chFacadeRavalementVillage",
+    img2: "chCharpenteInterieur",
+    img2Caption: "Charpente en bois massif : poteaux, contrefiches, pannes et solives restés apparents. Le diagnostic d'une charpente ancienne passe par les mêmes pièces, examinées une par une. Chantier réel des équipes partenaires.",
+    corps: [
+      "Trois niveaux d'intervention répondent au même symptôme. La réparation ponctuelle traite ce qui est identifié et limité : quelques ardoises ou tuiles cassées ou glissées, un solin, une reprise en pied de souche, une gouttière percée. L'entretien et le traitement portent sur l'ensemble sans déposer la couverture : nettoyage et démoussage, reprise des points singuliers, traitement de la charpente contre les insectes à larves xylophages ou les champignons lignivores lorsque le diagnostic le justifie. Le remplacement, enfin, consiste à déposer la couverture, à réviser ou changer le support — liteaux, voliges —, à poser un écran de sous-toiture, éventuellement à isoler, puis à recouvrir. La question n'est donc pas « la toiture a-t-elle un certain âge » mais « par où l'eau entre-t-elle, depuis quand, et qu'a-t-elle déjà abîmé ».",
+      "Le diagnostic commence par l'intérieur, parce que c'est là que les dégâts se lisent. Sous combles, en lumière rasante : traces d'écoulement sur la charpente et sur l'isolant, auréoles, bois noirci, sciure au pied des pièces, échauffures. Le bois se sonde à la pointe : une pièce saine résiste, une pièce attaquée s'enfonce. On regarde ensuite l'état des liteaux et des fixations — une couverture ne tient que par ce sur quoi elle est clouée ou crochetée. L'extérieur vient après, depuis un accès sûr : état des ardoises ou des tuiles (délitement, gélivure, glissement), faîtage, arêtiers, noues, rives, égout, solins et souches de cheminée, châssis de toit, chéneaux et descentes. Une couverture cède presque toujours par ses points singuliers avant de céder en partie courante. Le verdict en découle : couverture globalement saine et charpente en bon état, on répare ; matériau en fin de vie ou support qui ne tient plus les fixations, on remplace, car reposer une couverture neuve sur un support fatigué revient à payer deux fois le même échafaudage.",
+      "Plusieurs éléments extérieurs à la technique pèsent sur la décision. En copropriété, la toiture est une partie commune : les travaux relèvent d'une décision collective, dont les modalités se vérifient avec le syndic. L'urbanisme peut imposer le matériau, la teinte, la pente ou le type de châssis, et un avis de l'architecte des Bâtiments de France peut être requis en secteur protégé — une couverture en ardoise ne se remplace pas par autre chose sans l'avoir vérifié. L'accès est un poste à part entière : échafaudage, protections, parfois autorisation d'occupation du domaine public, et pour un immeuble de rue, la gestion des passants. Le calendrier compte aussi : on n'ouvre pas une toiture sans plan de mise hors d'eau ni fenêtre météo. Enfin, si la couverture est déposée, c'est le moment — et souvent le seul — de trancher l'isolation des rampants, la ventilation de la sous-face et la reprise des souches : y revenir plus tard, c'est remonter un échafaudage. Photos avant et après, factures et attestation d'assurance décennale du couvreur se rangent avec le dossier : pour une toiture, ce sont exactement les pièces qu'on vous redemandera.",
+    ],
+  },
+  {
+    slug: "surelevation-etude-des-fondations",
+    titre: "Surélévation : pourquoi l'étude des fondations vient avant le dessin",
+    date: "22 août 2026", dateISO: "2026-08-22",
+    categorie: "Gros œuvre",
+    excerpt: "Une surélévation ne se dessine pas puis se vérifie : c'est l'inverse. Tant que le chemin des charges n'est pas connu jusqu'au sol, un plan n'engage rien.",
+    photo: "chDemolitionDegagementVersSejour",
+    img2: "chPlancherSolivesBeton2",
+    img2Caption: "Plancher mis à nu : solives, remplissage entre solives et planches de circulation posées pour travailler dessus. Un niveau supplémentaire charge d'abord ces planchers, avant les murs, puis les fondations. Chantier réel des équipes partenaires.",
+    corps: [
+      "Une surélévation ajoute une charge permanente à un bâtiment qui n'a pas été conçu pour la recevoir. Cette charge ne s'arrête pas au plafond du dernier niveau : elle traverse les planchers, descend dans les murs porteurs, les refends et les pignons, atteint les fondations, puis le sol. Chaque maillon de cette chaîne doit pouvoir la reprendre, et c'est le maillon le plus faible qui décide. D'où un ordre qui ne s'inverse pas : relevé de l'existant, diagnostic de structure et reconnaissance du sol d'abord, dessin ensuite. Un plan produit avant sera redessiné — ou, plus coûteux encore, il masquera un renforcement que personne n'a chiffré.",
+      "L'étude ne se limite pas à un calcul. Elle commence par un relevé de l'existant — épaisseurs réelles des murs, position des refends, sens de portée des planchers — et par l'identification de la maçonnerie : pierre, brique, meulière, parpaing ou béton, et surtout son état réel, qui n'apparaît qu'une fois les enduits et les doublages déposés. Viennent ensuite les fondations : leur type, leur profondeur, leur largeur. Sur un bâtiment ancien, ces informations n'existent le plus souvent nulle part ; elles s'obtiennent par sondage, en dégageant un pied de mur. Le sol, enfin, relève d'une étude géotechnique : nature des terrains, portance, argiles sensibles au retrait-gonflement, niveau d'eau, et selon les secteurs d'Île-de-France, anciennes carrières ou dissolution du gypse. Ces aléas se vérifient parcelle par parcelle, jamais par analogie avec le chantier d'à côté.",
+      "Le résultat de l'étude n'est pas un feu vert ou un feu rouge : c'est un cahier de contraintes. Il indique ce que la structure existante peut reprendre, où les charges doivent atterrir, ce qu'il faut renforcer, et parfois qu'il faut alléger le projet — ossature bois ou structure acier plutôt que maçonnerie — pour rester dans ce que le bâtiment sait porter. Lorsque les fondations ne suffisent pas, les solutions existent : élargissement de semelles, reprise en sous-œuvre, micropieux. Elles s'exécutent avant le reste et pèsent lourd dans une enveloppe, ce qui est exactement l'information qu'on veut détenir avant de s'attacher à un plan. S'y ajoutent les règles d'urbanisme — hauteur, emprise, aspect, servitudes, prospect — et, en copropriété, une autorisation d'assemblée générale dont la majorité applicable dépend de la nature exacte des travaux et se vérifie avec le syndic. Les pièces produites — sondages, étude géotechnique, note de calcul, plans d'exécution — restent établies et signées par les professionnels compétents ; elles se conservent avec les photos des ouvrages avant habillage, parce que plus rien ne sera vérifiable ensuite.",
+    ],
+  },
+  {
     slug: "vmc-renovation-verifier-au-dela-du-debit",
     titre: "VMC en rénovation : ce qu'il faut vérifier au-delà du débit",
     date: "21 août 2026", dateISO: "2026-08-21",
@@ -247,6 +347,21 @@ export const ARTICLES: Article[] = [
       "Une VMC ne se juge pas au seul débit annoncé aux bouches. C'est un circuit complet : l'air doit pouvoir entrer quelque part, traverser le logement, être extrait dans les pièces humides, puis être rejeté à l'extérieur. Si un maillon manque, le débit réellement obtenu s'effondre quelles que soient les performances du caisson. En rénovation, le maillon manquant est presque toujours l'entrée d'air.",
       "Trois vérifications passent avant la fiche technique. Les entrées d'air d'abord : remplacer les menuiseries sans conserver ni recréer d'entrées rend le logement plus étanche que le système ne le suppose, et l'extraction se met à tirer sur les défauts d'étanchéité du bâti au lieu d'un air neuf maîtrisé. Les transferts entre pièces ensuite : sans détalonnage des portes ni grille de passage, l'air n'atteint jamais la bouche d'extraction. Le réseau enfin — sa longueur, le nombre de coudes, la section retenue, les gaines souples écrasées derrière un doublage, et l'isolation des conduits qui traversent un volume froid, faute de quoi la condensation s'installe dans les combles. En immeuble, le point de rejet en façade ou en toiture relève en plus du règlement de copropriété.",
       "Restent deux critères qu'on découvre trop tard. Le bruit : la position du caisson, sa suspension et la vitesse de l'air dans les conduits décident du confort réel, et un groupe posé au-dessus d'une chambre finit débranché. L'entretien : bouches démontables, filtres accessibles sur une double flux, trappe de visite prévue au moment du plafond et non après coup. Le choix entre simple flux et double flux se pose d'ailleurs dans cet ordre — une double flux ne donne sa mesure que dans une enveloppe suffisamment étanche à l'air, avec la place nécessaire à son réseau et un entretien réellement tenu. À la réception, un débit se mesure aux bouches : c'est la seule vérification qui ne se discute pas.",
+    ],
+  },
+  {
+    slug: "vivre-dans-l-immeuble-pendant-les-travaux",
+    titre: "Vivre dans l'immeuble pendant les travaux : protections, horaires et voisinage",
+    date: "20 août 2026", dateISO: "2026-08-20",
+    categorie: "Copropriété",
+    excerpt: "Un chantier privatif se juge aussi sur ce que les voisins ne voient pas : un hall protégé, des livraisons préparées, des phases bruyantes annoncées à l'avance.",
+    photo: "chEncadrementBoisPorteMiroirAtelier",
+    img2: "chArcheEncadrementBoisChantier",
+    img2Caption: "Habillage en arche posé dans un logement en travaux, sol couvert de bâches et panneaux stockés dans la pièce voisine : un ouvrage livré reste protégé jusqu'au nettoyage final. Chantier réel des équipes partenaires.",
+    corps: [
+      "Même strictement privatifs, des travaux en immeuble se déroulent au milieu de la vie des autres : circulations, bruit, livraisons, gravats, ascenseur. La logistique se règle avant le premier jour, pas le matin où une palette arrive sur le trottoir. Quatre questions doivent avoir une réponse écrite : par où montent les matériaux, par où descendent les gravats, l'ascenseur peut-il être utilisé et comment est-il protégé, et quelles parties communes — hall, escalier, palier, porte cochère, sols et angles de murs — doivent être protégées. S'y ajoute le stationnement d'une benne ou d'un big-bag, qui suppose le plus souvent une autorisation d'occupation du domaine public à demander en amont auprès de la commune.",
+      "Le bruit se gère par le calendrier autant que par les outils. Les horaires applicables sont fixés localement par arrêté et fréquemment resserrés par le règlement de copropriété ; ils diffèrent selon les jours de semaine, le samedi, le dimanche et les jours fériés, et se vérifient donc commune par commune et immeuble par immeuble, jamais sur une règle générale. Le principe utile est simple : regrouper les phases bruyantes — démolition, carottage, saignées, rainurage — plutôt que de les étaler sur des semaines, les annoncer par écrit au syndic et aux voisins avec des dates, et laisser un contact joignable. La plainte ne porte presque jamais sur l'heure la plus bruyante ; elle porte sur celle qui n'avait pas été annoncée.",
+      "Reste la propreté, et elle se prépare comme un ouvrage. Photographiez les parties communes avant la première livraison — hall, escalier, cabine d'ascenseur, palier, portes : c'est ce qui distinguera plus tard une trace préexistante d'une dégradation de chantier. Prévoyez ensuite les protections : plaques ou bâches au sol, protections d'angles, cabine d'ascenseur habillée, sas ou rideau de poussière à l'entrée du logement, et un passage de balai en fin de journée dans les circulations empruntées. Les déchets suivent une filière d'évacuation identifiée — jamais les conteneurs de l'immeuble. Enfin, la question de rester chez soi mérite une réponse franche : une rénovation complète touchant la plomberie, l'électricité et les sanitaires, avec la poussière que cela suppose, est rarement compatible avec une occupation confortable — plus d'eau, plus de sanitaires, plus de cuisine pendant des semaines. Si un relogement s'impose, il entre dans le budget dès le départ et non au milieu du chantier. À la fin, un tour contradictoire des parties communes avec le syndic ou le conseil syndical, photos datées à l'appui, clôture le sujet aussi proprement qu'il a été ouvert.",
     ],
   },
   {
