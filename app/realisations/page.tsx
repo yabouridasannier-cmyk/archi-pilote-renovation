@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 import { AvantApres } from "../components/avant-apres";
 
@@ -439,6 +440,37 @@ export default function RealisationsPage() {
               <p className="mt-2 text-center font-mono text-[0.64rem] tracking-[0.16em] uppercase text-muted">{c.note}</p>
             </div>
           ))}
+        </div>
+      </MqSection>
+
+      {/*
+        03/09 : ces deux études de cas existaient depuis la mise en ligne mais AUCUNE page du
+        site ne pointait vers elles — donc invisibles pour un visiteur comme pour un moteur.
+        Détecté par le contrôle des pages orphelines. Elles sont désormais rattachées ici,
+        d'où elles relèvent.
+      */}
+      <MqSection kicker="Cas détaillés" title="Deux chantiers suivis de bout en bout" lead="Ces deux dossiers sont racontés en entier : la contrainte de départ, les arbitrages, le déroulé et ce que le cas ne permet pas de généraliser.">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <Link
+            href="/realisations/pavillon-annees-30-hauts-de-seine"
+            className="border border-line bg-surface rounded-[2px] p-6 flex flex-col gap-2 hover:border-orange-deep/40 transition-colors"
+          >
+            <span className="font-mono text-[0.68rem] tracking-[0.14em] uppercase text-muted">Hauts-de-Seine</span>
+            <span className="display text-[1.15rem] text-ivoire">Pavillon des années 30, rénovation complète</span>
+            <span className="text-muted text-[0.9rem] leading-relaxed">
+              118 m², douze lots pilotés en dix-neuf semaines, avec un calendrier imposé par une date de fin de bail.
+            </span>
+          </Link>
+          <Link
+            href="/realisations/extension-yvelines"
+            className="border border-line bg-surface rounded-[2px] p-6 flex flex-col gap-2 hover:border-orange-deep/40 transition-colors"
+          >
+            <span className="font-mono text-[0.68rem] tracking-[0.14em] uppercase text-muted">Yvelines</span>
+            <span className="display text-[1.15rem] text-ivoire">Extension de plain-pied, 28 m² gagnés</span>
+            <span className="text-muted text-[0.9rem] leading-relaxed">
+              Emprise au sol contrainte par le PLU, jardin en pente, vide sanitaire ventilé et raccordement de niveau avec le séjour existant.
+            </span>
+          </Link>
         </div>
       </MqSection>
 
