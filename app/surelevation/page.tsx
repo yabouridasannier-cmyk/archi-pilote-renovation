@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqStats, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -47,7 +48,12 @@ export default function Page() {
                 </p>
                 <p>
                   Cette étude conditionne le choix du matériau de structure retenu pour la surélévation, et donc
-                  une grande partie du budget final. Elle doit précéder tout chiffrage définitif.
+                  une grande partie du budget final. Elle doit précéder tout chiffrage définitif : c'est le sujet
+                  de notre article{" "}
+                  <Link href="/blog/surelevation-etude-des-fondations" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                    pourquoi l&apos;étude des fondations vient avant le dessin
+                  </Link>
+                  .
                 </p>
               </MqProse>
             </div>
@@ -119,7 +125,12 @@ export default function Page() {
                   Pour un immeuble en copropriété, la surélévation touche les parties communes que sont les
                   fondations, la toiture et la structure. Elle nécessite généralement un vote en assemblée
                   générale, avec des règles de majorité spécifiques. Le dossier technique complet doit être
-                  présenté au syndic avant même le dépôt de la demande d'autorisation d'urbanisme.
+                  présenté au syndic avant même le dépôt de la demande d'autorisation d'urbanisme. L'ordre de ces
+                  formalités est détaillé sur la page{" "}
+                  <Link href="/demarches-administratives-renovation" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                    démarches administratives : permis, syndic et assemblée générale
+                  </Link>
+                  .
                 </p>
               </MqProse>
             </div>
@@ -175,8 +186,11 @@ export default function Page() {
         <MqProse>
           <p>
             La création ou le renforcement de la cage d'escalier menant au niveau surélevé impose souvent une
-            trémie dans le plancher existant, avec les mêmes précautions de reprise de charge qu'une ouverture de
-            mur porteur. Les réseaux électriques, de plomberie et de chauffage doivent être prolongés
+            trémie dans le plancher existant, avec les mêmes précautions de reprise de charge qu'une{" "}
+            <Link href="/ouverture-mur-porteur" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              ouverture de mur porteur
+            </Link>
+            . Les réseaux électriques, de plomberie et de chauffage doivent être prolongés
             verticalement, ce qui suppose parfois de repenser une partie de la distribution des étages inférieurs.
           </p>
           <p>
@@ -219,6 +233,13 @@ export default function Page() {
             },
           ]}
         />
+        <p className="text-muted text-[0.92rem] leading-relaxed mt-8 max-w-2xl">
+          Ces projets de surélévation sont pilotés dans notre zone d'intervention, présentée sur la page{" "}
+          <Link href="/renovation-hauts-de-seine-92" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+            rénovation en Hauts-de-Seine
+          </Link>
+          .
+        </p>
       </MqSection>
 
       <MqSection
@@ -310,11 +331,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
-          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
+          { href: "/blog/surelevation-etude-des-fondations", label: "Surélévation : l'étude des fondations avant le dessin", sub: "Le chemin des charges jusqu'au sol" },
+          { href: "/blog/extension-ou-surelevation-maison", label: "Extension ou surélévation : choisir selon le terrain", sub: "Deux logiques de faisabilité différentes" },
           { href: "/extension-maison", label: "Extension de maison", sub: "L'alternative au sol quand le terrain le permet" },
-          { href: "/notre-methode", label: "Notre méthode", sub: "Les 8 étapes du pilotage" },
-          { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyse ligne à ligne de vos devis" },
-          { href: "/contact", label: "Contact", sub: "Décrire votre projet de surélévation" },
+          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
+          { href: "/demarches-administratives-renovation", label: "Démarches administratives", sub: "Permis de construire, syndic, assemblée générale" },
+          { href: "/renovation-hauts-de-seine-92", label: "Rénovation en Hauts-de-Seine", sub: "Notre zone d'intervention pour ce type de projet" },
         ]}
       />
     </main>

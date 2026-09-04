@@ -21,6 +21,36 @@ export default function Page() {
         { titre: "Standard et sur-mesure", texte: "Des caissons standards peuvent être habillés de façades spécifiques pour arbitrer entre budget et rendu, sans sacrifier l'un pour l'autre." },
         { titre: "Commandes longues", texte: "Plan de travail, façades, électroménager et menuiseries doivent être intégrés au planning tôt — ce sont souvent les délais les plus longs du chantier." },
       ]}
+      maillage={{
+        intro:
+          "Une cuisine se dessine avant les réseaux, pas après. Ces pages détaillent l'implantation, la fabrication sur mesure et les postes où l'achat direct change le budget.",
+        groupes: [
+          {
+            titre: "Concevoir et fabriquer",
+            liens: [
+              { href: "/menuiserie-agencement-sur-mesure", label: "Menuiserie et agencement sur mesure" },
+              { href: "/expertise-carrelage-zellige-travertin", label: "Crédence : carrelage, zellige, pierre" },
+              { href: "/sols-finitions-renovation", label: "Revêtements de sol" },
+            ],
+          },
+          {
+            titre: "Ce qui doit être arrêté avant",
+            liens: [
+              { href: "/electricite-plomberie-renovation", label: "Électricité et plomberie" },
+              { href: "/second-oeuvre", label: "Ordre d'intervention des lots" },
+              { href: "/ouverture-mur-porteur", label: "Ouvrir sur le séjour : mur porteur" },
+            ],
+          },
+          {
+            titre: "Budget et réalisations",
+            liens: [
+              { href: "/achat-direct-materiaux", label: "Achat direct des éléments de cuisine" },
+              { href: "/realisations", label: "Cuisines livrées" },
+              { href: "/renovation-ile-de-france", label: "Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

@@ -18,6 +18,48 @@ export default function Page() {
       intro="À Paris, ARCHI PILOTE RÉNOVATION se positionne sur les dossiers où la complexité technique ou administrative justifie un pilotage structuré : redistribution, mur porteur, réseaux, copropriété, ventilation, rénovation complète et interactions avec des professionnels spécialisés. Notre terrain, c'est le projet complexe : celui qui demande de comprendre le bâti et l'immeuble avant de chiffrer quoi que ce soit."
       bulletsTitle="Projets prioritaires"
       bullets={["Appartement en copropriété complexe", "Ouverture structurelle", "Redistribution avec réseaux", "Rénovation complète à forte technicité", "Projets nécessitant un dossier documenté"]}
+      maillage={{
+        titre: "Les sujets qui reviennent sur un dossier parisien",
+        intro:
+          "Un immeuble ancien impose sa propre chronologie : autorisation de copropriété, étude de structure, réseaux, puis finitions. Chacun de ces sujets est traité en détail sur sa page.",
+        groupes: [
+          {
+            titre: "Le dossier technique",
+            liens: [
+              { href: "/renovation-appartement", label: "Rénovation d'appartement" },
+              { href: "/ouverture-mur-porteur", label: "Ouverture de mur porteur en copropriété" },
+              { href: "/gros-oeuvre-structure", label: "Gros œuvre et reprise de structure" },
+              { href: "/electricite-plomberie-renovation", label: "Réseaux : électricité, plomberie, ventilation" },
+              { href: "/renovation-complete", label: "Rénovation complète à forte technicité" },
+              { href: "/savoir-faire-ancien", label: "Savoir-faire du bâti ancien" },
+            ],
+          },
+          {
+            titre: "Le dossier administratif et budgétaire",
+            liens: [
+              { href: "/demarches-administratives-renovation", label: "Autorisations et démarches en copropriété" },
+              { href: "/chantiers-complexes", label: "Piloter un chantier complexe" },
+              { href: "/clinique-du-devis", label: "Lecture critique d'un devis" },
+            ],
+          },
+          {
+            titre: "Communes limitrophes traitées",
+            liens: [
+              { href: "/renovation-courbevoie", label: "Courbevoie" },
+              { href: "/renovation-asnieres-sur-seine", label: "Asnières-sur-Seine" },
+            ],
+          },
+          {
+            titre: "Territoire",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Hauts-de-Seine (92)" },
+              { href: "/renovation-seine-saint-denis-93", label: "Seine-Saint-Denis (93)" },
+              { href: "/renovation-val-de-marne-94", label: "Val-de-Marne (94)" },
+              { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

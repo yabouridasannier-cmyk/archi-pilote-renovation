@@ -1,30 +1,163 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MqHero, MqSection, MqFig, MqCta, MqReadNext } from "../components/mq";
+import { ARTICLES } from "../data";
 
 export const metadata: Metadata = {
   title: "Guides et conseils pour réussir sa rénovation | ARCHI PILOTE RÉNOVATION",
   description:
-    "Douze guides thématiques pour orienter un projet de rénovation, du budget à la structure en passant par l'énergie et les démarches en copropriété.",
+    "Douze guides thématiques pour orienter un projet de rénovation, du budget à la structure en passant par l'énergie et les démarches en copropriété, avec les articles du blog classés par sujet.",
   alternates: { canonical: "/guides" },
 };
 
 const M = "/photos/maquette";
 
 const GUIDES = [
-  { kicker: "Estimer un budget avant de contacter des entreprises", q: "Combien coûte une rénovation complète ?", texte: "Fourchettes constatées par type de bien et niveau de finition, avec les postes qui font varier le prix. Renvoie vers l'observatoire des prix pour les données détaillées.", href: "/observatoire-prix-renovation" },
-  { kicker: "Sécuriser un projet touchant la structure", q: "Comment reconnaître un mur porteur ?", texte: "Les indices visibles et les vérifications indispensables avant toute ouverture. Renvoie vers la page gros œuvre et structure pour le détail des travaux concernés.", href: "/gros-oeuvre-structure" },
-  { kicker: "Décider de l'ampleur des travaux de second œuvre", q: "Faut-il refaire l'électricité en rénovation ?", texte: "Les signes d'une installation à reprendre et l'ordre logique des lots techniques. Renvoie vers la page second œuvre technique pour l'accompagnement complet.", href: "/second-oeuvre" },
-  { kicker: "Prioriser les travaux d'isolation et de ventilation", q: "Comment sortir un logement du statut de passoire énergétique ?", texte: "Isolation, ventilation et menuiseries : la méthode pour hiérarchiser les postes selon le diagnostic. Renvoie vers la page rénovation énergétique.", href: "/renovation-energetique" },
-  { kicker: "Comparer deux façons d'agrandir un bien", q: "Extension ou surélévation : quelle solution choisir ?", texte: "Les critères de faisabilité (terrain, structure, urbanisme) qui orientent le choix. Renvoie vers les pages extension de maison et surélévation.", href: "/extension-maison" },
-  { kicker: "Éviter les forfaits opaques et comparer plusieurs devis", q: "Comment lire un devis de travaux ligne à ligne ?", texte: "La méthode pour repérer les quantités, les exclusions et les postes sous-évalués. Renvoie vers la clinique du devis pour une analyse complète.", href: "/clinique-du-devis" },
-  { kicker: "Anticiper le passage en assemblée générale", q: "Quelles démarches avant de commencer un chantier en copropriété ?", texte: "Les validations possibles selon la nature des travaux et le rôle du syndic. Renvoie vers la page démarches administratives.", href: "/demarches-administratives-renovation" },
-  { kicker: "Comprendre les étapes avant de s'engager", q: "Comment se déroule un chantier piloté de A à Z ?", texte: "Du diagnostic à la livraison, les huit étapes de la méthode et les points de vigilance à chaque phase. Renvoie vers la page notre méthode.", href: "/notre-methode" },
-  { kicker: "Identifier si un projet nécessite des compétences spécifiques", q: "Quels chantiers sont considérés comme complexes ?", texte: "Structure, copropriété, aléas cachés : les situations qui justifient un accompagnement renforcé. Renvoie vers la page chantiers complexes.", href: "/chantiers-complexes" },
-  { kicker: "Comprendre qui facture quoi avant de s'engager", q: "Comment est structuré le modèle économique d'ARCHI PILOTE RÉNOVATION ?", texte: "Achats en direct, transparence sur la facturation des entreprises partenaires et rôle du pilotage. Renvoie vers la page modèle économique.", href: "/modele-economique-transparence" },
-  { kicker: "Comprendre les termes utilisés par les entreprises et les diagnostics", q: "Quel est le vocabulaire indispensable avant de lancer des travaux ?", texte: "Structure, second œuvre, énergie, administratif, chiffrage : plus de quarante définitions courtes. Renvoie vers le glossaire technique.", href: "/glossaire-renovation" },
-  { kicker: "Comprendre qui fait quoi sur un chantier", q: "Quelles entreprises et compétences interviennent sur un projet de rénovation ?", texte: "Entreprises partenaires, architectes DPLG et ingénieurs structure : critères de sélection et périmètre de chacun. Renvoie vers la page réseau de partenaires.", href: "/reseau-partenaires" },
+  {
+    kicker: "Estimer un budget avant de contacter des entreprises",
+    q: "Combien coûte une rénovation complète ?",
+    texte: "Fourchettes constatées par type de bien et niveau de finition, avec les postes qui font varier le prix.",
+    href: "/observatoire-prix-renovation",
+    cible: "Observatoire des prix de rénovation",
+    articles: [
+      { href: "/blog/prix-renovation-maison-2026", label: "Ce que coûtent des travaux de rénovation de maison en 2026" },
+      { href: "/blog/cuisine-sur-mesure-ou-caissons-standards", label: "Cuisine sur mesure ou caissons standards : où se joue l'économie" },
+    ],
+  },
+  {
+    kicker: "Sécuriser un projet touchant la structure",
+    q: "Comment reconnaître un mur porteur ?",
+    texte: "Les indices visibles et les vérifications indispensables avant toute ouverture.",
+    href: "/gros-oeuvre-structure",
+    cible: "Gros œuvre et structure",
+    articles: [
+      { href: "/blog/signes-mur-porteur-avant-travaux", label: "Les signes qui doivent alerter avant de toucher à un mur" },
+      { href: "/blog/ipn-hea-heb-choix-profile", label: "IPN, HEA ou HEB : ce que change le choix du profilé" },
+    ],
+  },
+  {
+    kicker: "Décider de l'ampleur des travaux de second œuvre",
+    q: "Faut-il refaire l'électricité en rénovation ?",
+    texte: "Les signes d'une installation à reprendre et l'ordre logique des lots techniques.",
+    href: "/second-oeuvre",
+    cible: "Second œuvre tous corps d'état",
+    articles: [
+      { href: "/blog/ordre-intervention-lots-renovation-complete", label: "Dans quel ordre faire intervenir les lots" },
+      { href: "/blog/photos-techniques-avant-de-fermer-les-murs", label: "Les photos techniques à conserver avant de fermer les murs" },
+    ],
+  },
+  {
+    kicker: "Prioriser les travaux d'isolation et de ventilation",
+    q: "Comment sortir un logement du statut de passoire énergétique ?",
+    texte: "Isolation, ventilation et menuiseries : la méthode pour hiérarchiser les postes selon le diagnostic.",
+    href: "/renovation-energetique",
+    cible: "Rénovation énergétique",
+    articles: [
+      { href: "/blog/sortir-passoire-energetique", label: "DPE F ou G : comment sortir de la passoire énergétique" },
+      { href: "/blog/isolation-interieure-erreurs-humidite", label: "Isolation intérieure : les erreurs qui créent l'humidité" },
+      { href: "/blog/maprimerenov-cee-2026", label: "MaPrimeRénov' et CEE : ce qu'il faut vérifier avant de compter sur une aide" },
+    ],
+  },
+  {
+    kicker: "Comparer deux façons d'agrandir un bien",
+    q: "Extension ou surélévation : quelle solution choisir ?",
+    texte: "Les critères de faisabilité (terrain, structure, urbanisme) qui orientent le choix.",
+    href: "/extension-maison",
+    cible: "Extension de maison",
+    articles: [
+      { href: "/blog/extension-ou-surelevation-maison", label: "Extension ou surélévation : choisir selon son terrain" },
+      { href: "/blog/surelevation-etude-des-fondations", label: "Surélévation : pourquoi l'étude des fondations vient avant le dessin" },
+    ],
+  },
+  {
+    kicker: "Éviter les forfaits opaques et comparer plusieurs devis",
+    q: "Comment lire un devis de travaux ligne à ligne ?",
+    texte: "La méthode pour repérer les quantités, les exclusions et les postes sous-évalués.",
+    href: "/clinique-du-devis",
+    cible: "Clinique du devis",
+    articles: [
+      { href: "/blog/devis-travaux-lignes-a-verifier", label: "Les lignes d'un devis à vérifier avant de signer" },
+    ],
+  },
+  {
+    kicker: "Anticiper le passage en assemblée générale",
+    q: "Quelles démarches avant de commencer un chantier en copropriété ?",
+    texte: "Les validations possibles selon la nature des travaux et le rôle du syndic.",
+    href: "/demarches-administratives-renovation",
+    cible: "Démarches administratives",
+    articles: [
+      { href: "/blog/coproprietaire-autorisations-avant-travaux", label: "Les autorisations à obtenir avant de lancer un chantier" },
+      { href: "/blog/ouvrir-mur-porteur-copropriete-assemblee", label: "Ouvrir un mur porteur : les pièces à préparer pour l'assemblée" },
+      { href: "/blog/vivre-dans-l-immeuble-pendant-les-travaux", label: "Vivre dans l'immeuble pendant les travaux" },
+    ],
+  },
+  {
+    kicker: "Comprendre les étapes avant de s'engager",
+    q: "Comment se déroule un chantier piloté de A à Z ?",
+    texte: "Du diagnostic à la livraison, les huit étapes de la méthode et les points de vigilance à chaque phase.",
+    href: "/notre-methode",
+    cible: "Notre méthode de pilotage",
+    articles: [
+      { href: "/blog/planning-chantier-commandes-a-lancer-en-premier", label: "Quelles commandes lancer en premier" },
+      { href: "/blog/reception-chantier-preparer-les-reserves", label: "Réception de chantier : préparer les réserves sans improviser" },
+    ],
+  },
+  {
+    kicker: "Identifier si un projet nécessite des compétences spécifiques",
+    q: "Quels chantiers sont considérés comme complexes ?",
+    texte: "Structure, copropriété, aléas cachés : les situations qui justifient un accompagnement renforcé.",
+    href: "/chantiers-complexes",
+    cible: "Chantiers complexes",
+    articles: [
+      { href: "/blog/renovation-toiture-reparer-traiter-remplacer", label: "Toiture : réparer, traiter ou remplacer" },
+      { href: "/blog/amenagement-local-commercial-difference-logement", label: "Aménager un local commercial : ce qui change par rapport à un logement" },
+    ],
+  },
+  {
+    kicker: "Comprendre qui facture quoi avant de s'engager",
+    q: "Comment est structuré le modèle économique d'ARCHI PILOTE RÉNOVATION ?",
+    texte: "Achats en direct, transparence sur la facturation des entreprises partenaires et rôle du pilotage.",
+    href: "/modele-economique-transparence",
+    cible: "Modèle économique et transparence",
+    articles: [
+      { href: "/blog/parquet-massif-contrecolle-stratifie", label: "Parquet massif, contrecollé ou stratifié : quel revêtement pour quel usage" },
+      { href: "/blog/joints-epoxy-vs-ciment", label: "Joints époxy ou joints classiques : pourquoi le choix compte" },
+    ],
+  },
+  {
+    kicker: "Comprendre les termes utilisés par les entreprises et les diagnostics",
+    q: "Quel est le vocabulaire indispensable avant de lancer des travaux ?",
+    texte: "Structure, second œuvre, énergie, administratif, chiffrage : plus de quarante définitions courtes.",
+    href: "/glossaire-renovation",
+    cible: "Glossaire technique",
+    articles: [
+      { href: "/blog/vmc-renovation-verifier-au-dela-du-debit", label: "VMC en rénovation : ce qu'il faut vérifier au-delà du débit" },
+      { href: "/blog/etancheite-sous-carrelage-points-singuliers", label: "Étanchéité sous carrelage : les points singuliers à documenter" },
+    ],
+  },
+  {
+    kicker: "Comprendre qui fait quoi sur un chantier",
+    q: "Quelles entreprises et compétences interviennent sur un projet de rénovation ?",
+    texte: "Entreprises partenaires, architectes DPLG et ingénieurs structure : critères de sélection et périmètre de chacun.",
+    href: "/reseau-partenaires",
+    cible: "Réseau de partenaires",
+    articles: [
+      { href: "/blog/escalier-bois-massif-structure-ouverte-fermee", label: "Escalier : bois massif, structure ouverte ou fermée" },
+    ],
+  },
 ];
+
+/* Regroupement dynamique des articles du blog par catégorie : la source reste
+   ARTICLES (app/data.ts), de sorte qu'un article ajouté au blog apparaisse
+   automatiquement dans cette page carrefour, sans risque de lien mort. */
+const ARTICLES_PAR_CATEGORIE = Array.from(
+  ARTICLES.reduce((acc, a) => {
+    const liste = acc.get(a.categorie) ?? [];
+    liste.push(a);
+    acc.set(a.categorie, liste);
+    return acc;
+  }, new Map<string, typeof ARTICLES>())
+).sort((a, b) => a[0].localeCompare(b[0], "fr"));
 
 export default function Page() {
   return (
@@ -32,7 +165,7 @@ export default function Page() {
       <MqHero
         kicker="Guides & conseils"
         title="Choisissez votre question de départ"
-        lead="Cette page pilier regroupe douze guides thématiques pour orienter un projet de rénovation, du budget à la structure en passant par l'énergie et les démarches en copropriété. Chaque entrée résume l'intention de recherche et renvoie vers la page de service correspondante, sans article séparé à parcourir."
+        lead="Cette page pilier regroupe douze guides thématiques pour orienter un projet de rénovation, du budget à la structure en passant par l'énergie et les démarches en copropriété. Chaque entrée résume la décision à prendre, renvoie vers la page de service correspondante et vers les articles du blog qui traitent le sujet en détail."
       />
 
       {/*
@@ -78,13 +211,83 @@ export default function Page() {
       <MqSection kicker="Les douze guides" title="Chaque guide répond à une décision précise et renvoie vers la page utile" wide>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {GUIDES.map((g) => (
-            <Link key={g.href + g.q} href={g.href} className="group border border-line bg-surface rounded-[2px] p-6 flex flex-col gap-2 hover:border-line-strong transition-colors">
+            <div key={g.href + g.q} className="group border border-line bg-surface rounded-[2px] p-6 flex flex-col gap-2 hover:border-line-strong transition-colors">
               <span className="font-mono text-[0.64rem] font-bold tracking-[0.14em] uppercase text-orange-deep">{g.kicker}</span>
-              <h3 className="display text-[1.1rem] text-ivoire text-balance group-hover:text-orange-deep transition-colors">{g.q}</h3>
+              <h3 className="display text-[1.1rem] text-ivoire text-balance">
+                <Link href={g.href} className="hover:text-orange-deep transition-colors">{g.q}</Link>
+              </h3>
               <p className="text-muted text-[0.88rem] leading-relaxed">{g.texte}</p>
-            </Link>
+              <p className="text-[0.85rem] mt-1">
+                <Link href={g.href} className="text-orange-deep font-medium hover:underline">→ {g.cible}</Link>
+              </p>
+              <div className="mt-2 pt-3 border-t border-line">
+                <span className="text-muted text-[0.72rem] font-semibold tracking-[0.1em] uppercase">Articles du blog sur ce sujet</span>
+                <ul className="flex flex-col gap-1.5 mt-2">
+                  {g.articles.map((a) => (
+                    <li key={a.href}>
+                      <Link href={a.href} className="text-ivoire/85 text-[0.85rem] leading-snug hover:text-orange-deep transition-colors underline underline-offset-4 decoration-line">
+                        {a.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
         </div>
+      </MqSection>
+
+      <MqSection
+        kicker="Tout le blog"
+        title="Les articles publiés, classés par sujet"
+        lead="Les guides ci-dessus orientent une décision ; les articles ci-dessous entrent dans le détail technique. Cette liste suit directement le blog : chaque article publié y apparaît, dans sa catégorie."
+        wide
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-8">
+          {ARTICLES_PAR_CATEGORIE.map(([categorie, articles]) => (
+            <div key={categorie} className="flex flex-col gap-2">
+              <h3 className="font-mono text-[0.68rem] font-bold tracking-[0.14em] uppercase text-orange-deep border-b border-line pb-2">
+                {categorie}
+              </h3>
+              <ul className="flex flex-col gap-2 mt-1">
+                {articles.map((a) => (
+                  <li key={a.slug}>
+                    <Link href={`/blog/${a.slug}`} className="text-ivoire/85 text-[0.88rem] leading-snug hover:text-orange-deep transition-colors">
+                      {a.titre}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <p className="text-muted text-[0.88rem] leading-relaxed mt-8">
+          <Link href="/blog" className="text-orange-deep hover:underline">Parcourir le blog par date de publication</Link>
+          {" · "}
+          <Link href="/services" className="text-orange-deep hover:underline">Voir l&apos;index complet des prestations</Link>
+          {" · "}
+          <Link href="/nos-specialites" className="text-orange-deep hover:underline">Nos spécialités, de la structure aux finitions</Link>
+        </p>
+      </MqSection>
+
+      <MqSection kicker="Zone d'intervention" title="Où ces projets sont étudiés">
+        <p className="text-muted text-[0.95rem] leading-relaxed max-w-2xl">
+          Les décisions décrites dans ces guides valent partout ; l&apos;accompagnement, lui, se limite à une zone
+          géographique. ARCHI PILOTE RÉNOVATION intervient en priorité dans les Hauts-de-Seine et, selon l&apos;ampleur
+          du projet, plus largement en Île-de-France.
+        </p>
+        <ul className="flex flex-col gap-2 mt-4">
+          <li>
+            <Link href="/renovation-hauts-de-seine-92" className="text-orange-deep hover:underline text-[0.95rem]">
+              Rénovation dans les Hauts-de-Seine (92)
+            </Link>
+          </li>
+          <li>
+            <Link href="/renovation-ile-de-france" className="text-orange-deep hover:underline text-[0.95rem]">
+              La zone d&apos;intervention en Île-de-France
+            </Link>
+          </li>
+        </ul>
       </MqSection>
 
       <MqCta lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />

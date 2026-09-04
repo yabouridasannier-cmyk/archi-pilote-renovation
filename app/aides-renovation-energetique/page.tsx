@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
+import { MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/aides-renovation-energetique" },
@@ -28,13 +30,28 @@ export default function Page() {
             Deux dispositifs concernent la plupart des projets de rénovation énergétique : MaPrimeRénov&apos;,
             calculée selon vos revenus et le gain énergétique obtenu, et les Certificats d&apos;Économie
             d&apos;Énergie (CEE), versés par les fournisseurs d&apos;énergie. Ils peuvent se cumuler selon les
-            travaux engagés.
+            travaux engagés. L&apos;ordre dans lequel vérifier leurs règles, qui évoluent d&apos;une année sur
+            l&apos;autre, est détaillé dans notre article{" "}
+            <Link href="/blog/maprimerenov-cee-2026" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              MaPrimeRénov&apos; et CEE : ce qu&apos;il faut vérifier avant de compter sur une aide
+            </Link>
+            .
           </p>
           <p>
             Le gain de classe DPE ne sert à rien si le dossier d&apos;aide n&apos;aboutit pas : les demandes
             doivent généralement être déposées avant le début des travaux, avec des entreprises certifiées
             RGE pour les postes concernés. Nous vous aidons à identifier les pièces à réunir, mais l&apos;étude
-            d&apos;éligibilité et le versement relèvent des organismes officiels.
+            d&apos;éligibilité et le versement relèvent des organismes officiels. Les travaux eux-mêmes — isolation,
+            étanchéité à l&apos;air, ventilation, chauffage — et l&apos;ordre dans lequel les mener sont décrits sur la
+            page{" "}
+            <Link href="/renovation-energetique" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              rénovation énergétique
+            </Link>
+            , et les devis qui accompagnent le dossier peuvent être relus ligne à ligne grâce à la{" "}
+            <Link href="/clinique-du-devis" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              clinique du devis
+            </Link>
+            .
           </p>
           <p className="text-muted text-[0.85rem] font-mono uppercase tracking-wider">Page mise à jour — août 2026</p>
         </div>
@@ -49,6 +66,16 @@ export default function Page() {
           ))}
         </div>
       </section>
+      <MqReadNext
+        items={[
+          { href: "/renovation-energetique", label: "Rénovation énergétique", sub: "Isolation, ventilation, chauffage : l'ordre des travaux" },
+          { href: "/blog/sortir-passoire-energetique", label: "DPE F ou G : comment sortir de la passoire énergétique", sub: "Diagnostic, priorités, démarches" },
+          { href: "/demarches-administratives-renovation", label: "Démarches administratives", sub: "Syndic, urbanisme et pièces à réunir" },
+          { href: "/estimateur-travaux", label: "Estimateur de travaux", sub: "Cadrer un budget avant de monter un dossier" },
+          { href: "/garanties-assurances", label: "Garanties et assurances", sub: "Qualifications et couvertures des entreprises" },
+          { href: "/renovation-hauts-de-seine-92", label: "Rénovation en Hauts-de-Seine", sub: "Notre zone d'intervention" },
+        ]}
+      />
       <CtaFinal />
     </main>
   );

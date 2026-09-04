@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqStats, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 /* 03/09 : le diptyque d'ouverture n'était pas un avant/après. Les deux photos viennent
@@ -81,7 +82,8 @@ export default function Page() {
             <div className="mt-4">
               <MqProse>
                 <p>
-                  Un client qui choisit son carrelage avant de savoir si un mur est porteur inverse l'ordre naturel du risque. Les interventions structurelles, les réseaux principaux, les problèmes d'humidité, l'isolation d'une passoire énergétique et la ventilation mécanique contrôlée conditionnent la faisabilité même du projet de finition envisagé.
+                  Un client qui choisit son carrelage avant de savoir si un mur est porteur inverse l'ordre naturel du risque. Les interventions structurelles, les réseaux principaux, les problèmes d'humidité, l'isolation d'une passoire énergétique et la ventilation mécanique contrôlée conditionnent la faisabilité même du projet de finition envisagé. Lorsqu'un mur doit être modifié, la marche à suivre est détaillée sur la page consacrée à{" "}
+                  <Link href="/ouverture-mur-porteur" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">l'ouverture de mur porteur</Link>.
                 </p>
                 <p>
                   Ces sujets lourds sont donc systématiquement examinés en premier, avec le recours à un architecte DPLG ou à un ingénieur structure partenaire indépendant lorsque le dossier l'exige.
@@ -114,6 +116,11 @@ export default function Page() {
         <MqProse>
           <p>
             La rigueur d'ancien expert en chiffrage appliquée à chaque projet consiste à décomposer le budget en familles homogènes, plutôt que de raisonner en enveloppe globale. Cette décomposition permet d'identifier immédiatement où se situent les marges de négociation et où se situent les postes incompressibles.
+          </p>
+          <p>
+            Poste par poste, les fourchettes indicatives et datées que nous publions sont réunies dans{" "}
+            <Link href="/observatoire-prix-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">l'observatoire des prix de rénovation</Link>. Les devis reçus sont ensuite confrontés ligne à ligne à cette décomposition lors de la{" "}
+            <Link href="/clinique-du-devis" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">clinique du devis</Link>.
           </p>
         </MqProse>
         <MqFig
@@ -193,6 +200,10 @@ export default function Page() {
           </p>
           <p>
             Le pilotage d'ensemble vise à maintenir un fil commun entre les décisions prises, le budget engagé, le phasage des interventions et les différents intervenants du chantier. Il ne remplace en aucun cas la responsabilité technique propre à chaque professionnel exécutant, qui reste seul garant de son ouvrage.
+          </p>
+          <p>
+            Cette organisation s'applique de la même manière sur l'ensemble de notre zone d'intervention, décrite sur la page{" "}
+            <Link href="/renovation-ile-de-france" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">rénovation en Île-de-France</Link>.
           </p>
         </MqProse>
       </MqSection>
@@ -374,12 +385,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
+          { href: "/renovation-appartement", label: "Rénovation d'appartement", sub: "Le même projet, mais en copropriété" },
+          { href: "/renovation-maison-pavillon", label: "Rénovation de maison et pavillon", sub: "Le même projet, mais du sol à la toiture" },
           { href: "/notre-methode", label: "Notre méthode", sub: "Les 8 étapes du pilotage de A à Z" },
-          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
-          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Électricité, plomberie, cloisons" },
-          { href: "/renovation-energetique", label: "Rénovation énergétique", sub: "Passoire énergétique, VMC, isolation" },
-          { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyse ligne à ligne de vos devis" },
-          { href: "/contact", label: "Contact", sub: "Décrire votre projet en détail" },
+          { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Les postes qui se paient au prix fournisseur" },
+          { href: "/garanties-assurances", label: "Garanties et assurances", sub: "Décennale, biennale, parfait achèvement" },
+          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Les lots qui s'enchaînent après la structure" },
         ]}
       />
     </>

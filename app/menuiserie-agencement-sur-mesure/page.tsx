@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqChecklist, MqNumbered, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -35,7 +36,15 @@ export default function Page() {
           </p>
           <p>
             L'écart de budget constaté sur un projet équivalent va de 30 à 50 % sur le poste mobilier, sans écart
-            visible sur le résultat livré.
+            visible sur le résultat livré. Cet arbitrage est détaillé dans notre article{" "}
+            <Link href="/blog/cuisine-sur-mesure-ou-caissons-standards" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              cuisine sur mesure ou caissons standards : où se joue l&apos;économie
+            </Link>
+            , et la façon dont il est répercuté au client sur la page{" "}
+            <Link href="/modele-economique-transparence" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              modèle économique et transparence
+            </Link>
+            .
           </p>
         </MqProse>
         <div className="mt-8">
@@ -343,6 +352,17 @@ export default function Page() {
             "Nettoyage professionnel de fin de chantier systématique, hérité de nos standards de conciergerie.",
           ]}
         />
+        <p className="text-muted text-[0.92rem] leading-relaxed mt-8 max-w-2xl">
+          Le fonctionnement de ces commandes est décrit sur la page{" "}
+          <Link href="/achat-direct-materiaux" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+            achat direct des matériaux
+          </Link>
+          . Ces agencements sont fabriqués et posés dans notre zone d'intervention, présentée sur la page{" "}
+          <Link href="/renovation-ile-de-france" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+            rénovation en Île-de-France
+          </Link>
+          .
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
           <MqFig
             src="/photos/maquette/nettoyage-fin-de-chantier.jpg"
@@ -397,10 +417,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
-          { href: "/expertise-carrelage-zellige-travertin", label: "Expertise carrelage et pierre", sub: "Zellige, travertin, joint époxy" },
+          { href: "/blog/escalier-bois-massif-structure-ouverte-fermee", label: "Escalier bois : structure ouverte ou fermée", sub: "Limon, parement et budget" },
+          { href: "/renovation-cuisine-maison", label: "Rénovation de cuisine", sub: "Implantation, réseaux et pose des meubles" },
           { href: "/savoir-faire-ancien", label: "Charme de l'ancien", sub: "Fenêtres, moulures, crémones" },
-          { href: "/modele-economique-transparence", label: "Modèle économique", sub: "Transparence et optimisation des coûts" },
-          { href: "/estimateur-travaux", label: "Estimateur de travaux", sub: "Fourchette de budget immédiate" },
+          { href: "/expertise-carrelage-zellige-travertin", label: "Expertise carrelage et pierre", sub: "Zellige, travertin, joint époxy" },
+          { href: "/renovation-appartement", label: "Rénovation d'appartement", sub: "Volumes anciens, murs non droits, rangements intégrés" },
+          { href: "/renovation-hauts-de-seine-92", label: "Rénovation en Hauts-de-Seine", sub: "Notre zone d'intervention pour l'agencement" },
         ]}
       />
 

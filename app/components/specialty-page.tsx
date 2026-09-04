@@ -1,16 +1,27 @@
 import Link from "next/link";
 import { PageHeader } from "./page-header";
 import { CtaFinal } from "./cta-final";
+import { MaillageInterne, type Maillage } from "./local-page";
 import { PHOTOS, srcSetOf } from "../lib-photos";
 
 type Segment = { text: string; serif?: boolean; gradient?: boolean };
-type Section = { titre: string; texte: string };
+/* 03/09 : `texte` accepte du JSX et plus seulement une chaîne. Sans cela, aucune page bâtie
+   sur ce gabarit ne pouvait porter un lien dans son corps de texte — ce qui avait conduit à
+   déplier tout le gabarit dans une page pour y glisser trois liens, donc à le dupliquer. */
+type Section = { titre: string; texte: React.ReactNode };
 
 /**
  * Gabarit commun aux pages de spécialité (gros œuvre, second œuvre, ressources).
- * FAQ et maillage interne identiques sur toutes ces pages — cf. brief SEO :
+ *
+ * La FAQ reste commune et volontairement identique partout — cf. brief SEO :
  * "ARCHI PILOTE RÉNOVATION exécute-t-il ce lot ? Non, l'entreprise spécialisée réalise et
- * facture le lot" doit rester visible et cohérent partout, pas réécrit page à page.
+ * facture le lot" doit rester visible et cohérent, pas réécrit page à page.
+ *
+ * 03/09 : le maillage, lui, ne devait PAS être commun. Les 5 pages qui utilisent ce gabarit
+ * affichaient les 4 mêmes liens (méthode, modèle, garanties, estimateur) — donc aucun maillage
+ * réel : aucune ne renvoyait vers une prestation voisine ni vers un article de fond. Le prop
+ * `maillage` est désormais obligatoire, sur le modèle de LocalPage : impossible d'ajouter une
+ * page de spécialité sans lui écrire ses propres liens. La rangée générique est supprimée.
  */
 export function SpecialtyPage({
   eyebrow,
@@ -21,6 +32,7 @@ export function SpecialtyPage({
   photoAlt,
   faqExtra,
   slug,
+  maillage,
 }: {
   eyebrow: string;
   segments: Segment[];
@@ -31,6 +43,8 @@ export function SpecialtyPage({
   faqExtra?: { q: string; r: string }[];
   /** Chemin de la page (ex. "/ouverture-mur-porteur") — génère Service + BreadcrumbList. */
   slug?: string;
+  /** Liens propres à cette page. Obligatoire : un maillage identique partout n'en est pas un. */
+  maillage: Maillage;
 }) {
   const pageTitle = segments.map((s) => s.text).join(" ");
   const jsonLd = slug && [
@@ -115,20 +129,7 @@ export function SpecialtyPage({
         </div>
       </section>
 
-      <section className="relative pb-20 md:pb-28">
-        <div className="container-site max-w-3xl mx-auto flex flex-wrap gap-2.5 justify-center">
-          {[
-            { href: "/notre-methode", label: "Notre méthode" },
-            { href: "/modele-economique-transparence", label: "Notre modèle" },
-            { href: "/garanties-assurances", label: "Garanties et assurances" },
-            { href: "/estimateur-travaux", label: "Estimer un budget" },
-          ].map((l) => (
-            <Link key={l.href} href={l.href} className="btn btn-ghost !py-2.5 !px-5 text-sm">
-              {l.label}
-            </Link>
-          ))}
-        </div>
-      </section>
+      <MaillageInterne {...maillage} />
 
       <CtaFinal />
     </main>

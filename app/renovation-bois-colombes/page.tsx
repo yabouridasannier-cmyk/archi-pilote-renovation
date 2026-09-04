@@ -19,6 +19,38 @@ export default function Page() {
       intro="À Bois-Colombes, nous visons principalement les maisons de ville, pavillons et rénovations où l'existant impose une lecture fine de la structure, des réseaux et de l'enveloppe."
       bulletsTitle="Ce que nous pouvons étudier"
       bullets={["Rénovation complète", "Maison ou appartement selon le bien", "Structure et ouvertures", "Réseaux techniques", "Énergie", "Extension / surélévation si pertinent"]}
+      maillage={{
+        intro:
+          "Sur une maison de ville ou un pavillon, la lecture de l'existant se joue sur trois plans : la structure, l'enveloppe et les réseaux. Chacun a sa page dédiée.",
+        groupes: [
+          {
+            titre: "Lire l'existant, lot par lot",
+            liens: [
+              { href: "/renovation-maison-pavillon", label: "Rénovation de maison et de pavillon" },
+              { href: "/gros-oeuvre-structure", label: "Reprise de structure et gros œuvre" },
+              { href: "/renovation-energetique", label: "Enveloppe et performance énergétique" },
+              { href: "/renovation-complete", label: "Rénover un logement de fond en comble" },
+              { href: "/extension-maison", label: "Extension de maison" },
+              { href: "/surelevation", label: "Surélévation" },
+            ],
+          },
+          {
+            titre: "Communes voisines traitées",
+            liens: [
+              { href: "/renovation-asnieres-sur-seine", label: "Asnières-sur-Seine" },
+              { href: "/renovation-la-garenne-colombes", label: "La Garenne-Colombes" },
+              { href: "/renovation-colombes", label: "Colombes" },
+            ],
+          },
+          {
+            titre: "Territoire",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Rénovation dans les Hauts-de-Seine (92)" },
+              { href: "/renovation-ile-de-france", label: "Nos secteurs en Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

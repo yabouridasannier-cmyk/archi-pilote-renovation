@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -64,6 +65,12 @@ export default function Page() {
           ))}
         </div>
 
+        <p className="mt-8 max-w-2xl text-[0.95rem] leading-relaxed text-ivoire/85">
+          Lorsque l'ouverture envisagée relève d'une reprise de charges et non d'une simple cloison, la
+          démarche complète — étude, étaiement, portique, réception — est décrite sur la page{" "}
+          <Link href="/ouverture-mur-porteur" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">ouverture de mur porteur</Link>.
+        </p>
+
         {/*
           03/09 : un bloc de trois photos de pièces livrées (cuisine, salle d'eau, salon) avait été
           ajouté ici sous l'intitulé « Ce que ces contraintes donnent une fois le logement livré ».
@@ -85,6 +92,11 @@ export default function Page() {
         <MqProse>
           <p>
             Ce dossier est adressé au syndic avec une demande d'inscription à l'ordre du jour de l'assemblée générale. Lorsqu'une traversée de façade ou de plancher est nécessaire, le carottage est réalisé par une entreprise spécialisée, après validation.
+          </p>
+          <p>
+            Le détail de ces{" "}
+            <Link href="/demarches-administratives-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">démarches administratives en copropriété</Link>{" "}
+            — syndic, assemblée générale, déclaration préalable en mairie — fait l'objet d'une page dédiée.
           </p>
         </MqProse>
         <div className="mt-8">
@@ -149,6 +161,11 @@ export default function Page() {
             },
           ]}
         />
+        <p className="mt-8 max-w-2xl text-[0.95rem] leading-relaxed text-ivoire/85">
+          Ce déroulé ne change pas d'un immeuble à l'autre : il s'applique de la même manière sur toute
+          notre zone d'intervention, dont les{" "}
+          <Link href="/renovation-hauts-de-seine-92" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">Hauts-de-Seine (92)</Link>.
+        </p>
         <div className="mt-10 max-w-3xl">
           <MqFig
             src="/photos/maquette/schema-demarches-copropriete.jpg"
@@ -266,6 +283,11 @@ export default function Page() {
         title="Où se gagnent les économies"
         lead="Le prix se construit avant le chantier. Une fois les entreprises engagées, la marge de manœuvre devient marginale."
       >
+        <p className="mb-8 max-w-2xl text-[0.95rem] leading-relaxed text-ivoire/85">
+          Le premier de ces trois leviers,{" "}
+          <Link href="/achat-direct-materiaux" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">l'achat direct des matériaux</Link>,
+          est détaillé poste par poste sur sa propre page.
+        </p>
         <MqNumbered
           cols={3}
           items={[
@@ -323,9 +345,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
-          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Électricité, plomberie, cloisons, salles d'eau" },
-          { href: "/demarches-administratives-renovation", label: "Démarches auprès du syndic", sub: "Copropriété et assemblée générale" },
+          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Cloisons, étanchéité, finitions" },
+          { href: "/electricite-plomberie-renovation", label: "Électricité et plomberie", sub: "Les réseaux qui commandent le plan" },
+          { href: "/renovation-salle-de-bain-maison", label: "Rénovation de salle de bain", sub: "Évacuations, pentes, étanchéité" },
+          { href: "/renovation-cuisine-maison", label: "Rénovation de cuisine", sub: "Implantation arrêtée avant les réseaux" },
           { href: "/observatoire-prix-renovation", label: "Observatoire des prix réels", sub: "Fourchettes constatées en Île-de-France" },
+          { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France", sub: "Notre zone d'intervention" },
         ]}
       />
     </>

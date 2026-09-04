@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqChecklist, MqNumbered, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -8,18 +9,19 @@ export const metadata: Metadata = {
     "Fourchettes de prix indicatives et datées par poste de travaux en Île-de-France : démolition, plomberie, électricité, cloisons, isolation, mur porteur, carottage et plus.",
 };
 
+// `href` : page du site qui décrit les travaux correspondant au poste (maillage interne).
 const FOURCHETTES = [
-  { poste: "Démolition / dépose", unite: "m² ou forfait pièce", prix: "20 – 60 € / m²", min: 20, max: 60 },
-  { poste: "Plomberie (rénovation complète)", unite: "point d'eau", prix: "400 – 900 € / point", min: 400, max: 900 },
-  { poste: "Électricité (mise aux normes)", unite: "m² habitable", prix: "70 – 130 € / m²", min: 70, max: 130 },
-  { poste: "Cloisons (placo sur ossature)", unite: "m²", prix: "45 – 90 € / m²", min: 45, max: 90 },
-  { poste: "Peinture (préparation incluse)", unite: "m² au sol", prix: "25 – 55 € / m²", min: 25, max: 55 },
-  { poste: "Carrelage (pose incluse)", unite: "m²", prix: "50 – 110 € / m²", min: 50, max: 110 },
-  { poste: "Menuiseries extérieures", unite: "unité posée", prix: "500 – 1 400 € / fenêtre", min: 500, max: 1400 },
-  { poste: "Isolation thermique (intérieure)", unite: "m² de paroi", prix: "40 – 90 € / m²", min: 40, max: 90 },
-  { poste: "Ventilation (VMC simple à double flux)", unite: "logement", prix: "1 500 – 6 000 € / logement", min: 1500, max: 6000 },
-  { poste: "Ouverture de mur porteur", unite: "ouverture", prix: "3 000 – 9 000 € / ouverture", min: 3000, max: 9000 },
-  { poste: "Carottage (diagnostic ou passage réseau)", unite: "forage", prix: "150 – 450 € / forage", min: 150, max: 450 },
+  { poste: "Démolition / dépose", unite: "m² ou forfait pièce", prix: "20 – 60 € / m²", min: 20, max: 60, href: "/gros-oeuvre-structure" },
+  { poste: "Plomberie (rénovation complète)", unite: "point d'eau", prix: "400 – 900 € / point", min: 400, max: 900, href: "/electricite-plomberie-renovation" },
+  { poste: "Électricité (mise aux normes)", unite: "m² habitable", prix: "70 – 130 € / m²", min: 70, max: 130, href: "/electricite-plomberie-renovation" },
+  { poste: "Cloisons (placo sur ossature)", unite: "m²", prix: "45 – 90 € / m²", min: 45, max: 90, href: "/second-oeuvre" },
+  { poste: "Peinture (préparation incluse)", unite: "m² au sol", prix: "25 – 55 € / m²", min: 25, max: 55, href: "/sols-finitions-renovation" },
+  { poste: "Carrelage (pose incluse)", unite: "m²", prix: "50 – 110 € / m²", min: 50, max: 110, href: "/expertise-carrelage-zellige-travertin" },
+  { poste: "Menuiseries extérieures", unite: "unité posée", prix: "500 – 1 400 € / fenêtre", min: 500, max: 1400, href: "/menuiserie-agencement-sur-mesure" },
+  { poste: "Isolation thermique (intérieure)", unite: "m² de paroi", prix: "40 – 90 € / m²", min: 40, max: 90, href: "/renovation-energetique" },
+  { poste: "Ventilation (VMC simple à double flux)", unite: "logement", prix: "1 500 – 6 000 € / logement", min: 1500, max: 6000, href: "/renovation-energetique" },
+  { poste: "Ouverture de mur porteur", unite: "ouverture", prix: "3 000 – 9 000 € / ouverture", min: 3000, max: 9000, href: "/ouverture-mur-porteur" },
+  { poste: "Carottage (diagnostic ou passage réseau)", unite: "forage", prix: "150 – 450 € / forage", min: 150, max: 450, href: "/chantiers-complexes" },
 ];
 
 // Échelle logarithmique commune au graphique (les postes ci-dessus vont de 20 € à 9 000 €).
@@ -127,7 +129,11 @@ export default function Page() {
             <tbody>
               {FOURCHETTES.map((r) => (
                 <tr key={r.poste} className="border-b border-line last:border-b-0 align-top">
-                  <td className="px-4 py-3 font-medium text-ivoire">{r.poste}</td>
+                  <td className="px-4 py-3 font-medium text-ivoire">
+                    <Link href={r.href} className="hover:text-orange-deep transition-colors underline underline-offset-4 decoration-line">
+                      {r.poste}
+                    </Link>
+                  </td>
                   <td className="px-4 py-3 text-muted leading-relaxed">{r.unite}</td>
                   <td className="px-4 py-3 text-ivoire/85 leading-relaxed whitespace-nowrap">{r.prix}</td>
                 </tr>
@@ -138,6 +144,7 @@ export default function Page() {
         <p className="text-muted text-[0.85rem] leading-relaxed mt-4 max-w-2xl">
           Données indicatives, Île-de-France, premier semestre 2024. Fourchettes établies à partir d'un ensemble
           d'exemples représentatifs de projets accompagnés, hors matériaux achetés en direct par le client.
+          Chaque intitulé de poste renvoie vers la page qui décrit les travaux correspondants.
         </p>
       </MqSection>
 
@@ -254,6 +261,45 @@ export default function Page() {
         </div>
       </MqSection>
 
+      <MqSection
+        kicker="PASSER DU REPÈRE AU BUDGET"
+        title="Ce qu'il faut lire pour transformer une fourchette en enveloppe"
+        lead="Une fourchette situe un ordre de grandeur. Le budget d'un projet, lui, se construit à partir du logement réel, du périmètre du devis et du mode d'achat des matériaux."
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
+          <div>
+            <h3 className="display text-[1.05rem] text-ivoire">Chiffrer et vérifier</h3>
+            <ul className="flex flex-col gap-2 mt-3">
+              <li><Link href="/estimateur-travaux" className="text-orange-deep hover:underline text-[0.92rem]">Estimer une enveloppe de travaux en quelques questions</Link></li>
+              <li><Link href="/clinique-du-devis" className="text-orange-deep hover:underline text-[0.92rem]">Lire un devis de travaux ligne à ligne</Link></li>
+              <li><Link href="/modele-economique-transparence" className="text-orange-deep hover:underline text-[0.92rem]">Qui facture quoi : le modèle économique détaillé</Link></li>
+              <li><Link href="/achat-direct-materiaux" className="text-orange-deep hover:underline text-[0.92rem]">Acheter les matériaux en direct, à votre nom</Link></li>
+              <li><Link href="/aides-renovation-energetique" className="text-orange-deep hover:underline text-[0.92rem]">Les aides mobilisables sur les travaux énergétiques</Link></li>
+              <li><Link href="/services" className="text-orange-deep hover:underline text-[0.92rem]">L&apos;index complet des prestations pilotées</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="display text-[1.05rem] text-ivoire">Articles du blog sur le budget et le devis</h3>
+            <ul className="flex flex-col gap-2 mt-3">
+              <li><Link href="/blog/prix-renovation-maison-2026" className="text-orange-deep hover:underline text-[0.92rem]">Ce que coûtent des travaux de rénovation de maison en 2026</Link></li>
+              <li><Link href="/blog/devis-travaux-lignes-a-verifier" className="text-orange-deep hover:underline text-[0.92rem]">Les lignes d&apos;un devis à vérifier avant de signer</Link></li>
+              <li><Link href="/blog/cuisine-sur-mesure-ou-caissons-standards" className="text-orange-deep hover:underline text-[0.92rem]">Cuisine sur mesure ou caissons standards : où se joue l&apos;économie</Link></li>
+              <li><Link href="/blog/parquet-massif-contrecolle-stratifie" className="text-orange-deep hover:underline text-[0.92rem]">Parquet massif, contrecollé ou stratifié : quel revêtement pour quel usage</Link></li>
+              <li><Link href="/blog/maprimerenov-cee-2026" className="text-orange-deep hover:underline text-[0.92rem]">MaPrimeRénov&apos; et CEE : ce qu&apos;il faut vérifier avant de compter sur une aide</Link></li>
+              <li><Link href="/blog/ipn-hea-heb-choix-profile" className="text-orange-deep hover:underline text-[0.92rem]">IPN, HEA ou HEB : ce que change le choix du profilé</Link></li>
+            </ul>
+          </div>
+        </div>
+        <p className="text-muted text-[0.9rem] leading-relaxed mt-8 max-w-2xl">
+          Ces repères valent pour la zone dans laquelle les projets sont accompagnés :{" "}
+          <Link href="/renovation-hauts-de-seine-92" className="text-orange-deep hover:underline">les Hauts-de-Seine (92)</Link>
+          {" "}en priorité et, selon l&apos;ampleur du chantier,{" "}
+          <Link href="/renovation-ile-de-france" className="text-orange-deep hover:underline">le reste de l&apos;Île-de-France</Link>.
+          Le vocabulaire employé dans les devis est détaillé dans{" "}
+          <Link href="/glossaire-renovation" className="text-orange-deep hover:underline">le glossaire technique</Link>.
+        </p>
+      </MqSection>
+
       <MqSection kicker="QUESTIONS FRÉQUENTES" title="Ce que les porteurs de projet demandent sur ces prix">
         <MqFaq
           items={[
@@ -292,6 +338,9 @@ export default function Page() {
           { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyser un devis ligne à ligne" },
           { href: "/modele-economique-transparence", label: "Modèle économique & transparence", sub: "Achats en direct, jusqu'à 20 % d'économies" },
           { href: "/realisations", label: "Réalisations", sub: "Cas datés et documentés" },
+          { href: "/estimateur-travaux", label: "Estimateur de travaux", sub: "Une enveloppe en quelques questions" },
+          { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Facture à votre nom, sans marge" },
+          { href: "/guides", label: "Guides & conseils", sub: "Les articles classés par sujet" },
         ]}
       />
 

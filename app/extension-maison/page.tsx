@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqStats, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -43,7 +44,12 @@ export default function Page() {
                   Avant d'imaginer la disposition intérieure de l'extension, il faut vérifier ce que le document
                   d'urbanisme de la commune autorise réellement : distance par rapport aux limites de propriété,
                   hauteur maximale, emprise au sol restante, coefficient éventuel. Ces règles varient fortement
-                  d'une commune à l'autre et parfois d'une rue à l'autre.
+                  d'une commune à l'autre et parfois d'une rue à l'autre. Le contenu du dossier à déposer est
+                  décrit sur la page{" "}
+                  <Link href="/demarches-administratives-renovation" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                    démarches administratives : déclaration préalable et permis de construire
+                  </Link>
+                  .
                 </p>
               </MqProse>
             </div>
@@ -59,7 +65,12 @@ export default function Page() {
                 <p>
                   Un terrain difficile d'accès impose souvent des matériaux plus légers ou un phasage de livraison
                   différent, avec un impact direct sur le budget. La structure existante de la maison doit
-                  également être vérifiée avant de définir le mode de liaison entre l'ancien et le neuf.
+                  également être vérifiée avant de définir le mode de liaison entre l'ancien et le neuf : ces
+                  vérifications relèvent du{" "}
+                  <Link href="/gros-oeuvre-structure" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                    gros œuvre et de la reprise de structure
+                  </Link>
+                  .
                 </p>
                 <p>
                   Un budget précis annoncé avant ces vérifications peut donc être trompeur. C'est pourquoi l'étude
@@ -179,7 +190,12 @@ export default function Page() {
                   Une extension plus étanche que le bâti ancien modifie l'équilibre de ventilation de l'ensemble
                   de la maison. L'installation ou l'extension d'une ventilation mécanique contrôlée hygroréglable
                   est fréquemment nécessaire. L'alimentation en eau et les évacuations doivent également être
-                  vérifiées, en particulier si l'extension accueille une cuisine ou une salle d'eau.
+                  vérifiées, en particulier si l'extension accueille une cuisine ou une salle d'eau. Le lien entre
+                  isolation, étanchéité à l'air et ventilation est développé sur la page{" "}
+                  <Link href="/renovation-energetique" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                    rénovation énergétique
+                  </Link>
+                  .
                 </p>
               </MqProse>
             </div>
@@ -246,7 +262,11 @@ export default function Page() {
             ARCHI PILOTE RÉNOVATION structure et pilote le projet d'extension : lecture du terrain,
             hiérarchisation des travaux, mise en relation avec les architectes DPLG ou ingénieurs structure
             partenaires indépendants lorsque le dossier l'exige, et suivi quotidien par photos datées jusqu'à la
-            livraison.
+            livraison. Ces projets sont pilotés dans notre zone d'intervention, présentée sur la page{" "}
+            <Link href="/renovation-ile-de-france" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              rénovation en Île-de-France
+            </Link>
+            .
           </p>
         </MqProse>
         <div className="mt-8">
@@ -373,12 +393,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
-          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
+          { href: "/blog/extension-ou-surelevation-maison", label: "Extension ou surélévation : choisir selon votre terrain", sub: "Le terrain tranche avant le budget" },
           { href: "/surelevation", label: "Surélévation", sub: "L'alternative à l'extension au sol" },
-          { href: "/notre-methode", label: "Notre méthode", sub: "Les 8 étapes du pilotage" },
-          { href: "/renovation-energetique", label: "Rénovation énergétique", sub: "Isolation, ventilation, passoire énergétique" },
-          { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyse ligne à ligne de vos devis" },
-          { href: "/contact", label: "Contact", sub: "Décrire votre projet d'extension" },
+          { href: "/electricite-plomberie-renovation", label: "Électricité et plomberie", sub: "Tableau, réseaux et évacuations à prolonger" },
+          { href: "/demarches-administratives-renovation", label: "Démarches administratives", sub: "Déclaration préalable, permis de construire, PLU" },
+          { href: "/observatoire-prix-renovation", label: "Observatoire des prix réels", sub: "Fourchettes constatées avant chiffrage" },
+          { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France", sub: "Notre zone d'intervention pour les extensions" },
         ]}
       />
     </main>

@@ -18,6 +18,39 @@ export default function Page() {
       intro="Dans l'Essonne, ARCHI PILOTE RÉNOVATION intervient de manière sélective sur les rénovations complètes et projets à forte valeur de pilotage, notamment lorsqu'ils combinent plusieurs lots, performance énergétique, structure ou transformation importante."
       bulletsTitle="Projets prioritaires"
       bullets={["Rénovation complète de maison", "Extension", "Surélévation selon faisabilité", "Toiture / charpente", "Rénovation énergétique", "Redistribution et réseaux"]}
+      maillage={{
+        titre: "Vérifier si le projet justifie un pilotage",
+        intro:
+          "L'Essonne est étudiée de façon sélective : plus le projet compte de lots et d'arbitrages, plus un pilotage d'ensemble a du sens. Ces pages aident à situer le vôtre avant tout déplacement.",
+        groupes: [
+          {
+            titre: "Mesurer l'ampleur du projet",
+            liens: [
+              { href: "/estimateur-travaux", label: "Estimer un budget travaux" },
+              { href: "/observatoire-prix-renovation", label: "Observatoire des prix de la rénovation" },
+              { href: "/clinique-du-devis", label: "Faire relire un devis d'entreprise" },
+              { href: "/chantiers-complexes", label: "Chantiers multi-lots" },
+            ],
+          },
+          {
+            titre: "Nature des travaux étudiés",
+            liens: [
+              { href: "/renovation-complete", label: "Rénovation complète de maison" },
+              { href: "/gros-oeuvre-structure", label: "Structure et gros œuvre" },
+              { href: "/renovation-energetique", label: "Performance énergétique" },
+              { href: "/extension-maison", label: "Extension de maison" },
+            ],
+          },
+          {
+            titre: "Territoires voisins",
+            liens: [
+              { href: "/renovation-val-de-marne-94", label: "Val-de-Marne (94)" },
+              { href: "/renovation-yvelines-78", label: "Yvelines (78)" },
+              { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

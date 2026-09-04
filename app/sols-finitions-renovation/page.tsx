@@ -41,6 +41,35 @@ export default function Page() {
         { titre: "Compatibilité des systèmes", texte: "Primaire, colle, ragréage, support et finition doivent fonctionner ensemble, pas être choisis indépendamment les uns des autres." },
         { titre: "Protection en fin de chantier", texte: "Les finitions posées trop tôt sont souvent abîmées par les derniers lots — le séquencement protège aussi le travail déjà fait." },
       ]}
+      maillage={{
+        intro:
+          "Le revêtement de sol arrive en fin de séquence, mais il dépend de décisions prises bien plus tôt : support, chape, réseaux encastrés et menuiseries.",
+        groupes: [
+          {
+            titre: "Ce qui conditionne la pose",
+            liens: [
+              { href: "/second-oeuvre", label: "Enchaînement des lots de second œuvre" },
+              { href: "/expertise-carrelage-zellige-travertin", label: "Carrelage, zellige et travertin" },
+              { href: "/detail-invisible", label: "Les ouvrages qui disparaissent sous la finition" },
+            ],
+          },
+          {
+            titre: "Choisir et budgéter",
+            liens: [
+              { href: "/achat-direct-materiaux", label: "Acheter son revêtement en direct" },
+              { href: "/observatoire-prix-renovation", label: "Repères de prix par poste" },
+              { href: "/menuiserie-agencement-sur-mesure", label: "Raccords avec la menuiserie sur mesure" },
+            ],
+          },
+          {
+            titre: "Zone d'intervention",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Hauts-de-Seine" },
+              { href: "/renovation-ile-de-france", label: "Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

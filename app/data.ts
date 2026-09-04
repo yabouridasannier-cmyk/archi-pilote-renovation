@@ -151,6 +151,31 @@ export const ARTICLES: Article[] = [
      quatre autres photos de cette salle de bains sont soit déjà employées
      (chIsolationLaineUrsaVarioSdb sur l'article aides, chParVapeurSopremaMuralSdb
      en hero de l'article VMC), soit des recadrages de celles-ci. */
+  /* 04/09 : les six derniers articles du plan éditorial du dossier client (30 articles
+     prévus, 24 en ligne). Sujets restants : budget d'extension, ordre des travaux
+     énergétiques, écart entre deux devis, achat direct des matériaux, projets refusés,
+     dossier de fin de chantier. Tous administratifs ou méthodologiques : aucune photo
+     du fonds ne les illustre honnêtement — les 244 clichés de chantier sont déjà tous
+     employés et le fonds compte 75 groupes de quasi-doublons (docs/DOUBLONS-VISUELS.md).
+     Chacun reçoit donc un schéma pédagogique dédié, dessiné pour l'article, en héros.
+     Le héros n'a pas de figcaption dans app/blog/[slug]/page.tsx : la nature « schéma
+     pédagogique » de ces images est portée par leur déclaration dans lib-photos.ts.
+     Aucun de ces six articles ne porte d'img2/img3 : les seules photos réelles encore
+     libres du fonds sont des ouvrages de menuiserie et deux chantiers ruraux (charpente
+     de grange, livraison de coque de piscine) sans rapport avec ces sujets. */
+  {
+    slug: "dossier-fin-de-chantier-pieces-a-reunir",
+    titre: "Le dossier de fin de chantier : les pièces à réunir pendant les travaux",
+    date: "3 septembre 2026", dateISO: "2026-09-03",
+    categorie: "Réception",
+    excerpt: "Ce dossier ne se constitue pas après la réception : chaque pièce se récupère au moment où elle existe, sans quoi elle devient introuvable.",
+    photo: "pedaDossierFinChantier",
+    corps: [
+      "Sur un chantier de particulier, aucun texte n'impose au maître d'ouvrage de constituer un dossier de fin de chantier : c'est une pratique, pas une formalité. Elle se justifie par une observation simple — les documents utiles trois ans plus tard sont ceux que personne ne pense à demander pendant que le chantier tourne. Une attestation d'assurance se réclame avant le démarrage d'une entreprise, pas après son départ. Une référence de teinte se relève sur le pot avant qu'il ne parte à la benne. Un plan des réseaux se photographie avant le doublage. Constituer ce dossier consiste donc moins à archiver qu'à récupérer chaque pièce au moment exact où elle existe encore.",
+      "Quatre familles composent ce dossier. L'administratif d'abord : devis signés de chaque entreprise, avenants, factures et échéanciers, autorisations d'urbanisme délivrées le cas échéant, et, en copropriété, la décision d'assemblée générale et les échanges avec le syndic. Le technique ensuite : plans et relevés remis à jour de ce qui a réellement été exécuté, photographies des réseaux et des ouvrages prises avant fermeture des murs et des planchers, notes de calcul et pièces d'études lorsqu'un bureau d'études est intervenu, procès-verbaux d'essais et de mise en service quand ils existent. Les assurances ensuite : l'attestation de garantie décennale de chaque entreprise, en cours de validité à la date d'ouverture du chantier, et le contrat de dommages-ouvrage s'il a été souscrit. L'exploitation enfin : notices, certificats de garantie des équipements, références des matériaux, des teintes et de la quincaillerie, et les coordonnées des entreprises intervenues, lot par lot.",
+      "S'y ajoutent les pièces produites le jour même : le procès-verbal de réception signé, la liste des réserves et, plus tard, l'écrit qui constate leur levée. Ces documents portent une date qui compte, puisque c'est la réception qui fait courir les garanties — parfait achèvement pendant un an, biennale sur les équipements dissociables pendant deux ans, décennale pendant dix ans. Sur un chantier où chaque entreprise contracte directement avec vous, le dossier se tient donc par lot : un intercalaire par entreprise, avec son devis, ses avenants, ses attestations, son procès-verbal et ses réserves. Le reste tient à la discipline : nommer les fichiers de façon lisible, dater les photos, conserver une copie numérique en plus du papier. Ce dossier sert ensuite à trois moments précis — une panne ou un désordre, où il faut retrouver qui a posé quoi et sous quelle garantie ; un chantier ultérieur, où percer sans le plan des réseaux revient à travailler à l'aveugle ; une revente, où il documente ce qui a réellement été fait.",
+    ],
+  },
   {
     slug: "reception-chantier-preparer-les-reserves",
     titre: "Réception de chantier : préparer les réserves sans improviser",
@@ -320,6 +345,19 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "deux-devis-meme-chantier-ecart-de-prix",
+    titre: "Deux devis pour le même chantier : d'où vient réellement l'écart",
+    date: "23 août 2026", dateISO: "2026-08-23",
+    categorie: "Devis",
+    excerpt: "Un écart entre deux devis ne dit rien du sérieux des entreprises tant qu'on n'a pas identifié ce que chacune a réellement chiffré.",
+    photo: "pedaDeuxDevisEcart",
+    corps: [
+      "Deux entreprises visitent le même logement, entendent la même demande, et rendent deux chiffrages qui ne se ressemblent pas. Le réflexe est de conclure que l'une est chère et l'autre honnête. C'est rarement la bonne lecture : dans la majorité des cas, les deux devis ne portent pas sur le même ouvrage. Comparer deux totaux n'a de sens qu'après avoir vérifié que le périmètre, les hypothèses techniques et les fournitures sont identiques de part et d'autre — c'est-à-dire après avoir reconstitué, ligne à ligne, ce que chacun a mis dedans et ce qu'il a laissé dehors.",
+      "Le premier écart tient au périmètre. Les postes qui disparaissent le plus souvent d'un chiffrage sont ceux qui ne se voient pas sur le résultat : dépose et évacuation en déchèterie, protections des ouvrages conservés et des parties communes, installation de chantier, reprises et raccords autour de l'ouvrage, nettoyage de fin de chantier, et parfois l'échafaudage ou la nacelle. Le deuxième tient aux hypothèses techniques. Sur une même salle de bain, l'un prévoit la dépose complète du support et un ragréage, l'autre pose sur l'existant ; l'un chiffre un système d'étanchéité sous carrelage, l'autre s'en tient à un carrelage collé ; l'un reprend le tableau électrique, l'autre repique sur le circuit en place. Ces choix ne se lisent pas dans le total, seulement dans le descriptif. Le troisième tient aux fournitures : gamme et provenance retenues, et surtout la mention « fourniture et pose » ou « pose seule », qui suffit à elle seule à expliquer un écart considérable entre deux propositions.",
+      "Restent trois causes moins visibles. Les aléas provisionnés : une entreprise qui a déjà ouvert des planchers dans le même type d'immeuble intègre une part d'inconnu que son concurrent découvrira en cours de chantier, sous forme d'avenant. Le montage : intervention en direct ou recours à la sous-traitance, chacun avec ses assurances propres, ce que l'attestation de décennale permet de vérifier avant signature. Et le régime fiscal : le taux de TVA applicable dépend de la nature des travaux et du logement, il se vérifie au cas par cas et doit apparaître clairement sur chaque devis. La méthode qui rend les devis comparables est donc en amont : remettre à toutes les entreprises consultées le même descriptif écrit, avec les mêmes quantités et les mêmes hypothèses, puis demander à chacune de compléter les lignes manquantes plutôt que d'arbitrer sur le total. Un devis moins cher parce qu'il oublie un poste ne fait pas économiser : il reporte la dépense au milieu du chantier, au moment où la comparaison n'est plus possible.",
+    ],
+  },
+  {
     slug: "surelevation-etude-des-fondations",
     titre: "Surélévation : pourquoi l'étude des fondations vient avant le dessin",
     date: "22 août 2026", dateISO: "2026-08-22",
@@ -365,6 +403,19 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "extension-maison-postes-oublies-budget",
+    titre: "Extension de maison : les postes absents des premiers budgets",
+    date: "19 août 2026", dateISO: "2026-08-19",
+    categorie: "Extension",
+    excerpt: "Un budget d'extension se construit rarement faux sur le gros œuvre. Il se construit faux sur ce qui l'entoure : terrassement, réseaux, accès et raccords.",
+    photo: "pedaExtensionCoutsOublies",
+    corps: [
+      "Un premier budget d'extension se fabrique presque toujours de la même manière : une surface, un prix au mètre carré trouvé en ligne, une multiplication. Le résultat n'est pas absurde — il décrit assez bien la construction du volume neuf. Il ne décrit rien de ce qui l'entoure, et c'est précisément là que se logent les écarts constatés plus tard. Une extension n'est pas un bâtiment posé à côté d'une maison : c'est un ouvrage qui doit être creusé, raccordé, approché, greffé sur l'existant, puis raccordé aux finitions des pièces qu'il prolonge. Chacune de ces cinq opérations a un coût, et aucune n'entre dans un prix au mètre carré.",
+      "Le terrassement vient en premier, avec une donnée que personne n'anticipe : les terres extraites doivent partir. Leur volume, la possibilité ou non de les stocker sur la parcelle, et la filière d'évacuation pèsent bien plus que le creusement lui-même. Les fondations, ensuite, dépendent du sol : leur type et leur profondeur découlent d'une étude géotechnique, qui se mène parcelle par parcelle et non par analogie avec la maison voisine. Les réseaux suivent : alimentation en eau, évacuations d'eaux usées et d'eaux pluviales avec leur pente et leur point de rejet, électricité et éventuel renforcement du branchement, gaz, télécommunications. Selon les cas, il s'agit d'étendre un réseau intérieur, de modifier un branchement auprès du concessionnaire, ou d'ouvrir des tranchées à travers un jardin qu'il faudra remettre en état. L'accès enfin : livraisons, portage, levage, protection des sols du terrain et emplacement de stockage. Une parcelle en fond de rue ou une maison mitoyenne sans passage latéral change la logistique, donc les moyens, donc le prix.",
+      "Reste ce qui touche à l'existant, la partie la plus régulièrement absente. Ouvrir la façade pour relier les deux volumes suppose une reprise de charge étudiée, avec les mêmes exigences qu'une ouverture de mur porteur. Le raccord de couverture, le traitement de l'étanchéité à la jonction et la reprise de l'enduit ou du bardage sur la façade existante s'ajoutent au neuf. Les équipements suivent le même chemin : le réseau de chauffage doit être étendu et sa production réexaminée, le tableau électrique repris, la ventilation revue pour l'ensemble du logement et non pour la seule pièce nouvelle. À cela s'ajoutent les études, diagnostics et assurances, l'autorisation d'urbanisme et son délai d'instruction, et le recours à un architecte lorsque le seuil de surface l'impose — un point qui se vérifie au cas par cas, avec le service urbanisme de la commune. Les finitions ferment la liste : sols, plinthes et peintures ne s'arrêtent pas à la limite du neuf, ils se raccordent aux pièces adjacentes, parfois sur toute leur surface lorsque le revêtement d'origine n'existe plus au catalogue.",
+    ],
+  },
+  {
     slug: "prix-renovation-maison-2026",
     titre: "Combien coûtent des travaux de rénovation de maison en 2026 ?",
     date: "18 août 2026", dateISO: "2026-08-18",
@@ -384,6 +435,19 @@ export const ARTICLES: Article[] = [
       "Le prix d'une rénovation dépend d'abord de son ampleur, bien plus que de la surface seule. Un rafraîchissement (peinture, sols simples) se situe entre 250 et 450 €/m². Une rénovation partielle, qui touche une ou deux pièces avec de la plomberie et de l'électricité, grimpe à 600-900 €/m². Une rénovation complète — toutes les pièces refaites, cuisine et salle de bain neuves — se chiffre entre 1000 et 1500 €/m². Le haut de gamme, avec des matériaux premium et des finitions d'architecte, démarre à 1500 €/m² et peut dépasser 2500 €/m².",
       "Ces fourchettes restent indicatives : seul un devis détaillé après visite technique, remis par l'entreprise qui réalisera les travaux, donne un chiffrage fiable poste par poste. C'est pour cette raison que les devis des entreprises partenaires arrivent sous 48h après la visite — vous devez pouvoir comparer et décider vite, avec des chiffres réels et non des estimations vagues.",
       "Un point souvent oublié : la TVA. Elle est réduite à 10 % sur les travaux d'amélioration d'un logement de plus de 2 ans, et descend à 5,5 % sur les travaux d'amélioration énergétique éligibles. Sur un chantier de 60 000 €, la différence entre 20 % et 10 % de TVA représente 6 000 € — un budget qui peut financer une cuisine entière. Ce taux s'applique aux travaux facturés par l'entreprise ; les matériaux achetés en direct par le client relèvent du taux standard.",
+    ],
+  },
+  {
+    slug: "renovation-energetique-ordre-des-travaux",
+    titre: "Rénovation énergétique : pourquoi changer le chauffage en premier est risqué",
+    date: "16 août 2026", dateISO: "2026-08-16",
+    categorie: "Rénovation énergétique",
+    excerpt: "Un générateur choisi avant l'isolation est dimensionné pour un logement qui n'existera plus. L'ordre des travaux n'est pas une préférence, c'est une conséquence du calcul.",
+    photo: "pedaOrdreRenovationEnergetique",
+    corps: [
+      "La chaudière est l'équipement le plus visible d'un logement mal isolé : elle tourne, elle fait du bruit, elle coûte. C'est aussi celui qu'on remplace en premier, et c'est l'ordre le plus coûteux. La raison est arithmétique : la puissance nécessaire à un logement découle de ses déperditions. Isoler l'enveloppe les réduit, donc réduit la puissance à installer. Un générateur choisi avant les travaux d'isolation est dimensionné pour un bâtiment qui va disparaître ; installé, il fonctionnera en cycles courts, s'usera plus vite et régulera moins bien qu'un appareil correctement dimensionné. Le surcoût est double : l'appareil a été payé trop gros, et il travaille dans de mauvaises conditions pendant toute sa durée de vie.",
+      "L'ordre technique est stable, quel que soit le logement. Un état des lieux d'abord : repérage des déperditions, examen de l'existant, et audit énergétique lorsque le projet le justifie ou qu'un dispositif d'aide l'exige. L'enveloppe ensuite, en commençant par là où les pertes sont les plus fortes — toiture et combles, murs, planchers bas, puis menuiseries — avec un soin particulier porté aux points singuliers et aux jonctions, qui décident du résultat autant que l'épaisseur d'isolant. La ventilation immédiatement après : un logement rendu étanche doit disposer d'un chemin d'air complet, sans quoi l'humidité produite à l'intérieur reste dedans et se dépose sur les parois. Les émetteurs enfin, avant le générateur : c'est leur température de fonctionnement qui conditionne le choix, en particulier lorsqu'une pompe à chaleur est envisagée, car un réseau conçu pour de la haute température ne donne rien à basse température. Le générateur vient en dernier, dimensionné sur le logement tel qu'il sera, pas tel qu'il est.",
+      "Reste le cas réel : une chaudière en panne au mois de janvier ne se remplace pas dans deux ans. Là, l'ordre ne s'inverse pas, il s'aménage — on remplace, mais en dimensionnant l'appareil sur le logement isolé à venir, et en choisissant un modèle et un réseau compatibles avec les travaux prévus. C'est aussi la raison pour laquelle un programme énergétique se pose en une fois et s'exécute par étapes, plutôt que de s'improviser équipement par équipement. Deux points enfin, à traiter avant de signer quoi que ce soit : les dispositifs d'aide comportent leurs propres conditions — nature des travaux, performance atteinte, qualification de l'entreprise, ordre et antériorité de la demande — et ces règles évoluent, ce qui impose de les vérifier au cas par cas auprès des organismes officiels avant l'engagement. Et l'ensemble des pièces produites au fil des travaux — factures, fiches techniques, photographies des ouvrages avant fermeture — se conserve : c'est ce qui permettra, plus tard, de prouver ce qui a été posé.",
     ],
   },
   {
@@ -455,6 +519,19 @@ export const ARTICLES: Article[] = [
     ],
   },
   {
+    slug: "achat-direct-materiaux-erreurs-a-eviter",
+    titre: "Acheter ses matériaux en direct : les erreurs qui annulent l'économie",
+    date: "5 août 2026", dateISO: "2026-08-05",
+    categorie: "Matériaux",
+    excerpt: "Acheter soi-même ses fournitures change qui commande, qui contrôle et qui supporte l'erreur. Cinq points décident si l'économie tient jusqu'à la pose.",
+    photo: "pedaAchatDirectMateriaux",
+    corps: [
+      "Acheter ses matériaux en direct consiste à commander soi-même, à son nom et avec sa facture, les fournitures que l'entreprise se contente ensuite de poser. La ligne de partage n'est pas budgétaire, elle est juridique : ce qui engage la garantie décennale de l'entreprise qui le met en œuvre reste fourni par elle — systèmes d'étanchéité, colles et mortiers techniques, isolants, ossatures, câbles et canalisations, éléments de structure. Le reste peut s'acheter en direct : carrelage et faïence, robinetterie et sanitaires, parquet, cuisine, menuiseries d'agencement, luminaires et quincaillerie de finition. Ce que ce transfert change n'est pas seulement le prix payé : il déplace vers vous la responsabilité de la référence, de la quantité et du délai. C'est là que l'économie se gagne ou se perd.",
+      "Trois erreurs se produisent avant la livraison. La première est de commander une référence que le poseur n'a pas validée. Format, épaisseur, classement d'usage, caractère rectifié ou non, compatibilité avec le support et avec le système de pose retenu : ces critères se vérifient sur la fiche technique, par écrit, avant la commande. Un matériau livré puis refusé à la pose coûte un retour, un délai et une équipe immobilisée. La deuxième est de commander la quantité exacte relevée sur le plan. Toute pose consomme davantage : chutes de coupe, casse, calepinage particulier — un point de Hongrie ou un appareillage en diagonale consomment plus qu'une pose droite. La réserve se calcule avec l'entreprise, et elle se commande dans la même livraison, car un complément passé plus tard arrive fréquemment d'un autre lot de fabrication, avec une nuance visible sur le mur fini. La troisième est de commander sans caler la date sur le planning : livré trop tôt, le matériau encombre et s'abîme ; livré trop tard, il arrête l'équipe qui devait le poser.",
+      "Deux erreurs se produisent ensuite. À la réception de la marchandise, le contrôle doit être fait avant déballage complet et avant que l'équipe ne commence : quantités, références, teintes et lots de fabrication, état des colis. Les réserves se portent sur le bon de livraison, immédiatement, car les délais de recours auprès du fournisseur sont courts et se ferment vite. Puis vient la question que personne ne pose au moment d'acheter : en cas de casse, de manquant ou de vice constaté en cours de pose, qui recommande, qui paie le transport et qui supporte l'immobilisation de l'équipe. Sur une fourniture achetée en direct, ce n'est plus l'entreprise, c'est vous — d'où l'intérêt d'une marge de manœuvre prévue dès la commande. L'économie réelle se mesure donc à la fin, pas au moment du bon de commande : elle est ce qui reste une fois comptés les reliquats, les retours, le temps passé à commander et à réceptionner, et les éventuelles reprises. Sur les postes bien cadrés, elle est réelle ; sur ceux qui touchent à la mise en œuvre, elle disparaît avec la garantie.",
+    ],
+  },
+  {
     slug: "sortir-passoire-energetique",
     titre: "DPE F ou G : comment sortir de la passoire énergétique",
     date: "2 août 2026", dateISO: "2026-08-02",
@@ -472,6 +549,19 @@ export const ARTICLES: Article[] = [
       "Un logement classé F ou G n'est pas seulement une facture de chauffage élevée : depuis 2025, ces logements sont progressivement interdits à la location. Sortir de la passoire énergétique est donc devenu un sujet patrimonial autant qu'un sujet de confort.",
       "La méthode commence toujours par un diagnostic complet, qui identifie les postes de déperdition réels — souvent les combles et les murs avant les fenêtres, contrairement à l'intuition. Vient ensuite l'isolation proprement dite, la pose d'une VMC double flux pour éviter les problèmes d'humidité une fois le logement étanche, puis le remplacement du système de chauffage si nécessaire — dimensionné après les travaux d'isolation, pas avant.",
       "Les aides existent et se cumulent souvent : MaPrimeRénov' et les Certificats d'Économie d'Énergie (CEE) peuvent financer une part significative des travaux selon les revenus du foyer et le gain énergétique obtenu. Les règles évoluent régulièrement et doivent être vérifiées au moment du projet. L'accompagnement dans ces démarches administratives fait partie du pilotage d'un chantier d'isolation bien mené — le gain de classe DPE ne sert à rien si le dossier d'aide n'aboutit pas.",
+    ],
+  },
+  {
+    slug: "projets-qu-un-pilote-de-travaux-refuse",
+    titre: "Les projets qu'un pilote de travaux refuse, et pourquoi",
+    date: "31 juillet 2026", dateISO: "2026-07-31",
+    categorie: "Méthode",
+    excerpt: "Refuser un projet n'est pas un manque d'ambition : c'est reconnaître qu'aucune organisation ne rattrapera une donnée manquante ou un délai impossible.",
+    photo: "pedaProjetsRefuses",
+    corps: [
+      "Un pilote de travaux ne pose aucun lot et n'émet aucun devis : il prépare les décisions, consulte les entreprises, tient l'enchaînement et suit l'exécution jusqu'à la réception. Ce rôle a une portée réelle, et il a des limites nettes. Il ne remplace ni un bureau d'études structure, ni un architecte, ni une autorisation administrative. Il ne crée pas de budget, et il ne raccourcit pas un temps de séchage. Accepter un projet dont l'une de ces conditions manque revient à s'engager sur un résultat que rien ne permet de tenir : le chantier ne s'arrête pas au démarrage, il s'arrête au milieu, quand les travaux sont ouverts et que la marche arrière coûte le plus cher.",
+      "Cinq situations conduisent à ne pas engager un projet en l'état. Une reprise de structure qu'aucune étude ne peut appuyer : lorsque l'accès aux fondations, le sondage d'un mur ou le dégagement d'un appui sont refusés, personne ne peut dire ce que le bâtiment porte, et un calcul fait sur des hypothèses non vérifiées n'engage rien. Une autorisation d'urbanisme absente, en cours d'instruction ou déjà refusée, alors que le projet la requiert : commencer avant expose le maître d'ouvrage, pas l'entreprise. Une copropriété non consultée quand les travaux touchent une partie commune, la façade, la structure ou un plancher : la décision d'assemblée générale conditionne le chantier, et sa majorité applicable dépend de la nature exacte des travaux, ce qui se vérifie avec le syndic. Un programme sans rapport avec le budget annoncé, où l'écart ne se comble ni par la négociation ni par l'organisation. Et un délai imposé incompatible avec des temps qui ne se compriment pas : séchage d'une chape ou d'un enduit, délai de fabrication d'une menuiserie sur mesure, instruction d'une autorisation.",
+      "Dans la plupart de ces cas, refuser en l'état ne signifie pas refuser tout court : il s'agit de réorienter. Réduire le périmètre, phaser en deux temps, remplacer une reprise de structure par une solution qui ne touche pas au porteur, ou repousser le démarrage jusqu'à l'obtention d'une pièce manquante sont des issues fréquentes et honnêtes. Deux situations, en revanche, ne se réorientent pas : celle où l'on demande de démarrer sans devis signés, sans attestation de décennale en cours de validité, ou sans déclarer ce qui doit l'être ; et celle où aucun écrit n'est accepté, ni descriptif, ni compte rendu, ni réserve. Le seul avantage réel d'un chantier piloté est la traçabilité : sans écrit, il ne reste rien à piloter. Dire non à ce moment-là coûte une affaire ; ne pas le dire coûte un chantier ouvert que personne ne peut refermer.",
     ],
   },
   {

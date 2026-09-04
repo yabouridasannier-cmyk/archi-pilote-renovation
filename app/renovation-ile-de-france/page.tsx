@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHeader } from "../components/page-header";
 import { CtaFinal } from "../components/cta-final";
+import { MaillageInterne } from "../components/local-page";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/renovation-ile-de-france" },
@@ -16,7 +17,9 @@ const DEPARTEMENTS = [
   { nom: "Yvelines (78)", href: "/renovation-yvelines-78", texte: "Particulièrement adapté aux projets de maison : rénovation globale, extension, surélévation, toiture, redistribution." },
   { nom: "Val-de-Marne (94)", href: "/renovation-val-de-marne-94", texte: "Mix d'appartements, maisons et opérations de transformation complète — Saint-Maur, Nogent, Le Perreux, Vincennes." },
   { nom: "Val-d'Oise (95)", href: "/renovation-val-doise-95", texte: "Nombreux projets pavillonnaires et de maisons : rénovation complète, énergie, toiture, extension." },
-  { nom: "Essonne, Seine-et-Marne, Seine-Saint-Denis", href: "/renovation-essonne-91", texte: "Étudiés lorsque l'ampleur et la complexité justifient un pilotage d'ensemble." },
+  { nom: "Essonne (91)", href: "/renovation-essonne-91", texte: "Étudié de façon sélective, lorsque l'ampleur et la complexité justifient un pilotage d'ensemble." },
+  { nom: "Seine-et-Marne (77)", href: "/renovation-seine-et-marne-77", texte: "Réservé aux projets d'ensemble : maison à reprendre intégralement, enveloppe, toiture, création de surface." },
+  { nom: "Seine-Saint-Denis (93)", href: "/renovation-seine-saint-denis-93", texte: "Pavillons à l'est, maisons de ville et restructurations d'appartement plus près de Paris." },
   { nom: "Paris", href: "/renovation-complexe-paris", texte: "Dossiers à angle technique : structure, copropriété, redistribution, réseaux, transformation complexe." },
 ];
 
@@ -42,6 +45,55 @@ export default function Page() {
           projet. Nous vous indiquons si le dossier entre dans notre zone et notre niveau d&apos;intervention.
         </p>
       </section>
+
+      <MaillageInterne
+        titre="Descendre à la commune ou au type de travaux"
+        intro="Sept communes des Hauts-de-Seine disposent d'une page dédiée, écrite depuis notre base de La Garenne-Colombes. Les pages de spécialité, elles, valent pour toute la région : c'est le bien et ses contraintes qui commandent, pas l'adresse."
+        groupes={[
+          {
+            titre: "Communes documentées dans le 92",
+            liens: [
+              { href: "/renovation-la-garenne-colombes", label: "La Garenne-Colombes" },
+              { href: "/renovation-courbevoie", label: "Courbevoie" },
+              { href: "/renovation-asnieres-sur-seine", label: "Asnières-sur-Seine" },
+              { href: "/renovation-bois-colombes", label: "Bois-Colombes" },
+              { href: "/renovation-colombes", label: "Colombes" },
+              { href: "/renovation-nanterre", label: "Nanterre" },
+              { href: "/renovation-rueil-malmaison", label: "Rueil-Malmaison" },
+            ],
+          },
+          {
+            titre: "Rénover selon le type de bien",
+            liens: [
+              { href: "/renovation-complete", label: "Rénovation complète" },
+              { href: "/renovation-appartement", label: "Rénovation d'appartement" },
+              { href: "/renovation-maison-pavillon", label: "Rénovation de maison et de pavillon" },
+              { href: "/extension-maison", label: "Extension de maison" },
+              { href: "/surelevation", label: "Surélévation" },
+            ],
+          },
+          {
+            titre: "Structure, technique et énergie",
+            liens: [
+              { href: "/gros-oeuvre-structure", label: "Gros œuvre et structure" },
+              { href: "/ouverture-mur-porteur", label: "Ouverture de mur porteur" },
+              { href: "/second-oeuvre", label: "Lots de second œuvre" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+              { href: "/chantiers-complexes", label: "Chantiers complexes" },
+            ],
+          },
+          {
+            titre: "Cadrer le projet avant les travaux",
+            liens: [
+              { href: "/parcours-expertise", label: "Le parcours d'expertise" },
+              { href: "/demarches-administratives-renovation", label: "Démarches administratives et urbanisme" },
+              { href: "/clinique-du-devis", label: "Faire relire un devis" },
+              { href: "/estimateur-travaux", label: "Estimer un budget travaux" },
+            ],
+          },
+        ]}
+      />
+
       <CtaFinal />
     </main>
   );

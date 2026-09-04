@@ -18,6 +18,40 @@ export default function Page() {
       intro="En Seine-Saint-Denis, la stratégie est sélective : maisons et pavillons à l'est, maisons de ville, appartements ou projets de restructuration plus proches de Paris. Les pages locales ne s'ouvrent que lorsqu'un vrai potentiel et une vraie matière locale existent."
       bulletsTitle="Projets prioritaires"
       bullets={["Rénovation complète", "Maison et appartement", "Structure / mur porteur", "Énergie", "Réseaux et second œuvre technique", "Copropriété selon le secteur"]}
+      maillage={{
+        titre: "Deux profils de biens, deux entrées",
+        intro:
+          "Le département n'appelle pas la même approche selon qu'on rénove un pavillon à l'est ou une maison de ville proche de Paris. Les pages ci-dessous séparent les deux logiques.",
+        groupes: [
+          {
+            titre: "Pavillon et maison de ville",
+            liens: [
+              { href: "/renovation-maison-pavillon", label: "Maison de ville et pavillon" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+              { href: "/renovation-toiture-charpente", label: "Toiture et charpente" },
+              { href: "/second-oeuvre", label: "Second œuvre et finitions" },
+            ],
+          },
+          {
+            titre: "Appartement et restructuration",
+            liens: [
+              { href: "/renovation-appartement", label: "Rénovation d'appartement" },
+              { href: "/gros-oeuvre-structure", label: "Restructuration et gros œuvre" },
+              { href: "/ouverture-mur-porteur", label: "Ouverture de mur porteur" },
+              { href: "/renovation-complete", label: "Rénovation complète" },
+            ],
+          },
+          {
+            titre: "Territoires voisins",
+            liens: [
+              { href: "/renovation-complexe-paris", label: "Projets complexes à Paris" },
+              { href: "/renovation-val-de-marne-94", label: "Val-de-Marne (94)" },
+              { href: "/renovation-seine-et-marne-77", label: "Seine-et-Marne (77)" },
+              { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

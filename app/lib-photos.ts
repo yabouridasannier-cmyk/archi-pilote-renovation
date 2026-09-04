@@ -331,6 +331,21 @@ export const PHOTOS = {
   chTableauElectriqueDisjoncteurs: "/photos/chantiers/chTableauElectriqueDisjoncteurs.jpeg",
   chParquetChevronsCacheRadiateur: "/photos/chantiers/chParquetChevronsCacheRadiateur.jpeg",
   chParquetChevronsCouloirDeuxTeintes: "/photos/chantiers/chParquetChevronsCouloirDeuxTeintes.jpeg",
+
+  /* 04/09 : six schémas pédagogiques dessinés pour les six derniers articles du plan
+     éditorial (budget d'extension, ordre des travaux énergétiques, écart entre deux
+     devis, achat direct des matériaux, projets refusés, dossier de fin de chantier).
+     Ces sujets sont administratifs ou méthodologiques : aucune photo du fonds ne les
+     montre honnêtement, et les 244 clichés de chantier sont déjà tous employés. Chaque
+     fichier est un schéma pédagogique — jamais une réalisation — au format 2:1 pour
+     traverser sans recadrage le héros d'article (aspect 16/8) et la grille du blog
+     (aspect 16/10), les bandes latérales reprenant le fond ivoire du dessin. */
+  pedaExtensionCoutsOublies: "/photos/pedagogie/54-blog-extension-couts-oublies.jpeg",
+  pedaOrdreRenovationEnergetique: "/photos/pedagogie/55-blog-ordre-renovation-energetique.jpeg",
+  pedaDeuxDevisEcart: "/photos/pedagogie/56-blog-deux-devis-ecart.jpeg",
+  pedaAchatDirectMateriaux: "/photos/pedagogie/57-blog-achat-direct-materiaux.jpeg",
+  pedaProjetsRefuses: "/photos/pedagogie/58-blog-projets-refuses.jpeg",
+  pedaDossierFinChantier: "/photos/pedagogie/59-blog-dossier-fin-de-chantier.jpeg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

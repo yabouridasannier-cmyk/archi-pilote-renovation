@@ -18,6 +18,39 @@ export default function Page() {
       intro="En Seine-et-Marne, l'éloignement impose de privilégier les projets suffisamment importants : maison à rénover intégralement, extension, toiture, structure, énergie et opérations complexes. La page reste transparente sur ce critère plutôt que de prétendre couvrir chaque petit chantier."
       bulletsTitle="Projets prioritaires"
       bullets={["Rénovation complète de maison", "Extension", "Surélévation selon faisabilité", "Toiture / charpente", "Rénovation énergétique", "Redistribution et réseaux"]}
+      maillage={{
+        titre: "Ce qui justifie un déplacement en Seine-et-Marne",
+        intro:
+          "À cette distance, seuls les projets d'ensemble tiennent la route : maison à reprendre intégralement, enveloppe à refaire, création de surface. Voici comment chacun est traité.",
+        groupes: [
+          {
+            titre: "Projets d'ensemble",
+            liens: [
+              { href: "/renovation-complete", label: "Rénovation intégrale d'une maison" },
+              { href: "/renovation-maison-pavillon", label: "Rénovation de maison et de pavillon" },
+              { href: "/extension-maison", label: "Extension de maison" },
+              { href: "/savoir-faire-ancien", label: "Savoir-faire du bâti ancien" },
+            ],
+          },
+          {
+            titre: "Enveloppe, énergie et budget",
+            liens: [
+              { href: "/renovation-toiture-charpente", label: "Toiture et charpente" },
+              { href: "/renovation-energetique", label: "Isolation et rénovation énergétique" },
+              { href: "/aides-renovation-energetique", label: "Aides à la rénovation énergétique" },
+              { href: "/observatoire-prix-renovation", label: "Observatoire des prix de la rénovation" },
+            ],
+          },
+          {
+            titre: "Territoires voisins",
+            liens: [
+              { href: "/renovation-seine-saint-denis-93", label: "Seine-Saint-Denis (93)" },
+              { href: "/renovation-val-de-marne-94", label: "Val-de-Marne (94)" },
+              { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

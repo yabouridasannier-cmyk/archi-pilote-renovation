@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -59,6 +60,10 @@ export default function Page() {
                 </p>
                 <p>
                   La mise en sécurité complète inclut aussi la mise à la terre effective de l'installation et le remplacement des liaisons vétustes identifiées lors du diagnostic électrique préalable.
+                </p>
+                <p>
+                  Ces deux lots sont repris en détail sur la page{" "}
+                  <Link href="/electricite-plomberie-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">électricité et plomberie en rénovation</Link>.
                 </p>
               </MqProse>
             </div>
@@ -270,6 +275,11 @@ export default function Page() {
           <p>
             Les pentes du sol vers l'évacuation, le positionnement précis du receveur ou du siphon de sol, et le traitement soigné de chaque traversée conditionnent l'étanchéité réelle de l'ensemble. Un contrôle avant pose du carrelage, éventuellement complété par une mise en eau de vérification, permet de détecter un défaut avant qu'il ne soit définitivement recouvert.
           </p>
+          <p>
+            L'enchaînement complet d'une pièce d'eau, du déplacement des évacuations au choix des
+            revêtements, est décrit sur la page{" "}
+            <Link href="/renovation-salle-de-bain-maison" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">rénovation de salle de bain</Link>.
+          </p>
         </MqProse>
         {/*
           03/09 : cette section n'avait aucune photo réelle, alors que /renovation-complete en
@@ -404,6 +414,10 @@ export default function Page() {
           <p>
             La peinture et les finitions interviennent en toute fin de chantier, mais les choix de teintes, de finitions et de matériaux associés sont arbitrés bien plus tôt, en cohérence avec l'implantation des équipements et des menuiseries déjà posées. Une peinture réalisée trop tôt, avant la fin des lots poussiéreux comme le ponçage de cloisons, doit souvent être reprise.
           </p>
+          <p>
+            Le détail de ces derniers lots — supports, revêtements, plinthes, raccords — est traité sur la page{" "}
+            <Link href="/sols-finitions-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">sols et finitions</Link>.
+          </p>
         </MqProse>
       </MqSection>
 
@@ -471,6 +485,11 @@ export default function Page() {
             "Photo datée de chaque réseau encastré avant pose des plaques de cloison",
           ]}
         />
+        <p className="mt-8 max-w-2xl text-[0.95rem] leading-relaxed text-ivoire/85">
+          Chacun de ces points, et la manière dont il est documenté avant disparition sous les
+          finitions, est développé dans{" "}
+          <Link href="/detail-invisible" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">le détail invisible : contrôle qualité avant fermeture des cloisons</Link>.
+        </p>
         {/*
           03/09 : chPlomberieColonneCuivreVannes.jpeg retirée de cette grille, pour deux raisons.
           (1) Redondance : la page comptait huit photos de réseaux de tuyauterie, au point qu'elles
@@ -602,12 +621,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
-          { href: "/renovation-complete", label: "Rénovation complète", sub: "Du diagnostic à la livraison" },
-          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
-          { href: "/renovation-energetique", label: "Rénovation énergétique", sub: "Passoire énergétique, VMC, isolation" },
-          { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyse ligne à ligne de vos devis" },
-          { href: "/notre-methode", label: "Notre méthode", sub: "Les 8 étapes du pilotage" },
-          { href: "/contact", label: "Contact", sub: "Décrire votre projet en détail" },
+          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Ce qui doit être réglé avant ces lots" },
+          { href: "/expertise-carrelage-zellige-travertin", label: "Carrelage, zellige, travertin", sub: "Pose et étanchéité des matériaux délicats" },
+          { href: "/menuiserie-agencement-sur-mesure", label: "Menuiserie d'agencement", sub: "Dressing, cuisine et façades sur mesure" },
+          { href: "/renovation-appartement", label: "Rénovation d'appartement", sub: "Ces mêmes lots, sous contrainte de copropriété" },
+          { href: "/charte-qualite", label: "Charte qualité", sub: "Les engagements tenus sur chaque lot" },
+          { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France", sub: "Notre zone d'intervention" },
         ]}
       />
     </>

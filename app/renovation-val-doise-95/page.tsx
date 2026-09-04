@@ -18,6 +18,39 @@ export default function Page() {
       intro="Dans le Val-d'Oise, le positionnement privilégie les maisons, pavillons et projets de rénovation globale : enveloppe, toiture, énergie, extension, redistribution et lots techniques."
       bulletsTitle="Projets prioritaires"
       bullets={["Rénovation complète de maison", "Extension", "Surélévation selon faisabilité", "Toiture / charpente", "Rénovation énergétique", "Redistribution et réseaux"]}
+      maillage={{
+        titre: "Reprendre un pavillon de l'enveloppe aux réseaux",
+        intro:
+          "Sur un pavillon, l'ordre des travaux compte : l'enveloppe d'abord, les lots techniques ensuite, les finitions en dernier. Voici le détail de chaque étape.",
+        groupes: [
+          {
+            titre: "L'enveloppe d'abord",
+            liens: [
+              { href: "/renovation-maison-pavillon", label: "Rénovation de pavillon" },
+              { href: "/renovation-toiture-charpente", label: "Toiture, charpente et enveloppe" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+              { href: "/aides-renovation-energetique", label: "Aides et financement des travaux" },
+            ],
+          },
+          {
+            titre: "Puis les lots techniques et la surface",
+            liens: [
+              { href: "/electricite-plomberie-renovation", label: "Lots techniques : électricité et plomberie" },
+              { href: "/extension-maison", label: "Extension de maison" },
+              { href: "/surelevation", label: "Surélévation" },
+              { href: "/sols-finitions-renovation", label: "Sols et finitions" },
+            ],
+          },
+          {
+            titre: "Territoires voisins",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Hauts-de-Seine (92)" },
+              { href: "/renovation-yvelines-78", label: "Yvelines (78)" },
+              { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

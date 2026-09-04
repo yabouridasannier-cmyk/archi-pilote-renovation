@@ -103,7 +103,12 @@ export default function ChantiersComplexesPage() {
               </p>
               <p className="text-muted text-[0.92rem] leading-relaxed">
                 Chaque décision engage la stabilité de l'ouvrage. Un ingénieur structure partenaire indépendant réalise la note de calcul
-                nécessaire avant toute exécution, sous sa propre responsabilité professionnelle.
+                nécessaire avant toute exécution, sous sa propre responsabilité professionnelle. Le cas le plus fréquent est détaillé sur
+                la page{" "}
+                <Link href="/ouverture-mur-porteur" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                  ouverture de mur porteur et reprise de charge
+                </Link>
+                .
               </p>
             </div>
             <div className="flex flex-col gap-2">
@@ -113,7 +118,11 @@ export default function ChantiersComplexesPage() {
               </p>
               <p className="text-muted text-[0.92rem] leading-relaxed">
                 Le dossier technique doit être présenté au syndic et, souvent, voté en assemblée générale avant tout démarrage sur une partie
-                commune ou un élément visible depuis l'extérieur de l'immeuble.
+                commune ou un élément visible depuis l'extérieur de l'immeuble. La chronologie complète figure sur la page{" "}
+                <Link href="/demarches-administratives-renovation" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                  démarches administratives : syndic, urbanisme, copropriété
+                </Link>
+                .
               </p>
             </div>
             <div className="flex flex-col gap-2">
@@ -215,6 +224,13 @@ export default function ChantiersComplexesPage() {
               "Archivage de l'incident dans le dossier de fin de chantier.",
             ]}
           />
+          <p className="text-muted text-[0.92rem] leading-relaxed max-w-2xl">
+            Le chiffrage d'une reprise se lit comme n'importe quel devis de travaux : la page{" "}
+            <Link href="/clinique-du-devis" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              clinique du devis
+            </Link>{" "}
+            détaille les lignes à contrôler avant de valider une somme en cours de chantier.
+          </p>
         </div>
       </MqSection>
 
@@ -240,9 +256,12 @@ export default function ChantiersComplexesPage() {
 
       <MqReadNext
         items={[
+          { href: "/ouverture-mur-porteur", label: "Ouverture de mur porteur", sub: "Étaiement, note de calcul, reprise de charge" },
+          { href: "/blog/ouvrir-mur-porteur-copropriete-assemblee", label: "Ouvrir un mur porteur en copropriété : les pièces avant l'assemblée", sub: "Ce que le syndic attend dans le dossier" },
+          { href: "/blog/vivre-dans-l-immeuble-pendant-les-travaux", label: "Vivre dans l'immeuble pendant les travaux", sub: "Protections, horaires et voisinage" },
           { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
-          { href: "/charte-qualite", label: "Charte qualité", sub: "Contrôles renforcés sur les dossiers lourds" },
           { href: "/parcours-expertise", label: "Parcours & expertise", sub: "Architectes DPLG et ingénieurs structure" },
+          { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France", sub: "Notre zone d'intervention pour les dossiers lourds" },
         ]}
       />
 
@@ -250,6 +269,10 @@ export default function ChantiersComplexesPage() {
         <div className="container-site max-w-4xl text-[0.9rem] text-muted">
           <Link href="/notre-methode" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
             Voir les huit étapes appliquées aux dossiers lourds
+          </Link>
+          {" · "}
+          <Link href="/charte-qualite" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+            Charte qualité et contrôles de chantier
           </Link>
           {" · "}
           <Link href="/contact" className="underline underline-offset-4 hover:text-orange-deep transition-colors">

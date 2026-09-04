@@ -18,6 +18,45 @@ export default function Page() {
       intro="Le 92 est le territoire prioritaire d'ARCHI PILOTE RÉNOVATION. Il concentre des projets de maison, d'appartement en copropriété et de transformation complexe : rénovation complète, structure, extension, surélévation, énergie et lots techniques. La proximité avec La Garenne-Colombes permet une forte réactivité sur les communes du premier cercle."
       bulletsTitle="Projets prioritaires"
       bullets={["Rénovation complète", "Maison et appartement", "Structure / mur porteur", "Énergie", "Réseaux et second œuvre technique", "Copropriété selon le secteur"]}
+      maillage={{
+        titre: "Les communes et les sujets du 92",
+        intro:
+          "Sept communes du département disposent d'une page dédiée, chacune avec son angle dominant : appartement et copropriété au sud-est, maison et pavillon vers l'ouest.",
+        groupes: [
+          {
+            titre: "Communes couvertes dans le département",
+            liens: [
+              { href: "/renovation-la-garenne-colombes", label: "La Garenne-Colombes" },
+              { href: "/renovation-courbevoie", label: "Courbevoie" },
+              { href: "/renovation-asnieres-sur-seine", label: "Asnières-sur-Seine" },
+              { href: "/renovation-bois-colombes", label: "Bois-Colombes" },
+              { href: "/renovation-colombes", label: "Colombes" },
+              { href: "/renovation-nanterre", label: "Nanterre" },
+              { href: "/renovation-rueil-malmaison", label: "Rueil-Malmaison" },
+            ],
+          },
+          {
+            titre: "Types de projets étudiés",
+            liens: [
+              { href: "/renovation-complete", label: "Rénovation complète" },
+              { href: "/renovation-appartement", label: "Rénovation d'appartement en copropriété" },
+              { href: "/renovation-maison-pavillon", label: "Rénovation de maison et de pavillon" },
+              { href: "/ouverture-mur-porteur", label: "Ouverture de mur porteur" },
+              { href: "/gros-oeuvre-structure", label: "Gros œuvre et structure" },
+              { href: "/second-oeuvre", label: "Lots de second œuvre" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+            ],
+          },
+          {
+            titre: "Territoires voisins",
+            liens: [
+              { href: "/renovation-complexe-paris", label: "Projets complexes à Paris" },
+              { href: "/renovation-yvelines-78", label: "Yvelines (78)" },
+              { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

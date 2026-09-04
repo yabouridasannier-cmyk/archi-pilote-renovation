@@ -19,6 +19,38 @@ export default function Page() {
       intro="Asnières combine appartements, petits collectifs et maisons. Nous orientons vers copropriété, rénovation complète, structure et projets de maison selon le bien."
       bulletsTitle="Ce que nous pouvons étudier"
       bullets={["Rénovation complète", "Maison ou appartement selon le bien", "Structure et ouvertures", "Réseaux techniques", "Énergie", "Extension / surélévation si pertinent"]}
+      maillage={{
+        intro:
+          "Asnières mélange collectif ancien, petits immeubles et maisons : les pages ci-dessous détaillent chacun des sujets évoqués plus haut, ainsi que les communes voisines couvertes par la même équipe.",
+        groupes: [
+          {
+            titre: "Les sujets abordés sur cette page",
+            liens: [
+              { href: "/renovation-complete", label: "Rénovation complète d'un logement" },
+              { href: "/renovation-appartement", label: "Rénovation d'appartement en copropriété" },
+              { href: "/gros-oeuvre-structure", label: "Structure et ouvertures porteuses" },
+              { href: "/electricite-plomberie-renovation", label: "Réseaux : électricité et plomberie" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+              { href: "/extension-maison", label: "Extension de maison" },
+            ],
+          },
+          {
+            titre: "Communes voisines traitées",
+            liens: [
+              { href: "/renovation-bois-colombes", label: "Bois-Colombes" },
+              { href: "/renovation-courbevoie", label: "Courbevoie" },
+              { href: "/renovation-colombes", label: "Colombes" },
+            ],
+          },
+          {
+            titre: "Territoire",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Rénovation dans les Hauts-de-Seine (92)" },
+              { href: "/renovation-ile-de-france", label: "Notre zone d'intervention en Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

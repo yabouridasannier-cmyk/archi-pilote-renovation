@@ -19,6 +19,38 @@ export default function Page() {
       intro="À Colombes, nous privilégions les maisons, pavillons, transformations complètes et projets combinant structure, énergie et second œuvre, tout en conservant une porte d'entrée pour les appartements en copropriété."
       bulletsTitle="Ce que nous pouvons étudier"
       bullets={["Rénovation complète", "Maison ou appartement selon le bien", "Structure et ouvertures", "Réseaux techniques", "Énergie", "Extension / surélévation si pertinent"]}
+      maillage={{
+        intro:
+          "Un projet à Colombes bascule souvent d'un simple rafraîchissement vers une transformation d'ensemble. Voici les pages qui détaillent ce basculement, du gros œuvre aux finitions.",
+        groupes: [
+          {
+            titre: "De la structure aux finitions",
+            liens: [
+              { href: "/renovation-maison-pavillon", label: "Maison et pavillon" },
+              { href: "/gros-oeuvre-structure", label: "Gros œuvre et structure" },
+              { href: "/second-oeuvre", label: "Les lots de second œuvre" },
+              { href: "/sols-finitions-renovation", label: "Sols et finitions" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+              { href: "/renovation-appartement", label: "Appartement en copropriété" },
+            ],
+          },
+          {
+            titre: "Communes voisines traitées",
+            liens: [
+              { href: "/renovation-bois-colombes", label: "Bois-Colombes" },
+              { href: "/renovation-la-garenne-colombes", label: "La Garenne-Colombes" },
+              { href: "/renovation-nanterre", label: "Nanterre" },
+            ],
+          },
+          {
+            titre: "Territoire",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Le 92, notre bassin principal" },
+              { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

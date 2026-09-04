@@ -13,6 +13,113 @@ const FAQ_LOCALE_TEMPLATE = (ville: string) => [
   { q: "Faut-il vérifier le PLU ou le règlement de copropriété ?", r: "Oui dès que le projet touche à l'extérieur, à la création de surface, à certains éléments communs ou à la structure. La règle applicable se vérifie sur le bien concerné." },
 ];
 
+/* ============================================================
+   MAILLAGE INTERNE DES PAGES LOCALES
+   ------------------------------------------------------------
+   Registre fermé des destinations autorisées. Toute URL absente
+   de cette union est une erreur de compilation : impossible de
+   publier un lien mort depuis une page locale.
+   Chaque entrée a été vérifiée : app/<slug>/page.tsx existe.
+   Les pages villes restent en robots { index: false, follow: true } :
+   le maillage circule bien, seul l'indexation reste fermée tant
+   qu'aucune preuve locale n'est documentée.
+   ============================================================ */
+export type MaillageHref =
+  // Prestations et sujets techniques
+  | "/renovation-complete"
+  | "/renovation-appartement"
+  | "/renovation-maison-pavillon"
+  | "/gros-oeuvre-structure"
+  | "/ouverture-mur-porteur"
+  | "/second-oeuvre"
+  | "/renovation-energetique"
+  | "/menuiserie-agencement-sur-mesure"
+  | "/extension-maison"
+  | "/surelevation"
+  | "/chantiers-complexes"
+  | "/electricite-plomberie-renovation"
+  | "/renovation-toiture-charpente"
+  | "/renovation-cuisine-maison"
+  | "/renovation-salle-de-bain-maison"
+  | "/sols-finitions-renovation"
+  | "/savoir-faire-ancien"
+  // Ressources et outils
+  | "/demarches-administratives-renovation"
+  | "/aides-renovation-energetique"
+  | "/clinique-du-devis"
+  | "/estimateur-travaux"
+  | "/observatoire-prix-renovation"
+  | "/parcours-expertise"
+  // 03/09 : élargi pour que SpecialtyPage puisse écrire son maillage sans sortir du registre.
+  // Chaque entrée a été vérifiée sur disque (app/<slug>/page.tsx existe).
+  | "/notre-methode"
+  | "/modele-economique-transparence"
+  | "/garanties-assurances"
+  | "/charte-qualite"
+  | "/reseau-partenaires"
+  | "/achat-direct-materiaux"
+  | "/expertise-carrelage-zellige-travertin"
+  | "/detail-invisible"
+  | "/realisations"
+  | "/guides"
+  | "/glossaire-renovation"
+  | "/services"
+  | "/nos-specialites"
+  | "/temoignages-clients"
+  // Territoires
+  | "/renovation-ile-de-france"
+  | "/renovation-hauts-de-seine-92"
+  | "/renovation-yvelines-78"
+  | "/renovation-essonne-91"
+  | "/renovation-seine-et-marne-77"
+  | "/renovation-seine-saint-denis-93"
+  | "/renovation-val-de-marne-94"
+  | "/renovation-val-doise-95"
+  | "/renovation-complexe-paris"
+  // Communes traitées
+  | "/renovation-asnieres-sur-seine"
+  | "/renovation-bois-colombes"
+  | "/renovation-colombes"
+  | "/renovation-courbevoie"
+  | "/renovation-la-garenne-colombes"
+  | "/renovation-nanterre"
+  | "/renovation-rueil-malmaison";
+
+export type MaillageLien = { href: MaillageHref; label: string };
+export type MaillageGroupe = { titre: string; liens: MaillageLien[] };
+export type Maillage = {
+  /** Phrase d'accroche propre à la page — évite un bloc de liens posé sans contexte. */
+  intro: string;
+  /** Titre de section, sinon un libellé par défaut selon le type de page. */
+  titre?: string;
+  groupes: MaillageGroupe[];
+};
+
+export function MaillageInterne({ intro, titre, groupes }: Maillage) {
+  return (
+    <section className="relative pb-20 md:pb-28">
+      <div className="container-site max-w-3xl mx-auto border-t border-line pt-10 flex flex-col gap-8">
+        <div className="flex flex-col gap-2">
+          <h2 className="display text-2xl text-ivoire normal-case">{titre ?? "Poursuivre la lecture"}</h2>
+          <p className="text-muted text-[0.92rem] leading-relaxed">{intro}</p>
+        </div>
+        {groupes.map((g) => (
+          <div key={g.titre} className="flex flex-col gap-3">
+            <h3 className="font-mono text-[0.68rem] tracking-[0.14em] uppercase text-muted">{g.titre}</h3>
+            <div className="flex flex-wrap gap-2.5">
+              {g.liens.map((l) => (
+                <Link key={l.href} href={l.href} className="btn btn-ghost !py-2.5 !px-5 text-sm">
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function LocalPage({
   eyebrow,
   segments,
@@ -22,6 +129,7 @@ export function LocalPage({
   bullets,
   variant,
   ville,
+  maillage,
 }: {
   eyebrow: string;
   segments: Segment[];
@@ -31,6 +139,8 @@ export function LocalPage({
   bullets: string[];
   variant: "departement" | "ville";
   ville?: string;
+  /** Maillage contextuel obligatoire : chaque page locale choisit ses propres ancres. */
+  maillage: Maillage;
 }) {
   const faq = variant === "ville" && ville ? FAQ_LOCALE_TEMPLATE(ville) : [];
 
@@ -104,17 +214,11 @@ export function LocalPage({
         </section>
       )}
 
-      <section className="relative pb-16 md:pb-20">
-        <div className="container-site max-w-3xl mx-auto flex flex-wrap gap-2.5 justify-center">
-          {[
-            { href: "/nos-specialites", label: "Nos spécialités" },
-            { href: "/notre-methode", label: "Notre méthode" },
-            { href: "/estimateur-travaux", label: "Estimer un budget" },
-          ].map((l) => (
-            <Link key={l.href} href={l.href} className="btn btn-ghost !py-2.5 !px-5 text-sm">{l.label}</Link>
-          ))}
-        </div>
-      </section>
+      <MaillageInterne
+        titre={maillage.titre ?? (variant === "ville" ? "Aller plus loin sur votre projet" : "Poursuivre par territoire ou par sujet")}
+        intro={maillage.intro}
+        groupes={maillage.groupes}
+      />
 
       <CtaFinal />
     </main>

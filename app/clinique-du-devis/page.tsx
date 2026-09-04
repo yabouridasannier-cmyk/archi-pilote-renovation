@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqChecklist, MqDark, MqDarkSteps, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -252,6 +253,44 @@ export default function Page() {
         </MqProse>
       </MqSection>
 
+      <MqSection
+        kicker="POURSUIVRE L'ANALYSE"
+        title="Les pages et les articles qui prolongent la lecture d'un devis"
+        lead="Un devis clarifié se compare ensuite à des repères de prix, à une enveloppe estimée et à la façon dont les matériaux et le pilotage sont facturés."
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-8">
+          <div>
+            <h3 className="display text-[1.05rem] text-ivoire">Chiffrer et comparer</h3>
+            <ul className="flex flex-col gap-2 mt-3">
+              <li><Link href="/estimateur-travaux" className="text-orange-deep hover:underline text-[0.92rem]">Estimer une enveloppe de travaux en quelques questions</Link></li>
+              <li><Link href="/observatoire-prix-renovation" className="text-orange-deep hover:underline text-[0.92rem]">Les fourchettes de prix par poste de travaux en Île-de-France</Link></li>
+              <li><Link href="/modele-economique-transparence" className="text-orange-deep hover:underline text-[0.92rem]">Qui facture quoi : le modèle économique détaillé</Link></li>
+              <li><Link href="/achat-direct-materiaux" className="text-orange-deep hover:underline text-[0.92rem]">Acheter les matériaux en direct, à votre nom</Link></li>
+              <li><Link href="/glossaire-renovation" className="text-orange-deep hover:underline text-[0.92rem]">Le vocabulaire employé dans les devis et les diagnostics</Link></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="display text-[1.05rem] text-ivoire">Articles du blog sur le devis et le budget</h3>
+            <ul className="flex flex-col gap-2 mt-3">
+              <li><Link href="/blog/devis-travaux-lignes-a-verifier" className="text-orange-deep hover:underline text-[0.92rem]">Les lignes d&apos;un devis à vérifier avant de signer</Link></li>
+              <li><Link href="/blog/prix-renovation-maison-2026" className="text-orange-deep hover:underline text-[0.92rem]">Ce que coûtent des travaux de rénovation de maison en 2026</Link></li>
+              <li><Link href="/blog/cuisine-sur-mesure-ou-caissons-standards" className="text-orange-deep hover:underline text-[0.92rem]">Cuisine sur mesure ou caissons standards : où se joue l&apos;économie</Link></li>
+              <li><Link href="/blog/maprimerenov-cee-2026" className="text-orange-deep hover:underline text-[0.92rem]">MaPrimeRénov&apos; et CEE : ce qu&apos;il faut vérifier avant de compter sur une aide</Link></li>
+              <li><Link href="/blog/planning-chantier-commandes-a-lancer-en-premier" className="text-orange-deep hover:underline text-[0.92rem]">Quelles commandes lancer en premier pour tenir le planning</Link></li>
+              <li><Link href="/blog/ordre-intervention-lots-renovation-complete" className="text-orange-deep hover:underline text-[0.92rem]">Dans quel ordre faire intervenir les lots d&apos;une rénovation complète</Link></li>
+            </ul>
+          </div>
+        </div>
+        <p className="text-muted text-[0.9rem] leading-relaxed mt-8 max-w-2xl">
+          Les devis analysés portent sur des projets situés dans notre zone d&apos;intervention :{" "}
+          <Link href="/renovation-hauts-de-seine-92" className="text-orange-deep hover:underline">les Hauts-de-Seine (92)</Link>
+          {" "}en priorité et, selon l&apos;ampleur du chantier,{" "}
+          <Link href="/renovation-ile-de-france" className="text-orange-deep hover:underline">le reste de l&apos;Île-de-France</Link>.
+          Les prestations concernées sont détaillées dans{" "}
+          <Link href="/services" className="text-orange-deep hover:underline">l&apos;index complet des travaux pilotés</Link>.
+        </p>
+      </MqSection>
+
       <MqSection kicker="QUESTIONS FRÉQUENTES" title="Ce que les porteurs de projet demandent le plus souvent">
         <MqFaq
           items={[
@@ -294,6 +333,9 @@ export default function Page() {
           { href: "/modele-economique-transparence", label: "Modèle économique & transparence", sub: "Comment l'achat direct de matériaux réduit le budget" },
           { href: "/notre-methode", label: "Notre méthode", sub: "Les 8 étapes du pilotage de A à Z" },
           { href: "/observatoire-prix-renovation", label: "Observatoire des prix réels", sub: "Fourchettes indicatives par poste de travaux" },
+          { href: "/estimateur-travaux", label: "Estimateur de travaux", sub: "Une enveloppe en quelques questions" },
+          { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Facture à votre nom, sans marge" },
+          { href: "/garanties-assurances", label: "Garanties & assurances", sub: "Ce qui doit être remis avant démarrage" },
         ]}
       />
 

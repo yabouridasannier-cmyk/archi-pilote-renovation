@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -59,6 +60,11 @@ export default function Page() {
                 </p>
                 <p>
                   Lorsque le doute persiste malgré le sondage, notamment pour les ouvrages engageant la stabilité de plusieurs niveaux, l'avis d'un ingénieur structure partenaire indépendant est sollicité avant toute validation de devis. Cette étape, souvent perçue comme une dépense évitable, protège en réalité le budget global du chantier.
+                </p>
+                <p>
+                  Un dossier réel, anonymisé, montre l'enchaînement complet une fois le mur confirmé
+                  porteur : plans, étaiement, portique acier et finitions, sur la page{" "}
+                  <Link href="/ouverture-mur-porteur" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">ouverture de mur porteur</Link>.
                 </p>
               </MqProse>
             </div>
@@ -294,7 +300,11 @@ export default function Page() {
             <div className="mt-4">
               <MqProse>
                 <p>
-                  La reprise en sous-œuvre, l'extension d'une maison ou la surélévation d'un étage modifient la charge transmise aux fondations. Sans une étude géotechnique, on dimensionne à l'aveugle et on expose le chantier à des tassements différentiels ou à des désordres futurs. ARCHI PILOTE RÉNOVATION fait appel au bureau d'études Geo2Mo pour reconnaître les sols, analyser les fondations existantes et fournir les paramètres de calcul utilisés par l'ingénieur structure.
+                  La reprise en sous-œuvre, l'{""}
+                  <Link href="/extension-maison" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">extension d'une maison</Link>{" "}
+                  ou la{" "}
+                  <Link href="/surelevation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">surélévation d'un étage</Link>{" "}
+                  modifient la charge transmise aux fondations. Sans une étude géotechnique, on dimensionne à l'aveugle et on expose le chantier à des tassements différentiels ou à des désordres futurs. ARCHI PILOTE RÉNOVATION fait appel au bureau d'études Geo2Mo pour reconnaître les sols, analyser les fondations existantes et fournir les paramètres de calcul utilisés par l'ingénieur structure.
                 </p>
               </MqProse>
             </div>
@@ -486,6 +496,11 @@ export default function Page() {
           <p>
             Avant tout démarrage de chantier, les attestations d'assurance en cours de validité de l'entreprise partenaire contractante retenue sont vérifiées. Cette vérification fait partie du pilotage, mais la garantie elle-même reste propre à chaque entreprise exécutante, seule responsable de son ouvrage.
           </p>
+          <p>
+            Ce que couvrent précisément ces protections — décennale, biennale, parfait achèvement — est
+            expliqué sur la page{" "}
+            <Link href="/garanties-assurances" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">garanties et assurances</Link>.
+          </p>
         </MqProse>
       </MqSection>
 
@@ -625,12 +640,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
-          { href: "/renovation-complete", label: "Rénovation complète", sub: "Du diagnostic à la livraison" },
-          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Électricité, plomberie, cloisons" },
+          { href: "/ouverture-mur-porteur", label: "Ouverture de mur porteur", sub: "Un dossier réel, des plans à la réception" },
           { href: "/chantiers-complexes", label: "Chantiers complexes", sub: "Structure, copropriété, aléas" },
-          { href: "/renovation-energetique", label: "Rénovation énergétique", sub: "Passoire énergétique, VMC, isolation" },
-          { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyse ligne à ligne de vos devis" },
-          { href: "/contact", label: "Contact", sub: "Décrire votre projet en détail" },
+          { href: "/savoir-faire-ancien", label: "Savoir-faire de l'ancien", sub: "Pan de bois, plâtre, moulures, crémones" },
+          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Ce qui vient une fois la structure réglée" },
+          { href: "/demarches-administratives-renovation", label: "Démarches administratives", sub: "Syndic, assemblée générale, mairie" },
+          { href: "/renovation-hauts-de-seine-92", label: "Rénovation dans les Hauts-de-Seine", sub: "Le département d'où nous intervenons" },
         ]}
       />
     </>

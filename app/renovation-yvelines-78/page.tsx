@@ -18,6 +18,40 @@ export default function Page() {
       intro="Dans les Yvelines, ARCHI PILOTE RÉNOVATION cible en priorité les maisons et projets suffisamment structurants : rénovation complète, extension, surélévation, toiture, charpente, redistribution intérieure et rénovation énergétique. La page met davantage l'accent sur la maison et le pavillon que sur l'appartement."
       bulletsTitle="Projets prioritaires"
       bullets={["Rénovation complète de maison", "Extension", "Surélévation selon faisabilité", "Toiture / charpente", "Rénovation énergétique", "Redistribution et réseaux"]}
+      maillage={{
+        titre: "Maison, extension, surélévation : par où commencer",
+        intro:
+          "Sur une maison, gagner de la surface se décide avant tout le reste : extension au sol, surélévation ou simple redistribution ne mobilisent ni les mêmes autorisations ni les mêmes corps de métier.",
+        groupes: [
+          {
+            titre: "Gagner de la surface",
+            liens: [
+              { href: "/extension-maison", label: "Extension de maison" },
+              { href: "/surelevation", label: "Surélévation d'une maison" },
+              { href: "/renovation-maison-pavillon", label: "Rénovation de maison et de pavillon" },
+              { href: "/demarches-administratives-renovation", label: "Permis et déclaration préalable" },
+            ],
+          },
+          {
+            titre: "Enveloppe et lots techniques",
+            liens: [
+              { href: "/renovation-toiture-charpente", label: "Toiture et charpente" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+              { href: "/electricite-plomberie-renovation", label: "Redistribution et réseaux" },
+              { href: "/renovation-complete", label: "Rénovation complète de maison" },
+            ],
+          },
+          {
+            titre: "Territoires voisins",
+            liens: [
+              { href: "/renovation-rueil-malmaison", label: "Rueil-Malmaison, commune limitrophe" },
+              { href: "/renovation-hauts-de-seine-92", label: "Hauts-de-Seine (92)" },
+              { href: "/renovation-val-doise-95", label: "Val-d'Oise (95)" },
+              { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

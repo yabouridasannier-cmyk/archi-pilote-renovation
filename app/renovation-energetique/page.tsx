@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqStats, MqNumbered, MqChecklist, MqDark, MqDarkSteps, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -45,7 +46,11 @@ export default function Page() {
                 </p>
                 <p>
                   Cette lecture détaillée, plutôt que la seule lettre affichée en façade du diagnostic, constitue
-                  le point de départ de toute hiérarchisation sérieuse des travaux envisagés.
+                  le point de départ de toute hiérarchisation sérieuse des travaux envisagés. Notre article{" "}
+                  <Link href="/blog/sortir-passoire-energetique" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                    DPE F ou G : comment sortir de la passoire énergétique
+                  </Link>{" "}
+                  reprend cette lecture poste par poste.
                 </p>
               </MqProse>
             </div>
@@ -116,7 +121,11 @@ export default function Page() {
                   fortement les ponts thermiques au niveau des jonctions entre planchers et façades. Elle préserve
                   la surface habitable intérieure, mais modifie l'aspect extérieur du bâtiment, ce qui implique
                   généralement une autorisation d'urbanisme et, en copropriété, un accord préalable en assemblée
-                  générale.
+                  générale. Les pièces à réunir dans ce cas sont détaillées sur la page{" "}
+                  <Link href="/demarches-administratives-renovation" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+                    démarches administratives en rénovation
+                  </Link>
+                  .
                 </p>
               </MqProse>
             </div>
@@ -361,7 +370,12 @@ export default function Page() {
           <p>
             De nombreux immeubles anciens n'ont jamais été équipés de ventilation mécanique contrôlée. Lorsque le
             projet nécessite une traversée de façade, de toiture ou l'usage d'une gaine commune existante, une
-            démarche formelle auprès du syndic est nécessaire avant tout démarrage de travaux.
+            démarche formelle auprès du syndic est nécessaire avant tout démarrage de travaux. Ces dossiers de
+            copropriété sont instruits dans notre zone d'intervention, décrite sur la page{" "}
+            <Link href="/renovation-hauts-de-seine-92" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+              rénovation en Hauts-de-Seine
+            </Link>
+            .
           </p>
         </MqProse>
         <div className="mt-8">
@@ -466,7 +480,12 @@ export default function Page() {
         <p className="text-muted text-[0.92rem] leading-relaxed mt-8 max-w-2xl">
           Ces ordres de grandeur restent indicatifs et dépendent fortement de la surface, de l'état initial du
           bien et du niveau de performance visé ; ils sont toujours confrontés à l'état réel constaté lors de la
-          visite technique avant tout engagement.
+          visite technique avant tout engagement. Les dispositifs d'aide susceptibles d'alléger ce budget, et
+          surtout la méthode pour vérifier leurs règles en vigueur, sont présentés sur la page{" "}
+          <Link href="/aides-renovation-energetique" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+            aides à la rénovation énergétique
+          </Link>
+          .
         </p>
         <div className="mt-8">
           <MqStats
@@ -622,12 +641,12 @@ export default function Page() {
 
       <MqReadNext
         items={[
+          { href: "/aides-renovation-energetique", label: "Aides à la rénovation énergétique", sub: "MaPrimeRénov' et CEE : comment vérifier les règles en vigueur" },
+          { href: "/blog/isolation-interieure-erreurs-humidite", label: "Isolation intérieure : les erreurs qui créent l'humidité", sub: "Continuité, points singuliers, ventilation" },
+          { href: "/blog/vmc-renovation-verifier-au-dela-du-debit", label: "VMC en rénovation : ce qu'il faut vérifier au-delà du débit", sub: "Le chemin d'air complet, de l'entrée au rejet" },
+          { href: "/renovation-toiture-charpente", label: "Toiture et charpente", sub: "Traiter l'enveloppe avant les finitions intérieures" },
           { href: "/renovation-complete", label: "Rénovation complète", sub: "Du diagnostic à la livraison" },
-          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
-          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Électricité, plomberie, cloisons" },
-          { href: "/demarches-administratives-renovation", label: "Démarches administratives", sub: "Syndic, urbanisme, copropriété" },
-          { href: "/observatoire-prix-renovation", label: "Observatoire des prix réels", sub: "Fourchettes constatées" },
-          { href: "/contact", label: "Contact", sub: "Décrire votre projet en détail" },
+          { href: "/renovation-hauts-de-seine-92", label: "Rénovation en Hauts-de-Seine", sub: "Notre zone d'intervention et ses immeubles anciens" },
         ]}
       />
     </main>

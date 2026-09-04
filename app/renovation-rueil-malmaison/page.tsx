@@ -19,6 +19,40 @@ export default function Page() {
       intro="À Rueil-Malmaison, l'angle prioritaire est la maison et les projets de grande ampleur : rénovation complète, extension, toiture, énergie, redistribution et montée en gamme des finitions."
       bulletsTitle="Ce que nous pouvons étudier"
       bullets={["Rénovation complète", "Maison ou appartement selon le bien", "Structure et ouvertures", "Réseaux techniques", "Énergie", "Extension / surélévation si pertinent"]}
+      maillage={{
+        intro:
+          "Agrandir, surélever ou reprendre une toiture ne relève pas des mêmes autorisations ni des mêmes entreprises. Les pages ci-dessous distinguent chaque option avant de choisir.",
+        groupes: [
+          {
+            titre: "Agrandir, reprendre, finir",
+            liens: [
+              { href: "/renovation-complete", label: "Rénovation complète de maison" },
+              { href: "/extension-maison", label: "Extension de maison" },
+              { href: "/surelevation", label: "Surélever une maison" },
+              { href: "/renovation-toiture-charpente", label: "Toiture et charpente" },
+              { href: "/renovation-energetique", label: "Rénovation énergétique" },
+              { href: "/menuiserie-agencement-sur-mesure", label: "Agencement et menuiserie sur mesure" },
+              { href: "/sols-finitions-renovation", label: "Sols et finitions" },
+            ],
+          },
+          {
+            titre: "Communes voisines traitées",
+            liens: [
+              { href: "/renovation-nanterre", label: "Nanterre" },
+              { href: "/renovation-la-garenne-colombes", label: "La Garenne-Colombes" },
+              { href: "/renovation-colombes", label: "Colombes" },
+            ],
+          },
+          {
+            titre: "Territoire",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Rénovation dans les Hauts-de-Seine (92)" },
+              { href: "/renovation-yvelines-78", label: "Les Yvelines (78), département limitrophe" },
+              { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

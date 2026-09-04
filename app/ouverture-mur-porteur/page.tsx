@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -53,6 +54,12 @@ export default function Page() {
               Sur ce dossier, le mur séparait un dégagement d'un séjour. Le bureau d'études a relevé les hauteurs sous
               plafond de chaque côté du mur (2,36 m et 2,48 m selon la pièce) et la largeur d'ouverture visée
               (2,55 m), avant de calculer la reprise de charge nécessaire.
+            </p>
+            <p>
+              Ce type d'ouverture, entre un dégagement et un séjour ou entre une cuisine et un séjour,
+              revient régulièrement en{" "}
+              <Link href="/renovation-appartement" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">rénovation d'appartement</Link>,
+              où la copropriété ajoute ses propres contraintes.
             </p>
           </MqProse>
         </div>
@@ -144,6 +151,12 @@ export default function Page() {
             demande de devis à l'entreprise d'exécution. C'est cette hypothèse qui rend les devis comparables entre
             eux : sans elle, deux entreprises chiffrent deux ouvrages différents sans le savoir.
           </p>
+          <p>
+            La lecture ligne à ligne des devis reçus est détaillée dans la{" "}
+            <Link href="/clinique-du-devis" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">clinique du devis</Link>.
+            En copropriété, l'ouverture d'un élément porteur relève par ailleurs des{" "}
+            <Link href="/demarches-administratives-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">autorisations à obtenir avant travaux</Link>.
+          </p>
         </MqProse>
         <div className="mt-8">
           <MqChecklist
@@ -181,6 +194,9 @@ export default function Page() {
           { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Le détail complet de la méthode" },
           { href: "/chantiers-complexes", label: "Chantiers complexes", sub: "Quand un ingénieur structure est mobilisé" },
           { href: "/estimateur-travaux", label: "Estimateur de travaux", sub: "Fourchette de budget immédiate" },
+          { href: "/reseau-partenaires", label: "Réseau de partenaires", sub: "Bureau d'études structure et entreprises" },
+          { href: "/garanties-assurances", label: "Garanties et assurances", sub: "Ce que couvre l'entreprise exécutante" },
+          { href: "/renovation-hauts-de-seine-92", label: "Rénovation dans les Hauts-de-Seine", sub: "Le département d'où nous intervenons" },
         ]}
       />
     </main>

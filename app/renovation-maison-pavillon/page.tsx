@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -48,6 +49,11 @@ export default function Page() {
                 <p>
                   L'expérience de terrain montre qu'un désordre présenté comme diffus a très souvent une origine précise et localisée : une jonction de toiture mal reprise, un raccord de façade fissuré, une évacuation d'eaux pluviales mal positionnée. Identifier ce point singulier évite des travaux généraux inutilement coûteux.
                 </p>
+                <p>
+                  Lorsque l'origine se situe en partie haute, les reprises relèvent du lot{" "}
+                  <Link href="/renovation-toiture-charpente" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">toiture et charpente</Link>,
+                  traité à part car il conditionne tout ce qui sera isolé en dessous.
+                </p>
               </MqProse>
             </div>
           </div>
@@ -81,6 +87,11 @@ export default function Page() {
         <MqProse>
           <p>
             Une maison classée passoire énergétique cumule généralement plusieurs faiblesses : toiture mal isolée, menuiseries anciennes laissant filer la chaleur, murs sans isolation ou avec une isolation dégradée, et absence de ventilation mécanique contrôlée adaptée. Traiter un seul de ces points sans les autres donne des résultats décevants.
+          </p>
+          <p>
+            Une partie de ces postes peut relever de dispositifs de financement. Notre{" "}
+            <Link href="/aides-renovation-energetique" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">guide des aides à la rénovation énergétique</Link>{" "}
+            renvoie vers les sources officielles, sans promesse d'éligibilité avant étude du dossier.
           </p>
         </MqProse>
         <div className="mt-8">
@@ -124,6 +135,11 @@ export default function Page() {
         title="Construire le budget par familles de postes"
         lead="Le budget d'une rénovation de maison se décompose en familles homogènes, avec une réserve pour aléas systématiquement prévue."
       >
+        <p className="mb-8 max-w-2xl text-[0.95rem] leading-relaxed text-ivoire/85">
+          Pour situer chaque famille avant même la visite technique, les fourchettes indicatives et datées
+          poste par poste sont publiées dans{" "}
+          <Link href="/observatoire-prix-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">l'observatoire des prix de rénovation</Link>.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
           {[
             { title: "Diagnostics", text: "Lecture du bâtiment, éventuel carottage, diagnostic de performance énergétique." },
@@ -165,7 +181,8 @@ export default function Page() {
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Pavillon francilien : de la façade fatiguée à l'enveloppe performante</h3>
             <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
-              Isolation thermique par l'extérieur, remplacement des menuiseries, reprise de couverture et traitement des abords : l'enveloppe est traitée comme un ensemble cohérent.
+              Isolation thermique par l'extérieur, remplacement des menuiseries, reprise de couverture et traitement des abords : l'enveloppe est traitée comme un ensemble cohérent. Ce type de pavillon est courant sur notre zone d'intervention en{" "}
+              <Link href="/renovation-ile-de-france" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">Île-de-France</Link>.
             </p>
             {/*
               LIMITATION HONNÊTE — pavillon-facade-avant.jpg et pavillon-facade-apres.jpg sont
@@ -273,11 +290,11 @@ export default function Page() {
       <MqReadNext
         items={[
           { href: "/renovation-energetique", label: "Rénovation énergétique", sub: "Passoire énergétique, VMC, isolation" },
-          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Mur porteur, plancher, trémie" },
-          { href: "/notre-methode", label: "Notre méthode", sub: "Les 8 étapes du pilotage" },
+          { href: "/gros-oeuvre-structure", label: "Gros œuvre & structure", sub: "Fissures, planchers, fondations" },
+          { href: "/renovation-complete", label: "Rénovation complète", sub: "Le cadre général du pilotage" },
           { href: "/extension-maison", label: "Extension de maison", sub: "Ajouter de la surface sans désorganiser" },
+          { href: "/surelevation", label: "Surélévation", sub: "Gagner un niveau : charges et fondations" },
           { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyse ligne à ligne de vos devis" },
-          { href: "/contact", label: "Contact", sub: "Décrire votre projet de maison" },
         ]}
       />
     </>

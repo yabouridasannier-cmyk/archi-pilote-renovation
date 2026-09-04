@@ -21,6 +21,36 @@ export default function Page() {
         { titre: "Plans de réseaux", texte: "Les plans évitent les décisions improvisées sur chantier, où une erreur coûte cher à corriger une fois les murs fermés." },
         { titre: "Photos avant fermeture", texte: "Une bibliothèque de photos datées, prise avant chaque fermeture de cloison, facilite toute intervention future — sur ce chantier comme sur les suivants." },
       ]}
+      maillage={{
+        intro:
+          "Électricité et plomberie se décident avant la fermeture des cloisons. Ce qui suit détaille le séquencement, les points de contrôle et les arbitrages de budget.",
+        groupes: [
+          {
+            titre: "Avant de refermer les murs",
+            liens: [
+              { href: "/second-oeuvre", label: "Interfaces entre lots techniques" },
+              { href: "/detail-invisible", label: "Les réseaux qu'on ne reverra plus" },
+              { href: "/renovation-salle-de-bain-maison", label: "Salle de bain : étanchéité et évacuations" },
+            ],
+          },
+          {
+            titre: "Projets concernés",
+            liens: [
+              { href: "/renovation-appartement", label: "Rénovation d'appartement" },
+              { href: "/renovation-complete", label: "Rénovation complète" },
+              { href: "/renovation-energetique", label: "Chauffage et ventilation" },
+            ],
+          },
+          {
+            titre: "Cadrer le devis",
+            liens: [
+              { href: "/clinique-du-devis", label: "Lire un devis ligne à ligne" },
+              { href: "/garanties-assurances", label: "Garanties et assurances des exécutants" },
+              { href: "/renovation-hauts-de-seine-92", label: "Hauts-de-Seine" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }

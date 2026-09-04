@@ -19,6 +19,45 @@ export default function Page() {
       intro="Base locale d'ARCHI PILOTE RÉNOVATION, La Garenne-Colombes est notre page locale la plus solide : proximité, capacité de passage rapide, mix appartement / maison de ville et connaissance opérationnelle du secteur."
       bulletsTitle="Ce que nous pouvons étudier"
       bullets={["Rénovation complète", "Maison ou appartement selon le bien", "Structure et ouvertures", "Réseaux techniques", "Énergie", "Extension / surélévation si pertinent"]}
+      maillage={{
+        intro:
+          "C'est depuis La Garenne-Colombes que partent nos visites. Les pages ci-dessous décrivent ce que nous étudions, comment se déroule une prise en charge et par où commencer si vous avez déjà un devis en main.",
+        groupes: [
+          {
+            titre: "Les types de projets étudiés",
+            liens: [
+              { href: "/renovation-complete", label: "Rénovation complète" },
+              { href: "/renovation-appartement", label: "Rénovation d'appartement" },
+              { href: "/renovation-maison-pavillon", label: "Maison de ville et pavillon" },
+              { href: "/ouverture-mur-porteur", label: "Ouverture de mur porteur" },
+              { href: "/menuiserie-agencement-sur-mesure", label: "Menuiserie et agencement sur mesure" },
+            ],
+          },
+          {
+            titre: "Avant de signer quoi que ce soit",
+            liens: [
+              { href: "/parcours-expertise", label: "Le parcours d'expertise, étape par étape" },
+              { href: "/clinique-du-devis", label: "Faire relire un devis d'entreprise" },
+              { href: "/estimateur-travaux", label: "Estimer un budget travaux" },
+            ],
+          },
+          {
+            titre: "Communes voisines traitées",
+            liens: [
+              { href: "/renovation-courbevoie", label: "Courbevoie" },
+              { href: "/renovation-bois-colombes", label: "Bois-Colombes" },
+              { href: "/renovation-nanterre", label: "Nanterre" },
+            ],
+          },
+          {
+            titre: "Territoire",
+            liens: [
+              { href: "/renovation-hauts-de-seine-92", label: "Rénovation dans les Hauts-de-Seine (92)" },
+              { href: "/renovation-ile-de-france", label: "Rénovation en Île-de-France" },
+            ],
+          },
+        ],
+      }}
     />
   );
 }
