@@ -49,7 +49,9 @@ export function Footer() {
             indépendants. Les travaux sont exécutés et facturés par les entreprises concernées.
           </p>
           <div className="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-[0.8rem]" style={{ color: "oklch(58% 0.012 70)" }}>
-            <span>© 2026 IA RENOV SASU. Marque ARCHI PILOTE RÉNOVATION. Tous droits réservés. — {NAV_STANDALONE.map((l) => (<Link key={l.href} href={l.href} className="hover:underline">{l.label}</Link>))} — <Link href="/mentions-legales" className="hover:underline">Mentions légales</Link> — <Link href="/politique-confidentialite" className="hover:underline">Confidentialité</Link></span>
+            {/* 03/09 : la dénomination sociale n'apparaît plus qu'UNE fois dans le pied de page
+                (bloc d'identification ci-dessus), pas une seconde dans la ligne de copyright. */}
+            <span>© 2026 ARCHI PILOTE RÉNOVATION. Tous droits réservés. — {NAV_STANDALONE.map((l) => (<Link key={l.href} href={l.href} className="hover:underline">{l.label}</Link>))} — <Link href="/mentions-legales" className="hover:underline">Mentions légales</Link> — <Link href="/politique-confidentialite" className="hover:underline">Confidentialité</Link></span>
             <a href="https://fr.trustpilot.com/evaluate/archipiloterenovation.fr" target="_blank" rel="noreferrer" className="hover:underline">Donner votre avis sur Trustpilot ★</a>
           </div>
         </div>

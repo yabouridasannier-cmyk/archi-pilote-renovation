@@ -42,7 +42,11 @@ export const JSONLD_ORGANIZATION = {
   "@type": "ProfessionalService",
   "@id": "https://www.archipiloterenovation.com/#organization",
   name: "ARCHI PILOTE RÉNOVATION",
-  legalName: "IA RENOV",
+  /* 03/09 : « legalName: IA RENOV » retiré du balisage. C'était le signal lisible par
+     machine qui rattachait publiquement cette marque aux deux autres enseignes exploitées
+     par la même société — exactement ce que le dossier T5 demande de ne pas déclarer ici.
+     La dénomination sociale et l'immatriculation restent où la loi les exige : page
+     Mentions légales, documents contractuels, et une ligne unique en pied de page. */
   url: "https://www.archipiloterenovation.com",
   telephone: "+33652798089",
   email: "archipiloterenovation@gmail.com",
