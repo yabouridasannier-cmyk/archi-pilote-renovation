@@ -277,8 +277,8 @@ export default function Page() {
                 dd: "Durée moyenne — De l'étude de faisabilité à la livraison, autorisations administratives comprises.",
               },
               {
-                dt: "20 %",
-                dd: "Économies possibles — Sur les matériaux achetés en direct par le client lorsque le lot s'y prête.",
+                dt: "Prix fournisseur",
+                dd: "Matériaux achetés en direct — Lorsque le lot s'y prête, le client commande au fournisseur sans marge d'intermédiation.",
               },
               {
                 dt: "Documents attendus",

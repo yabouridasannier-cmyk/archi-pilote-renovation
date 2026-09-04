@@ -58,7 +58,7 @@ export function Estimateur() {
   const bien = BIENS.find((b) => b.id === bienId)!;
   const finition = FINITIONS.find((f) => f.id === finitionId)!;
 
-  const { min, max, mid, semaines, economie } = useMemo(() => {
+  const { min, max, mid, semaines } = useMemo(() => {
     const coef = bien.coef * finition.coef;
     const extra = OPTIONS.filter((o) => opts.includes(o.id)).reduce((s, o) => s + o.montant, 0);
     const min = niveau.min * surface * coef + extra;
@@ -66,7 +66,7 @@ export function Estimateur() {
     const mid = (min + max) / 2;
     const lvl = { rafraichissement: 0.45, partielle: 0.7, complete: 1, lourde: 1.4 }[niveau.id as string] ?? 1;
     const semaines = Math.max(2, Math.round((surface / 12) * lvl));
-    return { min, max, mid, semaines, economie: mid * 0.2 };
+    return { min, max, mid, semaines };
   }, [surface, niveau, bien, finition, opts]);
 
   const toggle = (id: string) => setOpts((p) => (p.includes(id) ? p.filter((x) => x !== id) : [...p, id]));
@@ -160,8 +160,8 @@ export function Estimateur() {
               <dd className="font-semibold mt-0.5" style={{ color: "var(--mq-primary-fg)" }}>{semaines} semaines</dd>
             </div>
             <div>
-              <dt className="text-[0.72rem] uppercase tracking-wider" style={{ color: "oklch(60% 0.012 70)" }}>Économie visée par achat direct</dt>
-              <dd className="font-semibold mt-0.5" style={{ color: "var(--mq-primary-fg)" }}>jusqu&apos;à {fmt(economie)} €</dd>
+              <dt className="text-[0.72rem] uppercase tracking-wider" style={{ color: "oklch(60% 0.012 70)" }}>Achat direct des matériaux</dt>
+              <dd className="font-semibold mt-0.5" style={{ color: "var(--mq-primary-fg)" }}>Prix fournisseur sur les postes hors décennale</dd>
             </div>
           </dl>
         </div>

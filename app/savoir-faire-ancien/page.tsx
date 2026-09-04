@@ -504,7 +504,7 @@ export default function SavoirFaireAncienPage() {
           <MqProse>
             <p>
               Cette organisation, héritée des méthodes d'achat des foncières, explique une part importante de l'économie constatée sur le
-              budget travaux, jusqu'à 20 % d'économies sur le budget travaux.
+              budget travaux.
             </p>
           </MqProse>
         </div>

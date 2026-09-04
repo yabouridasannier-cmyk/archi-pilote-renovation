@@ -10,6 +10,11 @@ import { SITE } from "../data";
 const PROJETS = ["Rafraîchissement", "Rénovation partielle", "Rénovation complète", "Cuisine sur-mesure", "Salle de bain", "Isolation & DPE", "Gros œuvre / surélévation", "Autre projet"];
 const BUDGETS = ["Moins de 10 000 €", "10 000 – 50 000 €", "50 000 – 100 000 €", "100 000 – 200 000 €", "Plus de 200 000 €", "Je ne sais pas encore"];
 const HORIZONS = ["Dans le mois", "Dans les 3 mois", "Dans les 6 mois", "Je me renseigne encore", "Non précisé"];
+/* 04/09 : 6e critère de qualification demandé au dossier (8.12) — la copropriété.
+   Volontairement NON obligatoire : un prospect qui ne sait pas ne doit pas être bloqué,
+   d'où l'option vide « Non précisé » en plus des trois réponses.
+   Liste identique à celle validée dans app/api/contact/route.ts. */
+const COPROS = ["Oui", "Non", "Je ne sais pas"];
 
 /* 03/09 : filet de sécurité. Si la livraison échoue (service d'e-mail indisponible ou
    non activé), le visiteur perdait tout ce qu'il venait de saisir et devait le retaper
@@ -23,6 +28,7 @@ function recapitulatif(f: Record<string, string>) {
     `Commune : ${f.commune}`,
     `Projet : ${f.projet}`,
     f.surface && `Surface : ${f.surface} m²`,
+    f.copro && `Copropriété : ${f.copro}`,
     `Budget : ${f.budget}`,
     `Démarrage : ${f.horizon}`,
     f.description && `\n${f.description}`,
@@ -31,7 +37,7 @@ function recapitulatif(f: Record<string, string>) {
 }
 
 export function ContactForm() {
-  const [form, setForm] = useState({ nom: "", email: "", tel: "", commune: "", projet: "", surface: "", budget: "", horizon: "Non précisé", description: "" });
+  const [form, setForm] = useState({ nom: "", email: "", tel: "", commune: "", projet: "", surface: "", copro: "", budget: "", horizon: "Non précisé", description: "" });
   const [sending, setSending] = useState(false);
   const [done, setDone] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -105,6 +111,12 @@ export function ContactForm() {
       </label>
       <label className={labelCls}>Surface concernée
         <input className="field" value={form.surface} onChange={set("surface")} placeholder="ex. 75 m²" />
+      </label>
+      <label className={`${labelCls} sm:col-span-2`}>Le bien est-il en copropriété ?
+        <select className="field" value={form.copro} onChange={set("copro")}>
+          <option value="">Non précisé</option>
+          {COPROS.map((c) => <option key={c} value={c}>{c}</option>)}
+        </select>
       </label>
       <label className={labelCls}>Budget envisagé *
         <select required className="field" value={form.budget} onChange={set("budget")}>

@@ -495,8 +495,8 @@ export default function Page() {
                 dd: "Isolation des combles — Poste souvent prioritaire compte tenu de son impact fréquemment élevé sur les déperditions globales.",
               },
               {
-                dt: "20 %",
-                dd: "Économies possibles — Grâce aux achats de matériaux isolants et menuiseries en direct par le client, sur les postes qui s'y prêtent.",
+                dt: "Prix fournisseur",
+                dd: "Isolants et menuiseries achetés en direct — Sur les postes qui s'y prêtent, le client règle le fournisseur sans marge d'intermédiation.",
               },
               {
                 dt: "Ventilation",

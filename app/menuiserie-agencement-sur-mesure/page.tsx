@@ -348,7 +348,7 @@ export default function Page() {
             "Références validées techniquement par notre équipe avant toute commande du client.",
             "Retrait des commandes par notre flotte de camions et livraison sur le chantier au moment utile.",
             "Aucune marge prise sur la fourniture : le client conserve l'intégralité de l'écart de prix.",
-            "Objectif d'économie pouvant atteindre 20 % sur les postes concernés, sans garantie universelle.",
+            "Écart de prix constaté poste par poste sur les devis, jamais annoncé comme une remise forfaitaire.",
             "Nettoyage professionnel de fin de chantier systématique, hérité de nos standards de conciergerie.",
           ]}
         />

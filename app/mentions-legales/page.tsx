@@ -18,9 +18,25 @@ export default function MentionsLegalesPage() {
       />
       <section className="relative pb-24 md:pb-36">
         <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-10 text-ivoire/85 text-[0.98rem] leading-relaxed">
+          {/* MANQUE ENCORE, à réclamer au client — volontairement NON inventé ici :
+              · le capital social d'IA RENOV (mention obligatoire pour une société commerciale,
+                art. R123-237 du code de commerce) ;
+              · le NOM du président, pour nommer le directeur de la publication au lieu de le
+                désigner par sa fonction (art. 6-III de la LCEN).
+              Ces deux informations n'existent nulle part dans le dépôt : les ajouter dès
+              réception, sur les deux lignes correspondantes ci-dessous. */}
           <div className="flex flex-col gap-2">
             <h2 className="display text-xl text-ivoire normal-case">Éditeur du site</h2>
             <p>{SITE.structure}</p>
+            {/* Numéro de TVA intracommunautaire CALCULÉ par la formule légale française
+                appliquée au SIREN 889 976 387 : clé = (12 + 3 × (SIREN mod 97)) mod 97,
+                soit ici (12 + 3 × 29) mod 97 = 02 → FR02 889976387.
+                ⚠ À FAIRE CONFIRMER par l'expert-comptable d'IA RENOV avant de le tenir pour
+                définitif : la formule donne le numéro qui SERAIT attribué, elle ne prouve pas
+                qu'il soit actif. Si la société relève de la franchise en base de TVA
+                (art. 293 B du CGI), aucun numéro intracommunautaire ne s'applique et cette
+                ligne doit être retirée plutôt que corrigée. */}
+            <p>N° de TVA intracommunautaire : FR02 889976387.</p>
             <p>Directeur de la publication : le Président d&apos;IA RENOV (SASU).</p>
             <p>Contact : <a href={`mailto:${SITE.email}`} className="text-orange hover:underline">{SITE.email}</a> — {SITE.telAffiche}</p>
           </div>
@@ -38,7 +54,11 @@ export default function MentionsLegalesPage() {
 
           <div className="flex flex-col gap-2">
             <h2 className="display text-xl text-ivoire normal-case">Hébergement</h2>
-            <p>Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, États-Unis.</p>
+            <p>
+              Ce site est hébergé par Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789,
+              États-Unis —{" "}
+              <a href="https://vercel.com" target="_blank" rel="noreferrer" className="text-orange hover:underline">vercel.com</a>.
+            </p>
           </div>
 
           <div className="flex flex-col gap-2">

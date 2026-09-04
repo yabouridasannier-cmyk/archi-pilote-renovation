@@ -11,6 +11,7 @@ const STATIC_PATHS = [
   "/notre-methode",
   "/parcours-expertise",
   "/chantiers-complexes",
+  "/travaux-perimetre-abf",
   "/savoir-faire-ancien",
   "/tendances-materiaux-francais",
   "/tendances-2026-2027",

@@ -336,7 +336,7 @@ export default function Page() {
       <MqReadNext
         items={[
           { href: "/clinique-du-devis", label: "Clinique du devis", sub: "Analyser un devis ligne à ligne" },
-          { href: "/modele-economique-transparence", label: "Modèle économique & transparence", sub: "Achats en direct, jusqu'à 20 % d'économies" },
+          { href: "/modele-economique-transparence", label: "Modèle économique & transparence", sub: "Achats en direct, au prix fournisseur" },
           { href: "/realisations", label: "Réalisations", sub: "Cas datés et documentés" },
           { href: "/estimateur-travaux", label: "Estimateur de travaux", sub: "Une enveloppe en quelques questions" },
           { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Facture à votre nom, sans marge" },

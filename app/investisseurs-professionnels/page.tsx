@@ -185,7 +185,7 @@ export default function InvestisseursProfessionnelsPage() {
       <MqSection
         kicker="Rendement"
         title="Le budget se maîtrise avant le démarrage"
-        lead="Notre modèle vise jusqu'à 20 % d'économies sur le budget travaux, sans dégrader le niveau de prestation."
+        lead="Notre modèle sort les marges d'intermédiation du budget travaux, sans dégrader le niveau de prestation."
       >
         <div className="flex flex-col gap-8">
           {/*

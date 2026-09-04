@@ -287,7 +287,7 @@ export default function Page() {
         items={[
           { href: "/menuiserie-agencement-sur-mesure", label: "Menuiserie et agencement sur mesure", sub: "Dressings, cuisines et façades sur mesure" },
           { href: "/tendances-materiaux-francais", label: "Tendances & matières", sub: "Travertin, zellige, béton ciré" },
-          { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Postes hors décennale, jusqu'à 20 %" },
+          { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Postes hors décennale, au prix fournisseur" },
           { href: "/realisations", label: "Réalisations", sub: "Comparatifs avant / après documentés" },
         ]}
       />

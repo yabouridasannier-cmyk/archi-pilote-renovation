@@ -331,7 +331,7 @@ export default function Page() {
               a: "C'est déconseillé pour une rénovation complète : la dépose des réseaux coupe l'eau et l'électricité, la poussière est permanente et le phasage devient plus long et plus coûteux. Un phasage pièce par pièce reste possible pour une rénovation partielle.",
             },
             {
-              q: "Comment obtenez-vous jusqu'à 20 % d'économies sur ce type de projet ?",
+              q: "Comment faites-vous baisser le budget sur ce type de projet ?",
               a: "Par l'achat des matériaux en direct par le client au prix fournisseur, l'analyse du chiffrage ligne à ligne par un ancien expert en chiffrage, la suppression des doublons entre lots et des arbitrages décidés avant le démarrage plutôt qu'en cours de chantier.",
             },
           ]}

@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   alternates: { canonical: "/modele-economique-transparence" },
   title: "Rénovation : modèle économique transparent | ARCHI PILOTE RÉNOVATION",
   description:
-    "Comprenez qui facture quoi, comment les partenaires interviennent et comment l'achat direct de matériaux permet jusqu'à 20 % d'économies, poste par poste.",
+    "Comprenez qui facture quoi, comment les partenaires interviennent et comment l'achat direct de matériaux au prix fournisseur allège le budget, poste par poste.",
 };
 
 const TABLEAU = [
-  ["Matériaux (carrelage, sanitaires, menuiseries, peinture)", "Achat direct par le client au prix fournisseur, sur références validées par notre équipe.", "10 à 20 %"],
+  ["Matériaux (carrelage, sanitaires, menuiseries, peinture)", "Achat direct par le client au prix fournisseur, sur références validées par notre équipe.", "Les marges d'intermédiation sortent du budget"],
   ["Main-d'œuvre des entreprises partenaires", "Facturée directement par l'entreprise partenaire contractante, sans marge intermédiaire ajoutée.", "Prix de marché négocié"],
-  ["Chiffrage et mise en concurrence", "Analyse ligne à ligne, comparaison de plusieurs devis sur périmètre identique.", "5 à 10 % par suppression des doublons et omissions"],
+  ["Chiffrage et mise en concurrence", "Analyse ligne à ligne, comparaison de plusieurs devis sur périmètre identique.", "Doublons entre lots et postes omis identifiés avant signature"],
   ["Pilotage et accompagnement", "Mission distincte, rémunérée séparément, sans être mêlée au prix des matériaux ou des travaux.", "Visibilité totale sur ce qui est payé et pourquoi"],
   ["Architecte DPLG ou ingénieur structure", "Mission indépendante, facturée directement par le professionnel, mobilisée selon le dossier.", "Coût proportionné à la complexité réelle"],
 ];
@@ -53,8 +53,8 @@ const FAQ = [
     a: "Chaque mission fait l'objet d'un périmètre écrit et d'une rémunération identifiée séparément, avant tout engagement. Le client sait toujours ce qu'il paie et à quel titre.",
   },
   {
-    q: "L'économie de 20 % est-elle garantie sur tous les projets ?",
-    a: "Non, il s'agit d'un objectif atteint sur les projets où l'achat direct de matériaux, la mise en concurrence documentée et un chiffrage rigoureux sont pleinement appliqués. L'ampleur réelle dépend de la nature du bien et des postes concernés.",
+    q: "L'économie est-elle garantie sur tous les projets ?",
+    a: "Non, et aucune économie n'est annoncée à l'avance. Ce qui est garanti, c'est la méthode : achat des matériaux au prix fournisseur sur les postes qui s'y prêtent, mise en concurrence documentée et chiffrage relu ligne à ligne. L'écart réel se constate devis en main et dépend de la nature du bien et des postes concernés.",
   },
   {
     q: "Que se passe-t-il si un poste dépasse le budget prévu ?",
@@ -130,7 +130,7 @@ export default function ModeleEconomiquePage() {
 
       <MqSection
         kicker="Les économies expliquées poste par poste"
-        title="D'où viennent les jusqu'à 20 % d'économies"
+        title="D'où vient l'économie, poste par poste"
         lead="L'économie ne repose pas sur une remise commerciale globale, mais sur l'addition de plusieurs mécanismes vérifiables, détaillés poste par poste dans le tableau suivant."
       >
         <div className="flex flex-col gap-8">
@@ -182,7 +182,7 @@ export default function ModeleEconomiquePage() {
                 <tr className="border-b border-line">
                   <th className="px-4 py-3 font-semibold text-ivoire">Poste de dépense</th>
                   <th className="px-4 py-3 font-semibold text-ivoire">Circuit de facturation</th>
-                  <th className="px-4 py-3 font-semibold text-ivoire">Économie constatée</th>
+                  <th className="px-4 py-3 font-semibold text-ivoire">Ce que cela change pour le budget</th>
                 </tr>
               </thead>
               <tbody>
@@ -197,7 +197,7 @@ export default function ModeleEconomiquePage() {
             </table>
           </div>
           <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl">
-            {"Les taux indiqués sont des ordres de grandeur constatés sur des projets accompagnés ; ils dépendent de la nature du bien, des postes concernés et du niveau de finition retenu."}
+            {"Les effets décrits ci-dessus dépendent de la nature du bien, des postes concernés et du niveau de finition retenu. Ils se constatent devis en main, ligne à ligne, et ne font l'objet d'aucune promesse chiffrée en amont."}
           </p>
         </div>
       </MqSection>

@@ -78,7 +78,7 @@ export default function EstimateurPage() {
           </div>
         </div>
         <p className="text-muted text-[0.82rem] mt-5 max-w-2xl leading-relaxed">
-          L&apos;achat direct des matériaux par le client s&apos;applique ensuite au budget travaux, avec un objectif pouvant atteindre 20&nbsp;% d&apos;économies.
+          L&apos;achat direct des matériaux par le client s&apos;applique ensuite au budget travaux : sur les postes hors décennale, la fourniture est réglée au prix fournisseur, sans marge d&apos;intermédiation.
         </p>
 
         {/*
@@ -104,7 +104,7 @@ export default function EstimateurPage() {
           { q: "Cet estimateur remplace-t-il un devis ?", a: "Non. Il fournit une fourchette indicative construite sur les prix constatés en Île-de-France. Seule une visite du bien et un chiffrage poste par poste engagent des montants réels, établis par les entreprises partenaires qui exécutent et facturent les travaux." },
           { q: "Sur quelles données reposent les fourchettes affichées ?", a: "Sur les fourchettes agrégées de l'observatoire des prix, alimentées par les projets accompagnés à Paris, dans les Hauts-de-Seine et en Île-de-France, hors mobilier et hors honoraires éventuels d'architecte ou d'ingénieur partenaire." },
           { q: "Pourquoi l'estimation est-elle affichée sous forme de fourchette ?", a: "Parce que l'état des réseaux, la qualité des supports et le niveau de finition font varier le coût réel d'un même projet dans un rapport de un à deux. Afficher un montant unique donnerait une fausse précision." },
-          { q: "L'économie annoncée est-elle incluse dans le calcul ?", a: "Non. La fourchette correspond à un budget travaux de marché. L'optimisation par achat direct des matériaux, qui vise jusqu'à 20 % d'économies, s'applique ensuite lors du chiffrage détaillé." },
+          { q: "L'effet de l'achat direct est-il inclus dans le calcul ?", a: "Non. La fourchette correspond à un budget travaux de marché. L'optimisation par achat direct des matériaux, réglés au prix fournisseur sur les postes qui s'y prêtent, s'applique ensuite lors du chiffrage détaillé." },
         ]} />
         <p className="text-[0.82rem] text-muted mt-6 max-w-3xl border-t border-line pt-4">
           <strong className="text-ivoire/80">Rôle et responsabilités.</strong> ARCHI PILOTE RÉNOVATION structure et pilote

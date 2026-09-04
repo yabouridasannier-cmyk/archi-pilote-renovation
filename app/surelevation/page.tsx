@@ -228,8 +228,8 @@ export default function Page() {
               dd: "Généralement plus élevé qu'une extension au sol, en raison de la dépose de toiture et du levage des matériaux.",
             },
             {
-              dt: "20 %",
-              dd: "Économies possibles — Sur certains matériaux achetés en direct par le client, selon les lots concernés.",
+              dt: "Prix fournisseur",
+              dd: "Matériaux achetés en direct — Sur les lots qui s'y prêtent, le client commande au fournisseur sans marge d'intermédiation.",
             },
           ]}
         />

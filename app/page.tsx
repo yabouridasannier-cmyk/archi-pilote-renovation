@@ -211,7 +211,8 @@ export default function Home() {
               Deux régimes coexistent : un avis simple, que l&apos;autorité peut écarter, et un avis conforme, qui
               s&apos;impose. Le délai d&apos;instruction est majoré, en pratique d&apos;un mois de plus qu&apos;un dossier
               ordinaire. Nous préparons le dossier dans le sens de ce que ces services acceptent habituellement, plutôt
-              que de déposer et d&apos;espérer.
+              que de déposer et d&apos;espérer.{" "}
+              <Link href="/travaux-perimetre-abf" className={lien}>Travaux en périmètre ABF : avis simple ou conforme</Link>
             </p>
           </div>
 

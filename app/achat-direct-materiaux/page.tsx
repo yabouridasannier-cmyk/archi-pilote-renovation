@@ -3,7 +3,7 @@ import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCt
 
 export const metadata: Metadata = {
   alternates: { canonical: "/achat-direct-materiaux" },
-  title: "Achat direct des matériaux : jusqu'à 20 % d'économies sur vos travaux | ARCHI PILOTE RÉNOVATION",
+  title: "Achat direct des matériaux : le client paie le prix fournisseur | ARCHI PILOTE RÉNOVATION",
   description:
     "Carrelage, robinetterie, parquet, cuisines et façades sur mesure achetés en direct par le client, sans marge d'intermédiation : le modèle économique d'ARCHI PILOTE RÉNOVATION à Paris et en Île-de-France.",
 };
@@ -65,7 +65,7 @@ const ETAPES = [
 const FAQ = [
   {
     q: "Quels matériaux le client achète-t-il en direct ?",
-    a: "Les postes qui ne relèvent pas de la garantie décennale de l'entreprise qui les met en œuvre : carrelage et faïence, robinetterie et sanitaires, parquet, cuisines équipées, façades et menuiseries sur mesure, luminaires et quincaillerie. L'objectif est une économie pouvant atteindre 20 % sur ces postes.",
+    a: "Les postes qui ne relèvent pas de la garantie décennale de l'entreprise qui les met en œuvre : carrelage et faïence, robinetterie et sanitaires, parquet, cuisines équipées, façades et menuiseries sur mesure, luminaires et quincaillerie. Sur ces postes, le client règle le fournisseur au prix obtenu, sans marge d'intermédiation ajoutée.",
   },
   {
     q: "L'achat direct réduit-il la garantie décennale ?",
@@ -94,8 +94,8 @@ export default function AchatDirectMateriauxPage() {
     <main className="relative z-10 bg-carbone">
       <MqHero
         kicker="Modèle économique"
-        title="Achat direct des matériaux : jusqu'à 20 % d'économies, sans brider le choix du client"
-        lead="ARCHI PILOTE RÉNOVATION fait acheter au client, en direct et sans marge d'intermédiation, tous les matériaux qui ne relèvent pas de la garantie décennale de l'entreprise : carrelage, robinetterie, parquet, cuisines équipées, façades et menuiseries sur mesure, luminaires. La pose reste intégralement assurée par les entreprises partenaires contractantes, couvertes par leur décennale. Ce modèle, issu de la pratique du chiffrage en foncière, vise jusqu'à 20 % d'économies sur ces postes et libère le choix des matériaux du catalogue d'une entreprise."
+        title="Achat direct des matériaux : le prix fournisseur, sans brider le choix du client"
+        lead="ARCHI PILOTE RÉNOVATION fait acheter au client, en direct et sans marge d'intermédiation, tous les matériaux qui ne relèvent pas de la garantie décennale de l'entreprise : carrelage, robinetterie, parquet, cuisines équipées, façades et menuiseries sur mesure, luminaires. La pose reste intégralement assurée par les entreprises partenaires contractantes, couvertes par leur décennale. Ce modèle, issu de la pratique du chiffrage en foncière, sort les marges d'intermédiation du budget de ces postes et libère le choix des matériaux du catalogue d'une entreprise."
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
@@ -188,7 +188,7 @@ export default function AchatDirectMateriauxPage() {
                 {"Second effet, souvent plus déterminant : le client n'est plus bridé. Il peut viser un zellige artisanal, un chêne massif en point de Hongrie, une robinetterie en laiton patiné ou une cuisine à façades cannelées sur mesure, là où un devis classique l'aurait orienté vers l'équivalent industriel du catalogue de l'entreprise."}
               </p>
               <p>
-                {"L'objectif d'économies pouvant atteindre 20 % s'entend sur les postes concernés. Il dépend des gammes retenues et de la rigueur du cadrage réalisé en amont : il s'agit d'un objectif de méthode, pas d'une garantie chiffrée universelle."}
+                {"L'ampleur de l'écart de prix dépend des postes concernés, des gammes retenues et de la rigueur du cadrage réalisé en amont. Elle se constate devis en main, ligne à ligne : c'est une méthode de construction du budget, pas une remise annoncée à l'avance."}
               </p>
             </MqProse>
           </div>

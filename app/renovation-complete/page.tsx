@@ -337,7 +337,7 @@ export default function Page() {
             items={[
               { dt: "8-16 sem.", dd: "Appartement standard — Rénovation complète d'un appartement sans reprise structurelle majeure, une fois le chantier démarré." },
               { dt: "4-7 mois", dd: "Maison avec structure — Rénovation complète d'une maison intégrant des reprises structurelles ou une extension." },
-              { dt: "20 %", dd: "Économies possibles — Grâce aux achats de matériaux en direct par le client sur les postes qui s'y prêtent." },
+              { dt: "Prix fournisseur", dd: "Matériaux achetés en direct — Sur les postes qui s'y prêtent, le client règle le fournisseur sans marge d'intermédiation." },
             ]}
           />
         </div>
@@ -360,7 +360,7 @@ export default function Page() {
             },
             {
               q: "Comment le budget est-il réellement maîtrisé ?",
-              a: "Le budget est construit par familles de postes, avec une réserve pour aléas, puis confronté ligne à ligne aux devis des entreprises partenaires contractantes lors de la clinique du devis. L'achat direct de certains matériaux par le client, quand c'est pertinent, permet en outre de dégager jusqu'à 20 % d'économies sur ces lignes.",
+              a: "Le budget est construit par familles de postes, avec une réserve pour aléas, puis confronté ligne à ligne aux devis des entreprises partenaires contractantes lors de la clinique du devis. L'achat direct de certains matériaux par le client, quand c'est pertinent, permet en outre de sortir la marge d'intermédiation de ces lignes.",
             },
             {
               q: "Qui est responsable si un désordre apparaît après travaux ?",

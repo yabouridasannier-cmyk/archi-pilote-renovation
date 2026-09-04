@@ -52,7 +52,16 @@ export function Footer() {
             {/* 03/09 : la dénomination sociale n'apparaît plus qu'UNE fois dans le pied de page
                 (bloc d'identification ci-dessus), pas une seconde dans la ligne de copyright. */}
             <span>© 2026 ARCHI PILOTE RÉNOVATION. Tous droits réservés. — {NAV_STANDALONE.map((l) => (<Link key={l.href} href={l.href} className="hover:underline">{l.label}</Link>))} — <Link href="/mentions-legales" className="hover:underline">Mentions légales</Link> — <Link href="/politique-confidentialite" className="hover:underline">Confidentialité</Link></span>
-            <a href="https://fr.trustpilot.com/evaluate/archipiloterenovation.fr" target="_blank" rel="noreferrer" className="hover:underline">Donner votre avis sur Trustpilot ★</a>
+            {/* 04/09 : lien « Donner votre avis sur Trustpilot » RETIRÉ.
+                Il pointait vers fr.trustpilot.com/evaluate/archipiloterenovation.fr, un domaine
+                qui ne résout pas (aucune réponse DNS) et que le client ne possède pas — le site
+                est en .com. Le lien envoyait donc les visiteurs noter une fiche rattachée à un
+                domaine inexistant. Aucune variante en .com n'a été mise à la place : rien ne
+                prouve qu'une fiche Trustpilot existe pour ce domaine, et fabriquer un lien vers
+                une fiche inexistante reproduirait exactement le même défaut.
+                À REMETTRE le jour où une vraie fiche d'avis existe (Trustpilot ou fiche
+                Google Business) : un <a> vers l'URL RÉELLE de la fiche, vérifiée en la
+                chargeant, jamais une URL déduite du nom de domaine. */}
           </div>
         </div>
       </div>
