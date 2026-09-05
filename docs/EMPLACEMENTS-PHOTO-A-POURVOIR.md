@@ -40,7 +40,50 @@ par un énième doublon.
 |---|---|---|---|
 | Isolation sous rampants (`chIsolationCombles`) | 8 pages | 2 pages | 4 emplacements retirés, 1 remplacé, 2 conservés |
 | Mur éventré, gravats et perforateur (`chDemolitionCloisonBoisPlatre` + 2 autres noms) | 5 pages | 2 pages | 1 emplacement retiré, 2 remplacés par d'autres scènes |
+| Façade sous échafaudage (`chFacadeRavalementVillage`) | 3 pages | 2 pages | remplacée sur l'article toiture par une vraie toiture |
+| Douche en carreaux de ciment (`chSdbCarreauxCiment`) | 5 pages | 4 pages | retirée de la galerie et de la charte qualité |
 | Cloison dégarnie, embrasure dégagée (`chDemolitionLattisPlatreChantier1` + 1) | 3 pages | 3 pages | déplacée de la galerie vers `/gros-oeuvre-structure` |
+
+Le pic de répétition passe de **huit pages à cinq**. Les deux scènes encore à cinq pages
+sont un schéma pédagogique — dont le réemploi est légitime — et `chCloisonsPlaco`, la photo
+de cloisons générique employée par deux composants partagés (voir ci-dessous).
+
+### Un piège de structure, corrigé
+
+Six fichiers étaient accessibles sous **deux clés** dans `lib-photos.ts` : une clé métier
+héritée de la maquette et une clé portant le nom du fichier.
+
+```
+chantierRenovation = chCloisonsPlaco          detailParquet    = chParquetChevronsCouloirDeuxTeintes
+salleBainBeton     = chSdbCarreauxCiment      cuisineSurMesure = chCuisineCremeIlot
+chantierIsolation  = chIsolationCombles       grosOeuvre       = chSurelevationBrique
+```
+
+Deux pages pouvaient donc afficher la même photo sans qu'aucune recherche textuelle ne le
+montre. C'est l'une des raisons pour lesquelles la répétition est passée inaperçue si
+longtemps. Les alias sont désormais listés en tête de `lib-photos.ts`, et
+`surexposition.py` résout les clés vers les fichiers.
+
+### Deux incohérences titre / image corrigées
+
+Le client avait signalé le principe ; le contrôle des trente en-têtes d'articles en a
+trouvé deux cas nets, en plus des deux qu'il avait pointés lui-même.
+
+- « Rénovation de toiture : réparer, traiter ou remplacer ? » était illustré par une
+  **façade** sous échafaudage. C'est désormais une couverture en ardoise en réfection.
+- « Surélévation : l'étude des fondations » était illustré par un **couloir en démolition**,
+  et « Devis de travaux : les lignes à vérifier » par un **gros plan de dormant de porte** —
+  accessoirement la photo la plus floue du site. Les deux schémas fournis par le client les
+  remplacent.
+
+Restent deux en-têtes discutables, à arbitrer :
+
+- « Combien coûtent des travaux de rénovation de **maison** en 2026 ? » est illustré par un
+  salon d'**appartement** haussmannien livré.
+- « **DPE F ou G** : sortir de la passoire énergétique » est illustré par `chIsolationCombles`,
+  donc par une construction neuve — un logement classé F ou G est par définition un bâtiment
+  existant. Conservée faute de photo d'isolation sur bâti ancien, mais c'est l'un des
+  emplacements à pourvoir en priorité.
 
 Un cas mérite d'être signalé à part : `chIsolationCombles` ne montrait pas une rénovation
 mais une **construction neuve** — briques monomur rouges encore nues, charpente neuve,
