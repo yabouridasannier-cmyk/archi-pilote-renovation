@@ -33,7 +33,15 @@ export const SITE = {
      site : ce serait inventer une réputation. Seule l'invitation à déposer un avis
      est affichée. */
   trustpilotAvis: "https://fr.trustpilot.com/evaluate/archipiloterenovation.com",
-  trustpilotFiche: "https://fr.trustpilot.com/review/archipiloterenovation.com",
+  /* PAS d'URL de fiche publique ici, volontairement. L'adresse attendue serait
+     fr.trustpilot.com/review/archipiloterenovation.com, mais elle est INVÉRIFIABLE depuis
+     ici : Trustpilot protège tout son site par un pare-feu AWS et répond 403 sur /review/
+     pour n'importe quel domaine — y compris un domaine inventé de toutes pièces, testé
+     pour s'en assurer. Impossible donc de distinguer « la fiche existe » de « la fiche
+     n'existe pas ». Or c'est exactement le raisonnement par déduction qui avait produit le
+     lien mort vers le .fr. Tant que cette URL n'aura pas été ouverte dans un navigateur et
+     constatée, elle n'entre pas dans le code — et elle n'entre pas non plus dans le
+     `sameAs` des données structurées, qui est une déclaration d'identité auprès de Google. */
 };
 
 export const STATS = [
