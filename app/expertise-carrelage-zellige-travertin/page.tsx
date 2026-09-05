@@ -83,8 +83,9 @@ export default function Page() {
         <div className="mt-10 max-w-2xl">
           <MqFig
             src="/photos/maquette/chantier-pose-zellige-credence.jpg"
-            alt="Carreleur posant une crédence en zellige émaillé vert au peigne, boîtes de carreaux mélangées sur le plan de travail"
-            caption="Mélange des boîtes et pose au peigne : le carreleur répartit les nuances avant l'encollage final."
+            alt="Carreleur encollant au peigne le haut d'une crédence en carreaux émaillés vert foncé, croisillons de calage en place et boîtes de carreaux ouvertes sur le plan de travail"
+            caption="Mélange des boîtes et pose au peigne : le carreleur répartit les nuances avant l'encollage final. Carreaux émaillés de série, calés aux croisillons — pas un zellige artisanal, qui se pose sans croisillon. Image d'illustration."
+            ratio="aspect-[10/7]"
           />
           {/*
             À PHOTOGRAPHIER (chantiers réels, pas d'infographie générée ici — le client
@@ -115,13 +116,17 @@ export default function Page() {
             "Joint fin de 1 à 2 mm, en époxy dans les zones humides, nettoyé immédiatement après tirage.",
           ]}
         />
-        <div className="mt-8">
-          <MqFig
-            src="/photos/maquette/chantier-pose-zellige-credence.jpg"
-            alt="Carreleur posant une crédence en zellige émaillé vert au peigne, boîtes de carreaux mélangées sur le plan de travail"
-            caption="Pose de zellige en crédence : boîtes mélangées pour répartir les nuances, encollage au peigne adapté et croisillons de calage avant joint époxy."
-          />
-        </div>
+        {/*
+          Emplacement retiré le 05/09/2026 (doublon dans la même page + légende fausse).
+
+          chantier-pose-zellige-credence.jpg apparaissait TROIS FOIS sur cette seule page
+          (section pose, ici, et galerie technique). C'est la répétition signalée par le client,
+          à l'échelle d'une page. Une seule occurrence est conservée, plus haut.
+          La légende était en outre fausse : ouverture du fichier, les carreaux sont des
+          carreaux émaillés de série, réguliers, posés aux CROISILLONS. Un zellige est un
+          carreau artisanal irrégulier, qui se pose précisément sans croisillon. Parler de
+          « pose de zellige » devant des croisillons décrit l'inverse de ce qu'on voit.
+        */}
       </MqSection>
 
       <MqSection
@@ -141,70 +146,87 @@ export default function Page() {
         <div className="mt-8">
           <MqFig
             src="/photos/maquette/chantier-nappe-etancheite-douche.jpg"
-            alt="Salle d'eau avant carrelage : natte d'étanchéité appliquée au sol et sur les murs, bandes de renfort en angle et siphon de sol"
-            caption="Étanchéité sous carrelage posée avant zellige ou travertin : natte continue murs et sol, bandes d'angle de renfort, pente vers le siphon contrôlée au niveau laser."
+            alt="Salle d'eau avant carrelage : étanchéité liquide verte appliquée en plein sur les murs et le sol, bandes de renfort dans tous les angles, siphon de sol au centre"
+            caption="Étanchéité sous carrelage, avant pose du travertin ou du zellige : résine appliquée en plein sur les murs et le sol, bandes de renfort dans tous les angles et autour du siphon de sol. Image d'illustration."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
 
       <MqSection
         kicker="GALERIE TECHNIQUE"
-        title="De l'étanchéité brute à la pièce d'eau livrée"
-        lead="Photographies issues de chantiers réellement pilotés, prises aux mêmes points de vue avant et après."
+        title="Matières et finitions de pièce d'eau"
+        lead="Une photo de chantier des équipes partenaires et deux images d'illustration, pour situer le rendu des matières dont parlent les sections précédentes."
         wide
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        {/*
+          Rangée revue le 05/09/2026.
+
+          1. Le chapô annonçait « photographies issues de chantiers réellement pilotés, prises
+             aux mêmes points de vue avant et après ». Sur les cinq images, QUATRE venaient de
+             /photos/maquette/ (banque d'illustrations) et AUCUNE paire n'était prise au même
+             point de vue avant/après. Le chapô est réécrit pour dire ce que la rangée est.
+          2. Deux emplacements sont retirés : chantier-nappe-etancheite-douche.jpg et
+             chantier-pose-zellige-credence.jpg figuraient déjà l'un et l'autre plus haut dans
+             la page. Ils sont conservés une seule fois, dans les sections dont ils sont le
+             sujet.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
           <MqFig
-            src="/photos/maquette/chantier-nappe-etancheite-douche.jpg"
-            alt="Salle d'eau avant carrelage : natte d'étanchéité appliquée au sol et sur les murs, bandes de renfort en angle et siphon de sol"
-            caption="Étanchéité sous carrelage posée avant zellige ou travertin : natte continue murs et sol, bandes d'angle de renfort, pente vers le siphon contrôlée au niveau laser."
-          />
-          <MqFig
-            src="/photos/maquette/chantier-pose-zellige-credence.jpg"
-            alt="Carreleur posant une crédence en zellige émaillé vert au peigne, boîtes de carreaux mélangées sur le plan de travail"
-            caption="Pose de zellige en crédence : boîtes mélangées pour répartir les nuances, encollage au peigne adapté et croisillons de calage avant joint époxy."
+            src="/photos/chantiers/chSdbVasquesPoseMeubleBeige.jpeg"
+            alt="Salle d'eau en cours de finition : meubles hauts et bas en MDF brut, plan blanc et deux vasques rondes posées, faïence et sol en grand format beige, câble électrique encore pendant"
+            caption="Salle d'eau en cours de finition : faïence et sol en grand format beige déjà posés, meubles encore en MDF brut avant peinture, vasques posées et câble en attente de raccordement. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/maquette/tendance-travertin-salle-bain.jpg"
-            alt="Salle de bain contemporaine en travertin beige avec vasque en pierre massive et robinetterie en laiton brossé"
-            caption="Travertin en salle d'eau : pierre naturelle appliquée en grand format, joints minces et traitement hydrofuge obligatoire avant mise en service."
-          />
-          <MqFig
-            src="/photos/chantiers/chSdbVasquesPoseMeubleBeige.jpeg"
-            alt="Salle de bain en cours de finition avec meuble sur mesure beige, faïence grand format et vasques à poser, chantier réel"
-            caption="Salle de bain en cours de finition : faïence grand format, meuble sur mesure et vasques à poser. Chantier réel des équipes partenaires."
+            alt="Salle d'eau beige : plan-vasque monolithe taillé dans la pierre, murs en enduit minéral ton pierre sans joint apparent, robinetterie et barre de laiton"
+            caption="Pierre claire en salle d'eau : plan-vasque monolithe taillé dans la masse, murs en enduit minéral ton pierre et robinetterie en laiton. Une pierre poreuse exige un hydrofuge avant mise en service. Image d'illustration."
+            ratio="aspect-[4/3]"
           />
           <MqFig
             src="/photos/maquette/tendance-zellige-credence.jpg"
-            alt="Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair"
-            caption="Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé."
+            alt="Crédence de cuisine en carreaux émaillés vert d'eau à surface ondulée, posés verticalement, plan de travail en pierre claire et façades en bois clair"
+            caption="Carreaux émaillés à surface ondulée en crédence : irrégularités de cuisson assumées, calepinage vertical et joint fin sur support parfaitement dressé. Image d'illustration."
+            ratio="aspect-[4/3]"
           />
         </div>
       </MqSection>
 
       <MqSection
-        kicker="AVANT / APRÈS"
-        title="Faites glisser le curseur : ce que la finition recouvre"
-        lead="Les comparatifs interactifs montrent l'ouvrage caché, celui qui explique la durabilité et une bonne part du budget."
+        kicker="SUR LE CHANTIER"
+        title="Ce que la finition recouvre"
+        lead="L'ouvrage caché explique la durabilité et une bonne part du budget. Il n'est visible qu'avant la pose du revêtement."
         wide
       >
         <div className="flex flex-col gap-12">
           <div>
-            <h3 className="display text-[1.3rem] text-ivoire">Douche à l'italienne : de la pose fraîche à la livraison</h3>
+            <h3 className="display text-[1.3rem] text-ivoire">Cabine de douche en fin de pose</h3>
             <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
-              Même cabine de douche en travertin : film de protection encore en place sur le receveur juste après
-              la pose, puis douche nettoyée et livrée, prête à l'usage.
+              Cabine d&apos;angle carrelée en grand format effet pierre, parois coulissantes à profilés noirs,
+              photographiée en fin de pose : la protection du siphon est encore en place.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-5">
+            {/*
+              Faux avant/après corrigé le 05/09/2026.
+
+              Cette paire était présentée comme « avant livraison » / « après livraison » de la
+              MÊME cabine. Ouverture des deux fichiers : c'est bien la même douche, mais les DEUX
+              images montrent le même état de fin de pose — protection de bonde encore collée,
+              joint de plafond non repris, vitrages non nettoyés. Il n'y a pas de « après
+              livraison » à montrer, seulement une vue large et un gros plan de la robinetterie.
+              Le gros plan (salle-eau-douche-italienne.jpg) est retiré : il n'apporte que la
+              robinetterie, déjà lisible sur la vue large, et servait uniquement à fabriquer une
+              seconde moitié à un avant/après qui n'existe pas.
+
+              À FOURNIR PAR LE CLIENT : la vraie photo de livraison de cette cabine (même angle,
+              protections retirées, vitrages nettoyés) pour reconstituer un avant/après honnête.
+            */}
+            <div className="mt-5 max-w-sm">
               <MqFig
                 src="/photos/maquette/salle-eau-cabine-douche-angle.jpg"
-                alt="Douche en travertin fraîchement posée, film de protection orange encore en place sur le receveur"
-                caption="Avant livraison : douche en travertin fraîchement posée, film de protection encore en place sur le receveur."
-              />
-              <MqFig
-                src="/photos/maquette/salle-eau-douche-italienne.jpg"
-                alt="Même douche en travertin livrée et nettoyée, robinetterie noire et receveur dégagé de toute protection"
-                caption="Après livraison : la même cabine, nettoyée et prête à l'usage."
+                alt="Cabine de douche d'angle à parois coulissantes et profilés noirs, murs carrelés en grand format effet pierre beige, receveur blanc dont la bonde est encore protégée"
+                caption="Fin de pose : cabine d'angle à parois coulissantes noires, murs en carrelage grand format effet pierre, colonne de douche raccordée ; la protection de bonde est encore en place sur le receveur. Image d'illustration."
+                ratio="aspect-[1/2]"
               />
             </div>
           </div>
@@ -236,18 +258,27 @@ export default function Page() {
             retenu.
           </p>
           <p>
-            Notre flotte de camions retire les commandes chez les fournisseurs et les livre sur le chantier au
+            Nous organisons le retrait des commandes chez les fournisseurs et leur livraison sur le chantier au
             moment utile, ce qui évite le stockage prématuré, la casse et les immobilisations d'équipe. Aucune
             marge n'est prise sur la fourniture.
           </p>
         </MqProse>
-        <div className="mt-8">
-          <MqFig
-            src="/photos/maquette/flotte-camions-retrait-materiaux.jpg"
-            alt="Camions et fourgons utilitaires chargeant des palettes de carrelage et des colis de cuisine dans un dépôt de matériaux"
-            caption="Logistique intégrée : notre flotte de camions retire les commandes achetées en direct par le client et les livre sur le chantier au bon moment."
-          />
-        </div>
+        {/*
+          Emplacement retiré le 05/09/2026 (légende contraire au rôle d'ARCHI PILOTE +
+          surexposition).
+
+          flotte-camions-retrait-materiaux.jpg était légendée « notre flotte de camions ».
+          ARCHI PILOTE RÉNOVATION PILOTE, elle n'exécute pas : les travaux et la logistique
+          sont assurés par les entreprises partenaires contractantes, comme le rappelle
+          l'encadré « Rôle et responsabilités » juste en dessous. Présenter une image de banque
+          comme « notre flotte » contredit frontalement cette mention. L'image apparaissait par
+          ailleurs sur TROIS pages (celle-ci, /menuiserie-agencement-sur-mesure,
+          /modele-economique-transparence).
+
+          À ARBITRER AVEC LE CLIENT : le paragraphe ci-dessus dit lui aussi « notre flotte de
+          camions retire les commandes chez les fournisseurs ». Si la logistique est bien celle
+          des entreprises partenaires, la formulation du texte est à reprendre également.
+        */}
         <p className="text-muted text-[0.85rem] leading-relaxed mt-8 max-w-2xl">
           Rôle et responsabilités. ARCHI PILOTE RÉNOVATION structure et pilote les projets de rénovation. Selon
           les besoins, le projet mobilise des entreprises partenaires contractantes et, lorsque nécessaire, des
@@ -273,7 +304,7 @@ export default function Page() {
             },
             {
               q: "Peut-on acheter soi-même le carrelage et la pierre ?",
-              a: "Oui, c'est même notre recommandation : le carrelage, la pierre et la robinetterie ne relèvent pas de la garantie décennale de pose. Le client achète en direct, sur des références validées techniquement par notre équipe, et notre flotte de camions retire la commande pour la livrer sur le chantier.",
+              a: "Oui, c'est même notre recommandation : le carrelage, la pierre et la robinetterie ne relèvent pas de la garantie décennale de pose. Le client achète en direct, sur des références validées techniquement par notre équipe, et nous organisons le retrait de la commande pour la livrer sur le chantier.",
             },
             {
               q: "Quel délai prévoir pour une salle d'eau complète ?",
@@ -294,7 +325,7 @@ export default function Page() {
 
       <MqCta
         title="Un projet de salle d'eau ou de crédence en matière noble ?"
-        lead="Étude de projet gratuite sous 48 heures : faisabilité du support, système d'étanchéité, calepinage et budget réaliste."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : faisabilité du support, système d'étanchéité, calepinage et budget réaliste."
       />
     </main>
   );

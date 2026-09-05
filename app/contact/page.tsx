@@ -4,7 +4,7 @@ import { ContactForm } from "./contact-content";
 import { SITE } from "../data";
 
 export const metadata: Metadata = {
-  title: "Contact — Étude de projet gratuite sous 48 heures | ARCHI PILOTE RÉNOVATION",
+  title: "Contact — Étude de projet gratuite sous 48 heures ouvrées | ARCHI PILOTE RÉNOVATION",
   description:
     "Décrivez votre projet de rénovation : commune, type de travaux, surface et budget envisagé. Première lecture et budget indicatif sous 48 heures ouvrées, sans engagement.",
   alternates: { canonical: "/contact" },
@@ -15,7 +15,7 @@ export default function ContactPage() {
     <main>
       <MqHero
         kicker="Contact"
-        title="Décrivez votre projet, recevez une étude gratuite sous 48 heures"
+        title="Décrivez votre projet, recevez une étude gratuite sous 48 heures ouvrées"
         lead="Le formulaire ci-dessous permet de qualifier votre projet de rénovation : commune, type de travaux, surface et budget envisagé. ARCHI PILOTE RÉNOVATION lit votre demande, hiérarchise les travaux et revient vers vous sous 48 heures ouvrées avec une première lecture et un budget indicatif, sans engagement de votre part."
       />
 
@@ -60,7 +60,13 @@ export default function ContactPage() {
             </a>
             <div className="border border-line bg-surface rounded-[2px] p-6">
               <p className="eyebrow">Siège</p>
-              <p className="text-ivoire/85 text-[0.9rem] mt-1 leading-relaxed">IA RENOV SASU<br />8 bis rue Gabriel Péri<br />92250 La Garenne-Colombes</p>
+              {/* 05/09 : « IA RENOV SASU » retiré de ce bloc. La règle du projet, écrite dans
+                  app/layout.tsx, réserve la dénomination sociale aux mentions légales et à
+                  UNE ligne du pied de page. Le visiteur d'une page de contact cherche une
+                  adresse, pas une raison sociale ; et faire apparaître la structure à côté
+                  de la marque brouille précisément la séparation que le reste du site
+                  s'attache à tenir. L'adresse, elle, est conservée telle quelle. */}
+              <p className="text-ivoire/85 text-[0.9rem] mt-1 leading-relaxed">8 bis rue Gabriel Péri<br />92250 La Garenne-Colombes</p>
             </div>
           </div>
         </div>

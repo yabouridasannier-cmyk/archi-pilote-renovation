@@ -360,17 +360,24 @@ export default function Page() {
           />
           <MqFig
             src="/photos/chantiers/chArcheEncadrementBoisChantier.jpeg"
-            alt="Passage cintré habillé en MDF cannelé, posé dans une cloison terminée, sols bâchés et panneaux en attente"
-            caption="Menuiserie intérieure : passage cintré habillé sur mesure, ajusté sur la cloison une fois celle-ci terminée, sols bâchés pendant la pose. Chantier réel des équipes partenaires."
+            alt="Arche habillée en MDF, panneau cannelé cintré posé dans l'ouverture, sols bâchés et panneaux en attente à côté"
+            caption="Menuiserie intérieure : arche habillée sur mesure en MDF, panneau cannelé cintré ajusté dans l'ouverture, sols bâchés et pièces en attente à côté — le tout avant peinture. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>
         {/*
-          Le troisième visuel est sorti de la grille et passé en pleine largeur : le fichier est
-          en 1600×1200 (paysage) alors que les deux autres sont en 1200×1600 (portrait). Le forcer
-          dans le même cadre 3/4 aurait coupé 44 % de sa largeur, c'est-à-dire précisément les deux
-          bords où se voit que la pose est EN COURS (dents de scie non coupées à gauche, chutes de
-          lames à droite) — le seul élément qui rattache l'image au propos de la section.
+          Emplacement retiré le 05/09/2026 (surexposition).
+
+          Un troisième visuel occupait ici toute la largeur : chParquetChevronsPosePiece.jpeg.
+          `scripts/surexposition.py` la comptait sur QUATRE pages (/achat-direct-materiaux,
+          /renovation-appartement, /second-oeuvre et l'article parquet du blog). C'est
+          exactement le « on revoit toujours les mêmes photos » signalé par le client.
+          La photo est conservée sur /renovation-appartement, où sa légende est la plus
+          précise des quatre (elle dit que le sol est un STRATIFIÉ imitation chêne posé à
+          bâtons rompus, pas un parquet massif à chevrons comme le laisse croire le nom de
+          fichier). Elle est retirée ici plutôt que dupliquée avec une légende plus vague.
+          La section garde ses deux photos de chantier ci-dessus ; aucune autre image de la
+          photothèque ne montre la pose d'un revêtement de sol.
         */}
         {/*
           À FOURNIR PAR LE CLIENT : photo de carrelage.
@@ -388,14 +395,6 @@ export default function Page() {
           détourner une photo de salle de bain pour faire passer une illustration de carrelage.
           Rien n'est donc inventé : la case reste vide en attendant les vraies photos du client.
         */}
-        <div className="mt-5">
-          <MqFig
-            src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
-            alt="Pose d'un revêtement de sol à bâtons rompus en cours dans une pièce vide, lames non encore coupées en périphérie et chutes posées au sol"
-            caption="Revêtement de sol : pose à bâtons rompus en cours sur support préparé, coupes de périphérie et plinthes encore à faire, avant peinture finale. Chantier réel des équipes partenaires."
-            ratio="aspect-[4/3]"
-          />
-        </div>
       </MqSection>
 
       <MqSection title="Peinture et finitions : la dernière étape, pas la première décision">
@@ -513,8 +512,8 @@ export default function Page() {
           />
           <MqFig
             src="/photos/chantiers/chCloisonsPlaco.jpeg"
-            alt="Cloison d'ossature métallique en cours de fermeture : montants apparents, plaques hydrofuges vertes et plaques roses posées sur une face, structure béton apparente"
-            caption="Cloison en cours de fermeture : montants encore apparents sur toute la hauteur, plaques hydrofuges et plaques techniques posées sur une seule face, tracé au sol repéré à la bombe. Chantier réel des équipes partenaires."
+            alt="Cloison d'ossature métallique en cours de fermeture : montants apparents, plaques hydrofuges vertes et plaques coupe-feu roses posées sur une face, poteau et dalle béton apparents"
+            caption="Cloison en cours de fermeture : montants encore apparents sur toute la hauteur, plaques hydrofuges vertes et plaques coupe-feu roses posées sur une seule face, tracé au sol repéré à la bombe. Chantier réel des équipes partenaires."
             ratio="aspect-[4/3]"
           />
         </div>
@@ -535,13 +534,13 @@ export default function Page() {
               <MqFig
                 src="/photos/maquette/tableau-electrique-vetuste-avant.jpg"
                 alt="Ancien tableau électrique vétuste en coffret bois, porte-fusibles en porcelaine et câblage sous tissu dégradé"
-                caption="Avant : coffret bois d'origine, porte-fusibles en porcelaine et câblage sous tissu, sans dispositif différentiel ni repérage des circuits."
+                caption="Avant : coffret bois d'origine, porte-fusibles en porcelaine et câblage sous tissu, sans dispositif différentiel ni repérage des circuits. Image d'illustration, deux installations distinctes."
                 ratio="aspect-[10/7]"
               />
               <MqFig
                 src="/photos/maquette/tableau-electrique-neuf-apres.jpg"
                 alt="Tableau électrique neuf avec trois rangées de disjoncteurs, interrupteurs différentiels et câblage en peignes"
-                caption="Après : coffret neuf à trois rangées, interrupteurs différentiels en tête de rangée, circuits séparés et câblage en peignes."
+                caption="Après : coffret neuf à trois rangées, interrupteurs différentiels en tête de rangée, circuits séparés et câblage en peignes. Image d'illustration, deux installations distinctes."
                 ratio="aspect-[10/7]"
               />
             </div>
@@ -565,7 +564,7 @@ export default function Page() {
               <MqFig
                 src="/photos/maquette/salle-eau-condensation-avant.jpg"
                 alt="Salle d'eau dégradée par la condensation, moisissures en plafond et en angles, grille de ventilation encrassée"
-                caption="La cause : ventilation absente ou obstruée — grille encrassée, moisissures au plafond et dans les angles. Le traitement commence par le renouvellement d'air, pas par la peinture."
+                caption="La cause : ventilation absente ou obstruée — grille encrassée, moisissures au plafond et dans les angles, faïence d'origine à motif floral. Le traitement commence par le renouvellement d'air, pas par la peinture. Image d'illustration."
                 ratio="aspect-[10/7]"
               />
               <MqFig

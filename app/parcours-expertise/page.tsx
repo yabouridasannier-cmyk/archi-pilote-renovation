@@ -46,11 +46,11 @@ export default function ParcoursExpertisePage() {
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/39-parcours-expertise-hero.jpeg"
           alt="Ancien expert en chiffrage examinant un devis de rénovation ligne à ligne, plans d'appartement dépliés à côté"
           caption="Lecture ligne à ligne d'un devis de rénovation : quantités, unités, hypothèses, exclusions. Document fictif et anonymisé."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -73,11 +73,11 @@ export default function ParcoursExpertisePage() {
               PILOTE RÉNOVATION, avec les mêmes réflexes de vérification.
             </p>
           </MqProse>
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/27-parcours-devis-breakdown.jpeg"
             alt="Décomposition d'une ligne de devis en six blocs : quantité, unité, fourniture, pose, hypothèse, exclusion"
             caption="Décomposition pédagogique d'une ligne de devis de travaux. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
           <MqProse>
             <h3 className="display text-[1.3rem] text-ivoire">Transformer cette méthode pour les particuliers</h3>
@@ -88,23 +88,27 @@ export default function ParcoursExpertisePage() {
               les conséquences budgétaires.
             </p>
           </MqProse>
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/02-transformer-methode.jpeg"
             alt="Schéma pédagogique : un enjeu technique de devis se traduit en sept décisions concrètes — conserver, remplacer, déplacer, renforcer, isoler, différer, supprimer"
             caption="Schéma pédagogique : chaque enjeu technique du devis se traduit en une décision concrète et arbitrable."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
         </div>
       </MqSection>
 
       <MqSection kicker="Culture du coût total" title="Le poste le moins cher n'est pas toujours la solution la moins chère">
         <div className="flex flex-col gap-8">
-          <MqFig
-            src="/photos/maquette/schema-deperditions.jpg"
-            alt="Schéma des déperditions thermiques d'un logement avec répartition par poste : toiture, murs, fenêtres, plancher bas et ponts thermiques"
-            caption="Un poste isolé mal séquencé peut faire refaire un autre ouvrage : l'ordre des travaux compte autant que leur prix unitaire."
-            ratio="aspect-[16/9]"
-          />
+          {/* 05/09 — EMPLACEMENT RETIRÉ. Le fichier affiché ici était schema-deperditions.jpg,
+              c'est-à-dire l'infographie « DÉPERDITIONS THERMIQUES — logement classé passoire
+              énergétique » (30 % par le toit, 20 % par les murs, etc.). Sa légende annonçait
+              « un poste isolé mal séquencé peut faire refaire un autre ouvrage : l'ordre des
+              travaux compte autant que leur prix unitaire » — un propos qui ne figure nulle part
+              dans l'image et qui ne décrit rien de ce que le lecteur voit. Le schéma était de
+              surcroît déjà affiché sur /renovation-energetique et /extension-maison, où il est à
+              sa place. Aucun schéma de SÉQUENCEMENT n'existe dans la photothèque : l'emplacement
+              est laissé vide et inscrit dans docs/EMPLACEMENTS-PHOTO-A-POURVOIR.md plutôt que
+              rempli par une image hors sujet. */}
           <MqProse>
             <p>
               Une mauvaise séquence peut faire refaire un ouvrage déjà terminé. Une économie sur l'étanchéité peut coûter plusieurs fois son
@@ -124,11 +128,11 @@ export default function ParcoursExpertisePage() {
         lead="ARCHI PILOTE RÉNOVATION s'appuie, selon les besoins, sur des entreprises partenaires contractantes et des professionnels indépendants. Le choix dépend de la nature du projet, des assurances requises, des compétences nécessaires et des disponibilités réelles."
       >
         <div className="mb-10">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/28-parcours-reseau-roles.jpeg"
             alt="Réseau de rôles : Client au centre, relié à ARCHI PILOTE RÉNOVATION (pilotage), Entreprise partenaire, Architecte DPLG et Ingénieur structure"
             caption="Rôles et responsabilités des intervenants d'un projet de rénovation. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">

@@ -1,3 +1,6 @@
+/* ⚠️ COMPOSANT ACTUELLEMENT NON MONTÉ — il n'est importé par aucune page (vérifié le
+   05/09/2026). Conservé pour un réemploi éventuel ; relire son texte avant de le
+   remettre en ligne. */
 "use client";
 
 import { useRef } from "react";

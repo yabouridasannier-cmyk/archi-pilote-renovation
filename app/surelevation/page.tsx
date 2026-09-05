@@ -23,7 +23,7 @@ export default function Page() {
           src="/photos/pedagogie/21-surelevation-coupe.jpeg"
           alt="Coupe technique d'une surélévation légère à ossature bois : reprise de charges, trémie d'escalier, structure de toiture"
           caption="Principe structurel d'une surélévation de maison. Schéma pédagogique."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -83,20 +83,25 @@ export default function Page() {
             src="/photos/maquette/schema-extension-surelevation.jpg"
             alt="Coupe technique d'une maison avec extension de plain-pied et surélévation, reprise de charges et chaînage"
             caption="Extension et surélévation : reprise des charges jusqu'aux fondations, chaînage et raccords d'étanchéité entre l'existant et le neuf."
+            ratio="aspect-[10/7]"
           />
           <MqFig
             src="/photos/maquette/surelevation-ossature-bois.jpg"
-            alt="Surélévation en ossature bois d'une maison de ville, charpente apparente, couverture zinc et échafaudage"
-            caption="Chantier de surélévation en ossature bois : étage créé après étude de structure et dépose de la couverture existante."
+            alt="Surélévation en ossature bois montée sur une maison enduite : ossature et panneaux OSB apparents, bandeaux de zinc déjà posés, échafaudage tout autour"
+            caption="Surélévation en ossature bois montée sur une maison existante : ossature et panneaux OSB encore apparents, premiers bandeaux de couverture en zinc posés, échafaudage tout autour. Image d'illustration."
+            ratio="aspect-[10/7]"
           />
         </div>
-        <div className="mt-5">
-          <MqFig
-            src="/photos/maquette/schema-mur-porteur.jpg"
-            alt="Coupe technique d'une ouverture de mur porteur illustrant la reprise de charge nécessaire avant une surélévation"
-            caption="La reprise de charge d'un mur porteur illustre le type de vérification structurelle indispensable avant toute surélévation."
-          />
-        </div>
+        {/*
+          Emplacement retiré le 05/09/2026 (surexposition).
+
+          schema-mur-porteur.jpg figurait ici. `scripts/surexposition.py` la compte sur QUATRE
+          pages (/gros-oeuvre-structure, /guides, /reseau-partenaires et celle-ci). Sa légende
+          reconnaissait elle-même que le schéma ne montre PAS une surélévation mais « le type de
+          vérification structurelle » qu'on y retrouve : c'est une analogie, pas une illustration
+          du sujet de la page. C'est l'emplacement le plus faible des quatre. Le schéma reste sur
+          /gros-oeuvre-structure, dont l'ouverture de mur porteur est le sujet direct.
+        */}
       </MqSection>
 
       <MqSection
@@ -146,6 +151,7 @@ export default function Page() {
           src="/photos/pedagogie/22-surelevation-phasage.jpeg"
           alt="Phasage d'une surélévation en sept étapes : dépose de toiture, protection provisoire, ossature bois, couverture, isolation, raccords, finitions"
           caption="Phasage d'une surélévation jusqu'à la mise hors d'eau. Schéma pédagogique."
+          ratio="aspect-[3/2]"
         />
         <div className="mt-10">
           <MqNumbered
@@ -209,6 +215,7 @@ export default function Page() {
             src="/photos/maquette/schema-tremie-plancher.jpg"
             alt="Schéma d'une trémie d'escalier dans un plancher bois : solives sectionnées, chevêtre, linçoirs, sabots métalliques et étaiement provisoire"
             caption="Trémie dans un plancher bois : le chevêtre et les linçoirs reprennent les charges des solives coupées, sur sabots métalliques dimensionnés."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
@@ -266,13 +273,15 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/maquette/maison-avant-surelevation.jpg"
-            alt="Maison de ville francilienne de plain-pied en brique et enduit avant travaux de surélévation"
-            caption="Photo d'illustration — avant surélévation : combles bas inexploitables. La faisabilité dépend du PLU, de la portance des murs et du diagnostic de l'ingénieur structure."
+            alt="Maison de bourg de plain-pied à encadrements de brique et soubassement en pierre, toiture en tuiles percée de deux fenêtres de toit, avant surélévation"
+            caption="Image d'illustration — avant : un seul niveau habitable sous une toiture en tuiles percée de deux fenêtres de toit. La faisabilité d'une surélévation dépend du PLU, de la portance des murs et du diagnostic de l'ingénieur structure."
+            ratio="aspect-[10/7]"
           />
           <MqFig
             src="/photos/maquette/maison-surelevee-apres.jpg"
-            alt="Même maison après surélévation à ossature bois avec bardage clair, grandes fenêtres anthracite et toiture zinc"
-            caption="Photo d'illustration — même maison, après : étage à ossature bois, charges reprises sur les murs confortés, bardage clair et toiture zinc à faible pente."
+            alt="La même maison après surélévation : un niveau supplémentaire habillé d'un bardage clair à joint debout, grandes baies à menuiseries anthracite et toiture à faible pente"
+            caption="Image d'illustration — la même maison, après : un niveau supplémentaire habillé d'un bardage clair à joint debout, grandes baies à menuiseries anthracite et toiture à faible pente. Le rez-de-chaussée, la porte et les volets d'origine sont inchangés."
+            ratio="aspect-[10/7]"
           />
         </div>
         {/*
@@ -327,7 +336,7 @@ export default function Page() {
         </p>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext
         items={[

@@ -21,7 +21,7 @@ export default function Page() {
       bullets={["Rénovation complète", "Maison ou appartement selon le bien", "Structure et ouvertures", "Réseaux techniques", "Énergie", "Extension / surélévation si pertinent"]}
       maillage={{
         intro:
-          "C'est depuis La Garenne-Colombes que partent nos visites. Les pages ci-dessous décrivent ce que nous étudions, comment se déroule une prise en charge et par où commencer si vous avez déjà un devis en main.",
+          "C'est depuis La Garenne-Colombes que partent nos visites. Les pages ci-dessous décrivent ce que nous étudions, par où commencer si vous avez déjà un devis en main, et qui réalise concrètement les travaux — la marque pilote le projet, les entreprises partenaires contractantes exécutent et facturent leur lot.",
         groupes: [
           {
             titre: "Les types de projets étudiés",
@@ -39,6 +39,7 @@ export default function Page() {
               { href: "/parcours-expertise", label: "Le parcours d'expertise, étape par étape" },
               { href: "/clinique-du-devis", label: "Faire relire un devis d'entreprise" },
               { href: "/estimateur-travaux", label: "Estimer un budget travaux" },
+              { href: "/reseau-partenaires", label: "Les entreprises partenaires qui exécutent les lots" },
             ],
           },
           {

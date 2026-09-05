@@ -300,7 +300,7 @@ export default function TendancesMateriauxFrancaisPage() {
 
       <MqCta
         title="Faire valider vos choix de matières avant chiffrage"
-        lead="Étude de projet gratuite sous 48 heures : faisabilité des finitions, contraintes de support et budget poste par poste."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : faisabilité des finitions, contraintes de support et budget poste par poste."
       />
     </main>
   );

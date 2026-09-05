@@ -23,6 +23,19 @@ const FAQ_LOCALE_TEMPLATE = (ville: string) => [
    Les pages villes restent en robots { index: false, follow: true } :
    le maillage circule bien, seul l'indexation reste fermée tant
    qu'aucune preuve locale n'est documentée.
+
+   05/09 — AUDIT DU REGISTRE. Les deux sens ont été recoupés contre
+   `find app -name page.tsx` :
+   — aucune entrée du registre ne pointait vers une page absente du
+     disque (0 lien mort) ;
+   — treize routes existantes n'y figuraient pas. Dix sont ajoutées
+     plus bas, dont /travaux-perimetre-abf, créée le 04/09 et qu'aucune
+     page locale ne pouvait donc citer.
+   Trois routes restent VOLONTAIREMENT hors registre : "/" ,
+   "/mentions-legales" et "/politique-confidentialite". Elles sont
+   servies par l'en-tête et le pied de page ; les faire entrer dans un
+   bloc « Poursuivre la lecture » diluerait le maillage éditorial sans
+   rien apporter. Les y ajouter reste possible si le besoin apparaît.
    ============================================================ */
 export type MaillageHref =
   // Prestations et sujets techniques
@@ -43,6 +56,8 @@ export type MaillageHref =
   | "/renovation-salle-de-bain-maison"
   | "/sols-finitions-renovation"
   | "/savoir-faire-ancien"
+  // Autorisations et bâti protégé (page créée le 04/09)
+  | "/travaux-perimetre-abf"
   // Ressources et outils
   | "/demarches-administratives-renovation"
   | "/aides-renovation-energetique"
@@ -66,6 +81,20 @@ export type MaillageHref =
   | "/services"
   | "/nos-specialites"
   | "/temoignages-clients"
+  | "/ce-que-nous-ne-faisons-pas"
+  | "/investisseurs-professionnels"
+  | "/tendances-2026-2027"
+  | "/tendances-materiaux-francais"
+  | "/faq"
+  | "/blog"
+  | "/contact"
+  // Études de cas. ATTENTION : ces deux pages portent la mention
+  // « Visuel d'illustration — nouvelle marque, premiers chantiers à
+  // venir » et sont en noindex. Elles ne sont PAS une preuve locale.
+  // Ne jamais les présenter comme un chantier réalisé dans une commune :
+  // c'est précisément ce que la doctrine V3 interdit.
+  | "/realisations/pavillon-annees-30-hauts-de-seine"
+  | "/realisations/extension-yvelines"
   // Territoires
   | "/renovation-ile-de-france"
   | "/renovation-hauts-de-seine-92"

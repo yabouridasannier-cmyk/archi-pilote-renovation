@@ -99,11 +99,11 @@ export default function AchatDirectMateriauxPage() {
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/24-achat-direct-flatlay.jpeg"
           alt="Échantillons de carrelage, bon de commande, facture et plan de pose disposés sur une table pour un chantier en préparation"
-          caption="Organisation d'un achat direct de matériaux pour un chantier. Illustration éditoriale."
-          ratio="aspect-[16/9]"
+          caption="Illustration éditoriale : échantillons de carrelage, devis et plan de calepinage posés sur une table — les pièces à réunir avant d'acheter un matériau en direct."
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -142,7 +142,7 @@ export default function AchatDirectMateriauxPage() {
           <MqFig
             src="/photos/maquette/approvisionnement-materiaux-plateforme.jpg"
             alt="Entrepôt de matériaux de construction avec palettes de plaques de plâtre, laine minérale et sacs d'enduit"
-            caption="Approvisionnement en direct : plaques, isolants et enduits du groupe Saint-Gobain retirés à La Plateforme du Bâtiment, facturés au client sans marge."
+            caption="Illustration de référence, hors chantier documenté : dépôt de matériaux de second œuvre (plaques de plâtre, laines, sacs d'enduit). Les matériaux achetés en direct sont facturés au client par le fournisseur, sans marge d'intermédiaire."
           />
           <MqChecklist
             items={[
@@ -163,11 +163,11 @@ export default function AchatDirectMateriauxPage() {
         lead="L'économie ne vient pas de l'achat lui-même mais du cadrage qui le précède."
       >
         <div className="mb-10">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/25-achat-direct-etapes.jpeg"
             alt="Six étapes de l'achat direct de matériaux : cadrage, validation technique, calcul des quantités, négociation, livraison, réception"
             caption="Étapes de l'achat direct des matériaux par le client. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
         </div>
         <MqNumbered items={ETAPES} />
@@ -196,7 +196,7 @@ export default function AchatDirectMateriauxPage() {
             <MqFig
               src="/photos/maquette/tendance-zellige-credence.jpg"
               alt="Crédence de cuisine en zellige vert d'eau posé en pose verticale, plan de travail en pierre et façades en chêne clair"
-              caption="Zellige émaillé en crédence : irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support parfaitement dressé."
+              caption="Illustration de référence, hors chantier documenté : crédence en zellige émaillé, irrégularités de surface assumées, calepinage vertical et jointoiement fin sur support dressé."
             />
             <MqFig
               src="/photos/chantiers/chParquetChevronsPosePiece.jpeg"
@@ -234,7 +234,7 @@ export default function AchatDirectMateriauxPage() {
 
       <MqCta
         title="Décrivez votre projet, nous le structurons"
-        lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste."
       />
     </main>
   );

@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Reprendre un pavillon de l'enveloppe aux réseaux",
         intro:
-          "Sur un pavillon, l'ordre des travaux compte : l'enveloppe d'abord, les lots techniques ensuite, les finitions en dernier. Voici le détail de chaque étape.",
+          "Sur un pavillon, l'ordre des travaux compte : l'enveloppe d'abord, les lots techniques ensuite, les finitions en dernier. Voici le détail de chaque étape, puis les deux leviers qui pèsent le plus sur l'enveloppe budgétaire d'une rénovation globale.",
         groupes: [
           {
             titre: "L'enveloppe d'abord",
@@ -47,6 +47,13 @@ export default function Page() {
               { href: "/renovation-hauts-de-seine-92", label: "Hauts-de-Seine (92)" },
               { href: "/renovation-yvelines-78", label: "Yvelines (78)" },
               { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+          {
+            titre: "Tenir le budget sur une rénovation globale",
+            liens: [
+              { href: "/achat-direct-materiaux", label: "Acheter les matériaux en direct" },
+              { href: "/observatoire-prix-renovation", label: "Fourchettes de prix par poste" },
             ],
           },
         ],

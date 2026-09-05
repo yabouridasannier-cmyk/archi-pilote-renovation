@@ -87,7 +87,7 @@ export const SERVICES = [
     details: ["Conception 3D sur plan", "Caissons standards + façades sur-mesure", "Plan de travail au choix (bois, béton ciré, quartz)", "Électroménager encastré intégré"],
   },
   {
-    marque: "III", slug: "salle-de-bain", titre: "Salle de bain étanche", accroche: "Zéro noircissement",
+    marque: "III", slug: "salle-de-bain", titre: "Salle de bain étanche", accroche: "Étanchéité contrôlée avant carrelage",
     texte: "Joints époxy et nattes d'étanchéité systématiquement prescrits au cahier des charges. Une solution dont les fabricants annoncent une durée de vie sans commune mesure avec celle des joints ciment.",
     photo: "salleBainBeton",
     details: ["Joints époxy systématiquement prescrits", "Nattes d'étanchéité sous carrelage", "Douche italienne ou baignoire", "Ventilation anti-humidité"],
@@ -136,10 +136,16 @@ export const FAQ = [
   { question: "Pilotez-vous la rénovation de maisons classées DPE F ou G ?", reponse: "Oui, c'est l'une de nos spécialités. Nous pilotons le traitement des passoires énergétiques de bout en bout : diagnostic, isolation, VMC double flux, remplacement du chauffage, accompagnement MaPrimeRénov' et CEE. L'objectif est de gagner 2 à 3 classes DPE." },
   { question: "Qui garantit les travaux, et pendant combien de temps ?", reponse: "Chaque entreprise partenaire porte les assurances correspondant aux activités qu'elle exécute : garantie décennale (10 ans), garantie biennale (2 ans sur les équipements), garantie de parfait achèvement (1 an). Les attestations sont vérifiées et remises avant tout démarrage de chantier." },
   { question: "Qui signe les devis de travaux, et qui je paie ?", reponse: "Chaque entreprise partenaire remet et signe son propre devis. Vous contractez et payez directement avec elle. ARCHI PILOTE RÉNOVATION n'émet aucun devis de travaux et ne facture aucun chantier — notre rôle est le pilotage et l'accompagnement du projet." },
-  { question: "Comment se déroule un projet avec ARCHI PILOTE RÉNOVATION ?", reponse: "Cinq étapes : premier échange par téléphone ou WhatsApp, visite technique sous 5 jours, devis des entreprises sous 48h, chantier piloté avec point d'avancement hebdomadaire, puis réception et 12 mois de suivi." },
+  { question: "Comment se déroule un projet avec ARCHI PILOTE RÉNOVATION ?", reponse: "Cinq étapes : premier échange par téléphone ou WhatsApp, visite technique du bien, consultation des entreprises partenaires et mise en comparaison de leurs devis sur un périmètre commun, arbitrage du budget poste par poste, puis pilotage du chantier jusqu'à la levée des réserves. Les délais de remise des devis restent ceux de chaque entreprise consultée." },
 ];
 
-export const MARQUEE_ITEMS = ["Second œuvre", "Cuisine sur-mesure", "Salle de bain étanche", "Béton ciré", "Isolation & DPE", "Gros œuvre", "Surélévation", "Devis entreprises sous 48h"];
+/* 05/09 : « Devis entreprises sous 48 h » retiré du bandeau, et le délai de remise des
+   devis retiré de la FAQ ci-dessus. Motif : ce délai n'est pas celui d'ARCHI PILOTE mais
+   celui d'entreprises TIERCES, qui établissent leurs chiffrages selon leur propre charge de
+   travail. La marque ne peut pas s'engager sur un fait qui ne dépend pas d'elle — et le
+   visiteur, lui, lit un engagement. Le délai de réponse propre à la marque (« étude de
+   projet sous 48 heures ouvrées ») est conservé ailleurs : celui-là, elle le tient. */
+export const MARQUEE_ITEMS = ["Second œuvre", "Cuisine sur-mesure", "Salle de bain étanche", "Béton ciré", "Isolation & DPE", "Gros œuvre", "Surélévation", "Devis rendus comparables"];
 
 /* Avant/après illustratif — nouvelle marque, pas de vrai chantier disponible.
    Territoire maison/pavillon : plus de vocabulaire "appartement" ni
@@ -196,7 +202,12 @@ export const ARTICLES: Article[] = [
     date: "3 septembre 2026", dateISO: "2026-09-03",
     categorie: "Réception",
     excerpt: "Ce dossier ne se constitue pas après la réception : chaque pièce se récupère au moment où elle existe, sans quoi elle devient introuvable.",
+    /* 05/09 : en-tête = SCHÉMA dessiné (public/photos/pedagogie/), pas une photo.
+       Sans `schema: true`, la mention « Schéma pédagogique » n'était pas affichée :
+       un dessin pouvait être lu comme une preuve de chantier. Le rendu ne change pas
+       (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaDossierFinChantier",
+    schema: true,
     corps: [
       "Sur un chantier de particulier, aucun texte n'impose au maître d'ouvrage de constituer un dossier de fin de chantier : c'est une pratique, pas une formalité. Elle se justifie par une observation simple — les documents utiles trois ans plus tard sont ceux que personne ne pense à demander pendant que le chantier tourne. Une attestation d'assurance se réclame avant le démarrage d'une entreprise, pas après son départ. Une référence de teinte se relève sur le pot avant qu'il ne parte à la benne. Un plan des réseaux se photographie avant le doublage. Constituer ce dossier consiste donc moins à archiver qu'à récupérer chaque pièce au moment exact où elle existe encore.",
       "Quatre familles composent ce dossier. L'administratif d'abord : devis signés de chaque entreprise, avenants, factures et échéanciers, autorisations d'urbanisme délivrées le cas échéant, et, en copropriété, la décision d'assemblée générale et les échanges avec le syndic. Le technique ensuite : plans et relevés remis à jour de ce qui a réellement été exécuté, photographies des réseaux et des ouvrages prises avant fermeture des murs et des planchers, notes de calcul et pièces d'études lorsqu'un bureau d'études est intervenu, procès-verbaux d'essais et de mise en service quand ils existent. Les assurances ensuite : l'attestation de garantie décennale de chaque entreprise, en cours de validité à la date d'ouverture du chantier, et le contrat de dommages-ouvrage s'il a été souscrit. L'exploitation enfin : notices, certificats de garantie des équipements, références des matériaux, des teintes et de la quincaillerie, et les coordonnées des entreprises intervenues, lot par lot.",
@@ -346,10 +357,16 @@ export const ARTICLES: Article[] = [
     categorie: "Structure",
     excerpt: "Aucun indice ne suffit seul pour juger si un mur porte le bâtiment : voici ceux qu'il faut recouper avant de valider un devis d'ouverture.",
     photo: "chDemolitionGravatsChantier",
-    img2: "chPoteauAcierScelleGravats",
+    /* 05/09 : ...ScelleGravats est le MÊME FICHIER que chPoteauAcierPlatinePied. */
+    img2: "chPoteauAcierPlatinePied",
     img2Caption: "Pied de poteau acier sur platine, scellé dans le sol ouvert pour la reprise de charge. Chantier réel des équipes partenaires.",
-    img3: "chDemolitionLattisPlatreChantier1",
-    img3Caption: "Cloison en lattis et plâtre déposée : l'ossature bois d'origine apparaît, ce que seul un sondage permet de voir avant travaux. Chantier réel des équipes partenaires.",
+    /* 05/09 : img3 (chDemolitionLattisPlatreChantier1) retirée. Deux raisons, vérifiées
+       image ouverte : c'est le MÊME mur en pan de bois que l'en-tête de cet article
+       (chDemolitionGravatsChantier en est un cadrage plus serré), et c'est le MÊME
+       fichier que l'img2 de « coproprietaire-autorisations-avant-travaux », qui le
+       montre sous le nom chDemolitionOuvertureCouloir. Trois vues d'une seule cloison
+       sur deux articles : c'est exactement la répétition signalée par le client.
+       Aucune autre photo du fonds ne documente un sondage de mur — voir rapport. */
     corps: [
       "Un mur épais n'est pas automatiquement porteur, et un mur fin en briques ou en carreaux de plâtre n'est pas automatiquement sans rôle structurel. C'est l'erreur la plus fréquente chez qui juge « à l'œil » avant travaux.",
       "Quatre indices se recoupent : l'épaisseur du mur, son alignement vertical avec un mur de l'étage du dessous ou du dessus, le sens de pose des solives ou poutrelles du plancher, et sa position par rapport aux façades et aux refends principaux du bâtiment. Pris isolément, chacun n'est qu'une présomption ; ensemble, ils orientent un diagnostic fiable.",
@@ -370,7 +387,11 @@ export const ARTICLES: Article[] = [
        pages à deux. */
     photo: "chRavalementArdoise",
     img2: "chCharpenteInterieur",
-    img2Caption: "Charpente en bois massif : poteaux, contrefiches, pannes et solives restés apparents. Le diagnostic d'une charpente ancienne passe par les mêmes pièces, examinées une par une. Chantier réel des équipes partenaires.",
+    /* 05/09 : légende reprise après ouverture de l'image. Le bois y est visiblement NEUF
+       (clair, sans altération, assemblages frais) : écrire « charpente ancienne » à côté
+       aurait laissé croire que la photo montrait le diagnostic dont parle le paragraphe.
+       La légende dit maintenant ce qu'on voit, et fait le lien explicitement. */
+    img2Caption: "Charpente en bois massif neuve, encore entièrement apparente : poteaux, contrefiches, pannes et solives. Sur une charpente ancienne, ce sont ces mêmes pièces que le diagnostic examine une par une. Chantier réel des équipes partenaires.",
     corps: [
       "Trois niveaux d'intervention répondent au même symptôme. La réparation ponctuelle traite ce qui est identifié et limité : quelques ardoises ou tuiles cassées ou glissées, un solin, une reprise en pied de souche, une gouttière percée. L'entretien et le traitement portent sur l'ensemble sans déposer la couverture : nettoyage et démoussage, reprise des points singuliers, traitement de la charpente contre les insectes à larves xylophages ou les champignons lignivores lorsque le diagnostic le justifie. Le remplacement, enfin, consiste à déposer la couverture, à réviser ou changer le support — liteaux, voliges —, à poser un écran de sous-toiture, éventuellement à isoler, puis à recouvrir. La question n'est donc pas « la toiture a-t-elle un certain âge » mais « par où l'eau entre-t-elle, depuis quand, et qu'a-t-elle déjà abîmé ».",
       "Le diagnostic commence par l'intérieur, parce que c'est là que les dégâts se lisent. Sous combles, en lumière rasante : traces d'écoulement sur la charpente et sur l'isolant, auréoles, bois noirci, sciure au pied des pièces, échauffures. Le bois se sonde à la pointe : une pièce saine résiste, une pièce attaquée s'enfonce. On regarde ensuite l'état des liteaux et des fixations — une couverture ne tient que par ce sur quoi elle est clouée ou crochetée. L'extérieur vient après, depuis un accès sûr : état des ardoises ou des tuiles (délitement, gélivure, glissement), faîtage, arêtiers, noues, rives, égout, solins et souches de cheminée, châssis de toit, chéneaux et descentes. Une couverture cède presque toujours par ses points singuliers avant de céder en partie courante. Le verdict en découle : couverture globalement saine et charpente en bon état, on répare ; matériau en fin de vie ou support qui ne tient plus les fixations, on remplace, car reposer une couverture neuve sur un support fatigué revient à payer deux fois le même échafaudage.",
@@ -383,7 +404,12 @@ export const ARTICLES: Article[] = [
     date: "23 août 2026", dateISO: "2026-08-23",
     categorie: "Devis",
     excerpt: "Un écart entre deux devis ne dit rien du sérieux des entreprises tant qu'on n'a pas identifié ce que chacune a réellement chiffré.",
+    /* 05/09 : en-tête = SCHÉMA dessiné (public/photos/pedagogie/), pas une photo.
+       Sans `schema: true`, la mention « Schéma pédagogique » n'était pas affichée :
+       un dessin pouvait être lu comme une preuve de chantier. Le rendu ne change pas
+       (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaDeuxDevisEcart",
+    schema: true,
     corps: [
       "Deux entreprises visitent le même logement, entendent la même demande, et rendent deux chiffrages qui ne se ressemblent pas. Le réflexe est de conclure que l'une est chère et l'autre honnête. C'est rarement la bonne lecture : dans la majorité des cas, les deux devis ne portent pas sur le même ouvrage. Comparer deux totaux n'a de sens qu'après avoir vérifié que le périmètre, les hypothèses techniques et les fournitures sont identiques de part et d'autre — c'est-à-dire après avoir reconstitué, ligne à ligne, ce que chacun a mis dedans et ce qu'il a laissé dehors.",
       "Le premier écart tient au périmètre. Les postes qui disparaissent le plus souvent d'un chiffrage sont ceux qui ne se voient pas sur le résultat : dépose et évacuation en déchèterie, protections des ouvrages conservés et des parties communes, installation de chantier, reprises et raccords autour de l'ouvrage, nettoyage de fin de chantier, et parfois l'échafaudage ou la nacelle. Le deuxième tient aux hypothèses techniques. Sur une même salle de bain, l'un prévoit la dépose complète du support et un ragréage, l'autre pose sur l'existant ; l'un chiffre un système d'étanchéité sous carrelage, l'autre s'en tient à un carrelage collé ; l'un reprend le tableau électrique, l'autre repique sur le circuit en place. Ces choix ne se lisent pas dans le total, seulement dans le descriptif. Le troisième tient aux fournitures : gamme et provenance retenues, et surtout la mention « fourniture et pose » ou « pose seule », qui suffit à elle seule à expliquer un écart considérable entre deux propositions.",
@@ -417,6 +443,15 @@ export const ARTICLES: Article[] = [
     date: "21 août 2026", dateISO: "2026-08-21",
     categorie: "Ventilation",
     excerpt: "Le débit est la donnée la plus citée et la moins suffisante : une ventilation ne fonctionne que si l'air dispose d'un chemin complet, de l'entrée jusqu'au rejet.",
+    /* 05/09 — NON RÉSOLU, à arbitrer. L'en-tête montre un PARE-VAPEUR (membrane Soprema
+       agrafée sur un doublage de salle de bain) : c'est de l'isolation, pas de la
+       ventilation. lib-photos.ts ne déclare aucune photo de VMC ; la seule image de
+       ventilation déclarée est chGrilleAerationMdfSurMesure, employée ci-dessous en img2
+       et native en 528×960 — trop petite pour un en-tête plein cadre (760 px affichés).
+       Le fichier public/photos/maquette/chantier-vmc-caisson-gaines.jpg existe, montre un
+       caisson et son réseau de gaines, mais n'a pas de clé : demande de clé dans le
+       rapport. En attendant, l'image en place est conservée plutôt que remplacée par une
+       image hors sujet ou illisible. */
     photo: "chParVapeurSopremaMuralSdb",
     img2: "chGrilleAerationMdfSurMesure",
     img2Caption: "Panneau ajouré taillé sur mesure à l'atelier : les passages d'air se dessinent avec la menuiserie, pas une fois les ouvrages posés. Chantier réel des équipes partenaires.",
@@ -432,7 +467,15 @@ export const ARTICLES: Article[] = [
     date: "20 août 2026", dateISO: "2026-08-20",
     categorie: "Copropriété",
     excerpt: "Un chantier privatif se juge aussi sur ce que les voisins ne voient pas : un hall protégé, des livraisons préparées, des phases bruyantes annoncées à l'avance.",
-    photo: "chEncadrementBoisPorteMiroirAtelier",
+    /* 05/09 : reproche client — « un immeuble illustré par une maison ». Vérifié image
+       ouverte : chEncadrementBoisPorteMiroirAtelier est bien un pavillon (jardin derrière
+       les fenêtres, arche en chêne, pots de peinture au sol) ; elle part sur l'article
+       prix-renovation-maison-2026, dont c'est le sujet. Ici l'en-tête montre désormais un
+       immeuble entier ceinturé d'un échafaudage, vu depuis la rue, avec les maisons
+       voisines et une voiture stationnée — c'est-à-dire les trois mots du titre :
+       l'immeuble, la rue, le voisinage. Elle est native en 1600×1200 et passe de deux
+       pages à trois, la limite fixée. */
+    photo: "chFacadeRavalementVillage",
     img2: "chArcheEncadrementBoisChantier",
     img2Caption: "Habillage en arche posé dans un logement en travaux, sol couvert de bâches et panneaux stockés dans la pièce voisine : un ouvrage livré reste protégé jusqu'au nettoyage final. Chantier réel des équipes partenaires.",
     corps: [
@@ -447,7 +490,12 @@ export const ARTICLES: Article[] = [
     date: "19 août 2026", dateISO: "2026-08-19",
     categorie: "Extension",
     excerpt: "Un budget d'extension se construit rarement faux sur le gros œuvre. Il se construit faux sur ce qui l'entoure : terrassement, réseaux, accès et raccords.",
+    /* 05/09 : en-tête = SCHÉMA dessiné (public/photos/pedagogie/), pas une photo.
+       Sans `schema: true`, la mention « Schéma pédagogique » n'était pas affichée :
+       un dessin pouvait être lu comme une preuve de chantier. Le rendu ne change pas
+       (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaExtensionCoutsOublies",
+    schema: true,
     corps: [
       "Un premier budget d'extension se fabrique presque toujours de la même manière : une surface, un prix au mètre carré trouvé en ligne, une multiplication. Le résultat n'est pas absurde — il décrit assez bien la construction du volume neuf. Il ne décrit rien de ce qui l'entoure, et c'est précisément là que se logent les écarts constatés plus tard. Une extension n'est pas un bâtiment posé à côté d'une maison : c'est un ouvrage qui doit être creusé, raccordé, approché, greffé sur l'existant, puis raccordé aux finitions des pièces qu'il prolonge. Chacune de ces cinq opérations a un coût, et aucune n'entre dans un prix au mètre carré.",
       "Le terrassement vient en premier, avec une donnée que personne n'anticipe : les terres extraites doivent partir. Leur volume, la possibilité ou non de les stocker sur la parcelle, et la filière d'évacuation pèsent bien plus que le creusement lui-même. Les fondations, ensuite, dépendent du sol : leur type et leur profondeur découlent d'une étude géotechnique, qui se mène parcelle par parcelle et non par analogie avec la maison voisine. Les réseaux suivent : alimentation en eau, évacuations d'eaux usées et d'eaux pluviales avec leur pente et leur point de rejet, électricité et éventuel renforcement du branchement, gaz, télécommunications. Selon les cas, il s'agit d'étendre un réseau intérieur, de modifier un branchement auprès du concessionnaire, ou d'ouvrir des tranchées à travers un jardin qu'il faudra remettre en état. L'accès enfin : livraisons, portage, levage, protection des sols du terrain et emplacement de stockage. Une parcelle en fond de rue ou une maison mitoyenne sans passage latéral change la logistique, donc les moyens, donc le prix.",
@@ -465,14 +513,22 @@ export const ARTICLES: Article[] = [
        une pièce à vivre réellement livrée par les équipes. La fourchette milieu de gamme
        reste illustrée plus bas par la cuisine anthracite (img3) : l'article ne montre pas
        QUE du haut de gamme. */
-    photo: "chHdgSalonSalleMangerMoulures",
+    /* 05/09 : reproche client — l'article s'intitule « rénovation de MAISON » et son
+       en-tête montrait un salon d'APPARTEMENT haussmannien livré (moulures, cheminée de
+       marbre, parquet à chevrons). Remplacé par une maison réellement en travaux :
+       arche en chêne posée entre deux pièces, sols bâchés, pots de peinture et escabeau,
+       jardin visible par les fenêtres. Pour un article de budget, un chantier en cours
+       dit plus juste qu'un intérieur fini. Les deux images du corps restent des
+       appartements : leurs légendes décrivent une salle de bain et une cuisine, elles
+       n'affirment pas de maison. */
+    photo: "chEncadrementBoisPorteMiroirAtelier",
     img2: "chHdgSdbMarbreNoirDoubleVasque",
     img2Caption: "Gamme haut de gamme : marbre sombre veiné du sol au plafond, baignoire îlot et robinetterie en laiton, double vasque monolithe, cheminée de marbre d'origine conservée. Chantier réel des équipes partenaires.",
     img3: "chCuisineAnthraciteGalerie",
     img3Caption: "Cuisine anthracite livrée : plan de travail noir, carreaux de ciment au sol et parquet à chevrons dans la pièce voisine. Chantier réel des équipes partenaires.",
     corps: [
       "Le prix d'une rénovation dépend d'abord de son ampleur, bien plus que de la surface seule. Un rafraîchissement (peinture, sols simples) se situe entre 250 et 450 €/m². Une rénovation partielle, qui touche une ou deux pièces avec de la plomberie et de l'électricité, grimpe à 600-900 €/m². Une rénovation complète — toutes les pièces refaites, cuisine et salle de bain neuves — se chiffre entre 1000 et 1500 €/m². Le haut de gamme, avec des matériaux premium et des finitions d'architecte, démarre à 1500 €/m² et peut dépasser 2500 €/m².",
-      "Ces fourchettes restent indicatives : seul un devis détaillé après visite technique, remis par l'entreprise qui réalisera les travaux, donne un chiffrage fiable poste par poste. C'est pour cette raison que les devis des entreprises partenaires arrivent sous 48h après la visite — vous devez pouvoir comparer et décider vite, avec des chiffres réels et non des estimations vagues.",
+      "Ces fourchettes restent indicatives : seul un devis détaillé après visite technique, remis par l'entreprise qui réalisera les travaux, donne un chiffrage fiable poste par poste. C'est pour cette raison que la visite technique précède le chiffrage et que les devis des entreprises partenaires sont sollicités dans la foulée : vous devez pouvoir comparer et décider sur des chiffres réels, et non sur des estimations vagues. Les délais de remise restent ceux de chaque entreprise consultée.",
       "Un point souvent oublié : la TVA. Elle est réduite à 10 % sur les travaux d'amélioration d'un logement de plus de 2 ans, et descend à 5,5 % sur les travaux d'amélioration énergétique éligibles. Sur un chantier de 60 000 €, la différence entre 20 % et 10 % de TVA représente 6 000 € — un budget qui peut financer une cuisine entière. Ce taux s'applique aux travaux facturés par l'entreprise ; les matériaux achetés en direct par le client relèvent du taux standard.",
     ],
   },
@@ -482,7 +538,12 @@ export const ARTICLES: Article[] = [
     date: "16 août 2026", dateISO: "2026-08-16",
     categorie: "Rénovation énergétique",
     excerpt: "Un générateur choisi avant l'isolation est dimensionné pour un logement qui n'existera plus. L'ordre des travaux n'est pas une préférence, c'est une conséquence du calcul.",
+    /* 05/09 : en-tête = SCHÉMA dessiné (public/photos/pedagogie/), pas une photo.
+       Sans `schema: true`, la mention « Schéma pédagogique » n'était pas affichée :
+       un dessin pouvait être lu comme une preuve de chantier. Le rendu ne change pas
+       (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaOrdreRenovationEnergetique",
+    schema: true,
     corps: [
       "La chaudière est l'équipement le plus visible d'un logement mal isolé : elle tourne, elle fait du bruit, elle coûte. C'est aussi celui qu'on remplace en premier, et c'est l'ordre le plus coûteux. La raison est arithmétique : la puissance nécessaire à un logement découle de ses déperditions. Isoler l'enveloppe les réduit, donc réduit la puissance à installer. Un générateur choisi avant les travaux d'isolation est dimensionné pour un bâtiment qui va disparaître ; installé, il fonctionnera en cycles courts, s'usera plus vite et régulera moins bien qu'un appareil correctement dimensionné. Le surcoût est double : l'appareil a été payé trop gros, et il travaille dans de mauvaises conditions pendant toute sa durée de vie.",
       "L'ordre technique est stable, quel que soit le logement. Un état des lieux d'abord : repérage des déperditions, examen de l'existant, et audit énergétique lorsque le projet le justifie ou qu'un dispositif d'aide l'exige. L'enveloppe ensuite, en commençant par là où les pertes sont les plus fortes — toiture et combles, murs, planchers bas, puis menuiseries — avec un soin particulier porté aux points singuliers et aux jonctions, qui décident du résultat autant que l'épaisseur d'isolant. La ventilation immédiatement après : un logement rendu étanche doit disposer d'un chemin d'air complet, sans quoi l'humidité produite à l'intérieur reste dedans et se dépose sur les parois. Les émetteurs enfin, avant le générateur : c'est leur température de fonctionnement qui conditionne le choix, en particulier lorsqu'une pompe à chaleur est envisagée, car un réseau conçu pour de la haute température ne donne rien à basse température. Le générateur vient en dernier, dimensionné sur le logement tel qu'il sera, pas tel qu'il est.",
@@ -539,7 +600,12 @@ export const ARTICLES: Article[] = [
     img2: "pedaJointCimentMacro",
     img2Caption: "Joint ciment classique en zone humide : la moisissure a noirci le joint sur toute sa longueur, jusque dans les angles. Photo pédagogique.",
     img3: "chSdbCarreauxCiment",
-    img3Caption: "Douche carrelée en carreaux de ciment : un joint entre chaque carreau, dans le receveur comme sur les parois de la douche. Chantier réel des équipes partenaires.",
+    /* 05/09 : légende reprise après ouverture de l'image. Elle annonçait « un joint entre
+       chaque carreau, dans le receveur comme sur les parois » : le receveur photographié
+       est un bac blanc d'une seule pièce, sans aucun carreau ni joint. La légende décrit
+       maintenant ce qu'on voit — un carrelage mural de carreaux de ciment, donc un linéaire
+       de joints considérable en zone de projection d'eau, ce qui est bien le sujet. */
+    img3Caption: "Douche en carreaux de ciment : sur les parois, un joint entre chaque carreau — soit un linéaire de joints considérable en zone d'eau. Le receveur, lui, est un bac d'une seule pièce. Chantier réel des équipes partenaires.",
     corps: [
       "Un joint ciment classique est poreux. En quelques mois, il absorbe l'humidité, les moisissures s'y installent, et il noircit — quel que soit le sérieux du nettoyage. Au bout de deux ou trois ans, il se fissure et laisse passer l'eau, avec le risque de dégâts derrière le carrelage.",
       "Le joint époxy est une résine, pas du ciment. Il est non poreux et ne noircit pas — parce qu'il n'y a rien pour les moisissures à quoi s'accrocher. Les fabricants annoncent une durée de vie de 15 à 20 ans, contre 3 à 5 ans pour un joint ciment classique en zone humide.",
@@ -560,7 +626,7 @@ export const ARTICLES: Article[] = [
     corps: [
       "Une cuisine intégralement sur mesure coûte cher parce que chaque caisson est fabriqué à l'unité. Or le caisson est invisible une fois la cuisine posée : il n'intervient ni dans l'esthétique ni dans la perception de la qualité par un visiteur.",
       "L'alternative consiste à conserver des caissons standards de bonne facture, aux dimensions normalisées et aux quincailleries fiables, et à faire fabriquer sur mesure uniquement ce qui se voit et se touche : façades, plan de travail, plinthes et joues d'habillage contre les murs biais, fréquents en logement ancien.",
-      "L'écart de budget constaté sur un projet équivalent se situe généralement entre 30 et 50 % sur le poste mobilier, sans écart visible sur le résultat livré. La question à poser avant de chiffrer une cuisine n'est donc pas « sur mesure ou standard », mais « qu'est-ce qui doit vraiment être sur mesure ».",
+      "L'écart entre les deux approches se concentre sur le poste mobilier, et il n'y est pas marginal : c'est là que se joue la comparaison de deux devis de cuisine. Il ne se lit pourtant pas sur le résultat livré. La question à poser avant de chiffrer une cuisine n'est donc pas « sur mesure ou standard », mais « qu'est-ce qui doit vraiment être sur mesure » — l'ampleur de l'écart, elle, se mesure devis en main, projet par projet.",
     ],
   },
   {
@@ -569,7 +635,12 @@ export const ARTICLES: Article[] = [
     date: "5 août 2026", dateISO: "2026-08-05",
     categorie: "Matériaux",
     excerpt: "Acheter soi-même ses fournitures change qui commande, qui contrôle et qui supporte l'erreur. Cinq points décident si l'économie tient jusqu'à la pose.",
+    /* 05/09 : en-tête = SCHÉMA dessiné (public/photos/pedagogie/), pas une photo.
+       Sans `schema: true`, la mention « Schéma pédagogique » n'était pas affichée :
+       un dessin pouvait être lu comme une preuve de chantier. Le rendu ne change pas
+       (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaAchatDirectMateriaux",
+    schema: true,
     corps: [
       "Acheter ses matériaux en direct consiste à commander soi-même, à son nom et avec sa facture, les fournitures que l'entreprise se contente ensuite de poser. La ligne de partage n'est pas budgétaire, elle est juridique : ce qui engage la garantie décennale de l'entreprise qui le met en œuvre reste fourni par elle — systèmes d'étanchéité, colles et mortiers techniques, isolants, ossatures, câbles et canalisations, éléments de structure. Le reste peut s'acheter en direct : carrelage et faïence, robinetterie et sanitaires, parquet, cuisine, menuiseries d'agencement, luminaires et quincaillerie de finition. Ce que ce transfert change n'est pas seulement le prix payé : il déplace vers vous la responsabilité de la référence, de la quantité et du délai. C'est là que l'économie se gagne ou se perd.",
       "Trois erreurs se produisent avant la livraison. La première est de commander une référence que le poseur n'a pas validée. Format, épaisseur, classement d'usage, caractère rectifié ou non, compatibilité avec le support et avec le système de pose retenu : ces critères se vérifient sur la fiche technique, par écrit, avant la commande. Un matériau livré puis refusé à la pose coûte un retour, un délai et une équipe immobilisée. La deuxième est de commander la quantité exacte relevée sur le plan. Toute pose consomme davantage : chutes de coupe, casse, calepinage particulier — un point de Hongrie ou un appareillage en diagonale consomment plus qu'une pose droite. La réserve se calcule avec l'entreprise, et elle se commande dans la même livraison, car un complément passé plus tard arrive fréquemment d'un autre lot de fabrication, avec une nuance visible sur le mur fini. La troisième est de commander sans caler la date sur le planning : livré trop tôt, le matériau encombre et s'abîme ; livré trop tard, il arrête l'équipe qui devait le poser.",
@@ -581,7 +652,7 @@ export const ARTICLES: Article[] = [
     titre: "DPE F ou G : comment sortir de la passoire énergétique",
     date: "2 août 2026", dateISO: "2026-08-02",
     categorie: "Isolation & DPE",
-    excerpt: "Diagnostic, isolation, chauffage, aides financières : la méthode pour gagner 2 à 3 classes DPE sans se perdre dans les démarches.",
+    excerpt: "Diagnostic, isolation, ventilation, chauffage, aides financières : l'ordre des étapes qui décide du gain de classes, sans se perdre dans les démarches.",
     /* 03/09 : les trois visuels précédents (plancher mis à nu, granulés d'isolation
        PHONIQUE entre solives, sous-couche OSB) illustraient un plancher intérieur,
        pas la thermique dont parle l'article — deux légendes annonçaient même de
@@ -589,7 +660,22 @@ export const ARTICLES: Article[] = [
        d'isolation THERMIQUE disponible dans lib-photos.ts ; img2/img3 retirées
        faute d'image honnête (voir rapport : laine + pare-vapeur et chaudière
        existent dans public/photos/chantiers/ mais ne sont pas déclarées). */
-    photo: "chIsolationCombles",
+    /* 05/09 : reproche client — chIsolationCombles est une CONSTRUCTION NEUVE. Vérifié
+       image ouverte : briques monomur rouges encore nues, charpente neuve, laine posée
+       dans un rampant neuf, aucun ouvrage existant. Or un logement classé F ou G est par
+       définition un bâtiment existant : l'en-tête contredisait le titre. Remplacé par la
+       seule photo d'isolation thermique sur bâti EXISTANT du fonds — laine minérale entre
+       montants et bandes d'étanchéité à l'air sur chaque ossature. Elle était employée en
+       img2 de l'article MaPrimeRénov'/CEE : elle en est retirée pour ne pas paraître deux
+       fois dans le blog, et son décompte de pages reste inchangé (trois). */
+    /* 05/09 (2e passe) : l'en-tête passe de la photo d'isolation au schéma DPE, qui
+       existait sur le disque mais n'était déclaré nulle part. Motif : l'article traite du
+       CLASSEMENT énergétique et de l'ordre des travaux qui le fait bouger, pas d'un geste
+       d'isolation isolé. Le schéma montre exactement cela — la coupe du bâtiment avec les
+       cinq postes repérés, et l'échelle A à G avec ses seuils. Il rend au passage la photo
+       d'isolation à l'article MaPrimeRénov', où elle manquait. */
+    photo: "schemaDpePassoire",
+    schema: true,
     corps: [
       "Un logement classé F ou G n'est pas seulement une facture de chauffage élevée : depuis 2025, ces logements sont progressivement interdits à la location. Sortir de la passoire énergétique est donc devenu un sujet patrimonial autant qu'un sujet de confort.",
       "La méthode commence toujours par un diagnostic complet, qui identifie les postes de déperdition réels — souvent les combles et les murs avant les fenêtres, contrairement à l'intuition. Vient ensuite l'isolation proprement dite, la pose d'une VMC double flux pour éviter les problèmes d'humidité une fois le logement étanche, puis le remplacement du système de chauffage si nécessaire — dimensionné après les travaux d'isolation, pas avant.",
@@ -602,7 +688,12 @@ export const ARTICLES: Article[] = [
     date: "31 juillet 2026", dateISO: "2026-07-31",
     categorie: "Méthode",
     excerpt: "Refuser un projet n'est pas un manque d'ambition : c'est reconnaître qu'aucune organisation ne rattrapera une donnée manquante ou un délai impossible.",
+    /* 05/09 : en-tête = SCHÉMA dessiné (public/photos/pedagogie/), pas une photo.
+       Sans `schema: true`, la mention « Schéma pédagogique » n'était pas affichée :
+       un dessin pouvait être lu comme une preuve de chantier. Le rendu ne change pas
+       (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaProjetsRefuses",
+    schema: true,
     corps: [
       "Un pilote de travaux ne pose aucun lot et n'émet aucun devis : il prépare les décisions, consulte les entreprises, tient l'enchaînement et suit l'exécution jusqu'à la réception. Ce rôle a une portée réelle, et il a des limites nettes. Il ne remplace ni un bureau d'études structure, ni un architecte, ni une autorisation administrative. Il ne crée pas de budget, et il ne raccourcit pas un temps de séchage. Accepter un projet dont l'une de ces conditions manque revient à s'engager sur un résultat que rien ne permet de tenir : le chantier ne s'arrête pas au démarrage, il s'arrête au milieu, quand les travaux sont ouverts et que la marche arrière coûte le plus cher.",
       "Cinq situations conduisent à ne pas engager un projet en l'état. Une reprise de structure qu'aucune étude ne peut appuyer : lorsque l'accès aux fondations, le sondage d'un mur ou le dégagement d'un appui sont refusés, personne ne peut dire ce que le bâtiment porte, et un calcul fait sur des hypothèses non vérifiées n'engage rien. Une autorisation d'urbanisme absente, en cours d'instruction ou déjà refusée, alors que le projet la requiert : commencer avant expose le maître d'ouvrage, pas l'entreprise. Une copropriété non consultée quand les travaux touchent une partie commune, la façade, la structure ou un plancher : la décision d'assemblée générale conditionne le chantier, et sa majorité applicable dépend de la nature exacte des travaux, ce qui se vérifie avec le syndic. Un programme sans rapport avec le budget annoncé, où l'écart ne se comble ni par la négociation ni par l'organisation. Et un délai imposé incompatible avec des temps qui ne se compriment pas : séchage d'une chape ou d'un enduit, délai de fabrication d'une menuiserie sur mesure, instruction d'une autorisation.",
@@ -623,8 +714,11 @@ export const ARTICLES: Article[] = [
        expliquer au lecteur pourquoi l'image était là — signe qu'elle n'y était
        pas à sa place. Remplacé par des travaux qui touchent réellement l'aspect
        extérieur, donc l'accord de la copropriété. */
-    img3: "chFacadeRavalementEchafaudage2",
-    img3Caption: "Échafaudage monté sur l'angle d'un immeuble pour reprendre la façade, les souches de cheminée et la couverture en ardoise. Chantier réel des équipes partenaires.",
+    /* 05/09 : img3 (chFacadeRavalementEchafaudage2) retirée. Les deux fichiers ont été
+       ouverts côte à côte : c'est le même cliché que l'en-tête de l'article
+       « renovation-toiture-reparer-traiter-remplacer » (chRavalementArdoise) — même angle
+       d'immeuble, mêmes deux souches de brique, même olivier à droite, même ciel gris.
+       L'article gardait par ailleurs deux vues du même ravalement, en-tête comprise. */
     corps: [
       "En copropriété, le règlement encadre toute intervention touchant les éléments communs, la structure porteuse commune ou l'aspect extérieur du bâtiment. Selon la nature exacte des travaux, une simple information écrite au syndic peut suffire, ou au contraire une autorisation formelle votée en assemblée générale devient nécessaire avant tout démarrage.",
       "C'est notamment le cas d'une ouverture touchant un mur porteur mitoyen d'une partie commune, du remplacement d'une fenêtre visible depuis la rue, ou de la création d'une sortie de ventilation en façade. Ces dossiers doivent être présentés en amont, avec un descriptif technique précis, pour être inscrits à l'ordre du jour de la prochaine assemblée générale — dont la fréquence, généralement annuelle, doit être anticipée dans le calendrier du projet.",
@@ -664,10 +758,19 @@ export const ARTICLES: Article[] = [
        pour des aides qui ne financent que la rénovation. Remplacé par un schéma pédagogique
        qui reprend l'intitulé de l'article (demande du client). Aucun logo officiel, aucun
        montant chiffré : les règles et barèmes changent chaque année. */
+    /* 05/09 : en-tête = SCHÉMA dessiné (public/photos/pedagogie/), pas une photo.
+       Sans `schema: true`, la mention « Schéma pédagogique » n'était pas affichée :
+       un dessin pouvait être lu comme une preuve de chantier. Le rendu ne change pas
+       (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaMaPrimeRenovCee",
-    img2: "chIsolationLaineUrsaVarioSdb",
-    img2Caption:
-      "Isolation thermique en rénovation : laine minérale posée entre montants et membrane frein-vapeur agrafée, avant fermeture du doublage. Chantier réel des équipes partenaires.",
+    schema: true,
+    /* 05/09 : img2 (chIsolationLaineUrsaVarioSdb) rendue à « sortir-passoire-energetique »,
+       dont l'isolation d'un bâti existant est le sujet central et dont l'en-tête était une
+       construction neuve. La garder ici l'aurait affichée deux fois dans le blog. Aucune
+       autre photo honnête à mettre à la place : les deux autres vues d'isolation déclarées
+       (chIsolationFenetreSdbLaineVario, chParVapeurSopremaFenetreSdb) sont le MÊME mur de
+       la MÊME salle de bain, à un cadrage ou une étape près — emplacement à pourvoir,
+       voir rapport. L'article conserve son schéma d'en-tête et la photo de chaudière. */
     img3: "chChaudiereMuraleSaunierDuval",
     img3Caption:
       "Remplacement d'un appareil de chauffage : chaudière murale raccordée, vannes d'isolement et filtre posés sur le retour. Chantier réel des équipes partenaires.",
@@ -698,8 +801,11 @@ export const ARTICLES: Article[] = [
     date: "1 juillet 2026", dateISO: "2026-07-01",
     categorie: "Local commercial",
     excerpt: "Accueil du public, vitrine, normes ERP : l'agencement d'un local commercial obéit à des règles différentes de celles d'un logement, dès la phase de conception.",
-    photo: "chOptiqueComptoirCarcasseBrute2",
-    img2: "chOptiqueComptoirAccueilFini2",
+    /* 05/09 : ...Brute2 est le MÊME FICHIER que ...Brute (empreinte identique), déjà
+       employée sur /menuiserie-agencement-sur-mesure. On unifie sur un seul nom pour que
+       le doublon soit comptabilisé — cf. scripts/fichiers-identiques.py. */
+    photo: "chOptiqueComptoirCarcasseBrute",
+    img2: "chOptiqueComptoirAccueilFini",
     img2Caption: "Comptoir d'accueil livré dans un magasin d'optique : plan de travail bois, soubassement en tasseaux et liseré laiton. Chantier réel des équipes partenaires.",
     img3: "chOptiquePresentoirsMuraux",
     img3Caption: "Présentoirs muraux sur mesure pour montures : réglettes aluminium fixées sur un mur de tasseaux, meubles à tiroirs en pied. Chantier réel des équipes partenaires.",

@@ -172,11 +172,11 @@ export default function SavoirFaireAncienPage() {
           de /photos/pedagogie/ (donc jamais la preuve d'un ouvrage exécuté). La légende ne décrit
           plus que ce qui est effectivement visible.
         */}
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/41-savoir-faire-fenetre-hero.jpeg"
           alt="Fenêtre ancienne à petits bois vue de l'intérieur, crémone en laiton, ouvrant sur une façade parisienne en pierre de taille"
           caption="Fenêtre à petits bois et crémone en laiton, vue depuis l'intérieur, face à une façade en pierre de taille. Image d'illustration."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -248,7 +248,7 @@ export default function SavoirFaireAncienPage() {
               /realisations et gardée ici, où « la mise aux normes invisible » est justement le sujet.
             */}
             <MqFig
-              src="/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg"
+              src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher.jpeg"
               alt="Pièce d'un appartement haussmannien en cours de dépose : boiseries murales moulurées et volets persiennés en place, parquet déposé jusqu'aux solives, granulés d'isolation répandus entre elles"
               caption="Appartement haussmannien en cours de travaux : boiseries murales moulurées et volets persiennés en place dans leurs embrasures ; parquet déposé jusqu'aux solives et granulés d'isolation répandus entre elles. Chantier réel des équipes partenaires."
             />
@@ -316,7 +316,7 @@ export default function SavoirFaireAncienPage() {
             <MqFig
               src="/photos/chantiers/chEncadrementBoisPorteMiroirAtelier.jpeg"
               alt="Ouverture entre deux pièces habillée d'un encadrement en chêne massif à angles coupés, pièce du fond en travaux avec porte à panneaux, radiateur en fonte à colonnes et corniches moulurées"
-              caption="Ouverture entre deux pièces habillée d'un encadrement en chêne massif à angles coupés. Dans la pièce du fond, encore en travaux — sols bâchés, pots de peinture, escabeau —, la porte à panneaux, le radiateur en fonte à colonnes et les corniches moulurées du plafond sont toujours en place. Chantier réel des équipes partenaires."
+              caption="Ouverture entre deux pièces habillée d'un encadrement en bois clair à pans coupés, posé sur toute la hauteur. Dans la pièce du fond, encore en travaux — sols bâchés, pots de peinture, escabeau —, la porte à panneaux, le radiateur en fonte à colonnes et les corniches moulurées du plafond sont toujours en place. Chantier réel des équipes partenaires."
             />
             {/*
               Ajouté le 03/09/2026 pour l'ouvrage « Mise aux normes invisible », à la place de la
@@ -358,7 +358,7 @@ export default function SavoirFaireAncienPage() {
             caption="Fenêtre en bois à petits bois et crémone en laiton, dans une embrasure à panneautage mouluré."
             ratio="aspect-[16/9]"
           />
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/05-menuiserie-moulures.jpeg"
             alt="Trois relevés de menuiserie : profil de corniche, fenêtre à petits bois avec crémone en laiton, chambranle en chêne profilé"
             caption="Schéma pédagogique : les trois relevés qui précèdent une commande — profil de corniche, fenêtre à petits bois et crémone en laiton, chambranle en chêne profilé."
@@ -595,11 +595,11 @@ export default function SavoirFaireAncienPage() {
         lead="Fenêtre, corniche et réseau derrière doublage : trois arbitrages qui reviennent systématiquement dans un logement ancien."
         wide
       >
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/32-savoir-faire-trois-schemas.jpeg"
           alt="Trois coupes techniques : fenêtre ancienne avec crémone laiton, corniche en plâtre, réseau derrière doublage"
           caption="Arbitrages techniques pour préserver le charme d'un logement ancien. Schéma pédagogique."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </MqSection>
 

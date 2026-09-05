@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Deux profils de biens, deux entrées",
         intro:
-          "Le département n'appelle pas la même approche selon qu'on rénove un pavillon à l'est ou une maison de ville proche de Paris. Les pages ci-dessous séparent les deux logiques.",
+          "Le département n'appelle pas la même approche selon qu'on rénove un pavillon à l'est ou une maison de ville proche de Paris. Les pages ci-dessous séparent les deux logiques, puis rappellent ce qu'il faut vérifier sur une entreprise avant de lui confier un lot.",
         groupes: [
           {
             titre: "Pavillon et maison de ville",
@@ -48,6 +48,13 @@ export default function Page() {
               { href: "/renovation-val-de-marne-94", label: "Val-de-Marne (94)" },
               { href: "/renovation-seine-et-marne-77", label: "Seine-et-Marne (77)" },
               { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+          {
+            titre: "Sécuriser le choix des entreprises",
+            liens: [
+              { href: "/garanties-assurances", label: "Garanties, décennale et attestations à exiger" },
+              { href: "/clinique-du-devis", label: "Faire relire un devis avant de signer" },
             ],
           },
         ],

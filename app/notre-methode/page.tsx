@@ -173,11 +173,11 @@ export default function NotreMethodePage() {
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/06-huit-etapes.jpeg"
           alt="Schéma pédagogique des huit étapes du pilotage : comprendre le besoin, lire le bâti, prioriser, chiffrer, sélectionner, vérifier les interfaces, suivre le chantier, dossier final"
           caption="Schéma pédagogique : les huit étapes de la méthode, chacune produisant un livrable écrit avant de passer à la suivante."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -200,11 +200,11 @@ export default function NotreMethodePage() {
           </p>
         </MqProse>
         <div className="mt-10">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/08-notre-methode-dependances.jpeg"
             alt="Diagramme des dépendances entre structure, réseaux, isolation, ventilation, cuisine et finitions"
             caption="Dépendances et risques entre les différents lots de rénovation. Schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
         </div>
       </MqSection>
@@ -212,11 +212,11 @@ export default function NotreMethodePage() {
       <MqDark kicker="Détail des huit étapes" title="Livrables, documents et durée indicative">
         <MqDarkSteps steps={STEPS} />
         <div className="mt-10">
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/schema-planning-lots.jpg"
             alt="Planning en lots d'un chantier de rénovation présenté sous forme de diagramme de phases hebdomadaires"
-            caption="Enchaînement des lots d'un chantier de rénovation : chaque phase conditionne la suivante, d'où l'importance du séquencement."
-            ratio="aspect-[16/9]"
+            caption="Schéma pédagogique : enchaînement des lots d'un chantier de rénovation, chaque phase conditionnant la suivante."
+            ratio="aspect-[10/7]"
           />
         </div>
       </MqDark>
@@ -258,11 +258,11 @@ export default function NotreMethodePage() {
         lead="Une ouverture structurelle peut déplacer un réseau électrique ; une isolation renforcée peut rendre une ventilation existante insuffisante ; une cuisine dessinée trop tôt peut bloquer une réservation de plomberie."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/schema-vmc.jpg"
             alt="Schéma d'une ventilation mécanique contrôlée hygroréglable dans un appartement, avec entrées d'air, gaines vers le caisson en combles et bouches d'extraction en pièces techniques"
-            caption="Interface type entre lots : la pose d'une ventilation mécanique contrôlée dépend de l'étanchéité à l'air obtenue par l'isolation."
-            ratio="aspect-[16/9]"
+            caption="Schéma pédagogique (principe d'une VMC hygroréglable en appartement), pris ici comme exemple d'interface entre lots : la pose de la ventilation dépend de l'étanchéité à l'air obtenue par l'isolation."
+            ratio="aspect-[10/7]"
           />
           {/*
             31/08 : alt corrigé — le schéma réutilisé ici (déjà utilisé sur la page

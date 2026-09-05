@@ -57,24 +57,31 @@ export default function Page() {
               </MqProse>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <MqFig
-              src="/photos/maquette/schema-humidite-origines.jpg"
-              alt="Coupe d'un logement ancien illustrant remontées capillaires, infiltrations, condensation et ponts thermiques"
-              caption="Origines de l'humidité dans un logement ancien et traitements associés : le diagnostic précède toujours le choix de la solution."
-            />
-            <MqFig
-              src="/photos/maquette/schema-vmc.jpg"
-              alt="Schéma de principe d'une ventilation mécanique contrôlée hygroréglable, ici représenté sur un plan d'appartement — le même principe s'applique à un pavillon de plain-pied"
-              caption="Isolation et ventilation mécanique contrôlée doivent être pensées ensemble pour éviter tout report d'humidité."
-            />
-          </div>
+          {/*
+            Emplacement retiré le 05/09/2026 (surexposition + schéma hors sujet).
+
+            schema-vmc.jpg occupait la seconde case de cette rangée. C'est la scène la plus
+            répétée du site après chCloisonsPlaco : `scripts/surexposition.py` la compte sur
+            CINQ pages (/detail-invisible, /notre-methode, /renovation-appartement,
+            /renovation-energetique et ici). Son propre attribut alt reconnaissait par
+            ailleurs que le schéma représente un plan d'APPARTEMENT, sur une page consacrée
+            aux maisons et pavillons. C'est l'emplacement le moins justifié des cinq : il est
+            retiré. Le schéma reste sur /renovation-appartement, dont il montre littéralement
+            le plan, et sur les deux pages hors de ce lot.
+            Le schéma des origines de l'humidité passe en pleine largeur.
+          */}
+          <MqFig
+            src="/photos/maquette/schema-humidite-origines.jpg"
+            alt="Coupe d'un logement ancien illustrant remontées capillaires, infiltrations, condensation et ponts thermiques"
+            caption="Origines de l'humidité dans un logement ancien et traitements associés : le diagnostic précède toujours le choix de la solution."
+            ratio="aspect-[10/7]"
+          />
           <div className="mt-8">
             <MqFig
               src="/photos/pedagogie/19-maison-pavillon-diagnostic.jpeg"
               alt="Coupe diagnostique d'une maison ancienne : fissure de façade, humidité, isolation dégradée, charpente fragilisée, fondations sans étanchéité"
               caption="Points de diagnostic d'une maison ancienne avant travaux. Schéma pédagogique."
-              ratio="aspect-[16/9]"
+              ratio="aspect-[3/2]"
             />
           </div>
         </div>
@@ -122,13 +129,17 @@ export default function Page() {
             </MqProse>
           </div>
         </div>
-        <div className="mt-8">
-          <MqFig
-            src="/photos/maquette/schema-carottage-ventilation.jpg"
-            alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction"
-            caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction. En maison individuelle, la démarche reste technique ; une autorisation de copropriété ne s'applique qu'en cas de mur mitoyen ou de secteur protégé."
-          />
-        </div>
+        {/*
+          Emplacement retiré le 05/09/2026 (surexposition).
+
+          schema-carottage-ventilation.jpg figurait ici. `scripts/surexposition.py` la compte
+          sur QUATRE pages (/chantiers-complexes, /demarches-administratives-renovation,
+          /gros-oeuvre-structure et celle-ci). Sa légende reconnaissait elle-même que le point
+          qu'elle documente — l'autorisation de copropriété — « ne s'applique qu'en cas de mur
+          mitoyen ou de secteur protégé », donc pratiquement jamais sur une page maison
+          individuelle. C'est l'emplacement le plus faible des quatre : il est retiré plutôt
+          que conservé pour meubler. Le texte de la section suffit à expliquer le carottage.
+        */}
       </MqSection>
 
       <MqSection
@@ -203,11 +214,13 @@ export default function Page() {
                 src="/photos/maquette/pavillon-facade-avant.jpg"
                 alt="Façade d'un pavillon francilien des années 1970 avant rénovation, enduit fissuré, volets bois usés et menuiseries anciennes"
                 caption="Avant : image d'illustration d'un pavillon francilien type — enduit fissuré, menuiseries simple vitrage, isolation extérieure absente et couverture en fin de vie."
+              ratio="aspect-[10/7]"
               />
               <MqFig
                 src="/photos/maquette/pavillon-facade-apres.jpg"
                 alt="Pavillon francilien rénové avec isolation extérieure, enduit clair, menuiseries anthracite et terrasse en pierre"
                 caption="Après : image d'illustration du résultat visé par une rénovation énergétique complète — isolation thermique par l'extérieur, menuiseries à rupture de pont thermique, couverture reprise, abords paysagers."
+              ratio="aspect-[10/7]"
               />
             </div>
           </div>
@@ -231,11 +244,13 @@ export default function Page() {
                 src="/photos/maquette/combles-non-isoles-avant.jpg"
                 alt="Combles perdus avant intervention, isolant tassé et discontinu"
                 caption="Avant : image d'illustration de combles perdus non isolés — isolant tassé et discontinu, ponts thermiques en périphérie, premier poste de déperdition d'une passoire énergétique."
+              ratio="aspect-[10/7]"
               />
               <MqFig
                 src="/photos/maquette/combles-isoles-apres.jpg"
                 alt="Combles isolés avec deux couches croisées de laine minérale, pare-vapeur continu et chemin de circulation"
                 caption="Après : image d'illustration du traitement visé — deux couches croisées de laine minérale, pare-vapeur continu jointoyé et chemin de circulation pour l'entretien des réseaux."
+              ratio="aspect-[10/7]"
               />
             </div>
           </div>
@@ -243,6 +258,7 @@ export default function Page() {
             src="/photos/maquette/schema-isolation-combles.jpg"
             alt="Schéma en coupe de l'isolation des combles : charpente, deux couches croisées de laine minérale, pare-vapeur continu et ventilation de sous-toiture"
             caption="Principe d'isolation des combles : deux couches croisées, pare-vapeur continu côté chaud et lame d'air ventilée sous couverture."
+          ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>

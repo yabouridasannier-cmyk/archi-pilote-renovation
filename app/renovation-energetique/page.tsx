@@ -191,9 +191,9 @@ export default function Page() {
               À POURVOIR : une isolation de combles ou de rampants sur bâti EXISTANT. */}
           <MqFig
             src="/photos/chantiers/chIsolationLaineUrsaVarioSdb.jpeg"
-            alt="Isolation par l'intérieur en laine minérale posée entre montants, joints et pourtour d'une fenêtre neuve repris à la bande adhésive, chantier réel"
+            alt="Isolation par l'intérieur en laine minérale kraftée posée entre montants, joints et pourtour d'une fenêtre neuve repris à la bande adhésive, chantier réel"
             caption="Isolation par l'intérieur en laine minérale posée entre montants : les joints et le pourtour de la fenêtre neuve sont repris à la bande adhésive, là où se concentrent les ponts thermiques résiduels. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
+            ratio="aspect-[9/16]"
           />
         </div>
       </MqSection>
@@ -253,13 +253,13 @@ export default function Page() {
                 src="/photos/chantiers/chParVapeurSopremaFenetreSdb.jpeg"
                 alt="Membrane pare-vapeur SOPREMA posée sur l'isolation et adhésivée autour d'une fenêtre neuve, arrivées d'eau et gaine électrique traversant la membrane"
                 caption="Pare-vapeur posé sur l'isolation et adhésivé autour de la fenêtre neuve : arrivées d'eau et gaine électrique traversent la membrane, points sensibles de l'étanchéité à l'air. Chantier réel des équipes partenaires."
-                ratio="aspect-[3/4]"
+                ratio="aspect-[9/16]"
               />
               <MqFig
                 src="/photos/chantiers/chPlacoHydroSopremaFenetreSdb.jpeg"
                 alt="Plaques de plâtre hydrofuges posées sur le pare-vapeur autour d'une fenêtre neuve, partie basse encore ouverte sur la membrane et les arrivées d'eau"
                 caption="Habillage en plaques hydrofuges refermé sur le pare-vapeur ; la partie basse reste ouverte sur la membrane et les arrivées d'eau. Chantier réel des équipes partenaires."
-                ratio="aspect-[3/4]"
+                ratio="aspect-[9/16]"
               />
             </div>
           </div>
@@ -270,13 +270,19 @@ export default function Page() {
         title="Ventilation mécanique contrôlée : dimensionner le renouvellement d'air"
         lead="La ventilation mécanique contrôlée évacue en continu l'air vicié et humide des pièces techniques, tout en apportant de l'air neuf par les pièces de vie."
       >
-        <MqFig
-          src="/photos/maquette/schema-vmc.jpg"
-          alt="Schéma de principe d'une ventilation mécanique contrôlée hygroréglable montrant les entrées d'air en menuiseries des pièces de vie, le transit de l'air sous les portes intérieures, l'extraction en cuisine et salle de bain, et un carottage de traversée pour le rejet d'air."
-          caption="Principe d'une ventilation mécanique contrôlée hygroréglable : entrées d'air, transit sous les portes, extraction en pièces techniques."
-          ratio="aspect-[10/7]"
-        />
-        <div className="mt-10 flex flex-col gap-10">
+        {/*
+          Emplacement retiré le 05/09/2026 (redondance dans la section + surexposition).
+
+          schema-vmc.jpg ouvrait cette section, légendée « entrées d'air, transit sous les
+          portes, extraction en pièces techniques ». Le schéma 04-circuit-air.jpeg, plus bas
+          dans CETTE MÊME section, dit mot pour mot la même chose (« entrée par les pièces de
+          vie, transit sous les portes, extraction en cuisine et salle de bain »), avec un
+          dessin plus lisible. Deux schémas du même principe à quelques écrans d'intervalle,
+          c'est la répétition signalée par le client, à l'échelle d'une seule page.
+          `scripts/surexposition.py` comptait par ailleurs schema-vmc.jpg sur CINQ pages ; le
+          retrait d'ici et de /renovation-maison-pavillon la ramène à trois.
+        */}
+        <div className="flex flex-col gap-10">
           <div>
             <h3 className="display text-[1.25rem] text-ivoire">Simple flux autoréglable, hygroréglable, ou double flux</h3>
             <p className="text-muted text-[0.95rem] leading-relaxed mt-2 max-w-2xl">
@@ -639,7 +645,7 @@ export default function Page() {
         </p>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext
         items={[

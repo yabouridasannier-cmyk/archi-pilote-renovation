@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Ce qui justifie un déplacement en Seine-et-Marne",
         intro:
-          "À cette distance, seuls les projets d'ensemble tiennent la route : maison à reprendre intégralement, enveloppe à refaire, création de surface. Voici comment chacun est traité.",
+          "À cette distance, seuls les projets d'ensemble tiennent la route : maison à reprendre intégralement, enveloppe à refaire, création de surface. Deux questions reviennent alors systématiquement — qui intervient sur place, et le bien est-il soumis à une servitude de protection. Les pages ci-dessous y répondent.",
         groupes: [
           {
             titre: "Projets d'ensemble",
@@ -30,6 +30,8 @@ export default function Page() {
               { href: "/renovation-maison-pavillon", label: "Rénovation de maison et de pavillon" },
               { href: "/extension-maison", label: "Extension de maison" },
               { href: "/savoir-faire-ancien", label: "Savoir-faire du bâti ancien" },
+              { href: "/travaux-perimetre-abf", label: "Bâti protégé et avis des Bâtiments de France" },
+              { href: "/reseau-partenaires", label: "Qui exécute réellement les travaux" },
             ],
           },
           {

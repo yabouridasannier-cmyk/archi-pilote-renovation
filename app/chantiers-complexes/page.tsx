@@ -81,7 +81,7 @@ export default function ChantiersComplexesPage() {
         Chaque figure reprend désormais son ratio natif et s'affiche en entier.
       */}
       <div className="container-site max-w-4xl pb-12 md:pb-16">
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/10-chantiers-complexes-hero.jpeg"
           alt="Coupe d'un immeuble haussmannien occupé pendant des travaux lourds : mur porteur ouvert, réseaux déviés, protections de chantier, accord du syndic, phasage"
           caption="Anatomie d'un chantier complexe en immeuble occupé. Schéma pédagogique."
@@ -146,10 +146,10 @@ export default function ChantiersComplexesPage() {
               </p>
             </div>
           </div>
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/schema-carottage-ventilation.jpg"
             alt="Schéma de carottage d'un mur de façade pour la pose d'une gaine et d'une bouche d'extraction en copropriété"
-            caption="Carottage de façade pour ventilation : diamètre, gaine et bouche d'extraction, avec accord préalable du syndic lorsque la façade est concernée."
+            caption="Schéma pédagogique : carottage d'un mur de façade pour ventilation — carotteuse sur bâti, percement Ø 160 mm, gaine et bouche d'extraction. Le schéma rappelle lui-même que l'accord préalable du syndic est requis en copropriété."
             ratio="aspect-[10/7]"
           />
         </div>
@@ -157,7 +157,7 @@ export default function ChantiersComplexesPage() {
 
       <MqSection kicker="Expertise mobilisée" title="Architecte DPLG et ingénieur structure, chacun dans son périmètre">
         <div className="flex flex-col gap-8">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/45-chantiers-complexes-roles-dplg-ingenieur.jpeg"
             alt="Schéma en deux colonnes : Architecte DPLG (conception, dépôt de permis, urbanisme) et Ingénieur structure (note de calcul, descente de charges, dimensionnement)"
             caption="Répartition des rôles : conception côté architecte, calcul côté ingénieur structure. Schéma pédagogique."
@@ -196,7 +196,7 @@ export default function ChantiersComplexesPage() {
 
       <MqDark kicker="Phasage" title="Comment un dossier lourd est séquencé, étape par étape">
         <div className="mb-10">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/11-chantiers-complexes-frise.jpeg"
             alt="Frise en 9 étapes : diagnostic, sondage, calcul, autorisation, étaiement, ouverture, structure, contrôle, finitions"
             caption="Séquence d'une intervention structurelle complexe. Schéma pédagogique."
@@ -208,7 +208,7 @@ export default function ChantiersComplexesPage() {
 
       <MqSection kicker="Gestion des aléas" title="Ce que documenter un aléa change concrètement">
         <div className="flex flex-col gap-8">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/40-chantiers-complexes-aleas-schema.jpeg"
             alt="Les 4 étapes de gestion d'un aléa de chantier : suspension de la zone, photo datée, validation écrite du client, chiffrage de la reprise"
             caption="Ce que documenter un aléa change concrètement. Schéma pédagogique."

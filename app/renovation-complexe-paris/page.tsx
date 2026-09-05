@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Les sujets qui reviennent sur un dossier parisien",
         intro:
-          "Un immeuble ancien impose sa propre chronologie : autorisation de copropriété, étude de structure, réseaux, puis finitions. Chacun de ces sujets est traité en détail sur sa page.",
+          "Un immeuble ancien impose sa propre chronologie : autorisation de copropriété, étude de structure, réseaux, puis finitions. S'y ajoute, dès que la façade ou la toiture sont concernées, la question du périmètre protégé. Chacun de ces sujets est traité en détail sur sa page.",
         groupes: [
           {
             titre: "Le dossier technique",
@@ -38,12 +38,13 @@ export default function Page() {
             titre: "Le dossier administratif et budgétaire",
             liens: [
               { href: "/demarches-administratives-renovation", label: "Autorisations et démarches en copropriété" },
+              { href: "/travaux-perimetre-abf", label: "Façade et menuiseries en périmètre ABF" },
               { href: "/chantiers-complexes", label: "Piloter un chantier complexe" },
               { href: "/clinique-du-devis", label: "Lecture critique d'un devis" },
             ],
           },
           {
-            titre: "Communes limitrophes traitées",
+            titre: "Communes de l'ouest parisien traitées",
             liens: [
               { href: "/renovation-courbevoie", label: "Courbevoie" },
               { href: "/renovation-asnieres-sur-seine", label: "Asnières-sur-Seine" },

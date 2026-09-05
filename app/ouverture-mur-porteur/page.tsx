@@ -47,6 +47,8 @@ export default function Page() {
           src="/photos/etudes/schemaPlanMurPorteurIdentification.jpeg"
           alt="Plan existant d'un appartement avec le mur porteur à ouvrir repéré en rouge, et élévation du mur avec la largeur de l'ouverture"
           caption="Plan existant : le mur porteur concerné (« Mur M1 ») est repéré, avec les hauteurs sous plafond de part et d'autre et la largeur d'ouverture visée. Dossier réel anonymisé, bureau d'études structure partenaire."
+          ratio="aspect-[6/5]"
+          entier
         />
         <div className="mt-8">
           <MqProse>
@@ -76,11 +78,15 @@ export default function Page() {
             src="/photos/etudes/schemaEtaiementOuvertureMur.jpeg"
             alt="Schéma des étapes 1 et 2 : étaiement du plancher puis création de l'ouverture après dépose des montants bois existants"
             caption="Étape 1 — Étaiement du plancher : 2×3 étais posés de part et d'autre du mur avant toute démolition. Étape 2 — Ouverture créée après dépose contrôlée des montants du pan de bois existant."
+            ratio="aspect-[8/5]"
+            entier
           />
           <MqFig
             src="/photos/etudes/schemaPortiqueAcierRenforcement.jpeg"
             alt="Schéma de l'étape 3 : installation du portique acier, poutre IPE180 sur poteaux IPE160, avec détails de platines et boulonnage"
             caption="Étape 3 — Renforcement : portique acier (poutre IPE180 sur poteaux IPE160), platines soudées de 10 mm et boulonnage M12, calé et maté sur le plancher existant."
+            ratio="aspect-[8/5]"
+            entier
           />
         </div>
       </MqSection>
@@ -95,23 +101,35 @@ export default function Page() {
           <MqFig
             src="/photos/chantiers/chDemolitionLattisPlatreOuverture.jpeg"
             alt="Démolition contrôlée d'un mur porteur en pan de bois et plâtre, structure mise à nu, chantier réel"
-            caption="Démolition contrôlée du mur en pan de bois : lattis et montants mis à nu avant pose du portique. Chantier réel des équipes partenaires."
+            caption="Démolition contrôlée du mur en pan de bois : lattis et montants mis à nu, gravats et perforateur encore au sol, avant pose du portique. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/chantiers/chDemolitionDegagementVersSejour.jpeg"
-            alt="Dégagement démoli jusqu'au plâtre et au pan de bois, réseaux électriques et de plomberie repérés au sol, chantier réel"
-            caption="Le même dégagement, murs décapés jusqu'au support : réseaux électriques et de plomberie repérés au sol avant reprise. Chantier réel des équipes partenaires."
+            alt="Vue depuis l'embrasure vers la pièce voisine : murs décapés jusqu'au support, pan de bois dégarni sur la droite, alimentations en PER tirées en pied de mur"
+            caption="Vu depuis l'embrasure : les murs sont décapés jusqu'au support, le pan de bois est dégarni sur toute la hauteur à droite et les alimentations neuves en PER sont déjà tirées en pied de mur. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/chantiers/chPoutreAcierAngleSoudeVue1.jpeg"
             alt="Angle soudé du portique acier en place, gaine électrique repassée le long du profilé, chantier réel"
             caption="Portique acier posé : angle soudé poutre-poteau, gaine électrique repassée le long du profilé avant habillage. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
           />
-          <MqFig
-            src="/photos/chantiers/chPoutreAcierProfilVueLongue.jpeg"
-            alt="Vue en enfilade du profilé acier du portique, avant habillage et raccord de plâtrerie, chantier réel"
-            caption="Vue en enfilade du profilé acier, avant habillage et raccord de plâtrerie. Chantier réel des équipes partenaires."
-          />
+          {/*
+            Emplacement retiré le 05/09/2026 (doublon visuel + surexposition).
+
+            chPoutreAcierProfilVueLongue.jpeg occupait cette quatrième case. Ouverture des
+            deux fichiers côte à côte : c'est le MÊME cordon de soudure poutre-poteau que
+            chPoutreAcierAngleSoudeVue1.jpeg ci-dessus, photographié au même endroit à
+            quelques minutes d'écart (mêmes plinthes, même reprise de plâtre, même angle
+            soudé). Deux vues quasi identiques dans la même grille, c'est précisément le
+            reproche du client. `scripts/surexposition.py` comptait par ailleurs cette scène
+            sur QUATRE pages (/gros-oeuvre-structure, ici, /realisations et l'article
+            IPN/HEA/HEB) ; le retrait la ramène à trois.
+            La grille passe de quatre à trois photos, ce qui suffit à raconter la séquence :
+            démolition, dégagement, portique posé.
+          */}
         </div>
       </MqSection>
 
@@ -125,6 +143,8 @@ export default function Page() {
           src="/photos/etudes/schemaDescriptionTravauxOuverture.jpeg"
           alt="Description des travaux : cinq étapes, mise en place des étaiements, démolition du mur, pose du portique, retrait des étais, finition"
           caption="Description des travaux extraite du dossier d'exécution, anonymisée : cinq étapes, de la mise en place des étaiements à la finition anticorrosion des profilés."
+          ratio="aspect-[3/2]"
+          entier
         />
         <div className="mt-8">
           <MqNumbered
@@ -186,7 +206,7 @@ export default function Page() {
 
       <MqCta
         title="Un mur porteur à ouvrir ?"
-        lead="Étude de projet gratuite sous 48 heures : lecture du bâti, hypothèse de reprise de charge et budget réaliste."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bâti, hypothèse de reprise de charge et budget réaliste."
       />
 
       <MqReadNext

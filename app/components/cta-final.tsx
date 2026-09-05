@@ -8,6 +8,12 @@ import { Reveal } from "./reveal";
 import { PHOTOS } from "../lib-photos";
 import { SITE } from "../data";
 
+/* 05/09 : « se déplace sous 5 jours » retiré. Ce composant est monté par une trentaine de
+   pages (les 16 pages locales via local-page, 5 pages de spécialité via specialty-page, et
+   une dizaine de pages directes) : la phrase engageait donc un délai de déplacement sur
+   presque tout le site, sans qu'aucun processus ne le garantisse — et un délai écrit sur une
+   page commerciale s'oppose au professionnel en cas de litige. La prise de contact est
+   maintenue, la promesse chiffrée ne l'est pas. */
 export function CtaFinal() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start end", "end start"] });
@@ -30,7 +36,7 @@ export function CtaFinal() {
         <Reveal variant="slide-up" delay={0.2}>
           <p className="lead max-w-xl">
             Racontez-nous votre projet — surface, budget, commune. Un chargé de projet vous
-            rappelle et se déplace sous 5 jours.
+            rappelle pour convenir d&apos;une visite du bien.
           </p>
         </Reveal>
         <Reveal variant="scale" delay={0.3}>

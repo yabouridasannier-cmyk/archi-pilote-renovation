@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Maison, extension, surélévation : par où commencer",
         intro:
-          "Sur une maison, gagner de la surface se décide avant tout le reste : extension au sol, surélévation ou simple redistribution ne mobilisent ni les mêmes autorisations ni les mêmes corps de métier.",
+          "Sur une maison, gagner de la surface se décide avant tout le reste : extension au sol, surélévation ou simple redistribution ne mobilisent ni les mêmes autorisations ni les mêmes corps de métier. Et le régime d'autorisation change encore si la parcelle relève d'une servitude de protection — cela se vérifie au dossier, jamais par déduction.",
         groupes: [
           {
             titre: "Gagner de la surface",
@@ -30,6 +30,7 @@ export default function Page() {
               { href: "/surelevation", label: "Surélévation d'une maison" },
               { href: "/renovation-maison-pavillon", label: "Rénovation de maison et de pavillon" },
               { href: "/demarches-administratives-renovation", label: "Permis et déclaration préalable" },
+              { href: "/travaux-perimetre-abf", label: "Si le bien est en périmètre protégé" },
             ],
           },
           {

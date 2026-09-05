@@ -252,11 +252,19 @@ export default function Page() {
           </MqProse>
         </div>
         <div className="mt-8">
+          {/* 05/09 — PHOTO REMPLACÉE. chPoutreAcierPlafondMurDegarni.jpeg et
+              chPortiqueAcierAngleFenetre.jpeg sont le MÊME fichier (empreinte MD5 identique,
+              0f35247f0161fa03e1e0caa2a5ec87dd) enregistré sous deux noms : le visiteur voyait donc
+              la même photographie ici, sur /realisations, sur /gros-oeuvre-structure et dans un
+              article de blog, sans qu'aucune recherche textuelle ne puisse le montrer. Elle est
+              remplacée ici par chPoutreAcierMurDegarni.jpeg, une autre prise du même type d'ouvrage
+              (poutre soudée sur poteau, mur dégarni jusqu'à la pierre), affichée sur une seule
+              autre page du site. La scène en doublon passe ainsi de quatre pages à trois. */}
           <MqFig
-            src="/photos/chantiers/chPoutreAcierPlafondMurDegarni.jpeg"
-            alt="Contexte réel d'un prix de rénovation observé."
-            caption="Angle de structure acier scellé au plafond, mur dégarni jusqu'au support d'origine : la reprise de charge se vérifie sur chantier, avant reprise des finitions. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
+            src="/photos/chantiers/chPoutreAcierMurDegarni.jpeg"
+            alt="Poteau acier soudé sous une poutre de reprise de charge, mur dégarni jusqu'à la pierre et gaine électrique apparente"
+            caption="Poteau acier soudé sous la poutre de reprise de charge, dans l'angle d'une ouverture : le mur est dégarni jusqu'à la pierre, la gaine électrique court à nu et le tableau n'est pas encore repris. C'est cet état-là que chiffre une ligne « ouverture de mur porteur ». Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
           />
         </div>
       </MqSection>
@@ -346,7 +354,7 @@ export default function Page() {
 
       <MqCta
         title="Obtenez un budget réaliste pour votre projet"
-        lead="Étude de projet gratuite sous 48 heures : budget établi à partir de votre logement, pas d'une moyenne générale."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : budget établi à partir de votre logement, pas d'une moyenne générale."
       />
     </main>
   );

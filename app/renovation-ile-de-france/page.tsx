@@ -48,7 +48,7 @@ export default function Page() {
 
       <MaillageInterne
         titre="Descendre à la commune ou au type de travaux"
-        intro="Sept communes des Hauts-de-Seine disposent d'une page dédiée, écrite depuis notre base de La Garenne-Colombes. Les pages de spécialité, elles, valent pour toute la région : c'est le bien et ses contraintes qui commandent, pas l'adresse."
+        intro="Sept communes des Hauts-de-Seine disposent d'une page dédiée, écrite depuis notre base de La Garenne-Colombes. Les pages de spécialité, elles, valent pour toute la région : c'est le bien et ses contraintes qui commandent, pas l'adresse. La dernière rangée répond à la question qui vient toujours en premier au téléphone — qui pilote, qui exécute, qui facture."
         groupes={[
           {
             titre: "Communes documentées dans le 92",
@@ -87,8 +87,20 @@ export default function Page() {
             liens: [
               { href: "/parcours-expertise", label: "Le parcours d'expertise" },
               { href: "/demarches-administratives-renovation", label: "Démarches administratives et urbanisme" },
+              { href: "/travaux-perimetre-abf", label: "Travaux en périmètre ABF" },
               { href: "/clinique-du-devis", label: "Faire relire un devis" },
               { href: "/estimateur-travaux", label: "Estimer un budget travaux" },
+            ],
+          },
+          {
+            titre: "Savoir à qui l'on a affaire",
+            liens: [
+              { href: "/notre-methode", label: "Notre méthode de pilotage" },
+              { href: "/modele-economique-transparence", label: "Comment nous sommes rémunérés" },
+              { href: "/reseau-partenaires", label: "Les entreprises partenaires contractantes" },
+              { href: "/charte-qualite", label: "Charte qualité" },
+              { href: "/garanties-assurances", label: "Garanties et assurances" },
+              { href: "/ce-que-nous-ne-faisons-pas", label: "Ce que nous ne faisons pas" },
             ],
           },
         ]}

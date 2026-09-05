@@ -23,9 +23,17 @@ const QUOTES = [
     quote: "Le suivi par photos datées chaque jour nous a permis de suivre le chantier sans être sur place en permanence.",
     author: "Cliente, investisseur locatif — Second œuvre technique d'un studio, Hauts-de-Seine, exemple anonymisé",
     photo: {
+      /* 05/09 : légende corrigée. Elle annonçait « second œuvre technique d'un STUDIO,
+         cloisons et réseaux avant finition ». La photo, ouverte et regardée, montre tout
+         autre chose : un vaste plateau livré en structure béton — poteaux et poutres bruts,
+         façade vitrée au fond, réservations percées dans la retombée de poutre — où l'on
+         monte des cloisons sur ossature métallique. Ce n'est ni un studio, ni un logement,
+         et aucun réseau n'y est visible. La légende ne décrit plus que ce qui est à
+         l'image, et ne rattache plus la photo au témoignage voisin : la page annonce déjà
+         ces visuels comme des « illustrations », pas comme le chantier du client cité. */
       src: "/photos/chantiers/chCloisonsPlaco.jpeg",
-      alt: "Cloisons en plaques de plâtre montées lors d'un second œuvre technique, chantier réel",
-      caption: "Illustration : second œuvre technique d'un studio, cloisons et réseaux avant finition. Chantier réel des équipes partenaires.",
+      alt: "Plateau livré en structure béton brute, poteaux et retombées de poutre apparents, cloisons en plaques de plâtre montées sur ossature métallique le long de la façade vitrée",
+      caption: "Illustration : montage de cloisons sur ossature métallique dans un plateau livré en structure béton, avant passage des réseaux et finitions. Chantier réel des équipes partenaires.",
     },
   },
   {
@@ -190,7 +198,7 @@ export default function TemoignagesClientsPage() {
 
       <MqCta
         title="Discutez de votre projet avec notre équipe"
-        lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux et budget réaliste."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux et budget réaliste."
       />
     </main>
   );

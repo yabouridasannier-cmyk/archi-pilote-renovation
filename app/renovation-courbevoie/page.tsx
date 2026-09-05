@@ -36,7 +36,7 @@ export default function Page() {
             ],
           },
           {
-            titre: "Secteurs limitrophes",
+            titre: "Secteurs proches traités",
             liens: [
               { href: "/renovation-la-garenne-colombes", label: "La Garenne-Colombes" },
               { href: "/renovation-asnieres-sur-seine", label: "Asnières-sur-Seine" },

@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Vérifier si le projet justifie un pilotage",
         intro:
-          "L'Essonne est étudiée de façon sélective : plus le projet compte de lots et d'arbitrages, plus un pilotage d'ensemble a du sens. Ces pages aident à situer le vôtre avant tout déplacement.",
+          "L'Essonne est étudiée de façon sélective : plus le projet compte de lots et d'arbitrages, plus un pilotage d'ensemble a du sens. Ces pages aident à situer le vôtre — et à savoir ce qu'un accompagnement représente en honoraires — avant tout déplacement.",
         groupes: [
           {
             titre: "Mesurer l'ampleur du projet",
@@ -30,6 +30,7 @@ export default function Page() {
               { href: "/observatoire-prix-renovation", label: "Observatoire des prix de la rénovation" },
               { href: "/clinique-du-devis", label: "Faire relire un devis d'entreprise" },
               { href: "/chantiers-complexes", label: "Chantiers multi-lots" },
+              { href: "/modele-economique-transparence", label: "Ce que coûte un pilotage, et comment il est facturé" },
             ],
           },
           {

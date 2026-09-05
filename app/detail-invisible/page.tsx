@@ -82,11 +82,11 @@ export default function DetailInvisiblePage() {
       />
 
       <div className="container-site max-w-4xl pb-4">
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/16-detail-invisible-hero.jpeg"
           alt="Coupe technique d'une salle d'eau montrant réseaux électriques, plomberie encastrée, isolation, pare-vapeur et natte d'étanchéité avant fermeture"
           caption="Éléments techniques à contrôler avant fermeture des cloisons. Schéma pédagogique."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -96,10 +96,11 @@ export default function DetailInvisiblePage() {
         lead="Un carrelage droit ou une peinture nette ne renseignent en rien sur la qualité de ce qui se trouve dessous."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/schema-etancheite-salle-eau.jpg"
             alt="Coupe d'une salle d'eau montrant la natte d'étanchéité sous carrelage, la bande d'angle, la pente et le siphon"
-            caption="Étanchéité sous carrelage : continuité de la natte entre murs et sol, bandes de renfort en angle et pente d'évacuation de 1 à 2 %."
+            caption="Schéma pédagogique : coupe de principe d'un receveur extra-plat — continuité de la natte d'étanchéité entre murs et sol, bandes de renfort en angle et pente d'évacuation de 1 à 2 % vers le siphon."
+            ratio="aspect-[10/7]"
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
@@ -157,10 +158,11 @@ export default function DetailInvisiblePage() {
             pare-vapeur) reste affiché à titre d'illustration du principe,
             mais ne remplace pas la bibliothèque de preuves demandée.
           */}
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/schema-doublage-isolant.jpg"
             alt="Coupe verticale d'un doublage isolant sur mur ancien : rails, montants, laine minérale, pare-vapeur et plaque de plâtre"
             caption="Doublage isolant sur mur ancien : ossature métallique à entraxe 600 mm, laine minérale, pare-vapeur continu et plaque de plâtre. Schéma pédagogique — grille de photos réelles à constituer sur chantier."
+            ratio="aspect-[10/7]"
           />
           <MqNumbered items={ETAPES} />
         </div>
@@ -172,10 +174,11 @@ export default function DetailInvisiblePage() {
         lead="Cette grille sert de référence pour les visites de chantier précédant chaque fermeture de paroi."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/schema-vmc.jpg"
             alt="Schéma de principe d'une ventilation mécanique contrôlée avec bouches d'extraction et entrées d'air"
-            caption="Principe de la ventilation mécanique contrôlée : entrées d'air en pièces sèches, extraction en cuisine et salle d'eau, réseau raccordé au caisson."
+            caption="Schéma pédagogique : principe d'une VMC hygroréglable en appartement — entrées d'air en pièces sèches, extraction en cuisine, salle de bains et WC, réseau raccordé au caisson placé en combles."
+            ratio="aspect-[10/7]"
           />
           <div className="overflow-x-auto border border-line rounded-[2px] bg-surface">
             <table className="w-full text-left text-[0.92rem]">
@@ -291,7 +294,7 @@ export default function DetailInvisiblePage() {
 
       <MqCta
         title="Faites vérifier vos points techniques avant fermeture"
-        lead="Étude de projet gratuite sous 48 heures : lecture du bâti, hiérarchisation des travaux et points de vigilance avant chantier."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bâti, hiérarchisation des travaux et points de vigilance avant chantier."
       />
     </main>
   );

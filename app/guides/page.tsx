@@ -201,9 +201,9 @@ export default function Page() {
       */}
       <MqSection kicker="Repères visuels" title="Trois illustrations pédagogiques pour situer les sujets les plus consultés" wide>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          <MqFig src={`${M}/schema-repartition-budget.jpg`} alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage" caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé." />
-          <MqFig src={`${M}/schema-mur-porteur.jpg`} alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge" caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis." />
-          <MqFig src={`${M}/schema-demarches-copropriete.jpg`} alt="Parcours administratif d'un chantier en copropriété : syndic, assemblée générale, autorisation, déclaration en mairie" caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire." />
+          <MqFig entier ratio="aspect-[10/7]" src={`${M}/schema-repartition-budget.jpg`} alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage" caption="Schéma pédagogique : répartition indicative d'un budget de rénovation complète par poste, du gros œuvre à la salle d'eau. Ordres de grandeur, à confirmer par un chiffrage détaillé." />
+          <MqFig entier ratio="aspect-[10/7]" src={`${M}/schema-mur-porteur.jpg`} alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge" caption="Schéma pédagogique : ouverture de mur porteur, la charge étant reprise par une poutre dimensionnée par un ingénieur structure puis descendue jusqu'aux appuis." />
+          <MqFig entier ratio="aspect-[10/7]" src={`${M}/schema-demarches-copropriete.jpg`} alt="Parcours administratif d'un chantier en copropriété : syndic, assemblée générale, autorisation, déclaration en mairie" caption="Schéma pédagogique : parcours administratif en copropriété — demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire." />
           {/* 05/09 : la 4e tuile (chIsolationCombles) est retirée. Cette rangée présente
               des SCHÉMAS explicatifs ; une photographie de chantier y était l'intruse, et
               celle-ci l'était doublement — elle montre une construction neuve, pas une
@@ -295,7 +295,7 @@ export default function Page() {
         </ul>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext items={[
         { href: "/faq", label: "Questions fréquentes", sub: "Réponses classées par décision" },

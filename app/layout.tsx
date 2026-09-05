@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.archipiloterenovation.com"),
   title: "ARCHI PILOTE RÉNOVATION — Rénovation tous corps d'état en Île-de-France",
   description:
-    "Pilotage de travaux de rénovation en Île-de-France : gros œuvre, second œuvre, cuisine sur-mesure, salle de bain étanche, isolation DPE. Un seul interlocuteur, devis des entreprises sous 48h.",
+    "Pilotage de travaux de rénovation en Île-de-France : gros œuvre, second œuvre, cuisine sur-mesure, salle de bain étanche, isolation DPE. Un seul interlocuteur, devis des entreprises rendus comparables poste par poste.",
   alternates: { canonical: "/" },
   // Blocage levé le 25/08/2026 — le site est en phase de visibilité SEO réelle.
   robots: {

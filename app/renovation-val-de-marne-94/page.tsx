@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Maison, appartement ou petite copropriété",
         intro:
-          "Le mix de biens du Val-de-Marne fait cohabiter trois situations très différentes. Ces pages précisent ce que chacune implique en études, en autorisations et en coordination.",
+          "Le mix de biens du Val-de-Marne fait cohabiter trois situations très différentes. Ces pages précisent ce que chacune implique en études, en autorisations et en coordination — et à quoi ressemble concrètement un projet suivi de bout en bout.",
         groupes: [
           {
             titre: "Selon le type de bien",
@@ -48,6 +48,13 @@ export default function Page() {
               { href: "/renovation-seine-saint-denis-93", label: "Seine-Saint-Denis (93)" },
               { href: "/renovation-essonne-91", label: "Essonne (91)" },
               { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+          {
+            titre: "Comment se déroule un accompagnement",
+            liens: [
+              { href: "/notre-methode", label: "Notre méthode de pilotage" },
+              { href: "/realisations", label: "Cas de projets accompagnés" },
             ],
           },
         ],

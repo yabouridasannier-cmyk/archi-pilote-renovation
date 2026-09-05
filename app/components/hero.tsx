@@ -1,3 +1,8 @@
+/* ⚠️ COMPOSANT ACTUELLEMENT NON MONTÉ — il n'est importé par aucune page (vérifié le
+   05/09/2026). Il est conservé au cas où la maquette le réemploierait, mais NE PAS le
+   remettre en ligne sans relire son texte : les formulations que le client a fait retirer
+   du site y survivaient. Elles ont été corrigées ici le 05/09 pour qu'un futur réemploi ne
+   les republie pas par inadvertance. */
 "use client";
 
 import { useRef } from "react";
@@ -80,7 +85,7 @@ export function Hero() {
             className="max-w-xl text-base sm:text-lg md:text-xl leading-snug text-white/75 text-balance"
           >
             Second œuvre tous corps d&apos;état, cuisine sur-mesure, salle de bain étanche, isolation.{" "}
-            <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis des entreprises sous 48&nbsp;h.
+            <strong className="text-white font-semibold">Un seul interlocuteur</strong>, devis des entreprises sous 48&nbsp;heures ouvrées.
           </motion.p>
 
           <div className="flex flex-wrap justify-center gap-3 mt-1 sm:mt-2">
@@ -103,9 +108,9 @@ export function Hero() {
           >
             <span>Entreprises partenaires assurées</span>
             <span className="size-1 rounded-full bg-orange/60" />
-            <span>Devis entreprises sous 48 h</span>
+            <span>Devis entreprises sous 48 heures ouvrées</span>
             <span className="size-1 rounded-full bg-orange/60" />
-            <span>Visite technique sous 5 jours</span>
+            <span>Visite technique du bien</span>
           </motion.div>
         </div>
       </motion.div>

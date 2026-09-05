@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MqKicker, MqSection, MqProse, MqFig, MqChecklist, MqDark, MqDarkSteps, MqQuotes, MqFaq, MqCta, MqReadNext } from "./components/mq";
+import { TrustpilotEncart } from "./components/trustpilot";
 
 export const metadata: Metadata = {
   title: "Rénovation complète et chantiers complexes | ARCHI PILOTE RÉNOVATION",
@@ -257,7 +258,8 @@ export default function Home() {
             <p className="mt-2 text-muted text-[0.95rem] leading-relaxed">
               Local commercial transformé en logement, plateau à diviser, immeuble à repositionner : la lecture se fait
               autant dans le règlement d&apos;urbanisme et le règlement de copropriété que dans le bâti. C&apos;est le
-              terrain sur lequel nous travaillons depuis quinze ans auprès d&apos;investisseurs et de marchands de biens.
+              terrain sur lequel nous sommes le plus souvent appelés par des investisseurs et des marchands de
+              biens.
             </p>
           </div>
         </div>
@@ -465,6 +467,15 @@ export default function Home() {
           Témoignages issus de projets accompagnés, publiés avec l&apos;accord des clients. Les références détaillées sont
           communiquées lors de l&apos;étude de projet.
         </p>
+        {/* 05/09 : le badge Trustpilot est posé ICI, au pied des témoignages, et pas dans le
+            premier écran. Raison : un badge d'avis en tête de page est lu comme une preuve de
+            réputation, or la fiche vient d'être ouverte et ne compte aucun avis. À cette place,
+            il se lit pour ce qu'il est — une invitation adressée aux clients accompagnés, juste
+            après leurs retours. Le composant n'affiche volontairement aucune étoile ni aucune
+            note tant qu'il n'y a rien de réel à montrer. */}
+        <div className="mt-8 max-w-2xl">
+          <TrustpilotEncart />
+        </div>
       </MqSection>
 
       {/* ── 13 · QUESTIONS FRÉQUENTES ─────────────────────────────────── */}

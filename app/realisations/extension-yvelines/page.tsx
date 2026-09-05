@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "../../components/page-header";
 import { CtaFinal } from "../../components/cta-final";
-import { PHOTOS } from "../../lib-photos";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/realisations/extension-yvelines" },
@@ -21,10 +20,18 @@ export default function EtudeDeCasPage() {
 
       <section className="relative pb-6">
         <div className="container-site max-w-4xl mx-auto">
-          <div className="relative aspect-[16/9] rounded-none overflow-hidden card-e mb-4">
-            <img src={PHOTOS.grosOeuvre} alt="Extension de maison en cours de gros œuvre" className="absolute inset-0 size-full object-cover" />
+          {/* 05/09 — CADRE ET CLÉ CORRIGÉS. Le fichier est chSurelevationBrique.jpeg, en 1050x1400
+              (portrait) : affiché dans un cadre 16/9, il perdait près des deux tiers de sa hauteur,
+              c'est-à-dire précisément la charpente et le solivage qui font le sujet. Le cadre passe
+              au ratio natif 3/4. La clé PHOTOS.grosOeuvre était par ailleurs un ALIAS du même
+              fichier : elle est remplacée par le chemin explicite, pour que le comptage de
+              réemploi du site voie l'image. Le sujet — volume neuf en briques monomur, charpente
+              et solivage bois posés — est cohérent avec une extension, qui est une construction
+              neuve, et la mention ci-dessous rappelle qu'il s'agit d'un visuel d'illustration. */}
+          <div className="relative aspect-[3/4] max-w-md mx-auto rounded-none overflow-hidden card-e mb-4">
+            <img src="/photos/chantiers/chSurelevationBrique.jpeg" alt="Volume neuf en briques monomur, charpente et solivage bois posés, échafaudage roulant en place" className="absolute inset-0 size-full object-cover" />
           </div>
-          <p className="font-mono text-[0.68rem] tracking-[0.18em] uppercase text-muted text-center">Visuel d&apos;illustration — nouvelle marque, premiers chantiers à venir</p>
+          <p className="font-mono text-[0.68rem] tracking-[0.18em] uppercase text-muted text-center">Chantier réel des équipes partenaires, pris à titre d&apos;illustration : ce n&apos;est pas le chantier décrit ci-dessous</p>
         </div>
       </section>
 

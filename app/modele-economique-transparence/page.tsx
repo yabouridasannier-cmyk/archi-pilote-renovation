@@ -73,11 +73,11 @@ export default function ModeleEconomiquePage() {
 
       <section className="pb-4">
         <div className="container-site max-w-4xl">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/07-modele-economique.jpeg"
             alt="Schéma pédagogique des trois flux de facturation : honoraires de pilotage, travaux facturés par les entreprises partenaires, matériaux achetés en direct par le client"
             caption="Schéma pédagogique : trois flux de facturation distincts et séparés, chacun rattaché à un interlocuteur identifiable."
-            ratio="aspect-[16/9]"
+            ratio="aspect-square"
           />
         </div>
       </section>
@@ -207,7 +207,7 @@ export default function ModeleEconomiquePage() {
           <MqFig
             src="/photos/chantiers/chPlacagesNoyerEnAttente.jpeg"
             alt="Exemple anonymisé d'un achat direct de matériaux."
-            caption="Matériaux en placage noyer réceptionnés sur chantier avant pose, achetés en direct par le client sur des références validées techniquement. Chantier réel des équipes partenaires."
+            caption="Panneaux et chants en placage noyer livrés et rangés contre le mur d'une pièce ancienne, sols protégés, avant mise en œuvre par le menuisier. Chantier réel des équipes partenaires."
           />
           <MqProse>
             <p>
@@ -237,7 +237,7 @@ export default function ModeleEconomiquePage() {
           <div className="max-w-4xl">
             <MqProse>
               <p>
-                {"Faire acheter le client en direct crée une contrainte logistique réelle : commandes dispersées chez plusieurs fournisseurs, créneaux de retrait, palettes volumineuses et accès parisiens difficiles. Nous l'absorbons avec notre propre flotte de camions."}
+                {"Faire acheter le client en direct crée une contrainte logistique réelle : commandes dispersées chez plusieurs fournisseurs, créneaux de retrait, palettes volumineuses et accès parisiens difficiles. Nous l'absorbons en organisant les retraits et les livraisons, avec le transporteur ou l'entreprise concernée."}
               </p>
               <p>
                 {"Nos équipes retirent les commandes chez les fournisseurs et les livrent sur le chantier au moment utile, ce qui évite le stockage prématuré, la casse, les vols et les immobilisations d'équipe. Le client n'a ni location d'utilitaire, ni frais de livraison à supporter."}
@@ -251,17 +251,17 @@ export default function ModeleEconomiquePage() {
             <MqFig
               src="/photos/maquette/flotte-camions-retrait-materiaux.jpg"
               alt="Camions et fourgons utilitaires chargeant des palettes de carrelage et des colis de cuisine dans un dépôt de matériaux"
-              caption="Logistique intégrée : notre flotte de camions retire les commandes achetées en direct par le client et les livre sur le chantier au bon moment."
+              caption="Illustration de référence, hors chantier documenté : chargement de matériaux sur une plateforme de distribution. Les enlèvements et livraisons des commandes achetées en direct par le client sont organisés avec le fournisseur et l'entreprise partenaire."
             />
             <MqFig
               src="/photos/maquette/approvisionnement-materiaux-plateforme.jpg"
               alt="Entrepôt de matériaux de construction avec palettes de plaques de plâtre, laine minérale et sacs d'enduit"
-              caption="Approvisionnement en direct : plaques, isolants et enduits du groupe Saint-Gobain retirés à La Plateforme du Bâtiment, facturés au client sans marge."
+              caption="Illustration de référence, hors chantier documenté : dépôt de matériaux de second œuvre (plaques de plâtre, laines, sacs d'enduit). Les matériaux achetés en direct sont facturés au client par le fournisseur, sans marge d'intermédiaire."
             />
             <MqFig
               src="/photos/maquette/nettoyage-fin-de-chantier.jpg"
               alt="Équipe de nettoyage professionnelle en fin de chantier dans un appartement haussmannien rénové au parquet point de Hongrie"
-              caption="Nettoyage de fin de chantier systématique, hérité de nos standards de conciergerie : le logement est remis prêt à vivre, pas seulement prêt à réceptionner."
+              caption="Illustration de référence, hors chantier documenté : nettoyage de fin de chantier d'un appartement ancien. Le logement est remis prêt à vivre, pas seulement prêt à réceptionner."
             />
           </div>
         </div>

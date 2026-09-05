@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Les communes et les sujets du 92",
         intro:
-          "Sept communes du département disposent d'une page dédiée, chacune avec son angle dominant : appartement et copropriété au sud-est, maison et pavillon vers l'ouest.",
+          "Sept communes du département disposent d'une page dédiée, chacune avec son angle dominant : appartement et copropriété au sud-est, maison et pavillon vers l'ouest. La dernière rangée regroupe ce qu'il vaut mieux avoir lu avant de lancer une consultation d'entreprises.",
         groupes: [
           {
             titre: "Communes couvertes dans le département",
@@ -53,6 +53,14 @@ export default function Page() {
               { href: "/renovation-complexe-paris", label: "Projets complexes à Paris" },
               { href: "/renovation-yvelines-78", label: "Yvelines (78)" },
               { href: "/renovation-ile-de-france", label: "Toute l'Île-de-France" },
+            ],
+          },
+          {
+            titre: "Avant de lancer une consultation",
+            liens: [
+              { href: "/parcours-expertise", label: "Les étapes du parcours d'expertise" },
+              { href: "/charte-qualite", label: "Les engagements tenus sur chaque projet" },
+              { href: "/estimateur-travaux", label: "Estimer un budget travaux" },
             ],
           },
         ],

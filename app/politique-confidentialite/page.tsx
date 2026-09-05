@@ -68,6 +68,26 @@ export default function PolitiqueConfidentialitePage() {
               du site, encadré par les clauses contractuelles types de la Commission européenne pour les transferts
               hors Union européenne.
             </p>
+            {/* 05/09 : SOUS-TRAITANT DU FORMULAIRE DÉCLARÉ. Il manquait, et c'était un vrai
+                manquement : app/api/contact/route.ts transmet l'INTÉGRALITÉ du formulaire —
+                nom, téléphone, courriel, commune, description du projet — au service
+                FormSubmit, hébergé hors Union européenne, alors que cette section ne citait
+                que IA RENOV, les entreprises partenaires et Vercel. Un destinataire non
+                déclaré est un défaut d'information au sens de l'article 13 du RGPD.
+                À METTRE À JOUR le jour où l'acheminement change : le remplacement de
+                FormSubmit par Resend est en cours (les enregistrements DNS restent à poser).
+                Cette page devra alors nommer Resend à la place — ne pas oublier, une
+                politique qui décrit un sous-traitant qui n'est plus employé est aussi
+                fausse qu'une politique qui en omet un. */}
+            <p>
+              Les demandes envoyées depuis le formulaire de contact transitent par un prestataire technique
+              d&apos;acheminement de courriels, situé hors de l&apos;Union européenne, qui reçoit les informations que
+              vous saisissez dans ce formulaire — nom, téléphone, courriel, commune et description du projet — pour
+              les transmettre à ARCHI PILOTE RÉNOVATION. Ce prestataire agit uniquement comme intermédiaire
+              d&apos;acheminement et n&apos;exploite pas ces données pour son propre compte. Si vous préférez ne pas
+              passer par lui, vous pouvez nous écrire directement à l&apos;adresse indiquée sur la page de contact, ou
+              nous appeler.
+            </p>
           </div>
 
           <div className="flex flex-col gap-2">

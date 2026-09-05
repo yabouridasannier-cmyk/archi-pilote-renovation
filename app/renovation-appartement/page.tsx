@@ -121,7 +121,7 @@ export default function Page() {
           <MqFig
             src="/photos/maquette/chantier-carottage-facade.jpg"
             alt="Carotteuse diamant sur bâti fixée à un mur de façade en pierre pour percer une sortie de ventilation"
-            caption="Carottage de façade pour ventilation : bâti fixé, carottage à l'eau, carotte extraite — après accord écrit du syndic sur la partie commune."
+            caption="Carottage de façade pour ventilation : bâti fixé sur le mur, carottage à l'eau, carotte extraite posée au sol — après accord écrit du syndic sur la partie commune. Image d'illustration."
             ratio="aspect-[10/7]"
           />
         </div>
@@ -278,7 +278,7 @@ export default function Page() {
           <MqFig
             src="/photos/chantiers/chCuisineCremeIlot.jpeg"
             alt="Cuisine ouverte en fin de chantier sous velux, îlot central et plan de travail noir, façades crème sur mesure, four et micro-ondes encastrés"
-            caption="Fin de chantier : cuisine posée sous velux, îlot et plan de travail noir en place, façades sur mesure montées ; un câble reste en attente de raccordement au-dessus du plan de travail. Chantier réel des équipes partenaires."
+            caption="Fin de chantier : cuisine posée sous velux, îlot et plan de travail noir en place, four et micro-ondes encastrés ; un câble reste en attente de raccordement au-dessus du plan de travail. Chantier réel des équipes partenaires."
             ratio="aspect-[4/3]"
           />
         </div>

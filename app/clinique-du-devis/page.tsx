@@ -62,11 +62,11 @@ export default function Page() {
       />
 
       <div className="container-site max-w-4xl pb-4">
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/13-clinique-devis-hero.jpeg"
           alt="Devis de rénovation anonymisé avec six zones mises en évidence : quantité, unité, fourniture, pose, exclusion, hypothèse"
           caption="Éléments à contrôler dans un devis de rénovation. Document fictif et anonymisé, schéma pédagogique."
-          ratio="aspect-[4/3]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -130,7 +130,7 @@ export default function Page() {
         lead="Chaque devis reçu suit la même trame de vérification, quel que soit le corps de métier concerné."
       >
         <div className="mb-10">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/14-clinique-devis-8-etapes.jpeg"
             alt="Huit contrôles numérotés pour analyser un devis de travaux de rénovation"
             caption="Méthode en huit étapes pour analyser un devis de travaux. Schéma pédagogique."
@@ -164,7 +164,7 @@ export default function Page() {
             },
             {
               title: "Identifier les doublons entre lots",
-              text: "À l'inverse, deux entreprises facturent parfois la même prestation : dépose d'un sanitaire comptée à la fois en plomberie et en démolition, protection de sol facturée deux fois par des corps de métier différents. Chaque doublon repéré est une économie immédiate.",
+              text: "À l'inverse, deux entreprises facturent parfois la même prestation : dépose d'un sanitaire comptée à la fois en plomberie et en démolition, protection de sol facturée deux fois par des corps de métier différents. Chaque doublon repéré est signalé et rediscuté avec les entreprises concernées avant signature.",
             },
             {
               title: "Classer chaque ligne selon un code couleur de vigilance",
@@ -217,11 +217,11 @@ export default function Page() {
         lead="Certaines formulations reviennent d'un devis à l'autre. Les reconnaître évite la majorité des mauvaises surprises."
       >
         <div className="mb-10">
-          <MqFig
+          <MqFig entier
             src="/photos/pedagogie/15-clinique-devis-comparatif.jpeg"
             alt="Comparaison de trois devis de rénovation : forfait opaque, devis incomplet, devis comparable et détaillé"
             caption="Comparaison entre un devis opaque, incomplet et détaillé. Documents fictifs, schéma pédagogique."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[3/2]"
           />
         </div>
         <MqChecklist

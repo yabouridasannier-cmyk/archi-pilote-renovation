@@ -36,9 +36,9 @@ export default function Page() {
             ],
           },
           {
-            titre: "Communes voisines traitées",
+            titre: "Autres communes traitées dans le secteur ouest",
             liens: [
-              { href: "/renovation-nanterre", label: "Nanterre" },
+              { href: "/renovation-nanterre", label: "Nanterre, commune limitrophe" },
               { href: "/renovation-la-garenne-colombes", label: "La Garenne-Colombes" },
               { href: "/renovation-colombes", label: "Colombes" },
             ],

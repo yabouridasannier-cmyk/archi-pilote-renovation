@@ -108,7 +108,7 @@ export default function Page() {
           <MqFig
             src="/photos/maquette/chantier-ouverture-mur-etaiement.jpg"
             alt="Ouverture pratiquée dans un mur en briques, trois étais métalliques réglables en appui sous la poutre posée en tête d'ouverture"
-            caption="Ouverture pratiquée dans un mur en briques : trois étais réglables soutiennent la poutre posée en tête d'ouverture, gravats encore au sol."
+            caption="Ouverture pratiquée dans un mur en briques : trois étais réglables soutiennent la poutre posée en tête d'ouverture, gravats encore au sol. Image d'illustration."
             ratio="aspect-[10/7]"
           />
         </div>
@@ -262,8 +262,8 @@ export default function Page() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
           <MqFig
             src="/photos/chantiers/chPlancherSolivesBeton2.jpeg"
-            alt="Solives de plancher ancien décaissées et remplies en corps creux béton dans un couloir, lambourdes posées par-dessus"
-            caption="Décaissement : solives dégagées et remplissage en corps creux béton entre elles, lambourdes reposées dessus, dans un couloir d'immeuble ancien. Chantier réel des équipes partenaires."
+            alt="Plancher ancien ouvert dans un couloir d'immeuble : caissons de remplissage dégagés entre les solives, lambourdes neuves posées par-dessus sur toute la longueur"
+            caption="Décaissement : le plancher est ouvert sur toute la longueur du couloir, les caissons de remplissage sont dégagés entre les solives et des lambourdes neuves sont reposées par-dessus. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
           <MqFig
@@ -480,8 +480,8 @@ export default function Page() {
         <div className="mt-8">
           <MqFig
             src="/photos/chantiers/chFacadeRavalementVillage.jpeg"
-            alt="Immeuble ancien de centre-village entièrement ceinturé d'un échafaudage bâché pendant un ravalement, vu depuis la rue en contrebas"
-            caption="Ravalement de façade : l'immeuble est ceinturé d'un échafaudage bâché monté depuis la rue. Modifier l'aspect extérieur relève du règlement de copropriété. Chantier réel des équipes partenaires."
+            alt="Immeuble ancien de centre-bourg dont deux faces sont montées en échafaudage avec filet de protection pendant un ravalement, vu depuis la rue en contrebas"
+            caption="Ravalement de façade : deux faces de l'immeuble sont montées en échafaudage avec filet de protection, depuis la rue. En copropriété, modifier l'aspect extérieur relève du règlement. Chantier réel des équipes partenaires."
             ratio="aspect-[4/3]"
           />
         </div>
@@ -602,8 +602,8 @@ export default function Page() {
             />
             <MqFig
               src="/photos/chantiers/chEscalierBoisFlottantPalier.jpeg"
-              alt="Même escalier vu de profil, volée et palier intermédiaire en contreplaqué brut en appui sur un limon maçonné"
-              caption="Vue de profil : volée et palier intermédiaire en place, encore en contreplaqué brut, avant habillage définitif. Chantier réel des équipes partenaires."
+              alt="Escalier vu de profil, volée et palier intermédiaire en contreplaqué brut portés par un limon plein enduit en blanc"
+              caption="Vue de profil : volée et palier intermédiaire en place, marches encore en contreplaqué brut sur un limon plein enduit, avant habillage définitif. Chantier réel des équipes partenaires."
               ratio="aspect-[4/3]"
             />
           </div>

@@ -35,7 +35,7 @@ export default function Page() {
             d'habillage, corniches, retours contre murs biais et plans de travail.
           </p>
           <p>
-            L'écart de budget constaté sur un projet équivalent va de 30 à 50 % sur le poste mobilier, sans écart
+            L'écart de budget se mesure devis en main, projet par projet, sur le poste mobilier, sans écart
             visible sur le résultat livré. Cet arbitrage est détaillé dans notre article{" "}
             <Link href="/blog/cuisine-sur-mesure-ou-caissons-standards" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
               cuisine sur mesure ou caissons standards : où se joue l&apos;économie
@@ -96,33 +96,33 @@ export default function Page() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             <MqFig
               src="/photos/chantiers/chPlacagesNoyerEnAttente.jpeg"
-              alt="Panneaux de placage noyer livrés et appuyés contre le mur d'une pièce sous corniche moulurée, sol protégé, avant montage"
-              caption="Matière : panneaux de placage noyer livrés sur le chantier, avant montage. Chantier réel des équipes partenaires."
-              ratio="aspect-[3/4]"
+              alt="Panneaux à parement bois foncé livrés et appuyés contre le mur d'une pièce sous corniche moulurée, sol protégé, avant montage"
+              caption="Matière : panneaux à parement bois foncé livrés sur le chantier et rangés contre le mur, avant montage. Chantier réel des équipes partenaires."
+              ratio="aspect-[2/3]"
             />
             <MqFig
               src="/photos/chantiers/chDressingNoyerCarcassesVides.jpeg"
-              alt="Carcasses de dressing en placage noyer montées sur vérins, étagères en place, avant pose des façades"
-              caption="Fabrication : carcasses en placage noyer montées sur vérins de réglage, avant pose des façades. Chantier réel des équipes partenaires."
-              ratio="aspect-[3/4]"
+              alt="Carcasses de dressing à parement bois foncé montées sur vérins de réglage, étagères en place, avant pose des façades"
+              caption="Fabrication : carcasses à parement bois foncé montées sur vérins de réglage, étagères déjà posées, avant pose des façades. Chantier réel des équipes partenaires."
+              ratio="aspect-[2/3]"
             />
             <MqFig
               src="/photos/chantiers/chDressingNoyerCarcasseTringle.jpeg"
-              alt="Carcasse de dressing en placage noyer équipée de tringles de penderie, d'étagères et de blocs-tiroirs, en cours de montage"
+              alt="Carcasse de dressing à parement bois foncé équipée de tringles de penderie, d'étagères et de blocs-tiroirs, en cours de montage"
               caption="Assemblage : tringles de penderie, étagères et blocs-tiroirs posés avant les façades. Chantier réel des équipes partenaires."
-              ratio="aspect-[3/4]"
+              ratio="aspect-[2/3]"
             />
             <MqFig
               src="/photos/chantiers/chDetailTiroirCoulisses.jpeg"
               alt="Main d'un compagnon sortant un tiroir en MDF brut sur ses coulisses, à l'intérieur d'un caisson non encore habillé"
               caption="Détail : tiroir en MDF brut essayé sur ses coulisses pendant le montage du caisson. Chantier réel des équipes partenaires."
-              ratio="aspect-[3/4]"
+              ratio="aspect-[2/3]"
             />
             <MqFig
               src="/photos/chantiers/chDressingNoyerMoulures2.jpeg"
-              alt="Deux volumes de dressing en placage noyer montés jusqu'à la corniche moulurée d'une pièce ancienne, sol encore sous protection"
-              caption="Pose terminée : les volumes en placage noyer montent jusqu'à la corniche moulurée conservée, sol encore sous protection. Chantier réel des équipes partenaires."
-              ratio="aspect-[3/4]"
+              alt="Deux volumes de dressing à parement bois foncé montés jusqu'à la corniche moulurée d'une pièce ancienne, sol encore sous protection"
+              caption="Pose terminée : les volumes à parement bois foncé montent jusqu'à la corniche moulurée conservée, sol encore sous protection. Chantier réel des équipes partenaires."
+              ratio="aspect-[2/3]"
             />
           </div>
         </div>
@@ -144,7 +144,8 @@ export default function Page() {
               <MqFig
                 src="/photos/chantiers/chEnsembleRangementRadiateurClaustra.jpeg"
                 alt="Dressing toute hauteur à six vantaux avec poignées bâton en bois, prolongé par des rangements ouverts et un cache-radiateur à claire-voie, avant peinture de finition"
-                caption="Dressing toute hauteur à six vantaux, poignées bâton en bois, prolongé par des rangements ouverts et un cache-radiateur à claire-voie ; ensemble monté, avant peinture de finition. Chantier réel des équipes partenaires."
+                caption="Un seul ensemble mené d'un mur à l'autre : étagères ouvertes et placards bas à gauche, cache-radiateur à claire-voie au centre, dressing à six vantaux à poignées bâton en bois à droite. Monté et sous-couché, avant peinture de finition. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
             </div>
           </div>
@@ -159,6 +160,7 @@ export default function Page() {
                 src="/photos/chantiers/chHdgCuisineOnyxParquetVersailles.jpeg"
                 alt="Cuisine à façades en placage bois clair sans poignée apparente, colonnes toute hauteur montées sous la corniche et plan de travail en pierre naturelle rubanée"
                 caption="Cuisine sur mesure : colonnes toute hauteur en placage bois clair ouvrant par gorge en creux, sans poignée apparente, retour de meuble arrondi et plan de travail taillé dans la même pierre rubanée que la crédence. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/2]"
               />
             </div>
           </div>
@@ -171,8 +173,9 @@ export default function Page() {
             <div className="mt-2">
               <MqFig
                 src="/photos/chantiers/chBibliothequeChenePieceComplete.jpeg"
-                alt="Pièce entièrement doublée de bibliothèques en chêne montant du sol au plafond, retournées dans l'angle et prolongées par un placard toute hauteur, en cours de finition"
-                caption="Bibliothèque montée du sol au plafond sur deux murs, retournée dans l'angle et prolongée par un placard toute hauteur ; chantier photographié avant finition. Chantier réel des équipes partenaires."
+                alt="Pièce entièrement doublée de bibliothèques en placage bois clair montant du sol au plafond, retournées dans l'angle et prolongées par un placard toute hauteur, en cours de finition"
+                caption="Bibliothèque en placage bois clair montée du sol au plafond sur deux murs, retournée dans l'angle et prolongée par un placard toute hauteur ; chantier photographié avant finition, tréteaux et pièces en attente encore en place. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
             </div>
           </div>
@@ -187,6 +190,7 @@ export default function Page() {
                 src="/photos/chantiers/chHdgChambrePlacardMoulure.jpeg"
                 alt="Placard toute hauteur à façades blanches moulurées dans le dessin des menuiseries anciennes, avec imposte au-dessus des vantaux et corniche redescendue en retour sur le caisson"
                 caption="Menuiserie accordée à l'existant : placard toute hauteur à façades moulurées dans le dessin des menuiseries anciennes, imposte au-dessus des vantaux, corniche redescendue en retour sur le caisson et radiateur en fonte ancien conservé. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/2]"
               />
             </div>
           </div>
@@ -196,7 +200,7 @@ export default function Page() {
       <MqSection
         kicker="GALERIE"
         title="Réalisations d'agencement livrées"
-        lead="Dix-neuf vues d'ouvrages d'agencement, regroupées par cuisine, dressing, bibliothèque, espace commercial, agencements d'appartement ancien et habillages bois."
+        lead="Dix-sept vues d'ouvrages d'agencement, regroupées par cuisine, dressing, bibliothèque, espace commercial, agencements d'appartement ancien et habillages bois."
         wide
       >
         <div className="flex flex-col gap-12">
@@ -205,19 +209,29 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <MqFig
                 src="/photos/chantiers/chCuisineBlancheFinieIlot.jpeg"
-                alt="Cuisine blanche sur mesure avec îlot central livrée, chantier réel"
-                caption="Cuisine blanche avec îlot central, façades sur mesure sur caissons optimisés. Chantier réel des équipes partenaires."
+                alt="Cuisine blanche laquée brillante en L avec îlot central, colonnes four et micro-ondes, réfrigérateur américain encore protégé et colonne de rangement laissée ouverte"
+                caption="Cuisine blanche laquée avec îlot central : colonnes four et micro-ondes en place, la colonne de rangement reste ouverte et l'électroménager encore sous protection d'usine. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
               <MqFig
                 src="/photos/chantiers/chCuisineAnthraciteCarreauxCiment.jpeg"
-                alt="Cuisine anthracite sur mesure en L, plan de travail et retour de crédence noirs, sol en carreaux à motif géométrique raccordé à un parquet chêne"
-                caption="Cuisine anthracite livrée en L, plan de travail et retour de crédence noirs assortis, sol en carreaux à motif géométrique raccordé au parquet chêne. Chantier réel des équipes partenaires."
+                alt="Cuisine anthracite en L, plan de travail et retour de crédence noirs, sol en carreaux à motif géométrique gris raccordé au sol bois clair de la pièce voisine"
+                caption="Cuisine anthracite livrée en L, plan de travail et retour de crédence noirs assortis, sol en carreaux à motif géométrique raccordé au sol bois clair de la pièce voisine. Chantier réel des équipes partenaires."
+                ratio="aspect-[9/16]"
               />
-              <MqFig
-                src="/photos/chantiers/chCuisineBleuCanardBrillante.jpeg"
-                alt="Cuisine bleu canard laquée brillante sur mesure, chantier réel"
-                caption="Cuisine bleu canard laquée brillante, façades sur mesure sur caissons standards. Chantier réel des équipes partenaires."
-              />
+              {/*
+                Emplacement retiré le 05/09/2026 (surexposition).
+
+                chCuisineBleuCanardBrillante.jpeg occupait la troisième case.
+                `scripts/surexposition.py` compte cette scène (avec sa jumelle
+                chCuisineBleuCanardVueDeux.jpeg) sur QUATRE pages : ici, /realisations,
+                /second-oeuvre et l'article « cuisine sur mesure ou caissons standards ». Sa
+                légende affirmait par ailleurs des « façades sur mesure sur caissons standards »
+                qu'aucune photo de façade fermée ne permet de vérifier.
+                Elle est conservée sur /second-oeuvre, où le plancher ouvert au premier plan
+                illustre le propos technique de la page (les réseaux restent accessibles), et
+                retirée d'une galerie qui compte déjà dix-huit autres vues.
+              */}
             </div>
           </div>
           <div>
@@ -227,21 +241,25 @@ export default function Page() {
                 src="/photos/chantiers/chDressingLaqueBlancCouloirPlans.jpeg"
                 alt="Dressing laqué blanc à quatre vantaux avec deux longues poignées bâton en bronze, plans d'exécution punaisés au mur, sol encore sous protection"
                 caption="Dressing laqué blanc à quatre vantaux, longues poignées bâton en bronze ; plans d'exécution encore affichés au mur et sol sous protection. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
               <MqFig
                 src="/photos/chantiers/chDressingSousPenteBlancTiroirs.jpeg"
-                alt="Dressing sur mesure blanc avec tiroirs adapté à une chambre sous comble, chantier réel"
-                caption="Dressing sous pente de toit, façades blanches et tiroirs dimensionnés sur le volume réel. Chantier réel des équipes partenaires."
+                alt="Dressing blanc en trois volumes avec colonnes de tiroirs et étagères ouvertes, recoupé en biais par la pente du comble sur la gauche"
+                caption="Dressing sous pente de toit : les volumes et les colonnes de tiroirs sont recoupés sur la pente réelle du comble. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
               <MqFig
                 src="/photos/chantiers/chDressingBufetNoyerPorteBleue.jpeg"
-                alt="Dressing et enfilade en placage noyer livrés dans un appartement ancien, chantier réel"
-                caption="Dressing et enfilade en placage noyer, moulures d'origine conservées en fond. Chantier réel des équipes partenaires."
+                alt="Dressing toute hauteur et enfilade basse à parement bois foncé, poignées bâton noires, dans un appartement ancien à corniche moulurée et porte peinte en bleu"
+                caption="Dressing toute hauteur et enfilade basse à parement bois foncé, poignées bâton noires ; corniche moulurée d'origine et porte bleue conservées. Chantier réel des équipes partenaires."
+                ratio="aspect-[16/9]"
               />
               <MqFig
                 src="/photos/chantiers/chDressingBeigeAngleLumineux.jpeg"
                 alt="Angle de dressing sur mesure laqué taupe avec éclairage intégré en corniche, chantier réel"
                 caption="Dressing d'angle laqué taupe, éclairage intégré en corniche et poignée creusée sans ferrure apparente. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
             </div>
           </div>
@@ -250,23 +268,38 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <MqFig
                 src="/photos/chantiers/chBibliotheque.jpeg"
-                alt="Bibliothèque toute hauteur en menuiserie sur mesure contre un mur en pierre, chantier réel"
-                caption="Bibliothèque toute hauteur, rangements dessinés pour épouser le mur en pierre existant. Chantier réel des équipes partenaires."
+                alt="Bibliothèque sur mesure peinte en rose pâle montée dans un angle, étagères garnies de livres au-dessus d'un caisson bas à portes moulurées, à côté d'un mur en pierre de taille laissé apparent"
+                caption="Bibliothèque sur mesure montée dans un angle, étagères ouvertes au-dessus d'un caisson bas fermé à portes moulurées, à côté d'un mur en pierre de taille laissé apparent. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
               <MqFig
                 src="/photos/chantiers/chBibliothequeCouloirTrappe.jpeg"
-                alt="Grande bibliothèque sur mesure sous trappe de visite technique, chantier réel"
-                caption="Bibliothèque du sol au plafond, avec réservation d'une trappe de visite technique. Chantier réel des équipes partenaires."
+                alt="Rangement de couloir sur mesure peint en blanc, étagères ouvertes en retour dans l'angle, trappe de visite technique réservée dans le plafond juste au-dessus, sol encore sous protection"
+                caption="Rangement de couloir du sol au plafond, étagères ouvertes en retour dans l'angle et trappe de visite technique réservée dans le plafond juste au-dessus. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
-              <MqFig
-                src="/photos/chantiers/chBibliothequePanneauxMoulures.jpeg"
-                alt="Bibliothèque sur mesure avec portes à panneaux moulurés et parties vitrées, chantier réel"
-                caption="Bibliothèque à portes moulurées et parties vitrées, style traditionnel. Chantier réel des équipes partenaires."
-              />
+              {/*
+                Emplacement retiré le 05/09/2026 (photo affichée de travers + légende fausse).
+
+                chBibliothequePanneauxMoulures.jpeg est stockée COUCHÉE : le fichier n'a pas
+                d'orientation EXIF et l'image apparaît pivotée d'un quart de tour sur le site
+                (les spots du plafond se retrouvent sur un bord latéral). Vérifié en rouvrant le
+                fichier redressé.
+                La légende était en outre fausse : une fois l'image remise d'aplomb, on voit une
+                enfilade de caissons en MDF BRUT, avant peinture, dont les « parties vitrées »
+                sont en réalité des réservations encore ouvertes — un rail de guidage d'outil est
+                visible à l'intérieur de l'une d'elles. Ce n'est pas une « bibliothèque à portes
+                moulurées et parties vitrées, style traditionnel » livrée.
+
+                À FAIRE : faire pivoter le fichier de 90° dans /public/photos/chantiers/ (hors
+                du périmètre de cette page), puis réintégrer l'emplacement avec une légende
+                décrivant un chantier de menuiserie en MDF brut avant peinture.
+              */}
               <MqFig
                 src="/photos/chantiers/chEtagereCactusSurMesure.jpeg"
-                alt="Étagère murale sur mesure taillée en forme de cactus, bois brut avant finition, chantier réel"
-                caption="Découpe sur mesure : étagère murale en forme de cactus, illustrant la liberté de forme permise par la fabrication en atelier. Chantier réel des équipes partenaires."
+                alt="Mur entier d'étagères sur mesure en bois clair brut, dont les montants verticaux sont découpés en silhouettes de cactus de hauteurs différentes, sol sous protection"
+                caption="Découpe sur mesure : un mur entier d'étagères dont chaque montant est découpé en silhouette de cactus, en bois brut avant finition — la liberté de forme permise par la fabrication en atelier. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
             </div>
           </div>
@@ -275,18 +308,21 @@ export default function Page() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               <MqFig
                 src="/photos/chantiers/chOptiqueComptoirCarcasseBrute.jpeg"
-                alt="Carcasse du comptoir d'un local commercial d'optique, chantier réel"
-                caption="Comptoir d'accueil d'un local commercial d'optique, carcasse en cours de fabrication. Chantier réel des équipes partenaires."
+                alt="Carcasse d'un comptoir d'accueil montée sur place en panneaux blancs, chants bruts encore apparents, chutes et visseuse au sol dans un local commercial en travaux"
+                caption="Comptoir d'accueil monté sur place : carcasse en panneaux blancs, chants bruts encore apparents, chutes et outillage au sol. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
               <MqFig
                 src="/photos/chantiers/chOptiqueComptoirAccueilFini.jpeg"
-                alt="Comptoir d'accueil livré dans un local commercial d'optique, chantier réel"
-                caption="Comptoir d'accueil livré, local commercial d'optique. Chantier réel des équipes partenaires."
+                alt="Comptoir d'accueil livré dans un magasin d'optique : façade en tasseaux de bois, plan et joncs de finition laiton, présentoirs à lunettes et échelle d'acuité visuelle au mur"
+                caption="Le comptoir livré : façade en tasseaux de bois, plan et joncs de finition laiton, dans un magasin d'optique équipé. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
               />
               <MqFig
                 src="/photos/chantiers/chOptiqueAccueilFinition.jpeg"
-                alt="Finition de l'accueil d'un local commercial d'optique, chantier réel"
-                caption="Finition de l'espace d'accueil, local commercial d'optique. Chantier réel des équipes partenaires."
+                alt="Magasin d'optique vu depuis la porte vitrée : présentoirs à lunettes rétroéclairés le long des deux murs, meubles bas à tiroirs et comptoir d'accueil au fond"
+                caption="Le magasin vu depuis la porte : présentoirs rétroéclairés sur les deux murs, meubles bas à tiroirs et comptoir d'accueil au fond. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
             </div>
           </div>
@@ -301,16 +337,19 @@ export default function Page() {
                 src="/photos/chantiers/chHdgSejourCuisineOnyxBanquette.jpeg"
                 alt="Pièce de vie avec colonnes de rangement toute hauteur en placage bois clair et retour de comptoir arrondi sur piètement cannelé"
                 caption="Pièce de vie : colonnes de rangement toute hauteur en placage bois clair alignées sous la corniche, retour de comptoir arrondi porté par un piètement à cannelures, plan taillé dans la même pierre que la crédence. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/2]"
               />
               <MqFig
                 src="/photos/chantiers/chHdgDetailNicheOnyxCheminee.jpeg"
                 alt="Diptyque : niche de crédence encadrée de menuiserie cannelée au-dessus de tiroirs à façades cannelées, et tablette de cheminée en marbre sculpté"
                 caption="Niche menuisée : à gauche, une niche de crédence encadrée de menuiserie cannelée, fond et tablette taillés dans la même pierre, posée sur des tiroirs à façades cannelées ; à droite, la cheminée en marbre sculpté conservée. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/2]"
               />
               <MqFig
                 src="/photos/chantiers/chHdgDetailCeramiqueRobinetterie.jpeg"
                 alt="Diptyque : étagères en bois massif clair encastrées sur un fond de menuiserie strié, et commandes de douche encastrées en bronze patiné"
                 caption="Détail d'exécution : à gauche, étagères en bois massif clair encastrées sur un fond de menuiserie strié ; à droite, les commandes de douche en bronze patiné encastrées dans un parement à cannelures. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/2]"
               />
             </div>
           </div>
@@ -346,7 +385,7 @@ export default function Page() {
         <MqChecklist
           items={[
             "Références validées techniquement par notre équipe avant toute commande du client.",
-            "Retrait des commandes par notre flotte de camions et livraison sur le chantier au moment utile.",
+            "Retrait des commandes et livraison sur le chantier au moment utile, organisés avec le transporteur ou l'entreprise concernée.",
             "Aucune marge prise sur la fourniture : le client conserve l'intégralité de l'écart de prix.",
             "Écart de prix constaté poste par poste sur les devis, jamais annoncé comme une remise forfaitaire.",
             "Nettoyage professionnel de fin de chantier systématique, hérité de nos standards de conciergerie.",
@@ -363,21 +402,34 @@ export default function Page() {
           </Link>
           .
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-8">
+        {/*
+          Emplacement retiré le 05/09/2026 (légende contraire au rôle d'ARCHI PILOTE +
+          surexposition).
+
+          flotte-camions-retrait-materiaux.jpg occupait la case centrale, légendée « notre
+          flotte de camions ». ARCHI PILOTE RÉNOVATION PILOTE, elle n'exécute pas : les travaux
+          et la logistique sont assurés par les entreprises partenaires contractantes.
+          Présenter une image de banque comme « notre flotte » contredit cette mention, répétée
+          en pied de plusieurs pages. L'image apparaissait par ailleurs sur TROIS pages (ici,
+          /expertise-carrelage-zellige-travertin, /modele-economique-transparence) ; elle est
+          également retirée de la première.
+
+          Les deux images restantes sont des images de banque : leurs légendes le disent
+          désormais, et celle de l'entrepôt ne nomme plus une enseigne qu'aucune signalétique
+          ne permet d'identifier sur la photo.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
           <MqFig
             src="/photos/maquette/nettoyage-fin-de-chantier.jpg"
-            alt="Équipe de nettoyage professionnelle en fin de chantier dans un appartement haussmannien rénové au parquet point de Hongrie"
-            caption="Nettoyage de fin de chantier systématique, hérité de nos standards de conciergerie : le logement est remis prêt à vivre, pas seulement prêt à réceptionner."
-          />
-          <MqFig
-            src="/photos/maquette/flotte-camions-retrait-materiaux.jpg"
-            alt="Camions et fourgons utilitaires chargeant des palettes de carrelage et des colis de cuisine dans un dépôt de matériaux"
-            caption="Logistique intégrée : notre flotte de camions retire les commandes achetées en direct par le client et les livre sur le chantier au bon moment."
+            alt="Équipe de nettoyage en fin de chantier dans un appartement haussmannien rénové : aspirateur, lavage des vitres, parquet point de Hongrie, cheminée en marbre et moulures"
+            caption="Nettoyage de fin de chantier systématique : le logement est remis prêt à vivre, pas seulement prêt à réceptionner. Image d'illustration."
+            ratio="aspect-[10/7]"
           />
           <MqFig
             src="/photos/maquette/approvisionnement-materiaux-plateforme.jpg"
-            alt="Entrepôt de matériaux de construction avec palettes de plaques de plâtre, laine minérale et sacs d'enduit"
-            caption="Approvisionnement en direct : plaques, isolants et enduits du groupe Saint-Gobain retirés à La Plateforme du Bâtiment, facturés au client sans marge."
+            alt="Entrepôt de négoce de matériaux : palettes de plaques de plâtre standard et hydrofuges, rouleaux de laine minérale, sacs d'enduit et chariot élévateur"
+            caption="Approvisionnement en direct : plaques standard et hydrofuges, laine minérale et sacs d'enduit retirés au négoce et facturés au client sans marge. Image d'illustration."
+            ratio="aspect-[10/7]"
           />
         </div>
         <p className="text-muted text-[0.85rem] leading-relaxed mt-8 max-w-2xl">
@@ -393,7 +445,7 @@ export default function Page() {
           items={[
             {
               q: "Faut-il une cuisine entièrement sur mesure pour un beau rendu ?",
-              a: "Non. Le rendu visible tient aux façades, aux plinthes, aux joues d'habillage et au plan de travail, pas au caisson qui reste invisible. Associer des caissons standards de bonne qualité à des façades sur mesure permet d'obtenir un résultat d'ébéniste tout en réduisant fortement le coût, souvent de 30 à 50 % par rapport à un ensemble intégralement sur mesure.",
+              a: "Non. Le rendu visible tient aux façades, aux plinthes, aux joues d'habillage et au plan de travail, pas au caisson qui reste invisible. Associer des caissons standards de bonne qualité à des façades sur mesure permet d'obtenir un résultat d'ébéniste tout en réduisant le coût par rapport à un ensemble intégralement sur mesure. L'écart réel dépend des références retenues et se lit sur les devis, il ne se chiffre pas à l'avance.",
             },
             {
               q: "Peut-on habiller des meubles de grande distribution avec des façades sur mesure ?",
@@ -405,11 +457,11 @@ export default function Page() {
             },
             {
               q: "Qui achète les meubles et les façades ?",
-              a: "Le client achète en direct la fourniture qui ne relève pas de la garantie décennale de pose : caissons, façades, quincaillerie, plans de travail, électroménager. Nous validons techniquement les références, notre flotte de camions retire les commandes et les livre sur le chantier au moment utile.",
+              a: "Le client achète en direct la fourniture qui ne relève pas de la garantie décennale de pose : caissons, façades, quincaillerie, plans de travail, électroménager. Nous validons techniquement les références, puis nous organisons le retrait des commandes et leur livraison sur le chantier au moment utile.",
             },
             {
               q: "Le chantier est-il nettoyé à la fin ?",
-              a: "Oui, systématiquement. Nous faisons intervenir une équipe de nettoyage professionnelle en fin de chantier, un standard hérité de notre expérience avec des conciergeries de location courte durée. Le logement est remis prêt à vivre, pas seulement prêt à réceptionner.",
+              a: "Un nettoyage de fin de chantier par une équipe professionnelle est prévu au périmètre chaque fois que le projet le permet, et il figure alors noir sur blanc dans le devis de l'entreprise concernée. Le logement est remis prêt à vivre, pas seulement prêt à réceptionner.",
             },
           ]}
         />
@@ -428,7 +480,7 @@ export default function Page() {
 
       <MqCta
         title="Un dressing, une cuisine ou une bibliothèque à dessiner ?"
-        lead="Étude de projet gratuite sous 48 heures : relevé du volume, arbitrage sur-mesure ou façades sur caissons, et budget comparé."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : relevé du volume, arbitrage sur-mesure ou façades sur caissons, et budget comparé."
       />
     </main>
   );

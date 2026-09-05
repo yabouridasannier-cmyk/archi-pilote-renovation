@@ -379,6 +379,14 @@ export const PHOTOS = {
      lisible. Cf. app/blog/[slug]/page.tsx et app/blog/page.tsx. */
   schemaSurelevationFondations: "/photos/pedagogie/schema-surelevation-fondations.jpg",
   schemaDevis7Lignes: "/photos/pedagogie/schema-devis-7-lignes.jpg",
+
+  /* 05/09 : schéma DPE déclaré pour l'article « DPE F ou G ». Le fichier existait sur le
+     disque mais n'était accessible depuis aucune page, faute de clé. Ouvert et vérifié :
+     coupe de bâtiment avec les cinq postes de travaux repérés, échelle complète des
+     étiquettes A à G avec leurs seuils en kWh/m²/an, et sources citées (ADEME, arrêté du
+     31 mars 2021). Il porte lui-même la mention « Schéma à vocation pédagogique ».
+     Employé avec `schema: true`, donc affiché entier et annoncé comme un schéma. */
+  schemaDpePassoire: "/photos/maquette/schema-dpe-passoire.jpg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

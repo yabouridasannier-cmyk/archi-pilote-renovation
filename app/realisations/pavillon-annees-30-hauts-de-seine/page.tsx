@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { PageHeader } from "../../components/page-header";
 import { CtaFinal } from "../../components/cta-final";
-import { PHOTOS } from "../../lib-photos";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/realisations/pavillon-annees-30-hauts-de-seine" },
@@ -21,8 +20,19 @@ export default function EtudeDeCasPage() {
 
       <section className="relative pb-6">
         <div className="container-site max-w-4xl mx-auto">
-          <div className="relative aspect-[16/9] rounded-none overflow-hidden card-e mb-4">
-            <img src={PHOTOS.chantierIsolation} alt="Isolation des combles avant doublage, pavillon en rénovation" className="absolute inset-0 size-full object-cover" />
+          {/* 05/09 — IMAGE REMPLACÉE. Le visuel affiché ici était PHOTOS.chantierIsolation,
+              c'est-à-dire chIsolationCombles.jpeg : elle ne montre PAS une rénovation mais une
+              CONSTRUCTION NEUVE — murs en briques monomur rouges encore nues, charpente neuve,
+              aucun ouvrage existant — alors que la page raconte la rénovation complète d'un pavillon
+              des années 30. L'alt affirmait de surcroît « pavillon en rénovation ». La clé employée
+              était par ailleurs un alias (chantierIsolation) qui masquait le fait que le même fichier
+              était affiché sur quatre pages du site. Remplacée par une vue de façade de pavillon
+              rénové, cohérente avec le sujet, déjà signalée comme visuel d'illustration par la
+              mention qui suit. Le fichier est en 1264x848 : le cadre 16/9 ne le recadre presque pas,
+              alors que l'image précédente, en 1050x1400 (portrait), y perdait les deux tiers de sa
+              hauteur. */}
+          <div className="relative aspect-[3/2] rounded-none overflow-hidden card-e mb-4">
+            <img src="/photos/maquette/pavillon-facade-apres.jpg" alt="Façade de pavillon rénovée : enduit clair, menuiseries anthracite, garde-corps et perron refaits" className="absolute inset-0 size-full object-cover" />
           </div>
           <p className="font-mono text-[0.68rem] tracking-[0.18em] uppercase text-muted text-center">Visuel d&apos;illustration — nouvelle marque, premiers chantiers à venir</p>
         </div>

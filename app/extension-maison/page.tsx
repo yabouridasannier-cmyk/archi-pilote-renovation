@@ -23,7 +23,7 @@ export default function Page() {
           src="/photos/pedagogie/20-extension-interface.jpeg"
           alt="Coupe technique de l'interface entre une maison ancienne et son extension : fondations, rupture de pont thermique, isolation continue, jonction de toiture, réseaux"
           caption="Interface technique entre une maison existante et son extension. Schéma pédagogique."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -85,6 +85,7 @@ export default function Page() {
             src="/photos/maquette/schema-deperditions.jpg"
             alt="Schéma des déperditions thermiques d'une maison avec extension, points de vigilance à l'interface entre l'existant et le neuf"
             caption="Les déperditions thermiques se concentrent souvent aux interfaces entre bâti existant et extension neuve."
+            ratio="aspect-[10/7]"
           />
         </div>
         {/*
@@ -124,33 +125,55 @@ export default function Page() {
             ]}
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-8">
+        {/*
+          Emplacement retiré le 05/09/2026 (doublon dans la même page).
+
+          extension-verre-meuliere.jpg figurait ici ET plus bas dans la rangée « références de
+          style A / B » : la même image, deux fois sur une seule page. Sa légende affirmait de
+          surcroît une « reprise des fondations » et une « étanchéité de jonction » qui ne sont
+          pas visibles sur une photo de façade finie. L'occurrence est supprimée ici ; celle de
+          la rangée A / B est conservée, où elle est correctement présentée comme une
+          illustration d'un projet distinct.
+        */}
+        <div className="mt-8">
           <MqFig
             src="/photos/maquette/schema-extension-surelevation.jpg"
             alt="Coupe technique d'une maison avec extension de plain-pied et surélévation, reprise de charges et chaînage"
             caption="Extension et surélévation : reprise des charges jusqu'aux fondations, chaînage et raccords d'étanchéité entre l'existant et le neuf."
-          />
-          <MqFig
-            src="/photos/maquette/extension-verre-meuliere.jpg"
-            alt="Extension contemporaine vitrée à ossature acier greffée sur une maison ancienne en meulière d'Île-de-France"
-            caption="Référence de style : extension vitrée raccordée à une maison en meulière, avec reprise des fondations et étanchéité de jonction."
+            ratio="aspect-[10/7]"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-5">
-          <MqFig
-            src="/photos/chantiers/chCharpenteToitureOSBChantier.jpeg"
-            alt="Charpente d'extension en cours, panneaux OSB de toiture posés, échafaudage, chantier réel"
-            caption="Charpente d'extension en cours : panneaux OSB de toiture posés avant couverture définitive. Chantier réel des équipes partenaires."
-          />
+        {/*
+          Deux emplacements sur trois retirés le 05/09/2026 (légendes fausses, sujet hors
+          périmètre). Cette rangée alignait trois photos légendées « Chantier réel des équipes
+          partenaires ». Ouverture des trois fichiers :
+
+          - chCharpenteToitureOSBChantier.jpeg était légendée « panneaux OSB de toiture posés
+            avant couverture définitive ». Il n'y a AUCUN panneau sur la toiture : la charpente
+            est nue, l'OSB est sur les murs. La scène est de surcroît une ossature bois isolée
+            en pleine forêt sous la neige — ni une extension, ni un chantier d'Île-de-France.
+          - chCharpenteMaisonEchafaudage.jpeg montre une construction neuve en pierre calcaire
+            claire avec des chiens-assis en OSB, vernaculaire étranger, à nouveau sans aucun
+            bâti existant auquel se greffer. `scripts/qualite-photos.py` la signale en plus en
+            1080 px de large avec 6 % de hautes lumières brûlées.
+
+          Aucune des deux ne peut porter la mention « chantier réel des équipes partenaires ».
+          Conformément à docs/EMPLACEMENTS-PHOTO-A-POURVOIR.md, les emplacements sont retirés
+          plutôt que rhabillés d'une légende vague.
+
+          À FOURNIR PAR LE CLIENT : deux photos de chantier d'extension réelle en Île-de-France
+          montrant la jonction avec le bâti existant (fondations en attente contre le mur
+          existant, jonction de toiture entre l'ancien et le neuf).
+
+          La troisième photo est conservée et passe en pleine largeur, avec une légende qui ne
+          dit plus « extension » : le bâtiment photographié est une construction neuve isolée.
+        */}
+        <div className="mt-5">
           <MqFig
             src="/photos/chantiers/chCharpenteParpaingConstruction.jpeg"
-            alt="Extension en parpaings avec charpente bois posée, dalle coulée, chantier réel"
-            caption="Extension en cours : murs en parpaings, charpente bois posée et dalle coulée avant fermeture. Chantier réel des équipes partenaires."
-          />
-          <MqFig
-            src="/photos/chantiers/chCharpenteMaisonEchafaudage.jpeg"
-            alt="Charpente de maison en cours de montage avec échafaudage, chantier réel"
-            caption="Charpente en cours de montage, échafaudage en place pour la pose de la couverture. Chantier réel des équipes partenaires."
+            alt="Construction neuve en parpaings avec charpente bois posée, hélicoptère à béton posé sur le terrain devant la dalle fraîchement talochée"
+            caption="Gros œuvre d'une construction neuve : murs en parpaings montés, charpente bois posée et dalle intérieure talochée à l'hélicoptère. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
         </div>
         {/*
@@ -219,6 +242,7 @@ export default function Page() {
             src="/photos/maquette/schema-planning-lots.jpg"
             alt="Planning en lots d'un chantier de rénovation présenté sous forme de diagramme de phases hebdomadaires"
             caption="Enchaînement des lots d'un chantier de rénovation : chaque phase conditionne la suivante, d'où l'importance du séquencement."
+            ratio="aspect-[10/7]"
           />
         </div>
         <div className="mt-10">
@@ -307,23 +331,27 @@ export default function Page() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/maquette/jardin-avant-extension.jpg"
-            alt="Jardin d'une maison de meulière francilienne avant extension, terrasse béton fissurée et abri de jardin"
+            alt="Pignon en meulière d'une maison francilienne et son jardin avant extension : dalles béton, appentis et abris en tôle ondulée le long du mur mitoyen"
             caption="Exemple d'illustration — terrain avant travaux : le relevé, l'étude de sol et la déclaration préalable précèdent tout terrassement."
+            ratio="aspect-[10/7]"
           />
           <MqFig
             src="/photos/chantiers/chIsolationCombles.jpeg"
-            alt="Pose de l'isolation et du doublage sous toiture dans une extension en cours de second œuvre, chantier réel"
-            caption="Isolation et doublage posés en sous-face de toiture avant fermeture des cloisons. Chantier réel des équipes partenaires."
+            alt="Laine minérale posée entre les chevrons sous une toiture neuve, compagnon sur échafaudage roulant vissant les premières plaques de plafond, murs en briques encore nus"
+            caption="Isolation en laine minérale posée entre les chevrons et premières plaques de plafond vissées sur l'ossature ; la maçonnerie en briques est encore nue. Construction neuve — une extension en est une par définition. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
           <MqFig
             src="/photos/maquette/extension-verre-meuliere.jpg"
-            alt="Extension contemporaine vitrée à ossature acier greffée sur une maison ancienne en meulière d'Île-de-France"
-            caption="Référence de style A (photo d'illustration, projet distinct) : extension vitrée à ossature acier sur maison en meulière."
+            alt="Extension contemporaine vitrée à menuiseries acier noir greffée sur une maison ancienne en meulière d'Île-de-France, terrasse en dalles de pierre"
+            caption="Référence de style A (image d'illustration, projet distinct) : extension vitrée à menuiseries acier noir sur maison en meulière."
+            ratio="aspect-[3/2]"
           />
           <MqFig
             src="/photos/maquette/extension-livree-apres.jpg"
-            alt="Extension contemporaine en bardage bois et grandes baies vitrées acier noir accolée à une maison de meulière"
-            caption="Référence de style B (photo d'illustration, projet distinct) : extension en bardage bois et grandes baies vitrées."
+            alt="Extension contemporaine en bardage bois vertical et grandes baies d'angle à menuiseries noires, accolée à une maison de meulière"
+            caption="Référence de style B (image d'illustration, projet distinct) : extension en bardage bois vertical et baies d'angle à menuiseries noires."
+            ratio="aspect-[3/2]"
           />
         </div>
         <div className="mt-5">
@@ -331,6 +359,7 @@ export default function Page() {
             src="/photos/maquette/schema-reprise-sous-oeuvre.jpg"
             alt="Schéma en coupe d'une reprise en sous-œuvre : plots bétonnés par passes alternées, bon sol porteur, sondage géotechnique et étaiement"
             caption="Reprise en sous-œuvre : excavation et bétonnage par passes alternées jusqu'au bon sol identifié par le sondage géotechnique."
+            ratio="aspect-[10/7]"
           />
         </div>
         {/*
@@ -365,7 +394,7 @@ export default function Page() {
             },
             {
               q: "Combien coûte réellement une extension de maison ?",
-              a: "Le coût dépend fortement du type de structure retenu, du niveau de finition et de la complexité des raccordements aux réseaux existants. Une fourchette précise ne peut être donnée qu'après visite technique, mais l'achat de certains matériaux en direct par le client permet fréquemment de dégager des économies substantielles sur le budget global.",
+              a: "Le coût dépend fortement du type de structure retenu, du niveau de finition et de la complexité des raccordements aux réseaux existants. Une fourchette précise ne peut être donnée qu'après visite technique, mais l'achat de certains matériaux en direct par le client peut réduire le coût de certains postes, dans une proportion qui s'évalue projet par projet sur le budget global.",
             },
             {
               q: "Comment se passe le raccord entre l'existant et l'extension ?",
@@ -389,7 +418,7 @@ export default function Page() {
         </p>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext
         items={[

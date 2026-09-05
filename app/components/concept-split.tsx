@@ -1,3 +1,8 @@
+/* ⚠️ COMPOSANT ACTUELLEMENT NON MONTÉ — il n'est importé par aucune page (vérifié le
+   05/09/2026). Il est conservé au cas où la maquette le réemploierait, mais NE PAS le
+   remettre en ligne sans relire son texte : les formulations que le client a fait retirer
+   du site y survivaient. Elles ont été corrigées ici le 05/09 pour qu'un futur réemploi ne
+   les republie pas par inadvertance. */
 "use client";
 
 import { useRef } from "react";
@@ -30,7 +35,7 @@ export function ConceptSplit() {
             />
             <Reveal variant="slide-up" delay={0.15}>
               <p className="lead">
-                Une rénovation échoue rarement sur les travaux eux-mêmes —
+                Une rénovation se joue rarement sur le seul geste technique —
                 elle échoue sur l&apos;enchaînement des lots. Chez ARCHI PILOTE RÉNOVATION, un seul pilote
                 suit votre chantier du diagnostic à la réception et tient l&apos;interface avec
                 les corps de métier. Vous n&apos;appelez jamais trois numéros différents.
@@ -39,9 +44,9 @@ export function ConceptSplit() {
             <Reveal variant="slide-up" delay={0.25}>
               <ul className="flex flex-col gap-3 mt-2">
                 {[
-                  "Devis des entreprises poste par poste, sous 48 h",
+                  "Devis des entreprises poste par poste, sous 48 heures ouvrées",
                   "Compte-rendu de chantier chaque semaine",
-                  "12 mois de suivi après réception, en plus des garanties légales",
+                  "Suivi après réception, en plus des garanties légales",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3 text-ivoire/85">
                     <span className="mt-[7px] size-1.5 rounded-full bg-orange shrink-0" />

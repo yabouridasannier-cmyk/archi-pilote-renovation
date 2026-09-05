@@ -45,11 +45,11 @@ export default function ReseauPartenairesPage() {
       />
 
       <div className="container-site max-w-4xl pb-12 md:pb-16">
-        <MqFig
+        <MqFig entier
           src="/photos/pedagogie/29-reseau-partenaires-organigramme.jpeg"
           alt="Organigramme : Client relié à ARCHI PILOTE RÉNOVATION (pilotage), puis Entreprises partenaires, Architecte DPLG et Ingénieur structure"
           caption="Rôles des entreprises, architectes et ingénieurs partenaires. Schéma pédagogique."
-          ratio="aspect-[16/9]"
+          ratio="aspect-[3/2]"
         />
       </div>
 
@@ -109,7 +109,7 @@ export default function ReseauPartenairesPage() {
           <MqFig
             src="/photos/chantiers/chDressingLaqueBlancCouloirPlans.jpeg"
             alt="Plans d'exécution affichés sur le chantier, à côté d'un dressing laqué blanc en cours de finition"
-            caption="Plans d'exécution consultés sur site pendant la pose : la conception se vérifie jusqu'au dernier vantail. Chantier réel des équipes partenaires."
+            caption="Plans d'exécution du dressing affichés au mur, à côté de l'ouvrage en cours de pose : les vantaux sont montés et le sol est encore protégé. Chantier réel des équipes partenaires."
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
@@ -133,10 +133,11 @@ export default function ReseauPartenairesPage() {
         lead="Études de sols et diagnostics de fondation pour les reprises structurelles et le gros œuvre technique."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/geo2mo-etude-geotechnique.jpg"
             alt="Schéma d'une étude géotechnique avec forage de reconnaissance des sols, prélèvement d'échantillon et fondations d'un bâti ancien"
-            caption="Étude géotechnique : forage de reconnaissance, couches de sol identifiées et fondations existantes analysées avant toute reprise structurelle."
+            caption="Schéma pédagogique : principe d'une reconnaissance géotechnique — sondage carotté à côté d'un mur ancien et d'une fondation neuve, couches de sol relevées avant toute reprise structurelle. Dessin d'illustration, pas la photographie d'un sondage réel."
+            ratio="aspect-square"
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
@@ -166,10 +167,11 @@ export default function ReseauPartenairesPage() {
         lead="Des compétences mobilisées uniquement lorsque le dossier l'exige."
       >
         <div className="flex flex-col gap-8">
-          <MqFig
+          <MqFig entier
             src="/photos/maquette/schema-mur-porteur.jpg"
             alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge"
-            caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis."
+            caption="Schéma pédagogique : ouverture de mur porteur, la charge étant reprise par une poutre dimensionnée par un ingénieur structure puis descendue jusqu'aux appuis."
+            ratio="aspect-[10/7]"
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
             <div className="flex flex-col gap-2">
@@ -216,7 +218,7 @@ export default function ReseauPartenairesPage() {
 
       <MqCta
         title="Décrivez votre projet, nous le structurons"
-        lead="Étude de projet gratuite sous 48 heures : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste."
+        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste."
       />
 
       <MqReadNext

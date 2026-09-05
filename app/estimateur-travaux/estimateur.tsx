@@ -82,7 +82,14 @@ export function Estimateur() {
             <span className="font-semibold text-[0.9rem] text-ivoire">Surface du logement</span>
             <span className="display text-[1.4rem] text-ivoire tabular-nums">{surface}&nbsp;m²</span>
           </div>
-          <input type="range" min={15} max={250} step={5} value={surface} onChange={(e) => setSurface(Number(e.target.value))} className="w-full mt-3 accent-[oklch(26%_0.013_60)] cursor-pointer" />
+          {/* 05/09 : aria-label ajouté. Le libellé « Surface du logement » est un <span> voisin,
+              il n'est associé à aucun champ : un lecteur d'écran annonçait donc « curseur,
+              75 » sans dire de quoi. aria-valuetext donne l'unité, sans quoi la valeur est
+              lue comme un nombre nu. */}
+          <input type="range" min={15} max={250} step={5} value={surface}
+            aria-label="Surface du logement en mètres carrés"
+            aria-valuetext={`${surface} mètres carrés`}
+            onChange={(e) => setSurface(Number(e.target.value))} className="w-full mt-3 accent-[oklch(26%_0.013_60)] cursor-pointer" />
           <div className="flex justify-between text-[0.75rem] text-muted mt-1"><span>15 m²</span><span>250 m²</span></div>
         </div>
 
