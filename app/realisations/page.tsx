@@ -69,7 +69,10 @@ const PHOTOS_CHANTIERS = [
      changé pour le visiteur. La remplaçante retenue, chDemolitionLattisPlatreChantier1, n'est employée
      sur aucune page et montre un autre ouvrage : une cloison en pan de bois dont le plâtre a été
      décroché, poteaux et lattes apparents. */
-  { src: `${CH}/chDemolitionLattisPlatreChantier1.jpeg`, alt: "Cloison ancienne en pan de bois dégarnie de son plâtre, poteaux et lattes apparents, huisserie laissée en place", cap: "Cloison ancienne en pan de bois dégarnie de son plâtre : les poteaux et les lattes clouées apparaissent sur toute la hauteur, l'huisserie est laissée en place et la pièce voisine reste protégée sous bâche. Chantier réel des équipes partenaires." },
+  /* 05/09 : chDemolitionLattisPlatreChantier1 retirée de la galerie. Elle illustre
+     désormais la section démolition de /gros-oeuvre-structure, et elle reste employée par
+     deux articles de blog — la garder ici en faisait une quatrième apparition. La galerie
+     conserve une scène de démolition, chDemolitionMursDecapes, plus bas. */
   { src: `${CH}/chPortiqueAcierAngleGaine.jpeg`, alt: "Portique acier de reprise de charge après ouverture d'un mur porteur, gaine électrique le long de l'ossature", cap: "Portique acier de reprise de charge (poutre et poteau) posé après ouverture d'un mur porteur, gaine électrique repassée le long de l'ossature avant habillage." },
   { src: `${CH}/chPoteauAcierPlatinePied.jpeg`, alt: "Pied de poteau acier scellé sur platine soudée et ancré dans le plancher", cap: "Pied de poteau acier scellé sur platine soudée, ancré dans le plancher avant rebouchage et traitement anticorrosion." },
   { src: `${CH}/chPlancherSolivesBeton1.jpeg`, alt: "Solives de plancher ancien décaissées et remplies en corps creux béton avant chape", cap: "Solives de plancher ancien décaissées et remplies en corps creux béton, préparation avant chape et pose du revêtement de sol." },

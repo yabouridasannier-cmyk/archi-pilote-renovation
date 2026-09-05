@@ -127,7 +127,12 @@ export const AVANT_APRES = [
 ];
 
 /* Articles de blog — contenu ORIGINAL écrit pour ARCHI PILOTE RÉNOVATION, territoire maison/pavillon. */
-export type Article = { slug: string; titre: string; date: string; dateISO: string; excerpt: string; categorie: string; photo: string; corps: string[]; img2?: string; img2Caption?: string; img3?: string; img3Caption?: string };
+/* `schema: true` → l'image d'en-tête est un schéma pédagogique, pas une photo de chantier.
+   Conséquence sur le rendu : elle est affichée EN ENTIER (object-contain) au lieu d'être
+   recadrée au format du cadre, sinon le titre du schéma est coupé. Conséquence sur le
+   fond : une mention « Schéma pédagogique » est affichée, pour qu'un dessin ne soit
+   jamais pris pour une preuve de chantier. */
+export type Article = { slug: string; titre: string; date: string; dateISO: string; excerpt: string; categorie: string; photo: string; schema?: true; corps: string[]; img2?: string; img2Caption?: string; img3?: string; img3Caption?: string };
 
 export const ARTICLES: Article[] = [
   /* 03/09 : six articles ajoutés au titre du plan éditorial du dossier client
@@ -363,7 +368,13 @@ export const ARTICLES: Article[] = [
     date: "22 août 2026", dateISO: "2026-08-22",
     categorie: "Gros œuvre",
     excerpt: "Une surélévation ne se dessine pas puis se vérifie : c'est l'inverse. Tant que le chemin des charges n'est pas connu jusqu'au sol, un plan n'engage rien.",
-    photo: "chDemolitionDegagementVersSejour",
+    /* 05/09 : l'en-tête était chDemolitionDegagementVersSejour — un couloir d'appartement
+       en démolition, sans le moindre rapport avec une surélévation. Signalé par le client
+       (« pas cohérent par rapport au titre »). Remplacé par le schéma qu'il a fourni, qui
+       montre précisément le sujet de l'article : la descente des charges de la surélévation
+       projetée jusqu'au sol porteur, et les quatre contrôles préalables. */
+    photo: "schemaSurelevationFondations",
+    schema: true,
     img2: "chPlancherSolivesBeton2",
     img2Caption: "Plancher mis à nu : solives, remplissage entre solives et planches de circulation posées pour travailler dessus. Un niveau supplémentaire charge d'abord ces planchers, avant les murs, puis les fondations. Chantier réel des équipes partenaires.",
     corps: [
@@ -456,7 +467,13 @@ export const ARTICLES: Article[] = [
     date: "14 août 2026", dateISO: "2026-08-14",
     categorie: "Devis",
     excerpt: "Un devis forfaitaire de trois lignes ne se compare à rien. Voici ce qu'un devis détaillé doit préciser pour être réellement comparable.",
-    photo: "chDetailPoigneePorteMain1",
+    /* 05/09 : l'en-tête était chDetailPoigneePorteMain1, un gros plan de dormant de porte
+       — hors sujet pour un article sur la lecture d'un devis, et par ailleurs la photo la
+       plus floue du site (piqué mesuré à 21, cf. scripts/qualite-photos.py). Remplacée par
+       le schéma fourni par le client, qui montre un devis ligne à ligne et la liste des
+       sept points à contrôler. */
+    photo: "schemaDevis7Lignes",
+    schema: true,
     img2: "chHdgSdbMarbreProfilesLaitonPose",
     img2Caption: "Pose en cours : plan vasque en pierre massive dont la découpe de cuve est encore ouverte, parois en pierre grand format et profilés laiton en jonction des angles. Chantier réel des équipes partenaires.",
     img3: "chPlacagesNoyerEnAttente",
@@ -696,7 +713,10 @@ export const GALERIE = [
   { src: "chMenuiserieClaustra", label: "Mur de tasseaux et porte intégrée, en pose · chantier des équipes partenaires", cat: "menuiserie", portrait: false },
   { src: "chCharpenteLevee", label: "Charpente bois levée avant couverture · chantier des équipes partenaires", cat: "chantier", portrait: false },
   { src: "chSurelevationBrique", label: "Élévation briques grande hauteur, échafaudage intérieur · chantier des équipes partenaires", cat: "chantier", portrait: false },
-  { src: "chIsolationCombles", label: "Isolation sous rampants, plaquage en grande hauteur · chantier des équipes partenaires", cat: "chantier", portrait: true },
+  /* 05/09 : chIsolationCombles retirée de la galerie. Elle reste employée à deux
+     endroits seulement — l'article « sortir-passoire-energetique » et /extension-maison,
+     où une isolation de construction neuve est cohérente puisqu'une extension EST du
+     neuf. Partout ailleurs elle laissait croire qu'un chantier neuf était une rénovation. */
   { src: "chParquetVitrifie", label: "Parquet ancien poncé et vitrifié, cheminée conservée · chantier des équipes partenaires", cat: "sejour", portrait: false },
   { src: "refCuisineSejour", label: "Séjour et salle à manger, table en marbre · illustration", cat: "sejour", portrait: false },
   { src: "refSalleBainMarbreClair", label: "Salle d'eau, douche et vasque en pierre claire · illustration", cat: "sdb", portrait: true },

@@ -346,6 +346,22 @@ export const PHOTOS = {
   pedaAchatDirectMateriaux: "/photos/pedagogie/57-blog-achat-direct-materiaux.jpeg",
   pedaProjetsRefuses: "/photos/pedagogie/58-blog-projets-refuses.jpeg",
   pedaDossierFinChantier: "/photos/pedagogie/59-blog-dossier-fin-de-chantier.jpeg",
+
+  /* 05/09 — SCHÉMAS FOURNIS PAR LE CLIENT (Ilann Atlan, 04/09 au soir).
+     Ils remplacent deux héros d'article que le client a signalés comme incohérents :
+     une surélévation illustrée par un couloir en démolition, et un article sur la
+     lecture d'un devis illustré par un macro de menuiserie flou (le plus flou du site,
+     piqué mesuré à 21).
+     ATTENTION AU FORMAT — ces deux fichiers sont en 3:2, alors que les schémas
+     précédents avaient été volontairement complétés en 2:1 pour traverser sans
+     recadrage le héros d'article (16/8). Ici, le procédé ne s'applique PAS : le dessin
+     occupe toute la largeur jusqu'aux bords (bandeau sombre, pied de page signé), donc
+     étirer les colonnes de bord produirait des traînées. C'est le RENDU qui s'adapte :
+     les articles portant `schema: true` affichent leur image en `object-contain` sur le
+     fond de la page — rien n'est rogné, rien n'est déformé, et le titre du schéma reste
+     lisible. Cf. app/blog/[slug]/page.tsx et app/blog/page.tsx. */
+  schemaSurelevationFondations: "/photos/pedagogie/schema-surelevation-fondations.jpg",
+  schemaDevis7Lignes: "/photos/pedagogie/schema-devis-7-lignes.jpg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

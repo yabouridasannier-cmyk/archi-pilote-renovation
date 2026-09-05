@@ -58,10 +58,22 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         </div>
       </header>
 
+      {/* 05/09 : un schéma pédagogique ne se recadre pas. Le cadre reste au même format
+          (16/8) pour ne pas faire sauter la mise en page d'un article à l'autre, mais
+          l'image y est posée ENTIÈRE (object-contain) sur le fond de la page. Recadrée en
+          object-cover comme une photo, elle perdait un quart de sa hauteur — donc son
+          titre. La mention explicite évite qu'un dessin passe pour une preuve de chantier. */}
       <Reveal variant="scale" className="container-site mb-14 md:mb-20">
-        <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
-          <img src={PHOTOS[article.photo as keyof typeof PHOTOS]} alt={article.titre} className="absolute inset-0 size-full object-cover" />
+        <div className={`relative aspect-[16/8] rounded-none overflow-hidden card-e${article.schema ? " bg-surface" : ""}`}>
+          <img
+            src={PHOTOS[article.photo as keyof typeof PHOTOS]}
+            alt={article.titre}
+            className={`absolute inset-0 size-full ${article.schema ? "object-contain" : "object-cover"}`}
+          />
         </div>
+        {article.schema && (
+          <p className="mt-2 text-[0.78rem] text-muted">Schéma pédagogique — illustration de principe, non exécutoire.</p>
+        )}
       </Reveal>
 
       <article className="container-site pb-20 md:pb-28">

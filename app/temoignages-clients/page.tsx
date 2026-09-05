@@ -31,9 +31,16 @@ const QUOTES = [
     quote: "L'achat direct des matériaux nous a semblé plus contraignant au départ, mais l'écart de budget final nous a convaincus.",
     author: "Client, propriétaire occupant — Rénovation énergétique d'une maison, Île-de-France, exemple anonymisé",
     photo: {
-      src: "/photos/chantiers/chIsolationCombles.jpeg",
-      alt: "Isolation des combles d'une maison avant pose du parement, chantier réel",
-      caption: "Illustration : rénovation énergétique, isolation des combles avant finition. Chantier réel des équipes partenaires.",
+      /* 05/09 : chIsolationCombles retirée. Deux motifs cumulés. (1) Elle était affichée
+         sur HUIT pages du site (cf. scripts/surexposition.py), record absolu de la
+         photothèque. (2) Surtout, la légende annonçait une « rénovation énergétique »
+         alors que la photo montre une CONSTRUCTION NEUVE — briques monomur rouges encore
+         nues, charpente neuve, aucun ouvrage existant. Elle ne pouvait donc pas illustrer
+         un témoignage de rénovation. La remplaçante est un vrai chantier de rénovation :
+         le carrelage blanc d'origine est encore en place à droite du pare-vapeur. */
+      src: "/photos/chantiers/chParVapeurSopremaMuralSdb.jpeg",
+      alt: "Mur d'une salle d'eau en rénovation recouvert d'une membrane pare-vapeur agrafée et adhésivée, alimentations d'eau en attente, carrelage blanc d'origine conservé à droite",
+      caption: "Illustration : rénovation énergétique d'une pièce d'eau, membrane pare-vapeur posée sur l'isolant et adhésivée au pourtour de la fenêtre, alimentations laissées en attente. Chantier réel des équipes partenaires.",
     },
   },
 ];

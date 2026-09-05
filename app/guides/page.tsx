@@ -199,12 +199,17 @@ export default function Page() {
         sont un jour ajoutées aux 12 cartes de guides ci-dessous, qui n'en ont aucune
         pour l'instant.
       */}
-      <MqSection kicker="Repères visuels" title="Quatre illustrations pédagogiques pour situer les sujets les plus consultés" wide>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <MqSection kicker="Repères visuels" title="Trois illustrations pédagogiques pour situer les sujets les plus consultés" wide>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           <MqFig src={`${M}/schema-repartition-budget.jpg`} alt="Répartition indicative d'un budget de rénovation complète par poste de travaux en pourcentage" caption="Répartition indicative d'un budget de rénovation complète par poste : ordres de grandeur, à confirmer par un chiffrage détaillé." />
           <MqFig src={`${M}/schema-mur-porteur.jpg`} alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge" caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis." />
           <MqFig src={`${M}/schema-demarches-copropriete.jpg`} alt="Parcours administratif d'un chantier en copropriété : syndic, assemblée générale, autorisation, déclaration en mairie" caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire." />
-          <MqFig src="/photos/chantiers/chIsolationCombles.jpeg" alt="Isolation thermique par l'intérieur en cours, laine minérale entre ossature métallique, chantier réel" caption="Isolation thermique par l'intérieur en cours : laine minérale posée entre ossature métallique, murs et plafond, avant fermeture en plaques de plâtre. Chantier réel des équipes partenaires." />
+          {/* 05/09 : la 4e tuile (chIsolationCombles) est retirée. Cette rangée présente
+              des SCHÉMAS explicatifs ; une photographie de chantier y était l'intruse, et
+              celle-ci l'était doublement — elle montre une construction neuve, pas une
+              rénovation, et elle était employée sur huit pages du site.
+              À POURVOIR : un quatrième schéma, pas une photo (cf. la note de passe ci-dessus
+              et docs/EMPLACEMENTS-PHOTO-A-POURVOIR.md). La grille passe à trois colonnes. */}
         </div>
       </MqSection>
 

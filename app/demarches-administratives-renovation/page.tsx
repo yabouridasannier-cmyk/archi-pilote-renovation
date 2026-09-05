@@ -243,13 +243,19 @@ export default function DemarchesAdministrativesPage() {
       </MqSection>
 
       <MqSection title="Voisinage et nuisances" lead="Anticiper limite les tensions pendant le chantier.">
-        <div className="mb-8">
-          <MqFig
-            src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
-            alt="Démolition d'une cloison ancienne, phase la plus bruyante d'un chantier, chantier réel"
-            caption="Démolition : la phase la plus bruyante d'un chantier, celle qui justifie le plus une information préalable du voisinage. Chantier réel des équipes partenaires."
-          />
-        </div>
+        {/* 05/09 — EMPLACEMENT PHOTO VOLONTAIREMENT LAISSÉ VIDE.
+            chDemolitionCloisonBoisPlatre a été retirée : cette prise de vue était affichée
+            sur cinq pages (cf. scripts/surexposition.py) et a été ramenée aux deux où elle
+            est la plus justifiée. Aucune photo de la photothèque ne peut la remplacer ici
+            sans redevenir un doublon : les quatre seules scènes de démolition disponibles
+            sont déjà employées deux à trois fois chacune ailleurs.
+            Aucun substitut n'a été forcé — mettre une photo hors sujet (la photothèque
+            contient surtout de la menuiserie) aurait été pire que pas de photo.
+            À POURVOIR avec les photos que le client doit fournir. Le sujet exact attendu
+            par cette section n'est d'ailleurs pas la démolition mais le VOISINAGE :
+            protections des parties communes, escalier bâché, affichage d'information dans
+            le hall, benne ou zone de stockage sur la voirie.
+            Cf. docs/EMPLACEMENTS-PHOTO-A-POURVOIR.md */}
         <MqChecklist
           cols={1}
           items={[

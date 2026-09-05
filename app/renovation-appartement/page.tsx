@@ -227,10 +227,16 @@ export default function Page() {
         */}
         <p className="eyebrow mt-10">Étapes réelles d'une rénovation d'appartement pilotée de A à Z</p>
         <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 items-start">
+          {/* 05/09 : chDemolitionCloisonBoisPlatre retirée d'ici — même prise de vue que
+              celle affichée sur quatre autres pages (cf. scripts/surexposition.py). La
+              remplaçante montre une AUTRE pièce du même appartement, à la même étape :
+              murs décapés jusqu'au support, alimentations neuves déjà tirées en pied de
+              mur. Elle illustre donc mieux ce que « dépose » veut dire au début d'une
+              rénovation d'appartement — la pièce vidée, pas seulement un mur cassé. */}
           <MqFig
-            src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
-            alt="Cloison ancienne ouverte jusqu'au lattis de bois et au plâtre, tas de gravats et perforateur au sol, pièce voisine décapée"
-            caption="Dépose : la cloison est ouverte jusqu'au lattis bois d'origine, gravats et perforateur au sol, pièce voisine décapée jusqu'au plâtre. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chDemolitionLattisPlatreChantier2.jpeg"
+            alt="Pièce d'appartement ancien vue depuis une embrasure : murs décapés jusqu'au support, lambeaux de papier peint, alimentations d'eau chaude et froide tirées en pied de mur, fenêtre au fond"
+            caption="Dépose : la pièce est vidée et les murs décapés jusqu'au support, lambeaux de papier peint encore visibles, alimentations neuves déjà tirées en pied de mur. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
           <MqFig

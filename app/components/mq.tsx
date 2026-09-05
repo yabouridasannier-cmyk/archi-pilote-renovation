@@ -41,11 +41,14 @@ export function MqProse({ children }: { children: React.ReactNode }) {
   return <div className="flex flex-col gap-4 text-[1.02rem] leading-relaxed text-ivoire/85 max-w-2xl [&_strong]:font-semibold [&_strong]:text-ivoire">{children}</div>;
 }
 
-export function MqFig({ src, alt, caption, ratio = "aspect-[4/3]" }: { src: string; alt: string; caption?: string; ratio?: string }) {
+/* `entier` : affiche l'image en entier au lieu de la recadrer au format du cadre.
+   Réservé aux schémas et infographies, dont le texte touche les bords : recadrés
+   comme une photo, ils perdent leur titre ou leur légende. */
+export function MqFig({ src, alt, caption, ratio = "aspect-[4/3]", entier = false }: { src: string; alt: string; caption?: string; ratio?: string; entier?: boolean }) {
   return (
     <figure className="border border-line bg-surface rounded-[2px] overflow-hidden">
       <div className={`relative ${ratio} overflow-hidden`}>
-        <img src={src} alt={alt} loading="lazy" className="absolute inset-0 size-full object-cover" />
+        <img src={src} alt={alt} loading="lazy" className={`absolute inset-0 size-full ${entier ? "object-contain" : "object-cover"}`} />
       </div>
       {caption && <figcaption className="px-4 py-3 text-[0.82rem] leading-snug text-muted border-t border-line">{caption}</figcaption>}
     </figure>

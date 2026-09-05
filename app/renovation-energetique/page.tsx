@@ -180,13 +180,15 @@ export default function Page() {
           de la toiture uniquement, les murs sont en briques monomur encore nues. Légende
           corrigée pour ne décrire que l'ouvrage visible.
         */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
-          <MqFig
-            src="/photos/chantiers/chIsolationCombles.jpeg"
-            alt="Laine minérale posée entre les chevrons d'une toiture, ossature métallique en attente et ouvrier vissant une plaque de plâtre depuis un échafaudage roulant"
-            caption="Isolation de toiture en cours : laine minérale posée entre chevrons, ossature métallique en place et pose des plaques de plâtre en cours depuis l'échafaudage. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
-          />
+        <div className="grid grid-cols-1 gap-5 mt-10 max-w-md">
+          {/* 05/09 : chIsolationCombles retirée de cette page. La légende avait déjà été
+              corrigée le 03/09 pour ne décrire que l'ouvrage visible, mais le fond du
+              problème restait : la photo montre une CONSTRUCTION NEUVE (briques monomur
+              nues), sur la page qui traite précisément de la rénovation énergétique de
+              l'existant. Elle était par ailleurs affichée sur huit pages.
+              La figure voisine, chIsolationLaineUrsaVarioSdb, documente le même geste sur
+              un vrai chantier de rénovation et suffit ici ; la grille passe à une colonne.
+              À POURVOIR : une isolation de combles ou de rampants sur bâti EXISTANT. */}
           <MqFig
             src="/photos/chantiers/chIsolationLaineUrsaVarioSdb.jpeg"
             alt="Isolation par l'intérieur en laine minérale posée entre montants, joints et pourtour d'une fenêtre neuve repris à la bande adhésive, chantier réel"

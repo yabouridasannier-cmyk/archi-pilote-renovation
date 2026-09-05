@@ -412,10 +412,22 @@ export default function Page() {
           l'évacuation — deux gestes cités dans le texte mais non documentés par la photothèque.
         */}
         <div className="max-w-md">
+          {/* 05/09 : chDemolitionCloisonBoisPlatre retirée d'ici. Mesure faite avec
+              scripts/surexposition.py : cette prise de vue (le mur éventré avec le tas de
+              gravats et le perforateur au sol) était affichée sur CINQ pages — ici,
+              /demarches-administratives-renovation, /ouverture-mur-porteur,
+              /renovation-appartement et l'article « signes-mur-porteur-avant-travaux » —
+              sous trois noms de fichiers différents qui masquaient la répétition.
+              Elle est conservée là où elle est la plus justifiée : l'article sur le mur
+              porteur (le lattis à nu EST le sujet) et /ouverture-mur-porteur (où elle
+              ouvre une séquence démolition → portique acier du même chantier).
+              La remplaçante montre la même cloison à une étape plus tardive : plâtre
+              décroché, sol balayé, embrasure dégagée — donc un autre moment, pas un
+              autre cadrage du même instant. */}
           <MqFig
-            src="/photos/chantiers/chDemolitionCloisonBoisPlatre.jpeg"
-            alt="Cloison ancienne en pan de bois et plâtre déposée, lattis et poteaux mis à nu sur toute la hauteur, tas de gravats et perforateur au sol"
-            caption="Cloison ancienne en pan de bois et plâtre déposée : lattis et poteaux mis à nu sur toute la hauteur, tas de gravats de plâtre et perforateur au sol. Chantier réel des équipes partenaires."
+            src="/photos/chantiers/chDemolitionOuvertureCouloir.jpeg"
+            alt="Cloison en pan de bois dégarnie de son plâtre, poteaux et lattes clouées apparents sur toute la hauteur, embrasure dégagée vers la pièce voisine"
+            caption="Cloison ancienne dégarnie de son plâtre : poteaux et lattes clouées apparents sur toute la hauteur, embrasure dégagée vers la pièce voisine, sol balayé après évacuation des gravats. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>

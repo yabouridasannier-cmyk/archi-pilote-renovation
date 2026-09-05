@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
 export const metadata: Metadata = {
@@ -8,7 +9,6 @@ export const metadata: Metadata = {
   alternates: { canonical: "/charte-qualite" },
 };
 
-const M = "/photos/maquette";
 
 export default function Page() {
   return (
@@ -80,14 +80,29 @@ export default function Page() {
       </MqSection>
 
       <MqSection kicker="Avant livraison" title="Quatre points de détail vérifiés avant réception" wide>
+        {/* 05/09 — LES QUATRE PHOTOS DE CHANTIER SONT REMPLACÉES PAR LES QUATRE SCHÉMAS
+            FOURNIS PAR LE CLIENT (Ilann Atlan, 04/09 au soir, un envoi par détail).
+            Pourquoi le changement : les photos précédentes montraient bien chacune leur
+            ouvrage, mais elles ne montraient pas CE QUI EST CONTRÔLÉ dessus. Un lecteur
+            voyait une douche verte, un tableau dans un placard, deux portes — sans savoir
+            ce que l'œil du pilote y cherche. Les schémas nomment les points observés.
+            Format : 3:2, affichés en entier (`entier`) et non recadrés — ils portent leur
+            titre en haut et leur signature en bas, un recadrage les décapiterait.
+            Honnêteté : ce sont des dessins, pas des preuves de chantier. Ils ne portent
+            donc PAS la mention « Chantier réel des équipes partenaires », et la note sous
+            la grille dit explicitement ce qu'ils sont. Les preuves photographiques réelles
+            restent portées par la galerie de /realisations et la section « L'ouvrage caché ». */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <MqFig src={`${M}/chantier-nappe-etancheite-douche.jpg`} alt="Salle d'eau avant carrelage : natte d'étanchéité appliquée au sol et sur les murs, bandes de renfort en angle et siphon de sol" caption="Étanchéité contrôlée avant carrelage : continuité de la natte entre murs et sol, bandes d'angle et pente vers le siphon." />
-          <MqFig src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg" alt="Tableau électrique et compteur intégrés dans un placard sur mesure, disjoncteurs visibles avant pose des finitions" caption="Tableau électrique contrôlé et accessible avant fermeture du placard technique. Chantier réel des équipes partenaires." />
-          <MqFig src="/photos/chantiers/chCouloirPortesBoisJumelles.jpeg" alt="Deux portes intérieures en bois posées dans un couloir en chantier, sol encore protégé par un film avant finitions" caption="Alignement et aplomb des menuiseries vérifiés avant retrait des protections de chantier. Chantier réel des équipes partenaires." />
-          <MqFig src="/photos/chantiers/chSdbCarreauxCiment.jpeg" alt="Douche à carreaux de ciment avec vasque en pierre, tube de mastic silicone posé sur le plan avant retrait des films de protection" caption="Joints silicone et étanchéité de la vasque contrôlés avant dépose des films de protection. Chantier réel des équipes partenaires." />
+          <MqFig entier ratio="aspect-[3/2]" src="/photos/pedagogie/schema-detail-1-etancheite-avant-carrelage.jpg" alt="Schéma d'une douche en coupe avant carrelage : continuité de l'étanchéité entre murs et sol, bandes de renfort dans les angles, manchettes aux traversées, pente vers l'évacuation et liaison étanche avec le siphon" caption="Détail 1 — étanchéité avant carrelage : continuité murs et sol, angles et raccords renforcés, traversées traitées, siphon intégré au système." />
+          <MqFig entier ratio="aspect-[3/2]" src="/photos/pedagogie/schema-detail-2-tableau-electrique-accessible.jpg" alt="Schéma d'un tableau électrique intégré dans un placard sur mesure, portes ouvertes : accès dégagé sur toute la hauteur, circuits repérés, protections identifiées" caption="Détail 2 — tableau électrique accessible : accès maintenu après finition, porte entièrement ouvrable, circuits repérés. Les vérifications électriques sont réalisées par l'entreprise qualifiée." />
+          <MqFig entier ratio="aspect-[3/2]" src="/photos/pedagogie/schema-detail-3-menuiseries-reglees.jpg" alt="Schéma de deux portes intérieures avec contrôle à la règle laser : aplomb, jeux réguliers autour de l'ouvrant, quincaillerie réglée et chants inspectés" caption="Détail 3 — menuiseries réglées : aplomb et alignement, jeux réguliers, ouverture sans contrainte, chants et finitions inspectés après retrait des protections." />
+          <MqFig entier ratio="aspect-[3/2]" src="/photos/pedagogie/schema-detail-4-points-eau-testes.jpg" alt="Schéma d'un meuble de salle de bain ouvert montrant les raccordements sous vasque : siphon, robinets d'arrêt accessibles, évacuation et joint sanitaire continu" caption="Détail 4 — points d'eau testés : absence de fuite aux raccords, écoulement sans stagnation, joints sanitaires continus, accès au siphon et aux robinets d'arrêt. Les essais de plomberie sont réalisés par l'entreprise qualifiée." />
         </div>
         <p className="text-[0.82rem] text-muted mt-4 max-w-3xl">
-          Quatre chantiers différents illustrent ici chacun leur propre point de contrôle — étanchéité, tableau électrique, menuiserie, joints — sans prétendre provenir d&apos;un même chantier.
+          Ces quatre illustrations sont des <strong className="text-ivoire/80">schémas pédagogiques</strong> : elles
+          représentent les points observés lors des contrôles, elles ne documentent pas un chantier particulier et
+          n&apos;ont pas valeur de document d&apos;exécution. Les photographies de chantiers réellement pilotés sont
+          rassemblées dans nos <Link href="/realisations" className="text-orange hover:underline">réalisations</Link>.
         </p>
       </MqSection>
 
