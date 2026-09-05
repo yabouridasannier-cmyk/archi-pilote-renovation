@@ -1,396 +1,451 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { MqHero, MqSection, MqProse, MqFig, MqStats, MqNumbered, MqChecklist, MqFaq, MqCta, MqReadNext } from "../components/mq";
+import { MqHero, MqSection, MqProse, MqFig, MqNumbered, MqChecklist, MqDark, MqDarkSteps, MqFaq, MqCta, MqReadNext } from "../components/mq";
 
-/* 03/09 : le diptyque d'ouverture n'était pas un avant/après. Les deux photos viennent
-   de deux chantiers différents, et la légende « Avant » affirmait deux choses que
-   l'image contredit : les boiseries n'y sont pas déposées (elles sont encore en place,
-   dégradées) et le sol n'est pas protégé (le parquet est déposé, l'espace entre solives
-   est rempli de granulés isolants). Les deux légendes décrivent désormais uniquement ce
-   qui est visible et n'annoncent plus un même bien avant/après. */
+/* 05/09/2026 — RÉÉCRITURE COMPLÈTE, sur directives du client (dossier transmis le 04/09).
+   Le reproche de fond : la page était un long article généraliste sur les travaux, pas une
+   page de service consacrée au pilotage. Elle devait répondre vite à six questions —
+   qu'est-ce qu'une rénovation complète, quel est notre rôle, dans quel ordre se prennent
+   les décisions, qui exécute et facture, comment le budget est structuré, comment demander
+   une première étude.
+
+   TROIS FORMULATIONS ONT ÉTÉ SUPPRIMÉES, sur demande explicite et pour de bonnes raisons :
+   — « La difficulté n'est pas de trouver des entreprises » : c'est faux, et cela minimise
+     une difficulté réelle du marché.
+   — « Une rénovation complète échoue rarement par manque de compétence technique » :
+     affirmation trop absolue, indémontrable.
+   — « Pilote le budget de A à Z » : promesse trop large. On parle désormais de
+     structuration, d'analyse et de suivi budgétaire, ce qui est ce que l'on fait vraiment.
+
+   Deux points de méthode conservés du dossier :
+   — la méthode en six étapes est rendue en HTML et non dans une image contenant du texte
+     (lisible à l'agrandissement, sélectionnable, indexable, accessible aux lecteurs
+     d'écran) ;
+   — aucun pourcentage d'économie garanti n'apparaît. Une économie éventuelle s'évalue
+     projet par projet et se démontre par les devis. */
+
+const FAQ = [
+  {
+    q: "Quel budget prévoir pour une rénovation complète ?",
+    a: "Il n'existe pas de prix au mètre carré fiable pour une rénovation complète : le budget dépend de l'état réel du bien, de la surface, des modifications de structure, des démarches administratives, des produits choisis et du niveau de finition. La méthode consiste à décomposer le budget par familles de postes, à prévoir une réserve pour aléas, puis à confronter cette décomposition aux devis reçus. Les fourchettes indicatives et datées que nous publions poste par poste sont réunies dans l'observatoire des prix.",
+  },
+  {
+    q: "Combien de temps dure une rénovation complète ?",
+    a: "La durée se compte en deux temps qu'il ne faut pas confondre. Le temps de préparation — diagnostics, études, autorisations, consultation et comparaison des entreprises — précède le chantier et dépend surtout des délais administratifs. Le temps de travaux, lui, commence une fois le chantier lancé. Un appartement sans reprise de structure se situe le plus souvent entre huit et seize semaines de travaux ; une maison avec reprises structurelles entre quatre et sept mois. Ces ordres de grandeur supposent les autorisations obtenues, les entreprises disponibles et aucune découverte majeure derrière les murs : ce ne sont pas des délais garantis.",
+  },
+  {
+    q: "Peut-on habiter le logement pendant les travaux ?",
+    a: "Cela dépend de l'ampleur du chantier. Une rénovation qui touche en même temps l'électricité, la plomberie et la structure rend le logement difficilement habitable pendant plusieurs semaines, faute d'eau et d'électricité stabilisées. Sur une maison, un phasage par zones permet parfois de rester sur place, au prix d'une organisation plus lourde et souvent d'un chantier plus long.",
+  },
+  {
+    q: "Quand faut-il faire intervenir un architecte ou un ingénieur structure ?",
+    a: "Ce n'est pas systématique. Le recours à un architecte DPLG ou à un ingénieur structure partenaire indépendant devient nécessaire dès qu'un ouvrage engage la stabilité du bâtiment — ouverture de mur porteur, création de trémie, surélévation, extension — ainsi que dans les cas où la réglementation impose le recours à un architecte pour le dépôt du dossier. Ce besoin est identifié pendant l'étude de faisabilité, avant tout engagement financier. Chacun de ces professionnels intervient dans son propre domaine de compétence, sous ses propres responsabilité et assurance.",
+  },
+  {
+    q: "Qui établit les devis et facture les travaux ?",
+    a: "Chaque entreprise partenaire contractante établit son propre devis, exécute son lot et facture directement le client. Elle reste responsable de ses travaux, de ses obligations et de ses assurances. ARCHI PILOTE RÉNOVATION n'exécute pas les travaux et ne les facture pas : ses honoraires d'accompagnement sont identifiés séparément des montants facturés par les entreprises.",
+  },
+  {
+    q: "Peut-on acheter directement les matériaux ?",
+    a: "Sur certains postes, oui. Le client règle alors le fournisseur sans passer par l'entreprise, ce qui supprime la marge d'intermédiation sur ces lignes. Ce n'est pertinent que si les références, les quantités, les délais de livraison, le lieu de stockage et la répartition des responsabilités sont définis à l'avance : un matériau fourni par le client engage sa propre responsabilité en cas d'erreur de référence, de quantité insuffisante ou de retard de livraison. L'économie éventuelle s'évalue projet par projet et se vérifie sur les devis, elle ne se promet pas à l'avance.",
+  },
+  {
+    q: "Quelles démarches prévoir en copropriété ?",
+    a: "Des travaux réalisés à l'intérieur d'un lot privatif peuvent nécessiter une information ou une autorisation du syndic dès qu'ils touchent aux parties communes, aux réseaux communs ou à l'aspect extérieur de l'immeuble. La majorité applicable en assemblée générale dépend de la nature exacte des travaux et se vérifie avec le syndic. Le calendrier des assemblées générales conditionne le démarrage : c'est l'une des premières choses à caler, bien avant les devis.",
+  },
+  {
+    q: "Dans quelles zones intervenez-vous ?",
+    a: "Paris, les Hauts-de-Seine et l'Île-de-France. D'autres secteurs peuvent être envisagés après étude du projet.",
+  },
+];
+
+/* Données structurées. Service et FAQPage décrivent la page ; BreadcrumbList situe la page
+   dans l'arborescence. Les réponses de la FAQ sont celles RÉELLEMENT affichées en HTML
+   ci-dessous : un balisage qui annoncerait des réponses absentes de la page serait une
+   non-conformité aux consignes de Google, en plus d'être trompeur. */
+const JSON_LD = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      name: "Pilotage de rénovation complète",
+      serviceType: "Pilotage et accompagnement de rénovation complète",
+      provider: { "@type": "ProfessionalService", name: "ARCHI PILOTE RÉNOVATION", url: "https://www.archipiloterenovation.com" },
+      areaServed: [
+        { "@type": "City", name: "Paris" },
+        { "@type": "AdministrativeArea", name: "Hauts-de-Seine" },
+        { "@type": "AdministrativeArea", name: "Île-de-France" },
+      ],
+      url: "https://www.archipiloterenovation.com/renovation-complete",
+      description:
+        "Cadrage du projet, hiérarchisation des décisions, analyse des chiffrages et suivi des étapes d'une rénovation complète. Les entreprises partenaires contractantes exécutent et facturent leurs prestations.",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: FAQ.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Accueil", item: "https://www.archipiloterenovation.com" },
+        { "@type": "ListItem", position: 2, name: "Rénovation complète", item: "https://www.archipiloterenovation.com/renovation-complete" },
+      ],
+    },
+  ],
+};
 
 export const metadata: Metadata = {
-  title: "Rénovation complète : structurer votre projet | ARCHI PILOTE",
+  title: "Rénovation complète à Paris et en Île-de-France | ARCHI PILOTE",
   description:
-    "Une rénovation complète touche en même temps la structure, la distribution des pièces, l'électricité, la plomberie, l'isolation, la ventilation, les menuiseries…",
+    "Pilotage et accompagnement de rénovations complètes : budget, devis, structure, réseaux, démarches et entreprises partenaires à Paris et en Île-de-France.",
   alternates: { canonical: "/renovation-complete" },
 };
+
+const REPERES = [
+  "Contraintes techniques identifiées",
+  "Budget structuré par familles de postes",
+  "Devis comparés sur un périmètre commun",
+  "Interlocuteurs spécialisés selon le projet",
+];
+
+const METHODE = [
+  { title: "Comprendre les usages et les priorités", text: "Le nombre de pièces, la circulation, la lumière, les rangements et les équipements envisagés déterminent l'emplacement des cloisons, des prises et des points d'eau — donc les chiffrages. Ce cadrage précède toute consultation d'entreprise." },
+  { title: "Observer le bien et identifier les contraintes", text: "Lecture du bien existant : état des supports, humidité, réseaux en place, ancienneté de l'installation électrique, accès au chantier, contraintes de copropriété." },
+  { title: "Examiner la structure, les réseaux et les démarches", text: "Nature réelle des murs, sens de portée des planchers, capacité des réseaux communs, autorisations à obtenir. Un architecte ou un ingénieur structure partenaire indépendant est sollicité lorsque le dossier l'exige." },
+  { title: "Décomposer le budget et rendre les devis comparables", text: "Le budget est découpé par familles de postes, avec une réserve pour aléas. Les chiffrages reçus sont rapprochés ligne par ligne sur un périmètre commun, sans quoi deux totaux identiques peuvent recouvrir des prestations très différentes." },
+  { title: "Aider au choix des entreprises et des partenaires spécialisés", text: "Vérification des assurances et des références, comparaison des périmètres, mise en relation. Le client contracte directement avec chaque entreprise." },
+  { title: "Piloter les décisions, documenter les étapes et préparer la réception", text: "Suivi du phasage et des interfaces entre lots, photographies datées des ouvrages avant qu'ils ne soient recouverts, liste de réserves à la réception et suivi jusqu'à leur levée." },
+];
+
+const MODELE = [
+  { title: "Honoraires identifiables", text: "Les honoraires d'accompagnement sont distingués des montants facturés par les entreprises. Ils apparaissent sur une ligne distincte, jamais fondus dans le prix des travaux." },
+  { title: "Entreprises contractantes", text: "Chaque entreprise établit son devis, exécute son lot et facture directement le client. Elle demeure responsable de ses travaux, de ses obligations et de ses assurances." },
+  { title: "Achats directs possibles", text: "Selon le projet, certains matériaux peuvent être achetés directement par le client auprès du fournisseur. Les références, quantités, délais et responsabilités sont définis à l'avance." },
+  { title: "Devis réellement comparables", text: "Les chiffrages sont rapprochés ligne par ligne sur un périmètre commun : préparations, fournitures, finitions, protections, évacuations, délais et exclusions." },
+];
+
+/* Les quatre décisions renvoient chacune vers la ressource qui la traite en détail :
+   sans ce renvoi, la rubrique énonce un conseil sans donner les moyens de l'appliquer. */
+const DECISIONS = [
+  { title: "Vérifier la nature des murs", text: "Un mur épais n'est pas automatiquement porteur, et un mur fin n'est pas automatiquement sans rôle structurel. Quatre indices se recoupent — épaisseur, alignement vertical, sens de portée des planchers, position dans le bâtiment — et le doute se lève par un sondage, pas à l'œil.", href: "/ouverture-mur-porteur", lien: "Ouverture de mur porteur" },
+  { title: "Anticiper les démarches auprès du syndic", text: "En copropriété, le calendrier des assemblées générales conditionne le démarrage. Certains travaux réalisés à l'intérieur du lot nécessitent malgré tout une autorisation dès qu'ils touchent aux parties communes ou aux réseaux communs.", href: "/demarches-administratives-renovation", lien: "Démarches administratives" },
+  { title: "Séparer le socle indispensable des options", text: "Un budget lisible distingue ce qui conditionne l'habitabilité — structure, réseaux, étanchéité, ventilation — de ce qui relève de l'amélioration. C'est cette séparation qui permet d'arbitrer sans casser le projet quand une découverte de chantier pèse sur l'enveloppe.", href: "/observatoire-prix-renovation", lien: "Observatoire des prix" },
+  { title: "Prévoir la documentation du chantier", text: "Les réseaux, l'étanchéité et les supports disparaissent derrière les finitions. Ce qui n'a pas été photographié avant fermeture ne sera plus vérifiable ensuite, sauf à rouvrir l'ouvrage.", href: "/charte-qualite", lien: "Charte qualité" },
+];
+
+/* Les quatre schémas fournis par le client le 04/09. Affichés ENTIERS : ils portent leur
+   titre en haut et leur signature en bas, un recadrage au format du cadre les décapiterait.
+   Ce sont des dessins, pas des preuves de chantier — la note sous la grille le dit. */
+const CONTROLES = [
+  { src: "/photos/pedagogie/schema-detail-1-etancheite-avant-carrelage.jpg", alt: "Schéma d'une douche en coupe avant carrelage : continuité de l'étanchéité entre murs et sol, bandes de renfort dans les angles, manchettes aux traversées et liaison étanche avec le siphon", cap: "Étanchéité avant carrelage : continuité entre murs et sol, angles et raccords renforcés, traversées traitées, siphon intégré au système." },
+  { src: "/photos/pedagogie/schema-detail-2-tableau-electrique-accessible.jpg", alt: "Schéma d'un tableau électrique intégré dans un placard sur mesure, portes ouvertes, accès dégagé sur toute la hauteur et circuits repérés", cap: "Tableau électrique accessible : accès maintenu après finition, porte entièrement ouvrable, circuits repérés. Les vérifications électriques sont réalisées par l'entreprise qualifiée." },
+  { src: "/photos/pedagogie/schema-detail-3-menuiseries-reglees.jpg", alt: "Schéma de deux portes intérieures contrôlées à la règle laser : aplomb, jeux réguliers autour de l'ouvrant, quincaillerie réglée et chants inspectés", cap: "Menuiseries réglées : aplomb et alignement, jeux réguliers, ouverture sans contrainte, chants inspectés après retrait des protections." },
+  { src: "/photos/pedagogie/schema-detail-4-points-eau-testes.jpg", alt: "Schéma d'un meuble de salle de bain ouvert montrant les raccordements sous vasque : siphon, robinets d'arrêt accessibles, évacuation et joint sanitaire continu", cap: "Points d'eau testés : absence de fuite aux raccords, écoulement sans stagnation, joints continus, accès au siphon et aux robinets d'arrêt. Les essais de plomberie sont réalisés par l'entreprise qualifiée." },
+];
+
+const lien = "text-orange-deep underline underline-offset-4 hover:text-orange transition-colors";
 
 export default function Page() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(JSON_LD) }} />
+
       <MqHero
         kicker="Rénovation complète"
-        title="Rénovation complète : organiser avant d'exécuter"
-        lead="Une rénovation complète touche en même temps la structure, la distribution des pièces, l'électricité, la plomberie, l'isolation, la ventilation, les menuiseries et les finitions. La difficulté n'est pas de trouver des entreprises, mais d'ordonner correctement les décisions. ARCHI PILOTE RÉNOVATION structure le projet, hiérarchise les postes par niveau de risque et pilote le budget de A à Z, pendant que les entreprises partenaires contractantes exécutent et facturent chaque lot."
-      />
+        title="Pilotage de rénovation complète à Paris et en Île-de-France"
+        lead={
+          <>
+            <p>
+              Une rénovation complète engage simultanément la distribution des espaces, la structure, les réseaux
+              techniques, l&apos;isolation, la ventilation, les menuiseries et les finitions. Chaque décision influence
+              les suivantes.
+            </p>
+            <p className="mt-4">
+              ARCHI PILOTE RÉNOVATION accompagne le cadrage du projet, hiérarchise les priorités, analyse les chiffrages
+              et pilote les décisions d&apos;ensemble. Les entreprises partenaires contractantes exécutent et facturent
+              directement leurs prestations, sous leurs propres responsabilités et assurances.
+            </p>
+          </>
+        }
+      >
+        <Link href="/contact" className="btn btn-primary">Étudier mon projet</Link>
+        <Link href="/notre-methode" className="btn btn-ghost">Découvrir notre méthode</Link>
+      </MqHero>
 
-      <section className="pb-4">
+      <section className="pb-10">
         <div className="container-site max-w-4xl">
-          {/*
-            03/09 : ratio corrigé sur la seconde photo. Le fichier est en 1600 × 901, soit du 16/9,
-            et il était affiché dans un cadre 4/3 : object-cover rognait un quart de sa LARGEUR,
-            c'est-à-dire les deux extrémités de la pièce (le coin salon à gauche, le plan de
-            travail et son mitigeur à droite) — précisément ce qui montre que la cuisine est
-            ouverte sur le séjour, seul propos de la légende. Chaque cadre suit désormais son
-            ratio natif, et items-start aligne les deux figures par le haut malgré leurs hauteurs
-            différentes.
-          */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
-            <MqFig
-              src="/photos/chantiers/chDemolitionBoiseriesHaussmannien.jpeg"
-              alt="Salon d'appartement ancien en cours de rénovation complète : parquet déposé, granulés isolants versés entre les solives, boiseries d'origine encore en place"
-              caption="En cours de chantier : parquet déposé jusqu'aux solives et granulés isolants versés entre lambourdes, boiseries d'origine encore en place. Chantier réel des équipes partenaires."
-              ratio="aspect-[4/3]"
-            />
-            <MqFig
-              src="/photos/chantiers/chCuisineSejourParquetChevrons.jpeg"
-              alt="Cuisine ouverte sur séjour livrée après une rénovation complète d'appartement, parquet posé à chevrons"
-              caption="Autre chantier, une fois livré : cuisine ouverte sur séjour, parquet posé à chevrons. Chantier réel des équipes partenaires."
-              ratio="aspect-[16/9]"
-            />
-          </div>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line rounded-[2px] overflow-hidden">
+            {REPERES.map((r) => (
+              <li key={r} className="bg-surface px-5 py-4 text-[0.9rem] leading-snug text-ivoire/85">{r}</li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <MqSection
-        title="Pourquoi l'ordre des décisions détermine tout le reste"
-        lead="Une rénovation complète échoue rarement par manque de compétence technique : elle échoue par un mauvais séquencement des choix. Chaque décision prise trop tard renchérit les suivantes."
+        title="Une rénovation complète se décide avant de se chiffrer"
+        lead="Les dérives de budget et de délai proviennent souvent de décisions prises trop tard, de prestations mal délimitées ou d'interfaces oubliées entre les différents lots."
       >
-        <div className="flex flex-col gap-10">
-          <div>
-            <h3 className="display text-[1.3rem] text-ivoire">Commencer par le plan d'usage, pas par les devis</h3>
-            <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
-              Le nombre de chambres, la circulation, les rangements et les équipements déterminent les réseaux avant même de parler prix.
-            </p>
-            <div className="mt-4">
-              <MqProse>
-                <p>
-                  Beaucoup de propriétaires demandent des devis avant d'avoir arrêté leur plan d'usage. Cette précipitation est l'une des premières causes de surcoût. Le nombre de pièces, la circulation entre elles, la lumière naturelle, les rangements et les équipements envisagés déterminent directement l'emplacement des cloisons, des prises, des points d'eau et des arrivées électriques.
-                </p>
-                <p>
-                  Le pilotage débute donc systématiquement par une lecture du bien existant et un cadrage des usages futurs, avant toute consultation d'entreprise. Cette étape évite de faire chiffrer un projet qui sera modifié quelques semaines plus tard.
-                </p>
-              </MqProse>
-            </div>
-          </div>
-          <div>
-            <h3 className="display text-[1.3rem] text-ivoire">Traiter les sujets lourds avant les sujets visibles</h3>
-            <p className="mt-2 text-muted text-[0.95rem] leading-relaxed max-w-2xl">
-              Structure, réseaux principaux, humidité, isolation et ventilation doivent être examinés avant toute réflexion sur les finitions.
-            </p>
-            <div className="mt-4">
-              <MqProse>
-                <p>
-                  Un client qui choisit son carrelage avant de savoir si un mur est porteur inverse l'ordre naturel du risque. Les interventions structurelles, les réseaux principaux, les problèmes d'humidité, l'isolation d'une passoire énergétique et la ventilation mécanique contrôlée conditionnent la faisabilité même du projet de finition envisagé. Lorsqu'un mur doit être modifié, la marche à suivre est détaillée sur la page consacrée à{" "}
-                  <Link href="/ouverture-mur-porteur" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">l'ouverture de mur porteur</Link>.
-                </p>
-                <p>
-                  Ces sujets lourds sont donc systématiquement examinés en premier, avec le recours à un architecte DPLG ou à un ingénieur structure partenaire indépendant lorsque le dossier l'exige.
-                </p>
-              </MqProse>
-            </div>
-          </div>
-          <MqFig
-            src="/photos/maquette/schema-mur-porteur.jpg"
-            alt="Schéma en coupe d'une ouverture de mur porteur avec poutre de reprise et poteaux de descente de charge"
-            caption="Ouverture de mur porteur : la charge est reprise par une poutre dimensionnée par un ingénieur structure, puis descendue jusqu'aux appuis."
-            ratio="aspect-[10/7]"
-          />
-        </div>
-
-        <div className="mt-10">
+        <MqProse>
+          <p>
+            Avant de consulter les entreprises, il faut définir les usages, identifier les contraintes du bien, traiter
+            les sujets structurels et administratifs, puis construire un périmètre comparable pour les chiffrages.
+          </p>
+          <p>
+            Demander des devis avant d&apos;avoir arrêté le plan d&apos;usage revient à faire chiffrer un projet qui sera
+            modifié quelques semaines plus tard. À l&apos;inverse, choisir son carrelage avant de savoir si un mur est
+            porteur inverse l&apos;ordre du risque : les interventions structurelles, les réseaux principaux,
+            l&apos;humidité, l&apos;isolation et la ventilation conditionnent la faisabilité même des finitions
+            envisagées. Lorsqu&apos;un mur doit être modifié, la marche à suivre est détaillée sur la page consacrée à{" "}
+            <Link href="/ouverture-mur-porteur" className={lien}>l&apos;ouverture de mur porteur</Link>.
+          </p>
+          <p>
+            Une modification décidée sur plan ne coûte presque rien ; la même modification décidée après pose peut
+            remettre en cause plusieurs ouvrages déjà réalisés. Une douche déplacée après étanchéité entraîne des
+            reprises en cascade sur la plomberie, le carrelage et parfois le plafond du niveau inférieur. D&apos;où une
+            validation formelle des plans techniques avant le démarrage de chaque lot.
+          </p>
+        </MqProse>
+        <div className="mt-8">
           <MqFig
             src="/photos/maquette/schema-planning-lots.jpg"
             alt="Ordre logique des lots d'une rénovation complète, de la dépose à la réception"
-            caption="Ordre logique des lots d'une rénovation complète : dépose, gros œuvre, réseaux, cloisons, chapes, carrelage, peinture, cuisine, puis réception des travaux."
+            caption="Ordre logique des lots : dépose, gros œuvre, réseaux, cloisons, chapes, carrelage, peinture, cuisine, puis réception. Schéma pédagogique."
             ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
 
-      <MqSection
-        title="Construire le budget par familles de postes"
-        lead="Un budget de rénovation complète se construit poste par poste, avec une réserve pour aléas, afin d'éviter les arbitrages dans l'urgence."
+      {/* Méthode rendue en HTML et non dans une image contenant du texte : elle reste lisible
+          à l'agrandissement, sélectionnable, indexable et accessible aux lecteurs d'écran.
+          MqDarkSteps écrit en clair (var(--mq-primary-fg)) : il doit impérativement rester
+          dans MqDark, qui fournit le fond sombre. Posé dans une section ordinaire, il
+          s'afficherait en clair sur clair, donc invisible. */}
+      <MqDark
+        kicker="Notre méthode"
+        title="Six décisions dans le bon ordre"
+        lead="Chacune de ces étapes conditionne la suivante. C'est l'ordre, plus que la vitesse, qui protège le budget et le calendrier."
+        cta={{ href: "/notre-methode", label: "Le détail de la méthode" }}
       >
-        <MqProse>
-          <p>
-            La rigueur d'ancien expert en chiffrage appliquée à chaque projet consiste à décomposer le budget en familles homogènes, plutôt que de raisonner en enveloppe globale. Cette décomposition permet d'identifier immédiatement où se situent les marges de négociation et où se situent les postes incompressibles.
-          </p>
-          <p>
-            Poste par poste, les fourchettes indicatives et datées que nous publions sont réunies dans{" "}
-            <Link href="/observatoire-prix-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">l'observatoire des prix de rénovation</Link>. Les devis reçus sont ensuite confrontés ligne à ligne à cette décomposition lors de la{" "}
-            <Link href="/clinique-du-devis" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">clinique du devis</Link>.
-          </p>
-        </MqProse>
-        <MqFig
-          src="/photos/pedagogie/18-renovation-complete-budget.jpeg"
-          alt="Répartition qualitative d'un budget de rénovation complète par grandes familles, sans chiffres"
-          caption="Répartition des familles de coûts d'une rénovation complète. Schéma pédagogique, sans valeur chiffrée."
-          ratio="aspect-[3/2]"
-        />
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-8">
-          {[
-            { title: "Études et diagnostics", text: "Diagnostics techniques, éventuelles études de structure, relevés précis avant chiffrage." },
-            { title: "Dépose et préparation", text: "Curage, évacuation des gravats, protections des parties communes en copropriété." },
-            { title: "Structure et maçonnerie", text: "Ouvertures, reprises de charge, planchers, chapes, éléments porteurs." },
-            { title: "Réseaux techniques", text: "Électricité, plomberie, chauffage, ventilation mécanique contrôlée." },
-            { title: "Isolation et cloisons", text: "Traitement de la passoire énergétique, doublages, cloisons de distribution." },
-            { title: "Menuiseries et équipements", text: "Fenêtres, portes, cuisine, sanitaires, rangements sur mesure." },
-            { title: "Finitions", text: "Peintures, revêtements de sol, faïences, éclairages, dernières retouches." },
-            { title: "Réserve pour ajustements", text: "Marge dédiée aux aléas découverts en cours de chantier, jamais consommée par confort." },
-          ].map((f) => (
-            <div key={f.title} className="flex flex-col gap-2 border-t border-line pt-4">
-              <h3 className="display text-[1.1rem] text-ivoire">{f.title}</h3>
-              <p className="text-muted text-[0.92rem] leading-relaxed">{f.text}</p>
+        <MqDarkSteps steps={METHODE} />
+      </MqDark>
+
+      <MqSection
+        title="Un budget lisible et des responsabilités séparées"
+        lead="Ce qui relève de l'accompagnement et ce qui relève des travaux sont facturés séparément, par des acteurs différents."
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+          {MODELE.map((m) => (
+            <div key={m.title} className="flex flex-col gap-2 border-t border-line pt-4">
+              <h3 className="display text-[1.15rem] text-ivoire">{m.title}</h3>
+              <p className="text-muted text-[0.93rem] leading-relaxed">{m.text}</p>
             </div>
           ))}
         </div>
-      </MqSection>
-
-      <MqSection
-        title="Limiter les changements tardifs, un levier économique concret"
-        lead="Une modification décidée sur plan ne coûte presque rien ; la même modification décidée après pose peut multiplier son coût par cinq ou dix."
-      >
-        <div className="flex flex-col gap-10">
-          <div>
-            <h3 className="display text-[1.3rem] text-ivoire">La valeur économique du bon moment</h3>
-            <div className="mt-4">
-              <MqProse>
-                <p>
-                  Une prise déplacée après peinture coûte nettement plus cher qu'une prise déplacée sur plan. Une douche modifiée après étanchéité peut remettre en cause plusieurs ouvrages déjà réalisés, avec des reprises en cascade sur la plomberie, le carrelage et parfois le plafond de l'étage inférieur.
-                </p>
-                <p>
-                  C'est pourquoi le pilotage impose une validation formelle des plans techniques avant tout démarrage de lot, avec un délai de réflexion suffisant pour que le client visualise concrètement les implantations avant qu'elles ne deviennent irréversibles.
-                </p>
-              </MqProse>
-            </div>
-          </div>
-          {/*
-            03/09 : le planning en lots (schema-planning-lots.jpg) était affiché DEUX FOIS sur
-            cette page — une première fois plus haut, sous « Ordre logique des lots », puis à
-            nouveau ici sous une légende différente. Doublon supprimé : l'unique occurrence
-            reste celle de la section « Pourquoi l'ordre des décisions détermine tout le reste ».
-          */}
-          <div>
-            <h3 className="display text-[1.3rem] text-ivoire">Documents attendus à chaque étape</h3>
-            <div className="mt-5">
-              <MqChecklist
-                items={[
-                  "Plan d'usage validé avant consultation des entreprises",
-                  "Diagnostics techniques disponibles (amiante, plomb, électricité selon l'ancienneté)",
-                  "Plans de réseaux (électricité, plomberie) validés avant ouverture des murs",
-                  "Devis détaillés ligne à ligne des entreprises partenaires contractantes",
-                  "Attestations d'assurance des entreprises exécutantes pour chaque lot",
-                  "Autorisation de copropriété écrite si des parties communes sont concernées",
-                ]}
-              />
-            </div>
-          </div>
-        </div>
-      </MqSection>
-
-      <MqSection
-        title="Qui exécute, qui pilote : une répartition claire des rôles"
-        lead="Les entreprises partenaires contractantes exécutent et facturent les travaux ; le pilotage maintient la cohérence d'ensemble entre décisions, budget et phasage."
-      >
         <MqProse>
-          <p>
-            Les travaux de rénovation complète sont réalisés par les entreprises partenaires contractantes retenues pour chaque lot. Selon la nature du projet, des professionnels indépendants spécialisés, architectes ou ingénieurs structure, peuvent intervenir pour les dossiers lourds nécessitant une étude technique ou une autorisation d'urbanisme.
+          <p className="mt-10">
+            Le budget se construit par familles de postes plutôt qu&apos;en enveloppe globale : études et diagnostics,
+            dépose et préparation, structure et maçonnerie, réseaux techniques, isolation et cloisons, menuiseries et
+            équipements, finitions, et une réserve dédiée aux aléas découverts en cours de chantier. Cette décomposition
+            montre immédiatement où se situent les marges de négociation et où se situent les postes incompressibles.
           </p>
           <p>
-            Le pilotage d'ensemble vise à maintenir un fil commun entre les décisions prises, le budget engagé, le phasage des interventions et les différents intervenants du chantier. Il ne remplace en aucun cas la responsabilité technique propre à chaque professionnel exécutant, qui reste seul garant de son ouvrage.
+            Les fourchettes indicatives et datées que nous publions poste par poste sont réunies dans{" "}
+            <Link href="/observatoire-prix-renovation" className={lien}>l&apos;observatoire des prix</Link>. Les devis
+            reçus y sont confrontés ligne à ligne lors de la{" "}
+            <Link href="/clinique-du-devis" className={lien}>clinique du devis</Link>. Le détail de la facturation est
+            exposé sur la page{" "}
+            <Link href="/modele-economique-transparence" className={lien}>modèle économique</Link>, et les conditions de
+            l&apos;<Link href="/achat-direct-materiaux" className={lien}>achat direct des matériaux</Link> y sont
+            précisées.
           </p>
           <p>
-            Cette organisation s'applique de la même manière sur l'ensemble de notre zone d'intervention, décrite sur la page{" "}
-            <Link href="/renovation-ile-de-france" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">rénovation en Île-de-France</Link>.
+            <strong>Aucun pourcentage d&apos;économie n&apos;est annoncé à l&apos;avance.</strong> Une économie
+            éventuelle dépend du projet, des postes concernés et des prix obtenus ; elle se démontre sur les devis, elle
+            ne se promet pas.
           </p>
         </MqProse>
       </MqSection>
 
       <MqSection
-        title="Points de vigilance spécifiques à la rénovation complète"
-        lead="Certains points reviennent systématiquement sur les chantiers de rénovation complète et méritent une attention particulière dès le cadrage."
+        title="Une solution complète, des responsabilités claires"
+        lead="Un seul interlocuteur pour coordonner l'ensemble, mais des rôles et des responsabilités qui restent distincts."
       >
-        <MqNumbered
-          cols={2}
-          items={[
-            {
-              title: "Vérifier la nature des murs avant tout devis",
-              text: "Un mur épais n'est pas automatiquement porteur, un mur fin n'est pas automatiquement sans rôle structurel. Une vérification s'impose avant tout chiffrage engageant.",
-            },
-            {
-              title: "Anticiper les démarches auprès du syndic",
-              text: "En copropriété, certains travaux, même à l'intérieur du lot, peuvent nécessiter une information ou une autorisation du syndic, notamment pour les réseaux communs.",
-            },
-            {
-              title: "Séparer le socle indispensable des options",
-              text: "Un budget clair distingue ce qui est nécessaire à l'habitabilité de ce qui relève de l'amélioration ou du confort, pour permettre des arbitrages éclairés.",
-            },
-            {
-              title: "Documenter le chantier au fil de l'eau",
-              text: "Le suivi quotidien par photos datées permet de conserver une trace des ouvrages qui seront ensuite recouverts par les finitions.",
-            },
-          ]}
-        />
-        <div className="mt-10 flex flex-col gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
-            <h3 className="display text-[1.05rem] text-ivoire mb-4">Plomberie</h3>
-            {/*
-              03/09 : chantier-plomberie-encastree.jpg (stock) retiré de cette grille. Photo
-              ouverte et comparée à sa légende : elle montre des tuyaux APPARENTS courant le
-              long d'un mur carrelé ancien, sans aucun collecteur visible, alors que la légende
-              annonçait « réseaux encastrés en multicouche depuis un collecteur, avant fermeture
-              des cloisons ». Remplacée par une photo réelle du dossier chantiers/ qui montre
-              exactement ce sujet : nourrices en laiton et départs descendant dans le plancher
-              ouvert, avant refermeture.
-            */}
-            {/*
-              03/09 : 48-plomberie-collecteur-macro.jpeg retirée de cette grille. Les deux images
-              montraient la même chose — deux barres de collecteur en laiton, vannes en ligne,
-              départs souples en dessous — à ceci près que celle de gauche est un vrai chantier et
-              celle de droite une illustration de référence en lumière de studio. Les mettre côte à
-              côte donnait la sensation de doublon signalée par le client, et faisait de surcroît
-              passer un visuel de stock juste à côté d'une photo réelle qui dit la même chose en
-              mieux (le plancher ouvert, lui, se voit).
-              La photo réelle reste seule, en pleine largeur, à son ratio natif 4/3 (1600 × 1200).
-            */}
-            <div>
-              <MqFig
-                src="/photos/chantiers/chNourriceDoubleAnglePlafond.jpeg"
-                alt="Deux nourrices en laiton fixées en angle de plafond, départs multicouche descendant dans un plancher ouvert avec gaines rouges et bleues"
-                caption="Deux nourrices en laiton posées en angle de plafond : chaque départ multicouche est isolable par sa vanne, puis descend dans le plancher ouvert avant refermeture. Chantier réel des équipes partenaires."
-                ratio="aspect-[4/3]"
-              />
-            </div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-4">ARCHI PILOTE RÉNOVATION</h3>
+            <MqChecklist
+              cols={1}
+              items={[
+                "Cadre le besoin et les usages attendus",
+                "Hiérarchise les décisions et leur calendrier",
+                "Analyse les périmètres et les chiffrages",
+                "Aide à sélectionner les interlocuteurs",
+                "Suit le budget et les étapes du chantier",
+                "Documente les points sensibles avant leur fermeture",
+              ]}
+            />
           </div>
           <div>
-            <h3 className="display text-[1.05rem] text-ivoire mb-4">Électricité</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
-              <MqFig
-                src="/photos/pedagogie/49-electricite-tableau-macro.jpeg"
-                alt="Tableau électrique ouvert, deux rangées de disjoncteurs et borniers de terre câblés, encastré dans un mur ancien décroûté"
-                caption="Tableau électrique ouvert dans un mur ancien décroûté : deux rangées de disjoncteurs, borniers de terre et de neutre raccordés avant fermeture du coffret. Illustration de référence, hors chantier documenté sur cette page."
-                ratio="aspect-[3/2]"
-              />
-              <MqFig
-                src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg"
-                alt="Compteur et tableau électriques logés dans un placard sur mesure en MDF brut, portes ouvertes, étagères arrondies en attente de finition"
-                caption="Compteur et tableau logés dans un placard sur mesure en MDF brut, portes ouvertes pour le contrôle, avant peinture et finitions. Chantier réel des équipes partenaires."
-                ratio="aspect-[3/4]"
-              />
-            </div>
-          </div>
-          <div>
-            <h3 className="display text-[1.05rem] text-ivoire mb-4">Étanchéité</h3>
-            {/*
-              03/09 : chParVapeurSopremaMuralSdb.jpeg retirée de ce triptyque, pour deux raisons
-              vérifiées sur le fichier lui-même. (1) Sujet : la photo montre un PARE-VAPEUR
-              (étanchéité à l'AIR, membrane SOPREMA / Isover Vario) et non l'étanchéité sous
-              carrelage dont parle cette section ; elle est déjà employée à sa vraie place, sur
-              /renovation-energetique, dans la section « étanchéité à l'air ». (2) Cadrage : le
-              fichier est en 1600×900 (paysage) alors qu'il était affiché en aspect-[3/4]
-              (portrait), ce qui amputait environ deux tiers de la largeur de l'image.
-            */}
-            {/*
-              03/09 : « pareil pour la salle de bain en bas, c'était les mêmes photos ». Ce bloc
-              affichait les deux seules photos de douche du dossier chantiers/, prises sur le même
-              chantier : même placo hydrofuge vert, même sol béton, même cadrage de coin de local.
-              Vues l'une à côté de l'autre elles se lisaient comme un doublon, alors qu'elles
-              documentent deux gestes différents. Elles sont donc séparées plutôt que supprimées :
-              le sol de douche préparé reste ici, l'implantation du receveur au laser part sur
-              /second-oeuvre, dans la section « Salles d'eau », dont le texte parle justement du
-              positionnement du receveur et du siphon. Aucune des deux pages ne montre plus deux
-              vues du même local à la suite.
-              Portrait 1200 × 1600 laissé en aspect-[3/4] natif, dans un conteneur borné pour ne pas
-              occuper toute la largeur de la colonne de lecture.
-            */}
-            <div className="max-w-sm">
-              <MqFig
-                src="/photos/chantiers/chEtancheiteSolDoucheTrameArmee.jpeg"
-                alt="Sol de douche préparé : treillis d'armature métallique posé sur la dalle, évacuation et siphon en attente, cloisons en plaques hydrofuges"
-                caption="Sol de douche préparé avant étanchéité : treillis d'armature posé sur la dalle, évacuation et siphon laissés en attente, cloisons montées en plaques hydrofuges. Chantier réel des équipes partenaires."
-                ratio="aspect-[3/4]"
-              />
-            </div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-4">Les entreprises partenaires contractantes</h3>
+            <MqChecklist
+              cols={1}
+              items={[
+                "Établissent leurs devis",
+                "Exécutent leurs prestations",
+                "Facturent directement le client",
+                "Restent responsables de leurs assurances, obligations et travaux",
+              ]}
+            />
           </div>
         </div>
-        <div className="mt-10">
+        <MqProse>
+          <p className="mt-10">
+            Selon les besoins du dossier, un architecte DPLG, un architecte d&apos;intérieur, un ingénieur structure ou
+            un bureau d&apos;études partenaire indépendant peut intervenir dans son propre domaine de compétence. La
+            manière dont ces intervenants sont sélectionnés et vérifiés est décrite sur la page{" "}
+            <Link href="/reseau-partenaires" className={lien}>réseau de partenaires</Link>. Cette organisation
+            s&apos;applique sur l&apos;ensemble de notre zone d&apos;intervention, décrite sur la page{" "}
+            <Link href="/renovation-ile-de-france" className={lien}>rénovation en Île-de-France</Link>.
+          </p>
+        </MqProse>
+      </MqSection>
+
+      <MqSection
+        title="Quatre décisions à prendre avant de consulter les entreprises"
+        lead="Ces quatre points reviennent sur pratiquement tous les chantiers de rénovation complète, et se traitent avant le premier devis."
+        wide
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
+          {DECISIONS.map((d, i) => (
+            <div key={d.title} className="flex flex-col gap-2 border-t border-line pt-4">
+              <span className="font-mono text-[0.72rem] text-muted">{String(i + 1).padStart(2, "0")}</span>
+              <h3 className="display text-[1.15rem] text-ivoire">{d.title}</h3>
+              <p className="text-muted text-[0.93rem] leading-relaxed">{d.text}</p>
+              <Link href={d.href} className={`${lien} text-[0.88rem] mt-1`}>{d.lien} →</Link>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 max-w-3xl">
           <MqFig
             src="/photos/maquette/schema-demarches-copropriete.jpg"
             alt="Parcours administratif d'un chantier en copropriété : syndic, assemblée générale, autorisation, déclaration en mairie"
-            caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire."
+            caption="Parcours administratif en copropriété : demande au syndic, passage en assemblée générale, puis déclaration préalable en mairie si nécessaire. Schéma pédagogique."
             ratio="aspect-[10/7]"
           />
         </div>
       </MqSection>
 
       <MqSection
-        title="Budget et délais : ordres de grandeur à connaître"
-        lead="Les fourchettes varient fortement selon l'état du bien, mais quelques repères permettent d'éviter les devis manifestement déconnectés de la réalité du chantier."
+        title="Les éléments invisibles sont documentés avant leur fermeture"
+        lead="Les réseaux, l'étanchéité et les supports disparaissent derrière les finitions. Ce sont eux qui décident de la durée de vie d'une rénovation."
+        wide
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+          <MqFig
+            src="/photos/chantiers/chNourriceDoubleAnglePlafond.jpeg"
+            alt="Deux nourrices en laiton fixées en angle de plafond, départs multicouche descendant dans un plancher ouvert avec gaines rouges et bleues"
+            caption="Deux nourrices en laiton posées en angle de plafond : chaque départ multicouche est isolable par sa vanne, puis descend dans le plancher ouvert avant refermeture. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
+          />
+          <MqFig
+            src="/photos/chantiers/chEtancheiteSolDoucheTrameArmee.jpeg"
+            alt="Sol de douche préparé : treillis d'armature métallique posé sur la dalle, évacuation et siphon en attente, cloisons en plaques hydrofuges"
+            caption="Sol de douche préparé avant étanchéité : treillis d'armature posé sur la dalle, évacuation et siphon laissés en attente, cloisons montées en plaques hydrofuges. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
+        <p className="mt-4 text-[0.82rem] text-muted max-w-3xl">
+          Ces deux photographies proviennent de chantiers réellement pilotés. D&apos;autres sont rassemblées dans nos{" "}
+          <Link href="/realisations" className="text-orange hover:underline">réalisations</Link>, et le principe est
+          détaillé sur la page <Link href="/detail-invisible" className="text-orange hover:underline">l&apos;ouvrage
+          caché</Link>.
+        </p>
+
+        <h3 className="display text-[1.3rem] text-ivoire mt-12">Quatre points de contrôle documentés avant réception</h3>
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5">
+          {CONTROLES.map((c) => (
+            <MqFig key={c.src} entier ratio="aspect-[3/2]" src={c.src} alt={c.alt} caption={c.cap} />
+          ))}
+        </div>
+        <p className="text-[0.82rem] text-muted mt-4 max-w-3xl">
+          Ces quatre illustrations sont des <strong className="text-ivoire/80">schémas pédagogiques</strong> : elles
+          représentent les points observés lors des contrôles. Elles ne documentent pas un chantier particulier et
+          n&apos;ont pas valeur de document d&apos;exécution.
+        </p>
+      </MqSection>
+
+      <MqSection
+        title="Budget et délai : un pré-cadrage, jamais une promesse automatique"
+        lead="Les premiers ordres de grandeur servent à tester la cohérence d'un projet, pas à l'engager."
       >
         <MqProse>
-          <p>Ces ordres de grandeur restent indicatifs et doivent toujours être confrontés à l'état réel du bien découvert lors de la visite technique, avant tout engagement.</p>
+          <p>
+            Le budget et la durée dépendent de l&apos;état réel du bien, de la surface, des modifications structurelles,
+            des démarches administratives, des produits choisis et du niveau de finition. Les premiers ordres de grandeur
+            permettent de tester la cohérence du projet. Ils doivent ensuite être confrontés aux diagnostics, aux études
+            et aux devis des entreprises.
+          </p>
+          <p>
+            Sur les durées, une distinction est nécessaire. Le <strong>temps de préparation</strong> — diagnostics,
+            études, autorisations, consultation et comparaison des entreprises — précède le chantier et dépend surtout
+            des délais administratifs, en particulier du calendrier des assemblées générales en copropriété. Le{" "}
+            <strong>temps de travaux</strong> commence une fois le chantier lancé : de huit à seize semaines pour un
+            appartement sans reprise de structure, de quatre à sept mois pour une maison avec reprises structurelles.
+            Ces ordres de grandeur supposent les autorisations obtenues, les entreprises disponibles et aucune
+            découverte majeure derrière les murs. Ce ne sont pas des délais garantis, et ils n&apos;incluent pas le
+            temps de préparation.
+          </p>
         </MqProse>
         <div className="mt-8">
-          <MqStats
-            items={[
-              { dt: "8-16 sem.", dd: "Appartement standard — Rénovation complète d'un appartement sans reprise structurelle majeure, une fois le chantier démarré." },
-              { dt: "4-7 mois", dd: "Maison avec structure — Rénovation complète d'une maison intégrant des reprises structurelles ou une extension." },
-              { dt: "Prix fournisseur", dd: "Matériaux achetés en direct — Sur les postes qui s'y prêtent, le client règle le fournisseur sans marge d'intermédiation." },
-            ]}
+          <Link href="/estimateur-travaux" className="btn btn-primary">Obtenir un pré-cadrage de mon projet</Link>
+        </div>
+        <div className="mt-10">
+          <MqFig
+            src="/photos/pedagogie/18-renovation-complete-budget.jpeg"
+            alt="Répartition qualitative d'un budget de rénovation complète par grandes familles, sans chiffres"
+            caption="Répartition des familles de coûts d'une rénovation complète. Schéma pédagogique, sans valeur chiffrée."
+            ratio="aspect-[3/2]"
           />
         </div>
       </MqSection>
 
-      <MqSection>
-        <MqFaq
-          items={[
-            {
-              q: "Combien de temps dure une rénovation complète ?",
-              a: "Pour un appartement de taille moyenne, comptez généralement de 8 à 16 semaines de travaux une fois le chantier lancé, hors délais d'obtention des autorisations de copropriété ou d'urbanisme. Une maison avec reprises structurelles s'étale souvent sur 4 à 7 mois. Ces durées dépendent fortement de l'état réel découvert derrière les murs et de la disponibilité des entreprises partenaires contractantes.",
-            },
-            {
-              q: "Faut-il un architecte pour une rénovation complète ?",
-              a: "Ce n'est pas systématique. Un architecte DPLG ou un ingénieur structure partenaire indépendant devient pertinent dès qu'un mur porteur est ouvert, qu'une trémie est créée ou que la surface dépasse les seuils imposant le recours à un architecte. Le pilotage identifie ce besoin dès l'étude de faisabilité, avant tout engagement financier.",
-            },
-            {
-              q: "Peut-on habiter le logement pendant les travaux ?",
-              a: "Cela dépend de l'ampleur du chantier. Une rénovation touchant simultanément l'électricité, la plomberie et la structure rend le logement difficilement habitable pendant plusieurs semaines, notamment sans eau ni électricité stabilisées. Pour une maison, un phasage par zones peut permettre de rester sur place, au prix d'une organisation plus complexe.",
-            },
-            {
-              q: "Comment le budget est-il réellement maîtrisé ?",
-              a: "Le budget est construit par familles de postes, avec une réserve pour aléas, puis confronté ligne à ligne aux devis des entreprises partenaires contractantes lors de la clinique du devis. L'achat direct de certains matériaux par le client, quand c'est pertinent, permet en outre de sortir la marge d'intermédiation de ces lignes.",
-            },
-            {
-              q: "Qui est responsable si un désordre apparaît après travaux ?",
-              a: "La responsabilité technique et les garanties légales relèvent de l'entreprise partenaire contractante qui a exécuté et facturé le lot concerné. ARCHI PILOTE RÉNOVATION structure et pilote le projet, vérifie la cohérence des interventions et le respect du phasage, sans se substituer aux garanties propres à chaque exécutant.",
-            },
-            {
-              q: "Comment le suivi de chantier est-il organisé à distance ?",
-              a: "Chaque avancée notable fait l'objet de photos datées transmises sur WhatsApp, ce qui permet de suivre le chantier au jour le jour même sans présence physique constante. Ce suivi documente aussi les ouvrages destinés à être recouverts, comme les réseaux ou l'étanchéité, avant qu'ils ne disparaissent derrière les finitions.",
-            },
-            {
-              q: "Dans quel ordre les travaux sont-ils réellement exécutés ?",
-              a: "L'ordre suit une logique de risque décroissant : diagnostics, dépose, structure et maçonnerie, réseaux techniques, isolation et cloisons, menuiseries et équipements, puis finitions. Intervertir cet ordre, par exemple poser un revêtement avant d'avoir validé un réseau, entraîne presque toujours des reprises coûteuses.",
-            },
-          ]}
-        />
+      <MqSection title="Questions fréquentes sur la rénovation complète">
+        <MqFaq items={FAQ} />
+        <div className="mt-8">
+          <MqNumbered
+            cols={2}
+            items={[
+              { title: "Documents attendus avant consultation", text: "Plan d'usage validé, diagnostics techniques disponibles selon l'ancienneté du bien, et autorisation écrite de la copropriété si des parties communes sont concernées." },
+              { title: "Documents attendus avant ouverture des murs", text: "Plans de réseaux électricité et plomberie validés, devis détaillés ligne à ligne des entreprises retenues, et attestations d'assurance à jour pour chaque lot." },
+            ]}
+          />
+        </div>
         <p className="mt-8 max-w-2xl border border-line bg-surface rounded-[2px] px-5 py-4 text-[0.85rem] leading-relaxed text-muted">
-          <strong className="font-semibold text-ivoire/80">Rôle et responsabilités.</strong> ARCHI PILOTE RÉNOVATION structure et pilote les projets de rénovation. Selon les besoins, le projet mobilise des entreprises partenaires contractantes et, lorsque nécessaire, des architectes ou ingénieurs partenaires indépendants. Les travaux sont exécutés et facturés par les entreprises concernées.
+          <strong className="font-semibold text-ivoire/80">Rôle et responsabilités.</strong> ARCHI PILOTE RÉNOVATION
+          structure et pilote les projets de rénovation. Selon les besoins, le projet mobilise des entreprises
+          partenaires contractantes et, lorsque nécessaire, des architectes ou ingénieurs partenaires indépendants. Les
+          travaux sont exécutés et facturés par les entreprises concernées.
         </p>
       </MqSection>
 
-      <MqCta />
+      <MqCta
+        title="Votre rénovation commence par des décisions claires"
+        lead="Décrivez le bien, les travaux envisagés, votre calendrier et les principales contraintes déjà identifiées. ARCHI PILOTE RÉNOVATION pourra effectuer une première lecture du projet et préciser les prochaines étapes utiles. Paris, Hauts-de-Seine et Île-de-France. Autres secteurs après étude du projet."
+      />
 
       <MqReadNext
         items={[
+          { href: "/realisations/pavillon-annees-30-hauts-de-seine", label: "Pavillon des années 30", sub: "Un dossier documenté de bout en bout" },
+          { href: "/guides", label: "Les guides techniques", sub: "Douze décisions expliquées une par une" },
+          { href: "/modele-economique-transparence", label: "Modèle économique", sub: "Ce qui est facturé, et par qui" },
+          { href: "/reseau-partenaires", label: "Réseau de partenaires", sub: "Comment les entreprises sont sélectionnées" },
           { href: "/renovation-appartement", label: "Rénovation d'appartement", sub: "Le même projet, mais en copropriété" },
-          { href: "/renovation-maison-pavillon", label: "Rénovation de maison et pavillon", sub: "Le même projet, mais du sol à la toiture" },
-          { href: "/notre-methode", label: "Notre méthode", sub: "Les 8 étapes du pilotage de A à Z" },
-          { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", sub: "Les postes qui se paient au prix fournisseur" },
-          { href: "/garanties-assurances", label: "Garanties et assurances", sub: "Décennale, biennale, parfait achèvement" },
-          { href: "/second-oeuvre", label: "Second œuvre technique", sub: "Les lots qui s'enchaînent après la structure" },
+          { href: "/contact", label: "Étudier mon projet", sub: "Première lecture sous 48 heures ouvrées" },
         ]}
       />
     </>
