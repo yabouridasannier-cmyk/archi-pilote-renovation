@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { MqHero, MqSection, MqChecklist, MqFig, MqFaq, MqCta, MqReadNext } from "../components/mq";
+import { TrustpilotEncart } from "../components/trustpilot";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/temoignages-clients" },
@@ -154,6 +155,17 @@ export default function TemoignagesClientsPage() {
             "Aucun label ni certification tierce n'est associé à ces témoignages ; leur vérification reste interne à la marque.",
           ]}
         />
+      </MqSection>
+
+      {/* 05/09 : invitation à déposer un avis Trustpilot, la fiche ayant été ouverte par le
+          client ce jour. Elle est placée ICI, sur la page des témoignages, parce que c'est la
+          page où la question de la preuve se pose — et parce que les témoignages qui la
+          précèdent sont des exemples anonymisés, pas des avis vérifiés. Le voisinage rend la
+          distinction lisible : d'un côté ce que nous racontons, de l'autre une plateforme
+          indépendante sur laquelle nous n'avons pas la main.
+          Aucune note ni aucun nombre d'avis n'est affiché : la fiche en compte zéro à ce jour. */}
+      <MqSection kicker="Votre retour" title="Déposer un avis sur notre fiche Trustpilot">
+        <TrustpilotEncart />
       </MqSection>
 
       <MqSection kicker="Questions fréquentes" title="Ce que les visiteurs demandent sur ces témoignages">

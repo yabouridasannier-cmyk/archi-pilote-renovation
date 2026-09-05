@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SITE } from "../data";
 import { NAV_GROUPS, NAV_STANDALONE } from "./mq-nav-data";
+import { TrustpilotBouton } from "./trustpilot";
 
 /* Footer repris de la maquette Lovable : 4 colonnes sur encre + bloc légal.
    Coordonnées réelles conservées (e-mail Gmail actif — l'adresse
@@ -52,16 +53,17 @@ export function Footer() {
             {/* 03/09 : la dénomination sociale n'apparaît plus qu'UNE fois dans le pied de page
                 (bloc d'identification ci-dessus), pas une seconde dans la ligne de copyright. */}
             <span>© 2026 ARCHI PILOTE RÉNOVATION. Tous droits réservés. — {NAV_STANDALONE.map((l) => (<Link key={l.href} href={l.href} className="hover:underline">{l.label}</Link>))} — <Link href="/mentions-legales" className="hover:underline">Mentions légales</Link> — <Link href="/politique-confidentialite" className="hover:underline">Confidentialité</Link></span>
-            {/* 04/09 : lien « Donner votre avis sur Trustpilot » RETIRÉ.
-                Il pointait vers fr.trustpilot.com/evaluate/archipiloterenovation.fr, un domaine
-                qui ne résout pas (aucune réponse DNS) et que le client ne possède pas — le site
-                est en .com. Le lien envoyait donc les visiteurs noter une fiche rattachée à un
-                domaine inexistant. Aucune variante en .com n'a été mise à la place : rien ne
-                prouve qu'une fiche Trustpilot existe pour ce domaine, et fabriquer un lien vers
-                une fiche inexistante reproduirait exactement le même défaut.
-                À REMETTRE le jour où une vraie fiche d'avis existe (Trustpilot ou fiche
-                Google Business) : un <a> vers l'URL RÉELLE de la fiche, vérifiée en la
-                chargeant, jamais une URL déduite du nom de domaine. */}
+            {/* 05/09 : le lien Trustpilot est REMIS, la condition posée le 04/09 étant
+                remplie. Rappel du défaut initial : il pointait vers
+                …/evaluate/archipiloterenovation.fr, un domaine que le client ne possède pas
+                et dont l'URL Trustpilot répond 404 — les visiteurs étaient envoyés noter une
+                fiche inexistante. La consigne écrite alors était de ne le rétablir que sur
+                une URL RÉELLE, vérifiée en la chargeant, jamais déduite du nom de domaine.
+                C'est fait : le client a ouvert la fiche le 05/09, l'URL en .com répond 200,
+                son titre est « Evaluer Archipiloterenovation » et elle renvoie
+                identifyingName = "archipiloterenovation.com". Le .fr, revérifié le même
+                jour, répond toujours 404. */}
+            <TrustpilotBouton variante="discret" />
           </div>
         </div>
       </div>

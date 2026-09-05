@@ -20,6 +20,20 @@ export const SITE = {
     { jours: "Lundi — Vendredi", heures: "08h30 – 19h00" },
     { jours: "Samedi", heures: "Sur rendez-vous" },
   ],
+  /* 05/09/2026 — FICHE TRUSTPILOT, ouverte par le client ce jour.
+     L'URL a été VÉRIFIÉE en la chargeant, pas déduite du nom de domaine : la page
+     répond 200, son titre est « Evaluer Archipiloterenovation » et elle renvoie
+     identifyingName = "archipiloterenovation.com". C'est bien la fiche du client.
+     Le prédécesseur de ce lien pointait vers .../archipiloterenovation.fr — un
+     domaine que le client ne possède pas, qui ne résout pas, et dont l'URL
+     Trustpilot répond 404. Il avait été retiré pour cette raison le 04/09 ;
+     contrôle refait aujourd'hui, le .fr renvoie toujours 404.
+     ⚠️ La fiche compte ZÉRO avis à ce jour. Aucune note, aucun nombre d'avis et
+     aucune donnée structurée AggregateRating ne doivent donc apparaître sur le
+     site : ce serait inventer une réputation. Seule l'invitation à déposer un avis
+     est affichée. */
+  trustpilotAvis: "https://fr.trustpilot.com/evaluate/archipiloterenovation.com",
+  trustpilotFiche: "https://fr.trustpilot.com/review/archipiloterenovation.com",
 };
 
 export const STATS = [
