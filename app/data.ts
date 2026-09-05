@@ -340,7 +340,13 @@ export const ARTICLES: Article[] = [
     date: "24 août 2026", dateISO: "2026-08-24",
     categorie: "Toiture",
     excerpt: "Trois réponses possibles à la même fuite. Ce qui tranche n'est pas l'âge de la couverture, mais l'état du support et de la charpente sous les ardoises ou les tuiles.",
-    photo: "chFacadeRavalementVillage",
+    /* 05/09 : l'en-tête était chFacadeRavalementVillage — une FAÇADE sous échafaudage,
+       pour un article qui traite de la TOITURE. La remplaçante montre le sujet réel :
+       une couverture en ardoise en cours de réfection, souches de cheminée et fenêtre de
+       toit visibles, échafaudage monté jusqu'à l'égout du toit. Elle n'était affichée
+       nulle part, et son retrait ramène au passage chFacadeRavalementVillage de trois
+       pages à deux. */
+    photo: "chRavalementArdoise",
     img2: "chCharpenteInterieur",
     img2Caption: "Charpente en bois massif : poteaux, contrefiches, pannes et solives restés apparents. Le diagnostic d'une charpente ancienne passe par les mêmes pièces, examinées une par une. Chantier réel des équipes partenaires.",
     corps: [
@@ -706,7 +712,10 @@ export const GALERIE = [
   { src: "chCuisineCremeIlot", label: "Cuisine crème, îlot central et plans noirs · chantier des équipes partenaires", cat: "cuisine", portrait: false },
   { src: "chCuisineTerracotta", label: "Cuisine terracotta et blanc sous corniches d'époque · chantier des équipes partenaires", cat: "cuisine", portrait: true },
   { src: "chCuisineBlancheU", label: "Cuisine blanche en U, plans bois · chantier des équipes partenaires", cat: "cuisine", portrait: true },
-  { src: "chSdbCarreauxCiment", label: "Douche carreaux de ciment, vasque en pierre · chantier des équipes partenaires", cat: "sdb", portrait: true },
+  /* 05/09 : chSdbCarreauxCiment retirée de la galerie. Cette douche était affichée sur
+     cinq pages — deux articles de blog, /renovation-salle-de-bain-maison (sous la clé
+     alias salleBainBeton), /tendances-materiaux-francais et ici. La galerie conserve
+     chSdbBaignoireTeck pour la catégorie salle de bain, juste en dessous. */
   { src: "chSdbBaignoireTeck", label: "Baignoire îlot et meuble teck, fin de pose · chantier des équipes partenaires", cat: "sdb", portrait: false },
   { src: "chBibliotheque", label: "Bibliothèque toute hauteur contre mur en pierre · chantier des équipes partenaires", cat: "menuiserie", portrait: true },
   { src: "chLitCabane", label: "Lit cabane et rangements d'enfant, en fabrication · chantier des équipes partenaires", cat: "menuiserie", portrait: true },

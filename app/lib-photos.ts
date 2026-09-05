@@ -1,5 +1,22 @@
 /* Photos — Unsplash vérifiées 200 (curl, 20/08/2026). Nouvelle marque :
    aucune photo réelle de chantier disponible, tout est illustratif. */
+
+/* ⚠️ ALIAS — À CONNAÎTRE AVANT D'AJOUTER UNE IMAGE À UNE PAGE.
+   Six fichiers sont accessibles sous DEUX clés, une clé « métier » héritée de la maquette
+   et une clé portant le nom du fichier :
+
+       chantierRenovation  = chCloisonsPlaco
+       salleBainBeton      = chSdbCarreauxCiment
+       chantierIsolation   = chIsolationCombles
+       detailParquet       = chParquetChevronsCouloirDeuxTeintes
+       cuisineSurMesure    = chCuisineCremeIlot
+       grosOeuvre          = chSurelevationBrique
+
+   Conséquence : deux pages peuvent afficher la MÊME photo sans qu'aucune recherche
+   textuelle ne le montre, puisqu'elles ne citent pas la même clé. C'est l'une des raisons
+   pour lesquelles la répétition signalée par le client était passée inaperçue.
+   scripts/surexposition.py résout désormais les clés vers les fichiers et n'est plus dupé,
+   mais un humain qui lit le code, lui, peut encore l'être. */
 export const PHOTOS = {
   heroHaussmannien: "https://images.unsplash.com/photo-1634586648651-f1fb9ec10d90?q=80&w=1600&auto=format&fit=crop",
   sejourApres: "https://images.unsplash.com/photo-1724582586529-62622e50c0b3?q=80&w=1600&auto=format&fit=crop",
