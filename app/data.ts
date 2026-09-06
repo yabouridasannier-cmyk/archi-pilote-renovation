@@ -443,16 +443,19 @@ export const ARTICLES: Article[] = [
     date: "21 août 2026", dateISO: "2026-08-21",
     categorie: "Ventilation",
     excerpt: "Le débit est la donnée la plus citée et la moins suffisante : une ventilation ne fonctionne que si l'air dispose d'un chemin complet, de l'entrée jusqu'au rejet.",
-    /* 05/09 — NON RÉSOLU, à arbitrer. L'en-tête montre un PARE-VAPEUR (membrane Soprema
-       agrafée sur un doublage de salle de bain) : c'est de l'isolation, pas de la
-       ventilation. lib-photos.ts ne déclare aucune photo de VMC ; la seule image de
-       ventilation déclarée est chGrilleAerationMdfSurMesure, employée ci-dessous en img2
-       et native en 528×960 — trop petite pour un en-tête plein cadre (760 px affichés).
-       Le fichier public/photos/maquette/chantier-vmc-caisson-gaines.jpg existe, montre un
-       caisson et son réseau de gaines, mais n'a pas de clé : demande de clé dans le
-       rapport. En attendant, l'image en place est conservée plutôt que remplacée par une
-       image hors sujet ou illisible. */
-    photo: "chParVapeurSopremaMuralSdb",
+    /* 06/09 — RÉSOLU. L'en-tête montrait un PARE-VAPEUR (membrane Soprema agrafée sur un
+       doublage de salle de bain) : de l'isolation, pas de la ventilation. Le grief tenait
+       depuis le 05/09 faute d'image de VMC dans le fonds. schemaVmcCircuitAir, ajoutée
+       depuis, est exactement le sujet de l'article : coupe de pavillon où l'air neuf entre
+       en bleu par les menuiseries du séjour et des chambres, circule sous les portes, est
+       extrait en orange en cuisine, salle de bains et WC, rejoint le caisson posé en comble
+       isolé et sort en toiture. Image OUVERTE et vérifiée avant écriture : les quatre
+       repères numérotés et les quatre « bons réflexes » y sont bien lisibles.
+       C'est un dessin, pas une photo : `schema: true` l'affiche ENTIÈRE (object-contain,
+       native en 1536×1024 dans un cadre 16/8) et affiche la mention « Schéma pédagogique ».
+       chParVapeurSopremaMuralSdb est libérée par ce remplacement. */
+    photo: "schemaVmcCircuitAir",
+    schema: true,
     img2: "chGrilleAerationMdfSurMesure",
     img2Caption: "Panneau ajouré taillé sur mesure à l'atelier : les passages d'air se dessinent avec la menuiserie, pas une fois les ouvrages posés. Chantier réel des équipes partenaires.",
     corps: [

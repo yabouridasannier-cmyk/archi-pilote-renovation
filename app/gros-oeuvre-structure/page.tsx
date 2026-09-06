@@ -47,6 +47,29 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
+            {/*
+              06/09/2026 — infographie de la marque posée ici. Cette sous-section portait tout
+              le raisonnement « épaisseur ≠ portance » sans aucune image, alors que le fichier
+              existait déjà sur le disque sans être déclaré. Ouvert et vérifié : elle oppose un
+              mur de maçonnerie de 20 à 60 cm à une cloison sur ossature de 5 à 10 cm, trace la
+              descente de charges du plancher haut aux fondations, et porte en pied la mention
+              « l'épaisseur et le son au tapotement sont des indices, pas des preuves » — soit
+              exactement le paragraphe ci-dessus.
+
+              C'est une ILLUSTRATION générée au logo ARCHI PILOTE RÉNOVATION, pas une
+              photographie : `entier` (object-contain) pour ne pas décapiter son titre ni sa
+              signature de pied, et légende terminée par « Schéma pédagogique. » — jamais par
+              « Chantier réel des équipes partenaires. ».
+            */}
+            <div className="mt-8">
+              <MqFig
+                src="/photos/pedagogie/schema-nature-des-murs.jpg"
+                alt="Infographie ARCHI PILOTE RÉNOVATION : coupe d'un immeuble ancien opposant un mur de maçonnerie potentiellement porteur de 20 à 60 cm et une cloison légère sur ossature de 5 à 10 cm, avec la descente de charges du plancher haut jusqu'aux fondations et cinq points de vérification"
+                caption="Vérifier la nature des murs avant tout devis : un mur épais n'est pas toujours porteur, un mur fin peut avoir un rôle structurel. La descente de charges va du plancher haut au mur, à la poutre ou solive, puis aux fondations. L'épaisseur et le son au tapotement restent des indices, pas des preuves. Schéma pédagogique."
+                ratio="aspect-[3/2]"
+                entier
+              />
+            </div>
           </div>
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Sondages et plans manquants : comment lever le doute</h3>

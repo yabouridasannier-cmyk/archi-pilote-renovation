@@ -72,6 +72,29 @@ export default function Page() {
         </p>
 
         {/*
+          06/09 : les trois encarts ci-dessus (structure, évacuations, ventilation) étaient
+          jusqu'ici du texte seul. Cette illustration les met en volume : elle sépare
+          l'appartement en trois plateaux empilés — l'existant en haut, la structure au
+          milieu, les réseaux en dessous — ce qui est très exactement la hiérarchie décrite
+          par la section. Image OUVERTE et vérifiée avant écriture de la légende : on y lit
+          bien les trois libellés EXISTANT / STRUCTURE / RÉSEAUX, les trois alertes OMISSION,
+          INTERFACE et REPRISE, et le parcours en huit repères qui l'entoure — celui de
+          /notre-methode, pas les sept étapes listées plus bas sur cette page ; la légende ne
+          les confond donc pas. Les trois blocs CERTAIN / PROBABLE / OPTIONNEL sont VIDES sur
+          cette version : aucun montant à commenter, donc aucun budget inventé.
+          C'est un dessin de marque, pas une photo : `entier` l'affiche en entier et la
+          légende l'annonce comme un schéma. Native en 1672×941, d'où le cadre 16/9.
+        */}
+        <div className="mt-10">
+          <MqFig entier
+            src="/photos/pedagogie/schema-appartement-trois-strates.jpg"
+            alt="Vue éclatée d'un appartement en trois plateaux superposés — l'existant, la structure, les réseaux — entourée d'un parcours en huit repères et de trois alertes : omission, interface, reprise"
+            caption="Le même appartement décomposé en trois plateaux : l'existant qu'on voit, la structure qui commande les ouvertures, les réseaux qui commandent les points d'eau. C'est entre ces plateaux que se logent les oublis, les interfaces mal réparties et les reprises. Illustration de principe, pas le relevé d'un logement précis. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
+        </div>
+
+        {/*
           03/09 : un bloc de trois photos de pièces livrées (cuisine, salle d'eau, salon) avait été
           ajouté ici sous l'intitulé « Ce que ces contraintes donnent une fois le logement livré ».
           Retiré : les trois intitulés au-dessus sont techniques (structure, évacuations, ventilation)

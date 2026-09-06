@@ -254,6 +254,29 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
+            {/*
+              06/09 : cette sous-section « Cloisons et doublages » n'avait que le schéma de coupe
+              ci-dessous — aucune photo réelle d'ossature, alors que c'est le sujet même du titre.
+              Deux photos inédites de l'export WhatsApp du client la documentent : les deux ont été
+              ouvertes avant d'écrire leur légende, et chacune décrit uniquement ce qui est visible
+              (aucune mention d'isolant, de type de plaque ni de destination de la pièce, qu'on ne
+              peut pas certifier à l'œil). Les deux fichiers sont en 1200 × 1600, donc affichés en
+              aspect-[3/4], leur ratio natif.
+            */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
+              <MqFig
+                src="/photos/chantiers/chOssatureCloisonsHuisserieMetal.jpeg"
+                alt="Ossature métallique de cloisons montée sur un plateau : rails au sol et en plafond, montants à entraxe régulier et ouverture de porte réservée entre montants doublés"
+                caption="Cloisons en cours de montage : rails fixés au sol et en plafond, montants à entraxe régulier, ouverture de porte réservée entre deux montants doublés. Aucune plaque n'est posée, toute la structure reste accessible. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chCouloirOssatureMetalliquePlaque.jpeg"
+                alt="Couloir cloisonné à l'ossature métallique, habillage en plaques à parement brun posé sur la face opposée, plafond déjà plaqué et gaine électrique descendue le long d'un montant"
+                caption="Couloir cloisonné : montants percés à entraxe régulier, habillage en plaques à parement brun posé sur la face opposée et ossature encore ouverte côté couloir, plafond déjà plaqué, gaine électrique descendue le long d'un montant. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+            </div>
           </div>
           <MqFig
             src="/photos/maquette/schema-doublage-isolant.jpg"
@@ -418,6 +441,24 @@ export default function Page() {
             <Link href="/sols-finitions-renovation" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">sols et finitions</Link>.
           </p>
         </MqProse>
+        {/*
+          06/09 : l'emplacement laissé vide ci-dessus attendait une PAIRE de photos réelles de la
+          même pièce, brute puis livrée, au même cadrage. Elle n'existe toujours pas dans la
+          photothèque (vérifié dans public/photos/chantiers/) : rien n'est donc mis en scène comme
+          tel. En revanche l'infographie de marque ci-dessous dit exactement ce que dit le titre de
+          la section — la finition est la dernière étape, pas la première décision. Elle est
+          affichée `entier` (image non recadrée) et annoncée comme schéma, jamais comme photo :
+          son texte touche les bords et un cadrage en object-cover en couperait le titre.
+        */}
+        <div className="mt-8">
+          <MqFig
+            src="/photos/pedagogie/schema-gros-oeuvre-second-oeuvre.jpg"
+            alt="Infographie en coupe opposant le socle technique d'un logement — ossature, réseaux, isolation, ventilation — aux options de finition et d'équipement du même volume une fois aménagé"
+            caption="Schéma pédagogique ARCHI PILOTE RÉNOVATION : à gauche le socle indispensable (structure, électricité et plomberie, étanchéité et ventilation, isolation et supports), à droite les options à arbitrer (matériaux haut de gamme, menuiserie sur mesure, éclairage, équipements). La règle affichée : ne jamais sacrifier la sécurité, l'étanchéité ou les réseaux pour préserver une finition décorative."
+            ratio="aspect-[3/2]"
+            entier
+          />
+        </div>
       </MqSection>
 
       <MqSection
@@ -489,6 +530,23 @@ export default function Page() {
           finitions, est développé dans{" "}
           <Link href="/detail-invisible" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">le détail invisible : contrôle qualité avant fermeture des cloisons</Link>.
         </p>
+        {/*
+          06/09 : photo inédite (export WhatsApp du client), ouverte avant rédaction de la légende.
+          Elle montre le moment exact décrit par la checklist ci-dessus — l'ossature est montée,
+          rien n'est encore fermé, chaque attente reste visible et vérifiable une par une. Fichier
+          en 900 × 1600, soit un portrait étroit : affiché en aspect-[9/16], son ratio natif, dans
+          une colonne centrée plutôt que dans un cadre paysage qui en couperait les deux tiers.
+          La légende ne nomme ni la pièce ni sa destination : la faïence d'origine et les attentes
+          d'eau le laissent supposer, l'image ne le prouve pas.
+        */}
+        <div className="mt-8 max-w-sm mx-auto">
+          <MqFig
+            src="/photos/chantiers/chOssatureDevantFaienceOrigine.jpeg"
+            alt="Ossature métallique montée devant un mur d'origine carrelé de faïence blanche, robinets d'arrêt, attente d'évacuation en PVC et boîte électrique encore apparents entre les montants"
+            caption="Ossature montée devant le mur d'origine carrelé de faïence : robinets d'arrêt, attente d'évacuation en PVC, câble et boîte électrique restent tous apparents entre les montants, et un châssis PVC neuf est déjà posé en partie haute. Rien n'est fermé, chaque point se contrôle encore à la main. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
+          />
+        </div>
         {/*
           03/09 : chPlomberieColonneCuivreVannes.jpeg retirée de cette grille, pour deux raisons.
           (1) Redondance : la page comptait huit photos de réseaux de tuyauterie, au point qu'elles

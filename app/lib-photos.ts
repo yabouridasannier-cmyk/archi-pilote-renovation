@@ -387,6 +387,132 @@ export const PHOTOS = {
      31 mars 2021). Il porte lui-même la mention « Schéma à vocation pédagogique ».
      Employé avec `schema: true`, donc affiché entier et annoncé comme un schéma. */
   schemaDpePassoire: "/photos/maquette/schema-dpe-passoire.jpg",
+
+  /* ═══════════════════════════════════════════════════════════════════════════
+     06/09/2026 — 52 IMAGES RÉCUPÉRÉES ET DÉCLARÉES.
+
+     Origine : l'export de la conversation WhatsApp du client (442 Mo) n'avait jamais été
+     décompressé. On y a trouvé 460 images, plus 170 restées en vrac dans Downloads et 48
+     dans le dossier publicitaire. Après dédoublonnage contre le site — MD5 pour le fichier
+     identique, empreinte perceptuelle pour la même prise réexportée par WhatsApp, qui
+     change le MD5 sans changer l'image — il restait 283 inédites, dont 52 exploitables.
+     Le reste est massivement des captures d'écran, des conversations et des documents.
+
+     Chaque image a été OUVERTE et décrite avant d'être nommée : les noms d'origine sont
+     des numéros WhatsApp qui ne disent rien, et se fier à un nom de fichier est
+     exactement la faute qui a produit les légendes fausses corrigées la veille.
+
+     Les six schema* sont des INFOGRAPHIES DE LA MARQUE (logo ARCHI PILOTE RÉNOVATION et
+     signature « L'Exigence du Détail, la Sérénité du Délai » incrustés). Ce sont des
+     illustrations générées, pas des photographies : les afficher TOUJOURS avec
+     schema:true — donc annoncées « Schéma pédagogique » et montrées ENTIÈRES, car elles
+     portent leur titre en haut et leur signature en bas ; un recadrage les décapite.
+     ═══════════════════════════════════════════════════════════════════════════ */
+  /* État avant travaux d'une grande pièce : murs entièrement revêtus de faïence émaillée calibré */
+  chAzulejosAvantTravaux: "/photos/chantiers/chAzulejosAvantTravaux.jpeg",
+  /* Baignoire îlot ovale en acrylique blanc posée le long du mur, alimentée par une colonne de r */
+  chBaignoireIlotColonneChromee: "/photos/chantiers/chBaignoireIlotColonneChromee.jpeg",
+  /* Bibliothèque-niche sur mesure en contreplaqué (tablettes à angles arrondis, caissons décalés */
+  chBibliothequeNicheContreplaque: "/photos/chantiers/chBibliothequeNicheContreplaque.jpeg",
+  /* Bibliothèque sur mesure encastrée dans une niche : caisson toute hauteur en panneaux peints  */
+  chBibliothequeNicheGrisTaupe: "/photos/chantiers/chBibliothequeNicheGrisTaupe.jpeg",
+  /* Menuiserie sur mesure en cours de pose : bureau/console en panneaux plaqués chêne clair avec */
+  chBureauConsoleChenePlateauGalbe: "/photos/chantiers/chBureauConsoleChenePlateauGalbe.jpeg",
+  /* Pose en cours d'un carrelage grès cérame effet bois en point de Hongrie (lames à abouts coup */
+  chCarrelageBoisPointHongrieCroisillons: "/photos/chantiers/chCarrelageBoisPointHongrieCroisillons.jpeg",
+  /* Chambre d'enfant avec agencement sur mesure en panneaux plaqués chêne très clair : structure */
+  chChambreLitCabaneCheneClair: "/photos/chantiers/chChambreLitCabaneCheneClair.jpeg",
+  /* Chambre d'enfant en fin d'agencement : lit mezzanine sur mesure avec garde-corps à barreauda */
+  chChambreLitMezzanineSurMesure: "/photos/chantiers/chChambreLitMezzanineSurMesure.jpeg",
+  /* Charpente traditionnelle neuve (pannes, chevrons, contreventement) montée sur des murs en bl */
+  chCharpenteExtensionBlocsBeton: "/photos/chantiers/chCharpenteExtensionBlocsBeton.jpeg",
+  /* Vue depuis une ouverture percée dans un mur ancien : charpente neuve à pannes et chevrons po */
+  chCharpenteExtensionDepuisOuverture: "/photos/chantiers/chCharpenteExtensionDepuisOuverture.jpeg",
+  /* Vue plongeante sur le faîtage et les arêtiers d'une charpente neuve en sapin, appuyée sur un */
+  chCharpenteFaitageArretiers: "/photos/chantiers/chCharpenteFaitageArretiers.jpeg",
+  /* Charpente neuve en sapin (arbalétriers, pannes sur sabots métalliques, entrait) reconstruite */
+  chCharpenteNeuvePignonMitoyen: "/photos/chantiers/chCharpenteNeuvePignonMitoyen.jpeg",
+  /* Deux châssis vitrés menuisés sur mesure en contreplaqué de bouleau (dormants et traverses as */
+  chChassisVitresBouleauAvantPose: "/photos/chantiers/chChassisVitresBouleauAvantPose.jpeg",
+  /* Grand panneau MDF en cours d'usinage à la défonceuse Festool sur tréteaux : claustra ajouré  */
+  chClaustraMdfUsinageDefonceuse: "/photos/chantiers/chClaustraMdfUsinageDefonceuse.jpeg",
+  /* Couloir en cours de cloisonnement : ossature métallique complète (rails au sol et en plafond */
+  chCouloirOssatureMetalliquePlaque: "/photos/chantiers/chCouloirOssatureMetalliquePlaque.jpeg",
+  /* Couloir livré : placards toute hauteur en panneaux plaqués chêne clair, poignée-gorge noire  */
+  chCouloirPlacardsCheneDoublageBlanc: "/photos/chantiers/chCouloirPlacardsCheneDoublageBlanc.jpeg",
+  /* Enfilade de couloir livrée dans un appartement haut de gamme : placards toute hauteur en pan */
+  chCouloirPlacardsChenePoigneeGorge: "/photos/chantiers/chCouloirPlacardsChenePoigneeGorge.jpeg",
+  /* Couverture neuve en zinc à tasseaux, avec chatières et bavettes, posée sur un appentis en fo */
+  chCouvertureZincTasseauxAppentis: "/photos/chantiers/chCouvertureZincTasseauxAppentis.jpeg",
+  /* Cuisine ouverte avec îlot, en fin de chantier : linéaire de façades bleu ciel laquées brilla */
+  chCuisineBleuCielIlotLaque: "/photos/chantiers/chCuisineBleuCielIlotLaque.jpeg",
+  /* Cuisine linéaire dans un logement ancien : façades bleu vif laquées avec poignées coquille n */
+  chCuisineBleuVifPoigneesCoquille: "/photos/chantiers/chCuisineBleuVifPoigneesCoquille.jpeg",
+  /* Cuisine en couloir livrée dans un appartement en étage : façades noir mat sans poignée en pa */
+  chCuisineCouloirNoirMatHotte: "/photos/chantiers/chCuisineCouloirNoirMatHotte.jpeg",
+  /* Cuisine en L livrée : façades blanc laqué brillant sans poignée, colonnes toute hauteur inté */
+  chCuisineLBlancLaqueDoubleFour: "/photos/chantiers/chCuisineLBlancLaqueDoubleFour.jpeg",
+  /* Cuisine en L à façades blanc mat sans poignée, plan de travail et crédence en stratifié gris */
+  chCuisineLBlancMatLaveLinge: "/photos/chantiers/chCuisineLBlancMatLaveLinge.jpeg",
+  /* Cuisine en L à façades bleu vif brillantes (panneaux visiblement laqués/repeints, chants bla */
+  chCuisineLBleuVifColonnes: "/photos/chantiers/chCuisineLBleuVifColonnes.jpeg",
+  /* Petite cuisine en L livrée et habitée : façades sans poignée en décor chêne gris foncé, colo */
+  chCuisineLCheneGrisFonce: "/photos/chantiers/chCuisineLCheneGrisFonce.jpeg",
+  /* Cuisine linéaire en fin de pose : caissons bas et meubles hauts blanc mat sans poignée, colo */
+  chCuisineLineaireBlancPanneauBleu: "/photos/chantiers/chCuisineLineaireBlancPanneauBleu.jpeg",
+  /* Cuisine ouverte sur séjour en fin de second œuvre : caissons bas et îlot en façades noir mat */
+  chCuisineNoirMatIlotStratifie: "/photos/chantiers/chCuisineNoirMatIlotStratifie.jpeg",
+  /* Dégagement/dressing livré : deux enfilades de placards toute hauteur, portes coulissantes à  */
+  chDressingPortesCoulissantesMiroir: "/photos/chantiers/chDressingPortesCoulissantesMiroir.jpeg",
+  /* État avant ravalement de la même maison : ancien enduit ciment gris tyrolien tacheté de rebo */
+  chFacadeAvantRavalementTyrolien: "/photos/chantiers/chFacadeAvantRavalementTyrolien.jpeg",
+  /* Façade de maison de village en cours de ravalement : enduit de finition gratté beige avec en */
+  chFacadeRavalementEnduitGratte: "/photos/chantiers/chFacadeRavalementEnduitGratte.jpeg",
+  /* Fenêtre de toit posée dans un rampant de comble : chevêtre et embrasure en bois brut, ossatu */
+  chFenetreToitChevetreRampant: "/photos/chantiers/chFenetreToitChevetreRampant.jpeg",
+  /* Même pièce après travaux : murs et sol habillés de grès cérame grand format effet marbre vei */
+  chGresCerameMarbreApresTravaux: "/photos/chantiers/chGresCerameMarbreApresTravaux.jpeg",
+  /* Rampant de comble en cours d'isolation : écran de sous-toiture noir entre chevrons, isolatio */
+  chIsolationRampantOuateFibres: "/photos/chantiers/chIsolationRampantOuateFibres.jpeg",
+  /* Agencement sur mesure en cours : structure de lit-mezzanine avec garde-corps à barreaux, esc */
+  chLitMezzanineStructureEscalier: "/photos/chantiers/chLitMezzanineStructureEscalier.jpeg",
+  /* Ossature métallique de cloisons montée sur un plateau : rails haut et bas, montants et huiss */
+  chOssatureCloisonsHuisserieMetal: "/photos/chantiers/chOssatureCloisonsHuisserieMetal.jpeg",
+  /* Ancienne pièce d'eau/cuisine en cours de reprise : ossature métallique montée devant un mur  */
+  chOssatureDevantFaienceOrigine: "/photos/chantiers/chOssatureDevantFaienceOrigine.jpeg",
+  /* Panneau de porte ou vantail laqué blanc à claustra ajouré (motif organique de cellules irrég */
+  chPanneauClaustraLaqueBlanc: "/photos/chantiers/chPanneauClaustraLaqueBlanc.jpeg",
+  /* Vue depuis l'embrasure d'une porte sur un parquet ancien en pin massif à larges lames, cloué */
+  chParquetPinLargesLamesVitrifie: "/photos/chantiers/chParquetPinLargesLamesVitrifie.jpeg",
+  /* Petite pièce entièrement habillée de panneaux plaqués bois clair, du sol au plafond, avec ni */
+  chPieceHabillagePanneauxBoisClair: "/photos/chantiers/chPieceHabillagePanneauxBoisClair.jpeg",
+  /* Pose d'un plancher chauffant hydraulique : tubes PER orange déroulés en escargot et agrafés  */
+  chPlancherChauffantPerEscargot: "/photos/chantiers/chPlancherChauffantPerEscargot.jpeg",
+  /* Salle d'eau terminée : cabine de douche d'angle à porte coulissante et profilés noirs, colon */
+  chSdbCabineDoucheAngleNoire: "/photos/chantiers/chSdbCabineDoucheAngleNoire.jpeg",
+  /* Salle de bain aménagée sous combles : meuble double vasque en teck massif à portes persienné */
+  chSdbComblesVasquesPierre: "/photos/chantiers/chSdbComblesVasquesPierre.jpeg",
+  /* Même salle de bain vue vers la douche : douche à receveur extra-plat avec parois de verre su */
+  chSdbDoucheReceveurExtraPlat: "/photos/chantiers/chSdbDoucheReceveurExtraPlat.jpeg",
+  /* Salle de bain en fin de chantier : meuble double vasque en teck massif à portes persiennées, */
+  chSdbMeubleTeckDoubleVasque: "/photos/chantiers/chSdbMeubleTeckDoubleVasque.jpeg",
+  /* Salle de bain en fin de pose : grande vasque double céramique posée sur une tablette en chên */
+  chSdbVasqueDoubleTabletteChene: "/photos/chantiers/chSdbVasqueDoubleTabletteChene.jpeg",
+  /* Toiture-terrasse déposée en cœur d'îlot parisien : solivage bois ancien mis à nu, laine miné */
+  chToitureTerrasseDeposeeSolivage: "/photos/chantiers/chToitureTerrasseDeposeeSolivage.jpeg",
+
+  /* Illustration de marque sur fond bleu nuit : vue axonometrique eclatee d'un appartement ancie */
+  schemaAppartementCouches: "/photos/pedagogie/schema-appartement-couches.jpg",
+  /* Infographie de marque (illustration 3D éclatée, pas une photo de chantier) : appartement déc */
+  schemaAppartementTroisStrates: "/photos/pedagogie/schema-appartement-trois-strates.jpg",
+  /* Infographie de marque : modele de devis de travaux vierge annote par six loupes (identite et */
+  schemaDevisSixLoupes: "/photos/pedagogie/schema-devis-six-loupes.jpg",
+  /* Infographie de marque : coupe 3D d'un logement coupee en deux — a gauche le gros oeuvre/seco */
+  schemaGrosOeuvreSecondOeuvre: "/photos/pedagogie/schema-gros-oeuvre-second-oeuvre.jpg",
+  /* Infographie de marque : coupe 3D d'un immeuble ancien parisien opposant un mur de maconnerie */
+  schemaNatureDesMurs: "/photos/pedagogie/schema-nature-des-murs.jpg",
+  /* Infographie de marque ARCHI PILOTE RENOVATION : coupe 3D d'un pavillon expliquant le circuit */
+  schemaVmcCircuitAir: "/photos/pedagogie/schema-vmc-circuit-air.jpg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

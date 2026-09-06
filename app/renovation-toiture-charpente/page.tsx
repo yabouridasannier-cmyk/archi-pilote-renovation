@@ -26,8 +26,26 @@ export default function Page() {
       eyebrow="Gros œuvre"
       segments={[{ text: "Toiture et charpente :" }, { text: "traiter l'enveloppe en priorité.", serif: true, gradient: true }]}
       lead="La toiture protège tout le reste. Tant que l'enveloppe n'est pas saine, l'isolation, les finitions et le confort thermique reposent sur un support incertain. Le diagnostic précède donc l'arbitrage, et l'arbitrage précède le devis."
-      photo="chCharpenteLevee"
-      photoAlt="Charpente bois neuve avant couverture — chantier réel des équipes partenaires"
+      /*
+        06/09/2026 — photo d'en-tête remplacée.
+
+        chCharpenteLevee.jpeg occupait cet emplacement. Ouverte : c'est une ossature
+        poteaux-poutres montée seule sur une dalle neuve, en pleine nature, sans aucun bâti
+        auquel se raccorder — une CONSTRUCTION NEUVE. Sur une page dont tout le propos est la
+        rénovation de l'enveloppe existante, c'est le sujet le plus éloigné qu'on puisse
+        afficher en premier. Elle fait par ailleurs partie des quatre charpentes signalées au
+        client comme neuves : le retrait de CET emplacement ne tranche rien, elle reste
+        affichée dans la galerie /realisations, hors de ce lot.
+
+        À la place, une prise de l'export WhatsApp ouverte et vérifiée : charpente neuve nue,
+        avant couverture, dont un appui est un mur en blocs de béton monté pour l'occasion et
+        l'autre le mur ancien enduit conservé, percé d'une ouverture. Le bâti existant y est
+        visible, ce qui la rend légitime ici. Format natif 2048 × 1536 (4:3) : le cadre 16/8 du
+        gabarit prélève la bande centrale, contrôlée — elle garde le mur ancien, la charpente
+        entière et le mur en blocs ; elle ne perd que du ciel en haut et de la dalle en bas.
+      */
+      photo="chCharpenteExtensionBlocsBeton"
+      photoAlt="Charpente neuve en sapin, pannes et chevrons encore nus avant couverture, appuyée d'un côté sur un mur en blocs de béton et de l'autre sur un mur ancien enduit conservé — chantier réel des équipes partenaires"
       sections={[
         {
           titre: "Diagnostic utile",

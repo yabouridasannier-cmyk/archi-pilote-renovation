@@ -84,7 +84,7 @@ export default function TendancesMateriauxFrancaisPage() {
         src="/photos/pedagogie/30-tendances-materiaux-planche.jpeg"
         alt="Planche matière : échantillons de travertin, zellige, béton ciré, chêne massif, chaux et laiton"
         caption="Palette de matériaux français pour une rénovation intérieure haut de gamme."
-        ratio="aspect-[21/9]"
+        ratio="aspect-[3/2]"
       />
 
       <MqSection
@@ -300,7 +300,7 @@ export default function TendancesMateriauxFrancaisPage() {
 
       <MqCta
         title="Faire valider vos choix de matières avant chiffrage"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : faisabilité des finitions, contraintes de support et budget poste par poste."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : faisabilité des finitions, contraintes de support et budget poste par poste."
       />
     </main>
   );

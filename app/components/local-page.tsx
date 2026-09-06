@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { PageHeader } from "./page-header";
 import { CtaFinal } from "./cta-final";
+import { MqFig } from "./mq";
 
 type Segment = { text: string; serif?: boolean; gradient?: boolean };
 
@@ -159,6 +160,7 @@ export function LocalPage({
   variant,
   ville,
   maillage,
+  visuel,
 }: {
   eyebrow: string;
   segments: Segment[];
@@ -170,6 +172,20 @@ export function LocalPage({
   ville?: string;
   /** Maillage contextuel obligatoire : chaque page locale choisit ses propres ancres. */
   maillage: Maillage;
+  /* 06/09 : VISUEL. Les 16 pages locales étaient les seules du site à n'afficher AUCUNE
+     image — vérifié en production, zéro photo sur /renovation-courbevoie. Le client demande
+     des images sur chaque page.
+
+     Deux garde-fous tiennent cette prop :
+     1. Chaque page passe une image DIFFÉRENTE. Une seule image partagée par le composant
+        se serait retrouvée sur 16 pages d'un coup, très au-delà de la limite de 3 pages que
+        le projet s'impose — c'est exactement le défaut « toujours les mêmes photos » que le
+        client reproche.
+     2. La légende ne doit JAMAIS laisser croire que la photo a été prise dans la commune.
+        Ces pages sont en noindex précisément parce qu'aucune preuve locale n'existe encore ;
+        une photo légendée « chantier à Courbevoie » fabriquerait cette preuve. La légende
+        décrit l'ouvrage, rien de plus, et la mention sous la figure le dit au lecteur. */
+  visuel?: { src: string; alt: string; caption: string; ratio?: string };
 }) {
   const faq = variant === "ville" && ville ? FAQ_LOCALE_TEMPLATE(ville) : [];
 
@@ -180,6 +196,15 @@ export function LocalPage({
       <section className="relative pb-10 md:pb-16">
         <div className="container-site max-w-[42rem] mx-auto">
           <p className="text-ivoire/85 text-[1.02rem] leading-relaxed">{intro}</p>
+          {visuel ? (
+            <div className="mt-8">
+              <MqFig src={visuel.src} alt={visuel.alt} caption={visuel.caption} ratio={visuel.ratio ?? "aspect-[4/3]"} />
+              <p className="text-muted text-[0.8rem] leading-relaxed mt-2">
+                Chantier accompagné par ARCHI PILOTE RÉNOVATION en Île-de-France. Cette photographie illustre le type
+                d&apos;ouvrage traité&nbsp;; elle n&apos;a pas été prise dans cette commune.
+              </p>
+            </div>
+          ) : null}
         </div>
       </section>
 

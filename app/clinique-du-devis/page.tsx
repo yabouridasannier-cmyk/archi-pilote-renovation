@@ -208,7 +208,27 @@ export default function Page() {
           tableau électrique (circuits, différentiel 30 mA), réutilisé sur
           /second-oeuvre et /detail-invisible. Sans rapport avec une grille de
           contrôle de devis — présence purement coïncidente ici.
+
+          06/09 : le vide laissé par ce retrait est comblé par une image qui, elle,
+          parle du sujet de la section. Image ouverte et vérifiée avant écriture de la
+          légende. Elle ne fait pas doublon avec celle de l'en-tête de page
+          (13-clinique-devis-hero) : celle-ci annote les COLONNES d'un devis (quantité,
+          unité, fourniture, pose, exclusion, hypothèse), la nouvelle annote six BLOCS
+          du document, dont deux absents de l'autre — l'identité et les assurances de
+          l'entreprise, et les délais et l'échéancier de paiement. Native en 1600×900,
+          donc cadre 16/9 et `entier` pour ne pas rogner les six encarts qui touchent
+          les bords. Les montants du modèle sont laissés vides sur l'image : rien à
+          inventer dans la légende, et aucun risque qu'on la prenne pour le devis d'un
+          client réel.
         */}
+        <div className="mt-10">
+          <MqFig entier
+            src="/photos/pedagogie/schema-devis-six-loupes.jpg"
+            alt="Modèle de devis de travaux vierge, examiné par six loupes numérotées : entreprise et assurances, prestations détaillées, matériaux définis, prix et TVA, délais et paiements, inclus et exclus"
+            caption="Un modèle de devis dont les montants restent en pointillés, passé à la loupe en six points : identité et assurances de l'entreprise, prestations ligne à ligne, matériaux définis, prix et TVA, délais et échéancier, inclus, exclus et imprévus. Exemple pédagogique construit pour la démonstration — ce n'est le devis d'aucun client. Schéma pédagogique."
+            ratio="aspect-[16/9]"
+          />
+        </div>
       </MqSection>
 
       <MqSection

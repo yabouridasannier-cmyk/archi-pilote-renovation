@@ -4,7 +4,7 @@ import { ContactForm } from "./contact-content";
 import { SITE } from "../data";
 
 export const metadata: Metadata = {
-  title: "Contact — Étude de projet gratuite sous 48 heures ouvrées | ARCHI PILOTE RÉNOVATION",
+  title: "Contact — Étude de projet sans engagement, sous 48 heures ouvrées | ARCHI PILOTE RÉNOVATION",
   description:
     "Décrivez votre projet de rénovation : commune, type de travaux, surface et budget envisagé. Première lecture et budget indicatif sous 48 heures ouvrées, sans engagement.",
   alternates: { canonical: "/contact" },
@@ -15,7 +15,7 @@ export default function ContactPage() {
     <main>
       <MqHero
         kicker="Contact"
-        title="Décrivez votre projet, recevez une étude gratuite sous 48 heures ouvrées"
+        title="Décrivez votre projet, recevez une étude sans engagement sous 48 heures ouvrées"
         lead="Le formulaire ci-dessous permet de qualifier votre projet de rénovation : commune, type de travaux, surface et budget envisagé. ARCHI PILOTE RÉNOVATION lit votre demande, hiérarchise les travaux et revient vers vous sous 48 heures ouvrées avec une première lecture et un budget indicatif, sans engagement de votre part."
       />
 
@@ -82,7 +82,7 @@ export default function ContactPage() {
 
       <MqSection kicker="Nos engagements" title="Un cadre clair avant tout échange">
         <MqChecklist items={[
-          "Étude de projet gratuite et sans engagement",
+          "Étude de projet sans engagement et sans engagement",
           "Réponse sous 48 heures ouvrées",
           "Aucune donnée transmise sans votre accord",
           "Un interlocuteur identifié pour le suivi du dossier",
@@ -97,11 +97,11 @@ export default function ContactPage() {
 
       <MqSection kicker="Questions fréquentes" title="Avant de nous écrire">
         <MqFaq items={[
-          { q: "L'étude de projet est-elle vraiment gratuite ?", a: "Oui. La première lecture du projet, la hiérarchisation des travaux et une estimation de budget indicative sont gratuites et sans engagement, sous 48 heures ouvrées après réception d'un dossier suffisamment renseigné." },
+          { q: "L'étude de projet est-elle facturée ?", a: "La première lecture du projet, la hiérarchisation des travaux et une estimation de budget indicative ne vous sont pas facturées, et n'engagent à rien : vous les recevez sous 48 heures ouvrées après un dossier suffisamment renseigné. Au-delà, dès qu'il s'agit de monter un dossier d'autorisation, de consulter les entreprises ou de suivre un chantier, la mission fait l'objet d'une proposition écrite dont les conditions vous sont indiquées avant tout engagement." },
           { q: "Que se passe-t-il après l'envoi du formulaire ?", a: "Le message est reçu, le projet est qualifié (nature des travaux, zone géographique, contraintes visibles), puis une proposition de suite est envoyée par courriel ou par téléphone : rendez-vous, visite ou demande de pièces complémentaires." },
           { q: "Quelles informations sont utiles avant de contacter ARCHI PILOTE RÉNOVATION ?", a: "Adresse ou commune du bien, quelques photos si possible, objectifs du projet, calendrier souhaité et un budget envisagé même approximatif. Ces éléments accélèrent la première lecture." },
           { q: "ARCHI PILOTE RÉNOVATION intervient-il partout en France ?", a: "L'accompagnement est concentré sur Paris, les Hauts-de-Seine et l'Île-de-France, territoire sur lequel le réseau d'entreprises partenaires est le mieux structuré." },
-          { q: "Un premier échange engage-t-il à démarrer les travaux ?", a: "Non. L'étude de projet gratuite permet de clarifier la faisabilité et le budget avant toute décision. Le passage aux devis puis au chantier reste au libre choix du client." },
+          { q: "Un premier échange engage-t-il à démarrer les travaux ?", a: "Non. L'étude de projet permet de clarifier la faisabilité et le budget avant toute décision, sans vous engager. Le passage aux devis puis au chantier reste au libre choix du client." },
         ]} />
       </MqSection>
 

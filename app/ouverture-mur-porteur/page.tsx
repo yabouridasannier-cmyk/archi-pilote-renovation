@@ -206,7 +206,7 @@ export default function Page() {
 
       <MqCta
         title="Un mur porteur à ouvrir ?"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bâti, hypothèse de reprise de charge et budget réaliste."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bâti, hypothèse de reprise de charge et budget réaliste."
       />
 
       <MqReadNext

@@ -23,7 +23,7 @@ const THEMES = [
     faqs: [
       { q: "Le pilotage fait-il vraiment baisser le budget travaux ?", a: "Un chiffrage détaillé et une hiérarchisation rigoureuse des postes évitent les dépenses inutiles ou mal séquencées. L'économie dépend de chaque projet et ne peut être garantie de façon uniforme." },
       { q: "Pourquoi deux devis pour un projet similaire peuvent-ils autant varier ?", a: "Les écarts viennent souvent des quantités, des exclusions non précisées, de la qualité des matériaux ou de prestations regroupées en forfaits opaques. Une lecture ligne à ligne permet de comparer réellement." },
-      { q: "Comment est financée l'étude de projet gratuite ?", a: "L'étude initiale est offerte pour qualifier la faisabilité du projet. Le pilotage devient payant une fois le projet engagé, selon des modalités présentées avant toute décision." },
+      { q: "Comment est financée l'étude de projet sans engagement ?", a: "L'étude initiale est offerte pour qualifier la faisabilité du projet. Le pilotage devient payant une fois le projet engagé, selon des modalités présentées avant toute décision." },
       { q: "Faut-il prévoir une marge de sécurité sur le budget ?", a: "Oui, une marge est recommandée pour absorber les aléas révélés en cours de chantier, notamment sur les projets touchant la structure ou les réseaux anciens." },
     ],
   },
@@ -143,7 +143,7 @@ export default function Page() {
       <MqReadNext items={[
         { href: "/demarches-administratives-renovation", label: "Démarches administratives", sub: "Syndic, urbanisme, copropriété" },
         { href: "/glossaire-renovation", label: "Glossaire technique", sub: "Le vocabulaire du bâtiment" },
-        { href: "/contact", label: "Contact", sub: "Étude de projet gratuite" },
+        { href: "/contact", label: "Contact", sub: "Étude de projet sans engagement" },
       ]} />
     </main>
   );

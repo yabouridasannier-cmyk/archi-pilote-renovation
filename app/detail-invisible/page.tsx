@@ -90,6 +90,26 @@ export default function DetailInvisiblePage() {
         />
       </div>
 
+      {/*
+        06/09 — DOUBLE EMPLOI CONSTATÉ, image volontairement NON posée ici.
+        Deux illustrations d'appartement éclaté en couches sont arrivées ensemble :
+        schema-appartement-trois-strates.jpg et schema-appartement-couches.jpg. Ouvertes
+        côte à côte, ce sont la même image : même titre incrusté (« Chaque étape produit
+        une décision ou une preuve »), même vue axonométrique, mêmes trois plateaux
+        EXISTANT / STRUCTURE / RÉSEAUX, mêmes alertes OMISSION / INTERFACE / REPRISE, même
+        parcours en huit repères. Une seule différence : la version « couches » affiche
+        des montants dans les blocs de chiffrage (68 420 €, 22 750 €, 9 130 €), là où la
+        version « trois strates » les laisse vides.
+        Elle n'est donc pas posée, pour deux raisons cumulées :
+        1) la poser ici ferait voir au visiteur deux fois la même illustration sur deux
+           pages voisines — exactement le reproche du client (« toujours les mêmes
+           images ») ;
+        2) ces montants sont un budget inventé. Affichés sur le site, ils se lisent comme
+           un chiffrage réel, ce que la charte du projet interdit.
+        La version sans montants est posée sur /renovation-appartement, section
+        « Contraintes ». Si un visuel est souhaité ici un jour, il faut une image propre à
+        cette page (contrôle avant fermeture), pas ce doublon.
+      */}
       <MqSection
         kicker="Le problème"
         title="La finition masque, elle ne garantit rien"
@@ -294,7 +314,7 @@ export default function DetailInvisiblePage() {
 
       <MqCta
         title="Faites vérifier vos points techniques avant fermeture"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bâti, hiérarchisation des travaux et points de vigilance avant chantier."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bâti, hiérarchisation des travaux et points de vigilance avant chantier."
       />
     </main>
   );

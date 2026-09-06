@@ -27,7 +27,7 @@ export function CtaFinal() {
       <div className="absolute inset-0 bg-gradient-to-b from-carbone via-carbone/70 to-carbone" />
 
       <div className="container-site relative z-10 flex flex-col items-center text-center gap-8">
-        <Reveal variant="fade-blur"><span className="eyebrow">Visite technique gratuite</span></Reveal>
+        <Reveal variant="fade-blur"><span className="eyebrow">Visite technique sans engagement</span></Reveal>
         <WordReveal
           as="h2"
           segments={[{ text: "Votre maison mérite" }, { text: "un vrai chantier, pas un chantier vague.", serif: true, gradient: true }]}

@@ -185,7 +185,7 @@ export function Estimateur() {
           </ul>
         </div>
 
-        <Link href="/contact" className="btn btn-primary w-full">Passer au budget réel — étude gratuite</Link>
+        <Link href="/contact" className="btn btn-primary w-full">Passer au budget réel — étude sans engagement</Link>
       </div>
     </div>
   );

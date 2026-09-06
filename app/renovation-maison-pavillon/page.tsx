@@ -56,6 +56,26 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
+            {/*
+              06/09/2026 — première photo de chantier réel de cette page, qui ne montrait
+              jusqu'ici que des schémas et des images d'illustration. Ouverte avant légende :
+              charpente neuve assemblée, faîtage et arêtiers, posée sur une tête de mur en béton
+              aux armatures encore en attente, mur ancien enduit et échafaudage à l'arrière.
+              Elle illustre la reprise en partie haute annoncée par le paragraphe ci-dessus.
+
+              Ce qu'elle NE montre PAS, et que la légende ne dit donc pas : ni pavillon
+              identifié, ni localisation, ni cause du désordre, ni couverture posée. On ne peut
+              pas non plus certifier à l'œil qu'il s'agit d'une réfection plutôt que d'une
+              construction d'annexe : la légende dit « intervention », pas « reprise ».
+            */}
+            <div className="mt-8">
+              <MqFig
+                src="/photos/chantiers/chCharpenteFaitageArretiers.jpeg"
+                alt="Vue plongeante sur le faîtage et les arêtiers d'une charpente bois neuve posée sur une tête de mur en béton dont les armatures en attente dépassent, mur ancien enduit et échafaudage à l'arrière-plan"
+                caption="Intervention en partie haute : charpente montée, faîtage et arêtiers assemblés sur une tête de mur en béton dont les armatures en attente ne sont pas encore recoupées. Le mur ancien enduit et l'échafaudage restent en place à l'arrière ; la couverture n'est pas encore posée. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+            </div>
           </div>
           {/*
             Emplacement retiré le 05/09/2026 (surexposition + schéma hors sujet).

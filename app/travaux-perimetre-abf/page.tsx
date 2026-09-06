@@ -333,7 +333,7 @@ export default function TravauxPerimetreAbfPage() {
 
       <MqCta
         title="Un bien en périmètre protégé ? Commençons par le régime applicable"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : identification du périmètre, sens de l'avis attendu, pièces à réunir et effet réel sur le calendrier avant tout chiffrage."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : identification du périmètre, sens de l'avis attendu, pièces à réunir et effet réel sur le calendrier avant tout chiffrage."
       />
 
       <MqReadNext

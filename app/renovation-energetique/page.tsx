@@ -180,20 +180,34 @@ export default function Page() {
           de la toiture uniquement, les murs sont en briques monomur encore nues. Légende
           corrigée pour ne décrire que l'ouvrage visible.
         */}
-        <div className="grid grid-cols-1 gap-5 mt-10 max-w-md">
-          {/* 05/09 : chIsolationCombles retirée de cette page. La légende avait déjà été
-              corrigée le 03/09 pour ne décrire que l'ouvrage visible, mais le fond du
-              problème restait : la photo montre une CONSTRUCTION NEUVE (briques monomur
-              nues), sur la page qui traite précisément de la rénovation énergétique de
-              l'existant. Elle était par ailleurs affichée sur huit pages.
-              La figure voisine, chIsolationLaineUrsaVarioSdb, documente le même geste sur
-              un vrai chantier de rénovation et suffit ici ; la grille passe à une colonne.
-              À POURVOIR : une isolation de combles ou de rampants sur bâti EXISTANT. */}
+        {/* 05/09 : chIsolationCombles retirée de cette page. La légende avait déjà été
+            corrigée le 03/09 pour ne décrire que l'ouvrage visible, mais le fond du
+            problème restait : la photo montre une CONSTRUCTION NEUVE (briques monomur
+            nues), sur la page qui traite précisément de la rénovation énergétique de
+            l'existant. Elle était par ailleurs affichée sur huit pages.
+            La figure voisine, chIsolationLaineUrsaVarioSdb, documente le même geste sur
+            un vrai chantier de rénovation et suffit ici ; la grille passe à une colonne.
+            À POURVOIR : une isolation de combles ou de rampants sur bâti EXISTANT.
+
+            06/09 : POURVU. L'export WhatsApp du client, jamais décompressé jusqu'ici,
+            contenait une isolation de rampant sur charpente bois existante. La photo a
+            été ouverte avant rédaction de sa légende : celle-ci ne nomme pas le matériau
+            (des panneaux de fibres grises, dont on ne peut pas certifier la nature à
+            l'œil) et ne parle que des ouvrages visibles. Fichier en 1500 × 2000, affiché
+            en aspect-[3/4] ; la grille repasse à deux colonnes, alignées par le haut
+            puisque les deux portraits n'ont pas le même ratio natif. */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 items-start">
           <MqFig
             src="/photos/chantiers/chIsolationLaineUrsaVarioSdb.jpeg"
             alt="Isolation par l'intérieur en laine minérale kraftée posée entre montants, joints et pourtour d'une fenêtre neuve repris à la bande adhésive, chantier réel"
             caption="Isolation par l'intérieur en laine minérale posée entre montants : les joints et le pourtour de la fenêtre neuve sont repris à la bande adhésive, là où se concentrent les ponts thermiques résiduels. Chantier réel des équipes partenaires."
             ratio="aspect-[9/16]"
+          />
+          <MqFig
+            src="/photos/chantiers/chIsolationRampantOuateFibres.jpeg"
+            alt="Rampant de comble en cours d'isolation : écran de sous-toiture noir entre chevrons, panneaux d'isolant en fibres grises, ossature métallique de doublage et première plaque de plâtre posée à droite"
+            caption="Rampant isolé sur charpente existante : panneaux de fibres grises calés entre les chevrons devant l'écran de sous-toiture, ossature métallique de doublage déjà en place et première plaque de plâtre montée à droite. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
           />
         </div>
       </MqSection>
@@ -224,6 +238,26 @@ export default function Page() {
                   aient conscience.
                 </p>
               </MqProse>
+            </div>
+            {/*
+              06/09 : cette sous-section « Menuiseries et vitrage » ne portait aucune photo — la
+              seule image de la section était le schéma pédagogique en tête. Photo inédite de
+              l'export WhatsApp du client, ouverte avant rédaction de la légende. Elle montre une
+              pose de menuiserie sur bâti existant et, dans le même cadre, la jonction avec
+              l'isolation du rampant : c'est le sujet du paragraphe ci-dessus. La légende ne dit
+              rien de l'étanchéité à l'air, qui n'est pas démontrable ici, ni de la marque ou du
+              vitrage. Fichier en 1500 × 2000, affiché en aspect-[3/4], son ratio natif.
+              Elle vient du MÊME comble que chIsolationRampantOuateFibres (section Isolation
+              ci-dessus) mais montre un autre ouvrage : ce n'est pas un doublon, et c'est le seul
+              endroit de la page où l'on voit une menuiserie posée sur bâti existant.
+            */}
+            <div className="mt-6 max-w-md mx-auto">
+              <MqFig
+                src="/photos/chantiers/chFenetreToitChevetreRampant.jpeg"
+                alt="Fenêtre de toit posée dans un rampant de comble, chevêtre et embrasure en bois brut autour du dormant, isolant en fibres grises entre chevrons et ossature métallique de doublage"
+                caption="Fenêtre de toit posée dans un rampant : chevêtre et embrasure en bois brut ceinturent le dormant, l'isolant en fibres grises est calé entre les chevrons et l'ossature métallique de doublage court jusqu'au pourtour de l'ouverture, avant habillage. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
             </div>
           </div>
           <div>
@@ -645,7 +679,7 @@ export default function Page() {
         </p>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext
         items={[

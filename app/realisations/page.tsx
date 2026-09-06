@@ -76,6 +76,16 @@ const PHOTOS_CHANTIERS = [
   { src: `${CH}/chPortiqueAcierAngleGaine.jpeg`, alt: "Portique acier de reprise de charge après ouverture d'un mur porteur, gaine électrique le long de l'ossature", cap: "Portique acier de reprise de charge (poutre et poteau) posé après ouverture d'un mur porteur : la gaine annelée redescend le long du poteau et le plâtre du tableau n'est pas encore repris. Chantier réel des équipes partenaires.", ratio: "aspect-[9/16]" },
   { src: `${CH}/chPoteauAcierPlatinePied.jpeg`, alt: "Pied de poteau acier soudé sur sa platine, posé dans une réservation ouverte dans le plancher, gravats encore en place", cap: "Pied de poteau acier soudé sur sa platine, posé dans une réservation ouverte dans le plancher : le scellement et le rebouchage restent à faire, les gravats sont encore en place. Chantier réel des équipes partenaires.", ratio: "aspect-[9/16]" },
   { src: `${CH}/chPlancherSolivesBeton1.jpeg`, alt: "Plancher ancien ouvert : solives et entretoises maçonnées formant un quadrillage d'alvéoles vides", cap: "Plancher ancien ouvert jusqu'à sa structure : solives et entretoises maçonnées forment un quadrillage d'alvéoles encore vides, avant remplissage, chape et pose du revêtement de sol. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  /* 06/09 — LOT WHATSAPP INÉDIT. Ces deux vues ont été ouvertes à l'écran avant rédaction, et
+     agrandies l'une à côté de l'autre : on retrouve sur les DEUX la même fenêtre à volets
+     persiennés blancs, le même tronc de vigne vierge noueux passant au-dessus de son appui, la
+     même façade fissurée et le même mur mitoyen de brique peint en blanc. C'est donc la même cour,
+     à deux étapes du chantier. C'est tout ce que la photographie démontre : la légende dit « la
+     même cour », et surtout PAS « la même toiture avant et après », que le cadrage ne permet pas
+     d'établir — l'une est prise de plain-pied, l'autre en plongée depuis un étage. Pour la même
+     raison elles ne sont pas montées en comparateur avant/après plus bas. */
+  { src: `${CH}/chToitureTerrasseDeposeeSolivage.jpeg`, alt: "Toiture d'un bâtiment de fond de cour déposée jusqu'au solivage bois, laine minérale dégradée entre les solives", cap: "Toiture de fond de cour déposée jusqu'à sa structure : le solivage bois ancien est mis à nu, la laine minérale tassée et noircie subsiste entre les solives et des morceaux de l'ancienne étanchéité restent accrochés sur les rives. Un échafaudage est en place au premier plan, le mur mitoyen de brique peinte en blanc ferme la cour. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
+  { src: `${CH}/chCouvertureZincTasseauxAppentis.jpeg`, alt: "Couverture neuve en zinc à tasseaux sur une petite toiture à deux versants de fond de cour, chatières près du faîtage et chéneau en pied de versant", cap: "Couverture neuve en zinc à tasseaux sur une petite toiture à deux versants, vue en plongée : les baguettes filent de l'égout au faîtage, deux chatières ventilent le versant haut, et le chéneau reçoit en pied une naissance de descente d'eau pluviale. Même cour que la vue précédente — on y reconnaît la fenêtre à volets persiennés et le pied de vigne vierge. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
   /* chIsolationPhoniqueGranulesPlancher a été retirée d'ici pour deux raisons cumulées. (1) Elle est
      identique au bit près à chDemolitionBoiseriesHaussmannien, employée sur /renovation-complete et
      /savoir-faire-ancien : le visiteur voyait donc ce salon quatre fois sur le site. (2) Elle était
@@ -87,6 +97,11 @@ const PHOTOS_CHANTIERS = [
      l'ancien parquet » et des boiseries « protégées », alors que la vue jumelle montre justement le
      parquet déposé jusqu'aux solives et qu'aucune protection n'est visible sur les boiseries. */
   { src: `${CH}/chSousCouchePanneauxOSB.jpeg`, alt: "Panneaux OSB posés sur toute la surface du plancher d'un salon haussmannien, boiseries panneautées et volets intérieurs persiennés en place", cap: "Plancher d'un salon haussmannien refait : panneaux OSB posés bord à bord sur toute la surface, prêts à recevoir le revêtement de sol. Les boiseries panneautées, les volets intérieurs persiennés et la porte-fenêtre sur cour sont restés en place pendant l'opération. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  /* 06/09 — LOT WHATSAPP INÉDIT, suite du même plancher : après la structure et le support,
+     le revêtement. Les deux vues sont posées à leur ratio natif (4/3 et 3/4) : la seconde est un
+     portrait, un cadre paysage lui aurait coupé le radiateur et l'embrasure qui datent la pièce. */
+  { src: `${CH}/chCarrelageBoisPointHongrieCroisillons.jpeg`, alt: "Carrelage effet bois en cours de pose en point de Hongrie, croisillons autonivelants à clips encore en place sur la partie fraîchement collée", cap: "Carrelage effet bois en cours de pose, calepiné en point de Hongrie : la partie fraîchement collée porte encore ses croisillons autonivelants à clips et cales bleues, la partie voisine en est déjà débarrassée. La pièce est sous rampant, les plaques de plâtre sont enduites, la poutre ancienne du plafond est laissée apparente et la fenêtre donne sur la cour de l'immeuble. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
+  { src: `${CH}/chParquetPinLargesLamesVitrifie.jpeg`, alt: "Parquet ancien à larges lames poncé et vitrifié, vu depuis l'embrasure d'une porte, radiateur en fonte à colonnes conservé au fond", cap: "Parquet ancien à larges lames poncé puis vitrifié, vu depuis l'embrasure d'une porte : le film brillant renvoie la lumière de la fenêtre en traînées franches, et les nœuds comme les jeux entre lames restent visibles — c'est un sol d'origine remis en état, pas un sol neuf. Murs, plinthes et embrasures sont repeints en blanc, le radiateur en fonte à colonnes est conservé et le raccord de sol à son pied n'est pas encore repris. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
   { src: `${CH}/chEscalierBoisFlottantVueBas.jpeg`, alt: "Escalier en cours de finition vu depuis le niveau inférieur : marches et contremarches en panneau multiplis, chants lamellés apparents", cap: "Escalier en cours de finition vu depuis le bas : marches et contremarches sont en panneau multiplis, dont les chants lamellés restent apparents ; les sols sont encore bâchés et le compresseur du poseur est en place. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
   { src: `${CH}/chEscalierBoisFlottantPalier.jpeg`, alt: "Escalier à paillasse maçonnée blanche desservant un palier ouvert, marches et contremarches en panneau multiplis", cap: "Le même escalier vu de côté : marches et contremarches en panneau multiplis posées sur une paillasse maçonnée peinte en blanc, palier ouvert sur la pièce. Chantier encore en cours. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
   { src: `${CH}/chDressingLaqueBlancPoigneesBois.jpeg`, alt: "Dressing sur mesure toute hauteur peint en blanc, deux poignées bâton en bois rapportées sur les vantaux centraux", cap: "Dressing sur mesure monté du sol au plafond et peint en blanc : deux poignées bâton en bois sont rapportées sur les vantaux centraux, les vantaux latéraux en sont dépourvus. Le sol est encore protégé. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
@@ -316,6 +331,9 @@ const PHOTOS_TECHNIQUES = [
      reproche du client. Une seule des deux est conservée. */
   { src: `${CH}/chNourriceDoubleAnglePlafond.jpeg`, alt: "Deux nourrices laiton implantées en tête de cloison sous plafond, circuits plongeant dans la trémie du plancher", cap: "Deux nourrices implantées en tête de cloison : les circuits plongent directement dans la trémie du plancher, où ils rejoignent les gaines déjà tirées. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
   { src: `${CH}/chChaudiereMuraleSaunierDuval.jpeg`, alt: "Chaudière murale posée sur un mur de pierre en local technique, vannes d'arrêt et filtre en Y en pied d'appareil", cap: "Chaudière murale posée en local technique sur un mur de pierre : vanne d'arrêt sur chaque départ, filtre en Y en pied d'appareil et canalisations calorifugées. Chantier réel des équipes partenaires.", ratio: "aspect-[9/16]" },
+  /* 06/09 — LOT WHATSAPP INÉDIT. Sa place est ici et pas dans la galerie : une fois la chape
+     coulée, il ne reste plus rien à voir de cet ouvrage. Portrait natif 1200x1600, posé en 3/4. */
+  { src: `${CH}/chPlancherChauffantPerEscargot.jpeg`, alt: "Pose d'un plancher chauffant : tubes orange déroulés en escargot et agrafés sur des panneaux isolants quadrillés, bande périphérique bleue en pied de cloison", cap: "Pose d'un plancher chauffant à eau : les tubes orange sont déroulés en escargot puis agrafés sur des panneaux isolants dont le quadrillage imprimé sert de trame d'espacement, et la bande périphérique bleue court en pied de cloison. Deux compagnons sont au travail sur la boucle ; les cloisons sont montées et la chape n'est pas encore coulée. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
 
   /* Électricité */
   { src: `${CH}/chElectriciteFauxPlafondFaisceaux.jpeg`, alt: "Faux plafond en cours de montage, faisceaux de gaines tirés au-dessus de l'ossature métallique et attentes de câbles le long du voile béton", cap: "Faux plafond en cours de montage : ossature métallique posée, faisceaux de gaines tirés au-dessus et attentes de câbles descendues le long du voile béton avant plaquage. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
@@ -372,6 +390,25 @@ const DEROULE = [
    Les huit paires conservées sont celles qui montrent réellement le même ouvrage avant et après, sans
    image employée plus de deux fois sur le site. */
 const COMPARAISONS = [
+  /* 06/09 — DEUX PAIRES RÉELLEMENT APPARIÉES, placées en tête parce qu'elles sont les seules de
+     cette liste à montrer le MÊME ouvrage avant et après. Le reste de la liste est composé
+     d'illustrations, ce que chaque note dit. Rappel de l'incident à ne pas reproduire : le tableau
+     a longtemps contenu une « paire » qui était en fait deux cuisines différentes. Chaque paire
+     ci-dessous a donc été vérifiée à l'écran, les deux images ouvertes côte à côte, sur un détail
+     invariant que les travaux n'ont pas déplacé :
+       — azulejos / grand format : les trois baies en pavés de verre, le plafond en lambris de pin
+         et l'escalier du fond à droite sont aux mêmes places sur les deux vues ;
+       — façade : le boîtier blanc du branchement aérien, son faisceau de câbles et la gaine verte
+         qui en redescend, sous la gouttière, sont identiques sur les deux vues (agrandissement
+         comparé). Les deux jeux d'ouvertures et la descente d'eau pluviale concordent.
+     Aucune de ces quatre images n'est employée ailleurs sur le site : elles n'ajoutent donc pas
+     une répétition de plus. */
+  { titre: "Une pièce entièrement recarrelée, des azulejos au grand format", texte: "Les trois baies en pavés de verre et le plafond en lambris ne bougent pas : seuls les murs et le sol changent. La faïence à motif andalou et son sol octogonal laissent place à un carrelage grand format poli à veinage gris, posé mur et sol, tableaux des baies compris.", avant: `${CH}/chAzulejosAvantTravaux.jpeg`, apres: `${CH}/chGresCerameMarbreApresTravaux.jpeg`, avantLabel: "Avant — murs en azulejos", apresLabel: "Après — grand format poli", note: "Chantier réel des équipes partenaires, la même pièce avant et après. Sur la vue « après », le mur du fond à droite est encore brut : la pièce n'est pas livrée." },
+  { titre: "Ravalement d'une façade de maison de village", texte: "L'ancien enduit ciment tyrolien, tacheté par les rebouchages qui ont suivi la pose des menuiseries neuves, est remplacé par un enduit de finition gratté, avec encadrements de baies rechampis en blanc.", avant: `${CH}/chFacadeAvantRavalementTyrolien.jpeg`, apres: `${CH}/chFacadeRavalementEnduitGratte.jpeg`, avantLabel: "Avant — enduit tyrolien", apresLabel: "Après — enduit gratté", note: "Chantier réel des équipes partenaires, la même façade avant et après. L'échafaudage est encore monté et la porte encore sous film : le chantier n'est pas réceptionné." },
+  /* 06/09 — remontée de la fin de liste : c'est la troisième et dernière paire RÉELLE du
+     tableau (même comptoir, même local, du montage à la livraison). Elle était reléguée
+     derrière sept illustrations, alors que la section annonce des preuves. */
+  { titre: "Local commercial : de la carcasse brute au comptoir d'accueil livré", texte: "Agencement d'un local commercial (opticien) : la carcasse du comptoir est montée sur site puis habillée en bois et laque avant réception.", avant: `/photos/chantiers/chOptiqueComptoirCarcasseBrute.jpeg`, apres: `/photos/chantiers/chOptiqueComptoirAccueilFini.jpeg`, avantLabel: "Avant — carcasse brute", apresLabel: "Après — comptoir livré", note: "Chantier réel des équipes partenaires, même local commercial du début à la fin des travaux." },
   { titre: "Doublage isolant d'une pièce ancienne", texte: "Le mur ancien est d'abord assaini, puis l'ossature métallique est implantée au laser avant la pose de la laine minérale.", avant: `${M}/chantier-ossature-avant.jpg`, apres: `${M}/chantier-isolation-laine.jpg`, avantLabel: "Avant — ossature implantée", apresLabel: "Après — isolant posé", note: "Illustration d'un chantier type, hors chantier documenté sur cette page." },
   { titre: "De l'ossature brute à la pièce livrée", texte: "Le plafond suspendu absorbe les réseaux ; la pièce est livrée après enduit, peinture et pose du parquet.", avant: `${M}/chantier-ossature-placo-plafond.jpg`, apres: `${M}/chambre-livree-parquet-chene.jpg`, avantLabel: "Avant — ossature", apresLabel: "Après — chambre livrée", note: "Illustration d'un chantier type, hors chantier documenté sur cette page." },
   { titre: "Pose du zellige, de la crédence brute à la cuisine livrée", texte: "Support dressé, boîtes mélangées, calepinage tracé à sec puis joint époxy : la crédence en zellige se prépare avant d'être posée.", avant: `${M}/chantier-pose-zellige-credence.jpg`, apres: `${M}/tendance-cuisine-facades-sur-mesure-chene.jpg`, avantLabel: "Avant — pose du zellige", apresLabel: "Après — cuisine livrée", note: "Illustration d'un chantier type, hors chantier documenté sur cette page." },
@@ -379,7 +416,6 @@ const COMPARAISONS = [
   { titre: "Électricité : du tableau vétuste à l'installation conforme", texte: "Différentiels 30 mA, circuits séparés et repérés, câblage en peignes et attestation de conformité remise au client à la réception.", avant: `${M}/tableau-electrique-vetuste-avant.jpg`, apres: `${M}/tableau-electrique-neuf-apres.jpg`, avantLabel: "Avant", apresLabel: "Après", note: "Illustration d'un chantier type, hors chantier documenté sur cette page." },
   { titre: "Extension : du jardin encombré au volume contemporain", texte: "Étude de sol, déclaration préalable, fondations adaptées puis ossature bois et grandes baies : le raccord à la meulière existante est traité au détail.", avant: `${M}/jardin-avant-extension.jpg`, apres: `${M}/extension-livree-apres.jpg`, avantLabel: "Avant", apresLabel: "Après", note: "Illustration d'un chantier type, hors chantier documenté sur cette page." },
   { titre: "Surélévation : un étage gagné sans démolir", texte: "Diagnostic de portance par l'ingénieur structure, dépose de la toiture, ossature bois préfabriquée et mise hors d'eau rapide pour limiter l'exposition du bâti.", avant: `${M}/maison-avant-surelevation.jpg`, apres: `${M}/maison-surelevee-apres.jpg`, avantLabel: "Avant", apresLabel: "Après", note: "Illustration d'un chantier type, hors chantier documenté sur cette page." },
-  { titre: "Local commercial : de la carcasse brute au comptoir d'accueil livré", texte: "Agencement d'un local commercial (opticien) : la carcasse du comptoir est montée sur site puis habillée en bois et laque avant réception.", avant: `/photos/chantiers/chOptiqueComptoirCarcasseBrute.jpeg`, apres: `/photos/chantiers/chOptiqueComptoirAccueilFini.jpeg`, avantLabel: "Avant — carcasse brute", apresLabel: "Après — comptoir livré", note: "Chantier réel des équipes partenaires, même local commercial du début à la fin des travaux." },
 ];
 
 export default function RealisationsPage() {
@@ -453,7 +489,7 @@ export default function RealisationsPage() {
         </div>
       </MqSection>
 
-      <MqSection kicker="Avant / après" title="Ce que révèle la comparaison entre l'état initial et la livraison" lead="Les phases techniques cachées expliquent l'essentiel du budget : elles disparaissent derrière les finitions." wide>
+      <MqSection kicker="Avant / après" title="Ce que révèle la comparaison entre l'état initial et la livraison" lead="Les trois premières comparaisons portent sur un ouvrage réel photographié avant puis après travaux — même pièce, même façade, même local. Les suivantes sont des illustrations d'un chantier type, et la note sous chaque comparateur le précise." wide>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-10">
           {COMPARAISONS.map((c) => (
             <div key={c.titre}>
@@ -523,7 +559,7 @@ export default function RealisationsPage() {
         </p>
       </MqSection>
 
-      <MqCta title="Discutons du problème que votre projet doit résoudre" lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux et budget réaliste." />
+      <MqCta title="Discutons du problème que votre projet doit résoudre" lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux et budget réaliste." />
 
       <MqReadNext items={[
         { href: "/temoignages-clients", label: "Témoignages clients", sub: "Retours anonymisés et méthode de recueil" },

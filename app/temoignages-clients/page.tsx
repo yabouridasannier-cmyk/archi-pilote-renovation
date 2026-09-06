@@ -198,7 +198,7 @@ export default function TemoignagesClientsPage() {
 
       <MqCta
         title="Discutez de votre projet avec notre équipe"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux et budget réaliste."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux et budget réaliste."
       />
     </main>
   );

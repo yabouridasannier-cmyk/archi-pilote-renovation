@@ -114,7 +114,7 @@ export default function EstimateurPage() {
         </p>
       </MqSection>
 
-      <MqCta title="Passer de l'ordre de grandeur au budget réel" lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux et budget chiffré poste par poste." />
+      <MqCta title="Passer de l'ordre de grandeur au budget réel" lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux et budget chiffré poste par poste." />
 
       <MqReadNext items={[
         { href: "/observatoire-prix-renovation", label: "Observatoire des prix réels", sub: "Fourchettes par poste" },

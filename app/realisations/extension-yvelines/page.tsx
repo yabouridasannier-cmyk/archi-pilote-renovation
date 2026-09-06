@@ -65,6 +65,28 @@ export default function EtudeDeCasPage() {
               existante, sol continu entre le séjour d&apos;origine et l&apos;extension.
             </p>
           </div>
+          {/* 06/09 — SECONDE PHOTOGRAPHIE. La page ne portait qu'un seul visuel. Celle-ci vient du
+              lot WhatsApp inédit et a été ouverte à l'écran avant d'être légendée : on y voit des
+              tubes orange déroulés en escargot et agrafés sur des panneaux isolants quadrillés,
+              bande périphérique bleue en pied de cloison, deux compagnons au travail, chape non
+              coulée. Elle est posée ici parce que le paragraphe ci-dessus nomme précisément cet
+              ouvrage (« chape isolée avec plancher chauffant »). Portrait natif 1200x1600, affiché
+              en 3/4 et en largeur limitée pour ne rien recadrer. Comme le visuel de tête, ce n'est
+              pas le chantier décrit : la mention sous l'image le dit. */}
+          <figure className="flex flex-col gap-3 mt-1">
+            <div className="relative aspect-[3/4] max-w-sm mx-auto w-full rounded-none overflow-hidden card-e">
+              <img
+                src="/photos/chantiers/chPlancherChauffantPerEscargot.jpeg"
+                alt="Pose d'un plancher chauffant : tubes orange déroulés en escargot et agrafés sur des panneaux isolants quadrillés, bande périphérique bleue en pied de cloison"
+                loading="lazy"
+                className="absolute inset-0 size-full object-cover"
+              />
+            </div>
+            <figcaption className="font-mono text-[0.66rem] tracking-[0.16em] uppercase text-muted text-center leading-relaxed">
+              Plancher chauffant à eau en cours de pose, avant coulage de la chape — chantier réel des équipes partenaires, pris à titre d&apos;illustration : ce n&apos;est pas le chantier décrit ci-dessus
+            </figcaption>
+          </figure>
+
           <div className="flex flex-col gap-2">
             <h2 className="display text-2xl text-ivoire normal-case">Le calendrier réel</h2>
             <p>

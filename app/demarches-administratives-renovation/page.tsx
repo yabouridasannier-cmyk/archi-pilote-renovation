@@ -281,7 +281,7 @@ export default function DemarchesAdministrativesPage() {
 
       <MqCta
         title="Décrivez votre projet, nous le structurons"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste."
       />
 
       <MqReadNext

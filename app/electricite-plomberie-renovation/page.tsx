@@ -7,6 +7,29 @@ export const metadata: Metadata = {
   description: "Les réseaux cachés sont difficiles à corriger après doublages, carrelage et peinture. Ils doivent être documentés avant fermeture.",
 };
 
+/*
+  06/09/2026 — Photos techniques inédites de l'export WhatsApp du client (ossatures de cloisons,
+  doublage monté devant un mur d'origine avec ses attentes d'eau et d'électricité, isolation de
+  rampant, fenêtre de toit) : AUCUNE n'est posée ici, et ce n'est pas un oubli.
+
+  1) Cette page ne rend qu'UNE image : le visuel d'en-tête de <SpecialtyPage>. Il est déjà occupé
+     par chPlacardTableauElectriqueIntegre, photo réelle et exactement dans le sujet (tableau et
+     compteur intégrés dans un placard sur mesure, donc restés accessibles après finition).
+  2) Afficher une seconde image suppose de modifier app/components/specialty-page.tsx, partagé
+     avec quatre autres pages (sols-finitions, cuisine, salle de bain, toiture-charpente) — hors
+     périmètre, et le champ `sections[].texte` est rendu dans un <p> : y glisser une <figure>
+     produirait un HTML invalide.
+  3) Le cadre d'en-tête est figé en aspect-[16/8] avec object-cover. Les photos inédites
+     disponibles sont toutes des portraits (900 × 1600 à 1500 × 2000) : y remplacer le visuel
+     actuel amputerait les deux tiers du sujet. C'est précisément le défaut de cadrage corrigé
+     partout ailleurs cette semaine.
+  4) Elles sont donc posées sur /second-oeuvre, page liée depuis le maillage ci-dessous, dans les
+     sections qui traitent réellement de leur sujet (cloisons et doublages, points de contrôle
+     avant fermeture), et sur /renovation-energetique pour l'isolation de rampant.
+
+  À noter pour qui reprendra ces fichiers partagés : <SpecialtyPage> suffixe systématiquement la
+  légende par « — Illustration, non contractuelle », y compris pour une photo de chantier réelle.
+*/
 export default function Page() {
   return (
     <SpecialtyPage

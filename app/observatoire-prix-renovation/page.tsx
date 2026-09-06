@@ -354,7 +354,7 @@ export default function Page() {
 
       <MqCta
         title="Obtenez un budget réaliste pour votre projet"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : budget établi à partir de votre logement, pas d'une moyenne générale."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : budget établi à partir de votre logement, pas d'une moyenne générale."
       />
     </main>
   );

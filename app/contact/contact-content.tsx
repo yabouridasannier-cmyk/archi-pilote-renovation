@@ -80,7 +80,7 @@ export function ContactForm() {
       <div className="border border-line bg-surface rounded-[2px] p-8 text-center flex flex-col items-center gap-3">
         <h3 className="display text-[1.5rem] text-ivoire">Demande envoyée</h3>
         <p className="text-muted text-[0.95rem] max-w-md">
-          {form.nom.split(" ")[0] || "Merci"}, votre demande d&apos;étude gratuite est bien transmise. Retour sous
+          {form.nom.split(" ")[0] || "Merci"}, votre demande d&apos;étude sans engagement est bien transmise. Retour sous
           48&nbsp;heures ouvrées avec une première lecture de votre projet à {form.commune || "votre commune"}.
         </p>
       </div>
@@ -172,7 +172,7 @@ export function ContactForm() {
       )}
       <div className="sm:col-span-2 flex flex-col gap-3">
         <button type="submit" disabled={sending} className={`btn btn-primary w-full sm:w-auto ${sending ? "opacity-50 pointer-events-none" : ""}`}>
-          {sending ? "Envoi en cours…" : "Envoyer ma demande d'étude gratuite"}
+          {sending ? "Envoi en cours…" : "Envoyer ma demande d'étude sans engagement"}
         </button>
         <p className="text-muted text-[0.8rem]">
           Vos coordonnées servent uniquement à vous répondre au sujet de ce projet et ne sont transmises à des tiers

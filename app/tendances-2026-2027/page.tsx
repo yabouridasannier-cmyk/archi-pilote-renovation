@@ -135,13 +135,13 @@ export default function Page() {
             src="/photos/chantiers/chHdgSdbMarbreProfilesLaitonPose.jpeg"
             alt="Chantier en cours : plan vasque en marbre bréché beige-gris dont la découpe ovale est encore ouverte, arêtes et tablette soulignées de profilés laiton"
             caption="Pose en cours : le plan de toilette en marbre bréché beige-gris est posé, sa découpe ovale encore ouverte, arêtes et tablette basse soulignées de profilés laiton. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
+            ratio="aspect-[9/16]"
           />
           <MqFig
             src="/photos/chantiers/chHdgDoucheMarbreLaitonProtection.jpeg"
             alt="Chantier en cours : douche habillée du même marbre bréché beige-gris, encadrement souligné de profilés laiton et receveur encore couvert d'un film de protection"
             caption="Pose en cours, salle d&apos;eau non livrée : douche habillée du même marbre bréché, encadrement et arêtes soulignés de profilés laiton, receveur et sol encore couverts d&apos;un film de protection. Chantier réel des équipes partenaires."
-            ratio="aspect-[3/4]"
+            ratio="aspect-[9/16]"
           />
         </div>
       </MqSection>
@@ -163,7 +163,7 @@ export default function Page() {
         </p>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext items={[
         { href: "/tendances-materiaux-francais", label: "Tendances et matières", sub: "Travertin, zellige et béton ciré côté technique" },

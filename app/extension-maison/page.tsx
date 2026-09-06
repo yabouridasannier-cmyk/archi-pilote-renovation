@@ -165,9 +165,30 @@ export default function Page() {
           montrant la jonction avec le bâti existant (fondations en attente contre le mur
           existant, jonction de toiture entre l'ancien et le neuf).
 
+          06/09/2026 — CETTE DEMANDE EST POURVUE. L'export WhatsApp du client contenait deux
+          prises qui montrent exactement cette jonction, ouvertes et vérifiées avant légende :
+          une charpente neuve dont un appui est un mur en blocs de béton monté pour l'occasion
+          et l'autre un mur ancien enduit conservé, percé d'une ouverture. Elles sont posées
+          ci-dessous, en tête de rangée. La localisation n'est pas certifiable sur l'image :
+          aucune des deux légendes ne revendique l'Île-de-France.
+
           La troisième photo est conservée et passe en pleine largeur, avec une légende qui ne
           dit plus « extension » : le bâtiment photographié est une construction neuve isolée.
         */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MqFig
+            src="/photos/chantiers/chCharpenteExtensionBlocsBeton.jpeg"
+            alt="Charpente en sapin neuve, pannes et chevrons encore nus, montée entre un mur en blocs de béton fraîchement monté à droite et un mur ancien enduit conservé à gauche, échafaudage en pied"
+            caption="La jonction vue de l'extérieur : la charpente neuve prend appui d'un côté sur un mur en blocs de béton monté pour l'occasion, de l'autre sur le mur ancien enduit conservé, dans lequel une ouverture a été percée. Échafaudage encore en place, dalle coulée et blocs stockés au sol. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
+          />
+          <MqFig
+            src="/photos/chantiers/chCharpenteExtensionDepuisOuverture.jpeg"
+            alt="Vue prise depuis une ouverture percée dans un mur ancien en pierre, sur une charpente neuve à chevrons et arêtiers posée sur des murs en blocs de béton"
+            caption="La jonction vue depuis l'intérieur du bâti ancien : l'ouverture percée dans le mur de pierre cadre la charpente neuve posée sur les murs en blocs de béton. Palettes de blocs en attente, planchers d'échafaudage posés au sol et trémie encore ouverte sur le niveau inférieur. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
         <div className="mt-5">
           <MqFig
             src="/photos/chantiers/chCharpenteParpaingConstruction.jpeg"
@@ -418,7 +439,7 @@ export default function Page() {
         </p>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext
         items={[

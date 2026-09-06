@@ -229,7 +229,11 @@ export default function ModeleEconomiquePage() {
 
       <MqSection
         kicker="Services inclus"
-        title="Flotte de camions et nettoyage de fin de chantier : deux services que nous ne facturons pas à part"
+        /* 06/09 : l'intitulé revendiquait encore une flotte en propre alors que le corps du
+           texte avait été corrigé la veille. Une marque qui n'exécute aucun lot ne détient
+           pas de moyens logistiques : ce qui est vrai, c'est qu'elle ORGANISE le retrait et
+           la livraison, et ne les facture pas séparément. */
+        title="Logistique des matériaux et nettoyage de fin de chantier : deux services que nous ne facturons pas à part"
         lead="L'achat en direct n'a de sens que si la logistique suit, et une rénovation haut de gamme ne se livre pas poussiéreuse."
         wide
       >

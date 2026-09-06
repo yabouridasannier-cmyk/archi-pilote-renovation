@@ -183,6 +183,37 @@ export default function Page() {
             ]}
           />
         </div>
+        {/*
+          06/09/2026 — deux photos posées ici. Cette page ne montrait que des schémas et des
+          images d'illustration : aucune photo de chantier réel n'y figurait, alors que l'étape
+          « structure nouvelle », entre la dépose de la couverture et la mise hors d'eau, est
+          précisément celle que le texte décrit et que personne ne voit jamais.
+
+          Les deux prises ont été ouvertes avant d'être légendées. Elles montrent une charpente
+          neuve montée SUR DU BÂTI EXISTANT — mur pignon mitoyen conservé et décroûté, plancher
+          de planches ancien, mur enduit à l'arrière-plan —, ce qui les distingue des charpentes
+          de construction neuve isolée présentes ailleurs sur le site. Ni la localisation, ni
+          l'essence exacte des bois, ni la nature de l'opération (surélévation ou réfection de
+          comble) ne sont certifiables à l'œil : les légendes n'en revendiquent aucune.
+
+          Les deux prises ne viennent PAS du même chantier (mur pignon mitoyen enduit et plancher
+          de planches d'un côté, mur ancien couvert de végétation sèche et tête de mur béton de
+          l'autre) : aucune légende ne les présente comme deux vues d'une même opération.
+        */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
+          <MqFig
+            src="/photos/chantiers/chCharpenteNeuvePignonMitoyen.jpeg"
+            alt="Charpente bois neuve montée contre un mur pignon mitoyen enduit, bande de maçonnerie décroûtée jusqu'aux moellons sous la pente, échafaudage roulant et visseuse posée sur un chevron"
+            caption="Structure nouvelle contre un pignon mitoyen conservé : sous la nouvelle pente, une bande de maçonnerie a été décroûtée jusqu'aux moellons et garnie de tiges verticales ; les bois sont engravés dans le mur, les chevrons repris sur sabots métalliques. Le plancher de planches et l'échafaudage roulant sont ceux du chantier. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chCharpenteFaitageArretiers.jpeg"
+            alt="Vue plongeante sur le faîtage et les arêtiers d'une charpente bois neuve reposant sur une tête de mur en béton dont les armatures en attente dépassent encore"
+            caption="Autre chantier, même étape, vu d'en haut : faîtage et arêtiers assemblés, posés sur une tête de mur en béton dont les armatures en attente ne sont pas encore recoupées. Derrière, le mur ancien enduit couvert de végétation sèche, l'échafaudage et les toitures voisines. La couverture n'est pas encore posée. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
       </MqSection>
 
       <MqSection
@@ -336,7 +367,7 @@ export default function Page() {
         </p>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext
         items={[

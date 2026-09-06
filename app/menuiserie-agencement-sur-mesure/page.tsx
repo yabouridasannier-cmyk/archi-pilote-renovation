@@ -129,6 +129,33 @@ export default function Page() {
       </MqSection>
 
       <MqSection
+        kicker="FABRICATION"
+        title="Ce qui se passe avant la pose"
+        lead="Découpes, usinages et assemblages occupent l'essentiel du temps : la pose n'est que la dernière étape, et c'est la seule que le client voit d'habitude."
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <MqFig
+            src="/photos/chantiers/chClaustraMdfUsinageDefonceuse.jpeg"
+            alt="Long panneau de MDF à face blanche posé sur tréteaux, ajouré d'un motif de cellules irrégulières usinées à la défonceuse, machine posée sur le panneau et sciure tout autour"
+            caption="Usinage d'un claustra : les cellules sont fraisées une à une dans un panneau de MDF à face blanche, à la défonceuse et à l'affleureuse ; le brun du MDF apparaît dans chaque évidement. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chPanneauClaustraLaqueBlanc.jpeg"
+            alt="Vantail blanc à claustra ajouré posé debout contre un mur habillé de tasseaux de bois, chants bruns du MDF visibles dans les découpes et paumelles déjà posées"
+            caption="Le même motif sur un vantail : panneau blanc ajouré, chants bruns du MDF laissés apparents dans les découpes, paumelles déjà posées. Il attend d'être monté contre le mur en tasseaux. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chChassisVitresBouleauAvantPose.jpeg"
+            alt="Deux châssis menuisés en contreplaqué de bouleau, chants multiplis apparents, stockés debout contre un mur sur un sol protégé par un géotextile"
+            caption="Châssis menuisés en contreplaqué de bouleau, chants multiplis laissés apparents : assemblés avant la pose, ils patientent debout sur un sol protégé, au milieu des menuiseries encore sous adhésif. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
+      </MqSection>
+
+      <MqSection
         kicker="NOS DOMAINES"
         title="Quatre familles d'agencement régulièrement réalisées"
         lead="Toutes s'appuient sur le même principe : relevé du réel, dessin coté, fabrication en atelier, pose et réglage."
@@ -199,8 +226,8 @@ export default function Page() {
 
       <MqSection
         kicker="GALERIE"
-        title="Réalisations d'agencement livrées"
-        lead="Dix-sept vues d'ouvrages d'agencement, regroupées par cuisine, dressing, bibliothèque, espace commercial, agencements d'appartement ancien et habillages bois."
+        title="Réalisations et chantiers d'agencement"
+        lead="Vingt-huit vues d'ouvrages d'agencement — les unes livrées, les autres photographiées en cours de montage — regroupées par cuisine, dressing, bibliothèque, chambre d'enfant, circulation, habillage mural, espace commercial, appartement ancien et cache-radiateur."
         wide
       >
         <div className="flex flex-col gap-12">
@@ -231,7 +258,16 @@ export default function Page() {
                 Elle est conservée sur /second-oeuvre, où le plancher ouvert au premier plan
                 illustre le propos technique de la page (les réseaux restent accessibles), et
                 retirée d'une galerie qui compte déjà dix-huit autres vues.
+
+                06/09 : la case est reprise par chCuisineBleuCielIlotLaque, inédite, dont le
+                plan de travail assemblé à chevrons relève bien de la menuiserie.
               */}
+              <MqFig
+                src="/photos/chantiers/chCuisineBleuCielIlotLaque.jpeg"
+                alt="Cuisine ouverte en fin de chantier : linéaire de façades bleu ciel brillantes toute hauteur et îlot blanc coiffé d'un plan de travail en bois foncé assemblé à chevrons"
+                caption="Ce qui est fabriqué sur mesure ici, c'est le plan : îlot coiffé d'un plan de travail en bois foncé assemblé à chevrons, coupes d'onglet et abouts biseautés — un assemblage qui ne se trouve pas en longueur standard. Derrière, le linéaire de façades bleu ciel brillantes monte jusqu'au plafond ; les plans de pose sont encore scotchés sur la crédence. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
+              />
             </div>
           </div>
           <div>
@@ -259,6 +295,12 @@ export default function Page() {
                 src="/photos/chantiers/chDressingBeigeAngleLumineux.jpeg"
                 alt="Angle de dressing sur mesure laqué taupe avec éclairage intégré en corniche, chantier réel"
                 caption="Dressing d'angle laqué taupe, éclairage intégré en corniche et poignée creusée sans ferrure apparente. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chDressingPortesCoulissantesMiroir.jpeg"
+                alt="Dégagement bordé de deux enfilades de placards toute hauteur à portes coulissantes, cadres bois et remplissage miroir, ouvrant au fond sur une chambre meublée"
+                caption="Dressing de passage livré : deux enfilades de placards toute hauteur à portes coulissantes, cadre bois et remplissage miroir, spots doubles orientables et parquet ton miel à larges lames. Le flexible d'aspirateur au sol est celui du ménage de fin de chantier. Chantier réel des équipes partenaires."
                 ratio="aspect-[3/4]"
               />
             </div>
@@ -300,6 +342,88 @@ export default function Page() {
                 alt="Mur entier d'étagères sur mesure en bois clair brut, dont les montants verticaux sont découpés en silhouettes de cactus de hauteurs différentes, sol sous protection"
                 caption="Découpe sur mesure : un mur entier d'étagères dont chaque montant est découpé en silhouette de cactus, en bois brut avant finition — la liberté de forme permise par la fabrication en atelier. Chantier réel des équipes partenaires."
                 ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chBibliothequeNicheGrisTaupe.jpeg"
+                alt="Bibliothèque encastrée dans une niche, caisson toute hauteur peint gris taupe, étagères garnies de livres et portes à panneaux en partie basse, à côté d'un mur en pierre de taille apparente"
+                caption="Bibliothèque encastrée dans une niche : caisson toute hauteur peint gris taupe, corniche moulurée en tête, portes à panneaux et boutons anciens en partie basse, ajustée contre un mur en pierre de taille laissé apparent et un parquet ancien. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-5">Chambres d&apos;enfant sur mesure</h3>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
+              Lits mezzanine, lits-cabane, escaliers intégrés et bureaux dessinés dans le même
+              ouvrage que les rangements : trois vues prises avant la pose des sols et le
+              raccordement de l&apos;électricité.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <MqFig
+                src="/photos/chantiers/chChambreLitMezzanineSurMesure.jpeg"
+                alt="Chambre d'enfant en fin d'agencement : lit mezzanine en bois clair à garde-corps barreaudé, escalier à marches rayonnantes intégré, placard toute hauteur brun à gauche, sol en chape brute"
+                caption="Lit mezzanine sur mesure : garde-corps à barreaudage, escalier à marches rayonnantes intégré et bureau logé en dessous, face à un placard toute hauteur en panneaux teintés brun. La chape n'est pas encore revêtue et le point de centre reste nu. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chLitMezzanineStructureEscalier.jpeg"
+                alt="Dessous d'un lit mezzanine sur mesure : bureau d'angle à plateau galbé, bloc de deux tiroirs, étagères et placard à porte ouverte sur une penderie, en panneaux plaqués bois clair"
+                caption="Le dessous de la même mezzanine : bureau d'angle à plateau galbé, bloc de deux tiroirs, étagères et penderie dont la porte ouverte laisse voir le fond en MDF brut. Prise d'attente fils sortis, sol encore en chape. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
+              />
+              <MqFig
+                src="/photos/chantiers/chChambreLitCabaneCheneClair.jpeg"
+                alt="Chambre d'enfant en cours d'agencement : lit-cabane à pignon en panneaux de bois clair monté sur une estrade, niches à claire-voie en forme de maison au mur, bureau à casiers, sol entièrement bâché"
+                caption="Lit-cabane monté sur son estrade : pignon ajouré à claire-voie, garde-corps à barreaux tournés et emmarchement d'accès, prolongé au mur par deux niches en forme de maison et un bureau à casiers. Sol entièrement bâché, prises et point de centre non raccordés. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-5">Placards de couloir et circulations</h3>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
+              Le couloir est la surface la moins exploitée d&apos;un logement : montés du sol au
+              plafond et affleurés au doublage, ces placards ne se lisent plus comme des meubles.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl">
+              <MqFig
+                src="/photos/chantiers/chCouloirPlacardsChenePoigneeGorge.jpeg"
+                alt="Couloir livré bordé de placards toute hauteur en panneaux plaqués bois clair à poignées-gorge noires encastrées, porte pleine plaquée assortie et parquet ton miel"
+                caption="Couloir livré : placards toute hauteur en panneaux plaqués bois clair, poignées-gorge noires encastrées, porte pleine plaquée assortie à béquille noire, spots orientables en enfilade et parquet ton miel ; au fond, un dressing à façades plus foncées. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chCouloirPlacardsCheneDoublageBlanc.jpeg"
+                alt="Couloir livré : placard toute hauteur blanc mat sans poignée le long du passage, placard plaqué bois clair à poignée-gorge noire verticale au fond, parquet à larges lames"
+                caption="Autre passage : placard toute hauteur blanc mat sans poignée le long du couloir, placard plaqué bois clair à poignée-gorge noire verticale au fond, spot double orientable et parquet à larges lames. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-5">Habillages muraux et niches menuisées</h3>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
+              Quand la menuiserie ne se contente plus du meuble et prend tout le mur : panneaux
+              plaqués du sol au plafond, niches et bureaux dessinés dans la continuité du parement.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+              <MqFig
+                src="/photos/chantiers/chPieceHabillagePanneauxBoisClair.jpeg"
+                alt="Petite pièce entièrement habillée de panneaux plaqués bois clair du sol au plafond, niche à tablettes en cours de montage, spots percés au plafond et câble d'attente pendant"
+                caption="Pièce habillée de panneaux plaqués bois clair du sol au plafond : la niche à tablettes est en cours de montage, les spots sont percés et le câble d'attente pend encore au plafond. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chBibliothequeNicheContreplaque.jpeg"
+                alt="Bibliothèque-niche en contreplaqué clair aux tablettes à angles arrondis et caissons décalés, encastrée dans un habillage mural en panneaux plaqués bois clair, sol en chape brute"
+                caption="Bibliothèque-niche en contreplaqué clair, tablettes à angles arrondis et caissons décalés, encastrée dans l'habillage mural qui se retourne dans l'angle. Sol encore en chape, câbles d'éclairage en attente. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chBureauConsoleChenePlateauGalbe.jpeg"
+                alt="Bureau-console sur mesure en panneaux plaqués bois clair à plateau galbé, trois tiroirs sortis sur leurs coulisses, étagères en zigzag posées au mur en attente de fixation"
+                caption="Bureau-console en cours de pose : plateau galbé, trois tiroirs essayés sur leurs coulisses et étagères en zigzag encore en attente de fixation. Les tracés d'implantation sont au crayon sur la cloison et les prises pendent au bout de leurs fils. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
             </div>
           </div>
@@ -480,7 +604,7 @@ export default function Page() {
 
       <MqCta
         title="Un dressing, une cuisine ou une bibliothèque à dessiner ?"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : relevé du volume, arbitrage sur-mesure ou façades sur caissons, et budget comparé."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : relevé du volume, arbitrage sur-mesure ou façades sur caissons, et budget comparé."
       />
     </main>
   );

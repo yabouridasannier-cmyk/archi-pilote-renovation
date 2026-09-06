@@ -59,7 +59,7 @@ const FAMILLES = [
     liens: [
       { href: "/sols-finitions-renovation", label: "Sols et finitions", texte: "Ragréage, chape, revêtements et peintures : la préparation conditionne le rendu." },
       { href: "/expertise-carrelage-zellige-travertin", label: "Carrelage, zellige et travertin", texte: "Calepinage, joints, points singuliers et pose des matières délicates." },
-      { href: "/menuiserie-agencement-sur-mesure", label: "Menuiserie et agencement sur-mesure", texte: "Bibliothèques, dressings, claustras dessinés pour le lieu et posés en coordination." },
+      { href: "/menuiserie-agencement-sur-mesure", label: "Menuiserie et agencement sur-mesure", texte: "Bibliothèques, dressings, claustras dessinés pour le lieu et posés au bon moment dans l'ordre des lots." },
       { href: "/achat-direct-materiaux", label: "Achat direct des matériaux", texte: "Acheter les matériaux à votre nom, avec votre facture, sans marge intermédiaire." },
     ],
   },

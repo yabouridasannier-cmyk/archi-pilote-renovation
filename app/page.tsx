@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { MqKicker, MqSection, MqProse, MqFig, MqChecklist, MqDark, MqDarkSteps, MqQuotes, MqFaq, MqCta, MqReadNext } from "./components/mq";
-import { TrustpilotEncart } from "./components/trustpilot";
+import { TrustpilotEncart, TrustpilotLigne, TrustpilotWidget } from "./components/trustpilot";
 
 export const metadata: Metadata = {
   title: "Rénovation complète et chantiers complexes | ARCHI PILOTE RÉNOVATION",
@@ -141,6 +141,18 @@ export default function Home() {
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="/contact" className="btn btn-primary">Décrire mon projet</Link>
               <Link href="/notre-methode" className="btn btn-ghost">Voir la méthode</Link>
+            </div>
+            {/* 06/09 : badge Trustpilot REMONTÉ dans le premier écran, à la demande du
+                client. Il était au pied des témoignages, en bas de page.
+                La forme retenue tient compte de ce qui m'inquiétait à cette place : ici, le
+                visiteur n'a encore rien lu, et un badge d'avis se lit spontanément comme une
+                note. La fiche compte zéro avis — donc pas d'étoiles, pas de note, et le mot
+                « Évaluez-nous » plutôt qu'un score. C'est une INVITATION, formulée comme
+                telle, et elle est vraie dès aujourd'hui. Le jour où des avis existeront, le
+                widget officiel prendra cette place avec la vraie note (identifiant de la
+                fiche déjà inscrit dans components/trustpilot.tsx). */}
+            <div className="mt-6">
+              <TrustpilotWidget largeur="260px" repli={<TrustpilotLigne />} />
             </div>
           </div>
           <MqFig
@@ -377,7 +389,7 @@ export default function Home() {
         <MqDarkSteps steps={[
           { title: "Premier échange", text: "Vous décrivez le bien, l'usage visé et l'ordre de budget envisagé. Nous vous disons dès cet échange si le projet relève d'une déclaration, d'un permis, d'un vote en assemblée, ou de rien de tout cela." },
           { title: "Visite technique", text: "Lecture du bâti, relevé, repérage des éléments porteurs, état des réseaux, contraintes de copropriété et d'urbanisme. Nous repartons avec les documents utiles : règlement de copropriété, derniers procès-verbaux, diagnostics, plans existants." },
-          { title: "Programme et arbitrages", text: "Le projet est écrit poste par poste, avec les scénarios et ce que chacun coûte. C'est le moment où les décisions se prennent, pendant qu'elles sont encore gratuites." },
+          { title: "Programme et arbitrages", text: "Le projet est écrit poste par poste, avec les scénarios et ce que chacun coûte. C'est le moment où les décisions se prennent, pendant qu'elles ne coûtent encore rien." },
           { title: "Dossiers et autorisations", text: "Montage des demandes, association des hommes de l'art lorsque la loi l'impose, dépôt et suivi de l'instruction jusqu'à la décision." },
           { title: "Consultation et achats", text: "Consultation des entreprises partenaires sur une base identique, lecture comparée des chiffrages ligne à ligne, planification des commandes de matériaux selon les délais réels d'approvisionnement." },
           { title: "Chantier et réception", text: "Suivi sur place, photos datées transmises, journal des décisions et de leur effet sur le budget, jusqu'à la réception et la levée des réserves." },

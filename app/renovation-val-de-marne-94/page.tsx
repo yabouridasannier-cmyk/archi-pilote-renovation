@@ -21,7 +21,7 @@ export default function Page() {
       maillage={{
         titre: "Maison, appartement ou petite copropriété",
         intro:
-          "Le mix de biens du Val-de-Marne fait cohabiter trois situations très différentes. Ces pages précisent ce que chacune implique en études, en autorisations et en coordination — et à quoi ressemble concrètement un projet suivi de bout en bout.",
+          "Le mix de biens du Val-de-Marne fait cohabiter trois situations très différentes. Ces pages précisent ce que chacune implique en études, en autorisations et en organisation des interventions — et à quoi ressemble concrètement un projet suivi de bout en bout.",
         groupes: [
           {
             titre: "Selon le type de bien",

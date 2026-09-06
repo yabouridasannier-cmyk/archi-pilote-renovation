@@ -356,7 +356,7 @@ export default function SavoirFaireAncienPage() {
             src="/photos/maquette/fenetre-identique-cremone-laiton.jpg"
             alt="Fenêtre en bois à petits bois dans un appartement haussmannien, crémone en laiton, vue vers une façade en pierre de taille et des toits en zinc"
             caption="Fenêtre en bois à petits bois et crémone en laiton, dans une embrasure à panneautage mouluré."
-            ratio="aspect-[16/9]"
+            ratio="aspect-[10/7]"
           />
           <MqFig entier
             src="/photos/pedagogie/05-menuiserie-moulures.jpeg"

@@ -22,6 +22,13 @@ export const metadata: Metadata = {
   3) Les deux photos ont donc été placées sur /savoir-faire-ancien, sous l'ouvrage
      « Parquets et boiseries », qui reprend mot pour mot la consigne du client.
 
+  06/09/2026 — Même conclusion pour les photos inédites de l'export WhatsApp (ossatures de
+  cloisons, doublage devant mur d'origine, isolation de rampant, fenêtre de toit) : aucune ne
+  traite de sols ni de finitions, et le seul emplacement de cette page reste l'en-tête, déjà
+  occupé par une photo réelle et exacte. Les quatre fichiers sont posés sur /second-oeuvre et
+  /renovation-energetique, où le texte parle de l'ouvrage qu'ils montrent. Rien n'est détourné
+  ici pour remplir une case.
+
   À noter pour qui reprendra ces fichiers partagés : <SpecialtyPage> suffixe systématiquement la
   légende par « — Illustration, non contractuelle », y compris quand la photo vient de
   /photos/chantiers/ et est donc bien réelle. Le rendu actuel de cette page est

@@ -325,7 +325,7 @@ export default function Page() {
 
       <MqCta
         title="Un projet de salle d'eau ou de crédence en matière noble ?"
-        lead="Étude de projet gratuite sous 48 heures ouvrées : faisabilité du support, système d'étanchéité, calepinage et budget réaliste."
+        lead="Étude de projet sans engagement, sous 48 heures ouvrées : faisabilité du support, système d'étanchéité, calepinage et budget réaliste."
       />
     </main>
   );

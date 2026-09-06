@@ -295,12 +295,12 @@ export default function Page() {
         </ul>
       </MqSection>
 
-      <MqCta lead="Étude de projet gratuite sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
+      <MqCta lead="Étude de projet sans engagement, sous 48 heures ouvrées : lecture du bien, hiérarchisation des travaux, points de vigilance et budget réaliste." />
 
       <MqReadNext items={[
         { href: "/faq", label: "Questions fréquentes", sub: "Réponses classées par décision" },
         { href: "/glossaire-renovation", label: "Glossaire technique", sub: "Le vocabulaire du bâtiment" },
-        { href: "/contact", label: "Contact", sub: "Étude de projet gratuite" },
+        { href: "/contact", label: "Contact", sub: "Étude de projet sans engagement" },
       ]} />
     </main>
   );
