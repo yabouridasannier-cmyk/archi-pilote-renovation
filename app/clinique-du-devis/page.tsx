@@ -224,7 +224,7 @@ export default function Page() {
         <div className="mt-10">
           <MqFig entier
             src="/photos/pedagogie/schema-devis-six-loupes.jpg"
-            alt="Modèle de devis de travaux vierge, examiné par six loupes numérotées : entreprise et assurances, prestations détaillées, matériaux définis, prix et TVA, délais et paiements, inclus et exclus"
+            alt="Modèle de devis de travaux vierge, examiné par six points de contrôle numérotés : entreprise et assurances, prestations détaillées, matériaux définis, prix et TVA, délais et paiements, inclus et exclus"
             caption="Un modèle de devis dont les montants restent en pointillés, passé à la loupe en six points : identité et assurances de l'entreprise, prestations ligne à ligne, matériaux définis, prix et TVA, délais et échéancier, inclus, exclus et imprévus. Exemple pédagogique construit pour la démonstration — ce n'est le devis d'aucun client. Schéma pédagogique."
             ratio="aspect-[16/9]"
           />

@@ -23,6 +23,15 @@ type Section = { titre: string; texte: React.ReactNode };
  * `maillage` est désormais obligatoire, sur le modèle de LocalPage : impossible d'ajouter une
  * page de spécialité sans lui écrire ses propres liens. La rangée générique est supprimée.
  */
+/* Déduit la mention de provenance du CHEMIN du fichier, pas d'une prop qu'on pourrait
+   oublier de passer ou renseigner de travers. Le dossier est décidé au moment où l'image
+   entre dans le projet ; c'est l'information la plus difficile à falsifier par distraction. */
+function mentionProvenance(chemin: string) {
+  if (chemin.includes("/photos/chantiers/")) return "Chantier réel des équipes partenaires";
+  if (chemin.includes("/photos/pedagogie/")) return "Schéma pédagogique";
+  return "Illustration, non contractuelle";
+}
+
 export function SpecialtyPage({
   eyebrow,
   segments,
@@ -100,8 +109,15 @@ export function SpecialtyPage({
             <div className="relative aspect-[16/8] rounded-none overflow-hidden card-e">
               <img src={PHOTOS[photo]} srcSet={srcSetOf(PHOTOS[photo])} sizes="(min-width: 1024px) 896px, 100vw" alt={photoAlt} loading="lazy" className="absolute inset-0 size-full object-cover" />
             </div>
+            {/* 07/09 : la mention de provenance était écrite en dur — « Illustration, non
+                contractuelle » était accolée à TOUTES les images de ce gabarit, y compris aux
+                photographies de chantier réel. La ligne affichée se contredisait donc
+                elle-même : « …chantier réel des équipes partenaires — Illustration, non
+                contractuelle ». Elle se déduit maintenant du dossier d'origine du fichier,
+                qui est la seule source fiable : /chantiers = une vraie photo de chantier,
+                /pedagogie = un schéma, tout le reste = une illustration. */}
             <figcaption className="mt-2 font-mono text-[0.66rem] tracking-[0.12em] uppercase text-muted">
-              {photoAlt} — Illustration, non contractuelle
+              {photoAlt} — {mentionProvenance(PHOTOS[photo])}
             </figcaption>
           </figure>
         </div>

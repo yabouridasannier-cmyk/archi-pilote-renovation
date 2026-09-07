@@ -178,14 +178,14 @@ export default function Page() {
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/chantiers/chCharpenteExtensionBlocsBeton.jpeg"
-            alt="Charpente en sapin neuve, pannes et chevrons encore nus, montée entre un mur en blocs de béton fraîchement monté à droite et un mur ancien enduit conservé à gauche, échafaudage en pied"
+            alt="Charpente résineuse neuve, pannes et chevrons encore nus, montée entre un mur en blocs de béton fraîchement monté à droite et un mur ancien enduit conservé à gauche, échafaudage en pied"
             caption="La jonction vue de l'extérieur : la charpente neuve prend appui d'un côté sur un mur en blocs de béton monté pour l'occasion, de l'autre sur le mur ancien enduit conservé, dans lequel une ouverture a été percée. Échafaudage encore en place, dalle coulée et blocs stockés au sol. Chantier réel des équipes partenaires."
             ratio="aspect-[4/3]"
           />
           <MqFig
             src="/photos/chantiers/chCharpenteExtensionDepuisOuverture.jpeg"
             alt="Vue prise depuis une ouverture percée dans un mur ancien en pierre, sur une charpente neuve à chevrons et arêtiers posée sur des murs en blocs de béton"
-            caption="La jonction vue depuis l'intérieur du bâti ancien : l'ouverture percée dans le mur de pierre cadre la charpente neuve posée sur les murs en blocs de béton. Palettes de blocs en attente, planchers d'échafaudage posés au sol et trémie encore ouverte sur le niveau inférieur. Chantier réel des équipes partenaires."
+            caption="La jonction vue depuis l'intérieur du bâti ancien : l'ouverture percée dans le mur de pierre cadre la charpente neuve posée sur les murs en blocs de béton. Blocs empilés à même la dalle, planchers d'échafaudage posés au sol et trémie encore ouverte sur le niveau inférieur. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>

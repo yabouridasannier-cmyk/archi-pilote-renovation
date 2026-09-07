@@ -419,7 +419,7 @@ export const PHOTOS = {
   /* Menuiserie sur mesure en cours de pose : bureau/console en panneaux plaqués chêne clair avec */
   chBureauConsoleChenePlateauGalbe: "/photos/chantiers/chBureauConsoleChenePlateauGalbe.jpeg",
   /* Pose en cours d'un carrelage grès cérame effet bois en point de Hongrie (lames à abouts coup */
-  chCarrelageBoisPointHongrieCroisillons: "/photos/chantiers/chCarrelageBoisPointHongrieCroisillons.jpeg",
+  chCarrelageBoisBatonsRompusCroisillons: "/photos/chantiers/chCarrelageBoisBatonsRompusCroisillons.jpeg",
   /* Chambre d'enfant avec agencement sur mesure en panneaux plaqués chêne très clair : structure */
   chChambreLitCabaneCheneClair: "/photos/chantiers/chChambreLitCabaneCheneClair.jpeg",
   /* Chambre d'enfant en fin d'agencement : lit mezzanine sur mesure avec garde-corps à barreauda */
@@ -504,8 +504,8 @@ export const PHOTOS = {
   /* Illustration de marque sur fond bleu nuit : vue axonometrique eclatee d'un appartement ancie */
   schemaAppartementCouches: "/photos/pedagogie/schema-appartement-couches.jpg",
   /* Infographie de marque (illustration 3D éclatée, pas une photo de chantier) : appartement déc */
-  schemaAppartementTroisStrates: "/photos/pedagogie/schema-appartement-trois-strates.jpg",
-  /* Infographie de marque : modele de devis de travaux vierge annote par six loupes (identite et */
+  schemaAppartementPlateauxPilotage: "/photos/pedagogie/schema-appartement-plateaux-pilotage.jpg",
+  /* Infographie de marque : modele de devis de travaux vierge annote par six points de contrôle (identite et */
   schemaDevisSixLoupes: "/photos/pedagogie/schema-devis-six-loupes.jpg",
   /* Infographie de marque : coupe 3D d'un logement coupee en deux — a gauche le gros oeuvre/seco */
   schemaGrosOeuvreSecondOeuvre: "/photos/pedagogie/schema-gros-oeuvre-second-oeuvre.jpg",

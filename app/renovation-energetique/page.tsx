@@ -24,7 +24,7 @@ export default function Page() {
       >
         <MqFig
           src="/photos/maquette/schema-deperditions.jpg"
-          alt="Schéma illustrant les déperditions thermiques typiques d'une passoire énergétique : pertes de chaleur par la toiture, les murs, les menuiseries, le plancher bas et le renouvellement d'air non maîtrisé."
+          alt="Schéma illustrant les déperditions thermiques typiques d'une passoire énergétique : pertes de chaleur par la toiture, les murs, les menuiseries et le plancher bas."
           caption="Répartition indicative des déperditions thermiques dans un logement mal isolé, avant travaux de rénovation énergétique."
           ratio="aspect-[10/7]"
         />
@@ -206,7 +206,7 @@ export default function Page() {
           <MqFig
             src="/photos/chantiers/chIsolationRampantOuateFibres.jpeg"
             alt="Rampant de comble en cours d'isolation : écran de sous-toiture noir entre chevrons, panneaux d'isolant en fibres grises, ossature métallique de doublage et première plaque de plâtre posée à droite"
-            caption="Rampant isolé sur charpente existante : panneaux de fibres grises calés entre les chevrons devant l'écran de sous-toiture, ossature métallique de doublage déjà en place et première plaque de plâtre montée à droite. Chantier réel des équipes partenaires."
+            caption="Rampant isolé entre chevrons : panneaux de fibres grises calés entre les chevrons devant l'écran de sous-toiture, ossature métallique de doublage déjà en place et première plaque de plâtre montée à droite. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>

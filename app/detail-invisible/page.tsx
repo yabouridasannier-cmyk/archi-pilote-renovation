@@ -93,13 +93,13 @@ export default function DetailInvisiblePage() {
       {/*
         06/09 — DOUBLE EMPLOI CONSTATÉ, image volontairement NON posée ici.
         Deux illustrations d'appartement éclaté en couches sont arrivées ensemble :
-        schema-appartement-trois-strates.jpg et schema-appartement-couches.jpg. Ouvertes
+        schema-appartement-plateaux-pilotage.jpg et schema-appartement-couches.jpg. Ouvertes
         côte à côte, ce sont la même image : même titre incrusté (« Chaque étape produit
-        une décision ou une preuve »), même vue axonométrique, mêmes trois plateaux
+        une décision ou une preuve »), même vue axonométrique, mêmes quatre plateaux
         EXISTANT / STRUCTURE / RÉSEAUX, mêmes alertes OMISSION / INTERFACE / REPRISE, même
         parcours en huit repères. Une seule différence : la version « couches » affiche
         des montants dans les blocs de chiffrage (68 420 €, 22 750 €, 9 130 €), là où la
-        version « trois strates » les laisse vides.
+        version « quatre plateaux » les laisse vides.
         Elle n'est donc pas posée, pour deux raisons cumulées :
         1) la poser ici ferait voir au visiteur deux fois la même illustration sur deux
            pages voisines — exactement le reproche du client (« toujours les mêmes

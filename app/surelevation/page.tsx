@@ -190,21 +190,21 @@ export default function Page() {
           précisément celle que le texte décrit et que personne ne voit jamais.
 
           Les deux prises ont été ouvertes avant d'être légendées. Elles montrent une charpente
-          neuve montée SUR DU BÂTI EXISTANT — mur pignon mitoyen conservé et décroûté, plancher
+          neuve montée SUR DU BÂTI EXISTANT — mur mur pignon aveugle conservé et décroûté, plancher
           de planches ancien, mur enduit à l'arrière-plan —, ce qui les distingue des charpentes
           de construction neuve isolée présentes ailleurs sur le site. Ni la localisation, ni
           l'essence exacte des bois, ni la nature de l'opération (surélévation ou réfection de
           comble) ne sont certifiables à l'œil : les légendes n'en revendiquent aucune.
 
-          Les deux prises ne viennent PAS du même chantier (mur pignon mitoyen enduit et plancher
+          Les deux prises ne viennent PAS du même chantier (mur mur pignon aveugle enduit et plancher
           de planches d'un côté, mur ancien couvert de végétation sèche et tête de mur béton de
           l'autre) : aucune légende ne les présente comme deux vues d'une même opération.
         */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
           <MqFig
             src="/photos/chantiers/chCharpenteNeuvePignonMitoyen.jpeg"
-            alt="Charpente bois neuve montée contre un mur pignon mitoyen enduit, bande de maçonnerie décroûtée jusqu'aux moellons sous la pente, échafaudage roulant et visseuse posée sur un chevron"
-            caption="Structure nouvelle contre un pignon mitoyen conservé : sous la nouvelle pente, une bande de maçonnerie a été décroûtée jusqu'aux moellons et garnie de tiges verticales ; les bois sont engravés dans le mur, les chevrons repris sur sabots métalliques. Le plancher de planches et l'échafaudage roulant sont ceux du chantier. Chantier réel des équipes partenaires."
+            alt="Charpente bois neuve montée contre un mur mur pignon aveugle enduit, bande de maçonnerie décroûtée jusqu'aux moellons sous la pente, échafaudage roulant et visseuse posée sur un chevron"
+            caption="Structure nouvelle contre un mur pignon aveugle conservé : sous la nouvelle pente, une bande de maçonnerie a été décroûtée jusqu'aux moellons et garnie de tiges verticales ; les bois sont engravés dans le mur, les chevrons repris sur sabots métalliques. Le plancher de planches et l'échafaudage roulant sont ceux du chantier. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
           <MqFig

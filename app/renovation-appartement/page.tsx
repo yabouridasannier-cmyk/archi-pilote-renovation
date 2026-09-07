@@ -74,7 +74,7 @@ export default function Page() {
         {/*
           06/09 : les trois encarts ci-dessus (structure, évacuations, ventilation) étaient
           jusqu'ici du texte seul. Cette illustration les met en volume : elle sépare
-          l'appartement en trois plateaux empilés — l'existant en haut, la structure au
+          l'appartement en quatre plateaux empilés — l'existant en haut, la structure au
           milieu, les réseaux en dessous — ce qui est très exactement la hiérarchie décrite
           par la section. Image OUVERTE et vérifiée avant écriture de la légende : on y lit
           bien les trois libellés EXISTANT / STRUCTURE / RÉSEAUX, les trois alertes OMISSION,
@@ -87,9 +87,9 @@ export default function Page() {
         */}
         <div className="mt-10">
           <MqFig entier
-            src="/photos/pedagogie/schema-appartement-trois-strates.jpg"
-            alt="Vue éclatée d'un appartement en trois plateaux superposés — l'existant, la structure, les réseaux — entourée d'un parcours en huit repères et de trois alertes : omission, interface, reprise"
-            caption="Le même appartement décomposé en trois plateaux : l'existant qu'on voit, la structure qui commande les ouvertures, les réseaux qui commandent les points d'eau. C'est entre ces plateaux que se logent les oublis, les interfaces mal réparties et les reprises. Illustration de principe, pas le relevé d'un logement précis. Schéma pédagogique."
+            src="/photos/pedagogie/schema-appartement-plateaux-pilotage.jpg"
+            alt="Vue éclatée d'un appartement en quatre plateaux superposés — l'existant, la structure, les réseaux — entourée d'un parcours en huit repères et de trois alertes : omission, interface, reprise"
+            caption="Le même appartement décomposé en quatre plateaux : l'existant qu'on voit, la structure qui commande les ouvertures, les réseaux qui commandent les points d'eau. C'est entre ces plateaux que se logent les oublis, les interfaces mal réparties et les reprises. Illustration de principe, pas le relevé d'un logement précis. Schéma pédagogique."
             ratio="aspect-[16/9]"
           />
         </div>

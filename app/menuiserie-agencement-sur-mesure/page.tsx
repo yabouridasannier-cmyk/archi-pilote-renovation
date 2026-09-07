@@ -148,8 +148,8 @@ export default function Page() {
           />
           <MqFig
             src="/photos/chantiers/chChassisVitresBouleauAvantPose.jpeg"
-            alt="Deux châssis menuisés en contreplaqué de bouleau, chants multiplis apparents, stockés debout contre un mur sur un sol protégé par un géotextile"
-            caption="Châssis menuisés en contreplaqué de bouleau, chants multiplis laissés apparents : assemblés avant la pose, ils patientent debout sur un sol protégé, au milieu des menuiseries encore sous adhésif. Chantier réel des équipes partenaires."
+            alt="Deux châssis menuisés en contreplaqué clair, chants multiplis apparents, stockés debout contre un mur sur un sol protégé par un géotextile"
+            caption="Châssis menuisés en contreplaqué clair, chants multiplis laissés apparents : assemblés avant la pose, ils patientent debout sur un sol protégé, au milieu des menuiseries encore sous adhésif. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>
@@ -265,7 +265,7 @@ export default function Page() {
               <MqFig
                 src="/photos/chantiers/chCuisineBleuCielIlotLaque.jpeg"
                 alt="Cuisine ouverte en fin de chantier : linéaire de façades bleu ciel brillantes toute hauteur et îlot blanc coiffé d'un plan de travail en bois foncé assemblé à chevrons"
-                caption="Ce qui est fabriqué sur mesure ici, c'est le plan : îlot coiffé d'un plan de travail en bois foncé assemblé à chevrons, coupes d'onglet et abouts biseautés — un assemblage qui ne se trouve pas en longueur standard. Derrière, le linéaire de façades bleu ciel brillantes monte jusqu'au plafond ; les plans de pose sont encore scotchés sur la crédence. Chantier réel des équipes partenaires."
+                caption="Ce qui est fabriqué sur mesure ici, c'est le plan : îlot coiffé d'un plan de travail en bois foncé assemblé à chevrons, assemblé à chevrons — un assemblage qui ne se trouve pas en longueur standard. Derrière, le linéaire de façades bleu ciel brillantes monte jusqu'au plafond ; les plans de pose sont encore scotchés sur la crédence. Chantier réel des équipes partenaires."
                 ratio="aspect-[4/3]"
               />
             </div>
@@ -300,7 +300,7 @@ export default function Page() {
               <MqFig
                 src="/photos/chantiers/chDressingPortesCoulissantesMiroir.jpeg"
                 alt="Dégagement bordé de deux enfilades de placards toute hauteur à portes coulissantes, cadres bois et remplissage miroir, ouvrant au fond sur une chambre meublée"
-                caption="Dressing de passage livré : deux enfilades de placards toute hauteur à portes coulissantes, cadre bois et remplissage miroir, spots doubles orientables et parquet ton miel à larges lames. Le flexible d'aspirateur au sol est celui du ménage de fin de chantier. Chantier réel des équipes partenaires."
+                caption="Dressing de passage livré : deux enfilades de placards toute hauteur à portes coulissantes, cadre bois et remplissage miroir, spots doubles orientables et parquet ton miel à larges lames. Le couloir dessert une chambre déjà occupée, dont on aperçoit le lit et le bureau. Chantier réel des équipes partenaires."
                 ratio="aspect-[3/4]"
               />
             </div>
@@ -343,12 +343,14 @@ export default function Page() {
                 caption="Découpe sur mesure : un mur entier d'étagères dont chaque montant est découpé en silhouette de cactus, en bois brut avant finition — la liberté de forme permise par la fabrication en atelier. Chantier réel des équipes partenaires."
                 ratio="aspect-[3/4]"
               />
-              <MqFig
-                src="/photos/chantiers/chBibliothequeNicheGrisTaupe.jpeg"
-                alt="Bibliothèque encastrée dans une niche, caisson toute hauteur peint gris taupe, étagères garnies de livres et portes à panneaux en partie basse, à côté d'un mur en pierre de taille apparente"
-                caption="Bibliothèque encastrée dans une niche : caisson toute hauteur peint gris taupe, corniche moulurée en tête, portes à panneaux et boutons anciens en partie basse, ajustée contre un mur en pierre de taille laissé apparent et un parquet ancien. Chantier réel des équipes partenaires."
-                ratio="aspect-[3/4]"
-              />
+          {/* 07/09 — chBibliothequeNicheGrisTaupe RETIRÉE de cette grille. C'est la MÊME
+              bibliothèque que chBibliotheque.jpeg, deux cases plus haut dans la même rangée :
+              mêmes livres, même piano-jouet rouge, même pouf gris, même mur en pierre de
+              taille, même parquet. Deux vues du même meuble dans une grille censée montrer la
+              variété du savoir-faire, c'est très exactement le « toujours les mêmes photos »
+              que le client reproche. La vue conservée est la plus large et la mieux éclairée.
+              Au passage : son nom annonçait un « gris taupe » alors que le meuble est d'un
+              beige rosé — un nom de fichier de plus qui décrit mal ce qu'il contient. */}
             </div>
           </div>
           <div>
@@ -374,7 +376,7 @@ export default function Page() {
               <MqFig
                 src="/photos/chantiers/chChambreLitCabaneCheneClair.jpeg"
                 alt="Chambre d'enfant en cours d'agencement : lit-cabane à pignon en panneaux de bois clair monté sur une estrade, niches à claire-voie en forme de maison au mur, bureau à casiers, sol entièrement bâché"
-                caption="Lit-cabane monté sur son estrade : pignon ajouré à claire-voie, garde-corps à barreaux tournés et emmarchement d'accès, prolongé au mur par deux niches en forme de maison et un bureau à casiers. Sol entièrement bâché, prises et point de centre non raccordés. Chantier réel des équipes partenaires."
+                caption="Lit-cabane monté sur son estrade : pignon ajouré à claire-voie, garde-corps à barreaux droits et emmarchement d'accès, prolongé au mur par deux niches en forme de maison et un bureau à casiers. Sol entièrement bâché, prises et point de centre non raccordés. Chantier réel des équipes partenaires."
                 ratio="aspect-[4/3]"
               />
             </div>

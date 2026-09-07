@@ -324,7 +324,7 @@ export default function Page() {
           <MqFig
             src="/photos/chantiers/chEtancheiteReceveurDoucheLaser.jpeg"
             alt="Implantation d'un receveur de douche au laser de niveau, plaques hydrofuges et réservations du mitigeur et de la bonde tracées à la main"
-            caption="Implantation du receveur au laser de niveau : la ligne verte donne le niveau de référence, les réservations du mitigeur et de la bonde sont tracées sur les plaques hydrofuges avant toute étanchéité. Chantier réel des équipes partenaires."
+            caption="Implantation du receveur au laser de niveau : la ligne verte donne le niveau de référence, la bonde est déjà raccordée aux évacuations et les repères de la douche sont tracés au crayon sur les plaques hydrofuges avant toute étanchéité. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
           />
         </div>
