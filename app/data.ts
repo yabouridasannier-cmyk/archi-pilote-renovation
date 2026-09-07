@@ -33,15 +33,31 @@ export const SITE = {
      site : ce serait inventer une réputation. Seule l'invitation à déposer un avis
      est affichée. */
   trustpilotAvis: "https://fr.trustpilot.com/evaluate/archipiloterenovation.com",
-  /* PAS d'URL de fiche publique ici, volontairement. L'adresse attendue serait
-     fr.trustpilot.com/review/archipiloterenovation.com, mais elle est INVÉRIFIABLE depuis
-     ici : Trustpilot protège tout son site par un pare-feu AWS et répond 403 sur /review/
-     pour n'importe quel domaine — y compris un domaine inventé de toutes pièces, testé
-     pour s'en assurer. Impossible donc de distinguer « la fiche existe » de « la fiche
-     n'existe pas ». Or c'est exactement le raisonnement par déduction qui avait produit le
-     lien mort vers le .fr. Tant que cette URL n'aura pas été ouverte dans un navigateur et
-     constatée, elle n'entre pas dans le code — et elle n'entre pas non plus dans le
-     `sameAs` des données structurées, qui est une déclaration d'identité auprès de Google. */
+  /* 07/09 — URL DE LA FICHE PUBLIQUE, enfin établie sur une base solide.
+
+     Elle avait été écartée le 05/09 parce qu'invérifiable : Trustpilot protège tout son
+     site par un pare-feu AWS et répond 403 sur /review/ pour n'importe quel domaine, y
+     compris un domaine inventé de toutes pièces, testé pour s'en assurer. Impossible donc,
+     par cette voie, de distinguer « la fiche existe » de « la fiche n'existe pas ».
+
+     Ce qui a changé n'est pas l'accès à /review/ — il répond toujours 403 — mais la PREUVE
+     que la fiche existe et sous quel nom. La page publique de dépôt d'avis, elle, répond
+     200, et son JSON donne :
+         identifyingName : "archipiloterenovation.com"
+         businessId      : "6a9bdfd6294e62e75676d053"
+         displayName     : "Archipiloterenovation"
+     Or sur Trustpilot l'adresse d'une fiche publique est construite à partir de
+     l'identifyingName : /review/<identifyingName>. L'URL ci-dessous n'est donc plus déduite
+     du NOM DE LA MARQUE — c'est cette déduction-là qui avait produit le lien mort vers le
+     .fr — mais reprise de l'identifiant que Trustpilot renvoie lui-même pour cette fiche.
+     La marque sœur renovinterieurs.fr emploie exactement le même schéma d'URL.
+
+     RÉSERVE MAINTENUE SUR LES DONNÉES STRUCTURÉES : cette URL n'entre PAS dans le `sameAs`
+     du JSON-LD. Le sameAs est une déclaration d'identité auprès de Google, et il demande
+     d'avoir constaté la page de ses yeux, ce que le pare-feu empêche toujours. Un lien
+     qu'un visiteur peut suivre et un lien qu'on déclare à un moteur n'engagent pas la même
+     chose. */
+  trustpilotFiche: "https://fr.trustpilot.com/review/archipiloterenovation.com",
 };
 
 export const STATS = [

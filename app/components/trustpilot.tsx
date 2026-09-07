@@ -37,7 +37,16 @@ import { SITE } from "../data";
 
    Le <a> à l'intérieur du widget n'est pas décoratif : c'est le repli affiché quand le
    script de Trustpilot ne se charge pas (bloqueur de contenu, réseau coupé). Il doit donc
-   toujours rester un lien réel vers la page de dépôt d'avis. */
+   toujours rester un lien réel.
+
+   DEUX URL, DEUX USAGES — ne pas les confondre (07/09) :
+   · SITE.trustpilotFiche  = /review/…  → la page qui MONTRE les avis. C'est celle vers
+     laquelle pointent le badge et les liens de lecture : un visiteur qui clique sur un
+     badge Trustpilot veut lire des avis, pas en écrire un.
+   · SITE.trustpilotAvis   = /evaluate/… → le formulaire de DÉPÔT d'avis. Réservé aux
+     boutons qui invitent explicitement un client à témoigner.
+   Jusqu'au 07/09 tout pointait sur /evaluate/, ce que le client a fait corriger : on
+   envoyait un prospect venu chercher de la réputation directement dans un formulaire. */
 
 const VERT_TRUSTPILOT = "#00B67A";
 
@@ -66,14 +75,14 @@ export function TrustpilotBouton({ variante = "principal" }: { variante?: "princ
   if (variante === "discret") {
     return (
       <a
-        href={SITE.trustpilotAvis}
+        href={SITE.trustpilotFiche}
         target="_blank"
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity"
       >
         <MarqueTrustpilot taille={16} />
-        <span className="hidden sm:inline">— donner votre avis</span>
-        <span className="sm:hidden">— votre avis</span>
+        <span className="hidden sm:inline">— voir nos avis</span>
+        <span className="sm:hidden">— nos avis</span>
       </a>
     );
   }
@@ -124,8 +133,8 @@ export function TrustpilotWidget({ largeur = "100%", hauteur = "52px", repli }: 
             coupé, script indisponible). Ce n'est donc pas du décor : pour une partie des
             visiteurs, c'est CE bloc qu'ils verront, et il doit tenir tout seul. */}
         {repli ?? (
-          <a href={SITE.trustpilotAvis} target="_blank" rel="noopener noreferrer">
-            Évaluez-nous sur Trustpilot
+          <a href={SITE.trustpilotFiche} target="_blank" rel="noopener noreferrer">
+            Voir nos avis sur Trustpilot
           </a>
         )}
       </div>
@@ -151,7 +160,7 @@ export function TrustpilotWidget({ largeur = "100%", hauteur = "52px", repli }: 
 export function TrustpilotLigne() {
   return (
     <a
-      href={SITE.trustpilotAvis}
+      href={SITE.trustpilotFiche}
       target="_blank"
       rel="noopener noreferrer"
       className="group inline-flex items-center gap-3 border border-line bg-surface rounded-[2px] pl-3 pr-4 py-2.5 hover:border-line-strong transition-colors"
@@ -167,7 +176,7 @@ export function TrustpilotLigne() {
       </span>
       <span className="flex flex-col leading-tight">
         <span className="text-ivoire font-semibold text-[0.9rem] group-hover:text-orange-deep transition-colors">
-          Évaluez-nous sur Trustpilot
+          Nos avis sur Trustpilot
         </span>
         <span className="text-muted text-[0.78rem]">
           Plateforme indépendante — nous ne pouvons ni modifier ni supprimer un avis
