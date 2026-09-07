@@ -194,7 +194,12 @@ export default function SavoirFaireAncienPage() {
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {/* 07/09 : cette grille d'images passe en COLONNES. En grille, toutes les
+              cartes d'une rangée sont étirées à la hauteur de la plus haute ; comme les
+              images gardent désormais leur ratio natif — trois portraits y perdaient
+              jusqu'à 58 % de leur sujet dans le cadre paysage par défaut —, cela créait des
+              vides blancs. Les colonnes empilent chaque carte à sa hauteur réelle. */}
+            <div className="columns-1 md:columns-2 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
             {/*
               Grille revue le 03/09/2026 : chaque vignette a été rouverte et son recadrage réel
               simulé (aspect-[4/3] + object-cover) avant d'être jugée. Quatre vignettes ont été
@@ -265,6 +270,7 @@ export default function SavoirFaireAncienPage() {
               src="/photos/chantiers/chHdgSalonSalleMangerMoulures.jpeg"
               alt="Salon et salle à manger d'un appartement haussmannien livré, rosace de plafond et corniche sculptée, murs à panneaux moulurés et parquet chêne à chevrons"
               caption="Salon-salle à manger livré : rosace de plafond, corniche sculptée et murs à panneaux moulurés, grande glace à cadre mouluré encastrée dans le lambris, parquet chêne posé à chevrons. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/2]"
             />
             {/*
               Déplacé ici le 03/09/2026 depuis la section « Plâtrerie décorative » : cette vignette
@@ -277,11 +283,13 @@ export default function SavoirFaireAncienPage() {
               src="/photos/chantiers/chCouloirPorteBleueNoyer.jpeg"
               alt="Pièce d'appartement ancien en cours de finition : rangement en placage noyer monté jusque sous la corniche moulurée, porte à panneaux moulurés peinte en bleu, fenêtre sur rue à garde-corps en ferronnerie"
               caption="Raccord du neuf au décor existant : le rangement en placage noyer monte jusque sous la corniche moulurée du plafond et vient buter contre la porte à panneaux moulurés peinte en bleu. La fenêtre sur rue garde son garde-corps en ferronnerie, face aux façades en pierre de taille du vis-à-vis. Chantier réel des équipes partenaires."
+              ratio="aspect-[16/9]"
             />
             <MqFig
               src="/photos/chantiers/chHdgChambreChemineeMiroirMoulure.jpeg"
               alt="Chambre d'appartement haussmannien livrée, cheminée en marbre blanc sculpté avec foyer en fonte, trumeau mouluré au-dessus, corniche sculptée et parquet chêne à chevrons"
               caption="Cheminée en marbre blanc sculpté et son foyer en fonte, surmontés d'un trumeau à cadre mouluré ; corniche sculptée, panneaux muraux moulurés et parquet chêne posé à chevrons. Une armoire en bois clair est ajustée contre le mur. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/2]"
             />
             {/*
               Photo réelle fournie par le client. Le motif de pose et la coupe de raccord sont
@@ -297,12 +305,20 @@ export default function SavoirFaireAncienPage() {
               motif du remplacement est éditorial, pas factuel.
               La remplaçante répond à une demande que le client avait formulée par écrit pour
               cette page : montrer des moulures et des immeubles en pierre de taille. */}
-          <MqFig
-            src="/photos/chantiers/chDressingNoyerMouluresFenetre.jpeg"
-            alt="Rangements toute hauteur en placage bois brun montés le long d'un mur, sous une corniche moulurée conservée ; à gauche, une fenêtre à double battant et son garde-corps en ferronnerie ouvrent sur la façade en pierre de taille de l'immeuble d'en face"
-            caption="Rangements en placage bois brun montés jusqu'à la corniche moulurée, qui est conservée et n'est pas recoupée : la menuiserie s'arrête au profil existant. Par la fenêtre et son garde-corps en ferronnerie, la façade en pierre de taille de l'immeuble d'en face. Le sol est encore sous protection. Chantier réel des équipes partenaires."
-            ratio="aspect-[9/16]"
-          />
+            {/* 07/09 (2e passe) — le client voulait le parquet remplacé par un MEILLEUR
+                parquet, pas par un autre sujet. Ma première tentative avait mis des
+                rangements à la place : hors sujet. Celle-ci est bien un parquet, et elle vaut
+                mieux que l'ancienne — l'ancienne était un couloir sombre avec un sac de
+                chantier au sol, celle-ci est un gros plan net où le calepinage EST le sujet.
+                Calepinage vérifié à l'agrandissement ×3 avant d'écrire la légende : lames
+                coupées d'onglet, axe central en ligne continue, c'est bien du point de
+                Hongrie. Aucune essence annoncée, elle n'est pas certifiable à l'œil. */}
+            <MqFig
+              src="/photos/chantiers/chParquetChevronsCouloirDeuxTeintes.jpeg"
+              alt="Parquet posé en point de Hongrie vu en plongée depuis une embrasure de porte : lames coupées d'onglet se rejoignant sur un axe central continu, plinthes et huisseries peintes en blanc de part et d'autre"
+              caption="Parquet posé en point de Hongrie : les lames sont coupées d'onglet et se rejoignent sur un axe central qui file en ligne continue, sans décrochement d'une rangée à l'autre — c'est ce qui distingue ce calepinage des bâtons rompus, où les abouts restent droits. La lumière rasante traverse le couloir en diagonale et fait varier la teinte du bois d'un bout à l'autre. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/4]"
+            />
             {/*
               Légende revue le 03/09/2026 après ouverture de l'image : les carreaux anciens visibles
               sont des carreaux émaillés à motif floral et non des « carreaux de ciment » (matériau
@@ -319,6 +335,7 @@ export default function SavoirFaireAncienPage() {
               src="/photos/chantiers/chComptoirBarColonneFonteCarreauxAnciens.jpeg"
               alt="Colonne en fonte et carreaux anciens à motif floral conservés autour d'un comptoir en cours de construction, chantier réel"
               caption="Colonne en fonte et carreaux anciens à motif floral conservés en place, autour d'un comptoir neuf encore en bois brut. Chantier réel des équipes partenaires."
+              ratio="aspect-[9/16]"
             />
             {/*
               03/09/2026 — remplace le diptyque chHdgDetailNicheOnyxCheminee, employé sur 4 pages
@@ -333,6 +350,7 @@ export default function SavoirFaireAncienPage() {
               src="/photos/chantiers/chEncadrementBoisPorteMiroirAtelier.jpeg"
               alt="Ouverture entre deux pièces habillée d'un encadrement en chêne massif à angles coupés, pièce du fond en travaux avec porte à panneaux, radiateur en fonte à colonnes et corniches moulurées"
               caption="Ouverture entre deux pièces habillée d'un encadrement en bois clair à pans coupés, posé sur toute la hauteur. Dans la pièce du fond, encore en travaux — sols bâchés, pots de peinture, escabeau —, la porte à panneaux, le radiateur en fonte à colonnes et les corniches moulurées du plafond sont toujours en place. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/4]"
             />
             {/*
               Ajouté le 03/09/2026 pour l'ouvrage « Mise aux normes invisible », à la place de la
@@ -344,6 +362,7 @@ export default function SavoirFaireAncienPage() {
               src="/photos/chantiers/chPlacardTableauElectriqueIntegre.jpeg"
               alt="Compteur et tableau électriques logés derrière une porte de placard sur mesure en MDF brut, à côté de la porte d'entrée, chantier réel"
               caption="Mise aux normes logée dans la menuiserie : compteur et tableau électriques placés derrière une porte de placard sur mesure, à l'entrée, plutôt que posés en applique dans la pièce. Placard encore en MDF brut avant peinture. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/4]"
             />
           </div>
         </div>
