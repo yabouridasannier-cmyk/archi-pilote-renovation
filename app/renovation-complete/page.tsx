@@ -178,6 +178,25 @@ export default function Page() {
 
       <section className="pb-10">
         <div className="container-site max-w-4xl">
+          {/* 07/09 — Image d'ouverture. La page était la plus pauvre en images du site :
+              dix sections, six illustrations, et le héros n'en avait aucune. Même dispositif
+              que la page sœur « rénovation d'appartement » : un résultat livré, légendé de
+              façon à renvoyer aux décisions prises bien avant.
+
+              Un premier choix a été écarté ici : chDemolitionBoiseriesHaussmannien.jpeg est
+              le MÊME FICHIER que chIsolationPhoniqueGranulesPlancher.jpeg (md5 identique),
+              déjà affichée sur renovation-appartement et gros-oeuvre-structure. En héros de
+              cette page, le visiteur du menu « Travaux » aurait vu deux fois la même image.
+
+              Format natif 1600 × 1066, cadre calé dessus (3/2). */}
+          <div className="mb-8">
+            <MqFig
+              src="/photos/chantiers/chHdgChambreDressingChevrons.jpeg"
+              alt="Chambre aménagée dans un immeuble ancien : corniche et moulures de plafond, cheminée de marbre surmontée d'un grand miroir, parquet clair posé en V, armoire et étagères en bois, fenêtre à balcon en ferronnerie ouvrant sur l'immeuble d'en face"
+              caption="Chambre aménagée dans un immeuble ancien : moulures de plafond et cheminée de marbre en place, parquet clair posé en V, menuiseries et éclairage intégrés, fenêtre et balcon donnant sur la rue. Ce qui se voit à la fin dépend d'arbitrages techniques décidés plusieurs mois plus tôt. Chantier réel des équipes partenaires."
+              ratio="aspect-[3/2]"
+            />
+          </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line rounded-[2px] overflow-hidden">
             {REPERES.map((r) => (
               <li key={r} className="bg-surface px-5 py-4 text-[0.9rem] leading-snug text-ivoire/85">{r}</li>
@@ -231,13 +250,89 @@ export default function Page() {
         lead="Chacune de ces étapes conditionne la suivante. C'est l'ordre, plus que la vitesse, qui protège le budget et le calendrier."
         cta={{ href: "/notre-methode", label: "Le détail de la méthode" }}
       >
-        <MqDarkSteps steps={METHODE} />
+        {/* 07/09 — Illustration de la méthode. MqFig est habillé pour le fond clair
+            (bg-surface, text-muted) : posé ici il ferait une carte blanche sur l'encre.
+            La figure est donc composée sur place avec les tons de MqDark. Colonne étroite
+            (17rem) : l'image est un portrait 1200 × 1600, en pleine largeur elle mesurerait
+            plus de 1 100 px de haut.
+
+            chDemolitionCloisonBoisPlatre.jpeg a été écartée pour cet emplacement : ses deux
+            recadrages (chDemolitionGravatsChantier, chDemolitionLattisPlatreOuverture) sont
+            déjà en service sur ouverture-mur-porteur — page liée depuis celle-ci — et sur un
+            article du blog. La scène aurait atteint le plafond de trois pages. */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_17rem] gap-8 md:gap-10 items-start">
+          <MqDarkSteps steps={METHODE} />
+          <figure className="rounded-[2px] overflow-hidden border" style={{ borderColor: "oklch(35% 0.012 60)" }}>
+            <div className="relative aspect-[3/4] overflow-hidden">
+              <img
+                src="/photos/chantiers/chCouloirOssatureMetalliquePlaque.jpeg"
+                alt="Couloir au stade des cloisons : montants et rails métalliques dressés, plaques déjà vissées sur une face, câble noir descendu le long d'un montant, plafond plaqué, sol encore brut"
+                loading="lazy"
+                className="absolute inset-0 size-full object-cover"
+              />
+            </div>
+            <figcaption
+              className="px-4 py-3 text-[0.8rem] leading-snug border-t"
+              style={{ borderColor: "oklch(35% 0.012 60)", color: "oklch(72% 0.012 75)" }}
+            >
+              Couloir au stade des cloisons : ossature métallique dressée, plaques vissées sur une face,
+              câble descendu avant fermeture, plafond déjà plaqué, sol encore brut. Chaque étape referme la
+              précédente. Chantier réel des équipes partenaires.
+            </figcaption>
+          </figure>
+        </div>
       </MqDark>
 
       <MqSection
         title="Un budget lisible et des responsabilités séparées"
         lead="Ce qui relève de l'accompagnement et ce qui relève des travaux sont facturés séparément, par des acteurs différents."
       >
+        {/* 07/09 — SCHÉMA DES QUATRE RÔLES, demandé nommément par le client : « Créer
+            impérativement le schéma pédagogique à quatre blocs : CLIENT / ARCHI PILOTE
+            RÉNOVATION / ENTREPRISES / FOURNISSEURS ».
+
+            Il est construit en HTML, pas généré par une IA, et c'est délibéré : le client
+            pose comme règle que « le texte ne doit jamais être généré par l'IA », qui n'en
+            produit que l'environnement graphique. Un schéma dont TOUT le sens tient dans ses
+            libellés doit donc être composé, pas dessiné. En HTML il est en plus net à toutes
+            les définitions, lisible par un lecteur d'écran, traduisible, et corrigible en une
+            ligne le jour où le modèle économique bouge — ce qu'une image ne permet pas.
+
+            role="img" + aria-label : pour une aide technique, l'ensemble se lit comme une
+            seule figure et non comme quatre listes sans lien entre elles. */}
+        <div
+          role="img"
+          aria-label="Répartition des rôles dans un projet de rénovation piloté : le client décide et valide, ARCHI PILOTE RÉNOVATION structure et suit, les entreprises partenaires exécutent et facturent leurs travaux, les fournisseurs livrent les matériaux que le client peut acheter en direct."
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10"
+        >
+          {[
+            { n: "01", r: "Client", c: "décide", l: ["Arbitre le programme et le budget", "Valide chaque décision", "Peut acheter les matériaux en direct"] },
+            { n: "02", r: "ARCHI PILOTE RÉNOVATION", c: "structure et suit", l: ["Lit le bien et ses contraintes", "Chiffre poste par poste", "Aide à sélectionner les entreprises", "Suit le chantier jusqu'aux réserves"] },
+            { n: "03", r: "Entreprises partenaires", c: "exécutent et facturent", l: ["Établissent leurs devis", "Réalisent les travaux", "Facturent directement le client", "Portent leurs assurances"] },
+            { n: "04", r: "Fournisseurs", c: "livrent", l: ["Fournissent les matériaux", "Facturent au prix fournisseur", "Achat direct possible"] },
+          ].map((b) => (
+            <div key={b.n} className="flex flex-col gap-3 border border-line bg-surface rounded-[2px] p-5">
+              <div className="flex items-baseline gap-2">
+                <span className="font-mono text-[0.7rem] tracking-[0.16em] text-orange-deep">{b.n}</span>
+                <span className="font-mono text-[0.62rem] tracking-[0.14em] uppercase text-muted">{b.c}</span>
+              </div>
+              <h3 className="display text-[1.05rem] text-ivoire leading-tight">{b.r}</h3>
+              <ul className="flex flex-col gap-1.5 mt-1">
+                {b.l.map((x) => (
+                  <li key={x} className="text-muted text-[0.85rem] leading-snug flex gap-2">
+                    <span aria-hidden className="text-orange-deep shrink-0">·</span>
+                    {x}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <p className="text-muted text-[0.82rem] leading-relaxed max-w-3xl mb-10">
+          Les travaux sont exécutés et facturés par les entreprises partenaires contractantes, qui portent leurs
+          propres assurances. ARCHI PILOTE RÉNOVATION n&apos;exécute aucun lot&nbsp;: son intervention porte sur la
+          structuration du projet, le chiffrage, la sélection des intervenants et le suivi.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           {MODELE.map((m) => (
             <div key={m.title} className="flex flex-col gap-2 border-t border-line pt-4">
@@ -303,16 +398,32 @@ export default function Page() {
             />
           </div>
         </div>
-        <MqProse>
-          <p className="mt-10">
-            Selon les besoins du dossier, un architecte DPLG, un architecte d&apos;intérieur, un ingénieur structure ou
-            un bureau d&apos;études partenaire indépendant peut intervenir dans son propre domaine de compétence. La
-            manière dont ces intervenants sont sélectionnés et vérifiés est décrite sur la page{" "}
-            <Link href="/reseau-partenaires" className={lien}>réseau de partenaires</Link>. Cette organisation
-            s&apos;applique sur l&apos;ensemble de notre zone d&apos;intervention, décrite sur la page{" "}
-            <Link href="/renovation-ile-de-france" className={lien}>rénovation en Île-de-France</Link>.
-          </p>
-        </MqProse>
+        {/* 07/09 — Photo posée en colonne étroite (14rem) à côté du paragraphe : format
+            natif 1200 × 1600, un cadre pleine largeur la ferait dépasser 1 100 px de haut.
+            Le mt-10 est passé du paragraphe au conteneur pour que l'image et le texte
+            démarrent à la même hauteur.
+
+            chPoutreAcierPlafondMurDegarni.jpeg disait mieux le sujet — trois corps de métier
+            dans le même angle — mais sa scène est déjà servie sur trois pages (un article,
+            gros-oeuvre-structure, realisations) : une quatrième dépassait le plafond. */}
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-[1fr_14rem] gap-8 items-start">
+          <MqProse>
+            <p>
+              Selon les besoins du dossier, un architecte DPLG, un architecte d&apos;intérieur, un ingénieur structure
+              ou un bureau d&apos;études partenaire indépendant peut intervenir dans son propre domaine de compétence.
+              La manière dont ces intervenants sont sélectionnés et vérifiés est décrite sur la page{" "}
+              <Link href="/reseau-partenaires" className={lien}>réseau de partenaires</Link>. Cette organisation
+              s&apos;applique sur l&apos;ensemble de notre zone d&apos;intervention, décrite sur la page{" "}
+              <Link href="/renovation-ile-de-france" className={lien}>rénovation en Île-de-France</Link>.
+            </p>
+          </MqProse>
+          <MqFig
+            src="/photos/chantiers/chEtagereCoinFenetreBrute.jpeg"
+            alt="Angle de pièce en cours de finition : panneaux muraux et niche à étagères en bois clair posés, plafond en plaques d'où pendent deux attentes électriques, sol encore brut parcouru d'un câble, fenêtre donnant sur un mur de pierre"
+            caption="Le même angle de pièce à trois stades : la menuiserie en bois clair posée, deux attentes électriques pendantes au plafond, le sol encore brut. Chaque ouvrage relève de l'entreprise qui l'a chiffré et qui le facture. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
       </MqSection>
 
       <MqSection
@@ -415,7 +526,18 @@ export default function Page() {
       </MqSection>
 
       <MqSection title="Questions fréquentes sur la rénovation complète">
-        <MqFaq items={FAQ} />
+        {/* 07/09 — L'image accompagne l'accordéon plutôt que de se poser sous lui : repliée,
+            la FAQ fait à peu près la hauteur d'un portrait 9/16 en colonne de 14rem, les deux
+            colonnes se terminent donc ensemble. */}
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_14rem] gap-8 md:gap-10 items-start">
+          <MqFaq items={FAQ} />
+          <MqFig
+            src="/photos/chantiers/chCouloirPorteBoisModerne.jpeg"
+            alt="Couloir aux murs clairs déjà lissés, sol entièrement recouvert d'un film plastique de protection, carton posé au sol, porte en bois au fond dont la fine imposte vitrée laisse entrer la lumière"
+            caption="Couloir en cours de travaux : murs clairs déjà lissés, sol recouvert d'un film de protection, carton de fourniture posé au sol. Le logement n'est pas encore rendu à l'usage. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
+          />
+        </div>
         <div className="mt-8">
           <MqNumbered
             cols={2}
