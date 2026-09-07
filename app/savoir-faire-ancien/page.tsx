@@ -247,11 +247,20 @@ export default function SavoirFaireAncienPage() {
               chPlacardTableauElectriqueIntegre passe de 3 à 2 pages, retirée du « Déroulé » de
               /realisations et gardée ici, où « la mise aux normes invisible » est justement le sujet.
             */}
-            <MqFig
-              src="/photos/chantiers/chIsolationPhoniqueGranulesPlancher.jpeg"
-              alt="Pièce d'un appartement haussmannien en cours de dépose : boiseries murales moulurées et volets persiennés en place, parquet déposé jusqu'aux solives, granulés d'isolation répandus entre elles"
-              caption="Appartement haussmannien en cours de travaux : boiseries murales moulurées et volets persiennés en place dans leurs embrasures ; parquet déposé jusqu'aux solives et granulés d'isolation répandus entre elles. Chantier réel des équipes partenaires."
-            />
+            {/* 07/09 — IMAGE 1 REMPLACÉE à la demande du client. L'ancienne
+              (chIsolationPhoniqueGranulesPlancher) montrait surtout un plancher déposé et des
+              granulés d'isolation : un ouvrage de chantier, pas le cachet d'un logement
+              ancien, alors que c'est le sujet de la section. Elle était en outre le même
+              fichier que chDemolitionBoiseriesHaussmannien, servi sous deux noms, et
+              apparaissait déjà sur trois pages.
+              La remplaçante montre exactement ce que la section annonce : une menuiserie
+              NEUVE insérée dans un décor ANCIEN conservé. */}
+          <MqFig
+            src="/photos/chantiers/chFenetreBoisDecorativeChantier.jpeg"
+            alt="Ouverture vitrée intérieure à châssis bois et petits bois, au couronnement pentagonal, percée dans une cloison peinte ; au-dessus, corniche moulurée et plafond à caissons conservés ; au travers, une fenêtre ancienne et sa grille en ferronnerie ouvragée"
+            caption="Une verrière intérieure en bois insérée dans un décor conservé : la corniche moulurée et le plafond à caissons courent au-dessus sans être interrompus, et l'on aperçoit au travers la fenêtre ancienne avec sa grille en ferronnerie. Les fils sont encore en attente et les pots de peinture au sol : la pièce n'est pas livrée. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
             <MqFig
               src="/photos/chantiers/chHdgSalonSalleMangerMoulures.jpeg"
               alt="Salon et salle à manger d'un appartement haussmannien livré, rosace de plafond et corniche sculptée, murs à panneaux moulurés et parquet chêne à chevrons"
@@ -282,11 +291,18 @@ export default function SavoirFaireAncienPage() {
               (ce que décrit le texte de l'ouvrage) — aucune photo du dossier ne documente cette
               reprise-là.
             */}
-            <MqFig
-              src="/photos/chantiers/chCouloirParquetChevronsPortesOuvertes.jpeg"
-              alt="Couloir d'appartement ancien livré : parquet chêne posé à chevrons, pointe du motif alignée dans l'axe du passage, portes à panneaux moulurés repeintes en gris taupe"
-              caption="Parquet chêne posé à chevrons, motif traditionnel des logements anciens : la pointe du chevron est calée dans l'axe du couloir et le motif se poursuit dans la pièce suivante. De part et d'autre, des portes à panneaux moulurés repeintes en gris taupe, à paumelles et béquilles noires apparentes. Chantier réel des équipes partenaires."
-            />
+            {/* 07/09 — IMAGE 5 (le parquet) REMPLACÉE à la demande du client. À noter pour
+              mémoire : la légende de l'ancienne était JUSTE — c'était bien du point de
+              Hongrie, lames coupées d'onglet et axe continu, vérifié à l'agrandissement. Le
+              motif du remplacement est éditorial, pas factuel.
+              La remplaçante répond à une demande que le client avait formulée par écrit pour
+              cette page : montrer des moulures et des immeubles en pierre de taille. */}
+          <MqFig
+            src="/photos/chantiers/chDressingNoyerMouluresFenetre.jpeg"
+            alt="Rangements toute hauteur en placage bois brun montés le long d'un mur, sous une corniche moulurée conservée ; à gauche, une fenêtre à double battant et son garde-corps en ferronnerie ouvrent sur la façade en pierre de taille de l'immeuble d'en face"
+            caption="Rangements en placage bois brun montés jusqu'à la corniche moulurée, qui est conservée et n'est pas recoupée : la menuiserie s'arrête au profil existant. Par la fenêtre et son garde-corps en ferronnerie, la façade en pierre de taille de l'immeuble d'en face. Le sol est encore sous protection. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
+          />
             {/*
               Légende revue le 03/09/2026 après ouverture de l'image : les carreaux anciens visibles
               sont des carreaux émaillés à motif floral et non des « carreaux de ciment » (matériau
