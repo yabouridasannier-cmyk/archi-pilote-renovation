@@ -62,6 +62,12 @@ const CH = "/photos/chantiers";
    chPoutreAcierAngleSoudeVue1 et chDemolitionMursDecapes / chDemolitionDegagementVersSejour, cadrées
    à quelques centimètres près sur le même ouvrage — une seule de chaque est conservée. */
 const PHOTOS_CHANTIERS = [
+  /* 07/09 — LES DEUX PORTIQUES ACIER RETIRÉS DE LA TÊTE DE GALERIE, à la demande du client
+     (« les deux portiques à prise d'acier, tu me les enlèves au début, j'aime pas du tout »).
+     Ils ouvraient la galerie sur deux gros plans sombres de profilés, ce qui est le sujet le
+     plus aride du fonds : la première impression d'une page de réalisations se jouait sur de
+     la structure brute plutôt que sur un ouvrage lisible. La structure acier reste présentée
+     là où elle est le sujet — /gros-oeuvre-structure et /ouverture-mur-porteur. */
   /* chDemolitionCloisonBoisPlatre était employée sur 4 pages (demarches-administratives-renovation,
      gros-oeuvre-structure, renovation-appartement et ici) : c'est le mur éventré que le client voit
      revenir. Attention au piège : chDemolitionGravatsChantier, qui semblait un remplaçant idéal
@@ -73,8 +79,6 @@ const PHOTOS_CHANTIERS = [
      désormais la section démolition de /gros-oeuvre-structure, et elle reste employée par
      deux articles de blog — la garder ici en faisait une quatrième apparition. La galerie
      conserve une scène de démolition, chDemolitionMursDecapes, plus bas. */
-  { src: `${CH}/chPortiqueAcierAngleGaine.jpeg`, alt: "Portique acier de reprise de charge après ouverture d'un mur porteur, gaine électrique le long de l'ossature", cap: "Portique acier de reprise de charge (poutre et poteau) posé après ouverture d'un mur porteur : la gaine annelée redescend le long du poteau et le plâtre du tableau n'est pas encore repris. Chantier réel des équipes partenaires.", ratio: "aspect-[9/16]" },
-  { src: `${CH}/chPoteauAcierPlatinePied.jpeg`, alt: "Pied de poteau acier soudé sur sa platine, posé dans une réservation ouverte dans le plancher, gravats encore en place", cap: "Pied de poteau acier soudé sur sa platine, posé dans une réservation ouverte dans le plancher : le scellement et le rebouchage restent à faire, les gravats sont encore en place. Chantier réel des équipes partenaires.", ratio: "aspect-[9/16]" },
   { src: `${CH}/chPlancherSolivesBeton1.jpeg`, alt: "Plancher ancien ouvert : solives et entretoises maçonnées formant un quadrillage d'alvéoles vides", cap: "Plancher ancien ouvert jusqu'à sa structure : solives et entretoises maçonnées forment un quadrillage d'alvéoles encore vides, avant remplissage, chape et pose du revêtement de sol. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
   /* 06/09 — LOT WHATSAPP INÉDIT. Ces deux vues ont été ouvertes à l'écran avant rédaction, et
      agrandies l'une à côté de l'autre : on retrouve sur les DEUX la même fenêtre à volets
@@ -219,6 +223,29 @@ const PHOTOS_CHANTIERS = [
   { src: `${CH}/chBibliothequeChenePieceComplete.jpeg`, alt: "Bibliothèque sur mesure du sol au plafond en placage chêne occupant une pièce entière, chantier réel", cap: "Bibliothèque sur mesure occupant les trois murs d'une pièce, du sol au plafond, en placage bois clair. Le chantier est en cours : sol entièrement bâché, tréteaux et scie du menuisier au milieu de la pièce, plafond encore en cours de finition. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
   /* chRangementRadiateurEtageresOuvertes supprimée : même cliché que
      chEnsembleRangementRadiateurClaustra en tête de galerie (distance 0,004). */
+
+  /* 07/09 — TREIZE VUES INÉDITES ajoutées ici : le client trouvait la page encore pauvre en images,
+     et le contrôle des clés de app/lib-photos.ts montrait que 86 fichiers déjà en ligne n'étaient
+     employés sur AUCUNE page. Chaque fichier a été OUVERT avant d'être légendé, et non lu au nom :
+     le tri a d'ailleurs écarté plusieurs candidats que seul l'œil pouvait recaler — chEtagereCoin-
+     FenetreBrute et chDressingEscalierArriereplan sont deux autres angles de la boiserie courbe déjà
+     en galerie (chBoiserieCourbeNicheEtageres), chDressingMdfBrutNiche est le même ouvrage que
+     chBibliothequesMdfBrutOuvertes portes fermées, chIsolationPhoniqueGranulesPlancher2 est le même
+     couloir que chPlancherSolivesBeton1 une étape plus tard, et chDressingBlancInterphone le même
+     dressing laqué que chDressingLaqueBlancPoigneesBois. Les distances de scripts/memes-scenes.py
+     les donnaient pourtant à 0,08–0,18, soit « scènes différentes ».
+     Rien d'acier ici : la structure métallique reste sur /gros-oeuvre-structure et
+     /ouverture-mur-porteur, le client n'en veut pas sur cette page. */
+  { src: `${CH}/chDemolitionLattisPlatreChantier1.jpeg`, alt: "Cloison ancienne dont le plâtre a été piqué, lattis horizontal cloué sur poteaux de bois mis à nu, encadrement de porte conservé", cap: "Cloison ancienne mise à nu : le plâtre a été piqué jusqu'au lattis et l'on lit le squelette de la paroi — poteaux verticaux, lattes horizontales clouées. Le tableau de porte est conservé, le sol est couvert de gravats et la pièce voisine est protégée sous bâche. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  { src: `${CH}/chFacadeRavalementEchafaudage2.jpeg`, alt: "Immeuble ancien sous échafaudage pour un ravalement, toiture d'ardoise et souches de cheminée en brique conservées", cap: "Ravalement en cours sur un immeuble ancien : l'échafaudage et son filet enveloppent les deux façades d'angle, l'enduit est piqué par endroits avant reprise, la couverture en ardoise et les souches de cheminée en brique restent en place. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
+  { src: `${CH}/chEtagereBoisAssemblageAtelier.jpeg`, alt: "Bibliothèque sur mesure en bois clair dont les montants sont découpés en silhouettes de cactus, posée sur un sol protégé", cap: "Bibliothèque sur mesure posée avant finition : les montants sont découpés en silhouettes de cactus et les tablettes suivent un tracé ondulé d'un mur à l'autre. Le bois est encore brut et le sol reste protégé et scotché sur toute la surface de la pièce. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  { src: `${CH}/chVerriereInterieurePentagonale.jpeg`, alt: "Ouverture vitrée intérieure à encadrement de bois clair couronné en pignon, ouverte sur la pièce voisine", cap: "Ouverture vitrée percée entre deux pièces : l'encadrement en bois clair est monté et vitré, son couronnement dessine un pignon. Derrière, on aperçoit la fenêtre à garde-corps en fonte et la rampe d'escalier de la pièce voisine. La peinture est faite, mais l'appareillage électrique pend encore et les pots restent au sol. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  { src: `${CH}/chBibliothequePanneauxMoulures.jpeg`, alt: "Front de placards toute hauteur en MDF brut associant panneaux moulurés en bas et vitrages en haut, avant peinture", cap: "Front de rangements toute hauteur monté en MDF brut, prêt à peindre : chaque vantail associe un panneau mouluré en partie basse et deux vitrages en partie haute, l'ensemble étant recoupé jusqu'au plafond par un bandeau plein. Le sol neuf est protégé par bandes adhésives le temps de la finition. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
+  { src: `${CH}/chVasqueMarbreVanite.jpeg`, alt: "Salle d'eau en cours de finition : meubles en MDF brut, plan blanc à deux vasques rondes posées, carrelage grand format beige", cap: "Salle d'eau à l'avant-dernière étape : le carrelage grand format beige est posé au sol comme aux murs, le plan blanc et ses deux vasques rondes sont en place, mais les meubles hauts et bas sont encore en MDF brut et l'alimentation de l'éclairage pend au-dessus du plan. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  { src: `${CH}/chCouloirPorteAccordeonBois.jpeg`, alt: "Cloison habillée de tasseaux de bois verticaux dans laquelle une porte est dissimulée, vue depuis une grande ouverture", cap: "Cloison habillée de tasseaux verticaux sur toute sa hauteur : une porte y est dissimulée, repérable seulement à son joint creux et aux deux réservations rondes de la poignée, encore ouvertes. La vue est prise depuis la grande ouverture voisine, dont le rail est déjà posé ; le sol est bâché. Chantier réel des équipes partenaires.", ratio: "aspect-[4/3]" },
+  { src: `${CH}/chDressingEscalierArriereplan2.jpeg`, alt: "Rangement toute hauteur en placage bois clair, deux portes ouvertes sur étagères et tiroirs, escalier bois à côté", cap: "Rangement toute hauteur monté à côté d'un escalier en bois clair : les caissons, les tablettes et les tiroirs sont en place, tandis que les vantaux hauts sont encore en MDF brut, en attente de finition. Le sol est protégé et les chutes de découpe sont restées au pied de l'ouvrage. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  { src: `${CH}/chCouloirPortesBoisJumelles.jpeg`, alt: "Palier desservant deux portes en bois foncé à vitrage vertical étroit, sol entièrement bâché et scotché", cap: "Palier de circulation en cours de rénovation : deux portes à vitrage vertical étroit sont posées et leur béquille montée, le plafond est en dalles démontables, et le sol existant est intégralement bâché puis scotché avant les travaux de peinture. Chantier réel des équipes partenaires.", ratio: "aspect-[9/16]" },
+  { src: `${CH}/chDressingOuvertTiroirsEntrouverts.jpeg`, alt: "Intérieur d'un placard sur mesure en MDF brut : tablettes fixes en haut, tiroirs coulissants entrouverts en bas", cap: "Intérieur d'un placard sur mesure encore en MDF brut : tablettes fixes en partie haute, tiroirs coulissants en partie basse, charnières réglées. Derrière, la pièce est toujours en chantier — sol bâché, escabeau, outils et attentes électriques laissés en vrac. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
 ];
 
 /* 02/09 — Lot « photo haut-de-gamme » transmis par le client : 30 vues de réalisations terminées.
@@ -286,6 +313,16 @@ const PHOTOS_HDG = [
      montrer un chantier NON LIVRÉ et le dire — tient avec une seule photographie, et sa légende a été
      réécrite pour ne plus renvoyer à une image qui n'est plus là. */
   { src: `${CH}/chHdgDoucheMarbreLaitonProtection.jpeg`, alt: "Douche en cours de pose, parement de pierre monté, sol et receveur couverts d'un film de protection, éclairage provisoire au plafond", cap: "Chantier en cours, non livré : le parement de pierre est monté et les profilés laiton sont déjà posés sur toutes les arêtes, mais le sol et le receveur de douche restent couverts d'un film de protection et l'éclairage est encore provisoire. Chantier réel des équipes partenaires." },
+
+  /* 07/09 — DEUX VUES INÉDITES d'ouvrages LIVRÉS, prises sur d'AUTRES chantiers que l'appartement
+     parisien : le chapô de la section prévoit déjà ce cas (« Quelques vues ont été prises sur
+     d'autres chantiers »), et chaque légende le redit. Ouvertes avant rédaction, comme le reste du
+     lot. Écartées au passage : chDressingProcheToilettes (exemplaire jumeau de la première, distance
+     0,001) puis chDressingArrondiCouloirParquet2 et chNicheArrondieCouloirBacklight, qui montrent le
+     même couloir laqué beige que chDressingArrondiCouloirParquet1 déjà en galerie — on y reconnaît la
+     même cuisine sombre au fond et le même parquet à bâtons rompus. */
+  { src: `${CH}/chCouloirDressingToilettes.jpeg`, alt: "Couloir livré : mur de placards toute hauteur en placage chêne à poignées bâton en acier, parquet clair, porte à panneaux ancienne repeinte", cap: "Autre chantier livré : le mur de placards court sur toute la longueur du couloir en placage chêne, poignées bâton en acier brossé et socle plus foncé, face à une porte à panneaux ancienne conservée et repeinte. Le parquet clair est posé et l'éclairage encastré raccordé. Chantier réel des équipes partenaires.", ratio: "aspect-[9/16]" },
+  { src: `${CH}/chBibliothequeNicheGrisTaupe.jpeg`, alt: "Bibliothèque sur mesure peinte gris taupe garnie de livres, face à un mur de pierre apparente appareillée", cap: "Autre chantier livré : bibliothèque sur mesure déjà garnie — tablettes ouvertes en partie haute, placards à panneaux moulurés et petits boutons en partie basse, le tout peint dans un gris taupe. Le mur de pierre apparente appareillée lui fait face et le plancher bois ancien a été conservé. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
 ];
 
 /* 01/09 — Lot de photos de chantier transmis par le client : ouvrages techniques (étanchéité et
@@ -341,6 +378,12 @@ const PHOTOS_TECHNIQUES = [
      (renovation-appartement, second-oeuvre et ici) et très proche de la vignette ci-dessus, qui montre
      le même faux plafond avec ses faisceaux de gaines une étape plus tôt. */
   { src: `${CH}/chTableauElectriqueDisjoncteurs.jpeg`, alt: "Tableau électrique en cours de câblage dans une niche, rangées de disjoncteurs divisionnaires et borniers de répartition", cap: "Tableau électrique en cours de câblage : rangées de disjoncteurs alimentées par peignes, borniers de répartition repérés bleu et rouge, platine de comptage et disjoncteur de branchement en partie haute. Chantier réel des équipes partenaires." },
+  /* 07/09 — DEUX VUES INÉDITES. Elles complètent la démonstration de la section par son autre bout :
+     non plus le réseau nu, mais le moment où on le referme. La seconde n'est pas un doublon de
+     chTableauElectriqueDisjoncteurs juste au-dessus : celle-ci est un tableau nu dans une niche de
+     plaque, celle-là l'installation complète (compteur inclus) refermée par une menuiserie. */
+  { src: `${CH}/chNicheArrondieBoisEclairage.jpeg`, alt: "Panneaux de MDF à bords arrondis présentés sur une cloison de plaque, gaine verticale, boîtiers et réservations encore apparents", cap: "Habillage en cours de fermeture : les panneaux de MDF découpés à bords arrondis sont présentés et vissés sur la cloison de plaque, mais la gaine verticale, ses boîtiers et deux réservations percées dans la plaque restent visibles — ils ne le seront plus une fois l'ouvrage terminé. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
+  { src: `${CH}/chPlacardCompteurElectriqueArrondi.jpeg`, alt: "Placard technique en MDF brut refermant un compteur et un tableau à deux rangées de disjoncteurs, tablettes d'angle arrondies", cap: "Placard technique sur mesure monté autour de l'installation électrique : compteur et tableau à deux rangées de disjoncteurs restent accessibles derrière les vantaux, et des tablettes d'angle arrondies récupèrent le reste du volume. L'ouvrage est encore en MDF brut, la porte voisine protégée à l'adhésif. Chantier réel des équipes partenaires.", ratio: "aspect-[3/4]" },
 ];
 
 /* 03/09 — Le « déroulé » passe de 10 à 5 vignettes. Cinq y étaient soit un doublon d'une image déjà
@@ -457,8 +500,15 @@ export default function RealisationsPage() {
         </div>
       </MqSection>
 
+      {/* 07/09 : les trois galeries passent d'une GRILLE à des COLONNES. Motif : dans une
+          grille, toutes les cartes d'une même rangée sont étirées à la hauteur de la plus
+          haute. Comme les photos gardent ici leur ratio natif — et c'est voulu, un cadre
+          uniforme amputerait les portraits de moitié —, une rangée mêlant un portrait 3/4 et
+          un paysage 16/9 laissait un grand vide blanc sous la légende de la plus courte. Le
+          client l'a vu tout de suite. Les colonnes CSS empilent chaque carte à sa hauteur
+          réelle et remplissent le vide, sans recadrer une seule image. */}
       <MqSection kicker="Photographies de chantiers" title="Des photographies prises sur les chantiers, pendant et après les travaux" lead="Les images de cette grille proviennent toutes de chantiers réels, exécutés par les entreprises partenaires contractantes : aucune n'est une photographie d'illustration. Plus bas sur la page, en revanche, le « déroulé » et les avant/après recourent à des visuels de référence, signalés comme tels en légende." wide>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
           {PHOTOS_CHANTIERS.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}
@@ -466,7 +516,7 @@ export default function RealisationsPage() {
       </MqSection>
 
       <MqSection kicker="Réalisations haut de gamme" title="Un appartement ancien parisien livré, pièce par pièce" lead="Ces photographies proviennent pour l'essentiel d'un même grand appartement ancien parisien, prises après travaux : ouvrages de pierre, menuiseries sur mesure et éléments d'origine conservés. Quelques vues ont été prises sur d'autres chantiers et l'une montre une salle de bain encore en cours de pose — la légende le précise à chaque fois." wide>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
           {PHOTOS_HDG.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}
@@ -474,7 +524,7 @@ export default function RealisationsPage() {
       </MqSection>
 
       <MqSection kicker="L'ouvrage caché" title="Étanchéité, plomberie, électricité : ce qui disparaît derrière les finitions" lead="Ces ouvrages ne se voient plus une fois le chantier livré, et ce sont pourtant eux qui décident de sa durabilité. Ils sont photographiés systématiquement avant fermeture : c'est la seule trace exploitable si un doute survient plus tard." wide>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
           {PHOTOS_TECHNIQUES.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}
@@ -482,7 +532,7 @@ export default function RealisationsPage() {
       </MqSection>
 
       <MqSection kicker="Déroulé d'un chantier" title="De l'état initial à la livraison, étape par étape" lead="Étapes types d'un chantier de rénovation, illustrées en priorité par nos propres photographies de chantiers réels ; quelques schémas et visuels de référence complètent les phases les moins photogéniques (réseaux encastrés, carottage), signalés comme tels en légende." wide>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
           {DEROULE.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}

@@ -196,6 +196,20 @@ export const ARTICLES: Article[] = [
      Aucun de ces six articles ne porte d'img2/img3 : les seules photos réelles encore
      libres du fonds sont des ouvrages de menuiserie et deux chantiers ruraux (charpente
      de grange, livraison de coque de piscine) sans rapport avec ces sujets. */
+  /* 07/09 — REPRISE DE CE CONSTAT. Il était faux : 86 photos déclarées dans lib-photos.ts
+     n'étaient citées par AUCUNE page du site. Dix d'entre elles entrent aujourd'hui dans le
+     blog, plus l'infographie de marque schemaNatureDesMurs, jamais employée elle non plus.
+     Chaque image a été ouverte avant que sa légende soit écrite — les noms de fichiers
+     mentent régulièrement dans ce fonds (chLivraisonPanneauPrefabGrue est une coque de
+     piscine, chVasqueMarbreVanite n'a pas de marbre, refSalleBainMarbreNoir est une
+     chambre, chArmoireVitreeVerreDepoli est stockée pivotée de 90°).
+     Ce qui a été écarté et pourquoi — visages, enseignes, marques au premier plan,
+     construction neuve, hors périmètre, doublons stricts d'images déjà en ligne — est
+     détaillé dans le rapport de passe. Les emplacements restés vides le sont faute
+     d'image honnête, pas faute d'avoir cherché : les articles administratifs
+     (aides, DPE, autorisations, fondations, ordre énergétique, VMC, extension) n'ont
+     aucune photo correspondante dans le fonds, et les seules photos d'acier, de façade
+     et de démolition encore libres sont des recadrages de clichés déjà publiés. */
   {
     slug: "dossier-fin-de-chantier-pieces-a-reunir",
     titre: "Le dossier de fin de chantier : les pièces à réunir pendant les travaux",
@@ -208,6 +222,17 @@ export const ARTICLES: Article[] = [
        (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaDossierFinChantier",
     schema: true,
+    /* 07/09 : les deux emplacements laissés vides le 04/09 sont pourvus. Le constat de
+       l'époque — « les 244 clichés de chantier sont déjà tous employés » — était faux :
+       86 photos déclarées dans lib-photos.ts n'étaient citées par aucune page. Les deux
+       retenues ici ont été ouvertes avant d'être légendées et répondent chacune à une
+       ligne du texte : la nourrice pour « photographies des réseaux prises avant fermeture
+       des murs », le caisson pour « références des matériaux, des teintes et de la
+       quincaillerie ». */
+    img2: "chNourriceLaitonVanneGenerale",
+    img2Caption: "Nourrice de distribution en laiton fixée sur une plaque hydrofuge : chaque départ porte son étiquette et sa propre vanne d'isolement, la rouge commandant l'ensemble. C'est l'image à prendre avant que le doublage ne referme le mur. Chantier réel des équipes partenaires.",
+    img3: "chCaissonTiroirsBoisAngle",
+    img3Caption: "Intérieur d'un caisson sur mesure en panneau brut, tablettes et tiroirs sortis, charnières apparentes : les références de quincaillerie se relèvent à ce moment-là, pas trois ans plus tard. Chantier réel des équipes partenaires.",
     corps: [
       "Sur un chantier de particulier, aucun texte n'impose au maître d'ouvrage de constituer un dossier de fin de chantier : c'est une pratique, pas une formalité. Elle se justifie par une observation simple — les documents utiles trois ans plus tard sont ceux que personne ne pense à demander pendant que le chantier tourne. Une attestation d'assurance se réclame avant le démarrage d'une entreprise, pas après son départ. Une référence de teinte se relève sur le pot avant qu'il ne parte à la benne. Un plan des réseaux se photographie avant le doublage. Constituer ce dossier consiste donc moins à archiver qu'à récupérer chaque pièce au moment exact où elle existe encore.",
       "Quatre familles composent ce dossier. L'administratif d'abord : devis signés de chaque entreprise, avenants, factures et échéanciers, autorisations d'urbanisme délivrées le cas échéant, et, en copropriété, la décision d'assemblée générale et les échanges avec le syndic. Le technique ensuite : plans et relevés remis à jour de ce qui a réellement été exécuté, photographies des réseaux et des ouvrages prises avant fermeture des murs et des planchers, notes de calcul et pièces d'études lorsqu'un bureau d'études est intervenu, procès-verbaux d'essais et de mise en service quand ils existent. Les assurances ensuite : l'attestation de garantie décennale de chaque entreprise, en cours de validité à la date d'ouverture du chantier, et le contrat de dommages-ouvrage s'il a été souscrit. L'exploitation enfin : notices, certificats de garantie des équipements, références des matériaux, des teintes et de la quincaillerie, et les coordonnées des entreprises intervenues, lot par lot.",
@@ -356,7 +381,16 @@ export const ARTICLES: Article[] = [
     date: "25 août 2026", dateISO: "2026-08-25",
     categorie: "Structure",
     excerpt: "Aucun indice ne suffit seul pour juger si un mur porte le bâtiment : voici ceux qu'il faut recouper avant de valider un devis d'ouverture.",
-    photo: "chDemolitionGravatsChantier",
+    /* 07/09 : l'en-tête passe au SCHÉMA DE MARQUE « Vérifier la nature des murs avant tout
+       devis », qui était déclaré dans lib-photos.ts sans être employé nulle part. Motif :
+       son sous-titre est mot pour mot la thèse du premier paragraphe — « un mur épais n'est
+       pas toujours porteur, un mur fin peut avoir un rôle structurel » — et son encart
+       ATTENTION dit « l'épaisseur et le son au tapotement sont des indices, pas des
+       preuves », c'est-à-dire le titre de l'article. La photo de cloison ouverte n'est pas
+       perdue : elle descend en img3, l'emplacement laissé vide le 05/09. L'article gagne
+       donc une image au lieu d'en changer une. */
+    photo: "schemaNatureDesMurs",
+    schema: true,
     /* 05/09 : ...ScelleGravats est le MÊME FICHIER que chPoteauAcierPlatinePied. */
     img2: "chPoteauAcierPlatinePied",
     img2Caption: "Pied de poteau acier sur platine, scellé dans le sol ouvert pour la reprise de charge. Chantier réel des équipes partenaires.",
@@ -366,7 +400,12 @@ export const ARTICLES: Article[] = [
        fichier que l'img2 de « coproprietaire-autorisations-avant-travaux », qui le
        montre sous le nom chDemolitionOuvertureCouloir. Trois vues d'une seule cloison
        sur deux articles : c'est exactement la répétition signalée par le client.
-       Aucune autre photo du fonds ne documente un sondage de mur — voir rapport. */
+       Aucune autre photo du fonds ne documente un sondage de mur — voir rapport.
+       07/09 : l'emplacement est repris par chDemolitionGravatsChantier elle-même,
+       descendue de l'en-tête. Le constat du 05/09 tient toujours — cette cloison n'existe
+       qu'en un seul exemplaire utilisable —, elle occupe simplement l'autre place. */
+    img3: "chDemolitionGravatsChantier",
+    img3Caption: "Cloison ouverte jusqu'à son ossature : lattis et bois de structure apparaissent sous le plâtre tombé au sol. C'est seulement à ce moment-là que la nature réelle du mur se lit. Chantier réel des équipes partenaires.",
     corps: [
       "Un mur épais n'est pas automatiquement porteur, et un mur fin en briques ou en carreaux de plâtre n'est pas automatiquement sans rôle structurel. C'est l'erreur la plus fréquente chez qui juge « à l'œil » avant travaux.",
       "Quatre indices se recoupent : l'épaisseur du mur, son alignement vertical avec un mur de l'étage du dessous ou du dessus, le sens de pose des solives ou poutrelles du plancher, et sa position par rapport aux façades et aux refends principaux du bâtiment. Pris isolément, chacun n'est qu'une présomption ; ensemble, ils orientent un diagnostic fiable.",
@@ -410,6 +449,13 @@ export const ARTICLES: Article[] = [
        (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaDeuxDevisEcart",
     schema: true,
+    /* 07/09 : deux photos libres du fonds viennent illustrer les deux causes d'écart que
+       le texte cite nommément — la gamme des fournitures, et un poste présent d'un côté
+       et absent de l'autre. Les deux ont été ouvertes avant d'être légendées. */
+    img2: "chCuisineNoireSkylightFinie",
+    img2Caption: "Cuisine achevée sous rampant : façades claires, plan de travail sombre, îlot central et fenêtre de toit. La gamme des fournitures retenue pèse à elle seule une part de l'écart entre deux chiffrages. Chantier réel des équipes partenaires.",
+    img3: "chVerriereInterieurePentagonale",
+    img3Caption: "Verrière intérieure à cadre bois ouverte dans une cloison, pots de peinture encore au sol : un poste comme celui-ci peut figurer dans un devis et pas dans l'autre — deux totaux cessent alors d'être comparables. Chantier réel des équipes partenaires.",
     corps: [
       "Deux entreprises visitent le même logement, entendent la même demande, et rendent deux chiffrages qui ne se ressemblent pas. Le réflexe est de conclure que l'une est chère et l'autre honnête. C'est rarement la bonne lecture : dans la majorité des cas, les deux devis ne portent pas sur le même ouvrage. Comparer deux totaux n'a de sens qu'après avoir vérifié que le périmètre, les hypothèses techniques et les fournitures sont identiques de part et d'autre — c'est-à-dire après avoir reconstitué, ligne à ligne, ce que chacun a mis dedans et ce qu'il a laissé dehors.",
       "Le premier écart tient au périmètre. Les postes qui disparaissent le plus souvent d'un chiffrage sont ceux qui ne se voient pas sur le résultat : dépose et évacuation en déchèterie, protections des ouvrages conservés et des parties communes, installation de chantier, reprises et raccords autour de l'ouvrage, nettoyage de fin de chantier, et parfois l'échafaudage ou la nacelle. Le deuxième tient aux hypothèses techniques. Sur une même salle de bain, l'un prévoit la dépose complète du support et un ragréage, l'autre pose sur l'existant ; l'un chiffre un système d'étanchéité sous carrelage, l'autre s'en tient à un carrelage collé ; l'un reprend le tableau électrique, l'autre repique sur le circuit en place. Ces choix ne se lisent pas dans le total, seulement dans le descriptif. Le troisième tient aux fournitures : gamme et provenance retenues, et surtout la mention « fourniture et pose » ou « pose seule », qui suffit à elle seule à expliquer un écart considérable entre deux propositions.",
@@ -481,6 +527,13 @@ export const ARTICLES: Article[] = [
     photo: "chFacadeRavalementVillage",
     img2: "chArcheEncadrementBoisChantier",
     img2Caption: "Habillage en arche posé dans un logement en travaux, sol couvert de bâches et panneaux stockés dans la pièce voisine : un ouvrage livré reste protégé jusqu'au nettoyage final. Chantier réel des équipes partenaires.",
+    /* 07/09 : img3 pourvue par une photo libre du fonds, ouverte avant légende. Vue
+       intérieure volontairement : le reproche du 05/09 portait sur une MAISON employée
+       pour illustrer un immeuble, et rien ici ne désigne un type de bâtiment. Ce qu'elle
+       montre — l'emprise d'un ouvrage sur une pièce entière — est le sujet du troisième
+       paragraphe. */
+    img3: "chEtagereChantierEchelle",
+    img3Caption: "Une pièce entière transformée en atelier le temps de la pose : tréteaux, scie posée au sol, ampoule provisoire au plafond et sol entièrement recouvert. C'est cette emprise-là qu'il faut annoncer avant le premier jour. Chantier réel des équipes partenaires.",
     corps: [
       "Même strictement privatifs, des travaux en immeuble se déroulent au milieu de la vie des autres : circulations, bruit, livraisons, gravats, ascenseur. La logistique se règle avant le premier jour, pas le matin où une palette arrive sur le trottoir. Quatre questions doivent avoir une réponse écrite : par où montent les matériaux, par où descendent les gravats, l'ascenseur peut-il être utilisé et comment est-il protégé, et quelles parties communes — hall, escalier, palier, porte cochère, sols et angles de murs — doivent être protégées. S'y ajoute le stationnement d'une benne ou d'un big-bag, qui suppose le plus souvent une autorisation d'occupation du domaine public à demander en amont auprès de la commune.",
       "Le bruit se gère par le calendrier autant que par les outils. Les horaires applicables sont fixés localement par arrêté et fréquemment resserrés par le règlement de copropriété ; ils diffèrent selon les jours de semaine, le samedi, le dimanche et les jours fériés, et se vérifient donc commune par commune et immeuble par immeuble, jamais sur une règle générale. Le principe utile est simple : regrouper les phases bruyantes — démolition, carottage, saignées, rainurage — plutôt que de les étaler sur des semaines, les annoncer par écrit au syndic et aux voisins avec des dates, et laisser un contact joignable. La plainte ne porte presque jamais sur l'heure la plus bruyante ; elle porte sur celle qui n'avait pas été annoncée.",
@@ -582,9 +635,16 @@ export const ARTICLES: Article[] = [
     date: "12 août 2026", dateISO: "2026-08-12",
     categorie: "Salle de bain",
     excerpt: "Un carrelage n'est pas une étanchéité. Ce qui protège le plancher se joue dessous, sur quelques points précis — et n'est plus vérifiable une fois la pose faite.",
+    /* 07/09 : `schema: true` ajouté. Ces deux images vivent dans public/photos/pedagogie/,
+       pas dans public/photos/chantiers/ : ce ne sont pas des clichés des équipes
+       partenaires mais des visuels d'illustration. Sans le drapeau, l'en-tête était
+       recadrée et affichée exactement comme une preuve de chantier. Le drapeau la pose
+       entière et affiche la mention. La légende de l'img2 le dit désormais en toutes
+       lettres, « Photo pédagogique » restant ambigu. */
     photo: "pedaEtancheiteAngleDouche",
+    schema: true,
     img2: "pedaEtancheitePassageCanalisation",
-    img2Caption: "Traversée de canalisation traitée par une collerette noyée dans le système d'étanchéité, et non par un simple joint appliqué en surface. Photo pédagogique.",
+    img2Caption: "Illustration pédagogique : traversée de canalisation traitée par une collerette noyée dans le système d'étanchéité, et non par un simple joint appliqué en surface. Image de principe, pas un chantier des équipes partenaires.",
     img3: "chHdgDoucheMarbreLaitonProtection",
     img3Caption: "Douche en pierre grand format, chantier encore en cours, film de protection au sol : une fois la pierre posée, l'ouvrage d'étanchéité placé dessous n'est plus ni visible ni contrôlable. Chantier réel des équipes partenaires.",
     corps: [
@@ -599,9 +659,13 @@ export const ARTICLES: Article[] = [
     date: "10 août 2026", dateISO: "2026-08-10",
     categorie: "Matériaux",
     excerpt: "Les joints ciment noircissent en quelques mois. Voici pourquoi les entreprises partenaires privilégient largement l'époxy en salle de bain et cuisine.",
+    /* 07/09 : `schema: true` ajouté, même motif que sur l'article étanchéité — ces deux
+       macros sont rangées dans public/photos/pedagogie/ et ne sont pas des chantiers des
+       équipes partenaires. La mention « Photo pédagogique » laissait croire l'inverse. */
     photo: "pedaJointEpoxyMacro",
+    schema: true,
     img2: "pedaJointCimentMacro",
-    img2Caption: "Joint ciment classique en zone humide : la moisissure a noirci le joint sur toute sa longueur, jusque dans les angles. Photo pédagogique.",
+    img2Caption: "Illustration pédagogique : joint ciment en zone humide, noirci par la moisissure jusque dans le croisement des carreaux. Image de principe, pas un chantier des équipes partenaires.",
     img3: "chSdbCarreauxCiment",
     /* 05/09 : légende reprise après ouverture de l'image. Elle annonçait « un joint entre
        chaque carreau, dans le receveur comme sur les parois » : le receveur photographié
@@ -644,6 +708,14 @@ export const ARTICLES: Article[] = [
        (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaAchatDirectMateriaux",
     schema: true,
+    /* 07/09 : deux photos libres du fonds, ouvertes avant légende, pour les deux erreurs
+       « avant livraison » du texte : la référence non validée par le poseur (les découpes
+       présentées contre la cloison) et les cotes à figer avant de commander (le caisson
+       monté, tiroirs sortis). */
+    img2: "chNicheArrondieBoisEclairage",
+    img2Caption: "Pièces découpées sur mesure — un arrondi et un disque en panneau — présentées contre la cloison avant fixation, boîtiers électriques encore apparents : format et calepinage se valident avec le poseur avant la commande. Chantier réel des équipes partenaires.",
+    img3: "chDressingOuvertTiroirsEntrouverts",
+    img3Caption: "Rangement sur mesure monté en panneau brut, tablettes et tiroirs sortis pour contrôle, pièce encore protégée au sol : ce sont ces cotes-là qu'il faut avoir validées avant de commander la quincaillerie. Chantier réel des équipes partenaires.",
     corps: [
       "Acheter ses matériaux en direct consiste à commander soi-même, à son nom et avec sa facture, les fournitures que l'entreprise se contente ensuite de poser. La ligne de partage n'est pas budgétaire, elle est juridique : ce qui engage la garantie décennale de l'entreprise qui le met en œuvre reste fourni par elle — systèmes d'étanchéité, colles et mortiers techniques, isolants, ossatures, câbles et canalisations, éléments de structure. Le reste peut s'acheter en direct : carrelage et faïence, robinetterie et sanitaires, parquet, cuisine, menuiseries d'agencement, luminaires et quincaillerie de finition. Ce que ce transfert change n'est pas seulement le prix payé : il déplace vers vous la responsabilité de la référence, de la quantité et du délai. C'est là que l'économie se gagne ou se perd.",
       "Trois erreurs se produisent avant la livraison. La première est de commander une référence que le poseur n'a pas validée. Format, épaisseur, classement d'usage, caractère rectifié ou non, compatibilité avec le support et avec le système de pose retenu : ces critères se vérifient sur la fiche technique, par écrit, avant la commande. Un matériau livré puis refusé à la pose coûte un retour, un délai et une équipe immobilisée. La deuxième est de commander la quantité exacte relevée sur le plan. Toute pose consomme davantage : chutes de coupe, casse, calepinage particulier — un point de Hongrie ou un appareillage en diagonale consomment plus qu'une pose droite. La réserve se calcule avec l'entreprise, et elle se commande dans la même livraison, car un complément passé plus tard arrive fréquemment d'un autre lot de fabrication, avec une nuance visible sur le mur fini. La troisième est de commander sans caler la date sur le planning : livré trop tôt, le matériau encombre et s'abîme ; livré trop tard, il arrête l'équipe qui devait le poser.",
@@ -697,6 +769,11 @@ export const ARTICLES: Article[] = [
        (l'image est native en 2:1, exactement le format du cadre). */
     photo: "pedaProjetsRefuses",
     schema: true,
+    /* 07/09 : une photo libre du fonds, ouverte avant légende, pour la sortie du schéma —
+       « projet cadré, ou réorienté ». Pas d'img3 : aucune autre image du fonds ne
+       documente honnêtement un refus ou un sondage refusé. */
+    img2: "chBibliothequeNicheGrisTaupe",
+    img2Caption: "Bibliothèque sur mesure achevée et déjà occupée, contre un mur de pierre conservé : c'est ce que produit un projet engagé une fois ses conditions réunies. Chantier réel des équipes partenaires.",
     corps: [
       "Un pilote de travaux ne pose aucun lot et n'émet aucun devis : il prépare les décisions, consulte les entreprises, tient l'enchaînement et suit l'exécution jusqu'à la réception. Ce rôle a une portée réelle, et il a des limites nettes. Il ne remplace ni un bureau d'études structure, ni un architecte, ni une autorisation administrative. Il ne crée pas de budget, et il ne raccourcit pas un temps de séchage. Accepter un projet dont l'une de ces conditions manque revient à s'engager sur un résultat que rien ne permet de tenir : le chantier ne s'arrête pas au démarrage, il s'arrête au milieu, quand les travaux sont ouverts et que la marche arrière coûte le plus cher.",
       "Cinq situations conduisent à ne pas engager un projet en l'état. Une reprise de structure qu'aucune étude ne peut appuyer : lorsque l'accès aux fondations, le sondage d'un mur ou le dégagement d'un appui sont refusés, personne ne peut dire ce que le bâtiment porte, et un calcul fait sur des hypothèses non vérifiées n'engage rien. Une autorisation d'urbanisme absente, en cours d'instruction ou déjà refusée, alors que le projet la requiert : commencer avant expose le maître d'ouvrage, pas l'entreprise. Une copropriété non consultée quand les travaux touchent une partie commune, la façade, la structure ou un plancher : la décision d'assemblée générale conditionne le chantier, et sa majorité applicable dépend de la nature exacte des travaux, ce qui se vérifie avec le syndic. Un programme sans rapport avec le budget annoncé, où l'écart ne se comble ni par la négociation ni par l'organisation. Et un délai imposé incompatible avec des temps qui ne se compriment pas : séchage d'une chape ou d'un enduit, délai de fabrication d'une menuiserie sur mesure, instruction d'une autorisation.",
@@ -792,6 +869,11 @@ export const ARTICLES: Article[] = [
     photo: "chEscalierOuvertConstruction",
     img2: "chEscalierBoisFlottantVueBas",
     img2Caption: "Escalier en cours de finition : marches et contremarches en contreplaqué à chant apparent, portées par un limon maçonné. Chantier réel des équipes partenaires.",
+    /* 07/09 : img3 pourvue par une photo libre du fonds, ouverte avant légende. L'escalier
+       n'y occupe que la partie droite du cadre — la légende le dit, plutôt que d'annoncer
+       un escalier plein cadre. */
+    img3: "chDressingEscalierArriereplan2",
+    img3Caption: "Deux ouvrages de menuiserie dans la même pièce : des rangements en panneau brut, portes ouvertes sur leurs tablettes, et à droite l'escalier bois avec ses marches et son garde-corps à barreaux. Chantier réel des équipes partenaires.",
     corps: [
       "Un escalier se définit d'abord par sa structure porteuse, pas par son revêtement final. Un limon central en acier ou en bois massif, une structure à crémaillère apparente ou un escalier fermé sur deux limons latéraux ne répondent pas au même budget ni au même rendu visuel.",
       "L'escalier à structure ouverte (marches suspendues, sans contremarche) dégage de la lumière et allège visuellement un volume, mais impose un calcul de structure plus poussé et un garde-corps conforme à la réglementation sur toute la hauteur de chute. Un escalier fermé classique reste la solution la plus économique et la plus simple à sécuriser, notamment en présence de jeunes enfants.",

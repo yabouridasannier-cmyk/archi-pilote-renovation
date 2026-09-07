@@ -307,6 +307,71 @@ export default function Page() {
         </div>
       </MqSection>
 
+      {/*
+        07/09 : section ajoutée. Motif — la page traite la structure, les réseaux, la
+        ventilation et le déroulé, mais jamais la contrainte la plus visible d'un appartement
+        ancien : des circulations étroites et des volumes perdus qu'aucun meuble du commerce
+        ne rattrape. Quatre photos du fonds documentent exactement cela ; chacune a été ouverte
+        avant d'écrire sa légende, et aucune n'atteint la limite de trois pages fixée par
+        `scripts/surexposition.py`.
+
+        Écartées après ouverture :
+        — chDressingBlancInterphone : c'est le même dressing laqué blanc à quatre vantaux,
+          poignées bâton et plans punaisés au mur, que chDressingLaqueBlancCouloirPlans déjà
+          publiée sur /menuiserie-agencement-sur-mesure.
+        — chCouloirDressingToilettes : même dégagement que chDressingProcheToilettes retenue
+          ci-dessous.
+        — chIsolationPhoniqueGranulesPlancher2 : même salon aux granulés que la vignette
+          « Plancher mis à nu » déjà affichée plus haut sur cette page.
+        — chCouloirParquetChevronsPorteBois, d'abord retenue puis retirée : la scène qu'elle
+          forme avec chCouloirParquetChevronsPortesOuvertes est déjà comptée sur trois pages
+          (/savoir-faire-ancien, /sols-finitions-renovation et un article de blog) ; l'ajouter
+          ici l'aurait portée à quatre. Remplacée par chNicheArrondieCouloirBacklight, qui
+          n'était publiée nulle part.
+        — chCouloirPorteBoisModerne : couloir trop sombre, sujet illisible.
+
+        Deux de ces quatre photos sont en cours de chantier (bâches, boîtiers en attente, murs
+        décapés) et deux sont livrées ; les légendes le disent image par image.
+      */}
+      <MqSection
+        kicker="Circulations"
+        title="Le couloir, la surface la moins exploitée d'un appartement"
+        lead="Dans un logement ancien, les mètres carrés ne se gagnent pas en poussant les murs : ils se récupèrent dans les dégagements, les angles perdus et les recoins techniques."
+      >
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-start">
+          <MqFig
+            src="/photos/chantiers/chPlacardCompteurElectriqueArrondi.jpeg"
+            alt="Placard technique en panneau brut monté dans un dégagement : porte haute ouverte sur le compteur, le disjoncteur et le tableau à deux rangées de protections, étagères d'angle arrondies à droite, caisson bas ouvert en dessous, serre-joints accrochés à la porte voisine"
+            caption="Le tableau habillé plutôt que déplacé : compteur, disjoncteur et tableau restent où ils sont, un caisson vient les enfermer derrière une porte, et l'angle perdu à côté est récupéré en étagères arrondies. Panneaux encore bruts, serre-joints encore en place. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingMiroirCouloir.jpeg"
+            alt="Placard toute hauteur en panneau brut à deux portes, monté dans un couloir étroit dont le sol est protégé par des bâches, boîtier électrique rouge en attente sur le mur de gauche, câble sorti du plafond, pièce aux murs décapés visible à droite"
+            caption="Un couloir étroit devenu rangement : le placard prend toute la largeur disponible, du sol au plafond, en panneaux encore bruts. Le boîtier d'attente est fixé au mur, le câble sort du plafond, le sol est bâché ; à droite, une pièce dont les murs sont encore décapés. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
+          />
+          <MqFig
+            src="/photos/chantiers/chDressingProcheToilettes.jpeg"
+            alt="Dégagement livré bordé sur toute sa longueur de placards toute hauteur en placage bois, poignées bâton en inox, porte à panneaux blanche conservée au fond, parquet clair à larges lames et pouf en tissu bouclé"
+            caption="Le même principe une fois livré : le dégagement est bordé sur toute sa longueur de placards toute hauteur en placage bois à poignées bâton, jusqu'à la porte à panneaux conservée du fond. Parquet clair à larges lames, plinthe assortie au meuble. Chantier réel des équipes partenaires."
+            ratio="aspect-[9/16]"
+          />
+          <MqFig
+            src="/photos/chantiers/chNicheArrondieCouloirBacklight.jpeg"
+            alt="Entrée d'appartement livrée : mur entier de rangements toute hauteur laqués beige à ouverture par pression, se terminant en angle arrondi, corniche d'éclairage indirect au plafond, niche habillée de bois foncé avec assise et tiroir, parquet clair en chevrons"
+            caption="Le même volume traité jusqu'au bout : un mur entier de rangements toute hauteur, sans poignée apparente, dont le retour est arrondi pour ne pas buter dans le passage ; une niche habillée de bois foncé ménage une assise et un tiroir, et l'éclairage est repris en corniche au plafond. Un carton emballé attend encore à gauche. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
+        <p className="mt-8 max-w-2xl text-[0.95rem] leading-relaxed text-ivoire/85">
+          Le dessin de ces rangements, l&apos;arbitrage entre sur-mesure intégral et façades sur
+          caissons standards et les fourchettes constatées au mètre linéaire sont détaillés sur la
+          page{" "}
+          <Link href="/menuiserie-agencement-sur-mesure" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">menuiserie et agencement sur mesure</Link>.
+        </p>
+      </MqSection>
+
       <MqSection
         kicker="Budget"
         title="Où se gagnent les économies"

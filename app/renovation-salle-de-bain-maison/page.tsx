@@ -179,6 +179,51 @@ export default function Page() {
         </p>
       </MqSection>
 
+      {/*
+        07/09 : section ajoutée. La page ne montrait que des pièces d'eau à leur stade final,
+        alors que son texte d'ouverture affirme que « l'étanchéité et les réseaux décident de la
+        durabilité, bien avant le carrelage » — l'illustration disait donc l'inverse du propos.
+        Les trois photos ont été ouvertes une par une avant d'écrire les légendes.
+        chVasqueMarbreVanite, qui semblait un quatrième candidat, s'est révélée être le fichier
+        strictement identique à chSdbVasquesPoseMeubleBeige, déjà publiée sur deux pages : elle
+        est écartée. Aucune autre salle de bain n'était disponible en réserve — c'est pourquoi
+        deux des trois vues sont des réseaux, ce que le titre annonce.
+      */}
+      <MqSection
+        kicker="RÉSEAUX"
+        title="Avant le carrelage : les réseaux, et rien d'autre"
+        lead="Ce qui décide de la durabilité d'une salle de bain se pose des semaines avant le premier carreau — et ne se voit plus une fois la pièce livrée."
+        wide
+      >
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
+          <MqFig
+            src="/photos/chantiers/chNourriceLaitonVanneGenerale.jpeg"
+            alt="Nourrice de distribution d'eau en laiton fixée sur des plaques de plâtre hydrofuges vertes, une douzaine de départs équipés chacun d'une vanne quart de tour à manette noire, tubes blancs sertis et maintenus par colliers, vanne générale à manette rouge en bout de ligne"
+            caption="Une nourrice, une douzaine de départs : chaque point d'eau part de là, sur sa propre vanne quart de tour, et la manette rouge en bout de ligne coupe l'ensemble. Le tout est fixé sur des plaques hydrofuges, avant fermeture. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
+          />
+          <MqFig
+            src="/photos/chantiers/chPlomberieVannesRougesBetonDetail.jpeg"
+            alt="Distribution d'eau en cours sur un mur en béton brut : antennes grises serties sur raccords laiton, vannes d'arrêt à manette rouge, manchons noirs, collecteurs gris assemblés et repérés au ruban orange, tracés au crayon et repères peints à la bombe sur le mur"
+            caption="La même logique un cran plus loin : chaque antenne est sertie sur son raccord laiton et reçoit sa vanne d'arrêt, les collecteurs sont assemblés et repérés au ruban, et les tracés restent lisibles sur le béton — c'est ce relevé qui permettra de retrouver les réseaux une fois la cloison fermée. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+          <MqFig
+            src="/photos/chantiers/chVasqueBoisMuraleChantier.jpeg"
+            alt="Meuble double vasque suspendu à façade cannelée en bois clair, plan et deux cuvettes moulés d'une seule pièce en blanc, deux mitigeurs dorés brossés posés, mur habillé de grandes dalles blanches veinées de gris et d'ocre, deux réservations rondes encore ouvertes de part et d'autre"
+            caption="Le meuble n'arrive qu'à la fin : caisson suspendu à façade cannelée, plan-vasque double moulé d'une seule pièce et mitigeurs posés. De part et d'autre, deux réservations restent ouvertes dans le parement, une notice traîne encore dans la cuvette et une chute de bois attend au sol. Chantier réel des équipes partenaires."
+            ratio="aspect-[3/4]"
+          />
+        </div>
+        <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mt-8">
+          Le détail de ces réseaux — diamètres, pentes, points de coupure — est repris sur la page{" "}
+          <Link href="/electricite-plomberie-renovation" className="underline underline-offset-4 hover:text-orange-deep transition-colors">
+            électricité et plomberie
+          </Link>
+          .
+        </p>
+      </MqSection>
+
       <section className="relative py-16 md:py-24">
         <div className="container-site max-w-3xl mx-auto flex flex-col gap-4">
           {FAQ_COMMUNE.map((f) => (

@@ -91,6 +91,16 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
+            {/*
+              07/09 — chVerriereInterieurePentagonale avait été posée ici (ouverture de jour
+              percée dans un mur intérieur, refermée par un châssis vitré, corniche conservée),
+              puis retirée : `scripts/surexposition.py` la regroupe avec
+              chFenetreBoisDecorativeChantier, et cette scène est déjà comptée sur trois pages
+              (/realisations, /second-oeuvre et un article de blog). L'ajouter ici l'aurait
+              portée à quatre, c'est-à-dire à la répétition que le client signale.
+              Cette sous-section reste donc sans photographie : le fonds ne contient aucune
+              image de sondage ou de repérage de mur qui ne soit pas déjà publiée trois fois.
+            */}
           </div>
         </div>
       </MqSection>
@@ -135,7 +145,21 @@ export default function Page() {
             ratio="aspect-[10/7]"
           />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {/*
+          07/09 — rangée laissée à TROIS vignettes, après avoir ouvert une à une les six photos
+          d'acier encore disponibles dans la bibliothèque. Résultat de la vérification :
+          chPoutreAcierSoudureAngle2 est le fichier EXACTEMENT identique à chPoutreAcierSoudure
+          ci-dessous ; chPoteauAcierScelleGravats est identique à chPoteauAcierPlatinePied ;
+          chPoutreAcierPlafondMurDegarni est identique à chPortiqueAcierAngleFenetre ;
+          chPoutreAcierMurPierreApparente est le même portique au même mur, cadré de plus près
+          (et ne montre aucune pierre apparente, contrairement à son nom).
+          Restait chPortiqueAcierAngleGaine / chPortiqueAcierAngleMurDegarni2 (deux fichiers
+          pour une seule prise de vue) : intéressante — la gaine descend le long du poteau —
+          mais `scripts/surexposition.py` la compte déjà sur trois pages
+          (/electricite-plomberie-renovation, /ouverture-mur-porteur et un article de blog).
+          L'ajouter ici l'aurait portée à quatre. Elle est donc laissée où elle est.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
           <MqFig
             src="/photos/chantiers/chPortiqueAcierAngleFenetre.jpeg"
             alt="Portique acier vu en angle : poutre horizontale filant sous le plafond et poteau vertical à l'about de l'ouverture, mur voisin dégarni et gaine électrique apparente"
@@ -282,7 +306,17 @@ export default function Page() {
           reprend donc son ratio natif (3/4, 4/3, 3/4) et la grille passe en items-start, comme le
           diptyque escalier plus bas sur cette page.
         */}
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
+        {/*
+          07/09 — chPlancherSolivesBoisRangees ajoutée EN TÊTE de cette séquence, qui assume
+          depuis le début de montrer le MÊME couloir à trois moments (décaissement, isolation,
+          fermeture). Image ouverte et comparée à chPlancherSolivesBeton2 avant d'écrire la
+          légende : même couloir, même porte ancienne à imposte grillagée au fond, même
+          canalisation peinte à droite — mais les lambourdes ne sont pas encore reposées et
+          tout est sous une couche de poussière uniforme. C'est donc un quatrième moment RÉEL,
+          antérieur au premier, et la légende le dit au lieu de le faire passer pour un autre
+          chantier. Grille passée à quatre colonnes ; native en 1200×1600, donc 3/4.
+        */}
+        <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 items-start">
           <MqFig
             src="/photos/chantiers/chPlancherSolivesBeton2.jpeg"
             alt="Plancher ancien ouvert dans un couloir d'immeuble : caissons de remplissage dégagés entre les solives, lambourdes neuves posées par-dessus sur toute la longueur"
@@ -385,12 +419,41 @@ export default function Page() {
               </MqProse>
             </div>
           </div>
-          <MqFig
-            src="/photos/maquette/schema-humidite-origines.jpg"
-            alt="Coupe d'un logement ancien illustrant remontées capillaires, infiltrations, condensation et ponts thermiques"
-            caption="Origines de l'humidité dans un logement ancien et traitements associés : le diagnostic précède toujours le choix de la solution."
-            ratio="aspect-[10/7]"
-          />
+          {/*
+            07/09 — le schéma d'humidité était seul à illustrer cette section : un dessin, et
+            aucun désordre réel. Deux photographies l'accompagnent désormais, ouvertes et
+            vérifiées avant rédaction des légendes.
+            — chToitureTerrasseDeposeeSolivage montre exactement ce dont parle le paragraphe
+              « infiltration liée à une étanchéité défaillante en toiture » : une
+              toiture-terrasse déposée jusqu'à son solivage, isolant ancien tassé et noirci
+              entre les bois. Native en 2048×1536, donc 4/3.
+            — chFacadeAvantRavalementTyrolien illustre le paragraphe « lecture d'une fissure
+              avant tout ravalement esthétique » : l'enduit tyrolien est constellé de
+              rebouchages clairs, notamment autour de chaque menuiserie neuve. Elle sert déjà
+              d'image « avant » dans la paire avant/après de /realisations ; la légende ci-dessous
+              décrit la même chose sans la contredire. Native en 1600×1200, donc 4/3.
+            Aucun visage, aucune plaque, aucune enseigne lisible dans les deux cadres.
+          */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
+            <MqFig
+              src="/photos/maquette/schema-humidite-origines.jpg"
+              alt="Coupe d'un logement ancien illustrant remontées capillaires, infiltrations, condensation et ponts thermiques"
+              caption="Origines de l'humidité dans un logement ancien et traitements associés : le diagnostic précède toujours le choix de la solution."
+              ratio="aspect-[10/7]"
+            />
+            <MqFig
+              src="/photos/chantiers/chToitureTerrasseDeposeeSolivage.jpeg"
+              alt="Toiture-terrasse déposée jusqu'à son solivage entre deux murs de cour : solives apparentes, isolant ancien tassé et noirci entre les bois, mur mitoyen en brique peint en blanc, vigne vierge et volets persiennés sur le mur de gauche, garde-corps d'échafaudage au premier plan"
+              caption="Un désordre d'étanchéité ne se lit qu'une fois le complexe déposé : ici, la toiture-terrasse est retirée jusqu'à son solivage, l'isolant ancien apparaît tassé et noirci entre les bois, et l'état réel des solives peut enfin être constaté avant de décider ce qui se répare et ce qui se remplace. Chantier réel des équipes partenaires."
+              ratio="aspect-[4/3]"
+            />
+            <MqFig
+              src="/photos/chantiers/chFacadeAvantRavalementTyrolien.jpeg"
+              alt="Façade de maison de village avant ravalement : ancien enduit ciment tyrolien gris constellé de rebouchages clairs, notamment autour de chaque menuiserie, fenêtres et porte en bois neuves calées à la mousse dans leurs tableaux, palettes de matériaux et seaux au pied du mur"
+              caption="Avant ravalement, la façade dit tout : l'ancien enduit tyrolien est constellé de rebouchages clairs, en particulier autour de chaque menuiserie neuve reposée. C'est à cet état — et non après l'enduit de finition — que se lisent les reprises de tableaux et l'éventuelle fissuration du support. Chantier réel des équipes partenaires."
+              ratio="aspect-[4/3]"
+            />
+          </div>
         </div>
       </MqSection>
 

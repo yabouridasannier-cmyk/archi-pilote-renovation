@@ -230,12 +230,27 @@ export default function Page() {
               chaud/froid, et rien n'indique que ce réseau soit destiné à être coffré. La chaudière
               murale ci-dessous, elle, montre sans ambiguïté un ouvrage de chauffage.
             */}
-            <div className="mt-6 max-w-sm mx-auto">
+            {/*
+              07/09 : cette sous-section ne montrait que la production de chaleur (la chaudière),
+              jamais un ÉMETTEUR, alors que le texte ci-dessus parle de dimensionnement des
+              émetteurs. La photo ajoutée à droite était inemployée sur le site ; elle a été
+              ouverte avant rédaction de sa légende, qui ne décrit que ce qui est visible (ni
+              puissance, ni type de circuit, indémontrables à l'image). Ratios natifs respectés :
+              la chaudière est en 900 × 1600 (9/16), la menuiserie en 1600 × 1200 (4/3) ;
+              items-start aligne les deux cadres par le haut.
+            */}
+            <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-5 items-start">
               <MqFig
                 src="/photos/chantiers/chChaudiereMuraleSaunierDuval.jpeg"
                 alt="Chaudière murale Saunier Duval raccordée sur un mur de pierre, vannes d'isolement rouges et filtre à tamis en bronze, chantier réel"
                 caption="Chaudière murale raccordée sur un mur de pierre : vannes d'isolement quart de tour sur les raccordements, filtre à tamis en bronze et liaisons calorifugées. Chantier réel des équipes partenaires."
                 ratio="aspect-[9/16]"
+              />
+              <MqFig
+                src="/photos/chantiers/chBibliothequeRadiateurIntegre.jpeg"
+                alt="Radiateur vertical blanc logé dans une niche de menuiserie, entre une bibliothèque à étagères et un placard toute hauteur, derrière une porte à lames ouverte"
+                caption="Émetteur intégré à la menuiserie : un radiateur vertical blanc occupe une niche ménagée entre la bibliothèque et le placard toute hauteur, derrière une porte à lames ajourée, ouverte ici. Les caissons sont déjà blancs, les fonds hauts encore en MDF brut, et le sol reste couvert de sa protection scotchée. La place de l'émetteur se réserve au moment du dessin du meuble, pas après. Chantier réel des équipes partenaires."
+                ratio="aspect-[4/3]"
               />
             </div>
           </div>
@@ -386,6 +401,25 @@ export default function Page() {
             alt="Arche habillée en MDF, panneau cannelé cintré posé dans l'ouverture, sols bâchés et panneaux en attente à côté"
             caption="Menuiserie intérieure : arche habillée sur mesure en MDF, panneau cannelé cintré ajusté dans l'ouverture, sols bâchés et pièces en attente à côté — le tout avant peinture. Chantier réel des équipes partenaires."
             ratio="aspect-[3/4]"
+          />
+        </div>
+        {/*
+          07/09 : l'intitulé « Menuiseries intérieures » n'était illustré que par l'arche en MDF
+          ci-dessus. La photo ajoutée ici était inemployée sur le site ; elle a été ouverte avant
+          rédaction de sa légende, qui ne nomme aucun matériau non démontrable à l'image
+          (« décor bois », pas « chêne »). Fichier 1600 × 1200, affiché à son ratio natif 4/3.
+
+          chVerriereInterieurePentagonale.jpeg avait d'abord été posée ici : retirée le jour même,
+          `scripts/surexposition.py` la comptait alors sur QUATRE pages (elle venait d'être
+          publiée sur /gros-oeuvre-structure et dans la galerie /realisations). Une seule photo
+          reste donc à cet emplacement.
+        */}
+        <div className="mt-5">
+          <MqFig
+            src="/photos/chantiers/chCouloirPorteAccordeonBois.jpeg"
+            alt="Grand panneau coulissant habillé de tasseaux en décor bois, posé sous son rail dans une ouverture à huisserie métallique, cloisons voisines encore en plaques hydrofuges vertes"
+            caption="Panneau coulissant habillé de tasseaux en décor bois, posé sous son rail dans une ouverture à huisserie métallique : les réservations de poignée sont percées, les cloisons voisines sont encore en plaques hydrofuges vertes et le sol reste sous protection. La cote de ce panneau se relève une fois l'ouverture terminée, pas sur plan. Chantier réel des équipes partenaires."
+            ratio="aspect-[4/3]"
           />
         </div>
         {/*

@@ -26,18 +26,50 @@ const LEAD =
   "La cuisine combine ergonomie, électricité, plomberie, ventilation, menuiserie et électroménager. Les cotes finales arrivent après validation des supports.";
 const TITRE = "Cuisine : décider les réseaux avant les façades.";
 
+/*
+  07/09 : chacun des trois intitulés reçoit la photo qui montre RÉELLEMENT l'ouvrage qu'il nomme.
+  Les trois fichiers étaient inemployés sur le site et ont été ouverts avant rédaction des
+  légendes ; chaque cadre reprend le ratio natif du fichier (900 × 1600 → 9/16,
+  1600 × 1200 → 4/3, 1200 × 1600 → 3/4). Aucune des trois n'est annoncée comme « livrée » :
+  sur les trois chantiers, il reste des outils au sol, un caisson sans façade ou les plans de
+  pose scotchés au mur.
+*/
 const SECTIONS = [
   {
     titre: "Plan fonctionnel",
     texte: "Circulations, hauteurs, points d'eau, cuisson et éclairage — l'implantation se décide avant le style.",
+    photo: {
+      src: "/photos/chantiers/chCuisineAnthraciteCarreauxVue2.jpeg",
+      alt: "Cuisine en U dans une pièce étroite : évier sous la fenêtre, plaque et four au centre entre deux colonnes, façades noir brillant à poignées cuivrées, carrelage à motif de losanges au sol",
+      caption:
+        "Implantation en U dans une pièce étroite : évier sous la fenêtre, plaque de cuisson et four encastrés au centre entre deux colonnes, plan de travail blanc filant jusqu'au retour, prises alignées au-dessus du plan et spots encastrés au plafond. Le carrelage à motif de losanges s'arrête net sur le parquet clair de la pièce voisine ; un seau et des outils sont encore posés au premier plan. Chantier réel des équipes partenaires.",
+      ratio: "aspect-[9/16]",
+      cadre: "max-w-xs",
+    },
   },
   {
     titre: "Standard et sur-mesure",
     texte: "Des caissons standards peuvent être habillés de façades spécifiques pour arbitrer entre budget et rendu, sans sacrifier l'un pour l'autre.",
+    photo: {
+      src: "/photos/chantiers/chCuisineBlancheElectromenagerLG.jpeg",
+      alt: "Cuisine blanc brillant en cours de finition : entre la colonne du four et le réfrigérateur, un caisson reste nu, tablettes et perçages apparents, sans façade",
+      caption:
+        "La distinction entre le caisson et la façade, en une image : entre la colonne du four et le réfrigérateur, un caisson est encore nu — tablettes et perçages de crémaillère apparents — alors que les meubles voisins ont déjà reçu leurs façades blanc brillant. Le réfrigérateur porte encore ses étiquettes de livraison. Chantier réel des équipes partenaires.",
+      ratio: "aspect-[4/3]",
+      cadre: "",
+    },
   },
   {
     titre: "Commandes longues",
     texte: "Plan de travail, façades, électroménager et menuiseries doivent être intégrés au planning tôt — ce sont souvent les délais les plus longs du chantier.",
+    photo: {
+      src: "/photos/chantiers/chCuisineBlanchePendantsFinie.jpeg",
+      alt: "Cuisine en U en fin de pose : façades blanc brillant sans poignée, plans de travail en décor bois, trois suspensions au-dessus du retour bar, plans de pose scotchés au mur",
+      caption:
+        "Fin de pose : façades blanc brillant sans poignée, colonnes de four et de micro-ondes, plans de travail en décor bois, évier et robinetterie noirs, trois suspensions alignées au-dessus du retour formant bar. Les plans de pose sont restés scotchés au mur, à droite, et le sol passe du carrelage effet marbre au décor bois côté séjour. Chantier réel des équipes partenaires.",
+      ratio: "aspect-[3/4]",
+      cadre: "max-w-sm",
+    },
   },
 ];
 
@@ -107,11 +139,14 @@ export default function Page() {
       </section>
 
       <section className="relative pb-16 md:pb-24">
-        <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-7 text-ivoire/85 text-[1.02rem] leading-relaxed">
+        <div className="container-site max-w-[42rem] mx-auto flex flex-col gap-12 text-ivoire/85 text-[1.02rem] leading-relaxed">
           {SECTIONS.map((s) => (
             <div key={s.titre} className="flex flex-col gap-2">
               <h2 className="display text-2xl text-ivoire normal-case">{s.titre}</h2>
               <p>{s.texte}</p>
+              <div className={`mt-4 ${s.photo.cadre}`}>
+                <MqFig src={s.photo.src} alt={s.photo.alt} caption={s.photo.caption} ratio={s.photo.ratio} />
+              </div>
             </div>
           ))}
         </div>

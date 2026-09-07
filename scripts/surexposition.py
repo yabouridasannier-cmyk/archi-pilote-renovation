@@ -83,7 +83,14 @@ lignes = []
 for membres in groupes.values():
     pages = set()
     for _, n in membres:
-        motifs = [re.escape(n), re.escape(os.path.splitext(n)[0])] + \
+        # Bornes de mot obligatoires. Sans elles, « chBibliotheque » était compté
+        # partout où figurait « chBibliothequeNicheGrisTaupe » ou
+        # « chBibliothequePanneauxMoulures » — le premier nom est un préfixe des
+        # autres. Le script annonçait alors des scènes vues sur 5 pages qui ne
+        # l'étaient pas, et l'inverse est tout aussi grave : une alerte fausse
+        # fait perdre confiance dans celles qui sont vraies.
+        base = re.escape(os.path.splitext(n)[0])
+        motifs = [rf"{base}\.(?:jpe?g|png|webp)\b", rf"\b{base}(?![\w-])"] + \
                  [rf"\b{re.escape(c)}\b" for c in CLES.get(n, [])]
         for p, t in sources.items():
             if any(re.search(m, t) for m in motifs):

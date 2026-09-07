@@ -65,7 +65,7 @@ export function ConceptSplit() {
 
           <div className="w-full lg:w-[55%] relative h-[26rem] md:h-[34rem] xl:h-[38rem]">
             <motion.div style={{ y: yBack }} className="absolute top-0 right-0 w-[72%] h-[84%] rounded-none overflow-hidden card-e">
-              <img src={PHOTOS.chantierRenovation} alt="Pièce en cours de travaux, sols protégés — visuel d'illustration" className="size-full object-cover" loading="lazy" />
+              <img src={PHOTOS.chOssatureCloisonsHuisserieMetal} alt="Pièce en cours de travaux, sols protégés — visuel d'illustration" className="size-full object-cover" loading="lazy" />
             </motion.div>
             <motion.div style={{ y: yFront }} className="absolute bottom-0 left-0 w-[52%] h-[58%] rounded-none overflow-hidden card-e z-10">
               <img src={PHOTOS.detailParquet} alt="Détail de parquet point de Hongrie posé" className="size-full object-cover" loading="lazy" />

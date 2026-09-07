@@ -227,7 +227,7 @@ export default function Page() {
       <MqSection
         kicker="GALERIE"
         title="Réalisations et chantiers d'agencement"
-        lead="Vingt-huit vues d'ouvrages d'agencement — les unes livrées, les autres photographiées en cours de montage — regroupées par cuisine, dressing, bibliothèque, chambre d'enfant, circulation, habillage mural, espace commercial, appartement ancien et cache-radiateur."
+        lead="Trente-cinq vues d'ouvrages d'agencement — les unes livrées, les autres photographiées en cours de montage — regroupées par cuisine, dressing, bibliothèque, chambre d'enfant, sous-pente et sous-escalier, carcasse en panneau brut, circulation, habillage mural, espace commercial, appartement ancien et cache-radiateur."
         wide
       >
         <div className="flex flex-col gap-12">
@@ -381,6 +381,96 @@ export default function Page() {
               />
             </div>
           </div>
+          {/*
+            07/09 — deux groupes ajoutés ici. Trois des six photos ne figuraient jusqu'ici sur
+            aucune page du site (chRangementSousPenteCombles, chBibliothequeBlancheVitreeChantier,
+            chNicheBoisAlcoveFinie) ; les trois autres (chHabillageMdfSousPente,
+            chDressingEscalierArriereplan2, chNicheArrondieBoisEclairage) n'étaient publiées que
+            sur une page et restent, après cet ajout, sous le plafond de trois pages contrôlé
+            par `scripts/surexposition.py`. Chaque image a été ouverte AVANT
+            d'écrire sa légende, et chacune a en plus été comparée aux vingt-sept vues déjà
+            présentes sur cette page pour éviter la répétition reprochée par le client :
+
+            — chEtagereBoisAssemblageAtelier écartée : c'est le MÊME mur d'étagères à montants
+              découpés en cactus que chEtagereCactusSurMesure, deux groupes plus haut, vu de
+              face au lieu de trois quarts.
+            — chEtagereChantierEchelle écartée : fichier identique à
+              chBibliothequeChenePieceComplete (section « Quatre familles »), à la définition
+              près.
+            — chDressingEscalierArriereplan, chEtagereCoinCableApparent et
+              chEtagereCoinFenetreBrute écartées : ce sont trois angles de la MÊME pièce cintrée
+              en placage clair, déjà montrée deux fois sur cette page
+              (chPieceHabillagePanneauxBoisClair et chBibliothequeNicheContreplaque).
+            — chBibliothequeRadiateurIntegre écartée : même mur que
+              chEnsembleRangementRadiateurClaustra (section « Quatre familles »), porte à
+              persiennes ouverte.
+            — chNicheBibliothequeCouloir écartée par prudence : rangement blanc en couloir très
+              proche de chBibliothequeCouloirTrappe.
+            — chArmoireVitreeVerreDepoli écartée : le fichier est stocké COUCHÉ, comme
+              chBibliothequePanneauxMoulures ; il s'afficherait pivoté d'un quart de tour.
+            — chOptiquePresentoirsVitrine et chCouloirBoisGaleriesBanc écartées : la première
+              porte l'enseigne et les horaires du magasin, lisibles sur la vitrine ; la seconde
+              est un second angle du mur de présentoirs déjà visible dans « Espaces
+              commerciaux ».
+            — chMenuiserieInstallationPanneauMural écartée : visage d'ouvrier parfaitement
+              identifiable en gros plan.
+          */}
+          <div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-5">Sous pente et sous escalier</h3>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
+              Deux volumes qu&apos;aucun meuble du commerce ne sait occuper : la pente d&apos;un
+              comble et la volée d&apos;un escalier. L&apos;ouvrage est recoupé sur la ligne
+              réelle, relevée sur place.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl">
+              <MqFig
+                src="/photos/chantiers/chRangementSousPenteCombles.jpeg"
+                alt="Carcasse de dressing en panneaux bruts montée sous un rampant de comble, montants recoupés en escalier sur la pente, penderie à gauche, colonne de trois tiroirs blancs et casiers à droite, fenêtre de toit au fond"
+                caption="Sous rampant : la carcasse est recoupée en escalier sur la pente réelle du comble — penderie d'un côté, colonne de tiroirs et casiers de l'autre. Panneaux encore bruts, façades non posées, fenêtre de toit au fond. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chHabillageMdfSousPente.jpeg"
+                alt="Enfilade de portes de placard en panneau brut montée sous la volée d'un escalier, recoupée en biais sur la pente, marches protégées à droite, sol entièrement bâché"
+                caption="Sous escalier : une enfilade de portes en panneau brut recoupée en biais sur la volée, de la plus haute à la plus basse. Les panneaux sont posés avant peinture, les marches sont protégées et le sol entièrement bâché. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+            </div>
+          </div>
+          <div>
+            <h3 className="display text-[1.15rem] text-ivoire mb-5">Carcasses et façades en panneau brut, avant peinture</h3>
+            <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
+              L&apos;état dans lequel un agencement quitte l&apos;atelier et arrive sur le
+              chantier : les volumes sont justes, les jeux sont réglés, mais rien n&apos;est
+              peint. C&apos;est le moment où les reprises coûtent encore peu.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
+              <MqFig
+                src="/photos/chantiers/chBibliothequeBlancheVitreeChantier.jpeg"
+                alt="Grande bibliothèque en panneau brut montée du sol au plafond, portes battantes ouvertes sur des casiers à tablettes, fond clair, prise de courant conservée au fond d'un casier bas, parquet ancien à lames droites"
+                caption="Bibliothèque montée sur place, portes ouvertes sur les casiers : le fond est laissé clair, les tablettes sont déjà à leur cote et une prise existante est conservée au fond d'un casier bas. La peinture vient après. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chNicheBoisAlcoveFinie.jpeg"
+                alt="Mur entier de placards en panneau brut du sol au plafond, portes pleines sans poignée apparente, une seule niche ouverte à droite au-dessus d'un caisson bas, parquet ancien à larges lames"
+                caption="Un mur entier devenu rangement : portes pleines sans poignée apparente, du sol au plafond, avec une seule niche ouverte réservée à droite. Le parquet ancien à larges lames est conservé ; les façades attendent leur finition. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chDressingEscalierArriereplan2.jpeg"
+                alt="Dressing en panneaux bruts portes ouvertes : penderie à gauche, colonne de tiroirs au centre, colonne de petits casiers à droite, caissons hauts au-dessus, escalier en bois clair à barreaudage à droite du cadre"
+                caption="Aménagement intérieur d'un dressing avant pose des façades : penderie, colonne de tiroirs et colonne de petits casiers, surmontées de caissons hauts. À droite, l'escalier en bois clair et son barreaudage montent au niveau suivant. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+              <MqFig
+                src="/photos/chantiers/chNicheArrondieBoisEclairage.jpeg"
+                alt="Deux panneaux découpés à bords arrondis et un disque, présentés à blanc contre une cloison en plaques de plâtre percée de deux réservations, boîtiers et câbles électriques encore apparents, seuil de porte protégé au sol"
+                caption="Présentation à blanc : deux panneaux à bords arrondis et un disque sont posés contre la cloison avant toute fixation, à l'endroit où passent encore boîtiers et câbles. La forme se règle sur place, sur le mur réel, avant d'être vissée. Chantier réel des équipes partenaires."
+                ratio="aspect-[3/4]"
+              />
+            </div>
+          </div>
           <div>
             <h3 className="display text-[1.15rem] text-ivoire mb-5">Placards de couloir et circulations</h3>
             <p className="text-muted text-[0.85rem] leading-relaxed max-w-2xl mb-5">
@@ -450,6 +540,15 @@ export default function Page() {
                 caption="Le magasin vu depuis la porte : présentoirs rétroéclairés sur les deux murs, meubles bas à tiroirs et comptoir d'accueil au fond. Chantier réel des équipes partenaires."
                 ratio="aspect-[4/3]"
               />
+              {/*
+                07/09 — deux vues d'un AUTRE local commercial ajoutées ici, pour que ce groupe
+                ne repose plus sur un seul chantier. Les deux fichiers ont été ouverts avant
+                d'écrire les légendes.
+                chComptoirBarEtageresOutils, qui montre le même comptoir de bar depuis
+                l'établi, est écartée : un compagnon y apparaît de trois quarts, le visage
+                lisible. La vue conservée est prise de face, sans personne dans le champ, et
+                montre mieux l'ouvrage (le plan qui contourne la colonne de fonte).
+              */}
             </div>
           </div>
           <div>

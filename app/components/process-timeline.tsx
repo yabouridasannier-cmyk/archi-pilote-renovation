@@ -10,7 +10,7 @@ import { PHOTOS, srcSetOf } from "../lib-photos";
 import { WordReveal } from "./word-reveal";
 import { Reveal } from "./reveal";
 
-const PHOTOS_STEP = [PHOTOS.planArchitecte, PHOTOS.chantierEchelle, PHOTOS.devisDetail, PHOTOS.chantierRenovation, PHOTOS.sejourApres];
+const PHOTOS_STEP = [PHOTOS.planArchitecte, PHOTOS.chantierEchelle, PHOTOS.devisDetail, PHOTOS.chOssatureCloisonsHuisserieMetal, PHOTOS.sejourApres];
 
 /** Timeline scrubbée — ligne centrale au scroll, zigzag, 5 étapes réelles du process. */
 export function ProcessTimeline() {
