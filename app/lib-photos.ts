@@ -513,6 +513,35 @@ export const PHOTOS = {
   schemaNatureDesMurs: "/photos/pedagogie/schema-nature-des-murs.jpg",
   /* Infographie de marque ARCHI PILOTE RENOVATION : coupe 3D d'un pavillon expliquant le circuit */
   schemaVmcCircuitAir: "/photos/pedagogie/schema-vmc-circuit-air.jpg",
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     07/09/2026 — CINQ ILLUSTRATIONS TECHNIQUES GÉNÉRÉES.
+
+     Elles répondent à une demande du client : illustrer les intitulés pour lesquels
+     aucune photographie de chantier n'existe dans le fonds. Elles sont produites par
+     gpt-image-2, et ce sont des DESSINS, pas des photographies : elles s'affichent
+     toujours avec la prop `entier` et une légende qui dit « Illustration technique ».
+     Ne JAMAIS les légender « chantier réel » — le client a posé comme non négociable
+     que les images générées ne soient jamais présentées comme des réalisations.
+
+     AUCUNE NE PORTE DE TEXTE, et c'est une contrainte du client, pas un hasard :
+     « le texte ne doit jamais être généré par l'IA, elle ne produit que l'environnement
+     graphique ». Chaque image a été ouverte et vérifiée sur ce point après génération.
+     L'explication vit donc dans la légende HTML, où elle est nette, lisible par un
+     lecteur d'écran et corrigible. Corollaire : un schéma dont tout le sens tient dans
+     ses libellés — le partage des rôles, une suite d'étapes numérotées — ne doit PAS
+     être généré mais composé en HTML, comme celui de /renovation-complete.
+     ══════════════════════════════════════════════════════════════════════════ */
+  /* Écorché des couches successives d'une rénovation complète : pierre existante, structure, réseaux, isolation, cloisons, pièce finie */
+  illustrationCouchesRenovation: "/photos/pedagogie/illustration-couches-renovation-complete.jpg",
+  /* Axonométrie éclatée : démolition et structure, réseaux, cloisons, sols, menuiseries, finitions */
+  illustrationOrdreDesLots: "/photos/pedagogie/illustration-ordre-des-lots.jpg",
+  /* Coupe d'une paroi et d'un receveur de douche : support, natte d'étanchéité, bande d'angle, colle peignée, carrelage */
+  illustrationEtancheiteDouche: "/photos/pedagogie/illustration-etancheite-douche.jpg",
+  /* Coupe d'un doublage sur mur ancien : pierre, ossature, laine minérale, pare-vapeur, plaque */
+  illustrationDoublageIsolant: "/photos/pedagogie/illustration-doublage-isolant.jpg",
+  /* Écorché des réseaux avant fermeture : gaines, boîtes d'encastrement, alimentations, évacuation en pente */
+  illustrationReseauxEncastres: "/photos/pedagogie/illustration-reseaux-encastres.jpg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

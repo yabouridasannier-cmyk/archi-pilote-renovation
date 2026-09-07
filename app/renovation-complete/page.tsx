@@ -250,6 +250,16 @@ export default function Page() {
         lead="Chacune de ces étapes conditionne la suivante. C'est l'ordre, plus que la vitesse, qui protège le budget et le calendrier."
         cta={{ href: "/notre-methode", label: "Le détail de la méthode" }}
       >
+        <div className="max-w-3xl">
+          <MqFig
+            src="/photos/pedagogie/illustration-ordre-des-lots.jpg"
+            alt="Axonométrie éclatée d'une rénovation, du plus lourd au plus fin : démolition et reprises de structure, puis réseaux encastrés, puis cloisons et doublages, puis chapes et sols, puis menuiseries, puis finitions"
+            caption="Illustration technique — l'ordre des lots, du plus lourd au plus fin. Chaque niveau referme le précédent : c'est ce qui rend une décision tardive coûteuse, puisqu'il faut rouvrir ce qui est déjà fermé. Dessin d'illustration, pas une photographie de chantier."
+            ratio="aspect-[3/2]"
+            entier
+          />
+        </div>
+
         {/* 07/09 — Illustration de la méthode. MqFig est habillé pour le fond clair
             (bg-surface, text-muted) : posé ici il ferait une carte blanche sur l'encre.
             La figure est donc composée sur place avec les tons de MqDark. Colonne étroite

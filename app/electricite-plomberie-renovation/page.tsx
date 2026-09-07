@@ -100,6 +100,22 @@ export default function Page() {
         </ol>
       </nav>
 
+      {/* 07/09 : illustration technique posée en tête, avant la photographie. Elle montre
+          ce que la chape et les plaques vont refermer — donc ce que la page a justement
+          pour objet d'expliquer. C'est un DESSIN, pas une photographie : légende et prop
+          `entier` le disent, et elle vit dans /photos/pedagogie/. */}
+      <section className="relative pb-10">
+        <div className="container-site max-w-3xl mx-auto">
+          <MqFig
+            src="/photos/pedagogie/illustration-reseaux-encastres.jpg"
+            alt="Écorché d'un mur et d'un sol montrant les réseaux avant fermeture : gaines annelées dans les saignées, boîtes d'encastrement, alimentations d'eau chaude et froide, évacuation posée en pente sous la chape"
+            caption="Illustration technique — ce que la chape et les plaques vont refermer : gaines dans les saignées, boîtes d'encastrement, alimentations, et l'évacuation dont la pente se règle avant coulage. Dessin d'illustration, pas une photographie de chantier."
+            ratio="aspect-[3/2]"
+            entier
+          />
+        </div>
+      </section>
+
       <section className="relative pb-10">
         <div className="container-site max-w-md mx-auto">
           <MqFig

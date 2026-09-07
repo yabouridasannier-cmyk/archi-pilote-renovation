@@ -408,6 +408,16 @@ export default function Page() {
         title="Immeuble sans ventilation : constituer le dossier pour le syndic"
         lead="En copropriété, l'installation d'une ventilation touchant les parties communes suit une démarche formelle jusqu'à l'assemblée générale."
       >
+        <div className="max-w-3xl">
+          <MqFig
+            src="/photos/pedagogie/illustration-doublage-isolant.jpg"
+            alt="Coupe en écorché d'un doublage isolant sur mur ancien en pierre : maçonnerie existante, ossature métallique, panneau de laine minérale entre montants, membrane pare-vapeur, plaque de plâtre et finition"
+            caption="Illustration technique — un doublage sur mur ancien empile cinq couches, et l'ordre n'est pas interchangeable : le pare-vapeur se pose côté chauffé, sinon la vapeur condense dans l'isolant. Dessin d'illustration, pas une photographie de chantier."
+            ratio="aspect-[3/2]"
+            entier
+          />
+        </div>
+
         <MqProse>
           <p>
             De nombreux immeubles anciens n'ont jamais été équipés de ventilation mécanique contrôlée. Lorsque le

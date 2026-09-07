@@ -151,6 +151,16 @@ export default function Page() {
         lead="Deux salles de bain photographiées au même moment du chantier : le mobilier est en place, les raccordements et les finitions ne le sont pas encore. C'est l'état réel d'une pièce quelques jours avant sa réception."
         wide
       >
+        <div className="max-w-3xl">
+          <MqFig
+            src="/photos/pedagogie/illustration-etancheite-douche.jpg"
+            alt="Coupe en écorché d'une paroi et d'un receveur de douche montrant la superposition : support, natte d'étanchéité remontant sur les parois, bande de renfort dans l'angle mur-sol, colle peignée, carrelage et bonde"
+            caption="Illustration technique — l'étanchéité d'une douche se joue sous le carrelage : la natte remonte sur les parois et une bande renforce l'angle entre le mur et le sol, là où le carrelage seul finit par fissurer. Dessin d'illustration, pas une photographie de chantier."
+            ratio="aspect-[3/2]"
+            entier
+          />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 max-w-3xl">
           <MqFig
             src="/photos/chantiers/chSdbMeubleTeckDoubleVasque.jpeg"
