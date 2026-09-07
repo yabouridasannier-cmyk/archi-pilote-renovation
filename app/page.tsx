@@ -142,25 +142,24 @@ export default function Home() {
               <Link href="/contact" className="btn btn-primary">Décrire mon projet</Link>
               <Link href="/notre-methode" className="btn btn-ghost">Voir la méthode</Link>
             </div>
-            {/* 06/09 : badge Trustpilot REMONTÉ dans le premier écran, à la demande du
-                client. Il était au pied des témoignages, en bas de page.
-                La forme retenue tient compte de ce qui m'inquiétait à cette place : ici, le
-                visiteur n'a encore rien lu, et un badge d'avis se lit spontanément comme une
-                note. La fiche compte zéro avis — donc pas d'étoiles, pas de note, et le mot
-                « Évaluez-nous » plutôt qu'un score. C'est une INVITATION, formulée comme
-                telle, et elle est vraie dès aujourd'hui. Le jour où des avis existeront, le
-                widget officiel prendra cette place avec la vraie note (identifiant de la
-                fiche déjà inscrit dans components/trustpilot.tsx). */}
-            <div className="mt-6">
-              <TrustpilotWidget largeur="260px" repli={<TrustpilotLigne />} />
-            </div>
           </div>
-          <MqFig
-            src="/photos/chantiers/chHdgSalonBoucleAppliquesBronze.jpeg"
-            alt="Salon d'un appartement ancien parisien livré : murs panneautés et corniche ornée, grande glace à cadre sculpté, persiennes closes derrière la fenêtre et parquet chêne à chevrons"
-            caption="Salon livré dans un appartement ancien parisien : panneautage mouluré repris sur tout le pourtour jusque sur les portes, grande glace à cadre sculpté encastrée dans le panneautage, persiennes closes derrière la fenêtre et parquet chêne posé à chevrons. Chantier réel des équipes partenaires."
-            ratio="aspect-[4/3]"
-          />
+          {/* 07/09 : badge Trustpilot déplacé SOUS L'IMAGE, dans la colonne de droite.
+              Il était sous les deux boutons, dans la colonne de texte : le client trouve
+              que ça fait moche à cet endroit, et il a raison — le badge coupait
+              l'enchaînement entre les boutons d'action et la suite de la page, alors que
+              sous l'image il occupe le vide qui restait entre la fin de la légende et le
+              bas de la colonne. Il reste dans le premier écran, ce qui était la demande.
+              La forme, elle, ne change pas : ni étoiles ni note, parce que la fiche compte
+              zéro avis et qu'un badge d'avis se lit spontanément comme un score. */}
+          <div className="flex flex-col gap-5">
+            <MqFig
+              src="/photos/chantiers/chHdgSalonBoucleAppliquesBronze.jpeg"
+              alt="Salon d'un appartement ancien parisien livré : murs panneautés et corniche ornée, grande glace à cadre sculpté, persiennes closes derrière la fenêtre et parquet chêne à chevrons"
+              caption="Salon livré dans un appartement ancien parisien : panneautage mouluré repris sur tout le pourtour jusque sur les portes, grande glace à cadre sculpté encastrée dans le panneautage, persiennes closes derrière la fenêtre et parquet chêne posé à chevrons. Chantier réel des équipes partenaires."
+              ratio="aspect-[4/3]"
+            />
+            <TrustpilotWidget largeur="100%" repli={<TrustpilotLigne />} />
+          </div>
         </div>
 
         {/* ── 2 · BANDEAU DE PREUVE (remplace les trois chiffres) ──────── */}
