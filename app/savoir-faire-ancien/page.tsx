@@ -199,7 +199,7 @@ export default function SavoirFaireAncienPage() {
               images gardent désormais leur ratio natif — trois portraits y perdaient
               jusqu'à 58 % de leur sujet dans le cadre paysage par défaut —, cela créait des
               vides blancs. Les colonnes empilent chaque carte à sa hauteur réelle. */}
-            <div className="columns-1 md:columns-2 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
+            <div className="columns-2 gap-3 md:gap-5 [&>*]:mb-3 md:[&>*]:mb-5 [&>*]:break-inside-avoid">
             {/*
               Grille revue le 03/09/2026 : chaque vignette a été rouverte et son recadrage réel
               simulé (aspect-[4/3] + object-cover) avant d'être jugée. Quatre vignettes ont été

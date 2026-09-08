@@ -508,7 +508,7 @@ export default function RealisationsPage() {
           client l'a vu tout de suite. Les colonnes CSS empilent chaque carte à sa hauteur
           réelle et remplissent le vide, sans recadrer une seule image. */}
       <MqSection kicker="Photographies de chantiers" title="Des photographies prises sur les chantiers, pendant et après les travaux" lead="Les images de cette grille proviennent toutes de chantiers réels, exécutés par les entreprises partenaires contractantes : aucune n'est une photographie d'illustration. Plus bas sur la page, en revanche, le « déroulé » et les avant/après recourent à des visuels de référence, signalés comme tels en légende." wide>
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
+        <div className="columns-2 lg:columns-3 gap-3 sm:gap-5 [&>*]:mb-3 sm:[&>*]:mb-5 [&>*]:break-inside-avoid">
           {PHOTOS_CHANTIERS.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}
@@ -516,7 +516,7 @@ export default function RealisationsPage() {
       </MqSection>
 
       <MqSection kicker="Réalisations haut de gamme" title="Un appartement ancien parisien livré, pièce par pièce" lead="Ces photographies proviennent pour l'essentiel d'un même grand appartement ancien parisien, prises après travaux : ouvrages de pierre, menuiseries sur mesure et éléments d'origine conservés. Quelques vues ont été prises sur d'autres chantiers et l'une montre une salle de bain encore en cours de pose — la légende le précise à chaque fois." wide>
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
+        <div className="columns-2 lg:columns-3 gap-3 sm:gap-5 [&>*]:mb-3 sm:[&>*]:mb-5 [&>*]:break-inside-avoid">
           {PHOTOS_HDG.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}
@@ -524,7 +524,7 @@ export default function RealisationsPage() {
       </MqSection>
 
       <MqSection kicker="L'ouvrage caché" title="Étanchéité, plomberie, électricité : ce qui disparaît derrière les finitions" lead="Ces ouvrages ne se voient plus une fois le chantier livré, et ce sont pourtant eux qui décident de sa durabilité. Ils sont photographiés systématiquement avant fermeture : c'est la seule trace exploitable si un doute survient plus tard." wide>
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
+        <div className="columns-2 lg:columns-3 gap-3 sm:gap-5 [&>*]:mb-3 sm:[&>*]:mb-5 [&>*]:break-inside-avoid">
           {PHOTOS_TECHNIQUES.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}
@@ -532,7 +532,7 @@ export default function RealisationsPage() {
       </MqSection>
 
       <MqSection kicker="Déroulé d'un chantier" title="De l'état initial à la livraison, étape par étape" lead="Étapes types d'un chantier de rénovation, illustrées en priorité par nos propres photographies de chantiers réels ; quelques schémas et visuels de référence complètent les phases les moins photogéniques (réseaux encastrés, carottage), signalés comme tels en légende." wide>
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5 [&>*]:break-inside-avoid">
+        <div className="columns-2 lg:columns-3 gap-3 sm:gap-5 [&>*]:mb-3 sm:[&>*]:mb-5 [&>*]:break-inside-avoid">
           {DEROULE.map((p) => (
             <MqFig key={p.src} src={p.src} alt={p.alt} caption={p.cap} ratio={p.ratio} />
           ))}

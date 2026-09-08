@@ -41,7 +41,7 @@ export function GalerieGrid() {
           })}
         </div>
 
-        <div className="columns-1 sm:columns-2 lg:columns-3 gap-5 [&>*]:mb-5">
+        <div className="columns-2 lg:columns-3 gap-3 sm:gap-5 [&>*]:mb-3 sm:[&>*]:mb-5">
           {items.map((photo, i) => (
             <Reveal key={photo.src} variant="slide-up" delay={(i % 3) * 0.08}>
               <figure className="group relative rounded-none overflow-hidden card-e break-inside-avoid">

@@ -171,7 +171,7 @@ export function ContactForm() {
         </div>
       )}
       <div className="sm:col-span-2 flex flex-col gap-3">
-        <button type="submit" disabled={sending} className={`btn btn-primary w-full sm:w-auto ${sending ? "opacity-50 pointer-events-none" : ""}`}>
+        <button type="submit" disabled={sending} className={`btn btn-primary w-full sm:w-auto !whitespace-normal text-center leading-snug ${sending ? "opacity-50 pointer-events-none" : ""}`}>
           {sending ? "Envoi en cours…" : "Envoyer ma demande d'étude sans engagement"}
         </button>
         <p className="text-muted text-[0.8rem]">

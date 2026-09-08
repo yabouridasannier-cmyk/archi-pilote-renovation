@@ -69,7 +69,14 @@ export function Nav() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Link href="/contact" className="btn btn-primary !py-2.5 !px-4 hidden sm:inline-flex">Étudier mon projet</Link>
+            {/* 08/09 : `hidden sm:inline-flex` était posé SUR le .btn — or .btn force
+                display:inline-flex dans globals.css et écrase le `hidden` de Tailwind. Le
+                bouton restait donc visible sur téléphone, où il chevauchait le logo et
+                repoussait le menu hors de l'écran. L'enveloppe, elle, n'a pas de display
+                imposé : c'est elle qui se cache. Piège déjà documenté sur ce projet. */}
+            <span className="hidden sm:inline-flex">
+              <Link href="/contact" className="btn btn-primary !py-2.5 !px-4">Étudier mon projet</Link>
+            </span>
             <button onClick={() => setOpen(!open)} aria-label="Menu" aria-expanded={open} className="lg:hidden size-10 border border-line bg-surface rounded-[2px] flex items-center justify-center">
               <span className="flex flex-col gap-[5px]">
                 <span className={`block h-[1.5px] w-5 bg-ivoire transition-transform duration-300 ${open ? "rotate-45 translate-y-[3.25px]" : ""}`} />

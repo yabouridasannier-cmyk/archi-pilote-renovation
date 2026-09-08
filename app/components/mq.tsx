@@ -50,7 +50,7 @@ export function MqFig({ src, alt, caption, ratio = "aspect-[4/3]", entier = fals
       <div className={`relative ${ratio} overflow-hidden`}>
         <img src={src} alt={alt} loading="lazy" className={`absolute inset-0 size-full ${entier ? "object-contain" : "object-cover"}`} />
       </div>
-      {caption && <figcaption className="px-4 py-3 text-[0.82rem] leading-snug text-muted border-t border-line">{caption}</figcaption>}
+      {caption && <figcaption className="px-3 py-2.5 text-[0.74rem] sm:px-4 sm:py-3 sm:text-[0.82rem] leading-snug text-muted border-t border-line">{caption}</figcaption>}
     </figure>
   );
 }
