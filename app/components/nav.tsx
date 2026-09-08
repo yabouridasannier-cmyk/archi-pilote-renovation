@@ -103,7 +103,7 @@ export function Nav() {
               ))}
             </div>
             <Link href="/contact" className="btn btn-primary w-full">Étudier mon projet</Link>
-            <a href="tel:+33652798089" className="btn btn-ghost w-full">06 52 79 80 89</a>
+            <a href="tel:+33667117975" className="btn btn-ghost w-full">06 67 11 79 75</a>
           </nav>
         </div>
       )}

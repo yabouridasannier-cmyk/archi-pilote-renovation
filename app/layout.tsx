@@ -48,7 +48,7 @@ export const JSONLD_ORGANIZATION = {
      La dénomination sociale et l'immatriculation restent où la loi les exige : page
      Mentions légales, documents contractuels, et une ligne unique en pied de page. */
   url: "https://www.archipiloterenovation.com",
-  telephone: "+33652798089",
+  telephone: "+33667117975",
   email: "archipiloterenovation@gmail.com",
   description: "Pilotage de travaux de rénovation tous corps d'état en Île-de-France, priorité maison et pavillon.",
   areaServed: ["Hauts-de-Seine", "Yvelines", "Essonne", "Val-d'Oise", "Seine-et-Marne", "Île-de-France"],

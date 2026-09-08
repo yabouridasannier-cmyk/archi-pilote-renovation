@@ -42,7 +42,7 @@ const JSON_LD = {
   url: "https://www.archipiloterenovation.com/",
   description:
     "Structuration, chiffrage et accompagnement de projets de rénovation à Paris et en Île-de-France : chantiers complexes, périmètre ABF, surélévation, extension, copropriété.",
-  telephone: "+33652798089",
+  telephone: "+33667117975",
   email: "archipiloterenovation@gmail.com",
   address: {
     "@type": "PostalAddress",
