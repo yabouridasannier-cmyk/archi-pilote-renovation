@@ -22,12 +22,31 @@ export default function Page() {
         title="Lire le diagnostic de performance énergétique avant d'agir"
         lead="La lettre globale d'un diagnostic masque des écarts importants entre postes : le détail chiffré oriente les priorités réelles de travaux."
       >
-        <MqFig
-          src="/photos/maquette/schema-deperditions.jpg"
-          alt="Schéma illustrant les déperditions thermiques typiques d'une passoire énergétique : pertes de chaleur par la toiture, les murs, les menuiseries et le plancher bas."
-          caption="Répartition indicative des déperditions thermiques dans un logement mal isolé, avant travaux de rénovation énergétique."
-          ratio="aspect-[10/7]"
-        />
+        {/*
+          08/09 : infographie de la marque fournie par le client, ouverte et vérifiée avant pose —
+          titre imprimé « Passoire énergétique : traiter les causes, pas seulement les symptômes ».
+          Posée ICI plutôt que sous « Sortir d'une passoire énergétique en sept étapes » : les trois
+          quarts de la planche sont une maison en coupe avec les postes de déperdition (toiture, murs,
+          fenêtres, ponts thermiques, ventilation, chauffage, diagnostic du bâti), soit exactement la
+          « Hiérarchie des postes de déperdition » de cette section ; et la frise en pied de planche
+          (Diagnostic → Déperditions → Isolation → Fenêtres → Ventilation → Chauffage → Confort) ne suit
+          pas l'ordre des sept étapes de la page (ventilation AVANT menuiseries) — la mettre sous cette
+          liste aurait affiché deux ordres contradictoires côte à côte. `entier`, jamais recadrée.
+        */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-passoire-energetique.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Passoire énergétique : traiter les causes, pas seulement les symptômes"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Passoire énergétique : traiter les causes, pas seulement les symptômes."
+            ratio="aspect-[4/3]"
+            entier
+          />
+        </div>
+        {/* 08/09 : schema-deperditions.jpg (maquette) RETIRÉ d'ici. L'infographie de la
+            marque posée juste au-dessus montre le même sujet — la maison en coupe et ses
+            postes de déperdition — avec le logo ARCHI PILOTE et une frise d'étapes en plus.
+            Deux visuels du même sujet à la suite, c'est le « toujours les mêmes images »
+            que le client reproche, et le sien est le meilleur des deux. */}
         <div className="mt-10 flex flex-col gap-10">
           <div>
             <h3 className="display text-[1.25rem] text-ivoire">Classes F et G : ce que signifie réellement une passoire énergétique</h3>

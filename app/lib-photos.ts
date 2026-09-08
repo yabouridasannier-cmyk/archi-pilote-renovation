@@ -542,6 +542,42 @@ export const PHOTOS = {
   illustrationDoublageIsolant: "/photos/pedagogie/illustration-doublage-isolant.jpg",
   /* Écorché des réseaux avant fermeture : gaines, boîtes d'encastrement, alimentations, évacuation en pente */
   illustrationReseauxEncastres: "/photos/pedagogie/illustration-reseaux-encastres.jpg",
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     08/09/2026 — 14 INFOGRAPHIES DE LA MARQUE, fournies par le client dans le dossier
+     « photo archi », chacune nommée d'après l'intitulé de section qu'elle illustre.
+     Ce sont des planches composées (logo ARCHI PILOTE, titres, légendes intégrées) :
+     elles s'affichent TOUJOURS entières (prop `entier`), un recadrage les décapiterait.
+     Elles ne sont jamais légendées « chantier réel » : ce sont des infographies.
+     ══════════════════════════════════════════════════════════════════════════ */
+  /* Passoire énergétique : traiter les causes, pas seulement les symptômes */
+  infoPassoireEnergetique: "/photos/pedagogie/infographie-passoire-energetique.jpg",
+  /* Quatre décisions à prendre avant de consulter les entreprises */
+  infoQuatreDecisions: "/photos/pedagogie/infographie-quatre-decisions.jpg",
+  /* Un budget lisible et des responsabilités séparées */
+  infoBudgetLisible: "/photos/pedagogie/infographie-budget-lisible.jpg",
+  /* Le carottage, un outil de diagnostic sous-estimé */
+  infoCarottage: "/photos/pedagogie/infographie-carottage.jpg",
+  /* Chauffage, cloisons et doublages */
+  infoChauffageCloisonsDoublages: "/photos/pedagogie/infographie-chauffage-cloisons-doublages.jpg",
+  /* charges, acoustique et locaux humides */
+  infoCloisonsChargesAcoustique: "/photos/pedagogie/infographie-cloisons-charges-acoustique.jpg",
+  /* Documents et démarches à anticiper */
+  infoDocumentsDemarches: "/photos/pedagogie/infographie-documents-demarches.jpg",
+  /* pente avant tout */
+  infoEvacuationsPente: "/photos/pedagogie/infographie-evacuations-pente.jpg",
+  /* Les sept étapes d'une rénovation d'appartement */
+  infoSeptEtapesAppartement: "/photos/pedagogie/infographie-sept-etapes-appartement.jpg",
+  /* Où se gagnent les économies */
+  infoOuSeGagnentEconomies: "/photos/pedagogie/infographie-ou-se-gagnent-les-economies.jpg",
+  /* HÉROS — remplace la photo de chambre en tête de page */
+  infoRenovationComplete: "/photos/pedagogie/infographie-renovation-complete.jpg",
+  /* Lire la maison du sol à la toiture avant de chiffrer */
+  infoRenovationMaison: "/photos/pedagogie/infographie-renovation-maison.jpg",
+  /* Salles d'eau : l'étanchéité sous carrelage, un point sans marge d'erreur */
+  infoEtancheiteSalleEau: "/photos/pedagogie/infographie-etancheite-salle-eau.jpg",
+  /* Une solution complète, des responsabilités claires */
+  infoSolutionComplete: "/photos/pedagogie/infographie-solution-complete.jpg",
 } as const;
 
 /* Décline une URL Unsplash (w=1600) en srcset 480/768/1200/1600 —

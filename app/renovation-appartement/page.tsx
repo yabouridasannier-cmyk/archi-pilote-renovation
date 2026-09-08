@@ -151,6 +151,21 @@ export default function Page() {
       </MqSection>
 
       <MqSection kicker="Déroulé" title="Les sept étapes d'une rénovation d'appartement">
+        {/*
+          08/09 : infographie de la marque fournie par le client, ouverte et vérifiée avant pose —
+          titre imprimé « Les sept étapes d'une rénovation d'appartement », kicker « Déroulé »,
+          mêmes sept étapes que la liste ci-dessous. Planche composée (logo, légendes, pied) :
+          `entier`, jamais recadrée, jamais légendée « chantier réel ».
+        */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <MqFig
+            src="/photos/pedagogie/infographie-sept-etapes-appartement.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Les sept étapes d'une rénovation d'appartement"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Les sept étapes d'une rénovation d'appartement."
+            ratio="aspect-[4/3]"
+            entier
+          />
+        </div>
         <MqNumbered
           cols={2}
           items={[
@@ -377,6 +392,20 @@ export default function Page() {
         title="Où se gagnent les économies"
         lead="Le prix se construit avant le chantier. Une fois les entreprises engagées, la marge de manœuvre devient marginale."
       >
+        {/*
+          08/09 : infographie de la marque fournie par le client, ouverte et vérifiée avant pose —
+          titre imprimé « Où se gagnent les économies », kicker « Budget », sous-titre identique au
+          lead de cette section, mêmes trois leviers que la liste ci-dessous. `entier`, jamais recadrée.
+        */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <MqFig
+            src="/photos/pedagogie/infographie-ou-se-gagnent-les-economies.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Où se gagnent les économies"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Où se gagnent les économies."
+            ratio="aspect-[4/3]"
+            entier
+          />
+        </div>
         <p className="mb-8 max-w-2xl text-[0.95rem] leading-relaxed text-ivoire/85">
           Le premier de ces trois leviers,{" "}
           <Link href="/achat-direct-materiaux" className="text-orange-deep underline underline-offset-4 hover:text-orange transition-colors">l'achat direct des matériaux</Link>,

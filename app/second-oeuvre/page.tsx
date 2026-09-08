@@ -162,6 +162,20 @@ export default function Page() {
                 </p>
               </MqProse>
             </div>
+            {/*
+              08/09 : infographie de la marque fournie par le client, posée sous le sous-titre h3
+              qu'elle porte, après son texte. Planche composée en 1448 × 1086 : affichée entière
+              (object-contain) en aspect-[4/3], jamais recadrée.
+            */}
+            <div className="mt-6 max-w-4xl mx-auto">
+              <MqFig
+                src="/photos/pedagogie/infographie-evacuations-pente.jpg"
+                alt="Infographie ARCHI PILOTE RÉNOVATION : Évacuations : la pente avant tout"
+                caption="Infographie ARCHI PILOTE RÉNOVATION — Évacuations : la pente avant tout."
+                ratio="aspect-[4/3]"
+                entier
+              />
+            </div>
           </div>
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Diamètres, alimentation et encastrements</h3>
@@ -209,6 +223,20 @@ export default function Page() {
         title="Chauffage, cloisons et doublages"
         lead="Le chauffage et la structure secondaire du logement, cloisons et doublages, se pensent ensemble dès la conception des plans techniques."
       >
+        {/*
+          08/09 : infographie de la marque fournie par le client, posée sous le titre de section
+          qu'elle porte. Planche composée (titre, légendes, logo intégrés) en 1227 × 1282 : affichée
+          entière (object-contain) en aspect-square, jamais recadrée.
+        */}
+        <div className="max-w-3xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-chauffage-cloisons-doublages.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Chauffage, cloisons et doublages"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Chauffage, cloisons et doublages."
+            ratio="aspect-square"
+            entier
+          />
+        </div>
         <div className="flex flex-col gap-10">
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Chauffage : cohérence avec l'isolation et les émetteurs</h3>
@@ -270,6 +298,20 @@ export default function Page() {
               </MqProse>
             </div>
             {/*
+              08/09 : infographie de la marque fournie par le client, posée juste après le bloc
+              introduit par le sous-titre h3 qu'elle porte. Planche composée en 1448 × 1086 :
+              affichée entière (object-contain) en aspect-[4/3], jamais recadrée.
+            */}
+            <div className="mt-6 max-w-4xl mx-auto">
+              <MqFig
+                src="/photos/pedagogie/infographie-cloisons-charges-acoustique.jpg"
+                alt="Infographie ARCHI PILOTE RÉNOVATION : Cloisons et doublages : charges, acoustique et locaux humides"
+                caption="Infographie ARCHI PILOTE RÉNOVATION — Cloisons et doublages : charges, acoustique et locaux humides."
+                ratio="aspect-[4/3]"
+                entier
+              />
+            </div>
+            {/*
               06/09 : cette sous-section « Cloisons et doublages » n'avait que le schéma de coupe
               ci-dessous — aucune photo réelle d'ossature, alors que c'est le sujet même du titre.
               Deux photos inédites de l'export WhatsApp du client la documentent : les deux ont été
@@ -306,6 +348,20 @@ export default function Page() {
         title="Salles d'eau : l'étanchéité sous carrelage, un point sans marge d'erreur"
         lead="Une étanchéité défaillante sous carrelage ne se manifeste souvent qu'après plusieurs mois, une fois le désordre déjà installé dans le bâti."
       >
+        {/*
+          08/09 : infographie de la marque fournie par le client, posée sous le titre de section
+          qu'elle porte. Planche composée en 1448 × 1086 : affichée entière (object-contain) en
+          aspect-[4/3], jamais recadrée.
+        */}
+        <div className="max-w-4xl mx-auto mb-8">
+          <MqFig
+            src="/photos/pedagogie/infographie-etancheite-salle-eau.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Salles d'eau : l'étanchéité sous carrelage, un point sans marge d'erreur"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Salles d'eau : l'étanchéité sous carrelage, un point sans marge d'erreur."
+            ratio="aspect-[4/3]"
+            entier
+          />
+        </div>
         <MqProse>
           <p>
             Sous le futur carrelage d'une douche ou d'une salle de bain, une étanchéité liquide ou une membrane spécifique est appliquée sur l'ensemble de la surface exposée à l'eau, avec un relevé en plinthe sur une hauteur suffisante. Les traversées de plomberie, les angles du receveur et les jonctions avec les parois sont les points les plus exposés à un défaut d'exécution.

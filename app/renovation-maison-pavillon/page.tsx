@@ -22,6 +22,21 @@ export default function Page() {
         title="Lire la maison du sol à la toiture avant de chiffrer"
         lead="Les désordres d'une maison traversent souvent plusieurs niveaux : une humidité en cave peut expliquer une dégradation observée sous toiture, et inversement."
       >
+        {/*
+          08/09/2026 — infographie de la marque fournie par le client. Titre lu sur
+          l'image : « Rénovation de maison : lire le bâtiment du sol à la toiture »,
+          cohérent avec cette section. Planche composée (titre, légendes, logo) :
+          `entier` obligatoire, un recadrage la décapiterait. 1448x1086 = 4/3 exact.
+        */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-renovation-maison.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : « Rénovation de maison : lire le bâtiment du sol à la toiture »"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Rénovation de maison : lire le bâtiment du sol à la toiture."
+            ratio="aspect-[4/3]"
+            entier
+          />
+        </div>
         <div className="flex flex-col gap-10">
           <div>
             <h3 className="display text-[1.3rem] text-ivoire">Une lecture globale plutôt qu'une liste de travaux</h3>
@@ -139,6 +154,21 @@ export default function Page() {
         title="Le carottage, un outil de diagnostic sous-estimé"
         lead="Le carottage permet de vérifier concrètement la composition d'un mur ou d'un plancher avant de décider d'une solution technique."
       >
+        {/*
+          08/09/2026 — infographie de la marque fournie par le client. Titre lu sur
+          l'image : « Le carottage : voir avant de décider », sous-titre « Un outil de
+          diagnostic sous-estimé pour une rénovation réussie », cohérent avec cette
+          section. Planche composée : `entier` obligatoire. 1223x1286, quasi carrée.
+        */}
+        <div className="max-w-3xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-carottage.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : « Le carottage : voir avant de décider »"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Le carottage : voir avant de décider."
+            ratio="aspect-square"
+            entier
+          />
+        </div>
         <div>
           <h3 className="display text-[1.3rem] text-ivoire">À quoi sert le carottage en rénovation</h3>
           <div className="mt-4">
@@ -192,6 +222,21 @@ export default function Page() {
         title="Documents et démarches à anticiper"
         lead="Certains documents doivent être réunis avant de lancer les travaux, en particulier pour les maisons anciennes."
       >
+        {/*
+          08/09/2026 — infographie de la marque fournie par le client. Titre lu sur
+          l'image : « Documents et démarches anticipés : préparer le projet avant les
+          travaux », cohérent avec cette section. Planche composée : `entier`
+          obligatoire. 1448x1086 = 4/3 exact.
+        */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-documents-demarches.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : « Documents et démarches anticipés : préparer le projet avant les travaux »"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Documents et démarches anticipés : préparer le projet avant les travaux."
+            ratio="aspect-[4/3]"
+            entier
+          />
+        </div>
         <MqNumbered
           cols={2}
           items={[

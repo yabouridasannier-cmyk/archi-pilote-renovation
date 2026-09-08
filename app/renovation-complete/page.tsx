@@ -178,23 +178,21 @@ export default function Page() {
 
       <section className="pb-10">
         <div className="container-site max-w-4xl">
-          {/* 07/09 — Image d'ouverture. La page était la plus pauvre en images du site :
-              dix sections, six illustrations, et le héros n'en avait aucune. Même dispositif
-              que la page sœur « rénovation d'appartement » : un résultat livré, légendé de
-              façon à renvoyer aux décisions prises bien avant.
+          {/* 08/09 — Image d'ouverture : l'infographie de marque « Rénovation complète »,
+              fournie par le client, qui a demandé qu'elle « remplace la chambre » posée ici
+              le 07/09 (chHdgChambreDressingChevrons.jpeg).
 
-              Un premier choix a été écarté ici : chDemolitionBoiseriesHaussmannien.jpeg est
-              le MÊME FICHIER que chIsolationPhoniqueGranulesPlancher.jpeg (md5 identique),
-              déjà affichée sur renovation-appartement et gros-oeuvre-structure. En héros de
-              cette page, le visiteur du menu « Travaux » aurait vu deux fois la même image.
-
-              Format natif 1600 × 1066, cadre calé dessus (3/2). */}
-          <div className="mb-8">
+              Planche composée : titre en haut, méthode en six étapes, bandeau de contact en
+              bas. Elle est donc affichée `entier`, dans un cadre calé sur son format natif
+              (1222 × 1287) — un recadrage 3/2 la décapiterait. C'est une infographie, pas une
+              photographie de chantier : la légende ne dit jamais « chantier réel ». */}
+          <div className="mb-8 max-w-3xl mx-auto">
             <MqFig
-              src="/photos/chantiers/chHdgChambreDressingChevrons.jpeg"
-              alt="Chambre aménagée dans un immeuble ancien : corniche et moulures de plafond, cheminée de marbre surmontée d'un grand miroir, parquet clair posé en V, armoire et étagères en bois, fenêtre à balcon en ferronnerie ouvrant sur l'immeuble d'en face"
-              caption="Chambre aménagée dans un immeuble ancien : moulures de plafond et cheminée de marbre en place, parquet clair posé en V, menuiseries et éclairage intégrés, fenêtre et balcon donnant sur la rue. Ce qui se voit à la fin dépend d'arbitrages techniques décidés plusieurs mois plus tôt. Chantier réel des équipes partenaires."
-              ratio="aspect-[3/2]"
+              src="/photos/pedagogie/infographie-renovation-complete.jpg"
+              alt="Infographie ARCHI PILOTE RÉNOVATION : Rénovation complète — un projet global, des experts pour chaque étape, une sérénité totale. Vue 3D d'un appartement entourée des huit postes d'une rénovation, méthode en six étapes, quatre engagements et coordonnées"
+              caption="Infographie ARCHI PILOTE RÉNOVATION — Rénovation complète. Un projet global, des experts pour chaque étape, une sérénité totale."
+              ratio="aspect-[1222/1287]"
+              entier
             />
           </div>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-line border border-line rounded-[2px] overflow-hidden">
@@ -338,6 +336,18 @@ export default function Page() {
             </div>
           ))}
         </div>
+        {/* 08/09 — Infographie de marque fournie par le client, posée APRÈS le schéma HTML des
+            quatre rôles (qu'elle complète sans le remplacer). Planche composée, affichée
+            `entier` dans un cadre à son format natif (1491 × 1055). */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-budget-lisible.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Un budget lisible et des responsabilités séparées — honoraires identifiables, entreprises contractantes, achats directs possibles, devis réellement comparables, et lecture du budget par postes"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Un budget lisible et des responsabilités séparées."
+            ratio="aspect-[1491/1055]"
+            entier
+          />
+        </div>
         <p className="text-muted text-[0.82rem] leading-relaxed max-w-3xl mb-10">
           Les travaux sont exécutés et facturés par les entreprises partenaires contractantes, qui portent leurs
           propres assurances. ARCHI PILOTE RÉNOVATION n&apos;exécute aucun lot&nbsp;: son intervention porte sur la
@@ -380,6 +390,17 @@ export default function Page() {
         title="Une solution complète, des responsabilités claires"
         lead="Un seul interlocuteur pour coordonner l'ensemble, mais des rôles et des responsabilités qui restent distincts."
       >
+        {/* 08/09 — Infographie de marque fournie par le client, sous le titre de la section.
+            Planche composée, affichée `entier` dans un cadre à son format natif (1491 × 1055). */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-solution-complete.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Une solution complète, des responsabilités claires — ce que fait ARCHI PILOTE RÉNOVATION, ce que font les entreprises partenaires contractantes, et les experts indépendants mobilisés selon les besoins du dossier"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Une solution complète, des responsabilités claires."
+            ratio="aspect-[1491/1055]"
+            entier
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="display text-[1.15rem] text-ivoire mb-4">ARCHI PILOTE RÉNOVATION</h3>
@@ -441,6 +462,17 @@ export default function Page() {
         lead="Ces quatre points reviennent sur pratiquement tous les chantiers de rénovation complète, et se traitent avant le premier devis."
         wide
       >
+        {/* 08/09 — Infographie de marque fournie par le client, sous le titre de la section.
+            Planche composée, affichée `entier` dans un cadre à son format natif (1222 × 1287). */}
+        <div className="max-w-3xl mx-auto mb-10">
+          <MqFig
+            src="/photos/pedagogie/infographie-quatre-decisions.jpg"
+            alt="Infographie ARCHI PILOTE RÉNOVATION : Quatre décisions à prendre avant de consulter les entreprises — vérifier la nature des murs, anticiper les démarches auprès du syndic, séparer le socle indispensable des options, prévoir la documentation du chantier"
+            caption="Infographie ARCHI PILOTE RÉNOVATION — Quatre décisions à prendre avant de consulter les entreprises."
+            ratio="aspect-[1222/1287]"
+            entier
+          />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-8">
           {DECISIONS.map((d, i) => (
             <div key={d.title} className="flex flex-col gap-2 border-t border-line pt-4">
