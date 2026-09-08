@@ -67,6 +67,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className={`${fraunces.variable} ${manrope.variable} ${manropeMono.variable}`}
     >
       <head>
+        <meta name="google-site-verification" content="7iUlAObR2WvotDJ3nOlAz5QjefEjRC-HaOAewDg5x08" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_ORGANIZATION) }}
