@@ -25,6 +25,12 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
+  verification: {
+    google: [
+      "7iUlAObR2WvotDJ3nOlAz5QjefEjRC-HaOAewDg5x08",
+      "6CNvUvCSLjFhSkB8CbWeOL-82Drksn5BJvSK6IyitKk",
+    ],
+      },
   openGraph: {
     type: "website",
     locale: "fr_FR",
@@ -67,7 +73,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       className={`${fraunces.variable} ${manrope.variable} ${manropeMono.variable}`}
     >
       <head>
-        <meta name="google-site-verification" content="7iUlAObR2WvotDJ3nOlAz5QjefEjRC-HaOAewDg5x08" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(JSONLD_ORGANIZATION) }}
