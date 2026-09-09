@@ -297,7 +297,17 @@ async function waitOnline(url, deadline) {
   while (Date.now() < deadline) {
     try {
       const res = await fetch(url, { signal: AbortSignal.timeout(20_000), redirect: "follow", headers: { "Cache-Control": "no-cache" } });
-      if (res.ok) return true;
+      if (res.ok) {
+        // 09/09/2026 : un HTTP 200 ne prouve pas que la page est en ligne. Le jour où le
+        // domaine a été suspendu par le registrar, chaque adresse du site répondait 200
+        // avec une page « Your domain is suspended » : sur le seul statut, cette boucle
+        // aurait confirmé PUBLISHED à Sedestral pour des articles que personne ne pouvait
+        // lire. On exige donc que le corps soit bien une page du site et non une page
+        // d'interception. Le libellé de la marque figure dans l'en-tête de toutes les pages.
+        const html = await res.text();
+        if (/domain is suspended/i.test(html)) { await new Promise((r) => setTimeout(r, DEPLOY_POLL_MS)); continue; }
+        if (/ARCHI PILOTE/i.test(html)) return true;
+      }
     } catch { /* déploiement en cours */ }
     await new Promise((r) => setTimeout(r, DEPLOY_POLL_MS));
   }
