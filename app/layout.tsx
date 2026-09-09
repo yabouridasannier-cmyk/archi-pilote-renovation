@@ -25,6 +25,12 @@ export const metadata: Metadata = {
     "max-image-preview": "large",
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
+  verification: {
+    google: [
+      "7iUlAObR2WvotDJ3nOlAz5QjefEjRC-HaOAewDg5x08",
+      "6CNvUvCSLjFhSkB8CbWeOL-82Drksn5BJvSK6IyitKk",
+    ],
+      },
   openGraph: {
     type: "website",
     locale: "fr_FR",
