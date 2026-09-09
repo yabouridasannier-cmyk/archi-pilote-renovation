@@ -14,12 +14,10 @@ suivant.
 La synchronisation tourne donc **hors du site**, dans un runner GitHub Actions
 qui écrit dans le dépôt et pousse.
 
-> **Attention — ce push ne déclenche aucun déploiement.** Le projet Vercel n'est
-> pas branché sur GitHub : le site est déployé depuis une machine locale en ligne
-> de commande. Tant que c'est le cas, l'étape 4 ci-dessous (attente de la mise
-> en ligne) ne peut pas aboutir et l'article reste en attente de confirmation à
-> chaque run. Le pourquoi, et les deux façons d'y remédier, sont dans
-> [`PUBLICATION.md`](./PUBLICATION.md) §2 et §6.
+> **Depuis le 09/09/2026, ce push déclenche bien un déploiement** : Vercel est
+> branché sur le dépôt, branche `main`. Avant cette date ce n'était pas le cas et
+> l'étape 4 ne pouvait pas aboutir. Voir [`PUBLICATION.md`](./PUBLICATION.md) §2,
+> et §6 pour un point de vigilance sur l'étape 4 tant que le domaine est suspendu.
 
 ## Cycle d'un article
 
@@ -27,7 +25,7 @@ qui écrit dans le dépôt et pousse.
 2. Téléchargement de la couverture et des images du corps dans
    `public/uploads/sedestral/<slug>/`, réécriture des URLs vers ces copies
    internes, retrait des liens sortants vers sedestral.com, assainissement du HTML
-3. Écriture dans `content/blog/generated.json`, commit, push *(→ build Vercel **uniquement si** Vercel est branché sur GitHub, ce qui n'est pas le cas au 09/09/2026 — voir `PUBLICATION.md`)*
+3. Écriture dans `content/blog/generated.json`, commit, push → build Vercel *(branchement actif depuis le 09/09/2026)*
 4. Attente de la mise en ligne réelle : le script interroge
    `https://<site>/blog/<slug>` jusqu'à obtenir un HTTP 200 (15 min max)
 5. **Seulement à ce moment** :

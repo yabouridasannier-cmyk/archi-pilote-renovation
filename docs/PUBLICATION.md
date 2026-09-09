@@ -8,7 +8,8 @@ ressemblait plus au site en ligne, un outil de synchronisation qui tourne dans l
 vide. Tout est expliqué ci-dessous. Rien n'est cassé — c'est le branchement qui
 n'est pas celui attendu.
 
-Rédigé le 09/09/2026. À tenir à jour si l'un des trois branchements change.
+Rédigé le 09/09/2026, **mis à jour le même jour** après branchement de Vercel sur
+GitHub (§2). À tenir à jour si l'un des trois branchements change.
 
 ---
 
@@ -20,36 +21,40 @@ Rédigé le 09/09/2026. À tenir à jour si l'un des trois branchements change.
 | **Hébergement** | Vercel, projet `global-renovation-maquette`, plan **Hobby** | équipe `yabouridasannier-1537s-projects` |
 | **Domaine** | `archipiloterenovation.com`, enregistré chez **Hostinger**, DNS chez Hostinger | pointe vers Vercel (`76.76.21.21`) |
 
-## 2. Le point qui change tout : Vercel n'est PAS branché sur GitHub
+## 2. Comment le site est publié : un push sur `main` = un déploiement
 
-Sur la plupart des projets Vercel, un push sur `main` déclenche un déploiement.
-**Ici, non.** Le projet Vercel n'a aucun lien Git (`link: null`). Il est
-déployé **depuis une machine locale, en ligne de commande** :
+**Depuis le 09/09/2026 (après-midi), Vercel est branché sur le dépôt GitHub**,
+branche de production `main`. Chaque push sur `main` déclenche un build et une
+mise en production automatiques. Un push sur une autre branche produit un
+déploiement de prévisualisation (URL `*.vercel.app`, protégée par connexion
+Vercel).
 
 ```bash
-npm run build           # construit les 101 pages
-vercel deploy --prod    # envoie le résultat sur Vercel → production
+git pull                 # se mettre à jour
+npm run build            # vérifier que ça construit (101 pages)
+git push origin main     # → Vercel construit et publie, ~1 à 2 min
 ```
 
-Conséquences directes, à garder en tête :
+**Avant le 09/09, ce n'était pas le cas** : le projet n'avait aucun lien Git et
+était déployé en ligne de commande (`vercel deploy --prod`) depuis un poste
+local. Un push ne publiait rien. C'est ce qui a produit, début septembre, un
+dépôt qui ne ressemblait plus au site (26 commits déployés non poussés d'un côté,
+10 commits poussés non déployés de l'autre) et un outil de synchronisation qui
+tournait dans le vide. Cette page existe à cause de cet épisode.
 
-- **Pousser sur GitHub ne publie rien.** Le dépôt est un lieu de partage et de
-  sauvegarde du code, pas un déclencheur.
-- **Ce qui est en ligne = le dernier `vercel deploy --prod` lancé**, depuis la
-  copie locale de celui qui l'a lancé — quel que soit l'état de GitHub à ce
-  moment-là.
-- Si GitHub et le site divergent, ce n'est pas que « le dépôt est faux » : c'est
-  que quelqu'un a déployé sans pousser, ou poussé sans déployer. Les deux sont
-  arrivés en septembre 2026 (26 commits déployés non poussés d'un côté, 10
-  commits poussés non déployés de l'autre). Depuis le 09/09, `main` sur GitHub
-  et la production coïncident.
+`vercel deploy --prod` fonctionne toujours, mais n'a plus de raison d'être : il
+publierait l'état d'un poste local sans passer par GitHub, et recréerait la
+divergence. **Ne plus l'employer.**
 
-### Règle de cohabitation, tant que ce branchement reste tel quel
+### Règles
 
-1. **`main` sur GitHub est la référence.** Avant tout travail : `git pull`.
-2. **On ne déploie que depuis un `main` à jour** (pull fait, rien d'ignoré).
-3. **Après un déploiement, on pousse** dans la foulée, pour que GitHub reste
-   égal à ce qui est en ligne.
+1. **`main` sur GitHub est la référence, et ce qui y est poussé est en ligne.**
+   Avant tout travail : `git pull`.
+2. **Ce qu'on pousse sur `main` est publié.** Une modification qu'on ne veut pas
+   voir en ligne se travaille sur une branche, jamais sur `main`.
+3. **Vérifier le build localement avant de pousser** (`npm run build`) : un push
+   qui casse le build laisse la production sur le déploiement précédent, mais
+   bloque tout le monde jusqu'à correction.
 4. Personne ne force-push sur `main`.
 
 ## 3. Qui a accès à quoi
@@ -57,11 +62,12 @@ Conséquences directes, à garder en tête :
 | | GitHub | Vercel | Hostinger (domaine) |
 |---|---|---|---|
 | Yanis (`yabouridasannier-cmyk`) | admin | propriétaire (seul membre) | oui |
-| Thibaut / Sedestral (`agencyinside`) | **écriture** (push) | **impossible sur le plan Hobby** — pas de membres | non |
+| Thibaut / Sedestral (`agencyinside`) | **écriture** (push) | **aucun — et plus nécessaire** : son push publie | non |
 
-Le plan Hobby de Vercel n'accepte **aucun membre supplémentaire**. Donner un
-« accès Vercel » à un tiers suppose soit de passer en Pro, soit de rendre cet
-accès inutile en branchant Vercel sur GitHub (voir §6).
+Le plan Hobby de Vercel n'accepte aucun membre supplémentaire. Depuis le
+branchement Vercel↔GitHub (§2), un accès Vercel n'est plus utile pour publier :
+pousser sur `main` suffit. Le tableau de bord Vercel (journaux de build,
+rollback) reste accessible à Yanis seulement.
 
 ## 4. Le domaine — et pourquoi le site peut « disparaître » sans qu'on ait rien fait
 
@@ -104,37 +110,26 @@ workflow GitHub Actions horaire importe les articles en brouillon, les écrit da
 `content/blog/generated.json`, **pousse sur `main`**, puis attend que la page
 soit en ligne (15 min max) avant de confirmer `PUBLISHED` à Sedestral.
 
-Tout y est correct **sauf l'hypothèse « Vercel déploie sur ce push »**, qui est
-fausse ici (§2). Conséquence, invisible tant qu'il n'y a aucun brouillon — ce qui
-est le cas au 09/09 (`generated.json` vide, runs horaires « réussis » en 15 s) :
+L'hypothèse « Vercel déploie sur ce push » était fausse jusqu'au 09/09 et
+**est vraie depuis** (§2) : le push du bot déclenche le build, l'attente trouve
+la page, le PATCH part. L'automate est donc opérant. Ce choix — déploiement
+automatique — a été fait par Thibaut avec l'accord de Yanis le 09/09.
 
-> Le jour où un article est en DRAFT, le run le pousse, attend 15 minutes une
-> page qui ne sera jamais déployée, échoue, et recommence à chaque heure.
-> L'article reste indéfiniment « en attente de confirmation ».
+Deux choses à garder à l'esprit, maintenant que ça tourne :
 
-Deux façons de rendre l'automate opérant. **À décider avec le client**, parce
-que l'une des deux change qui publie quoi, et à quel rythme.
-
-**Option A — brancher Vercel sur GitHub** (gratuit, compatible Hobby)
-Vercel → projet → Settings → Git → connecter le dépôt, branche de production
-`main`. Dès lors chaque push déploie, l'attente du script trouve la page, le
-PATCH part. Thibaut n'a plus besoin d'accès Vercel.
-Contreparties à accepter en connaissance de cause :
-- le bot publie **toutes les heures, sans relecture humaine**, des articles et
+- **Le bot publie toutes les heures, sans relecture humaine**, des articles et
   des images venus de Sedestral — sur un site dont le client a fait retirer une
   soixantaine de légendes inexactes et interdit toute image présentée comme un
   chantier réel sans l'être. Le script assainit le HTML ; il ne juge pas la
-  cohérence image/titre. Prévoir une relecture, ou un état intermédiaire.
-- le déploiement local (`vercel deploy`) devient une exception : le flux normal
-  redevient « push, puis Vercel déploie ». La règle §2 s'inverse.
-
-**Option B — rester en déploiement manuel**
-On garde le CLI. Le workflow horaire n'a alors pas de sens : soit on le passe en
-`workflow_dispatch` uniquement (lancement à la main, suivi d'un déploiement), soit
-on le désactive. Les articles sont importés à la demande, relus, puis déployés.
-
-Sans décision, l'état actuel est : **automate actif, inoffensif tant qu'aucun
-brouillon n'existe, défaillant dès le premier.**
+  cohérence image/titre ni la véracité des affirmations. Une relecture avant
+  publication, ou un état intermédiaire côté Sedestral, reste à organiser avec
+  le client.
+- **Tant que le domaine est suspendu (§4), l'étape 4 du script est trompée** :
+  l'adresse `https://www.archipiloterenovation.com/blog/<slug>` répond HTTP 200
+  — mais avec la page « Your domain is suspended ». Un contrôle sur le seul code
+  200 confirmerait `PUBLISHED` à Sedestral pour une page que personne ne peut
+  lire. À vérifier dans `sedestral-sync.mjs` : contrôler aussi le contenu (par
+  exemple la présence du titre de l'article), pas seulement le statut.
 
 ## 7. Commandes de référence
 
@@ -146,11 +141,10 @@ git pull
 npm run build
 npx tsc --noEmit
 
-# déployer en production (depuis un main à jour uniquement)
-vercel deploy --prod
+# publier = pousser (Vercel construit et met en ligne, ~1-2 min)
+git push origin main
 
-# puis partager
-git push
+# suivre le build : https://vercel.com (compte Yanis), ou attendre puis vérifier le site
 
 # outils de contrôle propres au projet (images)
 python3 scripts/verif-integration.py     # cadres, provenance, surexposition
@@ -158,6 +152,6 @@ python3 scripts/fichiers-identiques.py   # même fichier sous deux noms
 python3 scripts/surexposition.py         # une image vue sur trop de pages
 ```
 
-Le compte Vercel employé pour `vercel deploy` est celui de Yanis ; le CLI doit
-être connecté (`vercel whoami`). Le projet est lié via `.vercel/project.json`
-(non versionné).
+Le projet Vercel appartient au compte de Yanis. `.vercel/project.json` (non
+versionné) lie le dossier local au projet pour la CLI ; il n'est plus nécessaire
+pour publier.
