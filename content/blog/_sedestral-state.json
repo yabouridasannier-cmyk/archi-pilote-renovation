@@ -1,4 +1,23 @@
 {
   "version": 1,
-  "articles": {}
+  "articles": {
+    "e14d3c5e5abe431cacf55f2d4b1f9592": {
+      "slug": "charme-de-lancien",
+      "url": "https://www.archipiloterenovation.com/blog/charme-de-lancien",
+      "importedAt": "2026-09-09T13:23:48.635Z",
+      "confirmedAt": null
+    },
+    "f2644c1f71fb444a81723df2a784b7da": {
+      "slug": "5-etapes-principales-dun-chantier",
+      "url": "https://www.archipiloterenovation.com/blog/5-etapes-principales-dun-chantier",
+      "importedAt": "2026-09-09T13:23:49.162Z",
+      "confirmedAt": null
+    },
+    "5e71c3b5ce8b4efabb2e26d4b850dc43": {
+      "slug": "renovation-salle-de-bain",
+      "url": "https://www.archipiloterenovation.com/blog/renovation-salle-de-bain",
+      "importedAt": "2026-09-09T13:23:49.671Z",
+      "confirmedAt": null
+    }
+  }
 }
