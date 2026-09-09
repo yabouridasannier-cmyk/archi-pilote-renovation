@@ -155,3 +155,5 @@ python3 scripts/surexposition.py         # une image vue sur trop de pages
 Le projet Vercel appartient au compte de Yanis. `.vercel/project.json` (non
 versionné) lie le dossier local au projet pour la CLI ; il n'est plus nécessaire
 pour publier.
+
+<!-- test de déploiement — 09/09 -->
