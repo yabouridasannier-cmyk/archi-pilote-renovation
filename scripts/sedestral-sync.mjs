@@ -115,7 +115,8 @@ function first(obj, keys) {
 
 function asList(payload) {
   if (Array.isArray(payload)) return payload;
-  for (const k of ["data", "items", "results", "articles", "content", "blogArticles"]) {
+  // 09/09/2026 : l'API Sedestral renvoie ses articles sous la clé « contents ».
+  for (const k of ["contents", "data", "items", "results", "articles", "content", "blogArticles"]) {
     if (Array.isArray(payload?.[k])) return payload[k];
   }
   if (Array.isArray(payload?.data?.items)) return payload.data.items;
@@ -123,16 +124,20 @@ function asList(payload) {
 }
 
 function normalize(raw) {
+  /* 09/09/2026 : l'API imbrique le contenu éditorial sous « data », en laissant
+     id, format et state à la racine. On lit donc les champs dans data quand il
+     existe, et l'identifiant à la racine en priorité. */
+  const d = raw?.data && typeof raw.data === "object" && !Array.isArray(raw.data) ? raw.data : raw;
   return {
-    id: String(first(raw, ["id", "_id", "uuid", "articleId"]) ?? ""),
-    title: first(raw, ["title", "name", "heading"]),
-    metaDescription: first(raw, ["metaDescription", "meta_description", "seoDescription", "description", "excerpt"]),
-    body: first(raw, ["body", "content", "html", "bodyHtml", "contentHtml"]),
-    cover: first(raw, ["cover", "coverUrl", "cover_url", "coverImage", "image", "thumbnail", "picture"]),
-    slug: first(raw, ["slug", "permalink", "handle"]),
-    keyword: first(raw, ["keyword", "mainKeyword", "primaryKeyword", "focusKeyword", "mainKeyphrase", "keywords", "tags"]),
-    category: first(raw, ["category", "categoryName", "topic"]),
-    publishedAt: first(raw, ["publishedAt", "createdAt", "created_at", "date", "updatedAt"]),
+    id: String(first(raw, ["id", "_id", "uuid", "articleId"]) ?? first(d, ["id", "_id"]) ?? ""),
+    title: first(d, ["title", "name", "heading"]),
+    metaDescription: first(d, ["metaDescription", "meta_description", "seoDescription", "description", "excerpt"]),
+    body: first(d, ["body", "content", "html", "bodyHtml", "contentHtml"]),
+    cover: first(d, ["cover", "coverUrl", "cover_url", "coverImage", "image", "thumbnail", "picture"]),
+    slug: first(d, ["slug", "permalink", "handle"]),
+    keyword: first(d, ["keyword", "mainKeyword", "primaryKeyword", "focusKeyword", "mainKeyphrase", "keywords", "tags"]),
+    category: first(d, ["category", "categoryName", "topic"]),
+    publishedAt: first(d, ["publishedAt", "createdAt", "created_at", "date", "updatedAt"]),
   };
 }
 
